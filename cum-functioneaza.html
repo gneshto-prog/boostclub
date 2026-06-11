@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ce se întâmplă la consultația gratuită | Boost Club București</title>
+  <meta name="description" content="Descoperă pas cu pas ce se întâmplă la vizita ta gratuită la Boost Club: analiză corporală prin bioimpedanță, rezultate explicate clar și recomandări personalizate. Fără obligații.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;600&display=swap">
+  <meta name="theme-color" content="#0F6B55">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="canonical" href="https://boostclub.ro/cum-functioneaza.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://boostclub.ro/cum-functioneaza.html">
+  <meta property="og:title" content="Ce se întâmplă la consultația gratuită | Boost Club București">
+  <meta property="og:description" content="Descoperă pas cu pas ce se întâmplă la vizita ta gratuită la Boost Club: analiză corporală prin bioimpedanță, rezultate explicate clar și recomandări personalizate.">
+  <meta property="og:locale" content="ro_RO">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WellnessCenter",
+        "@id": "https://boostclub.ro/#business",
+        "name": "Boost Club",
+        "url": "https://boostclub.ro",
+        "telephone": "+40726205752",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Strada Sevastopol 24",
+          "addressLocality": "București",
+          "addressRegion": "Sector 1",
+          "addressCountry": "RO"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Trebuie să fiu în formă ca să vin?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Absolut nu. Consultația este potrivită pentru orice nivel de condiție fizică — tocmai scopul ei este să înțelegi de unde pornești, indiferent de asta. Vin oameni care nu au mai făcut sport de ani de zile și oameni care fac sport regulat și vor să optimizeze."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Este dureroasă sau inconfortabilă analiza corporală?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nu. Te urci pe aparat câteva secunde — curentul electric este complet imperceptibil. Nu există înțepături, electrozi sau echipamente incomode."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Voi fi presat să cumpăr ceva?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nu. Boost Club funcționează pe principiul clarității și al transparenței. Dacă la finalul consultației vrei să afli mai multe despre opțiunile de coaching sau despre produsele wellness, Gabriel îți explică. Dacă nu, pleci cu raportul și recomandările tale — atât."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Analiza bioimpedanță este precisă?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Bioimpedanța profesională oferă valori foarte bune ca punct de referință și monitorizare în timp. Ca orice metodă non-invazivă, rezultatele pot varia cu câteva procente față de metodele clinice de referință, motiv pentru care le folosim ca bază de pornire și de comparație — nu ca diagnostic."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Pot aduce pe cineva cu mine?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Bineînțeles. Poți veni cu un partener, prieten sau membru al familiei. Unii oameni preferă suport moral la prima vizită — nu este nicio problemă."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <style>
+    /* ---- Cum funcționează — componente specifice ---- */
+
+    /* Pași numerotați verticali cu linie conectoare */
+    .steps-v {
+      display: grid;
+      gap: var(--s4);
+      position: relative;
+    }
+    .step-v {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: var(--s3);
+      align-items: start;
+    }
+    .step-v-num {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px; height: 56px;
+      min-width: 56px;
+      border-radius: 50%;
+      background: var(--green);
+      color: #fff;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+      font-size: 20px;
+      box-shadow: 0 4px 16px rgba(15,107,85,0.28);
+    }
+    .step-v-body h3 { margin-bottom: 6px; }
+    .step-v-body p  { color: var(--text-soft); }
+
+    /* Card cu icon gold */
+    .icon-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: var(--s3);
+    }
+    .icon-card .icon-wrap {
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      background: var(--sage);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--s2);
+      font-size: 22px;
+    }
+    .icon-card h3 { margin-bottom: 6px; }
+    .icon-card p  { color: var(--text-soft); font-size: 16px; }
+
+    /* CTA inline (mid-page) */
+    .cta-inline {
+      background: var(--sage);
+      border-radius: var(--radius);
+      padding: var(--s4) var(--s4);
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--s3);
+      align-items: center;
+      justify-content: space-between;
+    }
+    .cta-inline p { max-width: 52ch; margin: 0; font-weight: 600; }
+    @media (max-width: 640px) {
+      .cta-inline { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* Tabel metrici corporale */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--s2);
+    }
+    @media (min-width: 640px) {
+      .metrics-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .metric-item {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: var(--s2) var(--s3);
+    }
+    .metric-item strong {
+      display: block;
+      font-family: 'Manrope', sans-serif;
+      font-size: 15px;
+      color: var(--green);
+      margin-bottom: 4px;
+    }
+    .metric-item span { font-size: 14px; color: var(--text-soft); }
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-nav">Sari la conținut principal</a>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">Boost Club<span class="dot">.</span></a>
+    <nav class="nav" aria-label="Meniu principal">
+      <a href="consultatie-gratuita.html">Consultație gratuită</a>
+      <a href="cum-functioneaza.html" aria-current="page">Cum funcționează</a>
+      <a href="recenzii.html">Recenzii</a>
+      <a href="gabriel.html">Despre Gabriel</a>
+      <a href="contact.html">Contact</a>
+      <a href="consultatie-gratuita.html" class="btn btn-primary">Rezervă gratuit</a>
+
+      <div class="lang-switcher" aria-label="Language"><span class="lang-active">RO</span><span class="lang-sep">|</span><a href="en/cum-functioneaza.html" lang="en" hreflang="en">EN</a></div>
+    </nav>
+    <button class="menu-toggle" aria-expanded="false" aria-label="Deschide meniul"><span></span></button>
+  </div>
+  <nav class="mobile-menu" aria-label="Meniu mobil">
+    <a href="consultatie-gratuita.html">Consultație gratuită</a>
+    <a href="cum-functioneaza.html" aria-current="page">Cum funcționează</a>
+    <a href="recenzii.html">Recenzii</a>
+    <a href="gabriel.html">Despre Gabriel</a>
+    <a href="contact.html">Contact</a>
+
+    <div class="lang-switcher" aria-label="Language"><span class="lang-active">RO</span><span class="lang-sep">|</span><a href="en/cum-functioneaza.html" lang="en" hreflang="en">EN</a></div>
+  </nav>
+</header>
+
+<main id="main-content">
+
+<!-- ================= 1. HERO ================= -->
+<section class="section-dark section" style="padding-top: var(--s8); padding-bottom: var(--s8);">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Consultația gratuită</span>
+        <h1>Ce se întâmplă la vizita ta</h1>
+        <p class="lead mt-2">30–40 de minute structurate, clare și fără presiune. Iată exact ce poți să te aștepți de la prima vizită la Boost Club.</p>
+        <div class="hero-ctas">
+          <a href="consultatie-gratuita.html" class="btn btn-primary btn-block-mobile">Rezervă evaluarea gratuită</a>
+          <a href="https://wa.me/40726205752?text=Bun%C4%83!%20A%C8%99%20dori%20s%C4%83%20aflu%20mai%20multe%20despre%20consultația%20gratuit%C4%83." class="btn btn-whatsapp btn-block-mobile">
+            <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Întreabă pe WhatsApp
+          </a>
+        </div>
+        <div class="proof-row">
+          <span>100% gratuit</span>
+          <span>Fără obligații</span>
+          <span>Lângă Piața Victoriei</span>
+          <span>30–40 minute</span>
+        </div>
+      </div>
+      <div class="img-frame">
+        <img src="images/consultatie-wellness-boost-club.jpg" alt="Gabriel Neshto explică rezultatele evaluării corporale unui client la Boost Club" width="1050" height="1400" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2. ÎNAINTE SĂ AJUNGI ================= -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Pregătire</span>
+      <h2>Înainte să ajungi</h2>
+      <p>Nu ai nevoie de pregătire specială. Câteva recomandări simple pentru un rezultat cât mai precis.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="icon-card">
+        <div class="icon-wrap" aria-hidden="true">💧</div>
+        <h3>Hidratare normală</h3>
+        <p>Bea apă în mod normal în ziua vizitei. Evită alcoolul sau consumul excesiv de lichide cu câteva ore înainte — acestea pot afecta măsurătoarea.</p>
+      </div>
+      <div class="icon-card">
+        <div class="icon-wrap" aria-hidden="true">👟</div>
+        <h3>Haine comode</h3>
+        <p>Vino în haine ușoare și confortabile. Nu este nevoie de echipament sport sau de schimbat — consultația nu implică antrenament.</p>
+      </div>
+      <div class="icon-card">
+        <div class="icon-wrap" aria-hidden="true">🕐</div>
+        <h3>Rezervă 40 de minute</h3>
+        <p>Sesiunea durează între 30 și 40 de minute. Nu grăbi — cel mai valoros moment este discuția de după măsurătoare.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3. PAȘII VIZITEI ================= -->
+<section class="section section-white">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Vizita ta</span>
+      <h2>Pas cu pas — ce se întâmplă</h2>
+    </div>
+
+    <div style="max-width: 720px;">
+      <div class="steps-v">
+
+        <div class="step-v">
+          <div class="step-v-num" aria-hidden="true">1</div>
+          <div class="step-v-body">
+            <h3>Scurtă discuție inițială</h3>
+            <p>Gabriel te întâmpină și îți pune câteva întrebări simple: de unde pornești, ce ți-ai dori să schimbi, ce ai mai încercat până acum. Nu este un interogatoriu — este o conversație relaxată de 5 minute care ajută să personalizeze tot ce urmează.</p>
+          </div>
+        </div>
+
+        <div class="step-v">
+          <div class="step-v-num" aria-hidden="true">2</div>
+          <div class="step-v-body">
+            <h3>Analiza corporală prin bioimpedanță</h3>
+            <p>Te urci pe analizorul profesional de compoziție corporală — durează aproximativ 60 de secunde. Aparatul trimite un curent electric imperceptibil prin corp și calculează cu precizie proporția de masă musculară, masă adipoasă, apă și grăsime viscerală. Nu doare și nu necesită nicio pregătire specială.</p>
+          </div>
+        </div>
+
+        <div class="step-v">
+          <div class="step-v-num" aria-hidden="true">3</div>
+          <div class="step-v-body">
+            <h3>Rezultatele — explicate pe înțelesul tău</h3>
+            <p>Primești un raport complet cu toate valorile tale. Gabriel nu îți aruncă cifrele pe masă — le traduce în limbaj obișnuit: ce înseamnă fiecare valoare, unde te afli față de intervalele sănătoase și, cel mai important, ce poți face concret.</p>
+          </div>
+        </div>
+
+        <div class="step-v">
+          <div class="step-v-num" aria-hidden="true">4</div>
+          <div class="step-v-body">
+            <h3>Discuție despre obiectivul tău</h3>
+            <p>Vorbești deschis despre ce vrei să obții — să slăbești sănătos, să câștigi masă musculară, să ai mai multă energie sau pur și simplu să înțelegi de unde pornești. Consultația se construiește în jurul obiectivului tău, nu al unui șablon standard.</p>
+          </div>
+        </div>
+
+        <div class="step-v">
+          <div class="step-v-num" aria-hidden="true">5</div>
+          <div class="step-v-body">
+            <h3>Recomandări personalizate și pasul următor</h3>
+            <p>Pleci cu recomandări concrete adaptate rutinei tale reale. Nu un plan imposibil de 12 săptămâni — un pas următor clar și realizabil. Dacă dorești să continui cu un program de coaching, Gabriel îți explică opțiunile fără presiune. Dacă nu, pleci cu informațiile tale și cu claritate.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA 1 -->
+<section class="section" style="padding-top: 0; padding-bottom: var(--s6);">
+  <div class="container">
+    <div class="cta-inline">
+      <p>Gata să-ți cunoști punctul real de pornire?</p>
+      <div style="display:flex; gap: var(--s2); flex-wrap: wrap;">
+        <a href="consultatie-gratuita.html" class="btn btn-primary">Rezervă gratuit</a>
+        <a href="https://wa.me/40726205752?text=Bun%C4%83!%20Vreau%20s%C4%83%20rezerv%20o%20consulta%C8%9Bie%20gratuit%C4%83." class="btn btn-whatsapp">
+          <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4. CE VALORILE TALE ÎNSEAMNĂ ================= -->
+<section class="section section-sage">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Raportul tău</span>
+      <h2>Ce vei afla despre corpul tău</h2>
+      <p>Analizorul profesional măsoară mai mult decât greutatea. Primești date reale pe care să le înțelegi și să le folosești.</p>
+    </div>
+    <div class="metrics-grid">
+      <div class="metric-item">
+        <strong>Masa musculară</strong>
+        <span>Cât mușchi ai și cum se distribuie pe corp</span>
+      </div>
+      <div class="metric-item">
+        <strong>Masa adipoasă</strong>
+        <span>Procentul de grăsime și dacă este în interval sănătos</span>
+      </div>
+      <div class="metric-item">
+        <strong>Apă corporală</strong>
+        <span>Nivelul de hidratare al organismului tău</span>
+      </div>
+      <div class="metric-item">
+        <strong>Grăsime viscerală</strong>
+        <span>Grăsimea din jurul organelor interne — indicatorul cel mai important de sănătate metabolică</span>
+      </div>
+      <div class="metric-item">
+        <strong>Vârsta metabolică</strong>
+        <span>Cât de eficient funcționează metabolismul tău față de vârsta cronologică</span>
+      </div>
+      <div class="metric-item">
+        <strong>Rata metabolică bazală</strong>
+        <span>Câte calorii arde corpul tău în repaus — baza oricărui plan de nutriție</span>
+      </div>
+    </div>
+    <p class="small mt-4" style="max-width: 60ch;">Rezultatele variază de la persoană la persoană. Valorile obținute sunt un punct de pornire educativ, nu un diagnostic medical.</p>
+  </div>
+</section>
+
+<!-- ================= 5. CE RECOMANDĂRI POȚI PRIMI ================= -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Recomandări</span>
+      <h2>Ce fel de îndrumare vei primi</h2>
+      <p>Fiecare persoană pleacă cu recomandări adaptate obiectivului și rutinei sale — nu sfaturi generice.</p>
+    </div>
+    <div class="grid grid-4">
+      <div class="card">
+        <h3>Obiceiuri alimentare</h3>
+        <p>Ghidare practică pentru o alimentație echilibrată care se potrivește stilului tău de viață real, nu unui plan ideal imposibil de urmat.</p>
+      </div>
+      <div class="card">
+        <h3>Structura zilei</h3>
+        <p>Sugestii despre frecvența meselor, hidratare și micro-obiceiuri care susțin obiectivul tău fără să-ți bulverseze programul.</p>
+      </div>
+      <div class="card">
+        <h3>Mișcare și activitate</h3>
+        <p>Recomandări generale despre tipul și frecvența activității fizice potrivite pentru tine, indiferent de nivelul actual de condiție fizică.</p>
+      </div>
+      <div class="card">
+        <h3>Pasul următor concret</h3>
+        <p>O singură acțiune clară pe care o poți face în săptămâna care urmează. Nu o listă copleșitoare — un pas realizabil.</p>
+      </div>
+    </div>
+    <p class="small mt-4" style="max-width: 64ch;">Consultația wellness nu înlocuiește sfatul medical. Dacă ai o condiție medicală sau iei medicamente, consultă medicul tău înainte de a face modificări semnificative în alimentație sau suplimentare.</p>
+  </div>
+</section>
+
+<!-- ================= 6. DUPĂ CONSULTAȚIE ================= -->
+<section class="section section-white">
+  <div class="container">
+    <div style="max-width: 720px; margin: 0 auto;">
+      <div class="section-head">
+        <span class="eyebrow">După vizită</span>
+        <h2>Ce se întâmplă după consultație</h2>
+      </div>
+      <p>Pleci cu raportul tău complet și cu un pas următor clar. Dacă vrei să continui cu un program de coaching, Gabriel îți explică ce presupune asta — fără presiune, fără angajamente imediate.</p>
+      <p class="mt-3">Mulți oameni aleg să revină pentru o a doua evaluare la câteva săptămâni sau luni, pentru a vedea cum au evoluat valorile. Fiecare evaluare ulterioară este o oportunitate să ajustezi direcția pe baza datelor reale, nu a estimărilor.</p>
+      <p class="mt-3">Dacă ai întrebări după vizită, poți scrie oricând pe WhatsApp — răspundem în câteva ore.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 7. PENTRU CINE ================= -->
+<section class="section section-sage">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Pentru cine</span>
+      <h2>Consultația este potrivită pentru tine dacă…</h2>
+    </div>
+    <div class="grid grid-4">
+      <div class="card">
+        <h3>Vrei să slăbești sănătos</h3>
+        <p>Fără diete extreme și fără să te simți judecat. Pornești de la date reale despre corpul tău.</p>
+        <a href="consultatie-gratuita.html" class="small mt-3" style="display:inline-block; color:var(--green);">Rezervă acum →</a>
+      </div>
+      <div class="card">
+        <h3>Vrei masă musculară</h3>
+        <p>Îți înțelegi punctul de start și primești direcție clară pentru creștere și tonifiere.</p>
+        <a href="consultatie-gratuita.html" class="small mt-3" style="display:inline-block; color:var(--green);">Rezervă acum →</a>
+      </div>
+      <div class="card">
+        <h3>Vrei mai multă energie</h3>
+        <p>Obiceiuri și structură zilnică care fac diferența în modul în care te simți în fiecare zi.</p>
+        <a href="consultatie-gratuita.html" class="small mt-3" style="display:inline-block; color:var(--green);">Rezervă acum →</a>
+      </div>
+      <div class="card">
+        <h3>Vrei claritate înainte să începi</h3>
+        <p>Nu știi exact de unde să pornești? Evaluarea îți dă datele reale și un punct de pornire concret.</p>
+        <a href="consultatie-gratuita.html" class="small mt-3" style="display:inline-block; color:var(--green);">Rezervă acum →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA 2 -->
+<section class="section" style="padding-top: 0; padding-bottom: var(--s8);">
+  <div class="container">
+    <div class="cta-inline">
+      <p>Prima vizită este gratuită și fără obligații. Vine la noi, înțelegi de unde pornești, pleci cu claritate.</p>
+      <a href="consultatie-gratuita.html" class="btn btn-primary">Rezervă evaluarea gratuită</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 8. FAQ ================= -->
+<section class="section">
+  <div class="container-text">
+    <div class="section-head">
+      <span class="eyebrow">Întrebări frecvente</span>
+      <h2>Mai ai nelămuriri?</h2>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">Trebuie să fiu „în formă" ca să vin?</button>
+      <div class="faq-a"><p>Absolut nu. Consultația este potrivită pentru orice nivel de condiție fizică — tocmai scopul ei este să înțelegi de unde pornești, indiferent de asta. Vin oameni care nu au mai făcut sport de ani de zile și oameni care fac sport regulat și vor să optimizeze.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">Este dureroasă sau inconfortabilă analiza corporală?</button>
+      <div class="faq-a"><p>Nu. Te urci pe aparat câteva secunde — curentul electric este complet imperceptibil. Nu există înțepături, electrozi sau echipamente incomode. Mulți oameni sunt surprinși cât de simplu este procesul.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">Voi fi presat să cumpăr ceva?</button>
+      <div class="faq-a"><p>Nu. Boost Club funcționează pe principiul clarității și al transparenței. Dacă la finalul consultației vrei să afli mai multe despre opțiunile de coaching sau despre produsele wellness, Gabriel îți explică. Dacă nu, pleci cu raportul și recomandările tale — atât.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">Analiza este precisă?</button>
+      <div class="faq-a"><p>Bioimpedanța profesională oferă valori foarte bune ca punct de referință și monitorizare în timp. Ca orice metodă non-invazivă, rezultatele pot varia cu câteva procente față de metodele clinice de referință, motiv pentru care le folosim ca bază de pornire și de comparație la măsurătorile viitoare — nu ca diagnostic.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">Pot aduce pe cineva cu mine?</button>
+      <div class="faq-a"><p>Sigur că da. Poți veni cu un partener, prieten sau membru al familiei. Unii oameni preferă suport moral la prima vizită — nu este nicio problemă.</p></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= 9. CTA FINAL ================= -->
+<section class="section-dark section text-center">
+  <div class="container-text">
+    <span class="eyebrow">Primul pas</span>
+    <h2>30 de minute care îți schimbă perspectiva</h2>
+    <p class="lead mt-2">Știi exact cu ce date pornești. Pleci cu un plan clar și cu o direcție realistă.</p>
+    <div class="hero-ctas" style="justify-content:center; margin-top: var(--s4);">
+      <a href="consultatie-gratuita.html" class="btn btn-block-mobile" style="background:#fff; color:var(--green-dark); border-color:#fff;">
+        Rezervă evaluarea gratuită
+      </a>
+      <a href="https://wa.me/40726205752?text=Bun%C4%83!%20Vreau%20s%C4%83%20rezerv%20o%20consulta%C8%9Bie%20gratuit%C4%83." class="btn btn-whatsapp btn-block-mobile">
+        <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Scrie pe WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>Boost Club</h3>
+        <address class="footer-nap">
+          Strada Sevastopol 24, Sector 1, București<br>
+          <a href="tel:+40726205752">+40 726 205 752</a><br>
+          <a href="https://wa.me/40726205752?text=Bun%C4%83!%20Vreau%20s%C4%83%20rezerv%20o%20consulta%C8%9Bie%20gratuit%C4%83.">WhatsApp</a>
+        </address>
+        <p class="small mt-2">Luni–Vineri 07:00–20:00 · Sâmbătă închis · Duminică 10:00–18:00</p>
+      </div>
+      <div>
+        <h3>Navigare</h3>
+        <a href="consultatie-gratuita.html">Consultație gratuită</a><br>
+        <a href="cum-functioneaza.html">Cum funcționează</a><br>
+        <a href="recenzii.html">Recenzii</a><br>
+        <a href="ambasador.html">Lucrează cu noi</a>
+      </div>
+      <div>
+        <h3>Legal</h3>
+        <a href="confidentialitate.html">Confidențialitate</a><br>
+        <a href="termeni.html">Termeni</a><br>
+        <a href="cookies.html">Cookies</a>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p>Distribuitor Independent Herbalife. Boost Club oferă ghidare wellness și consultații educaționale. Consultația nu diagnostichează, nu tratează și nu înlocuiește îngrijirea medicală. Rezultatele variază de la persoană la persoană.</p>
+      <p class="mt-2">© <span id="year">2026</span> Boost Club. Toate drepturile rezervate.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= STICKY MOBILE BAR ================= -->
+<div class="sticky-bar">
+  <a href="tel:+40726205752" class="btn btn-secondary">Sună</a>
+  <a href="https://wa.me/40726205752?text=Bun%C4%83!%20Vreau%20s%C4%83%20rezerv%20o%20consulta%C8%9Bie%20gratuit%C4%83." class="btn btn-whatsapp">
+    <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WhatsApp
+  </a>
+  <a href="consultatie-gratuita.html" class="btn btn-primary">Rezervă gratuit</a>
+</div>
+
+<!-- ================= FLOATING WHATSAPP (doar desktop) ================= -->
+<a href="https://wa.me/40726205752?text=Bun%C4%83!%20Vreau%20s%C4%83%20rezerv%20o%20consulta%C8%9Bie%20gratuit%C4%83." class="wa-float" aria-label="Scrie-ne pe WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

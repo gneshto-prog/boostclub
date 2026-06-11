@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Boost Club București | Strada Sevastopol 24, Sector 1</title>
+  <meta name="description" content="Găsești Boost Club pe Strada Sevastopol 24, Sector 1, București — la 5 minute de Piața Victoriei. Program Luni–Vineri 07:00–20:00, Duminică 10:00–18:00.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;600&display=swap">
+  <meta name="theme-color" content="#0F6B55">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="canonical" href="https://boostclub.ro/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://boostclub.ro/contact.html">
+  <meta property="og:title" content="Contact Boost Club București | Strada Sevastopol 24, Sector 1">
+  <meta property="og:description" content="Găsești Boost Club pe Strada Sevastopol 24, Sector 1, București — la 5 minute de Piața Victoriei. Program Luni–Vineri 07:00–20:00, Duminică 10:00–18:00.">
+  <meta property="og:locale" content="ro_RO">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WellnessCenter",
+    "@id": "https://boostclub.ro/#business",
+    "name": "Boost Club",
+    "url": "https://boostclub.ro",
+    "telephone": "+40726205752",
+    "email": "gneshto@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Strada Sevastopol 24",
+      "addressLocality": "București",
+      "addressRegion": "Sector 1",
+      "addressCountry": "RO"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 44.4625,
+      "longitude": 26.0832
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "07:00",
+        "closes": "20:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sunday"],
+        "opens": "10:00",
+        "closes": "18:00"
+      }
+    ],
+    "hasMap": "https://www.google.com/maps/search/Strada+Sevastopol+24+Sector+1+Bucuresti"
+  }
+  </script>
+  <style>
+    /* ---- contact.html — componente specifice ---- */
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--s5);
+    }
+    @media (min-width: 900px) {
+      .contact-layout {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+      }
+    }
+
+    /* Card info contact */
+    .contact-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: var(--s4);
+    }
+    .contact-card h3 {
+      margin-top: 0;
+      margin-bottom: var(--s3);
+      font-size: 18px;
+    }
+
+    /* Rând info (icon + text) */
+    .info-row {
+      display: flex;
+      gap: var(--s2);
+      align-items: flex-start;
+      padding: var(--s2) 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .info-row:last-child { border-bottom: none; }
+    .info-icon {
+      width: 36px; height: 36px;
+      background: var(--sage);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-size: 17px;
+    }
+    .info-text { flex: 1; }
+    .info-text strong { display: block; font-size: 15px; margin-bottom: 2px; }
+    .info-text span, .info-text a { font-size: 15px; color: var(--text-soft); }
+    .info-text a:hover { color: var(--green); }
+
+    /* Tabel program */
+    .hours-table { width: 100%; border-collapse: collapse; }
+    .hours-table tr { border-bottom: 1px solid var(--line); }
+    .hours-table tr:last-child { border-bottom: none; }
+    .hours-table td {
+      padding: 10px 4px;
+      font-size: 15px;
+      vertical-align: top;
+    }
+    .hours-table td:first-child { font-weight: 600; color: var(--text); }
+    .hours-table td:last-child  { text-align: right; color: var(--text-soft); }
+    .hours-table .today td { color: var(--green); }
+    .closed-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 2px 8px;
+      background: #f1e9d8;
+      color: #8a6429;
+      border-radius: 20px;
+    }
+    .open-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 2px 8px;
+      background: var(--sage);
+      color: var(--green-dark);
+      border-radius: 20px;
+    }
+
+    /* Poza intrare — slot */
+    .entrance-photo {
+      width: 100%;
+      aspect-ratio: 4/3;
+      border-radius: var(--radius);
+      object-fit: cover;
+    }
+    .entrance-placeholder {
+      width: 100%;
+      aspect-ratio: 4/3;
+      border-radius: var(--radius);
+      background: var(--sage);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--s2);
+      color: var(--green);
+      font-size: 15px;
+      font-weight: 600;
+      border: 2px dashed var(--green);
+    }
+    .entrance-placeholder span { font-size: 36px; }
+
+    /* Hartă embed */
+    .map-embed {
+      width: 100%;
+      height: 320px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      overflow: hidden;
+    }
+    .map-embed iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* Pași traseu */
+    .route-step {
+      display: flex;
+      gap: var(--s2);
+      padding: var(--s2) 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .route-step:last-child { border-bottom: none; }
+    .route-num {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: var(--green);
+      color: #fff;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+      font-size: 14px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .route-text { font-size: 15px; line-height: 1.5; }
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-nav">Sari la conținut principal</a>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">Boost Club<span class="dot">.</span></a>
+    <nav class="nav" aria-label="Meniu principal">
+      <a href="consultatie-gratuita.html">Consultație gratuită</a>
+      <a href="cum-functioneaza.html">Cum funcționează</a>
+      <a href="recenzii.html">Recenzii</a>
+      <a href="gabriel.html">Despre Gabriel</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+      <a href="consultatie-gratuita.html" class="btn btn-primary">Rezervă gratuit</a>
+
+      <div class="lang-switcher" aria-label="Language"><span class="lang-active">RO</span><span class="lang-sep">|</span><a href="en/contact.html" lang="en" hreflang="en">EN</a></div>
+    </nav>
+    <button class="menu-toggle" aria-expanded="false" aria-label="Deschide meniul"><span></span></button>
+  </div>
+  <nav class="mobile-menu" aria-label="Meniu mobil">
+    <a href="consultatie-gratuita.html">Consultație gratuită</a>
+    <a href="cum-functioneaza.html">Cum funcționează</a>
+    <a href="recenzii.html">Recenzii</a>
+    <a href="gabriel.html">Despre Gabriel</a>
+    <a href="contact.html" aria-current="page">Contact</a>
+
+    <div class="lang-switcher" aria-label="Language"><span class="lang-active">RO</span><span class="lang-sep">|</span><a href="en/contact.html" lang="en" hreflang="en">EN</a></div>
+  </nav>
+</header>
+
+<main id="main-content">
+
+<!-- ================= 1. HERO ================= -->
+<section class="section-dark section" style="padding-top: var(--s8); padding-bottom: var(--s8);">
+  <div class="container-text text-center">
+    <span class="eyebrow">Locație</span>
+    <h1>Vino la Boost Club</h1>
+    <p class="lead mt-2">Strada Sevastopol 24, Sector 1, București — la 5 minute pe jos de Piața Victoriei.</p>
+  </div>
+</section>
+
+<!-- ================= 2. TRUST STRIP ================= -->
+<div class="trust-strip">
+  <div class="container trust-inner">
+    <span>📍 Sector 1, București</span>
+    <span>🚇 5 min de Piața Victoriei</span>
+    <span>🅿️ Parcare stradală disponibilă</span>
+    <span>🚶 Walk-in binevenit</span>
+  </div>
+</div>
+
+<!-- ================= 3. LAYOUT PRINCIPAL ================= -->
+<section class="section">
+  <div class="container">
+    <div class="contact-layout">
+
+      <!-- Coloana stângă: info + program + CTA -->
+      <div style="display:flex; flex-direction:column; gap:var(--s4);">
+
+        <!-- Card adresă + contact -->
+        <div class="contact-card">
+          <h3>Informații de contact</h3>
+
+          <div class="info-row">
+            <div class="info-icon" aria-hidden="true">📍</div>
+            <div class="info-text">
+              <strong>Adresă</strong>
+              <span>Strada Sevastopol 24, Sector 1, București</span>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <div class="info-icon" aria-hidden="true">📞</div>
+            <div class="info-text">
+              <strong>Telefon</strong>
+              <a href="tel:+40726205752">+40 726 205 752</a>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <div class="info-icon" aria-hidden="true">💬</div>
+            <div class="info-text">
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/40726205752?text=Bun%C4%83!%20Vreau%20s%C4%83%20rezerv%20o%20consulta%C8%9Bie%20gratuit%C4%83.">wa.me/40726205752</a>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <div class="info-icon" aria-hidden="true">✉️</div>
+            <div class="info-text">
+              <strong>Email</strong>
+              <a href="mailto:gneshto@gmail.com">gneshto@gmail.com</a>
+            </div>
+          </div>
+
+          <!-- Butoane acțiune directe -->
+          <div style="display:flex; flex-wrap:wrap; gap:var(--s2); margin-top:var(--s3);">
+            <a href="tel:+40726205752" class="btn btn-secondary" style="flex:1; min-width:140px; text-align:center;">
+              Sună acum
+            </a>
+            <a href="https://wa.me/40726205752?text=Bun%C4%83!%20Vreau%20s%C4%83%20rezerv%20o%20consulta%C8%9Bie%20gratuit%C4%83." class="btn btn-whatsapp" style="flex:1; min-width:140px; text-align:center;">
+              <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Card program -->
+        <div class="contact-card">
+          <h3>Program</h3>
+          <table class="hours-table" aria-label="Orar Boost Club">
+            <tbody>
+              <tr>
+                <td>Luni – Vineri</td>
+                <td>07:00 – 20:00 <span class="open-tag">Deschis</span></td>
+              </tr>
+              <tr>
+                <td>Sâmbătă</td>
+                <td><span class="closed-tag">Închis</span></td>
+              </tr>
+              <tr>
+                <td>Duminică</td>
+                <td>10:00 – 18:00</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="small mt-3" style="color:var(--text-soft);">
+            Walk-in binevenit în timpul programului. Pentru garanția locului, rezervă online sau pe WhatsApp.
+          </p>
+        </div>
+
+        <!-- CTA rezervare -->
+        <a href="consultatie-gratuita.html" class="btn btn-primary" style="text-align:center; display:block;">
+          Rezervă evaluarea gratuită
+        </a>
+
+      </div>
+
+      <!-- Coloana dreaptă: poză intrare + hartă -->
+      <div style="display:flex; flex-direction:column; gap:var(--s4);">
+
+        <!--
+          FOTO INTRARE — înlocuiește placeholder-ul de mai jos cu:
+          <img src="images/boost-club-intrare-strada-sevastopol-24.jpg"
+               alt="Intrarea Boost Club, Strada Sevastopol 24, Sector 1, București"
+               class="entrance-photo" width="800" height="600" loading="lazy">
+        -->
+        <div class="entrance-placeholder" role="img" aria-label="Foto intrare — placeholder">
+          <span>📸</span>
+          Foto intrare Boost Club
+          <small style="font-weight:400; font-size:13px;">boost-club-intrare-strada-sevastopol-24.jpg</small>
+        </div>
+
+        <!-- Hartă Google Maps embed -->
+        <!--
+          INSTRUCȚIUNI HARTĂ:
+          1. Mergi la maps.google.com și caută "Strada Sevastopol 24, Sector 1, București"
+          2. Click pe Share → Embed a map → copiază codul <iframe>
+          3. Înlocuiește placeholder-ul de mai jos cu iframe-ul copiat
+          4. Adaugă loading="lazy" la iframe pentru performanță
+        -->
+        <div class="map-embed" aria-label="Hartă locație Boost Club">
+          <iframe
+            src="https://www.google.com/maps?q=Strada+Sevastopol+24,+Sector+1,+Bucure%C8%99ti&output=embed"
+            title="Locație Boost Club pe hartă"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+          <!-- NOTĂ: Înlocuiește src-ul de mai sus cu embed-ul real de pe Google Maps -->
+        </div>
+
+        <!-- Link Google Maps -->
+        <a
+          href="https://www.google.com/maps/search/Strada+Sevastopol+24+Sector+1+Bucuresti"
+          target="_blank"
+          rel="noopener"
+          class="btn btn-secondary"
+          style="text-align:center; display:block;">
+          Deschide în Google Maps
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4. TRASEU DIN PIAȚA VICTORIEI ================= -->
+<section class="section section-sage">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Cum ajungi</span>
+      <h2>Traseu din Piața Victoriei</h2>
+      <p>5 minute pe jos de la ieșirea metroului.</p>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr; gap:var(--s5); max-width:860px;">
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:var(--s4);">
+
+        <!-- Traseu metrou + pietonal -->
+        <div class="contact-card">
+          <h3 style="font-size:16px; display:flex; align-items:center; gap:8px;">
+            🚇 Cu metroul
+          </h3>
+          <div class="route-step">
+            <div class="route-num">1</div>
+            <div class="route-text">Coboară la stația <strong>Piața Victoriei</strong> (M1 sau M3)</div>
+          </div>
+          <div class="route-step">
+            <div class="route-num">2</div>
+            <div class="route-text">Ieși din metrou pe <strong>Strada Sevastopol</strong></div>
+          </div>
+          <div class="route-step">
+            <div class="route-num">3</div>
+            <div class="route-text">Mergi circa <strong>300 metri</strong> în direcția nord (spre Herăstrău)</div>
+          </div>
+          <div class="route-step">
+            <div class="route-num">4</div>
+            <div class="route-text">Numărul <strong>24</strong> este pe dreapta. Caută indicatorul Boost Club.</div>
+          </div>
+        </div>
+
+        <!-- Traseu cu mașina -->
+        <div class="contact-card">
+          <h3 style="font-size:16px; display:flex; align-items:center; gap:8px;">
+            🚗 Cu mașina
+          </h3>
+          <div class="route-step">
+            <div class="route-num">1</div>
+            <div class="route-text">Navighează spre <strong>Piața Victoriei, Sector 1</strong></div>
+          </div>
+          <div class="route-step">
+            <div class="route-num">2</div>
+            <div class="route-text">Ia strada <strong>Sevastopol</strong> spre nord</div>
+          </div>
+          <div class="route-step">
+            <div class="route-num">3</div>
+            <div class="route-text"><strong>Parcare stradală</strong> disponibilă pe Sevastopol și pe străzile adiacente</div>
+          </div>
+          <div class="route-step">
+            <div class="route-num">4</div>
+            <div class="route-text">Numărul <strong>24</strong> pe stânga (dinspre Piața Victoriei)</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!--
+        FOTO RUTĂ — slot opțional
+        <img src="images/ruta-piata-victoriei-1.jpg"
+             alt="Hartă traseu pietonal din Piața Victoriei la Boost Club"
+             style="width:100%; border-radius:var(--radius);"
+             width="860" height="400" loading="lazy">
+      -->
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5. WALK-INS ================= -->
+<section class="section">
+  <div class="container-text text-center">
+    <span class="eyebrow">Walk-in</span>
+    <h2>Poți veni și fără programare</h2>
+    <p class="mt-2" style="color:var(--text-soft);">
+      Dacă ești în zonă și ușa e deschisă, intră oricând în program. Dacă vrei garanția că Gabriel este disponibil pentru tine, rezervă online sau pe WhatsApp — durează 30 de secunde.
+    </p>
+    <div class="hero-ctas" style="justify-content:center; margin-top:var(--s4);">
+      <a href="consultatie-gratuita.html" class="btn btn-primary">Rezervă online (gratuit)</a>
+      <a href="https://wa.me/40726205752?text=Bun%C4%83!%20Vreau%20s%C4%83%20rezerv%20o%20consulta%C8%9Bie%20gratuit%C4%83." class="btn btn-whatsapp">
+        <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>Boost Club</h3>
+        <address class="footer-nap">
+          Strada Sevastopol 24, Sector 1, București<br>
+          <a href="tel:+40726205752">+40 726 205 752</a><br>
+          <a href="https://wa.me/40726205752?text=Bun%C4%83!%20Vreau%20s%C4%83%20rezerv%20o%20consulta%C8%9Bie%20gratuit%C4%83.">WhatsApp</a>
+        </address>
+        <p class="small mt-2">Luni–Vineri 07:00–20:00 · Sâmbătă închis · Duminică 10:00–18:00</p>
+      </div>
+      <div>
+        <h3>Navigare</h3>
+        <a href="consultatie-gratuita.html">Consultație gratuită</a><br>
+        <a href="cum-functioneaza.html">Cum funcționează</a><br>
+        <a href="recenzii.html">Recenzii</a><br>
+        <a href="ambasador.html">Lucrează cu noi</a>
+      </div>
+      <div>
+        <h3>Legal</h3>
+        <a href="confidentialitate.html">Confidențialitate</a><br>
+        <a href="termeni.html">Termeni</a><br>
+        <a href="cookies.html">Cookies</a>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p>Distribuitor Independent Herbalife. Boost Club oferă ghidare wellness și consultații educaționale. Consultația nu diagnostichează, nu tratează și nu înlocuiește îngrijirea medicală. Rezultatele variază de la persoană la persoană.</p>
+      <p class="mt-2">© <span id="year">2026</span> Boost Club. Toate drepturile rezervate.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= STICKY MOBILE BAR ================= -->
+<div class="sticky-bar">
+  <a href="tel:+40726205752" class="btn btn-secondary">Sună</a>
+  <a href="https://wa.me/40726205752?text=Bun%C4%83!%20Vreau%20s%C4%83%20rezerv%20o%20consulta%C8%9Bie%20gratuit%C4%83." class="btn btn-whatsapp">
+    <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WhatsApp
+  </a>
+  <a href="consultatie-gratuita.html" class="btn btn-primary">Rezervă gratuit</a>
+</div>
+
+<!-- ================= FLOATING WHATSAPP (desktop) ================= -->
+<a href="https://wa.me/40726205752?text=Bun%C4%83!%20Vreau%20s%C4%83%20rezerv%20o%20consulta%C8%9Bie%20gratuit%C4%83." class="wa-float" aria-label="Scrie-ne pe WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
