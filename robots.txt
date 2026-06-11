@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://boostclub.ro/sitemap.xml

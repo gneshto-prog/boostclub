@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recenzii Boost Club București | Ce spun clienții</title>
+  <meta name="description" content="Recenzii reale Google de la clienții Boost Club București. Descoperă experiențele oamenilor care au vizitat clubul lângă Piața Victoriei.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;600&display=swap">
+  <meta name="theme-color" content="#0F6B55">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="canonical" href="https://boostclub.ro/recenzii.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://boostclub.ro/recenzii.html">
+  <meta property="og:title" content="Recenzii Boost Club București | Ce spun clienții">
+  <meta property="og:description" content="Recenzii reale Google de la clienții Boost Club București. Descoperă experiențele oamenilor care au vizitat clubul lângă Piața Victoriei.">
+  <meta property="og:locale" content="ro_RO">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WellnessCenter",
+    "@id": "https://boostclub.ro/#business",
+    "name": "Boost Club",
+    "url": "https://boostclub.ro",
+    "telephone": "+40726205752",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Strada Sevastopol 24",
+      "addressLocality": "București",
+      "addressRegion": "Sector 1",
+      "addressCountry": "RO"
+    }
+  }
+  </script>
+  <style>
+    /* ---- recenzii.html — componente specifice ---- */
+
+    /* Card recenzie mare — pentru story blocks */
+    .review-story {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: var(--s4);
+      position: relative;
+    }
+    .review-story::before {
+      content: "\201C";
+      position: absolute;
+      top: 6px; left: 20px;
+      font-family: 'Manrope', serif;
+      font-size: 80px;
+      line-height: 1;
+      color: var(--gold);
+      opacity: 0.7;
+    }
+    .review-story p {
+      font-size: 18px;
+      line-height: 1.7;
+      padding-top: var(--s4);
+      color: var(--text);
+    }
+    .review-story footer {
+      margin-top: var(--s3);
+      padding-top: var(--s3);
+      border-top: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      gap: var(--s2);
+    }
+    .review-story .reviewer-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: var(--sage);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      color: var(--green);
+      flex-shrink: 0;
+    }
+    .review-story .reviewer-info strong { display: block; font-size: 16px; }
+    .review-story .reviewer-info span   { font-size: 14px; color: var(--text-soft); }
+    .review-story .stars { color: var(--gold); letter-spacing: 2px; }
+
+    /* Tag tematică recenzie */
+    .review-tag {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 20px;
+      background: var(--sage);
+      color: var(--green-dark);
+      margin-top: var(--s2);
+    }
+
+    /* Disclosure banner */
+    .disclosure-banner {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: var(--s3);
+      font-size: 15px;
+      color: var(--text-soft);
+    }
+    .disclosure-banner strong { color: var(--text); }
+
+    /* Sumarul dovezilor sociale */
+    .proof-summary {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--s3);
+    }
+    @media (min-width: 640px) {
+      .proof-summary { grid-template-columns: repeat(4, 1fr); }
+    }
+    .proof-stat {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: var(--s3);
+      text-align: center;
+    }
+    .proof-stat .stat-num {
+      display: block;
+      font-family: 'Manrope', sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--green);
+      line-height: 1.1;
+    }
+    .proof-stat .stat-label {
+      font-size: 14px;
+      color: var(--text-soft);
+      margin-top: 4px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-nav">Sari la conținut principal</a>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">Boost Club<span class="dot">.</span></a>
+    <nav class="nav" aria-label="Meniu principal">
+      <a href="consultatie-gratuita.html">Consultație gratuită</a>
+      <a href="cum-functioneaza.html">Cum funcționează</a>
+      <a href="recenzii.html" aria-current="page">Recenzii</a>
+      <a href="gabriel.html">Despre Gabriel</a>
+      <a href="contact.html">Contact</a>
+      <a href="consultatie-gratuita.html" class="btn btn-primary">Rezervă gratuit</a>
+    </nav>
+    <button class="menu-toggle" aria-expanded="false" aria-label="Deschide meniul"><span></span></button>
+  </div>
+  <nav class="mobile-menu" aria-label="Meniu mobil">
+    <a href="consultatie-gratuita.html">Consultație gratuită</a>
+    <a href="cum-functioneaza.html">Cum funcționează</a>
+    <a href="recenzii.html" aria-current="page">Recenzii</a>
+    <a href="gabriel.html">Despre Gabriel</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main id="main-content">
+
+<!-- ================= 1. HERO ================= -->
+<section class="section-dark section" style="padding-top: var(--s8); padding-bottom: var(--s8);">
+  <div class="container-text text-center">
+    <span class="eyebrow">Recenzii reale</span>
+    <h1>Ce spun oamenii după vizită</h1>
+    <p class="lead mt-2">Recenzii autentice de la clienți reali ai Boost Club — colectate pe Google, neprelucrate și nemodificate.</p>
+  </div>
+</section>
+
+<!-- ================= 2. SUMAR DOVEZI SOCIALE ================= -->
+<!--
+  PLACEHOLDER: Actualizează cifrele de mai jos cu datele reale de pe Google Business Profile.
+  Nu inventa numere — folosește doar date reale și verificabile.
+-->
+<section style="padding: var(--s4) 0;">
+  <div class="container">
+    <div class="proof-summary">
+      <div class="proof-stat">
+        <span class="stat-num">★ 5.0</span>
+        <span class="stat-label">Scor mediu Google (obiectiv)</span>
+      </div>
+      <div class="proof-stat">
+        <span class="stat-num">36</span>
+        <span class="stat-label">Ani experiență de familie în wellness</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3. DISCLOSURE LEGAL (OUG 58/2022) ================= -->
+<section style="padding: var(--s2) 0 var(--s4);">
+  <div class="container">
+    <div class="disclosure-banner">
+      <strong>Autenticitatea recenziilor:</strong> Toate recenziile afișate pe această pagină sunt colectate direct de pe Google și aparțin unor clienți reali ai Boost Club. Nu solicitam, nu filtrăm și nu plătim pentru recenzii. Conform OUG 58/2022 și Directivei UE 2019/2161, nu afișăm recenzii false sau stimulate.
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4. RECENZII GOOGLE (GRID) ================= -->
+<!--
+  ════════════════════════════════════════════════════════════════
+  INSTRUCȚIUNI PENTRU GABI:
+  Înlocuiește fiecare bloc [RECENZIE REALĂ #N] cu textul exact
+  al recenziei copiat de pe Google. Păstrează:
+    - Textul exact, fără editare
+    - Prenumele + inițiala (ex. Maria D.)
+    - Numărul de stele
+  Adaugă câte recenzii ai — structura se ajustează automat.
+  ════════════════════════════════════════════════════════════════
+-->
+<section class="section section-sage">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Google Reviews</span>
+      <h2>Ce spun clienții noștri</h2>
+    </div>
+
+    <div class="grid grid-3">
+
+      <blockquote class="quote">
+        <p>[RECENZIE REALĂ GOOGLE #1 — copiază textul exact al clientului aici]</p>
+        <footer>
+          [Prenume I.] <span class="stars">★★★★★</span>
+          <span class="review-tag">Prima vizită</span>
+        </footer>
+      </blockquote>
+
+      <blockquote class="quote">
+        <p>[RECENZIE REALĂ GOOGLE #2]</p>
+        <footer>
+          [Prenume I.] <span class="stars">★★★★★</span>
+          <span class="review-tag">Claritate</span>
+        </footer>
+      </blockquote>
+
+      <blockquote class="quote">
+        <p>[RECENZIE REALĂ GOOGLE #3]</p>
+        <footer>
+          [Prenume I.] <span class="stars">★★★★★</span>
+          <span class="review-tag">Locație</span>
+        </footer>
+      </blockquote>
+
+      <blockquote class="quote">
+        <p>[RECENZIE REALĂ GOOGLE #4]</p>
+        <footer>
+          [Prenume I.] <span class="stars">★★★★★</span>
+          <span class="review-tag">Susținere</span>
+        </footer>
+      </blockquote>
+
+      <blockquote class="quote">
+        <p>[RECENZIE REALĂ GOOGLE #5]</p>
+        <footer>
+          [Prenume I.] <span class="stars">★★★★★</span>
+          <span class="review-tag">Rezultate</span>
+        </footer>
+      </blockquote>
+
+      <blockquote class="quote">
+        <p>[RECENZIE REALĂ GOOGLE #6]</p>
+        <footer>
+          [Prenume I.] <span class="stars">★★★★★</span>
+          <span class="review-tag">Recomandare</span>
+        </footer>
+      </blockquote>
+
+    </div>
+
+    <p class="small mt-4" style="text-align:center;">
+      <a href="https://g.page/r/LINK-GOOGLE-BUSINESS-BOOST-CLUB/review" target="_blank" rel="noopener">
+        Vezi toate recenziile pe Google →
+      </a>
+    </p>
+    <!-- NOTĂ: Înlocuiește link-ul de mai sus cu URL-ul real al paginii tale Google Business Profile -->
+
+  </div>
+</section>
+
+<!-- CTA MID-PAGE -->
+<section class="section" style="padding-top: var(--s4); padding-bottom: var(--s6);">
+  <div class="container">
+    <div style="background:var(--sage); border-radius:var(--radius); padding:var(--s4); display:flex; flex-wrap:wrap; gap:var(--s3); align-items:center; justify-content:space-between;">
+      <p style="margin:0; font-weight:600; max-width:52ch;">Vrei să îți formezi propria opinie? Prima vizită este gratuită și fără obligații.</p>
+      <a href="consultatie-gratuita.html" class="btn btn-primary">Rezervă evaluarea gratuită</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5. POVEȘTI DETALIATE ================= -->
+<!--
+  Aceste blocuri sunt pentru recenzii mai lungi sau povești cu mai mult context.
+  Înlocuiește cu recenzii reale, mai detaliate, de pe Google sau povești
+  ale clienților cu acordul lor explicit în scris.
+  Rezultatele variază — păstrează disclaimerul de mai jos.
+-->
+<section class="section section-white">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Povești mai detaliate</span>
+      <h2>În cuvintele lor</h2>
+      <p>Recenzii extinse de la clienți care au ales să descrie experiența în detaliu.</p>
+    </div>
+
+    <div style="display:grid; gap:var(--s4); max-width:860px;">
+
+      <article class="review-story">
+        <p>[RECENZIE DETALIATĂ #1 — text complet copiat de pe Google sau poveste cu acordul clientului]</p>
+        <footer>
+          <div class="reviewer-avatar" aria-hidden="true">[I]</div>
+          <div class="reviewer-info">
+            <strong>[Prenume I.]</strong>
+            <span class="stars">★★★★★</span>
+            <span> · [Data aproximativă, ex. Mai 2025]</span>
+            <span class="review-tag">Slăbire sănătoasă</span>
+          </div>
+        </footer>
+      </article>
+
+      <article class="review-story">
+        <p>[RECENZIE DETALIATĂ #2]</p>
+        <footer>
+          <div class="reviewer-avatar" aria-hidden="true">[I]</div>
+          <div class="reviewer-info">
+            <strong>[Prenume I.]</strong>
+            <span class="stars">★★★★★</span>
+            <span> · [Data aproximativă]</span>
+            <span class="review-tag">Energie și rutină</span>
+          </div>
+        </footer>
+      </article>
+
+    </div>
+
+    <!-- Disclaimer rezultate — OBLIGATORIU lângă orice poveste personală -->
+    <p class="small mt-4" style="max-width:64ch; color:var(--text-soft);">
+      <strong>Rezultatele variază de la persoană la persoană</strong> în funcție de punctul de pornire, consecvență, stil de viață și alți factori individuali. Poveștile de mai sus reflectă experiențele personale ale clienților și nu reprezintă o garanție de rezultate similare.
+    </p>
+  </div>
+</section>
+
+<!-- ================= 6. LASĂ O RECENZIE ================= -->
+<section class="section">
+  <div class="container-text text-center">
+    <span class="eyebrow">Ai vizitat Boost Club?</span>
+    <h2>Împărtășește experiența ta</h2>
+    <p class="mt-2" style="color:var(--text-soft);">Dacă ai fost la o consultație la Boost Club, recenzia ta sinceră pe Google ajută alți oameni să ia o decizie informată. Nu solicităm recenzii pozitive — solicităm recenzii autentice.</p>
+    <div class="hero-ctas" style="justify-content:center; margin-top:var(--s4);">
+      <a href="https://g.page/r/LINK-GOOGLE-BUSINESS-BOOST-CLUB/review" target="_blank" rel="noopener" class="btn btn-secondary">
+        Lasă o recenzie pe Google
+      </a>
+    </div>
+    <!-- NOTĂ: Înlocuiește link-ul cu URL-ul real al Google Business Profile -->
+    <p class="small mt-3">Nu solicităm, nu plătim și nu stimulăm recenzii. Apreciem onestitatea.</p>
+  </div>
+</section>
+
+<!-- ================= 7. CTA FINAL ================= -->
+<section class="section-dark section text-center">
+  <div class="container-text">
+    <span class="eyebrow">Convins? Curios?</span>
+    <h2>Formează-ți propria opinie — gratuit</h2>
+    <p class="lead mt-2">Prima vizită nu costă nimic și nu îți impune nicio obligație. Vino, măsoară-te, înțelege de unde pornești.</p>
+    <div class="hero-ctas" style="justify-content:center; margin-top: var(--s4);">
+      <a href="consultatie-gratuita.html" class="btn btn-block-mobile" style="background:#fff; color:var(--green-dark); border-color:#fff;">
+        Rezervă evaluarea gratuită
+      </a>
+      <a href="https://wa.me/40726205752?text=Bun%C4%83!%20Vreau%20s%C4%83%20rezerv%20o%20consulta%C8%9Bie%20gratuit%C4%83." class="btn btn-whatsapp btn-block-mobile">
+        <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Scrie pe WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>Boost Club</h3>
+        <address class="footer-nap">
+          Strada Sevastopol 24, Sector 1, București<br>
+          <a href="tel:+40726205752">+40 726 205 752</a><br>
+          <a href="https://wa.me/40726205752?text=Bun%C4%83!%20Vreau%20s%C4%83%20rezerv%20o%20consulta%C8%9Bie%20gratuit%C4%83.">WhatsApp</a>
+        </address>
+        <p class="small mt-2">Luni–Vineri 07:00–20:00 · Sâmbătă închis · Duminică 10:00–18:00</p>
+      </div>
+      <div>
+        <h3>Navigare</h3>
+        <a href="consultatie-gratuita.html">Consultație gratuită</a><br>
+        <a href="cum-functioneaza.html">Cum funcționează</a><br>
+        <a href="recenzii.html">Recenzii</a><br>
+        <a href="ambasador.html">Lucrează cu noi</a>
+      </div>
+      <div>
+        <h3>Legal</h3>
+        <a href="confidentialitate.html">Confidențialitate</a><br>
+        <a href="termeni.html">Termeni</a><br>
+        <a href="cookies.html">Cookies</a>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p>Distribuitor Independent Herbalife. Boost Club oferă ghidare wellness și consultații educaționale. Consultația nu diagnostichează, nu tratează și nu înlocuiește îngrijirea medicală. Rezultatele variază de la persoană la persoană.</p>
+      <p class="mt-2">© <span id="year">2026</span> Boost Club. Toate drepturile rezervate.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= STICKY MOBILE BAR ================= -->
+<div class="sticky-bar">
+  <a href="tel:+40726205752" class="btn btn-secondary">Sună</a>
+  <a href="https://wa.me/40726205752?text=Bun%C4%83!%20Vreau%20s%C4%83%20rezerv%20o%20consulta%C8%9Bie%20gratuit%C4%83." class="btn btn-whatsapp">
+    <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WhatsApp
+  </a>
+  <a href="consultatie-gratuita.html" class="btn btn-primary">Rezervă gratuit</a>
+</div>
+
+<!-- ================= FLOATING WHATSAPP (doar desktop) ================= -->
+<a href="https://wa.me/40726205752?text=Bun%C4%83!%20Vreau%20s%C4%83%20rezerv%20o%20consulta%C8%9Bie%20gratuit%C4%83." class="wa-float" aria-label="Scrie-ne pe WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

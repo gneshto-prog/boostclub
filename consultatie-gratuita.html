@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rezervă o consultație wellness gratuită în București | Boost Club</title>
+  <meta name="description" content="Rezervă evaluarea corporală gratuită la Boost Club, lângă Piața Victoriei, București. Completează formularul sau scrie pe WhatsApp. Fără obligații, 30–40 minute.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;600&display=swap">
+  <meta name="theme-color" content="#0F6B55">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="canonical" href="https://boostclub.ro/consultatie-gratuita.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://boostclub.ro/consultatie-gratuita.html">
+  <meta property="og:title" content="Rezervă consultație gratuită | Boost Club București">
+  <meta property="og:description" content="Completează formularul sau scrie pe WhatsApp pentru evaluarea corporală gratuită prin bioimpedanță la Boost Club, Sector 1, București.">
+  <meta property="og:locale" content="ro_RO">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WellnessCenter",
+        "@id": "https://boostclub.ro/#business",
+        "name": "Boost Club",
+        "url": "https://boostclub.ro",
+        "telephone": "+40726205752",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Strada Sevastopol 24",
+          "addressLocality": "București",
+          "addressRegion": "Sector 1",
+          "addressCountry": "RO"
+        }
+      },
+      {
+        "@type": "Service",
+        "name": "Consultație wellness gratuită",
+        "provider": { "@id": "https://boostclub.ro/#business" },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "RON",
+          "description": "Evaluare corporală prin bioimpedanță + consultație personalizată de 30–40 minute. Fără obligații."
+        },
+        "areaServed": {
+          "@type": "City",
+          "name": "București"
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    /* ---- Booking page — componente specifice acestei pagini ---- */
+
+    /* Layout 2 coloane: formular + lateral informativ */
+    .booking-layout {
+      display: grid;
+      gap: var(--s6);
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 900px) {
+      .booking-layout {
+        grid-template-columns: 1.15fr 0.85fr;
+        align-items: start;
+      }
+    }
+
+    /* Card formular */
+    .booking-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: var(--s4);
+    }
+    @media (min-width: 768px) {
+      .booking-card { padding: var(--s6); }
+    }
+    .booking-card h2 { margin-bottom: var(--s4); }
+
+    /* WhatsApp CTA principal */
+    .wa-booking {
+      background: var(--card);
+      border: 2px solid var(--whatsapp);
+      border-radius: var(--radius);
+      padding: var(--s4);
+      text-align: center;
+    }
+    .wa-booking .wa-icon-big {
+      display: block;
+      width: 52px; height: 52px;
+      fill: var(--whatsapp);
+      margin: 0 auto var(--s2);
+    }
+    .wa-booking h3 { margin-bottom: 8px; }
+    .wa-booking p  { color: var(--text-soft); font-size: 15px; margin-bottom: var(--s3); }
+
+    /* Lista beneficii vizita */
+    .bullet-list {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      margin-top: var(--s3);
+    }
+    .bullet-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 16px;
+    }
+    .bullet-list .dot-g {
+      display: inline-block;
+      width: 7px; height: 7px;
+      min-width: 7px;
+      border-radius: 50%;
+      background: var(--gold);
+      margin-top: 8px;
+    }
+
+    /* Mesaj confirmare */
+    .form-success-msg {
+      display: none;
+      text-align: center;
+      padding: var(--s4);
+      background: rgba(2, 122, 72, 0.06);
+      border: 2px solid var(--success);
+      border-radius: var(--radius);
+    }
+    .form-success-msg.visible { display: block; }
+    .form-success-msg .check-icon {
+      font-size: 48px;
+      line-height: 1;
+      margin-bottom: var(--s2);
+    }
+    .form-success-msg h3 {
+      color: var(--success);
+      font-size: 22px;
+      margin-bottom: var(--s2);
+    }
+    .form-success-msg p { max-width: 44ch; margin: 0 auto; color: var(--text-soft); }
+
+    /* GDPR note */
+    .gdpr-note {
+      font-size: 14px;
+      color: var(--text-soft);
+      line-height: 1.5;
+      margin-top: var(--s2);
+      margin-bottom: var(--s3);
+    }
+  </style>
+</head>
+<body>
+<a href="#main-content" class="skip-nav">Sari la conținut principal</a>
+
+<!-- ================= HEADER (navigare redusă — fără CTA "Rezervă") ================= -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">Boost Club<span class="dot">.</span></a>
+    <nav class="nav" aria-label="Meniu principal">
+      <a href="consultatie-gratuita.html" aria-current="page">Consultație gratuită</a>
+      <a href="cum-functioneaza.html">Cum funcționează</a>
+      <a href="recenzii.html">Recenzii</a>
+      <a href="gabriel.html">Despre Gabriel</a>
+      <a href="contact.html">Contact</a>
+      <!-- Fără CTA "Rezervă gratuit" — suntem deja pe pagina de rezervare -->
+    </nav>
+    <button class="menu-toggle" aria-expanded="false" aria-label="Deschide meniul"><span></span></button>
+  </div>
+  <nav class="mobile-menu" aria-label="Meniu mobil">
+    <a href="consultatie-gratuita.html" aria-current="page">Consultație gratuită</a>
+    <a href="cum-functioneaza.html">Cum funcționează</a>
+    <a href="recenzii.html">Recenzii</a>
+    <a href="gabriel.html">Despre Gabriel</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main id="main-content">
+
+<!-- ================= 1. HERO COMPACT ================= -->
+<section class="section-dark section" style="padding-top: var(--s8); padding-bottom: var(--s6);">
+  <div class="container-text text-center">
+    <span class="eyebrow">Gratuit · Fără obligații · Piața Victoriei</span>
+    <h1>Rezervă-ți evaluarea corporală gratuită</h1>
+    <p class="lead mt-2">Completează formularul de mai jos — te contactăm noi pentru confirmare. Sau scrie direct pe WhatsApp dacă preferi.</p>
+  </div>
+</section>
+
+<!-- ================= 2. STRIP LINIȘTITOR ================= -->
+<section style="padding: var(--s3) 0;">
+  <div class="container">
+    <div class="trust-strip">
+      <div class="item"><strong>100% Gratuit</strong><span>Niciun cost ascuns</span></div>
+      <div class="item"><strong>30–40 minute</strong><span>Sesiune completă</span></div>
+      <div class="item"><strong>Fără obligații</strong><span>Decizia îți aparține</span></div>
+      <div class="item"><strong>Piața Victoriei</strong><span>Strada Sevastopol 24</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3. FORMULAR + LATERAL ================= -->
+<section class="section" id="formular" style="padding-top: var(--s6);">
+  <div class="container">
+    <div class="booking-layout">
+
+      <!-- COLOANA STÂNGĂ — formularul de rezervare -->
+      <div class="booking-card">
+        <span class="eyebrow">Rezervare</span>
+        <h2>Cerere de consultație gratuită</h2>
+
+        <!-- Mesaj confirmare (ascuns inițial, afișat după submit în preview local) -->
+        <div class="form-success-msg" id="success-msg" role="alert" aria-live="polite">
+          <div class="check-icon" aria-hidden="true">✓</div>
+          <h3>Cerere trimisă cu succes!</h3>
+          <p>Îți mulțumim, <strong id="success-name"></strong>. Te contactăm la numărul tău în câteva ore pentru a confirma ora.</p>
+          <p class="mt-3">Vrei confirmare mai rapidă? Scrie-ne și pe WhatsApp:</p>
+          <a href="https://wa.me/40726205752?text=Bun%C4%83!%20Am%20completat%20formularul%20de%20rezervare.%20A%C8%99%20dori%20confirmare%20mai%20rapid%C4%83."
+             class="btn btn-whatsapp mt-3">
+            <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Confirmă pe WhatsApp
+          </a>
+        </div>
+
+        <!-- FORMULARUL — 5 câmpuri + GDPR + buton submit -->
+        <!-- data-netlify="true": formularul va fi procesat de Netlify la deploy -->
+        <!-- Preview local: JS de mai jos afișează confirmare fără a trimite datele -->
+        <form id="booking-form" name="consultatie" method="POST" data-netlify="true" netlify novalidate>
+          <input type="hidden" name="form-name" value="consultatie">
+
+          <div class="form-group">
+            <label for="prenume">Prenume <span aria-hidden="true">*</span></label>
+            <input
+              type="text"
+              id="prenume"
+              name="prenume"
+              required
+              autocomplete="given-name"
+              placeholder="ex. Maria"
+              aria-required="true"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="telefon">Telefon <span aria-hidden="true">*</span></label>
+            <input
+              type="tel"
+              id="telefon"
+              name="telefon"
+              required
+              autocomplete="tel"
+              placeholder="ex. 0722 000 000"
+              aria-required="true"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="ziua">Ziua preferată <span aria-hidden="true">*</span></label>
+            <select id="ziua" name="ziua" required aria-required="true">
+              <option value="">— alege o zi —</option>
+              <option value="Luni">Luni (07:00–20:00)</option>
+              <option value="Marți">Marți (07:00–20:00)</option>
+              <option value="Miercuri">Miercuri (07:00–20:00)</option>
+              <option value="Joi">Joi (07:00–20:00)</option>
+              <option value="Vineri">Vineri (07:00–20:00)</option>
+              <option value="Duminică">Duminică (10:00–18:00)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="interval">Intervalul orar preferat <span aria-hidden="true">*</span></label>
+            <select id="interval" name="interval" required aria-required="true">
+              <option value="">— alege un interval —</option>
+              <option value="Dimineața 07:00–10:00">Dimineața (07:00–10:00)</option>
+              <option value="Înainte de prânz 10:00–13:00">Înainte de prânz (10:00–13:00)</option>
+              <option value="După-amiaza 13:00–16:00">După-amiaza (13:00–16:00)</option>
+              <option value="Seara 16:00–20:00">Seara (16:00–20:00)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="obiectiv">Obiectivul principal <span aria-hidden="true">*</span></label>
+            <select id="obiectiv" name="obiectiv" required aria-required="true">
+              <option value="">— alege —</option>
+              <option value="Slăbire sănătoasă">Slăbire sănătoasă</option>
+              <option value="Masă musculară">Masă musculară</option>
+              <option value="Mai multă energie">Mai multă energie</option>
+              <option value="Un punct de pornire realist">Un punct de pornire realist</option>
+            </select>
+          </div>
+
+          <p class="gdpr-note">
+            Prin trimiterea acestui formular, ești de acord că Boost Club te poate contacta pentru a confirma consultația ta. Nu îți transmitem datele către terți.
+          </p>
+
+          <button type="submit" class="btn btn-primary" style="width:100%; font-size:17px; min-height:56px;">
+            Trimite cererea →
+          </button>
+        </form>
+      </div>
+
+      <!-- COLOANA DREAPTĂ — WhatsApp + detalii vizita + program -->
+      <div>
+
+        <!-- WhatsApp — opțiunea directă -->
+        <div class="wa-booking">
+          <svg class="wa-icon-big" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <h3>Preferi WhatsApp?</h3>
+          <p>Scrie-ne direct și confirmăm ora în câteva minute.</p>
+          <a href="https://wa.me/40726205752?text=Bun%C4%83!%20Nu%20am%20g%C4%83sit%20o%20or%C4%83%20potrivit%C4%83%20online%20pentru%20consulta%C8%9Bia%20gratuit%C4%83.%20Ave%C8%9Bi%20disponibilitate%20%C3%AEn%20aceast%C4%83%20s%C4%83pt%C4%83m%C3%A2n%C4%83%3F"
+             class="btn btn-whatsapp" style="width:100%;">
+            <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Scrie pe WhatsApp
+          </a>
+        </div>
+
+        <!-- Ce se întâmplă la vizită -->
+        <div class="card mt-4">
+          <span class="eyebrow">La vizita ta</span>
+          <h3>Ce primești în 30–40 de minute</h3>
+          <ul class="bullet-list">
+            <li><span class="dot-g" aria-hidden="true"></span><span>Analiză corporală prin bioimpedanță</span></li>
+            <li><span class="dot-g" aria-hidden="true"></span><span>Rezultate explicate pe înțelesul tău</span></li>
+            <li><span class="dot-g" aria-hidden="true"></span><span>Discuție despre obiectivele tale</span></li>
+            <li><span class="dot-g" aria-hidden="true"></span><span>Recomandări personalizate pentru tine</span></li>
+          </ul>
+          <a href="cum-functioneaza.html" class="small mt-3" style="display:inline-block; color:var(--green);">
+            Cum funcționează — detalii complete →
+          </a>
+        </div>
+
+        <!-- Program de funcționare -->
+        <div class="card mt-3">
+          <h3 style="font-size:17px; margin-bottom: var(--s2);">Program Boost Club</h3>
+          <table class="hours">
+            <tr><td>Luni – Vineri</td><td>07:00 – 20:00</td></tr>
+            <tr><td>Sâmbătă</td><td>Închis</td></tr>
+            <tr><td>Duminică</td><td>10:00 – 18:00</td></tr>
+          </table>
+          <p class="small mt-3">
+            <strong>Strada Sevastopol 24, Sector 1</strong><br>
+            La 5 minute de Piața Victoriei
+          </p>
+          <a href="tel:+40726205752" class="btn btn-secondary mt-3" style="width:100%;">
+            Sună: +40 726 205 752
+          </a>
+        </div>
+
+      </div>
+      <!-- /coloana dreapta -->
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4. MINI-FAQ ================= -->
+<section class="section section-sage">
+  <div class="container-text">
+    <div class="section-head">
+      <span class="eyebrow">Înainte să completezi</span>
+      <h2>Întrebări frecvente</h2>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">Consultația este într-adevăr gratuită?</button>
+      <div class="faq-a"><p>Da — evaluarea corporală și consultația inițială sunt 100% gratuite, fără costuri ascunse și fără nicio obligație. Dacă ulterior vrei un program de coaching, discutăm opțiunile transparent.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">Cât durează prima vizită?</button>
+      <div class="faq-a"><p>Aproximativ 30–40 de minute: testul de bioimpedanță, rezultatele explicate și o discuție despre obiectivele tale.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">Trebuie să cumpăr ceva?</button>
+      <div class="faq-a"><p>Nu. Vizita este gratuită și fără obligații. Pleci cu rezultatele tale și cu recomandări — deciziile îți aparțin în totalitate.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">Ce primesc la final?</button>
+      <div class="faq-a"><p>Rezultatele tale complete (masă musculară, masă adipoasă, apă, grăsime viscerală, vârstă metabolică), explicate pe înțelesul tău, plus un pas următor personalizat.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">Cât de repede mă contactați după formular?</button>
+      <div class="faq-a"><p>De obicei în câteva ore, în timpul programului. Dacă ai nevoie de confirmare mai rapidă, scrie-ne pe <a href="https://wa.me/40726205752?text=Bun%C4%83!%20Nu%20am%20g%C4%83sit%20o%20or%C4%83%20potrivit%C4%83%20online%20pentru%20consulta%C8%9Bia%20gratuit%C4%83.%20Ave%C8%9Bi%20disponibilitate%20%C3%AEn%20aceast%C4%83%20s%C4%83pt%C4%83m%C3%A2n%C4%83%3F">WhatsApp</a> — răspundem în câteva minute.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">Pot rezerva direct pe WhatsApp?</button>
+      <div class="faq-a"><p>Sigur — dacă preferi, trimite-ne un mesaj pe <a href="https://wa.me/40726205752?text=Bun%C4%83!%20Nu%20am%20g%C4%83sit%20o%20or%C4%83%20potrivit%C4%83%20online%20pentru%20consulta%C8%9Bia%20gratuit%C4%83.%20Ave%C8%9Bi%20disponibilitate%20%C3%AEn%20aceast%C4%83%20s%C4%83pt%C4%83m%C3%A2n%C4%83%3F">WhatsApp</a> și îți confirmăm ora în câteva minute.</p></div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>Boost Club</h3>
+        <address class="footer-nap">
+          Strada Sevastopol 24, Sector 1, București<br>
+          <a href="tel:+40726205752">+40 726 205 752</a><br>
+          <a href="https://wa.me/40726205752?text=Bun%C4%83!%20Nu%20am%20g%C4%83sit%20o%20or%C4%83%20potrivit%C4%83%20online%20pentru%20consulta%C8%9Bia%20gratuit%C4%83.%20Ave%C8%9Bi%20disponibilitate%20%C3%AEn%20aceast%C4%83%20s%C4%83pt%C4%83m%C3%A2n%C4%83%3F">WhatsApp</a>
+        </address>
+        <p class="small mt-2">Luni–Vineri 07:00–20:00 · Sâmbătă închis · Duminică 10:00–18:00</p>
+      </div>
+      <div>
+        <h3>Navigare</h3>
+        <a href="consultatie-gratuita.html">Consultație gratuită</a><br>
+        <a href="cum-functioneaza.html">Cum funcționează</a><br>
+        <a href="recenzii.html">Recenzii</a><br>
+        <a href="ambasador.html">Lucrează cu noi</a>
+      </div>
+      <div>
+        <h3>Legal</h3>
+        <a href="confidentialitate.html">Confidențialitate</a><br>
+        <a href="termeni.html">Termeni</a><br>
+        <a href="cookies.html">Cookies</a>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p>Distribuitor Independent Herbalife. Boost Club oferă ghidare wellness și consultații educaționale. Consultația nu diagnostichează, nu tratează și nu înlocuiește îngrijirea medicală. Rezultatele variază de la persoană la persoană.</p>
+      <p class="mt-2">© <span id="year">2026</span> Boost Club. Toate drepturile rezervate.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= STICKY MOBILE BAR ================= -->
+<div class="sticky-bar">
+  <a href="tel:+40726205752" class="btn btn-secondary">Sună</a>
+  <a href="https://wa.me/40726205752?text=Bun%C4%83!%20Nu%20am%20g%C4%83sit%20o%20or%C4%83%20potrivit%C4%83%20online%20pentru%20consulta%C8%9Bia%20gratuit%C4%83.%20Ave%C8%9Bi%20disponibilitate%20%C3%AEn%20aceast%C4%83%20s%C4%83pt%C4%83m%C3%A2n%C4%83%3F" class="btn btn-whatsapp">
+    <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WhatsApp
+  </a>
+  <!-- Pe pagina de rezervare butonul scroll-ează înapoi la formular -->
+  <a href="#formular" class="btn btn-primary">Spre formular ↑</a>
+</div>
+
+<!-- ================= FLOATING WHATSAPP (doar desktop) ================= -->
+<a href="https://wa.me/40726205752?text=Bun%C4%83!%20Nu%20am%20g%C4%83sit%20o%20or%C4%83%20potrivit%C4%83%20online%20pentru%20consulta%C8%9Bia%20gratuit%C4%83.%20Ave%C8%9Bi%20disponibilitate%20%C3%AEn%20aceast%C4%83%20s%C4%83pt%C4%83m%C3%A2n%C4%83%3F"
+   class="wa-float" aria-label="Scrie-ne pe WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="js/main.js"></script>
+<script>
+  /* ====================================================================
+     Booking form — gestionare submit
+     LOCAL PREVIEW: preventDefault → afișează confirmare inline
+     NETLIFY DEPLOY: șterge linia e.preventDefault() și setează
+       action="multumim.html" pe <form> pentru redirect după trimitere
+     ==================================================================== */
+  (function () {
+    var form       = document.getElementById('booking-form');
+    var successMsg = document.getElementById('success-msg');
+    var nameInput  = document.getElementById('prenume');
+    var successName = document.getElementById('success-name');
+
+    if (!form) return;
+
+    form.addEventListener('submit', function (e) {
+      /* Validare HTML5 nativă */
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      /* — PREVIEW LOCAL — comentează linia de mai jos la deploy Netlify */
+      e.preventDefault();
+
+      /* Afișează mesajul de succes */
+      if (successMsg) {
+        successMsg.classList.add('visible');
+        if (successName && nameInput) {
+          successName.textContent = nameInput.value.trim();
+        }
+        successMsg.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      /* Ascunde formularul */
+      form.style.display = 'none';
+    });
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,628 @@
+/* ==========================================================================
+   BOOST CLUB — DESIGN SYSTEM
+   This one file controls how the entire website looks.
+   Colors, fonts, buttons, spacing — change it here, it changes everywhere.
+   ========================================================================== */
+
+/* ---- 1. FONTS (loaded from Google Fonts) ---- */
+/* Fonts loaded via <link> in HTML for better performance */
+
+/* ---- 2. DESIGN TOKENS (the brand's DNA) ----
+   These are variables. var(--green) anywhere below means #0F6B55. */
+:root {
+  /* Colors */
+  --green:        #0F6B55;  /* primary brand green — main buttons, links */
+  --green-dark:   #0B4F41;  /* hover state */
+  --gold:         #C89B3C;  /* luxury accent — small details only */
+  --sage:         #DCE9E2;  /* soft surface for highlighted sections */
+  --bg:           #F7F6F2;  /* warm off-white page background */
+  --card:         #FFFFFF;  /* card surfaces */
+  --text:         #1B1F1E;  /* main text */
+  --text-soft:    #5F6965;  /* secondary text */
+  --line:         #D7DDD9;  /* dividers and borders */
+  --error:        #B42318;
+  --success:      #027A48;
+  --whatsapp:     #25D366;
+
+  /* Spacing (8px system) */
+  --s1: 8px;  --s2: 16px;  --s3: 24px;  --s4: 32px;
+  --s6: 48px; --s8: 64px;  --s12: 96px;
+
+  /* Shape */
+  --radius: 16px;
+  --radius-sm: 12px;
+  --shadow: 0 6px 24px rgba(27, 31, 30, 0.08);
+}
+
+/* ---- 3. RESET & BASE ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; height: auto; display: block; border-radius: var(--radius-sm); }
+
+/* ---- 4. TYPOGRAPHY ---- */
+h1, h2, h3 {
+  font-family: 'Manrope', system-ui, sans-serif;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: 34px; font-weight: 800; }
+h2 { font-size: 28px; font-weight: 800; }
+h3 { font-size: 22px; font-weight: 700; }
+
+p  { max-width: 68ch; }
+.lead { font-size: 19px; color: var(--text-soft); }
+.small { font-size: 15px; line-height: 1.6; color: var(--text-soft); }
+
+a { color: var(--green); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--green-dark); }
+
+strong { font-weight: 600; }
+
+/* Desktop type scale */
+@media (min-width: 768px) {
+  body { font-size: 18px; }
+  h1 { font-size: 48px; }
+  h2 { font-size: 34px; }
+  h3 { font-size: 24px; }
+}
+
+/* ---- 5. LAYOUT ---- */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--s3);
+}
+
+.container-text { max-width: 680px; margin: 0 auto; padding: 0 var(--s3); }
+
+.section { padding: var(--s8) 0; }            /* 64px on mobile */
+.section-sage { background: var(--sage); }
+.section-white { background: var(--card); }
+
+@media (min-width: 768px) {
+  .section { padding: var(--s12) 0; }         /* 96px on desktop */
+}
+
+/* Simple responsive grid for cards */
+.grid {
+  display: grid;
+  gap: var(--s3);
+  grid-template-columns: 1fr;                  /* 1 column on phones */
+}
+@media (min-width: 640px)  { .grid-2, .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .grid-3 { grid-template-columns: repeat(3, 1fr); }
+                             .grid-4 { grid-template-columns: repeat(4, 1fr); } }
+
+/* ---- 6. BUTTONS ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;                            /* big tap target on mobile */
+  padding: 12px 24px;
+  border-radius: var(--radius);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+@media (min-width: 768px) { .btn { min-height: 52px; padding: 14px 28px; } }
+
+/* Primary — the green "book" button */
+.btn-primary { background: var(--green); color: #fff; }
+.btn-primary:hover { background: var(--green-dark); box-shadow: var(--shadow); color: #fff; }
+
+/* Secondary — white with green border */
+.btn-secondary { background: var(--card); color: var(--text); border-color: var(--green); }
+.btn-secondary:hover { border-color: var(--green-dark); box-shadow: var(--shadow); }
+
+/* WhatsApp — white with the recognizable green icon */
+.btn-whatsapp { background: var(--card); color: var(--text); border-color: var(--line); }
+.btn-whatsapp:hover { border-color: var(--whatsapp); box-shadow: var(--shadow); }
+.btn-whatsapp .wa-icon { width: 22px; height: 22px; fill: var(--whatsapp); flex-shrink: 0; }
+
+/* Full-width button on small screens (used in hero & forms) */
+@media (max-width: 480px) { .btn-block-mobile { width: 100%; } }
+
+/* ---- 7. CARDS ---- */
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--s3);
+}
+@media (max-width: 767px) { .card { padding: 20px; } }
+
+.card h3 { margin-bottom: var(--s1); }
+.card p  { color: var(--text-soft); }
+
+/* Gold accent detail — small line above card/section titles */
+.accent-line {
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--gold);
+  border-radius: 2px;
+  margin-bottom: var(--s2);
+}
+
+/* ---- 8. FORMS ---- */
+label {
+  display: block;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+input, select, textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  font: inherit;
+  color: var(--text);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid var(--green);
+  outline-offset: 1px;
+  border-color: var(--green);
+}
+
+.form-group { margin-bottom: var(--s3); }
+
+.form-error { color: var(--error); font-size: 15px; margin-top: 6px; }
+
+/* ---- 9. UTILITIES ---- */
+.text-center { text-align: center; }
+.mt-2 { margin-top: var(--s2); }  .mt-3 { margin-top: var(--s3); }
+.mt-4 { margin-top: var(--s4); }  .mt-6 { margin-top: var(--s6); }
+.mb-2 { margin-bottom: var(--s2); } .mb-3 { margin-bottom: var(--s3); }
+.mb-4 { margin-bottom: var(--s4); } .mb-6 { margin-bottom: var(--s6); }
+
+/* Section heading block — keeps every section title consistent */
+.section-head { margin-bottom: var(--s4); }
+.section-head p { color: var(--text-soft); margin-top: var(--s1); }
+
+/* ---- 10. ACCESSIBILITY & POLISH ---- */
+/* Skip navigation — visible only on keyboard focus */
+.skip-nav {
+  position: absolute;
+  top: -100px;
+  left: var(--s3);
+  background: var(--green);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  text-decoration: none;
+  z-index: 9999;
+  transition: top 0.15s;
+}
+.skip-nav:focus {
+  top: var(--s2);
+}
+
+/* Visible focus ring for keyboard users */
+a:focus-visible, button:focus-visible, .btn:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* Respect users who turn off animations */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+
+/* Screen-reader-only text (for icon buttons) */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+/* ==========================================================================
+   11. PREMIUM LAYER — hero, dark sections, eyebrows, image frames
+   ========================================================================== */
+
+/* Eyebrow — small gold label above headings (the "luxury whisper") */
+.eyebrow {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: var(--s2);
+}
+
+/* Dark hero / dark section — deep green with light text */
+.section-dark {
+  background:
+    radial-gradient(1200px 600px at 85% -10%, rgba(200,155,60,0.12), transparent 60%),
+    linear-gradient(160deg, #0D5C49 0%, var(--green-dark) 70%);
+  color: #F2F5F3;
+}
+.section-dark h1, .section-dark h2, .section-dark h3 { color: #FFFFFF; }
+.section-dark p, .section-dark .lead { color: rgba(242,245,243,0.82); }
+.section-dark .eyebrow { color: #E3C272; }
+.section-dark a { color: #BFD9CF; }
+
+/* Hero layout */
+.hero { padding: var(--s8) 0 var(--s8); }
+@media (min-width: 900px) {
+  .hero { padding: var(--s12) 0; }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: var(--s6);
+    align-items: center;
+  }
+}
+.hero h1 { max-width: 16ch; }
+.hero .lead { max-width: 48ch; margin-top: var(--s2); }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: var(--s2); margin-top: var(--s4); }
+
+/* Micro-proof row under hero CTAs */
+.proof-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  margin-top: var(--s4);
+  padding-top: var(--s3);
+  border-top: 1px solid rgba(255,255,255,0.18);
+  font-size: 15px;
+  color: rgba(242,245,243,0.85);
+}
+.proof-row span::before {
+  content: "";
+  display: inline-block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  margin-right: 9px;
+  vertical-align: middle;
+}
+
+/* Image framing — photos get depth and intent */
+.img-frame {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(11, 79, 65, 0.28);
+}
+.img-frame img { border-radius: 0; width: 100%; object-fit: cover; }
+
+/* Photo placeholder (until real photos exist) */
+.img-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 360px;
+  padding: var(--s3);
+  background: linear-gradient(145deg, #14745D, #0B4F41);
+  color: rgba(255,255,255,0.65);
+  font-size: 15px;
+  letter-spacing: 0.04em;
+}
+
+/* Card hover lift — subtle life on desktop */
+@media (hover: hover) {
+  .card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+}
+
+/* Review quote — elegant testimonial block */
+.quote {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--s4) var(--s3) var(--s3);
+}
+.quote::before {
+  content: "\201C";
+  position: absolute;
+  top: 6px; left: 18px;
+  font-family: 'Manrope', serif;
+  font-size: 64px;
+  line-height: 1;
+  color: var(--gold);
+  opacity: 0.85;
+}
+.quote p { font-size: 17px; padding-top: var(--s2); }
+.quote footer {
+  margin-top: var(--s2);
+  font-size: 15px;
+  font-weight: 600;
+}
+.quote .stars { color: var(--gold); letter-spacing: 2px; font-size: 14px; }
+
+/* Gold divider for section transitions */
+.divider-gold {
+  width: 64px; height: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  border: 0;
+  margin: 0 0 var(--s3);
+}
+
+/* Trust strip — horizontal credibility row */
+.trust-strip {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--s2) var(--s3);
+  padding: var(--s3);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+@media (min-width: 900px) { .trust-strip { grid-template-columns: repeat(4, 1fr); } }
+.trust-strip .item strong { display: block; font-family: 'Manrope'; font-size: 17px; }
+.trust-strip .item span { font-size: 14px; color: var(--text-soft); }
+
+/* ==========================================================================
+   12. SITE SKELETON — header, nav, footer, sticky bar, floating WhatsApp
+   ========================================================================== */
+
+/* ---- Header ---- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(247, 246, 242, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+  gap: var(--s3);
+}
+.logo {
+  font-family: 'Manrope';
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+.logo .dot { color: var(--gold); }
+
+/* Desktop nav */
+.nav { display: none; }
+@media (min-width: 900px) {
+  .nav { display: flex; align-items: center; gap: var(--s3); }
+  .nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .nav a:hover { color: var(--green); }
+  .nav .btn { min-height: 44px; padding: 10px 20px; }
+}
+
+/* Hamburger (mobile only) */
+.menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px; height: 48px;
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+.menu-toggle span, .menu-toggle span::before, .menu-toggle span::after {
+  display: block;
+  width: 20px; height: 2px;
+  background: var(--text);
+  position: relative;
+  transition: transform 0.2s ease;
+}
+.menu-toggle span::before, .menu-toggle span::after { content: ""; position: absolute; }
+.menu-toggle span::before { top: -6px; }
+.menu-toggle span::after  { top: 6px; }
+@media (min-width: 900px) { .menu-toggle { display: none; } }
+
+/* Mobile menu panel */
+.mobile-menu {
+  display: none;
+  border-top: 1px solid var(--line);
+  background: var(--card);
+}
+.mobile-menu.open { display: block; }
+.mobile-menu a {
+  display: block;
+  padding: 16px var(--s3);
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid var(--line);
+}
+.mobile-menu a:last-child { border-bottom: 0; }
+
+/* ---- Footer ---- */
+.site-footer {
+  background: var(--green-dark);
+  color: rgba(242,245,243,0.85);
+  padding: var(--s8) 0 var(--s4);
+  margin-top: var(--s8);
+}
+.site-footer h3 { color: #fff; font-size: 18px; margin-bottom: var(--s2); }
+.site-footer a { color: #BFD9CF; }
+.footer-grid {
+  display: grid;
+  gap: var(--s4);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr; } }
+.footer-nap { font-style: normal; line-height: 1.9; }
+.footer-legal {
+  margin-top: var(--s4);
+  padding-top: var(--s3);
+  border-top: 1px solid rgba(255,255,255,0.15);
+  font-size: 13px;
+  color: rgba(242,245,243,0.6);
+}
+.footer-legal p { max-width: none; }
+
+/* ---- Sticky mobile CTA bar (bottom) ---- */
+.sticky-bar {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 60;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.4fr;
+  gap: 8px;
+  padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid var(--line);
+}
+.sticky-bar .btn { min-height: 48px; padding: 8px 10px; font-size: 14px; }
+@media (min-width: 900px) { .sticky-bar { display: none; } }
+/* keep page content from hiding behind the bar on mobile */
+@media (max-width: 899px) { body { padding-bottom: 76px; } }
+
+/* ---- Floating WhatsApp button (desktop only — mobile has the bar) ---- */
+.wa-float {
+  display: none;
+}
+@media (min-width: 900px) {
+  .wa-float {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 28px; right: 28px;
+    z-index: 60;
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    background: var(--whatsapp);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.22);
+    transition: transform 0.15s ease;
+  }
+  .wa-float:hover { transform: scale(1.06); }
+  .wa-float svg { width: 30px; height: 30px; fill: #fff; }
+}
+
+/* ==========================================================================
+   13. HOMEPAGE COMPONENTS — FAQ accordion, process steps, map, photo grid
+   ========================================================================== */
+
+/* ---- FAQ accordion ---- */
+.faq-item {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.faq-q {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--s2);
+  width: 100%;
+  padding: 18px 20px;
+  background: none;
+  border: 0;
+  font: inherit;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: left;
+  color: var(--text);
+  cursor: pointer;
+  min-height: 56px;
+}
+.faq-q::after {
+  content: "+";
+  font-family: 'Manrope';
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--gold);
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+.faq-item.open .faq-q::after { transform: rotate(45deg); }
+.faq-a {
+  display: none;
+  padding: 0 20px 20px;
+  color: var(--text-soft);
+}
+.faq-item.open .faq-a { display: block; }
+
+/* ---- Process steps (1-2-3) ---- */
+.step { text-align: left; }
+.step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--sage);
+  color: var(--green-dark);
+  font-family: 'Manrope';
+  font-weight: 800;
+  font-size: 18px;
+  border: 1px solid rgba(15,107,85,0.18);
+  margin-bottom: var(--s2);
+}
+.step h3 { margin-bottom: 6px; }
+.step p { color: var(--text-soft); }
+
+/* ---- Map embed ---- */
+.map-wrap {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+.map-wrap iframe { display: block; width: 100%; height: 340px; border: 0; }
+
+/* ---- Atmosphere photo grid ---- */
+.photo-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 900px) { .photo-grid { grid-template-columns: repeat(3, 1fr); } }
+.photo-grid .img-placeholder,
+.photo-grid img {
+  min-height: 0;
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+.photo-grid .img-placeholder { font-size: 13px; }
+
+/* ---- Hours table ---- */
+.hours { width: 100%; max-width: 360px; border-collapse: collapse; }
+.hours td { padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 16px; }
+.hours td:last-child { text-align: right; font-weight: 600; }
