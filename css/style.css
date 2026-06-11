@@ -626,3 +626,32 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 .hours { width: 100%; max-width: 360px; border-collapse: collapse; }
 .hours td { padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 16px; }
 .hours td:last-child { text-align: right; font-weight: 600; }
+
+/* ---- Language Switcher ---- */
+.lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 4px 10px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  margin-left: var(--s1);
+  flex-shrink: 0;
+}
+.lang-switcher a { color: var(--text-soft); text-decoration: none; padding: 1px 3px; border-radius: 3px; }
+.lang-switcher a:hover { color: var(--green); }
+.lang-switcher .lang-active { color: var(--green); cursor: default; }
+.lang-sep { color: var(--line); margin: 0 1px; }
+
+/* Mobile menu variant */
+.mobile-menu .lang-switcher {
+  margin: var(--s2) 0 0;
+  border-color: rgba(255,255,255,0.2);
+}
+.mobile-menu .lang-switcher a { color: rgba(255,255,255,0.65); }
+.mobile-menu .lang-switcher a:hover { color: #fff; }
+.mobile-menu .lang-switcher .lang-active { color: #fff; }
+.mobile-menu .lang-sep { color: rgba(255,255,255,0.25); }
