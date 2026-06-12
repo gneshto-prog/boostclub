@@ -258,7 +258,7 @@
   }
 
   /* ---------- 13b. Step aside while a form is on screen ---------- */
-  var formZone = document.querySelector("#formular, #cerere");
+  var formZone = document.querySelector("#formular, #form, #cerere");
   if (formZone && "IntersectionObserver" in window) {
     new IntersectionObserver(function (entries) {
       document.body.classList.toggle("form-in-view", entries[0].isIntersecting);
