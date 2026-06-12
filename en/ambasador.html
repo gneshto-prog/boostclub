@@ -3,33 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ambassador Programme | Boost Club Bucharest</title>
-  <meta name="description" content="The Boost Club Ambassador Programme is for people who first want to change themselves — and then help others do the same. Selective, structured, and based on real results.">
+  <title>Build Your Own Wellness Business | Boost Club Ambassador Programme</title>
+  <meta name="description" content="The Boost Club Ambassador Programme — build your own business in health and nutrition as a partner in a working business. No experience needed. Learn by doing, from day one.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;600&display=swap">
-  <meta name="theme-color" content="#0F6B55">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+  <meta name="theme-color" content="#0D5645">
   <link rel="stylesheet" href="../css/style.css">
-  
-</head><style>
-.criteria-list{list-style:none;display:grid;gap:10px;margin-top:var(--s2)}
-.criteria-list li{display:flex;align-items:flex-start;gap:10px;font-size:16px}
-.check{color:var(--green);font-weight:700;min-width:20px}
-.cross{color:#cc4444;font-weight:700;min-width:20px}
-.step-card{display:flex;gap:var(--s3);align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:var(--s3)}
-.step-badge{width:48px;height:48px;min-width:48px;border-radius:50%;background:var(--sage);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;color:var(--green)}
-</style><body>
+  <link rel="canonical" href="https://romnutriclub.ro/en/ambasador.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://romnutriclub.ro/en/ambasador.html">
+  <meta property="og:title" content="Build Your Own Wellness Business | Boost Club">
+  <meta property="og:description" content="The Boost Club Ambassador Programme — become a partner in a working health and nutrition business. No experience needed. Learn by doing, from day one.">
+  <meta property="og:locale" content="en_US">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <style>
+    /* ---- ambasador.html — page-specific components ---- */
+    .build-card { display: flex; flex-direction: column; }
+    .build-card p { flex: 1; }
+
+    .highlight-band {
+      background: var(--card);
+      border: 1px solid rgba(200, 155, 60, 0.5);
+      border-radius: var(--radius);
+      padding: var(--s4);
+      box-shadow: var(--shadow-lg);
+    }
+    @media (min-width: 900px) {
+      .highlight-band {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: var(--s6);
+        align-items: center;
+        padding: var(--s6);
+      }
+    }
+
+    .step-card {
+      display: flex;
+      gap: var(--s3);
+      align-items: flex-start;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: var(--s4);
+      margin-bottom: var(--s2);
+    }
+    .step-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px; height: 44px;
+      min-width: 44px;
+      border-radius: 50%;
+      background: linear-gradient(180deg, var(--green-mid), var(--green));
+      color: #fff;
+      font-family: 'Poppins';
+      font-weight: 800;
+      font-size: 18px;
+    }
+    .step-card h3 { margin-bottom: 6px; }
+    .step-card p { color: var(--text-soft); }
+
+    .apply-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: var(--s4);
+      box-shadow: var(--shadow-lg);
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    @media (min-width: 768px) { .apply-card { padding: var(--s6); } }
+
+    .gdpr-note { font-size: 14px; color: var(--text-soft); line-height: 1.5; margin: var(--s2) 0 var(--s3); }
+
+    .form-success-msg {
+      display: none;
+      text-align: center;
+      padding: var(--s4);
+      background: rgba(2, 122, 72, 0.06);
+      border: 2px solid var(--success);
+      border-radius: var(--radius);
+    }
+    .form-success-msg.visible { display: block; }
+    .form-success-msg h3 { color: var(--success); margin-bottom: var(--s2); }
+  </style>
+  <meta property="og:image" content="https://romnutriclub.ro/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/ambasador.html">
+  <link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/ambasador.html">
+  <link rel="alternate" hreflang="x-default" href="https://romnutriclub.ro/ambasador.html">
+</head>
+<body>
 <a href="#main-content" class="skip-nav">Skip to main content</a>
+
+<!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="container header-inner">
-    <a href="index.html" class="logo">Boost Club<span class="dot">.</span></a>
+    <a href="index.html" class="logo" aria-label="Boost Club">B<svg class="logo-leaf" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="leaf-body" d="M2 22C2 10 10 2 22 2c0 12-8 20-20 20Z"/><path class="leaf-slash" d="M7.5 16.5l9-9"/></svg><svg class="logo-leaf" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="leaf-body" d="M2 22C2 10 10 2 22 2c0 12-8 20-20 20Z"/><path class="leaf-slash" d="M7.5 16.5l9-9"/></svg>st&nbsp;Club<span class="dot">.</span></a>
     <nav class="nav" aria-label="Main navigation">
       <a href="consultatie-gratuita.html">Free consultation</a>
       <a href="cum-functioneaza.html">How it works</a>
       <a href="recenzii.html">Reviews</a>
       <a href="gabriel.html">About Gabriel</a>
-      <a href="contact.html">Contact</a>
-      <a href="consultatie-gratuita.html" class="btn btn-primary">Book free</a>
+      <a href="contact.html">Contact</a> <a href="ambasador.html" aria-current="page">Work with us</a>
+      <a href="#cerere" class="btn btn-primary">Apply now</a>
       <div class="lang-switcher" aria-label="Language"><a href="../ambasador.html" lang="ro" hreflang="ro">RO</a><span class="lang-sep">|</span><span class="lang-active">EN</span></div>
     </nav>
     <button class="menu-toggle" aria-expanded="false" aria-label="Open menu"><span></span></button>
@@ -39,92 +121,202 @@
     <a href="cum-functioneaza.html">How it works</a>
     <a href="recenzii.html">Reviews</a>
     <a href="gabriel.html">About Gabriel</a>
-    <a href="contact.html">Contact</a>
+    <a href="contact.html">Contact</a> <a href="ambasador.html" aria-current="page">Work with us</a>
     <div class="lang-switcher" aria-label="Language"><a href="../ambasador.html" lang="ro" hreflang="ro">RO</a><span class="lang-sep">|</span><span class="lang-active">EN</span></div>
   </nav>
 </header>
+
 <main id="main-content">
-<section class="section-dark section" style="padding-top:var(--s8);padding-bottom:var(--s6);">
+
+<!-- ================= 1. HERO ================= -->
+<section class="section-dark section" style="padding-top: var(--s8); padding-bottom: calc(var(--s8) + 40px);">
   <div class="container-text text-center">
-    <span class="eyebrow">Ambassador Programme</span>
-    <h1>We're not looking for salespeople.<br>We're looking for people who invest in themselves.</h1>
-    <p class="lead mt-2">The Boost Club Ambassador Programme is for people who first want to change themselves — and only then help others do the same. It's selective, structured and based on real results, not promises.</p>
+    <span class="eyebrow" style="justify-content:center;">Ambassador Programme</span>
+    <h1>Build your own business in health and nutrition</h1>
+    <p class="lead mt-2">Join a working business as a partner. No experience needed — you learn by doing, from day one, with direct support from Gabriel.</p>
+    <div class="hero-ctas" style="justify-content:center;">
+      <a href="#cerere" class="btn btn-primary btn-lg btn-block-mobile" data-start="Full-time">Start full-time</a>
+      <a href="#cerere" class="btn btn-secondary btn-block-mobile" data-start="Part-time">Start part-time</a>
+    </div>
   </div>
 </section>
 
+<!-- ================= 2. STRIP ================= -->
+<section style="padding: 0 0 var(--s3);">
+  <div class="container trust-overlap">
+    <div class="trust-strip">
+      <div class="item"><strong><span class="gold">46</span> years</strong><span>Herbalife — world leader in wellness entrepreneurship</span></div>
+      <div class="item"><strong>95 countries</strong><span>Build wherever Herbalife operates</span></div>
+      <div class="item"><strong>Global community</strong><span>Partners who teach and collaborate</span></div>
+      <div class="item"><strong>No experience</strong><span>You learn everything in the programme</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3. WHAT YOU CAN BUILD ================= -->
 <section class="section">
   <div class="container">
-    <div class="section-head"><span class="eyebrow">Who it's for</span><h2>The programme is for you if…</h2></div>
-    <div style="display:grid;grid-template-columns:1fr;gap:var(--s4);max-width:860px;">
-      <div style="display:grid;gap:var(--s4);" class="grid">
-        <div class="card">
-          <h3 style="color:var(--green);">✓ Right for you if</h3>
-          <ul class="criteria-list">
-            <li><span class="check">✓</span> You're already a Boost Club client with proven personal results</li>
-            <li><span class="check">✓</span> You want to learn a craft — wellness, nutrition, body composition assessment</li>
-            <li><span class="check">✓</span> You believe in what you've experienced and want to share it authentically</li>
-            <li><span class="check">✓</span> You're willing to invest time in your own learning before helping others</li>
-          </ul>
+    <div class="section-head">
+      <span class="eyebrow">What you can build</span>
+      <h2>Your business, in the shape that fits you</h2>
+      <p>From a nutrition club like Boost Club to your own concept — the model adapts to your interest.</p>
+    </div>
+    <div class="grid grid-4">
+      <div class="card build-card"><h3>Nutrition club</h3><p>A place like Boost Club: consultations, community, shakes — the model you learn directly from the inside.</p></div>
+      <div class="card build-card"><h3>Fit / nutrition café</h3><p>A neighbourhood spot with products and drinks built around a healthy lifestyle.</p></div>
+      <div class="card build-card"><h3>Gym or fit club</h3><p>Training plus nutrition under one roof — for people passionate about sport.</p></div>
+      <div class="card build-card"><h3>Your own concept</h3><p>Do business with friends, around your own idea — the partner community helps you build it.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4. HIGHLIGHT: AMBASSADOR + BOOST CLUB ================= -->
+<section class="section section-sage" style="padding-top: var(--s8);">
+  <div class="container">
+    <div class="highlight-band">
+      <div>
+        <span class="eyebrow">Ambassador Programme + Boost Club</span>
+        <h2>Learn inside a business that already works</h2>
+        <p class="mt-3">You don't start from zero and you don't learn from manuals. You join Boost Club — a working nutrition club with real clients — and learn every part of the business from the inside, as a partner.</p>
+        <p class="mt-3">Already a Boost Club client with results of your own? Even better — you start with a real advantage. If not, no problem: you learn everything in the programme.</p>
+      </div>
+      <div class="img-frame">
+        <div class="img-placeholder" style="min-height:280px;">echipa-boost-club.jpg</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5. HOW YOU LEARN ================= -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">How you learn</span>
+      <h2>The "do to learn" philosophy</h2>
+      <p>No endless theory and no rigid timelines. You do from the start — and you learn exactly what you do.</p>
+    </div>
+    <div style="max-width: 760px;">
+      <div class="step-card">
+        <div class="step-badge">1</div>
+        <div>
+          <h3>Send your request</h3>
+          <p>Choose how you want to start — part-time or full-time. Gabriel receives your request and contacts you for a first conversation.</p>
         </div>
-        <div class="card">
-          <h3 style="color:#cc4444;">✗ Not right if</h3>
-          <ul class="criteria-list">
-            <li><span class="cross">✗</span> You're looking for quick income or a guaranteed second salary</li>
-            <li><span class="cross">✗</span> You haven't personally gone through a process of change</li>
-            <li><span class="cross">✗</span> You expect a script and a commission structure</li>
-            <li><span class="cross">✗</span> You don't believe in the products or the process from personal experience</li>
-          </ul>
+      </div>
+      <div class="step-card">
+        <div class="step-badge">2</div>
+        <div>
+          <h3>Observation through practice</h3>
+          <p>From day one you do, you don't just watch: you take part in consultations, work with the community, and learn how the club runs. Gabriel is beside you to help you learn and do everything — at your own pace, with no fixed deadlines.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-badge">3</div>
+        <div>
+          <h3>Build</h3>
+          <p>With the support of a global community of partners who teach, collaborate and build together — from your first client to your own club.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ================= 6. WHY THIS MODEL ================= -->
 <section class="section section-white">
   <div class="container">
-    <div class="section-head"><span class="eyebrow">The process</span><h2>What the journey looks like</h2><p>There are no shortcuts. There is a process.</p></div>
-    <div style="display:grid;gap:var(--s3);max-width:760px;margin:0 auto;">
-      <div class="step-card"><div class="step-badge">1</div><div><h3>Free consultation — you as a client</h3><p>Everything starts with your own body assessment. You come as a regular client. You measure, you understand, you begin. You can't guide someone else if you haven't been through the process yourself.</p></div></div>
-      <div class="step-card"><div class="step-badge">2</div><div><h3>Observation period (4–8 weeks)</h3><p>You're present at consultations, you listen, you ask questions. You build your own results. Gabriel assesses whether you have the right attitude and mindset — not sales skills.</p></div></div>
-      <div class="step-card"><div class="step-badge">3</div><div><h3>Practical training</h3><p>You learn how bioimpedance assessment works, how to read body composition data, how to build a personalised plan. The training is hands-on, not from a manual.</p></div></div>
-      <div class="step-card"><div class="step-badge">4</div><div><h3>First assisted consultations</h3><p>You lead your first consultations with Gabriel present. You receive direct, unvarnished feedback. If it's not right, you redo it. Standards don't drop.</p></div></div>
-      <div class="step-card"><div class="step-badge">5</div><div><h3>Gradual autonomy</h3><p>When results and attitude confirm you're ready, you receive more independence. The pace is yours — there's no pressure to advance faster than you're comfortable with.</p></div></div>
+    <div class="section-head">
+      <span class="eyebrow">Why this model</span>
+      <h2>Real freedom, real work</h2>
     </div>
+    <div class="grid grid-3">
+      <div class="card"><h3>No boss</h3><p>Nobody tells you what to do. You work how you want, when you want, from wherever you want — you build your own schedule.</p></div>
+      <div class="card"><h3>Income reflects your work</h3><p>What you build is yours. Your income is directly tied to your effort, consistency and skills.</p></div>
+      <div class="card"><h3>Grow with people</h3><p>Do business alongside friends and a community that pushes you forward — and develop yourself along the way.</p></div>
+    </div>
+    <p class="small mt-4" style="max-width:72ch;">The Ambassador Programme is educational and entrepreneurial. Earnings are not guaranteed and depend on effort, skills and fit. For details, see the official Statement of Typical Earnings of Herbalife Independent Distributors.</p>
   </div>
 </section>
 
-<section class="section section-sage">
+<!-- ================= 7. REQUEST FORM ================= -->
+<section class="section section-sage" id="cerere">
   <div class="container">
-    <div class="section-head"><span class="eyebrow">What you build</span><h2>What you build in this programme</h2></div>
-    <div class="grid grid-3" style="max-width:860px;">
-      <div class="card"><h3>Real knowledge</h3><p>You understand the human body, body composition, nutrition and behaviour — not just what to sell.</p></div>
-      <div class="card"><h3>Credibility</h3><p>You have personal results, real training, and the trust of clients who see you as a partner, not a salesperson.</p></div>
-      <div class="card"><h3>A business of your own</h3><p>The Herbalife Independent Distributor model allows you to build a sustainable income based on your own clients and network — on your own terms.</p></div>
+    <div class="section-head text-center">
+      <span class="eyebrow" style="justify-content:center;">Your request</span>
+      <h2>Tell us how you want to start</h2>
+      <p>Takes 30 seconds. Gabriel receives your request and contacts you personally.</p>
+    </div>
+
+    <div class="apply-card">
+      <div class="form-success-msg" id="success-msg" role="alert" aria-live="polite">
+        <h3>Request sent!</h3>
+        <p>Thank you, <strong id="success-name"></strong>. Gabriel will contact you soon for a first conversation.</p>
+      </div>
+
+      <form id="ambasador-form" name="ambasador-en" method="POST" data-netlify="true" netlify-honeypot="bot-field" netlify novalidate>
+        <input type="hidden" name="form-name" value="ambasador-en">
+          <p class="sr-only" aria-hidden="true"><label>Nu completa: <input name="bot-field"></label></p>
+
+        <div class="form-group">
+          <label for="firstname">First name <span aria-hidden="true">*</span></label>
+          <input type="text" id="firstname" name="firstname" required autocomplete="given-name" placeholder="e.g. Andrei" aria-required="true">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone <span aria-hidden="true">*</span></label>
+          <input type="tel" id="phone" name="phone" required autocomplete="tel" inputmode="tel" placeholder="e.g. +40 722 000 000" aria-required="true">
+        </div>
+
+        <div class="form-group">
+          <fieldset>
+            <legend>How do you want to start? <span aria-hidden="true">*</span></legend>
+            <div class="pill-group">
+              <input type="radio" id="start-pt" name="start" value="Part-time" required>
+              <label class="pill" for="start-pt">Part-time</label>
+              <input type="radio" id="start-ft" name="start" value="Full-time">
+              <label class="pill" for="start-ft">Full-time</label>
+            </div>
+          </fieldset>
+        </div>
+
+        <p class="gdpr-note">By submitting this form you agree that Boost Club may contact you about the Ambassador Programme. We do not share your data with third parties.</p>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Send request →</button>
+        <p class="small" style="text-align:center; margin-top:12px;">No obligation · Fast reply · Protected information</p>
+      </form>
     </div>
   </div>
 </section>
 
+<!-- ================= 8. FINAL CTA ================= -->
 <section class="section-dark section text-center">
   <div class="container-text">
-    <span class="eyebrow">Start here</span>
-    <h2>Everything starts with your own consultation</h2>
-    <p class="lead mt-2">If the programme interests you, come first as a client. Experience the process. Then we talk.</p>
-    <div class="hero-ctas" style="justify-content:center;margin-top:var(--s4);">
-      <a href="consultatie-gratuita.html" class="btn btn-block-mobile" style="background:#fff;color:var(--green-dark);border-color:#fff;">Book your free consultation</a>
-      <a href="https://wa.me/40726205752?text=Hi%21%20I%27d%20like%20to%20book%20a%20free%20consultation." class="btn btn-whatsapp btn-block-mobile"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Message us on WhatsApp</a>
+    <span class="eyebrow" style="justify-content:center;">First step</span>
+    <h2>Start from where you are</h2>
+    <p class="lead mt-2">Part-time alongside your current job, or full-time from the start — the path is yours to choose.</p>
+    <div class="hero-ctas" style="justify-content:center;">
+      <a href="#cerere" class="btn btn-primary btn-lg btn-block-mobile" data-start="Full-time">Start full-time</a>
+      <a href="#cerere" class="btn btn-secondary btn-block-mobile" data-start="Part-time">Start part-time</a>
     </div>
+    <p class="brand-tagline center" style="margin-top: var(--s6);">Be your best</p>
   </div>
 </section>
+
 </main>
+
+<!-- ================= FOOTER ================= -->
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div>
-        <h3>Boost Club</h3>
+        <h3 class="sr-only">Boost Club</h3>
+        <div class="footer-brand">
+        <div class="logo footer-logo" role="img" aria-label="Boost Club">B<svg class="logo-leaf" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="leaf-body" d="M2 22C2 10 10 2 22 2c0 12-8 20-20 20Z"/><path class="leaf-slash" d="M7.5 16.5l9-9"/></svg><svg class="logo-leaf" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="leaf-body" d="M2 22C2 10 10 2 22 2c0 12-8 20-20 20Z"/><path class="leaf-slash" d="M7.5 16.5l9-9"/></svg>st&nbsp;Club<span class="dot">.</span></div>
+        <p class="brand-tagline">Be your best</p>
+        </div>
         <address class="footer-nap">
           Strada Sevastopol 24, Sector 1, Bucharest<br>
           <a href="tel:+40726205752">+40 726 205 752</a><br>
-          <a href="https://wa.me/40726205752?text=Hi%21%20I%27d%20like%20to%20book%20a%20free%20consultation.">WhatsApp</a>
+          <a href="https://wa.me/40726205752?text=Hi%20Gabriel!%20I%27d%20like%20to%20learn%20more%20about%20the%20Ambassador%20Programme.">WhatsApp</a>
         </address>
         <p class="small mt-2">Mon–Fri 07:00–20:00 · Sat closed · Sun 10:00–18:00</p>
       </div>
@@ -143,19 +335,59 @@
       </div>
     </div>
     <div class="footer-legal">
-      <p>Independent Herbalife Distributor. Boost Club provides wellness guidance and educational consultations. Consultations do not diagnose, treat or replace medical care. Results vary from person to person.</p>
+      <p>Independent Herbalife Distributor. Boost Club provides wellness guidance and educational consultations. Consultations do not diagnose, treat or replace medical care. Results vary from person to person. The Ambassador Programme is an entrepreneurial opportunity — success is not guaranteed and depends on effort, skills and fit.</p>
       <p class="mt-2">© <span id="year">2026</span> Boost Club. All rights reserved.</p>
     </div>
   </div>
 </footer>
+
+<!-- ================= STICKY MOBILE BAR ================= -->
 <div class="sticky-bar">
-  <a href="tel:+40726205752" class="btn btn-secondary">Call</a>
-  <a href="https://wa.me/40726205752?text=Hi%21%20I%27d%20like%20to%20book%20a%20free%20consultation." class="btn btn-whatsapp"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp</a>
-  <a href="consultatie-gratuita.html" class="btn btn-primary">Book free</a>
+  <a href="tel:+40726205752" class="btn btn-secondary btn-icon" aria-label="Call Boost Club"><svg class="icon-phone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only">Call</span></a>
+  <a href="https://wa.me/40726205752?text=Hi%20Gabriel!%20I%27d%20like%20to%20learn%20more%20about%20the%20Ambassador%20Programme." class="btn btn-whatsapp btn-icon" aria-label="Message on WhatsApp"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="sr-only">WhatsApp</span></a>
+  <a href="#cerere" class="btn btn-primary">Apply now</a>
 </div>
-<a href="https://wa.me/40726205752?text=Hi%21%20I%27d%20like%20to%20book%20a%20free%20consultation." class="wa-float" aria-label="Message us on WhatsApp">
-  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
+
 <script src="../js/main.js"></script>
+<script>
+  (function () {
+    document.querySelectorAll('[data-start]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var val = btn.getAttribute('data-start');
+        var radio = document.querySelector('input[name="start"][value="' + val + '"]');
+        if (radio) radio.checked = true;
+      });
+    });
+
+    var form = document.getElementById('ambasador-form');
+    var successMsg = document.getElementById('success-msg');
+    var nameInput = document.getElementById('firstname');
+    var successName = document.getElementById('success-name');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      var btn = form.querySelector('[type="submit"]');
+      if (btn) btn.disabled = true;
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      }).then(function (res) {
+        if (!res.ok) throw new Error(res.status);
+        if (window.bcTrack) window.bcTrack('form_submit', form.getAttribute('name'));
+        if (successMsg) {
+          successMsg.classList.add('visible');
+          if (successName && nameInput) successName.textContent = nameInput.value.trim();
+          successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        form.style.display = 'none';
+      }).catch(function () {
+        if (btn) btn.disabled = false;
+        alert('We could not send your request. Please try again or message us on WhatsApp.');
+      });
+    });
+  })();
+</script>
 </body>
 </html>

@@ -7,12 +7,12 @@
   <meta name="description" content="Găsești Boost Club pe Strada Sevastopol 24, Sector 1, București — la 5 minute de Piața Victoriei. Program Luni–Vineri 07:00–20:00, Duminică 10:00–18:00.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;600&display=swap">
-  <meta name="theme-color" content="#0F6B55">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+  <meta name="theme-color" content="#0D5645">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="canonical" href="https://boostclub.ro/contact.html">
+  <link rel="canonical" href="https://romnutriclub.ro/contact.html">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://boostclub.ro/contact.html">
+  <meta property="og:url" content="https://romnutriclub.ro/contact.html">
   <meta property="og:title" content="Contact Boost Club București | Strada Sevastopol 24, Sector 1">
   <meta property="og:description" content="Găsești Boost Club pe Strada Sevastopol 24, Sector 1, București — la 5 minute de Piața Victoriei. Program Luni–Vineri 07:00–20:00, Duminică 10:00–18:00.">
   <meta property="og:locale" content="ro_RO">
@@ -20,9 +20,9 @@
   {
     "@context": "https://schema.org",
     "@type": "WellnessCenter",
-    "@id": "https://boostclub.ro/#business",
+    "@id": "https://romnutriclub.ro/#business",
     "name": "Boost Club",
-    "url": "https://boostclub.ro",
+    "url": "https://romnutriclub.ro",
     "telephone": "+40726205752",
     "email": "gneshto@gmail.com",
     "address": {
@@ -187,7 +187,7 @@
       border-radius: 50%;
       background: var(--green);
       color: #fff;
-      font-family: 'Manrope', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-weight: 800;
       font-size: 14px;
       display: flex; align-items: center; justify-content: center;
@@ -196,6 +196,15 @@
     }
     .route-text { font-size: 15px; line-height: 1.5; }
   </style>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:image" content="https://romnutriclub.ro/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/contact.html">
+  <link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/contact.html">
+  <link rel="alternate" hreflang="x-default" href="https://romnutriclub.ro/contact.html">
 </head>
 <body>
 <a href="#main-content" class="skip-nav">Sari la conținut principal</a>
@@ -203,13 +212,13 @@
 <!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="container header-inner">
-    <a href="index.html" class="logo">Boost Club<span class="dot">.</span></a>
+    <a href="index.html" class="logo" aria-label="Boost Club">B<svg class="logo-leaf" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="leaf-body" d="M2 22C2 10 10 2 22 2c0 12-8 20-20 20Z"/><path class="leaf-slash" d="M7.5 16.5l9-9"/></svg><svg class="logo-leaf" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="leaf-body" d="M2 22C2 10 10 2 22 2c0 12-8 20-20 20Z"/><path class="leaf-slash" d="M7.5 16.5l9-9"/></svg>st&nbsp;Club<span class="dot">.</span></a>
     <nav class="nav" aria-label="Meniu principal">
       <a href="consultatie-gratuita.html">Consultație gratuită</a>
       <a href="cum-functioneaza.html">Cum funcționează</a>
       <a href="recenzii.html">Recenzii</a>
       <a href="gabriel.html">Despre Gabriel</a>
-      <a href="contact.html" aria-current="page">Contact</a>
+      <a href="contact.html" aria-current="page">Contact</a> <a href="ambasador.html">Lucrează cu noi</a>
       <a href="consultatie-gratuita.html" class="btn btn-primary">Rezervă gratuit</a>
 
       <div class="lang-switcher" aria-label="Language"><span class="lang-active">RO</span><span class="lang-sep">|</span><a href="en/contact.html" lang="en" hreflang="en">EN</a></div>
@@ -221,7 +230,7 @@
     <a href="cum-functioneaza.html">Cum funcționează</a>
     <a href="recenzii.html">Recenzii</a>
     <a href="gabriel.html">Despre Gabriel</a>
-    <a href="contact.html" aria-current="page">Contact</a>
+    <a href="contact.html" aria-current="page">Contact</a> <a href="ambasador.html">Lucrează cu noi</a>
 
     <div class="lang-switcher" aria-label="Language"><span class="lang-active">RO</span><span class="lang-sep">|</span><a href="en/contact.html" lang="en" hreflang="en">EN</a></div>
   </nav>
@@ -239,14 +248,16 @@
 </section>
 
 <!-- ================= 2. TRUST STRIP ================= -->
-<div class="trust-strip">
-  <div class="container trust-inner">
-    <span>📍 Sector 1, București</span>
-    <span>🚇 5 min de Piața Victoriei</span>
-    <span>🅿️ Parcare stradală disponibilă</span>
-    <span>🚶 Walk-in binevenit</span>
+<section style="padding: var(--s3) 0 0;">
+  <div class="container">
+    <div class="trust-strip">
+      <div class="item"><strong>📍 Sector 1, București</strong></div>
+      <div class="item"><strong>🚇 5 min de Piața Victoriei</strong></div>
+      <div class="item"><strong>🅿️ Parcare stradală disponibilă</strong></div>
+      <div class="item"><strong>🚶 Walk-in binevenit</strong></div>
+    </div>
   </div>
-</div>
+</section>
 
 <!-- ================= 3. LAYOUT PRINCIPAL ================= -->
 <section class="section">
@@ -481,7 +492,11 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <h3>Boost Club</h3>
+        <h3 class="sr-only">Boost Club</h3>
+        <div class="footer-brand">
+        <div class="logo footer-logo" role="img" aria-label="Boost Club">B<svg class="logo-leaf" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="leaf-body" d="M2 22C2 10 10 2 22 2c0 12-8 20-20 20Z"/><path class="leaf-slash" d="M7.5 16.5l9-9"/></svg><svg class="logo-leaf" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="leaf-body" d="M2 22C2 10 10 2 22 2c0 12-8 20-20 20Z"/><path class="leaf-slash" d="M7.5 16.5l9-9"/></svg>st&nbsp;Club<span class="dot">.</span></div>
+        <p class="brand-tagline">Be your best</p>
+        </div>
         <address class="footer-nap">
           Strada Sevastopol 24, Sector 1, București<br>
           <a href="tel:+40726205752">+40 726 205 752</a><br>
@@ -512,11 +527,9 @@
 
 <!-- ================= STICKY MOBILE BAR ================= -->
 <div class="sticky-bar">
-  <a href="tel:+40726205752" class="btn btn-secondary">Sună</a>
-  <a href="https://wa.me/40726205752?text=Bun%C4%83!%20Vreau%20s%C4%83%20rezerv%20o%20consulta%C8%9Bie%20gratuit%C4%83." class="btn btn-whatsapp">
-    <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    WhatsApp
-  </a>
+  <a href="tel:+40726205752" class="btn btn-secondary btn-icon" aria-label="Sună Boost Club"><svg class="icon-phone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only">Sună</span></a>
+  <a href="https://wa.me/40726205752?text=Bun%C4%83!%20Vreau%20s%C4%83%20rezerv%20o%20consulta%C8%9Bie%20gratuit%C4%83." class="btn btn-whatsapp btn-icon">
+    <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="sr-only">WhatsApp</span></a>
   <a href="consultatie-gratuita.html" class="btn btn-primary">Rezervă gratuit</a>
 </div>
 

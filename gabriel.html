@@ -7,13 +7,13 @@
   <meta name="description" content="Consultant wellness acreditat ISSA, 36 de ani de moștenire de familie în wellness, transformare personală de 20 kg. Descoperă povestea lui Gabriel Neshto și filozofia Boost Club.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;600&display=swap">
-  <meta name="theme-color" content="#0F6B55">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+  <meta name="theme-color" content="#0D5645">
   <link rel="stylesheet" href="css/style.css">
   <link rel="preload" as="image" href="images/gabriel-neshto-consultant-wellness.jpg">
-  <link rel="canonical" href="https://boostclub.ro/gabriel.html">
+  <link rel="canonical" href="https://romnutriclub.ro/gabriel.html">
   <meta property="og:type" content="profile">
-  <meta property="og:url" content="https://boostclub.ro/gabriel.html">
+  <meta property="og:url" content="https://romnutriclub.ro/gabriel.html">
   <meta property="og:title" content="Gabriel Neshto | Consultant Wellness în București — Boost Club">
   <meta property="og:description" content="Consultant wellness acreditat ISSA, 36 de ani de moștenire de familie în wellness, transformare personală de 20 kg. Descoperă povestea lui Gabriel Neshto.">
   <meta property="og:locale" content="ro_RO">
@@ -23,9 +23,9 @@
     "@graph": [
       {
         "@type": "WellnessCenter",
-        "@id": "https://boostclub.ro/#business",
+        "@id": "https://romnutriclub.ro/#business",
         "name": "Boost Club",
-        "url": "https://boostclub.ro",
+        "url": "https://romnutriclub.ro",
         "telephone": "+40726205752",
         "address": {
           "@type": "PostalAddress",
@@ -37,11 +37,11 @@
       },
       {
         "@type": "Person",
-        "@id": "https://boostclub.ro/#gabriel",
+        "@id": "https://romnutriclub.ro/#gabriel",
         "name": "Gabriel Neshto",
         "jobTitle": "Consultant Wellness",
-        "worksFor": { "@id": "https://boostclub.ro/#business" },
-        "url": "https://boostclub.ro/gabriel.html",
+        "worksFor": { "@id": "https://romnutriclub.ro/#business" },
+        "url": "https://romnutriclub.ro/gabriel.html",
         "telephone": "+40726205752",
         "address": {
           "@type": "PostalAddress",
@@ -125,6 +125,15 @@
     .philosophy-card h3 { margin-bottom: 8px; }
     .philosophy-card p  { color: var(--text-soft); }
   </style>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:image" content="https://romnutriclub.ro/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/gabriel.html">
+  <link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/gabriel.html">
+  <link rel="alternate" hreflang="x-default" href="https://romnutriclub.ro/gabriel.html">
 </head>
 <body>
 <a href="#main-content" class="skip-nav">Sari la conținut principal</a>
@@ -132,13 +141,13 @@
 <!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="container header-inner">
-    <a href="index.html" class="logo">Boost Club<span class="dot">.</span></a>
+    <a href="index.html" class="logo" aria-label="Boost Club">B<svg class="logo-leaf" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="leaf-body" d="M2 22C2 10 10 2 22 2c0 12-8 20-20 20Z"/><path class="leaf-slash" d="M7.5 16.5l9-9"/></svg><svg class="logo-leaf" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="leaf-body" d="M2 22C2 10 10 2 22 2c0 12-8 20-20 20Z"/><path class="leaf-slash" d="M7.5 16.5l9-9"/></svg>st&nbsp;Club<span class="dot">.</span></a>
     <nav class="nav" aria-label="Meniu principal">
       <a href="consultatie-gratuita.html">Consultație gratuită</a>
       <a href="cum-functioneaza.html">Cum funcționează</a>
       <a href="recenzii.html">Recenzii</a>
       <a href="gabriel.html" aria-current="page">Despre Gabriel</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html">Contact</a> <a href="ambasador.html">Lucrează cu noi</a>
       <a href="consultatie-gratuita.html" class="btn btn-primary">Rezervă gratuit</a>
 
       <div class="lang-switcher" aria-label="Language"><span class="lang-active">RO</span><span class="lang-sep">|</span><a href="en/gabriel.html" lang="en" hreflang="en">EN</a></div>
@@ -150,7 +159,7 @@
     <a href="cum-functioneaza.html">Cum funcționează</a>
     <a href="recenzii.html">Recenzii</a>
     <a href="gabriel.html" aria-current="page">Despre Gabriel</a>
-    <a href="contact.html">Contact</a>
+    <a href="contact.html">Contact</a> <a href="ambasador.html">Lucrează cu noi</a>
 
     <div class="lang-switcher" aria-label="Language"><span class="lang-active">RO</span><span class="lang-sep">|</span><a href="en/gabriel.html" lang="en" hreflang="en">EN</a></div>
   </nav>
@@ -165,15 +174,16 @@
       <div>
         <span class="eyebrow">Fondatorul Boost Club</span>
         <h1>Gabriel Neshto</h1>
-        <p class="lead mt-2">Consultant wellness acreditat ISSA, a treia generație dintr-o familie cu 36 de ani în wellness, și omul care a trecut personal printr-o transformare de 20 kg.</p>
+        <p class="lead mt-2">Consultant acreditat ISSA, luptător MMA semi-profesionist și atlet de atletism, a treia generație dintr-o familie cu 36 de ani în wellness — și omul care și-a construit propriul corp de la zero: peste 20 kg de masă musculară.</p>
         <p class="mt-3" style="color:rgba(242,245,243,0.82);">Nu îți vând un plan perfect. Îți ofer o direcție realistă, construită în jurul vieții tale — nu invers.</p>
         <div class="hero-ctas">
           <a href="consultatie-gratuita.html" class="btn btn-primary btn-block-mobile">Rezervă consultația cu Gabriel</a>
         </div>
         <div class="proof-row">
           <span>Acreditat ISSA</span>
-          <span>36 ani moștenire de familie</span>
-          <span>Transformare personală 20 kg</span>
+          <span>+20 kg masă musculară</span>
+          <span>Luptător MMA semi-pro</span>
+          <span>Clienți din 20+ țări</span>
         </div>
       </div>
       <div class="img-frame">
@@ -190,26 +200,33 @@
       <span class="eyebrow">Formare</span>
       <h2>De ce poți să ai încredere</h2>
     </div>
-    <div class="grid grid-3">
+    <div class="grid grid-4">
       <div class="cred-card">
         <div class="cred-icon" aria-hidden="true">🎓</div>
         <div>
           <h3>Acreditat ISSA</h3>
-          <p>Certificare internațională de la International Sports Sciences Association — unul dintre cele mai respectate standarde de formare în nutriție și fitness din lume.</p>
+          <p>Certificare internațională de la International Sports Sciences Association, dublată de ani de studiu sistematic în științele sportului, nutriție și sănătate.</p>
+        </div>
+      </div>
+      <div class="cred-card">
+        <div class="cred-icon" aria-hidden="true">🥊</div>
+        <div>
+          <h3>Atlet în competiții</h3>
+          <p>Peste 20 kg de masă musculară construită prin nutriție corectă și antrenament. Concurează ca luptător MMA semi-profesionist și atlet de atletism.</p>
         </div>
       </div>
       <div class="cred-card">
         <div class="cred-icon" aria-hidden="true">🌿</div>
         <div>
           <h3>36 de ani de moștenire</h3>
-          <p>Familia Neshto lucrează în wellness de 36 de ani și a ghidat mii de oameni. Gabriel a crescut în acest mediu, alături de oameni care înțelegeau cu adevărat legătura dintre nutriție, obiceiuri și stare de bine.</p>
+          <p>Familia Neshto lucrează în wellness de 36 de ani și a ghidat mii de oameni. Gabriel a crescut în acest mediu și duce tradiția mai departe.</p>
         </div>
       </div>
       <div class="cred-card">
-        <div class="cred-icon" aria-hidden="true">💪</div>
+        <div class="cred-icon" aria-hidden="true">🌍</div>
         <div>
-          <h3>Transformare personală</h3>
-          <p>Gabriel nu vorbește teoretic. A trecut personal printr-o transformare de 20 kg prin nutriție corectă și antrenament — știe din interior atât cât de greu este începutul, cât și cât de mult contează sprijinul potrivit.</p>
+          <h3>Comunitate internațională</h3>
+          <p>Clienți din peste 20 de țări — din Franța, Elveția și Marea Britanie până în SUA, India și Singapore — și aproape 30.000 de urmăritori online.</p>
         </div>
       </div>
     </div>
@@ -223,18 +240,44 @@
       <span class="eyebrow">Povestea</span>
       <h2 class="mt-2">Cum a ajuns Gabriel să facă asta</h2>
 
-      <p class="mt-4">Am crescut într-o familie în care wellness-ul nu era un trend — era un mod de viață. Bunicii și părinții mei lucrează în acest domeniu de 36 de ani. De mic am văzut oameni care veneau la noi fără direcție și plecau cu claritate. Am văzut transformări reale: oameni care slăbeau sănătos, oameni care câștigau energie, oameni care în fine înțelegeau ce mănâncă și de ce.</p>
+      <p class="mt-4">Am crescut într-o familie în care wellness-ul nu era un trend — era un mod de viață. Bunicii și părinții mei lucrează în acest domeniu de 36 de ani și au ghidat mii de oameni către obiceiuri mai sănătoase.</p>
 
-      <p class="mt-3">Dar am trăit și pe propria piele cât de greu este. La un moment dat, în ciuda faptului că crescusem în jurul acestor informații, am ajuns la un punct în care nu mă simțeam bine în corpul meu. Am luat în greutate, îmi lipsea energia și nu știam de unde să pornesc — chiar eu, cu toată această moștenire în spate.</p>
+      <p class="mt-3">Și totuși, povestea mea nu a început din forță. A început de jos: eram subponderal, cu un stil de viață haotic și o încredere în mine aproape de zero. Mă simțeam rău în propriul corp — și știam că trebuie să se schimbe ceva.</p>
 
       <blockquote class="personal-quote mt-4">
-        <p>„Am înțeles atunci că informația singură nu ajunge. Ai nevoie de cineva care să o traducă în pași concreți pentru viața ta reală. De acolo a pornit tot."</p>
+        <p>„Informația singură nu ajunge. Ai nevoie de un sistem, de simplitate și de oameni lângă tine. Asta a schimbat totul pentru mine — și exact asta construiesc azi pentru clienții mei."</p>
         <cite>— Gabriel Neshto</cite>
       </blockquote>
 
-      <p class="mt-4">Am decis să lucrez serios: nutriție corectă, antrenament constant, obiceiuri reale — nu diete extreme. Am pierdut 20 kg și, mai important, am înțeles cu adevărat procesul din interior. Nu ca teorie, ci ca experiență trăită.</p>
+      <p class="mt-4">Am luat procesul în serios: nutriție corectă, produsele Herbalife integrate într-o rutină simplă și antrenament structurat. Rezultatul: peste 20 de kilograme de masă musculară construită în timp, o disciplină nouă și o încredere pe care nu o avusesem niciodată. Sportul a devenit a doua mea natură — astăzi concurez ca luptător MMA semi-profesionist și atlet de atletism.</p>
 
-      <p class="mt-3">Am urmat certificarea ISSA pentru că voiam să îmbin moștenirea de familie cu o formare riguroasă și actualizată. Și am deschis Boost Club pentru că voiam să fac pentru oamenii din București ceea ce familia mea a făcut de 36 de ani: să îi ajut să înceapă cu datele corecte și cu un plan realist.</p>
+      <p class="mt-3">În paralel, am studiat ani întregi științele sportului, nutriția și sănătatea — sistematic, zi de zi — și mi-am confirmat formarea prin certificarea internațională ISSA. Nu vorbesc din teorie: tot ce recomand aplic mai întâi pe mine.</p>
+
+      <p class="mt-3">Astăzi lucrez cu clienți din comunități internaționale din peste 20 de țări, iar Boost Club este locul unde toată această experiență se întoarce acasă, în București: vii, îți măsori punctul de pornire și pleci cu o direcție clară.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3b. SPORT + INSTAGRAM ================= -->
+<section class="section">
+  <div class="container">
+    <div class="about-hero-grid">
+      <div class="img-frame">
+        <img src="images/gabriel-neshto-mma.jpg" alt="Gabriel Neshto în antrenament MMA" width="896" height="1195" loading="lazy">
+      </div>
+      <div>
+        <span class="eyebrow">Sport și comunitate</span>
+        <h2>Din ring și de pe pistă, în club</h2>
+        <p class="mt-3">Disciplina din MMA și atletism este aceeași pe care Gabriel o aduce în consultații: pași măsurabili, executați consecvent, fără scurtături.</p>
+        <p class="mt-3">Aproape 30.000 de oameni îl urmăresc pe rețelele sociale, unde conținutul lui despre nutriție, antrenament și stil de viață a strâns milioane de vizualizări.</p>
+        <div class="hero-ctas">
+          <a href="https://instagram.com/gabineshto" target="_blank" rel="noopener" class="btn btn-secondary">@gabineshto pe Instagram</a>
+        </div>
+        <div class="photo-grid mt-4" style="grid-template-columns:repeat(2,1fr);">
+          <img src="images/gabriel-antrenament.jpg" alt="Gabriel Neshto la antrenament" width="1187" height="1600" loading="lazy">
+          <img src="images/gabriel-competitie-atletism.jpg" alt="Gabriel Neshto în competiție de atletism" width="1600" height="1066" loading="lazy">
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -267,21 +310,21 @@
   <div class="container">
     <div class="section-head">
       <span class="eyebrow">Filozofie</span>
-      <h2>Cum lucrează Gabriel</h2>
-      <p>Nu există șabloane. Există oameni — fiecare cu ritmul, obiectivele și viața lui.</p>
+      <h2>Filozofia celor 3 S: Sisteme, Simplitate, Sprijin</h2>
+      <p>Sănătatea nu se ține în voință. Se ține în trei lucruri construite corect.</p>
     </div>
     <div class="grid grid-3">
       <div class="philosophy-card">
-        <h3>Realist, nu idealist</h3>
-        <p>Planurile perfecte care nu pot fi ținute nu ajută pe nimeni. Gabriel construiește recomandări pe care le poți urma în viața ta reală — nu în varianta de Instagram a vieții tale.</p>
+        <h3>Sisteme</h3>
+        <p>Un sistem bun elimină nevoia de a lua decizii. Dacă după o zi lungă de muncă trebuie să alegi între mâncare sănătoasă și junk food, vei alege greșit. Când sistemul alege pentru tine, nu mai există momentul de slăbiciune.</p>
       </div>
       <div class="philosophy-card">
-        <h3>Susținut, nu judecat</h3>
-        <p>Nu contează de unde pornești. Nu există un nivel minim de condiție fizică sau un corp „potrivit" pentru a veni la o consultație. Fiecare om merită claritate și sprijin, indiferent de punct de start.</p>
+        <h3>Simplitate</h3>
+        <p>Dacă micul dejun „sănătos" îți ia o oră dimineața, cu ochii pe jumătate închiși, plus un munte de vase de spălat — nu îl vei face nici pe el, nici altceva. Ce e simplu se întâmplă. Ce e complicat se amână.</p>
       </div>
       <div class="philosophy-card">
-        <h3>Consecvent, nu dramatic</h3>
-        <p>Transformările durabile se construiesc prin obiceiuri mici, repetate consistent — nu prin schimbări radicale imposibil de menținut. Aceasta este filozofia centrală a Boost Club.</p>
+        <h3>Sprijin</h3>
+        <p>Cei mai buni elevi din lume au profesori. Cei mai buni sportivi au antrenori. Cei mai buni medici au mentori. Și totuși, mulți cred că sănătatea trebuie să o rezolve singuri. Vestea bună: nu trebuie.</p>
       </div>
     </div>
   </div>
@@ -325,7 +368,11 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <h3>Boost Club</h3>
+        <h3 class="sr-only">Boost Club</h3>
+        <div class="footer-brand">
+        <div class="logo footer-logo" role="img" aria-label="Boost Club">B<svg class="logo-leaf" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="leaf-body" d="M2 22C2 10 10 2 22 2c0 12-8 20-20 20Z"/><path class="leaf-slash" d="M7.5 16.5l9-9"/></svg><svg class="logo-leaf" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="leaf-body" d="M2 22C2 10 10 2 22 2c0 12-8 20-20 20Z"/><path class="leaf-slash" d="M7.5 16.5l9-9"/></svg>st&nbsp;Club<span class="dot">.</span></div>
+        <p class="brand-tagline">Be your best</p>
+        </div>
         <address class="footer-nap">
           Strada Sevastopol 24, Sector 1, București<br>
           <a href="tel:+40726205752">+40 726 205 752</a><br>
@@ -356,11 +403,9 @@
 
 <!-- ================= STICKY MOBILE BAR ================= -->
 <div class="sticky-bar">
-  <a href="tel:+40726205752" class="btn btn-secondary">Sună</a>
-  <a href="https://wa.me/40726205752?text=Bun%C4%83!%20Vreau%20s%C4%83%20rezerv%20o%20consulta%C8%9Bie%20gratuit%C4%83." class="btn btn-whatsapp">
-    <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    WhatsApp
-  </a>
+  <a href="tel:+40726205752" class="btn btn-secondary btn-icon" aria-label="Sună Boost Club"><svg class="icon-phone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only">Sună</span></a>
+  <a href="https://wa.me/40726205752?text=Bun%C4%83!%20Vreau%20s%C4%83%20rezerv%20o%20consulta%C8%9Bie%20gratuit%C4%83." class="btn btn-whatsapp btn-icon">
+    <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="sr-only">WhatsApp</span></a>
   <a href="consultatie-gratuita.html" class="btn btn-primary">Rezervă gratuit</a>
 </div>
 

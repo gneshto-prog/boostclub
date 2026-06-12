@@ -3,103 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Program Ambasador Boost Club | Lucrează cu noi</title>
-  <meta name="description" content="Programul Ambasador Boost Club — pentru oameni serioși care vor să investească în ei înșiși și, după, să ajute alții să facă același lucru. Criterii clare, selecție atentă.">
+  <title>Construiește-ți propria afacere în wellness | Program Ambasador Boost Club</title>
+  <meta name="description" content="Programul Ambasador Boost Club — construiește-ți propria afacere în sănătate și nutriție, ca partener într-o afacere funcțională. Fără experiență necesară. Înveți făcând, din prima zi.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;600&display=swap">
-  <meta name="theme-color" content="#0F6B55">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+  <meta name="theme-color" content="#0D5645">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="canonical" href="https://boostclub.ro/ambasador.html">
+  <link rel="canonical" href="https://romnutriclub.ro/ambasador.html">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://boostclub.ro/ambasador.html">
-  <meta property="og:title" content="Program Ambasador Boost Club | Lucrează cu noi">
-  <meta property="og:description" content="Programul Ambasador Boost Club — pentru oameni serioși care vor să investească în ei înșiși, nu să vândă. Criterii clare, selecție atentă.">
+  <meta property="og:url" content="https://romnutriclub.ro/ambasador.html">
+  <meta property="og:title" content="Construiește-ți propria afacere în wellness | Boost Club">
+  <meta property="og:description" content="Programul Ambasador Boost Club — devino partener într-o afacere funcțională în sănătate și nutriție. Fără experiență necesară. Înveți făcând, din prima zi.">
   <meta property="og:locale" content="ro_RO">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WellnessCenter",
-    "@id": "https://boostclub.ro/#business",
-    "name": "Boost Club",
-    "url": "https://boostclub.ro",
-    "telephone": "+40726205752",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Strada Sevastopol 24",
-      "addressLocality": "București",
-      "addressRegion": "Sector 1",
-      "addressCountry": "RO"
-    }
-  }
-  </script>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <style>
-    /* ---- ambasador.html ---- */
+    /* ---- ambasador.html — componente specifice ---- */
+    .build-card { display: flex; flex-direction: column; }
+    .build-card p { flex: 1; }
 
-    .criteria-card {
+    .highlight-band {
+      background: var(--card);
+      border: 1px solid rgba(200, 155, 60, 0.5);
+      border-radius: var(--radius);
+      padding: var(--s4);
+      box-shadow: var(--shadow-lg);
+    }
+    @media (min-width: 900px) {
+      .highlight-band {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: var(--s6);
+        align-items: center;
+        padding: var(--s6);
+      }
+    }
+
+    .step-card {
+      display: flex;
+      gap: var(--s3);
+      align-items: flex-start;
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: var(--radius);
       padding: var(--s4);
+      margin-bottom: var(--s2);
     }
-    .criteria-card h3 {
-      margin-top: 0;
-      margin-bottom: var(--s3);
-      font-size: 17px;
-    }
-    .criteria-list {
-      list-style: none;
-      padding: 0; margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: var(--s2);
-    }
-    .criteria-list li {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-      font-size: 15px;
-      line-height: 1.5;
-      padding: var(--s2) 0;
-      border-bottom: 1px solid var(--line);
-    }
-    .criteria-list li:last-child { border-bottom: none; }
-    .criteria-list .check { color: var(--green); font-size: 17px; flex-shrink: 0; margin-top: 1px; }
-    .criteria-list .cross  { color: #cc4444;       font-size: 17px; flex-shrink: 0; margin-top: 1px; }
-
-    .program-step {
-      display: flex;
-      gap: var(--s3);
-      padding: var(--s4) 0;
-      border-bottom: 1px solid var(--line);
-    }
-    .program-step:last-child { border-bottom: none; }
-    .program-step-num {
+    .step-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       width: 44px; height: 44px;
+      min-width: 44px;
       border-radius: 50%;
-      background: var(--green);
+      background: linear-gradient(180deg, var(--green-mid), var(--green));
       color: #fff;
-      font-family: 'Manrope', sans-serif;
+      font-family: 'Poppins';
       font-weight: 800;
       font-size: 18px;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
     }
-    .program-step-body h3 { margin: 0 0 6px; font-size: 17px; }
-    .program-step-body p  { margin: 0; font-size: 15px; color: var(--text-soft); line-height: 1.6; }
+    .step-card h3 { margin-bottom: 6px; }
+    .step-card p { color: var(--text-soft); }
 
-    .disclaimer-box {
-      background: #fdf7ec;
-      border: 1px solid #e8d09a;
-      border-left: 4px solid var(--gold);
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-      padding: var(--s3);
-      font-size: 14px;
-      color: #6b5020;
-      line-height: 1.6;
+    .apply-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: var(--s4);
+      box-shadow: var(--shadow-lg);
+      max-width: 560px;
+      margin: 0 auto;
     }
-    .disclaimer-box strong { color: #4a3810; }
+    @media (min-width: 768px) { .apply-card { padding: var(--s6); } }
+
+    .gdpr-note { font-size: 14px; color: var(--text-soft); line-height: 1.5; margin: var(--s2) 0 var(--s3); }
+
+    .form-success-msg {
+      display: none;
+      text-align: center;
+      padding: var(--s4);
+      background: rgba(2, 122, 72, 0.06);
+      border: 2px solid var(--success);
+      border-radius: var(--radius);
+    }
+    .form-success-msg.visible { display: block; }
+    .form-success-msg h3 { color: var(--success); margin-bottom: var(--s2); }
   </style>
+  <meta property="og:image" content="https://romnutriclub.ro/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/ambasador.html">
+  <link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/ambasador.html">
+  <link rel="alternate" hreflang="x-default" href="https://romnutriclub.ro/ambasador.html">
 </head>
 <body>
 <a href="#main-content" class="skip-nav">Sari la conținut principal</a>
@@ -107,15 +104,14 @@
 <!-- ================= HEADER ================= -->
 <header class="site-header">
   <div class="container header-inner">
-    <a href="index.html" class="logo">Boost Club<span class="dot">.</span></a>
+    <a href="index.html" class="logo" aria-label="Boost Club">B<svg class="logo-leaf" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="leaf-body" d="M2 22C2 10 10 2 22 2c0 12-8 20-20 20Z"/><path class="leaf-slash" d="M7.5 16.5l9-9"/></svg><svg class="logo-leaf" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="leaf-body" d="M2 22C2 10 10 2 22 2c0 12-8 20-20 20Z"/><path class="leaf-slash" d="M7.5 16.5l9-9"/></svg>st&nbsp;Club<span class="dot">.</span></a>
     <nav class="nav" aria-label="Meniu principal">
       <a href="consultatie-gratuita.html">Consultație gratuită</a>
       <a href="cum-functioneaza.html">Cum funcționează</a>
       <a href="recenzii.html">Recenzii</a>
       <a href="gabriel.html">Despre Gabriel</a>
-      <a href="contact.html">Contact</a>
-      <a href="consultatie-gratuita.html" class="btn btn-primary">Rezervă gratuit</a>
-
+      <a href="contact.html">Contact</a> <a href="ambasador.html" aria-current="page">Lucrează cu noi</a>
+      <a href="#cerere" class="btn btn-primary">Aplică acum</a>
       <div class="lang-switcher" aria-label="Language"><span class="lang-active">RO</span><span class="lang-sep">|</span><a href="en/ambasador.html" lang="en" hreflang="en">EN</a></div>
     </nav>
     <button class="menu-toggle" aria-expanded="false" aria-label="Deschide meniul"><span></span></button>
@@ -125,8 +121,7 @@
     <a href="cum-functioneaza.html">Cum funcționează</a>
     <a href="recenzii.html">Recenzii</a>
     <a href="gabriel.html">Despre Gabriel</a>
-    <a href="contact.html">Contact</a>
-
+    <a href="contact.html">Contact</a> <a href="ambasador.html" aria-current="page">Lucrează cu noi</a>
     <div class="lang-switcher" aria-label="Language"><span class="lang-active">RO</span><span class="lang-sep">|</span><a href="en/ambasador.html" lang="en" hreflang="en">EN</a></div>
   </nav>
 </header>
@@ -134,162 +129,175 @@
 <main id="main-content">
 
 <!-- ================= 1. HERO ================= -->
-<section class="section-dark section" style="padding-top: var(--s8); padding-bottom: var(--s8);">
-  <div class="container-text">
-    <span class="eyebrow">Program Ambasador</span>
-    <h1>Nu căutăm vânzători.<br>Căutăm oameni care investesc în ei înșiși.</h1>
-    <p class="lead mt-2">Programul Ambasador Boost Club este pentru oameni care vor mai întâi să se schimbe pe ei — și abia apoi să ajute alții să facă același lucru. Este selectiv, structurat și bazat pe rezultate reale, nu pe promisiuni.</p>
-  </div>
-</section>
-
-<!-- ================= 2. DISCLAIMER LEGAL ================= -->
-<section style="padding: var(--s4) 0 0;">
-  <div class="container">
-    <div class="disclaimer-box">
-      <strong>Informație importantă:</strong> Boost Club este un club wellness independent. Programul Ambasador descris pe această pagină reprezintă o oportunitate de colaborare, nu un contract de muncă sau o garanție de venituri. Veniturile unui distribuitor independent Herbalife depind exclusiv de efortul, dedicarea și rezultatele personale ale fiecărei persoane. Nicio sumă de bani nu este garantată.
+<section class="section-dark section" style="padding-top: var(--s8); padding-bottom: calc(var(--s8) + 40px);">
+  <div class="container-text text-center">
+    <span class="eyebrow" style="justify-content:center;">Program Ambasador</span>
+    <h1>Construiește-ți propria afacere în sănătate și nutriție</h1>
+    <p class="lead mt-2">Intri ca partener într-o afacere care deja funcționează. Nu ai nevoie de experiență — înveți făcând, din prima zi, cu sprijin direct de la Gabriel.</p>
+    <div class="hero-ctas" style="justify-content:center;">
+      <a href="#cerere" class="btn btn-primary btn-lg btn-block-mobile" data-start="Full-time">Începe full-time</a>
+      <a href="#cerere" class="btn btn-secondary btn-block-mobile" data-start="Part-time">Începe part-time</a>
     </div>
   </div>
 </section>
 
-<!-- ================= 3. PENTRU CINE ESTE ================= -->
+<!-- ================= 2. STRIP ================= -->
+<section style="padding: 0 0 var(--s3);">
+  <div class="container trust-overlap">
+    <div class="trust-strip">
+      <div class="item"><strong><span class="gold">46</span> de ani</strong><span>Herbalife — lider mondial în antreprenoriat în wellness</span></div>
+      <div class="item"><strong>95 de țări</strong><span>Poți construi oriunde operează Herbalife</span></div>
+      <div class="item"><strong>Comunitate globală</strong><span>Parteneri care predau și colaborează</span></div>
+      <div class="item"><strong>Fără experiență</strong><span>Înveți totul în program</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3. CE POȚI CONSTRUI ================= -->
 <section class="section">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">Criterii de selecție</span>
-      <h2>Programul este pentru tine dacă…</h2>
+      <span class="eyebrow">Ce poți construi</span>
+      <h2>Afacerea ta, în forma care ți se potrivește</h2>
+      <p>De la un club de nutriție ca Boost Club până la propriul tău concept — modelul se mulează pe interesul tău.</p>
     </div>
-
-    <div style="display:grid; grid-template-columns:1fr; gap:var(--s4); max-width:860px;">
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:var(--s4);">
-
-        <div class="criteria-card">
-          <h3 style="color:var(--green);">✓ Potrivit dacă</h3>
-          <ul class="criteria-list">
-            <li><span class="check">✓</span> Ești deja client Boost Club și ai rezultate personale dovedite</li>
-            <li><span class="check">✓</span> Vrei să înveți un meșteșug — wellness, nutriție, evaluare corporală</li>
-            <li><span class="check">✓</span> Ești dispus să investești timp înainte să ceri ceva în schimb</li>
-            <li><span class="check">✓</span> Trăiești conform stilului de viață pe care vrei să îl recomanzi altora</li>
-            <li><span class="check">✓</span> Ai răbdare să construiești ceva serios, pas cu pas</li>
-          </ul>
-        </div>
-
-        <div class="criteria-card">
-          <h3 style="color:#cc4444;">✗ Nu este potrivit dacă</h3>
-          <ul class="criteria-list">
-            <li><span class="cross">✗</span> Cauți venituri rapide sau un al doilea salariu garantat</li>
-            <li><span class="cross">✗</span> Nu ai trecut personal printr-un proces de schimbare</li>
-            <li><span class="cross">✗</span> Vrei să vinzi fără să crezi în produse sau metodologie</li>
-            <li><span class="cross">✗</span> Nu ești dispus să fii corectat și să reiei lucruri de la zero</li>
-            <li><span class="cross">✗</span> Obiectivul tău principal este câștigul financiar imediat</li>
-          </ul>
-        </div>
-
-      </div>
+    <div class="grid grid-4">
+      <div class="card build-card"><h3>Club de nutriție</h3><p>Un loc ca Boost Club: consultații, comunitate, shake-uri — modelul pe care îl înveți direct din interior.</p></div>
+      <div class="card build-card"><h3>Cafenea fit / nutriție</h3><p>Un spațiu de cartier cu produse și băuturi orientate spre un stil de viață sănătos.</p></div>
+      <div class="card build-card"><h3>Sală sau fit club</h3><p>Antrenament plus nutriție sub același acoperiș — pentru cei pasionați de sport.</p></div>
+      <div class="card build-card"><h3>Conceptul tău</h3><p>Faci business cu prietenii, în jurul ideii tale — comunitatea de parteneri te ajută să o construiești.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ================= 4. CUM FUNCȚIONEAZĂ PROGRAMUL ================= -->
-<section class="section section-sage">
+<!-- ================= 4. HIGHLIGHT: AMBASADOR + BOOST CLUB ================= -->
+<section class="section section-sage" style="padding-top: var(--s8);">
   <div class="container">
-    <div class="section-head">
-      <span class="eyebrow">Etapele programului</span>
-      <h2>Cum arată drumul</h2>
-      <p>Nu există scurtături. Există un proces.</p>
-    </div>
-
-    <div style="max-width:680px;">
-      <div class="program-step">
-        <div class="program-step-num">1</div>
-        <div class="program-step-body">
-          <h3>Consultație gratuită — tu ca și client</h3>
-          <p>Totul începe cu evaluarea ta corporală. Vii ca un client obișnuit. Măsori, înțelegi, pornești. Nu poți ghida pe altcineva dacă nu ai trecut tu prin proces.</p>
-        </div>
+    <div class="highlight-band">
+      <div>
+        <span class="eyebrow">Programul Ambasador + Boost Club</span>
+        <h2>Înveți într-o afacere care deja merge</h2>
+        <p class="mt-3">Nu pornești de la zero și nu înveți din manuale. Intri în Boost Club — un club de nutriție funcțional, cu clienți reali — și înveți fiecare parte a afacerii din interior, ca partener.</p>
+        <p class="mt-3">Ești deja client Boost Club și ai rezultate proprii? Cu atât mai bine — pornești cu un avantaj real. Dacă nu, nicio problemă: înveți totul în program.</p>
       </div>
-
-      <div class="program-step">
-        <div class="program-step-num">2</div>
-        <div class="program-step-body">
-          <h3>Perioada de observare (4–8 săptămâni)</h3>
-          <p>Ești prezent la consultații, asculți, pui întrebări. Îți construiești propriile rezultate. Gabriel evaluează dacă ai atitudinea și mentalitatea potrivite — nu abilitățile de vânzare.</p>
-        </div>
-      </div>
-
-      <div class="program-step">
-        <div class="program-step-num">3</div>
-        <div class="program-step-body">
-          <h3>Formare practică</h3>
-          <p>Înveți cum funcționează evaluarea bioimpedanță, cum se citesc datele corporale, cum se construiește un plan personalizat. Formarea este hands-on, nu din manual.</p>
-        </div>
-      </div>
-
-      <div class="program-step">
-        <div class="program-step-num">4</div>
-        <div class="program-step-body">
-          <h3>Prime consultații asistate</h3>
-          <p>Conduci primele consultații cu Gabriel prezent. Primești feedback direct, fără menajamente. Dacă nu e bine, refaci. Standardul nu coboară.</p>
-        </div>
-      </div>
-
-      <div class="program-step">
-        <div class="program-step-num">5</div>
-        <div class="program-step-body">
-          <h3>Autonomie graduală</h3>
-          <p>Când rezultatele și atitudinea confirmă că ești pregătit, primești mai multă independență. Ritmul este al tău — nu există presiune de avansare forțată.</p>
-        </div>
+      <div class="img-frame">
+        <div class="img-placeholder" style="min-height:280px;">echipa-boost-club.jpg</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= 5. CE CÂȘTIGI ================= -->
+<!-- ================= 5. CUM ÎNVEȚI ================= -->
 <section class="section">
   <div class="container">
     <div class="section-head">
-      <span class="eyebrow">Ce câștigi</span>
-      <h2>Ce construiești în acest program</h2>
+      <span class="eyebrow">Cum înveți</span>
+      <h2>Filozofia „înveți făcând"</h2>
+      <p>Fără teorie la nesfârșit și fără termene rigide. Faci de la început — și înveți exact ce faci.</p>
     </div>
-
-    <div class="grid grid-3" style="max-width:860px;">
-      <div class="card">
-        <div class="icon-wrap" aria-hidden="true" style="font-size:28px; margin-bottom:var(--s2);">🧠</div>
-        <h3>Cunoaștere reală</h3>
-        <p>Înțelegi corpul uman, compoziția corporală, nutriția și comportamentul — nu doar ce să vinzi.</p>
+    <div style="max-width: 760px;">
+      <div class="step-card">
+        <div class="step-badge">1</div>
+        <div>
+          <h3>Trimite cererea</h3>
+          <p>Alegi cum vrei să începi — part-time sau full-time. Gabriel primește cererea și te contactează pentru o primă discuție.</p>
+        </div>
       </div>
-      <div class="card">
-        <div class="icon-wrap" aria-hidden="true" style="font-size:28px; margin-bottom:var(--s2);">🤝</div>
-        <h3>Abilități de ghidare</h3>
-        <p>Înveți să asculți, să pui întrebările corecte, să construiești încredere — nu să convingi cu presiune.</p>
+      <div class="step-card">
+        <div class="step-badge">2</div>
+        <div>
+          <h3>Observare prin practică</h3>
+          <p>Din prima zi faci, nu doar privești: participi la consultații, lucrezi cu comunitatea, înveți cum funcționează clubul. Gabriel este lângă tine să te ajute să înveți și să faci totul — în ritmul tău, fără termene fixe.</p>
+        </div>
       </div>
-      <div class="card">
-        <div class="icon-wrap" aria-hidden="true" style="font-size:28px; margin-bottom:var(--s2);">📐</div>
-        <h3>Metodologie dovedită</h3>
-        <p>36 de ani de experiență de familie condensați într-un proces pe care îl poți aplica și replica.</p>
+      <div class="step-card">
+        <div class="step-badge">3</div>
+        <div>
+          <h3>Construiești</h3>
+          <p>Cu sprijinul unei comunități globale de parteneri care predau, colaborează și construiesc împreună — de la primul tău client până la propriul tău club.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= 6. CTA ================= -->
+<!-- ================= 6. DE CE MODELUL ACESTA ================= -->
+<section class="section section-white">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">De ce modelul acesta</span>
+      <h2>Libertate reală, muncă reală</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card"><h3>Fără șef</h3><p>Nimeni nu îți spune ce să faci. Lucrezi cum vrei, când vrei și de unde vrei — programul îl construiești tu.</p></div>
+      <div class="card"><h3>Venitul reflectă munca ta</h3><p>Ce construiești este al tău. Venitul tău este direct legat de efortul, consecvența și abilitățile tale.</p></div>
+      <div class="card"><h3>Crești cu oameni</h3><p>Faci business alături de prieteni și de o comunitate care te împinge înainte — și te dezvolți personal pe drum.</p></div>
+    </div>
+    <p class="small mt-4" style="max-width:72ch;">Programul Ambasador este educațional și antreprenorial. Veniturile nu sunt garantate și depind de efort, abilități și potrivire. Pentru detalii, consultă Declarația oficială privind câștigurile tipice ale distribuitorilor independenți Herbalife.</p>
+  </div>
+</section>
+
+<!-- ================= 7. FORMULAR CERERE ================= -->
+<section class="section section-sage" id="cerere">
+  <div class="container">
+    <div class="section-head text-center">
+      <span class="eyebrow" style="justify-content:center;">Cererea ta</span>
+      <h2>Spune-ne cum vrei să începi</h2>
+      <p>Completezi în 30 de secunde. Gabriel primește cererea și te contactează personal.</p>
+    </div>
+
+    <div class="apply-card">
+      <div class="form-success-msg" id="success-msg" role="alert" aria-live="polite">
+        <h3>Cerere trimisă!</h3>
+        <p>Mulțumim, <strong id="success-name"></strong>. Gabriel te va contacta în curând pentru prima discuție.</p>
+      </div>
+
+      <form id="ambasador-form" name="ambasador" method="POST" data-netlify="true" netlify-honeypot="bot-field" netlify novalidate>
+        <input type="hidden" name="form-name" value="ambasador">
+          <p class="sr-only" aria-hidden="true"><label>Nu completa: <input name="bot-field"></label></p>
+
+        <div class="form-group">
+          <label for="prenume">Prenume <span aria-hidden="true">*</span></label>
+          <input type="text" id="prenume" name="prenume" required autocomplete="given-name" placeholder="ex. Andrei" aria-required="true">
+        </div>
+
+        <div class="form-group">
+          <label for="telefon">Telefon <span aria-hidden="true">*</span></label>
+          <input type="tel" id="telefon" name="telefon" required autocomplete="tel" inputmode="tel" placeholder="ex. 0722 000 000" aria-required="true">
+        </div>
+
+        <div class="form-group">
+          <fieldset>
+            <legend>Cum vrei să începi? <span aria-hidden="true">*</span></legend>
+            <div class="pill-group">
+              <input type="radio" id="start-pt" name="start" value="Part-time" required>
+              <label class="pill" for="start-pt">Part-time</label>
+              <input type="radio" id="start-ft" name="start" value="Full-time">
+              <label class="pill" for="start-ft">Full-time</label>
+            </div>
+          </fieldset>
+        </div>
+
+        <p class="gdpr-note">Prin trimiterea acestui formular, ești de acord că Boost Club te poate contacta în legătură cu programul Ambasador. Nu îți transmitem datele către terți.</p>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">Trimite cererea →</button>
+        <p class="small" style="text-align:center; margin-top:12px;">Fără obligații · Răspuns rapid · Date protejate</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 8. CTA FINAL ================= -->
 <section class="section-dark section text-center">
   <div class="container-text">
-    <span class="eyebrow">Primul pas</span>
-    <h2>Dacă te recunoști în ce ai citit, vino mai întâi ca și client</h2>
-    <p class="lead mt-2">
-      Nu există o aplicație separată pentru Programul Ambasador. Primul pas este consultația ta gratuită — evaluarea corporală. De acolo, dacă există potrivire, discuția continuă natural.
-    </p>
-    <div class="hero-ctas" style="justify-content:center; margin-top: var(--s4);">
-      <a href="consultatie-gratuita.html" class="btn btn-block-mobile" style="background:#fff; color:var(--green-dark); border-color:#fff;">
-        Rezervă evaluarea gratuită
-      </a>
-      <a href="https://wa.me/40726205752?text=Bun%C4%83!%20Am%20citit%20despre%20Programul%20Ambasador%20%C8%99i%20vreau%20s%C4%83%20aflu%20mai%20multe." class="btn btn-whatsapp btn-block-mobile">
-        <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Întreabă pe WhatsApp
-      </a>
+    <span class="eyebrow" style="justify-content:center;">Primul pas</span>
+    <h2>Începe de unde ești</h2>
+    <p class="lead mt-2">Part-time pe lângă jobul actual sau full-time de la început — drumul îl alegi tu.</p>
+    <div class="hero-ctas" style="justify-content:center;">
+      <a href="#cerere" class="btn btn-primary btn-lg btn-block-mobile" data-start="Full-time">Începe full-time</a>
+      <a href="#cerere" class="btn btn-secondary btn-block-mobile" data-start="Part-time">Începe part-time</a>
     </div>
-    <p class="small mt-4" style="opacity:0.7;">
-      Programul Ambasador este selectiv. Nu toți cei care aplică sunt acceptați — și asta este intenționat.
-    </p>
+    <p class="brand-tagline center" style="margin-top: var(--s6);">Be your best</p>
   </div>
 </section>
 
@@ -300,11 +308,15 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <h3>Boost Club</h3>
+        <h3 class="sr-only">Boost Club</h3>
+        <div class="footer-brand">
+        <div class="logo footer-logo" role="img" aria-label="Boost Club">B<svg class="logo-leaf" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="leaf-body" d="M2 22C2 10 10 2 22 2c0 12-8 20-20 20Z"/><path class="leaf-slash" d="M7.5 16.5l9-9"/></svg><svg class="logo-leaf" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path class="leaf-body" d="M2 22C2 10 10 2 22 2c0 12-8 20-20 20Z"/><path class="leaf-slash" d="M7.5 16.5l9-9"/></svg>st&nbsp;Club<span class="dot">.</span></div>
+        <p class="brand-tagline">Be your best</p>
+        </div>
         <address class="footer-nap">
           Strada Sevastopol 24, Sector 1, București<br>
           <a href="tel:+40726205752">+40 726 205 752</a><br>
-          <a href="https://wa.me/40726205752?text=Bun%C4%83!%20Vreau%20s%C4%83%20rezerv%20o%20consulta%C8%9Bie%20gratuit%C4%83.">WhatsApp</a>
+          <a href="https://wa.me/40726205752?text=Bun%C4%83%2C%20Gabriel!%20A%C8%99%20vrea%20s%C4%83%20aflu%20mai%20multe%20despre%20programul%20Ambasador.">WhatsApp</a>
         </address>
         <p class="small mt-2">Luni–Vineri 07:00–20:00 · Sâmbătă închis · Duminică 10:00–18:00</p>
       </div>
@@ -323,7 +335,7 @@
       </div>
     </div>
     <div class="footer-legal">
-      <p>Distribuitor Independent Herbalife. Boost Club oferă ghidare wellness și consultații educaționale. Consultația nu diagnostichează, nu tratează și nu înlocuiește îngrijirea medicală. Rezultatele variază de la persoană la persoană.</p>
+      <p>Distribuitor Independent Herbalife. Boost Club oferă ghidare wellness și consultații educaționale. Consultația nu diagnostichează, nu tratează și nu înlocuiește îngrijirea medicală. Rezultatele variază de la persoană la persoană. Programul Ambasador este o oportunitate antreprenorială — succesul nu este garantat și depinde de efort, abilități și potrivire.</p>
       <p class="mt-2">© <span id="year">2026</span> Boost Club. Toate drepturile rezervate.</p>
     </div>
   </div>
@@ -331,18 +343,53 @@
 
 <!-- ================= STICKY MOBILE BAR ================= -->
 <div class="sticky-bar">
-  <a href="tel:+40726205752" class="btn btn-secondary">Sună</a>
-  <a href="https://wa.me/40726205752?text=Bun%C4%83!%20Am%20citit%20despre%20Programul%20Ambasador%20%C8%99i%20vreau%20s%C4%83%20aflu%20mai%20multe." class="btn btn-whatsapp">
-    <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    WhatsApp
-  </a>
-  <a href="consultatie-gratuita.html" class="btn btn-primary">Rezervă gratuit</a>
+  <a href="tel:+40726205752" class="btn btn-secondary btn-icon" aria-label="Sună Boost Club"><svg class="icon-phone" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr-only">Sună</span></a>
+  <a href="https://wa.me/40726205752?text=Bun%C4%83%2C%20Gabriel!%20A%C8%99%20vrea%20s%C4%83%20aflu%20mai%20multe%20despre%20programul%20Ambasador." class="btn btn-whatsapp btn-icon" aria-label="Scrie pe WhatsApp"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="sr-only">WhatsApp</span></a>
+  <a href="#cerere" class="btn btn-primary">Aplică acum</a>
 </div>
 
-<a href="https://wa.me/40726205752?text=Bun%C4%83!%20Vreau%20s%C4%83%20rezerv%20o%20consulta%C8%9Bie%20gratuit%C4%83." class="wa-float" aria-label="Scrie-ne pe WhatsApp">
-  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
-
 <script src="js/main.js"></script>
+<script>
+  (function () {
+    /* Preselect part/full-time from CTA buttons */
+    document.querySelectorAll('[data-start]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var val = btn.getAttribute('data-start');
+        var radio = document.querySelector('input[name="start"][value="' + val + '"]');
+        if (radio) radio.checked = true;
+      });
+    });
+
+    /* Form submit — local preview; Netlify handles on deploy */
+    var form = document.getElementById('ambasador-form');
+    var successMsg = document.getElementById('success-msg');
+    var nameInput = document.getElementById('prenume');
+    var successName = document.getElementById('success-name');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      var btn = form.querySelector('[type="submit"]');
+      if (btn) btn.disabled = true;
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      }).then(function (res) {
+        if (!res.ok) throw new Error(res.status);
+        if (window.bcTrack) window.bcTrack('form_submit', form.getAttribute('name'));
+        if (successMsg) {
+          successMsg.classList.add('visible');
+          if (successName && nameInput) successName.textContent = nameInput.value.trim();
+          successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        form.style.display = 'none';
+      }).catch(function () {
+        if (btn) btn.disabled = false;
+        alert('Nu am putut trimite cererea. Te rugăm să încerci din nou sau scrie-ne pe WhatsApp.');
+      });
+    });
+  })();
+</script>
 </body>
 </html>
