@@ -92,7 +92,7 @@
       <a href="recenzii.html">Reviews</a>
       <a href="gabriel.html">About Gabriel</a>
       <a href="contact.html">Contact</a> <a href="ambasador.html">Work with us</a>
-      <a href="tel:+40726205752" class="nav-tel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" stroke-linecap="round" stroke-linejoin="round"/></svg>+40 726 205 752</a>
+      <a href="#form" class="btn btn-primary">Book free</a>
       <div class="lang-switcher" aria-label="Language"><a href="../consultatie-gratuita.html" lang="ro" hreflang="ro">RO</a><span class="lang-sep">|</span><span class="lang-active">EN</span></div>
     </nav>
     <button class="menu-toggle" aria-expanded="false" aria-label="Open menu"><span></span></button>
@@ -153,17 +153,17 @@
               <legend>Preferred day <span aria-hidden="true">*</span></legend>
               <div class="pill-group pill-group-3">
                 <input type="radio" id="day-p0" name="day" value="Monday" required>
-                <label class="pill" for="day-p0">Monday<small>07–20</small></label>
+                <label class="pill" for="day-p0">Monday</label>
                 <input type="radio" id="day-p1" name="day" value="Tuesday">
-                <label class="pill" for="day-p1">Tuesday<small>07–20</small></label>
+                <label class="pill" for="day-p1">Tuesday</label>
                 <input type="radio" id="day-p2" name="day" value="Wednesday">
-                <label class="pill" for="day-p2">Wednesday<small>07–20</small></label>
+                <label class="pill" for="day-p2">Wednesday</label>
                 <input type="radio" id="day-p3" name="day" value="Thursday">
-                <label class="pill" for="day-p3">Thursday<small>07–20</small></label>
+                <label class="pill" for="day-p3">Thursday</label>
                 <input type="radio" id="day-p4" name="day" value="Friday">
-                <label class="pill" for="day-p4">Friday<small>07–20</small></label>
+                <label class="pill" for="day-p4">Friday</label>
                 <input type="radio" id="day-p5" name="day" value="Sunday">
-                <label class="pill" for="day-p5">Sunday<small>10–18</small></label>
+                <label class="pill" for="day-p5">Sunday</label>
               </div>
             </fieldset>
           </div>
@@ -322,4 +322,26 @@
       });
     });
 })();
+
+    /* Time slots follow the chosen day: Sunday has no morning, evening ends 18:00 */
+    (function () {
+      var SLOT_ALL = document.querySelectorAll('input[name="time"]');
+      SLOT_ALL.forEach(function (r) { r.required = true; });
+      var morning = document.getElementById('time-p0');
+      var mLabel = document.querySelector('label[for="time-p0"]');
+      var evening = document.getElementById('time-p3');
+      var eLabel = document.querySelector('label[for="time-p3"]');
+      function updateSlots() {
+        var sel = document.querySelector('input[name="day"]:checked');
+        var sunday = !!sel && sel.value === 'Sunday';
+        morning.disabled = sunday;
+        mLabel.style.display = sunday ? 'none' : '';
+        if (sunday && morning.checked) morning.checked = false;
+        evening.value = sunday ? 'Evening 16:00–18:00' : 'Evening 16:00–20:00';
+        eLabel.querySelector('small').textContent = sunday ? '16–18' : '16–20';
+      }
+      document.querySelectorAll('input[name="day"]').forEach(function (r) {
+        r.addEventListener('change', updateSlots);
+      });
+    })();
 </script>

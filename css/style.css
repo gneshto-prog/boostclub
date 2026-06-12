@@ -583,6 +583,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible { outline: 3px solid v
   border-bottom: 1px solid transparent;
   transition: background .35s, box-shadow .35s, border-color .35s, transform .35s var(--ease-out);
 }
+.site-header .container { max-width: 1340px; }
 .header-inner {
   display: flex; align-items: center; justify-content: space-between;
   min-height: var(--header-h);
@@ -622,10 +623,11 @@ a:focus-visible, button:focus-visible, .btn:focus-visible { outline: 3px solid v
 
 .nav { display: none; }
 @media (min-width: 920px) {
-  .nav { display: flex; align-items: center; gap: 24px; }
+  .nav { display: flex; align-items: center; gap: 20px; flex-wrap: nowrap; }
   .nav a {
     color: rgba(255,255,255,0.85);
     text-decoration: none;
+    white-space: nowrap;
     font-size: 14px; font-weight: 500;
     padding: 6px 0;
     border-bottom: 2px solid transparent;
@@ -636,13 +638,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible { outline: 3px solid v
   .site-header.scrolled .nav a, .site-header.solid .nav a { color: var(--text-soft); }
   .site-header.scrolled .nav a:hover, .site-header.solid .nav a:hover { color: var(--green); }
   .site-header.scrolled .nav a[aria-current="page"], .site-header.solid .nav a[aria-current="page"] { color: var(--green); }
-  /* CTA pill slides in when scrolled */
-  .nav .btn {
-    min-height: 42px; padding: 9px 22px; font-size: 14px; border-bottom: 0;
-    opacity: 0; transform: translateX(12px); pointer-events: none;
-    transition: opacity .3s, transform .35s var(--ease-spring);
-  }
-  .site-header.scrolled .nav .btn, .site-header.solid .nav .btn { opacity: 1; transform: none; pointer-events: auto; }
+  .nav .btn { min-height: 42px; padding: 9px 22px; font-size: 14px; border-bottom: 0; }
 }
 
 .menu-toggle {
@@ -964,14 +960,11 @@ a:focus-visible, button:focus-visible, .btn:focus-visible { outline: 3px solid v
   .star-i { opacity: 1; transform: none; }
 }
 
-/* phone link in desktop nav — call-preferring visitors */
-.nav .nav-tel {
-  display: inline-flex; align-items: center; gap: 7px;
-  font-size: 14px; font-weight: 600;
-  color: rgba(255,255,255,0.88) !important;
-  text-decoration: none; border-bottom: 0 !important;
-  white-space: nowrap;
+
+/* keep the nav on one line on narrower desktops */
+@media (min-width: 920px) and (max-width: 1180px) {
+  .nav { gap: 13px; }
+  .nav a { font-size: 13px; }
+  .nav .btn { padding: 8px 16px; font-size: 13px; }
+  .logo { font-size: 19px; }
 }
-.nav .nav-tel svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.8; }
-.nav .nav-tel:hover { color: var(--gold-soft) !important; }
-.site-header.scrolled .nav .nav-tel, .site-header.solid .nav .nav-tel { color: var(--green) !important; }

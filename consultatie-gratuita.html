@@ -233,7 +233,7 @@
       <a href="contact.html">Contact</a> <a href="ambasador.html">Lucrează cu noi</a>
       <!-- Fără CTA "Rezervă gratuit" — suntem deja pe pagina de rezervare -->
 
-      <a href="tel:+40726205752" class="nav-tel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" stroke-linecap="round" stroke-linejoin="round"/></svg>+40 726 205 752</a>
+      <a href="#formular" class="btn btn-primary">Rezervă gratuit</a>
       <div class="lang-switcher" aria-label="Language"><span class="lang-active">RO</span><span class="lang-sep">|</span><a href="en/consultatie-gratuita.html" lang="en" hreflang="en">EN</a></div>
     </nav>
     <button class="menu-toggle" aria-expanded="false" aria-label="Deschide meniul"><span></span></button>
@@ -333,17 +333,17 @@
               <legend>Ziua preferată <span aria-hidden="true">*</span></legend>
               <div class="pill-group pill-group-3">
                 <input type="radio" id="ziua-p0" name="ziua" value="Luni" required>
-                <label class="pill" for="ziua-p0">Luni<small>07–20</small></label>
+                <label class="pill" for="ziua-p0">Luni</label>
                 <input type="radio" id="ziua-p1" name="ziua" value="Marți">
-                <label class="pill" for="ziua-p1">Marți<small>07–20</small></label>
+                <label class="pill" for="ziua-p1">Marți</label>
                 <input type="radio" id="ziua-p2" name="ziua" value="Miercuri">
-                <label class="pill" for="ziua-p2">Miercuri<small>07–20</small></label>
+                <label class="pill" for="ziua-p2">Miercuri</label>
                 <input type="radio" id="ziua-p3" name="ziua" value="Joi">
-                <label class="pill" for="ziua-p3">Joi<small>07–20</small></label>
+                <label class="pill" for="ziua-p3">Joi</label>
                 <input type="radio" id="ziua-p4" name="ziua" value="Vineri">
-                <label class="pill" for="ziua-p4">Vineri<small>07–20</small></label>
+                <label class="pill" for="ziua-p4">Vineri</label>
                 <input type="radio" id="ziua-p5" name="ziua" value="Duminică">
-                <label class="pill" for="ziua-p5">Duminică<small>10–18</small></label>
+                <label class="pill" for="ziua-p5">Duminică</label>
               </div>
             </fieldset>
           </div>
@@ -581,6 +581,28 @@
       });
     });
   })();
+
+    /* Time slots follow the chosen day: Sunday has no morning, evening ends 18:00 */
+    (function () {
+      var SLOT_ALL = document.querySelectorAll('input[name="interval"]');
+      SLOT_ALL.forEach(function (r) { r.required = true; });
+      var morning = document.getElementById('interval-p0');
+      var mLabel = document.querySelector('label[for="interval-p0"]');
+      var evening = document.getElementById('interval-p3');
+      var eLabel = document.querySelector('label[for="interval-p3"]');
+      function updateSlots() {
+        var sel = document.querySelector('input[name="ziua"]:checked');
+        var sunday = !!sel && sel.value === 'Duminică';
+        morning.disabled = sunday;
+        mLabel.style.display = sunday ? 'none' : '';
+        if (sunday && morning.checked) morning.checked = false;
+        evening.value = sunday ? 'Seara 16:00–18:00' : 'Seara 16:00–20:00';
+        eLabel.querySelector('small').textContent = sunday ? '16–18' : '16–20';
+      }
+      document.querySelectorAll('input[name="ziua"]').forEach(function (r) {
+        r.addEventListener('change', updateSlots);
+      });
+    })();
 </script>
 
 </body>
