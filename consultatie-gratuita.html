@@ -233,6 +233,7 @@
       <a href="contact.html">Contact</a> <a href="ambasador.html">Lucrează cu noi</a>
       <!-- Fără CTA "Rezervă gratuit" — suntem deja pe pagina de rezervare -->
 
+      <a href="tel:+40726205752" class="nav-tel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" stroke-linecap="round" stroke-linejoin="round"/></svg>+40 726 205 752</a>
       <div class="lang-switcher" aria-label="Language"><span class="lang-active">RO</span><span class="lang-sep">|</span><a href="en/consultatie-gratuita.html" lang="en" hreflang="en">EN</a></div>
     </nav>
     <button class="menu-toggle" aria-expanded="false" aria-label="Deschide meniul"><span></span></button>
@@ -328,27 +329,39 @@
           </div>
 
           <div class="form-group">
-            <label for="ziua">Ziua preferată <span aria-hidden="true">*</span></label>
-            <select id="ziua" name="ziua" required aria-required="true">
-              <option value="">— alege o zi —</option>
-              <option value="Luni">Luni (07:00–20:00)</option>
-              <option value="Marți">Marți (07:00–20:00)</option>
-              <option value="Miercuri">Miercuri (07:00–20:00)</option>
-              <option value="Joi">Joi (07:00–20:00)</option>
-              <option value="Vineri">Vineri (07:00–20:00)</option>
-              <option value="Duminică">Duminică (10:00–18:00)</option>
-            </select>
+            <fieldset>
+              <legend>Ziua preferată <span aria-hidden="true">*</span></legend>
+              <div class="pill-group pill-group-3">
+                <input type="radio" id="ziua-p0" name="ziua" value="Luni" required>
+                <label class="pill" for="ziua-p0">Luni<small>07–20</small></label>
+                <input type="radio" id="ziua-p1" name="ziua" value="Marți">
+                <label class="pill" for="ziua-p1">Marți<small>07–20</small></label>
+                <input type="radio" id="ziua-p2" name="ziua" value="Miercuri">
+                <label class="pill" for="ziua-p2">Miercuri<small>07–20</small></label>
+                <input type="radio" id="ziua-p3" name="ziua" value="Joi">
+                <label class="pill" for="ziua-p3">Joi<small>07–20</small></label>
+                <input type="radio" id="ziua-p4" name="ziua" value="Vineri">
+                <label class="pill" for="ziua-p4">Vineri<small>07–20</small></label>
+                <input type="radio" id="ziua-p5" name="ziua" value="Duminică">
+                <label class="pill" for="ziua-p5">Duminică<small>10–18</small></label>
+              </div>
+            </fieldset>
           </div>
 
           <div class="form-group">
-            <label for="interval">Intervalul orar preferat <span aria-hidden="true">*</span></label>
-            <select id="interval" name="interval" required aria-required="true">
-              <option value="">— alege un interval —</option>
-              <option value="Dimineața 07:00–10:00">Dimineața (07:00–10:00)</option>
-              <option value="Înainte de prânz 10:00–13:00">Înainte de prânz (10:00–13:00)</option>
-              <option value="După-amiaza 13:00–16:00">După-amiaza (13:00–16:00)</option>
-              <option value="Seara 16:00–20:00">Seara (16:00–20:00)</option>
-            </select>
+            <fieldset>
+              <legend>Intervalul orar preferat <span aria-hidden="true">*</span></legend>
+              <div class="pill-group">
+                <input type="radio" id="interval-p0" name="interval" value="Dimineața 07:00–10:00" required>
+                <label class="pill" for="interval-p0">Dimineața<small>07–10</small></label>
+                <input type="radio" id="interval-p1" name="interval" value="Înainte de prânz 10:00–13:00">
+                <label class="pill" for="interval-p1">Înainte de prânz<small>10–13</small></label>
+                <input type="radio" id="interval-p2" name="interval" value="După-amiaza 13:00–16:00">
+                <label class="pill" for="interval-p2">După-amiaza<small>13–16</small></label>
+                <input type="radio" id="interval-p3" name="interval" value="Seara 16:00–20:00">
+                <label class="pill" for="interval-p3">Seara<small>16–20</small></label>
+              </div>
+            </fieldset>
           </div>
 
           <div class="form-group">

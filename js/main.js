@@ -257,6 +257,14 @@
     }, { rootMargin: "60px" }).observe(footer);
   }
 
+  /* ---------- 13b. Step aside while a form is on screen ---------- */
+  var formZone = document.querySelector("#formular, #cerere");
+  if (formZone && "IntersectionObserver" in window) {
+    new IntersectionObserver(function (entries) {
+      document.body.classList.toggle("form-in-view", entries[0].isIntersecting);
+    }, { rootMargin: "-20% 0px -20% 0px" }).observe(formZone);
+  }
+
   /* ---------- 14. Event tracking (GA4/dataLayer-ready) ---------- */
   window.bcTrack = function (action, label) {
     try {

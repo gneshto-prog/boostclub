@@ -92,6 +92,7 @@
       <a href="recenzii.html">Reviews</a>
       <a href="gabriel.html">About Gabriel</a>
       <a href="contact.html">Contact</a> <a href="ambasador.html">Work with us</a>
+      <a href="tel:+40726205752" class="nav-tel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z" stroke-linecap="round" stroke-linejoin="round"/></svg>+40 726 205 752</a>
       <div class="lang-switcher" aria-label="Language"><a href="../consultatie-gratuita.html" lang="ro" hreflang="ro">RO</a><span class="lang-sep">|</span><span class="lang-active">EN</span></div>
     </nav>
     <button class="menu-toggle" aria-expanded="false" aria-label="Open menu"><span></span></button>
@@ -148,26 +149,38 @@
             <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="e.g. +40 722 000 000" aria-required="true">
           </div>
           <div class="form-group">
-            <label for="day">Preferred day <span aria-hidden="true">*</span></label>
-            <select id="day" name="day" required aria-required="true">
-              <option value="">— choose a day —</option>
-              <option value="Monday">Monday (07:00–20:00)</option>
-              <option value="Tuesday">Tuesday (07:00–20:00)</option>
-              <option value="Wednesday">Wednesday (07:00–20:00)</option>
-              <option value="Thursday">Thursday (07:00–20:00)</option>
-              <option value="Friday">Friday (07:00–20:00)</option>
-              <option value="Sunday">Sunday (10:00–18:00)</option>
-            </select>
+            <fieldset>
+              <legend>Preferred day <span aria-hidden="true">*</span></legend>
+              <div class="pill-group pill-group-3">
+                <input type="radio" id="day-p0" name="day" value="Monday" required>
+                <label class="pill" for="day-p0">Monday<small>07–20</small></label>
+                <input type="radio" id="day-p1" name="day" value="Tuesday">
+                <label class="pill" for="day-p1">Tuesday<small>07–20</small></label>
+                <input type="radio" id="day-p2" name="day" value="Wednesday">
+                <label class="pill" for="day-p2">Wednesday<small>07–20</small></label>
+                <input type="radio" id="day-p3" name="day" value="Thursday">
+                <label class="pill" for="day-p3">Thursday<small>07–20</small></label>
+                <input type="radio" id="day-p4" name="day" value="Friday">
+                <label class="pill" for="day-p4">Friday<small>07–20</small></label>
+                <input type="radio" id="day-p5" name="day" value="Sunday">
+                <label class="pill" for="day-p5">Sunday<small>10–18</small></label>
+              </div>
+            </fieldset>
           </div>
           <div class="form-group">
-            <label for="time">Preferred time slot <span aria-hidden="true">*</span></label>
-            <select id="time" name="time" required aria-required="true">
-              <option value="">— choose a slot —</option>
-              <option value="Morning 07:00–10:00">Morning (07:00–10:00)</option>
-              <option value="Late morning 10:00–13:00">Late morning (10:00–13:00)</option>
-              <option value="Afternoon 13:00–16:00">Afternoon (13:00–16:00)</option>
-              <option value="Evening 16:00–20:00">Evening (16:00–20:00)</option>
-            </select>
+            <fieldset>
+              <legend>Preferred time slot <span aria-hidden="true">*</span></legend>
+              <div class="pill-group">
+                <input type="radio" id="time-p0" name="time" value="Morning 07:00–10:00" required>
+                <label class="pill" for="time-p0">Morning<small>07–10</small></label>
+                <input type="radio" id="time-p1" name="time" value="Late morning 10:00–13:00">
+                <label class="pill" for="time-p1">Late morning<small>10–13</small></label>
+                <input type="radio" id="time-p2" name="time" value="Afternoon 13:00–16:00">
+                <label class="pill" for="time-p2">Afternoon<small>13–16</small></label>
+                <input type="radio" id="time-p3" name="time" value="Evening 16:00–20:00">
+                <label class="pill" for="time-p3">Evening<small>16–20</small></label>
+              </div>
+            </fieldset>
           </div>
           <div class="form-group">
             <fieldset>
