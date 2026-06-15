@@ -968,3 +968,20 @@ a:focus-visible, button:focus-visible, .btn:focus-visible { outline: 3px solid v
   .nav .btn { padding: 8px 16px; font-size: 13px; }
   .logo { font-size: 19px; }
 }
+
+/* ---- 21. RESULTS / TRANSFORMATIONS GALLERY ---- */
+.results-grid { display: grid; gap: 16px; grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 700px)  { .results-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1000px) { .results-grid { grid-template-columns: repeat(4, 1fr); } }
+.results-grid figure {
+  position: relative; margin: 0;
+  border: 1px solid var(--line); border-radius: var(--radius-sm);
+  overflow: hidden; background: var(--card); box-shadow: var(--shadow);
+}
+.results-grid img { width: 100%; height: auto; display: block; border-radius: 0; }
+.results-grid figcaption {
+  position: absolute; top: 8px; left: 8px;
+  background: rgba(8, 56, 45, 0.85); color: #fff;
+  font: 700 12px/1 'Poppins', sans-serif; letter-spacing: .02em;
+  padding: 4px 9px; border-radius: 20px;
+}
