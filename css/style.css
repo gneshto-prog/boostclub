@@ -985,3 +985,45 @@ a:focus-visible, button:focus-visible, .btn:focus-visible { outline: 3px solid v
   font: 700 12px/1 'Poppins', sans-serif; letter-spacing: .02em;
   padding: 4px 9px; border-radius: 20px;
 }
+
+/* ---- 22. CREDIBILITY COUNTERS ---- */
+.counter-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--s3); margin-top: var(--s4); }
+@media (min-width: 700px) { .counter-row { grid-template-columns: repeat(4, 1fr); } }
+.counter-item { text-align: center; }
+.counter-item .num { display: block; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 32px; line-height: 1; color: var(--green); }
+.counter-item .lbl { display: block; font-size: 13px; color: var(--text-soft); margin-top: 6px; }
+.section-dark .counter-item .num { color: var(--gold); }
+.section-dark .counter-item .lbl { color: rgba(242,245,243,.82); }
+
+/* ---- 23. TIMELINE ---- */
+.bc-timeline { display: grid; gap: var(--s3); max-width: 760px; margin: 0 auto; }
+.bc-tl-item { display: flex; gap: var(--s3); align-items: flex-start; background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--gold); border-radius: var(--radius-sm); padding: var(--s3); }
+.bc-tl-num { width: 34px; height: 34px; min-width: 34px; border-radius: 50%; background: var(--green); color: #fff; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+.bc-tl-item h3 { font-size: 17px; margin: 3px 0 4px; }
+.bc-tl-item p { font-size: 14px; color: var(--text-soft); margin: 0; }
+
+/* ---- 24. VIDEO EMBED (lazy reel) ---- */
+.video-embed { position: relative; max-width: 360px; margin: 0 auto; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-lg); background: #000; aspect-ratio: 9 / 16; }
+.video-embed iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+/* ---- 25. RESULT / PULL-QUOTE CARD ---- */
+.result-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: var(--s4); }
+.result-card .metric { display: inline-block; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 14px; color: var(--green-dark); background: var(--sage); border-radius: 20px; padding: 4px 12px; margin-bottom: var(--s2); }
+.result-card blockquote { font-size: 18px; line-height: 1.6; margin: 0 0 var(--s3); color: var(--text); }
+.result-card .who { font-weight: 600; font-size: 14px; }
+.result-card .who .stars { color: var(--gold); letter-spacing: 2px; margin-left: 6px; }
+
+/* ---- 26. GOOGLE RATING BADGE ---- */
+.google-badge { display: inline-flex; align-items: center; gap: 10px; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; box-shadow: var(--shadow); text-decoration: none; }
+.google-badge .g { font-family: 'Poppins', sans-serif; font-weight: 700; color: #1a73e8; }
+.google-badge .score { font-weight: 800; color: var(--text); }
+.google-badge .gstars { color: #fbbc04; letter-spacing: 1px; }
+.google-badge .cnt { font-size: 13px; color: var(--text-soft); }
+
+/* ---- 27. SCAN INFOGRAPHIC ---- */
+.scan-info { display: grid; gap: 12px; grid-template-columns: repeat(2, 1fr); max-width: 720px; margin: 0 auto; }
+@media (min-width: 760px) { .scan-info { grid-template-columns: repeat(3, 1fr); } }
+.scan-metric { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: var(--s3); text-align: center; }
+.scan-metric .ico { font-size: 24px; }
+.scan-metric strong { display: block; font-size: 15px; margin: 6px 0 2px; }
+.scan-metric span { font-size: 13px; color: var(--text-soft); }
