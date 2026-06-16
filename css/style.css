@@ -1004,7 +1004,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible { outline: 3px solid v
 
 /* ---- 24. VIDEO EMBED (lazy reel) ---- */
 .video-embed { position: relative; max-width: 360px; margin: 0 auto; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-lg); background: #000; aspect-ratio: 9 / 16; }
-.video-embed iframe { width: 100%; height: 100%; border: 0; display: block; }
+.video-embed iframe, .video-embed video { width: 100%; height: 100%; border: 0; display: block; object-fit: cover; }
 
 /* ---- 25. RESULT / PULL-QUOTE CARD ---- */
 .result-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: var(--s4); }
