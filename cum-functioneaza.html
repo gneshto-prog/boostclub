@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
   <meta name="theme-color" content="#0D5645">
-  <link rel="stylesheet" href="css/style.css?v=3">
+  <link rel="stylesheet" href="css/style.css?v=4">
   <link rel="canonical" href="https://romnutriclub.ro/cum-functioneaza.html">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://romnutriclub.ro/cum-functioneaza.html">
@@ -282,49 +282,20 @@
       <h2>Pas cu pas — ce se întâmplă</h2>
     </div>
 
-    <div style="max-width: 720px;">
-      <div class="steps-v">
-
-        <div class="step-v">
-          <div class="step-v-num" aria-hidden="true">1</div>
-          <div class="step-v-body">
-            <h3>Scurtă discuție inițială</h3>
-            <p>Gabriel te întâmpină și îți pune câteva întrebări simple: de unde pornești, ce ți-ai dori să schimbi, ce ai mai încercat până acum. Nu este un interogatoriu — este o conversație relaxată de 5 minute care ajută să personalizeze tot ce urmează.</p>
-          </div>
-        </div>
-
-        <div class="step-v">
-          <div class="step-v-num" aria-hidden="true">2</div>
-          <div class="step-v-body">
-            <h3>Analiza corporală prin bioimpedanță</h3>
-            <p>Te urci pe analizorul profesional de compoziție corporală — durează aproximativ 60 de secunde. Aparatul trimite un curent electric imperceptibil prin corp și calculează cu precizie proporția de masă musculară, masă adipoasă, apă și grăsime viscerală. Nu doare și nu necesită nicio pregătire specială.</p>
-          </div>
-        </div>
-
-        <div class="step-v">
-          <div class="step-v-num" aria-hidden="true">3</div>
-          <div class="step-v-body">
-            <h3>Rezultatele — explicate pe înțelesul tău</h3>
-            <p>Primești un raport complet cu toate valorile tale. Gabriel nu îți aruncă cifrele pe masă — le traduce în limbaj obișnuit: ce înseamnă fiecare valoare, unde te afli față de intervalele sănătoase și, cel mai important, ce poți face concret.</p>
-          </div>
-        </div>
-
-        <div class="step-v">
-          <div class="step-v-num" aria-hidden="true">4</div>
-          <div class="step-v-body">
-            <h3>Discuție despre obiectivul tău</h3>
-            <p>Vorbești deschis despre ce vrei să obții — să slăbești sănătos, să câștigi masă musculară, să ai mai multă energie sau pur și simplu să înțelegi de unde pornești. Consultația se construiește în jurul obiectivului tău, nu al unui șablon standard.</p>
-          </div>
-        </div>
-
-        <div class="step-v">
-          <div class="step-v-num" aria-hidden="true">5</div>
-          <div class="step-v-body">
-            <h3>Recomandări personalizate și pasul următor</h3>
-            <p>Pleci cu recomandări concrete adaptate rutinei tale reale. Nu un plan imposibil de 12 săptămâni — un pas următor clar și realizabil. Dacă dorești să continui cu un program de coaching, Gabriel îți explică opțiunile fără presiune. Dacă nu, pleci cu informațiile tale și cu claritate.</p>
-          </div>
-        </div>
-
+    <div class="stepper" id="visitStepper" data-reveal>
+      <div class="stepper-track">
+        <button class="step-dot is-active" type="button"><span>1</span><em>Discuție</em></button>
+        <button class="step-dot" type="button"><span>2</span><em>Analiză</em></button>
+        <button class="step-dot" type="button"><span>3</span><em>Rezultate</em></button>
+        <button class="step-dot" type="button"><span>4</span><em>Obiectiv</em></button>
+        <button class="step-dot" type="button"><span>5</span><em>Plan</em></button>
+      </div>
+      <div class="stepper-panels">
+        <div class="step-panel is-active"><div class="ico" aria-hidden="true">💬</div><h3>1 · Scurtă discuție</h3><p>Gabriel te întâmpină și aflăm de unde pornești și ce vrei să schimbi — 5 minute, relaxat.</p></div>
+        <div class="step-panel"><div class="ico" aria-hidden="true">⚖️</div><h3>2 · Analiză corporală</h3><p>Te urci pe analizorul profesional ~60 de secunde. Nu doare și nu necesită pregătire.</p></div>
+        <div class="step-panel"><div class="ico" aria-hidden="true">📊</div><h3>3 · Rezultatele, explicate</h3><p>Primești raportul complet — tradus pe înțelesul tău, nu doar cifre pe hârtie.</p></div>
+        <div class="step-panel"><div class="ico" aria-hidden="true">🎯</div><h3>4 · Obiectivul tău</h3><p>Vorbim despre ce vrei: slăbire, masă musculară sau energie. Fără șabloane.</p></div>
+        <div class="step-panel"><div class="ico" aria-hidden="true">✅</div><h3>5 · Primul pas, clar</h3><p>Pleci cu o recomandare concretă și realizabilă. Fără presiune — deciziile îți aparțin.</p></div>
       </div>
     </div>
   </div>
@@ -354,31 +325,13 @@
       <h2>Ce vei afla despre corpul tău</h2>
       <p>Analizorul profesional măsoară mai mult decât greutatea. Primești date reale pe care să le înțelegi și să le folosești.</p>
     </div>
-    <div class="metrics-grid">
-      <div class="metric-item">
-        <strong>Masa musculară</strong>
-        <span>Cât mușchi ai și cum se distribuie pe corp</span>
-      </div>
-      <div class="metric-item">
-        <strong>Masa adipoasă</strong>
-        <span>Procentul de grăsime și dacă este în interval sănătos</span>
-      </div>
-      <div class="metric-item">
-        <strong>Apă corporală</strong>
-        <span>Nivelul de hidratare al organismului tău</span>
-      </div>
-      <div class="metric-item">
-        <strong>Grăsime viscerală</strong>
-        <span>Grăsimea din jurul organelor interne — indicatorul cel mai important de sănătate metabolică</span>
-      </div>
-      <div class="metric-item">
-        <strong>Vârsta metabolică</strong>
-        <span>Cât de eficient funcționează metabolismul tău față de vârsta cronologică</span>
-      </div>
-      <div class="metric-item">
-        <strong>Rata metabolică bazală</strong>
-        <span>Câte calorii arde corpul tău în repaus — baza oricărui plan de nutriție</span>
-      </div>
+    <div class="scan-info" data-reveal>
+      <div class="scan-metric"><div class="ico" aria-hidden="true">💪</div><strong>Masă musculară</strong><span>Cât mușchi ai și cum e distribuit</span></div>
+      <div class="scan-metric"><div class="ico" aria-hidden="true">🔥</div><strong>Masă adipoasă</strong><span>Procentul de grăsime și dacă e în interval sănătos</span></div>
+      <div class="scan-metric"><div class="ico" aria-hidden="true">💧</div><strong>Apă corporală</strong><span>Nivelul de hidratare al organismului</span></div>
+      <div class="scan-metric"><div class="ico" aria-hidden="true">🫀</div><strong>Grăsime viscerală</strong><span>Grăsimea din jurul organelor — cheia sănătății metabolice</span></div>
+      <div class="scan-metric"><div class="ico" aria-hidden="true">⏳</div><strong>Vârstă metabolică</strong><span>Cât de eficient lucrează metabolismul tău</span></div>
+      <div class="scan-metric"><div class="ico" aria-hidden="true">⚡</div><strong>Rata metabolică</strong><span>Câte calorii arzi în repaus — baza oricărui plan</span></div>
     </div>
     <p class="small mt-4" style="max-width: 60ch;">Rezultatele variază de la persoană la persoană. Valorile obținute sunt un punct de pornire educativ, nu un diagnostic medical.</p>
   </div>
@@ -579,5 +532,8 @@
 </a>
 
 <script src="js/main.js"></script>
+<script>
+(function(){var s=document.getElementById('visitStepper');if(!s)return;var d=s.querySelectorAll('.step-dot'),p=s.querySelectorAll('.step-panel');function go(i){d.forEach(function(x,j){x.classList.toggle('is-active',j===i);x.classList.toggle('is-done',j<i);});p.forEach(function(x,j){x.classList.toggle('is-active',j===i);});}d.forEach(function(x,i){x.addEventListener('click',function(){go(i);});});})();
+</script>
 </body>
 </html>
