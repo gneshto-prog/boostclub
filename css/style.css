@@ -1007,11 +1007,23 @@ a:focus-visible, button:focus-visible, .btn:focus-visible { outline: 3px solid v
 .video-embed iframe, .video-embed video { width: 100%; height: 100%; border: 0; display: block; object-fit: cover; }
 
 /* ---- 25. RESULT / PULL-QUOTE CARD ---- */
-.result-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: var(--s4); }
-.result-card .metric { display: inline-block; font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 14px; color: var(--green-dark); background: var(--sage); border-radius: 20px; padding: 4px 12px; margin-bottom: var(--s2); }
-.result-card blockquote { font-size: 18px; line-height: 1.6; margin: 0 0 var(--s3); color: var(--text); }
-.result-card .who { font-weight: 600; font-size: 14px; }
+.result-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--gold);
+  border-radius: var(--radius);
+  padding: var(--s4);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+}
+.result-card .metric { align-self: flex-start; font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 13px; color: var(--green-dark); background: var(--sage); border-radius: 20px; padding: 5px 14px; }
+.result-card blockquote { font-size: 17px; line-height: 1.55; margin: 0; color: var(--text); font-style: italic; }
+.result-card .who { margin-top: auto; font-weight: 700; font-size: 15px; color: var(--text); }
 .result-card .who .stars { color: var(--gold); letter-spacing: 2px; margin-left: 6px; }
+.result-card .small { margin-top: 0 !important; }
 
 /* ---- 26. GOOGLE RATING BADGE ---- */
 .google-badge { display: inline-flex; align-items: center; gap: 10px; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; box-shadow: var(--shadow); text-decoration: none; }
