@@ -1060,3 +1060,18 @@ a:focus-visible, button:focus-visible, .btn:focus-visible { outline: 3px solid v
 .step-panel p { color: var(--text-soft); margin: 0; font-size: 16px; }
 @media (max-width: 560px) { .step-dot em { font-size: 11px; max-width: 58px; } .step-dot span { width: 38px; height: 38px; font-size: 14px; } .stepper-track::before { top: 19px; } }
 @media (prefers-reduced-motion: reduce) { .step-panel.is-active { animation: none; } .step-dot span { transition: none; } }
+
+/* ---- 29. HERO RATING CHIP + FLOATING BADGE ---- */
+.rating-chip { display: inline-flex; align-items: center; gap: 8px; background: #fff; border-radius: 999px; padding: 8px 15px; box-shadow: var(--shadow); text-decoration: none; margin-top: var(--s3); }
+.rating-chip .rc-g { font: 800 15px/1 'Poppins', sans-serif; color: #1a73e8; }
+.rating-chip .rc-stars { color: #fbbc04; letter-spacing: 1px; }
+.rating-chip .rc-score { font-weight: 800; color: var(--text); }
+.rating-chip .rc-cnt { font-size: 13px; color: var(--text-soft); }
+.hero .img-frame { position: relative; }
+.hero-badge { position: absolute; left: -8px; bottom: 22px; z-index: 4; background: #fff; border-radius: 16px; padding: 10px 14px; box-shadow: var(--shadow-lg); display: flex; align-items: center; gap: 9px; animation: badgeFloat 4s ease-in-out infinite; }
+.hero-badge .b-stars { color: #fbbc04; font-size: 17px; line-height: 1; }
+.hero-badge .b-score { font: 800 18px/1 'Poppins', sans-serif; color: var(--text); }
+.hero-badge .b-sub { font-size: 12px; font-weight: 700; color: var(--text-soft); }
+@keyframes badgeFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+@media (max-width: 760px) { .hero-badge { left: 8px; bottom: 8px; padding: 8px 11px; gap: 7px; } .hero-badge .b-score { font-size: 16px; } }
+@media (prefers-reduced-motion: reduce) { .hero-badge { animation: none; } }
