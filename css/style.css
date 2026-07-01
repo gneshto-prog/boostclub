@@ -1113,6 +1113,14 @@ a:focus-visible, button:focus-visible, .btn:focus-visible { outline: 3px solid v
 #bc-xover .bc-sub{position:relative;z-index:2;opacity:0;transform:translateY(12px);
   transition:opacity .45s ease .3s,transform .5s ease .3s;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#8fc7e6}
 #bc-xover.go .bc-wm,#bc-xover.go .bc-sub{opacity:1;transform:none}
+/* loading bar — fills while the portal opens, so the hand-off reads as intentional */
+#bc-xover .bc-load{position:relative;z-index:2;width:132px;height:2px;margin-top:6px;border-radius:2px;
+  overflow:hidden;background:rgba(143,199,230,.22);opacity:0;transition:opacity .3s ease .25s}
+#bc-xover .bc-load i{position:absolute;inset:0;border-radius:2px;transform:scaleX(0);transform-origin:0 50%;
+  background:linear-gradient(90deg,#1098D4,#7fd0f2);box-shadow:0 0 12px rgba(127,208,242,.8);
+  transition:transform .78s cubic-bezier(.3,.1,.25,1) .28s}
+#bc-xover.go .bc-load{opacity:1}
+#bc-xover.go .bc-load i{transform:scaleX(1)}
 @keyframes bcspin{to{transform:rotate(360deg)}}
 @keyframes bcstars{to{opacity:.9}}
 @keyframes bcdrift{from{transform:translateY(0)}to{transform:translateY(-16px)}}

@@ -1,2 +1,6 @@
 /program-trainee.html  /ambasador.html  301!
 /program-trainee  /ambasador  301!
+# Pretty URLs for the partner page (canonical is /business)
+/business     /business.html     200
+/en/business  /en/business.html  200
+/ru/business  /ru/business.html  200

@@ -1,213 +1,234 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://romnutriclub.ro/</loc>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://romnutriclub.ro/ru/"/>
+    <loc>https://boostclub.ro/</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/"/>
     <lastmod>2026-06-23</lastmod>
   </url>
   <url>
-    <loc>https://romnutriclub.ro/en/</loc>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://romnutriclub.ro/ru/"/>
+    <loc>https://boostclub.ro/en/</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/"/>
     <lastmod>2026-06-23</lastmod>
   </url>
   <url>
-    <loc>https://romnutriclub.ro/ru/</loc>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://romnutriclub.ro/ru/"/>
+    <loc>https://boostclub.ro/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/"/>
     <lastmod>2026-06-23</lastmod>
   </url>
   <url>
-    <loc>https://romnutriclub.ro/consultatie-gratuita.html</loc>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/consultatie-gratuita.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/consultatie-gratuita.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://romnutriclub.ro/ru/consultatie-gratuita.html"/>
+    <loc>https://boostclub.ro/consultatie-gratuita.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/consultatie-gratuita.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/consultatie-gratuita.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/consultatie-gratuita.html"/>
     <lastmod>2026-06-23</lastmod>
   </url>
   <url>
-    <loc>https://romnutriclub.ro/en/consultatie-gratuita.html</loc>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/consultatie-gratuita.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/consultatie-gratuita.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://romnutriclub.ro/ru/consultatie-gratuita.html"/>
+    <loc>https://boostclub.ro/en/consultatie-gratuita.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/consultatie-gratuita.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/consultatie-gratuita.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/consultatie-gratuita.html"/>
     <lastmod>2026-06-23</lastmod>
   </url>
   <url>
-    <loc>https://romnutriclub.ro/ru/consultatie-gratuita.html</loc>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/consultatie-gratuita.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/consultatie-gratuita.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://romnutriclub.ro/ru/consultatie-gratuita.html"/>
+    <loc>https://boostclub.ro/ru/consultatie-gratuita.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/consultatie-gratuita.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/consultatie-gratuita.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/consultatie-gratuita.html"/>
     <lastmod>2026-06-23</lastmod>
   </url>
   <url>
-    <loc>https://romnutriclub.ro/cum-functioneaza.html</loc>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/cum-functioneaza.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/cum-functioneaza.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://romnutriclub.ro/ru/cum-functioneaza.html"/>
+    <loc>https://boostclub.ro/cum-functioneaza.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/cum-functioneaza.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/cum-functioneaza.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/cum-functioneaza.html"/>
     <lastmod>2026-06-23</lastmod>
   </url>
   <url>
-    <loc>https://romnutriclub.ro/en/cum-functioneaza.html</loc>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/cum-functioneaza.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/cum-functioneaza.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://romnutriclub.ro/ru/cum-functioneaza.html"/>
+    <loc>https://boostclub.ro/en/cum-functioneaza.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/cum-functioneaza.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/cum-functioneaza.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/cum-functioneaza.html"/>
     <lastmod>2026-06-23</lastmod>
   </url>
   <url>
-    <loc>https://romnutriclub.ro/ru/cum-functioneaza.html</loc>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/cum-functioneaza.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/cum-functioneaza.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://romnutriclub.ro/ru/cum-functioneaza.html"/>
+    <loc>https://boostclub.ro/ru/cum-functioneaza.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/cum-functioneaza.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/cum-functioneaza.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/cum-functioneaza.html"/>
     <lastmod>2026-06-23</lastmod>
   </url>
   <url>
-    <loc>https://romnutriclub.ro/recenzii.html</loc>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/recenzii.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/recenzii.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://romnutriclub.ro/ru/recenzii.html"/>
+    <loc>https://boostclub.ro/recenzii.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/recenzii.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/recenzii.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/recenzii.html"/>
     <lastmod>2026-06-23</lastmod>
   </url>
   <url>
-    <loc>https://romnutriclub.ro/en/recenzii.html</loc>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/recenzii.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/recenzii.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://romnutriclub.ro/ru/recenzii.html"/>
+    <loc>https://boostclub.ro/en/recenzii.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/recenzii.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/recenzii.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/recenzii.html"/>
     <lastmod>2026-06-23</lastmod>
   </url>
   <url>
-    <loc>https://romnutriclub.ro/ru/recenzii.html</loc>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/recenzii.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/recenzii.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://romnutriclub.ro/ru/recenzii.html"/>
+    <loc>https://boostclub.ro/ru/recenzii.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/recenzii.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/recenzii.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/recenzii.html"/>
     <lastmod>2026-06-23</lastmod>
   </url>
   <url>
-    <loc>https://romnutriclub.ro/gabriel.html</loc>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/gabriel.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/gabriel.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://romnutriclub.ro/ru/gabriel.html"/>
+    <loc>https://boostclub.ro/gabriel.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/gabriel.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/gabriel.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/gabriel.html"/>
     <lastmod>2026-06-23</lastmod>
   </url>
   <url>
-    <loc>https://romnutriclub.ro/en/gabriel.html</loc>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/gabriel.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/gabriel.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://romnutriclub.ro/ru/gabriel.html"/>
+    <loc>https://boostclub.ro/en/gabriel.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/gabriel.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/gabriel.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/gabriel.html"/>
     <lastmod>2026-06-23</lastmod>
   </url>
   <url>
-    <loc>https://romnutriclub.ro/ru/gabriel.html</loc>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/gabriel.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/gabriel.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://romnutriclub.ro/ru/gabriel.html"/>
+    <loc>https://boostclub.ro/ru/gabriel.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/gabriel.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/gabriel.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/gabriel.html"/>
     <lastmod>2026-06-23</lastmod>
   </url>
   <url>
-    <loc>https://romnutriclub.ro/contact.html</loc>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://romnutriclub.ro/ru/contact.html"/>
+    <loc>https://boostclub.ro/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/contact.html"/>
     <lastmod>2026-06-23</lastmod>
   </url>
   <url>
-    <loc>https://romnutriclub.ro/en/contact.html</loc>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://romnutriclub.ro/ru/contact.html"/>
+    <loc>https://boostclub.ro/en/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/contact.html"/>
     <lastmod>2026-06-23</lastmod>
   </url>
   <url>
-    <loc>https://romnutriclub.ro/ru/contact.html</loc>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://romnutriclub.ro/ru/contact.html"/>
+    <loc>https://boostclub.ro/ru/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/contact.html"/>
     <lastmod>2026-06-23</lastmod>
   </url>
   <url>
-    <loc>https://romnutriclub.ro/ambasador.html</loc>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/ambasador.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/ambasador.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://romnutriclub.ro/ru/ambasador.html"/>
+    <loc>https://boostclub.ro/ambasador.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/ambasador.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/ambasador.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/ambasador.html"/>
     <lastmod>2026-06-23</lastmod>
   </url>
   <url>
-    <loc>https://romnutriclub.ro/en/ambasador.html</loc>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/ambasador.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/ambasador.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://romnutriclub.ro/ru/ambasador.html"/>
+    <loc>https://boostclub.ro/en/ambasador.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/ambasador.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/ambasador.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/ambasador.html"/>
     <lastmod>2026-06-23</lastmod>
   </url>
   <url>
-    <loc>https://romnutriclub.ro/ru/ambasador.html</loc>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/ambasador.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/ambasador.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://romnutriclub.ro/ru/ambasador.html"/>
+    <loc>https://boostclub.ro/ru/ambasador.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/ambasador.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/ambasador.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/ambasador.html"/>
     <lastmod>2026-06-23</lastmod>
   </url>
   <url>
-    <loc>https://romnutriclub.ro/confidentialitate.html</loc>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/confidentialitate.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/confidentialitate.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://romnutriclub.ro/ru/confidentialitate.html"/>
+    <loc>https://boostclub.ro/confidentialitate.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/confidentialitate.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/confidentialitate.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/confidentialitate.html"/>
     <lastmod>2026-06-23</lastmod>
   </url>
   <url>
-    <loc>https://romnutriclub.ro/en/confidentialitate.html</loc>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/confidentialitate.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/confidentialitate.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://romnutriclub.ro/ru/confidentialitate.html"/>
+    <loc>https://boostclub.ro/en/confidentialitate.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/confidentialitate.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/confidentialitate.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/confidentialitate.html"/>
     <lastmod>2026-06-23</lastmod>
   </url>
   <url>
-    <loc>https://romnutriclub.ro/ru/confidentialitate.html</loc>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/confidentialitate.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/confidentialitate.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://romnutriclub.ro/ru/confidentialitate.html"/>
+    <loc>https://boostclub.ro/ru/confidentialitate.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/confidentialitate.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/confidentialitate.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/confidentialitate.html"/>
     <lastmod>2026-06-23</lastmod>
   </url>
   <url>
-    <loc>https://romnutriclub.ro/termeni.html</loc>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/termeni.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/termeni.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://romnutriclub.ro/ru/termeni.html"/>
+    <loc>https://boostclub.ro/termeni.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/termeni.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/termeni.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/termeni.html"/>
     <lastmod>2026-06-23</lastmod>
   </url>
   <url>
-    <loc>https://romnutriclub.ro/en/termeni.html</loc>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/termeni.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/termeni.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://romnutriclub.ro/ru/termeni.html"/>
+    <loc>https://boostclub.ro/en/termeni.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/termeni.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/termeni.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/termeni.html"/>
     <lastmod>2026-06-23</lastmod>
   </url>
   <url>
-    <loc>https://romnutriclub.ro/ru/termeni.html</loc>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/termeni.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/termeni.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://romnutriclub.ro/ru/termeni.html"/>
+    <loc>https://boostclub.ro/ru/termeni.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/termeni.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/termeni.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/termeni.html"/>
     <lastmod>2026-06-23</lastmod>
   </url>
   <url>
-    <loc>https://romnutriclub.ro/cookies.html</loc>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://romnutriclub.ro/ru/cookies.html"/>
+    <loc>https://boostclub.ro/cookies.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/cookies.html"/>
     <lastmod>2026-06-23</lastmod>
   </url>
   <url>
-    <loc>https://romnutriclub.ro/en/cookies.html</loc>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://romnutriclub.ro/ru/cookies.html"/>
+    <loc>https://boostclub.ro/en/cookies.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/cookies.html"/>
     <lastmod>2026-06-23</lastmod>
   </url>
   <url>
-    <loc>https://romnutriclub.ro/ru/cookies.html</loc>
-    <xhtml:link rel="alternate" hreflang="ro" href="https://romnutriclub.ro/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://romnutriclub.ro/en/cookies.html"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://romnutriclub.ro/ru/cookies.html"/>
+    <loc>https://boostclub.ro/ru/cookies.html</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/cookies.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/cookies.html"/>
     <lastmod>2026-06-23</lastmod>
+  </url>
+  <url>
+    <loc>https://boostclub.ro/business</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/business"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/business"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/business"/>
+    <lastmod>2026-07-02</lastmod>
+  </url>
+  <url>
+    <loc>https://boostclub.ro/en/business</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/business"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/business"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/business"/>
+    <lastmod>2026-07-02</lastmod>
+  </url>
+  <url>
+    <loc>https://boostclub.ro/ru/business</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/business"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/business"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/business"/>
+    <lastmod>2026-07-02</lastmod>
   </url>
 </urlset>

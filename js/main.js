@@ -297,7 +297,7 @@
   var over = document.createElement("div");
   over.id = "bc-xover";
   over.setAttribute("aria-hidden", "true");
-  over.innerHTML = '<div class="bc-stars"></div><div class="bc-flash"></div><div class="bc-wm">GABI NESHTO<span class="d">.</span></div><div class="bc-sub">Program Partener</div>';
+  over.innerHTML = '<div class="bc-stars"></div><div class="bc-flash"></div><div class="bc-wm">GABI NESHTO<span class="d">.</span></div><div class="bc-sub">Program Partener</div><div class="bc-load"><i></i></div>';
   document.body.appendChild(over);
   Array.prototype.forEach.call(links, function (link) {
     link.addEventListener("click", function (e) {
@@ -316,8 +316,16 @@
       over.style.clipPath = "circle(165% at " + cx + "px " + cy + "px)";
       setTimeout(function () { over.classList.add("flash"); }, 540); // threshold flash
       var done = false, go = function () { if (done) return; done = true; location.href = href; };
-      over.addEventListener("transitionend", go, { once: true });
-      setTimeout(go, 1000);
+      // Navigate when the loading bar finishes filling. Previously this
+      // listened for any transitionend on the overlay — transitions from
+      // .bc-wm/.bc-sub children bubble up and fired it early (~0.6s),
+      // cutting the portal short.
+      var bar = over.querySelector(".bc-load i");
+      over.addEventListener("transitionend", function (ev) {
+        if (bar ? (ev.target === bar && ev.propertyName === "transform")
+                : (ev.target === over && ev.propertyName.indexOf("clip") > -1)) go();
+      });
+      setTimeout(go, 1250);
     });
   });
 })();
