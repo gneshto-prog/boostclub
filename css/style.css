@@ -1075,3 +1075,50 @@ a:focus-visible, button:focus-visible, .btn:focus-visible { outline: 3px solid v
 @keyframes badgeFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
 @media (max-width: 760px) { .hero-badge { left: 8px; bottom: 8px; padding: 8px 11px; gap: 7px; } .hero-badge .b-score { font-size: 16px; } }
 @media (prefers-reduced-motion: reduce) { .hero-badge { animation: none; } }
+
+/* ===== Partner "Program Partener" — blue nav tab + world-change transition ===== */
+.nav a[href="business.html"], .mobile-menu a[href="business.html"]{
+  color:#1098D4;font-weight:600;position:relative;display:inline-flex;align-items:center;gap:7px;
+}
+.nav a[href="business.html"]::before, .mobile-menu a[href="business.html"]::before{
+  content:"";width:7px;height:7px;border-radius:50%;background:#1098D4;
+  box-shadow:0 0 0 0 rgba(16,152,212,.45);animation:bcWorkPulse 2.6s ease-out infinite;
+}
+.nav a[href="business.html"]:hover, .mobile-menu a[href="business.html"]:hover{color:#0a79ac}
+@keyframes bcWorkPulse{0%{box-shadow:0 0 0 0 rgba(16,152,212,.5)}70%{box-shadow:0 0 0 7px rgba(16,152,212,0)}100%{box-shadow:0 0 0 0 rgba(16,152,212,0)}}
+/* the client world dims/recedes as the portal opens */
+#bc-veil{position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:0;transition:opacity .5s ease;
+  background:radial-gradient(circle at 50% 45%,rgba(6,26,47,0) 18%,rgba(6,26,47,.62) 100%);
+  -webkit-backdrop-filter:saturate(.7);backdrop-filter:saturate(.7)}
+#bc-veil.on{opacity:1}
+/* the portal itself — a window into another space */
+#bc-xover{position:fixed;inset:0;z-index:9999;pointer-events:none;overflow:hidden;
+  clip-path:circle(0px at 90% 4%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;
+  background:radial-gradient(circle at 50% 50%,#0f3f63 0%,#0a2942 46%,#061a2f 100%);
+  box-shadow:inset 0 0 150px 26px rgba(16,152,212,.45),inset 0 0 48px 6px rgba(167,223,242,.55)}
+#bc-xover::before{content:"";position:absolute;inset:-25%;mix-blend-mode:screen;opacity:.55;
+  background:conic-gradient(from 0deg,rgba(127,208,242,0),rgba(127,208,242,.22),rgba(16,152,212,.05),rgba(127,208,242,0),rgba(16,152,212,.2),rgba(127,208,242,0));
+  animation:bcspin 7s linear infinite}
+#bc-xover .bc-stars{position:absolute;inset:0;opacity:0;
+  background-image:radial-gradient(2px 2px at 20% 30%,#bfe3f5,transparent),radial-gradient(1.6px 1.6px at 72% 62%,#9fd0f2,transparent),radial-gradient(2px 2px at 42% 82%,#cdeafc,transparent),radial-gradient(1.6px 1.6px at 85% 26%,#bfe3f5,transparent),radial-gradient(1.6px 1.6px at 55% 16%,#9fd0f2,transparent),radial-gradient(2px 2px at 30% 55%,#cdeafc,transparent),radial-gradient(1.4px 1.4px at 63% 40%,#bfe3f5,transparent)}
+#bc-xover.go .bc-stars{animation:bcstars .5s ease .1s forwards,bcdrift 7s linear infinite}
+#bc-xover .bc-flash{position:absolute;inset:0;opacity:0;background:radial-gradient(circle at 50% 50%,#eaf6ff,rgba(167,223,242,0) 62%)}
+#bc-xover.flash .bc-flash{animation:bcflash .55s ease forwards}
+#bc-xover.go{transition:clip-path .8s cubic-bezier(.55,.06,.68,.19)}
+#bc-xover .bc-wm{position:relative;z-index:2;opacity:0;transform:translateY(12px) scale(.96);
+  transition:opacity .45s ease .18s,transform .55s cubic-bezier(.2,.7,.2,1) .18s;
+  color:#fff;font-weight:800;letter-spacing:-.03em;font-size:clamp(24px,4vw,42px);text-shadow:0 6px 44px rgba(16,152,212,.6)}
+#bc-xover .bc-wm .d{color:#7fd0f2}
+#bc-xover .bc-sub{position:relative;z-index:2;opacity:0;transform:translateY(12px);
+  transition:opacity .45s ease .3s,transform .5s ease .3s;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#8fc7e6}
+#bc-xover.go .bc-wm,#bc-xover.go .bc-sub{opacity:1;transform:none}
+@keyframes bcspin{to{transform:rotate(360deg)}}
+@keyframes bcstars{to{opacity:.9}}
+@keyframes bcdrift{from{transform:translateY(0)}to{transform:translateY(-16px)}}
+@keyframes bcflash{0%{opacity:0}70%{opacity:.9}100%{opacity:0}}
+@media(prefers-reduced-motion:reduce){
+  .nav a[href="business.html"]::before, .mobile-menu a[href="business.html"]::before{animation:none}
+  #bc-xover::before,#bc-xover .bc-stars{animation:none!important}
+  #bc-xover.go{transition:opacity .2s}
+}

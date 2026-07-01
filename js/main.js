@@ -284,3 +284,40 @@
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 })();
+
+/* ===== Partner "world-change" transition (blue tab -> business.html) ===== */
+(function () {
+  "use strict";
+  var links = document.querySelectorAll('.nav a[href="business.html"], .mobile-menu a[href="business.html"]');
+  if (!links.length) return;
+  var rm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var veil = document.createElement("div");
+  veil.id = "bc-veil"; veil.setAttribute("aria-hidden", "true");
+  document.body.appendChild(veil);
+  var over = document.createElement("div");
+  over.id = "bc-xover";
+  over.setAttribute("aria-hidden", "true");
+  over.innerHTML = '<div class="bc-stars"></div><div class="bc-flash"></div><div class="bc-wm">GABI NESHTO<span class="d">.</span></div><div class="bc-sub">Program Partener</div>';
+  document.body.appendChild(over);
+  Array.prototype.forEach.call(links, function (link) {
+    link.addEventListener("click", function (e) {
+      var href = link.getAttribute("href");
+      if (!href) return;
+      e.preventDefault();
+      try { sessionStorage.setItem("bc-portal", "1"); } catch (err) {}
+      if (rm) { location.href = href; return; }
+      var r = link.getBoundingClientRect();
+      var cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+      veil.classList.add("on");                       // the client world dims & recedes
+      over.style.pointerEvents = "auto";
+      over.style.clipPath = "circle(0px at " + cx + "px " + cy + "px)";
+      void over.offsetWidth;
+      over.classList.add("go");                        // portal irises open, accelerating
+      over.style.clipPath = "circle(165% at " + cx + "px " + cy + "px)";
+      setTimeout(function () { over.classList.add("flash"); }, 540); // threshold flash
+      var done = false, go = function () { if (done) return; done = true; location.href = href; };
+      over.addEventListener("transitionend", go, { once: true });
+      setTimeout(go, 1000);
+    });
+  });
+})();

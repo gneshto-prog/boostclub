@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Построй свой бизнес в сфере питания — Boost Club</title>
+<meta name="description" content="Построй свой бизнес в сфере питания на основе модели, которая уже работает — в своей стране. Запишись на звонок с Габриэлем.">
+<link rel="canonical" href="https://boostclub.ro/ru/business">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://boostclub.ro/ru/business">
+<meta property="og:title" content="Построй свой бизнес в сфере питания — с Габриэлем Нешто">
+<meta property="og:description" content="Построй свой бизнес в сфере питания на основе модели, которая уже работает — в своей стране.">
+<meta property="og:image" content="https://boostclub.ro/images/og-image.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#1098D4;--navy:#061A2F;--sky:#A7DFF2;--white:#FFFFFF;
+  --orange:#FF7A32;--green:#89B795;--bg:#F4F8FB;--slate:#4A6275;
+  --line:rgba(6,26,47,.12);--line2:rgba(6,26,47,.06);
+  --shadow:0 30px 70px -34px rgba(6,26,47,.30);
+  --r:20px;--maxw:1080px;
+  /* ---- unified motion system ---- */
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --d1:.16s;--d2:.30s;--d3:.60s;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--navy);background:var(--white);line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--sky)}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{letter-spacing:-.028em;line-height:1.06;font-weight:700}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(22px,6vw,64px)}
+.mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+.klabel{font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--slate)}
+
+/* ---- accessibility ---- */
+.skip{position:absolute;left:-999px;top:0;z-index:300;background:var(--navy);color:#fff;padding:12px 18px;border-radius:0 0 10px 0;font-weight:600}
+.skip:focus{left:0}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:6px}
+
+/* ---- buttons ---- */
+.btn{cursor:pointer;font-family:inherit;font-weight:600;font-size:15px;padding:14px 24px;border-radius:100px;display:inline-flex;align-items:center;gap:10px;transition:filter var(--d2) var(--ease),box-shadow var(--d2) var(--ease);border:none;white-space:nowrap;will-change:transform}
+.btn svg{width:18px;height:18px}
+.btn .arw{transition:transform var(--d2) var(--ease)}
+.btn:hover .arw{transform:translateX(4px)}
+.btn-cta{background:var(--orange);color:#fff;box-shadow:0 14px 30px -14px rgba(255,122,50,.7)}
+.btn-cta:hover{filter:brightness(1.06)}
+.btn-line{background:transparent;color:var(--navy);border:1px solid var(--line)}
+.btn-line:hover{border-color:var(--navy)}
+.btn-lg{padding:16px 30px;font-size:16px}
+
+.progress{position:fixed;top:0;left:0;height:2px;width:0;background:var(--blue);z-index:200}
+.topbar{position:fixed;top:0;left:0;right:0;z-index:150;display:flex;align-items:center;justify-content:space-between;padding:15px clamp(18px,5vw,44px);background:rgba(255,255,255,.82);backdrop-filter:blur(16px);border-bottom:1px solid var(--line2);transition:padding var(--d2) var(--ease),box-shadow var(--d2) var(--ease)}
+.topbar.shrink{padding-top:9px;padding-bottom:9px;box-shadow:0 6px 24px -20px rgba(6,26,47,.5)}
+.brand{font-weight:800;letter-spacing:-.03em;font-size:16.5px}
+.brand .dot{color:var(--blue)}
+.topbar .btn{padding:10px 20px;font-size:13.5px}
+.topbar .back{display:inline-flex;align-items:center;gap:9px;text-decoration:none;color:var(--navy)}
+.topbar .back .bk{display:inline-flex;color:var(--blue);font-size:18px;line-height:1;transition:transform var(--d2) var(--ease)}
+.topbar .back:hover .bk{transform:translateX(-3px)}
+.stickycta{position:fixed;left:0;right:0;bottom:0;z-index:140;padding:12px 16px;background:rgba(255,255,255,.93);backdrop-filter:blur(16px);border-top:1px solid var(--line);display:none}
+.stickycta .btn{width:100%;justify-content:center}
+@media(max-width:760px){.stickycta{display:block;transform:translateY(120%);transition:transform var(--d2) var(--ease)}.stickycta.show{transform:none}body{padding-bottom:76px}}
+
+/* ---- reveal / motion ---- */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity var(--d3) var(--ease),transform var(--d3) var(--ease);transition-delay:var(--rd,0ms)}
+.reveal.in{opacity:1;transform:none}
+.clipin{clip-path:inset(0 0 100% 0);transition:clip-path .8s var(--ease);transition-delay:var(--rd,0ms)}
+.clipin.in{clip-path:inset(0 0 0 0)}
+
+.hero{padding:150px 0 40px}
+.hero .grid{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center}
+@media(max-width:900px){.hero .grid{grid-template-columns:1fr;gap:32px}}
+.hero h1{font-size:clamp(34px,5.4vw,60px);font-weight:800;letter-spacing:-.045em;margin-top:22px}
+.hero h1 em{font-style:normal;color:var(--blue)}
+.hero .sub{font-size:clamp(17px,2vw,20px);color:var(--slate);margin-top:24px;max-width:530px}
+.hero .cta-row{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.hero .facts{margin-top:26px;display:flex;flex-direction:column;gap:9px}
+.hero .facts div{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--navy);display:flex;gap:11px;align-items:center}
+.hero .facts div::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--blue);flex-shrink:0}
+.heroimg{aspect-ratio:4/4.5;border-radius:22px;overflow:hidden;background:linear-gradient(155deg,#0d3352,#061A2F 72%);position:relative;box-shadow:var(--shadow)}
+.heroimg::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 62% 24%,rgba(16,152,212,.4),transparent 58%)}
+.heroimg .cap{position:absolute;bottom:20px;left:20px;z-index:3;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:#cfe0ec}
+.heroimg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;display:block;z-index:1}
+.heroimg .scrim{position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,transparent 55%,rgba(6,26,47,.55))}
+@media(max-width:900px){.heroimg{aspect-ratio:16/11}}
+.scrollcue{margin-top:34px;display:inline-flex;align-items:center;gap:9px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--slate)}
+.scrollcue .c{width:22px;height:34px;border:1.5px solid var(--line);border-radius:12px;position:relative}
+.scrollcue .c::after{content:"";position:absolute;left:50%;top:6px;width:3px;height:6px;border-radius:2px;background:var(--blue);transform:translateX(-50%);animation:cue 1.6s var(--ease) infinite}
+@keyframes cue{0%{opacity:0;top:6px}40%{opacity:1}80%{opacity:0;top:16px}100%{opacity:0}}
+
+section{padding:78px 0}
+.rule{height:1px;background:var(--line2);max-width:var(--maxw);margin:0 auto}
+.head{max-width:680px;margin-bottom:40px}
+.head h2{font-size:clamp(27px,4vw,42px);font-weight:800;letter-spacing:-.035em;margin-top:16px}
+.head p{color:var(--slate);font-size:clamp(16px,1.9vw,19px);margin-top:16px}
+
+.prose{max-width:660px}
+.prose p{color:var(--slate);font-size:16.5px;margin-top:16px}
+.prose p.lead{color:var(--navy);font-weight:500;font-size:18px}
+
+/* contextual CTA */
+.ctx{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;margin:56px auto 0;max-width:560px}
+.ctx p{color:var(--slate);font-size:15.5px}
+
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:12px}
+@media(max-width:820px){.cols{grid-template-columns:1fr;gap:20px}}
+.col{padding:22px;border:1px solid var(--line2);border-radius:16px;background:#fbfdff;transition:transform var(--d2) var(--ease),box-shadow var(--d2) var(--ease)}
+.col:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.col h3{font-size:18px;font-weight:600;margin-bottom:8px}
+.col p{color:var(--slate);font-size:15px}
+.col .t{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--blue);letter-spacing:.06em;margin-bottom:12px}
+
+/* map */
+.map-sec{background:var(--bg);border-top:1px solid var(--line2);border-bottom:1px solid var(--line2)}
+.mapstat{display:inline-flex;align-items:baseline;gap:9px;margin-top:18px}
+.mapstat b{font-size:28px;font-weight:800;letter-spacing:-.03em;color:var(--blue)}
+.mapstat span{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--slate);text-transform:uppercase;letter-spacing:.04em}
+.mapbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;align-items:center}
+.mapbar input{flex:1;min-width:220px;font-family:inherit;font-size:15px;padding:13px 18px;border:1px solid var(--line);border-radius:100px;background:#fff;color:var(--navy)}
+.mapbar input::placeholder{color:#93a4b3}
+.mapbar .reset{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--slate);background:none;border:1px solid var(--line);border-radius:100px;padding:11px 16px;cursor:pointer;transition:border-color var(--d2)}
+.mapbar .reset:hover{border-color:var(--navy)}
+.mapstatus{min-height:22px;margin-top:14px;font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--slate)}
+.mapstatus b{color:var(--navy)}
+.mapstatus .ok{color:#0a79ac}
+.mapwrap{position:relative;margin-top:14px;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:clamp(14px,3vw,30px);overflow:hidden}
+.mapwrap.loading::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(16,152,212,.06) 50%,transparent 70%);background-size:200% 100%;animation:shimmer 1.3s linear infinite}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+#worldmap{width:100%;height:auto;display:block}
+.sphere{fill:#eef3f8;stroke:var(--line2);stroke-width:1}
+.c{stroke:#fff;stroke-width:.5px;transition:fill var(--d1)}
+.c.off{fill:#d7dfe7}
+.c.off:hover{fill:#c7d1da}
+.c.on{fill:#1098D4;cursor:pointer}
+.c.on:hover{fill:#0a79ac}
+.c.sel{stroke:var(--navy);stroke-width:1.4px;fill:#0a79ac}
+.c.dim{opacity:.55}
+.pin-halo{fill:rgba(6,26,47,.14);animation:pp 2.4s ease-out infinite}
+@keyframes pp{0%{transform-box:fill-box;transform-origin:center;transform:scale(.5);opacity:.9}100%{transform:scale(2.6);opacity:0}}
+.pin-core{fill:var(--navy);stroke:#fff;stroke-width:1.5}
+.pin-label{font-family:'IBM Plex Mono',monospace;font-size:10px;fill:var(--navy);font-weight:500;letter-spacing:.03em}
+.maptip{position:absolute;pointer-events:none;background:var(--navy);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.03em;padding:7px 11px;border-radius:8px;opacity:0;transform:translate(-50%,-140%);transition:opacity var(--d1);white-space:nowrap;z-index:5}
+.maptip.on{opacity:1}
+.maptip .avail{color:var(--sky)}
+.legend{display:flex;gap:22px;flex-wrap:wrap;margin-top:20px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--slate)}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.legend i{width:12px;height:12px;border-radius:3px;display:inline-block}
+.legend i.b{background:var(--blue)}.legend i.g{background:#d7dfe7}.legend i.n{background:var(--navy);border-radius:50%}
+.map-fallback{display:none;padding:40px;text-align:center;color:var(--slate);font-size:15px}
+.mapcta{margin-top:22px;display:flex;justify-content:center}
+.mapcta[hidden]{display:none}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;position:relative}
+@media(max-width:820px){.steps{grid-template-columns:1fr}}
+.steptrack{position:absolute;top:0;left:0;right:0;height:3px;background:var(--line2);z-index:2}
+.stepfill{height:100%;background:var(--blue);transform:scaleX(var(--p,0));transform-origin:left;transition:transform .1s linear}
+@media(max-width:820px){.steptrack{top:0;bottom:0;left:0;right:auto;width:3px;height:auto}.stepfill{width:100%;height:100%;transform:scaleY(var(--p,0));transform-origin:top}}
+.step{padding:30px;border-right:1px solid var(--line)}
+.step:last-child{border-right:none}
+@media(max-width:820px){.step{border-right:none;border-bottom:1px solid var(--line)}.step:last-child{border-bottom:none}}
+.step .n{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--blue);letter-spacing:.08em}
+.step h3{font-size:19px;margin:14px 0 9px;font-weight:600}
+.step p{color:var(--slate);font-size:15px}
+
+.pointlist{display:flex;flex-direction:column;gap:0;margin-top:8px}
+.pointlist .p{display:grid;grid-template-columns:220px 1fr;gap:24px;padding:22px 0;border-top:1px solid var(--line2);position:relative}
+.pointlist .p:first-child{border-top:none}
+.pointlist .p::before{content:"";position:absolute;left:-14px;top:22px;bottom:22px;width:2px;background:var(--blue);transform:scaleY(0);transform-origin:top;transition:transform var(--d3) var(--ease)}
+.pointlist .p.in::before{transform:scaleY(1)}
+@media(max-width:760px){.pointlist .p{grid-template-columns:1fr;gap:6px}.pointlist .p::before{left:-8px}}
+.pointlist .p b{font-size:16px;font-weight:600}
+.pointlist .p span{color:var(--slate);font-size:15px}
+
+/* who — persona chips */
+.personas{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.chip{font-family:inherit;font-size:14.5px;font-weight:500;color:var(--navy);background:#fff;border:1px solid var(--line);border-radius:100px;padding:11px 18px;cursor:pointer;transition:border-color var(--d2) var(--ease),background var(--d2) var(--ease),transform var(--d1) var(--ease)}
+.chip:hover{border-color:var(--blue);transform:translateY(-2px)}
+.chip[aria-pressed="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.persona-detail{margin-top:26px;min-height:24px;border-left:2px solid var(--blue);padding-left:18px}
+.persona-detail p{font-size:17px;color:var(--navy);font-weight:500;max-width:640px}
+.persona-detail .hint{color:var(--slate);font-weight:400;font-size:16px}
+.persona-detail .pcta{margin-top:18px;display:none}
+.persona-detail .pcta.show{display:inline-flex}
+
+.income{display:grid;grid-template-columns:1fr auto 1fr;gap:20px;margin-top:12px;align-items:stretch}
+@media(max-width:760px){.income{grid-template-columns:1fr}}
+.income .box{border:1px solid var(--line);border-radius:var(--r);padding:28px;transition:transform var(--d2) var(--ease),box-shadow var(--d2) var(--ease)}
+.income .box:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.income .plus{display:flex;align-items:center;justify-content:center;font-size:26px;color:var(--blue);font-weight:300}
+@media(max-width:760px){.income .plus{padding:2px 0}}
+.income .box .t{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--blue);letter-spacing:.06em}
+.income .box h3{font-size:19px;font-weight:600;margin:12px 0 8px}
+.income .box p{color:var(--slate);font-size:15px}
+.perks{margin-top:26px}
+.perkrow{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+.perk{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--navy);border:1px solid var(--line);border-radius:100px;padding:9px 16px;background:var(--bg);transition:transform var(--d1) var(--ease),border-color var(--d2)}
+.perk:hover{transform:translateY(-2px);border-color:var(--blue)}
+.closing{margin-top:28px;font-size:16.5px;font-weight:500;max-width:640px}
+
+.quiet{background:var(--navy);color:#fff;border-radius:var(--r);padding:clamp(30px,5vw,52px);position:relative;overflow:hidden}
+.quiet .aurora{position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(16,152,212,.32),transparent 62%);top:-160px;right:-120px;animation:drift 24s var(--ease) infinite alternate;z-index:0}
+@keyframes drift{0%{transform:translate(0,0)}100%{transform:translate(-60px,50px)}}
+.quiet>*{position:relative;z-index:1}
+.quiet h2{color:#fff;font-size:clamp(24px,3.4vw,36px)}
+.quiet .prose p{color:#c3d2df}
+.quiet .prose p.lead{color:#fff}
+.quiet .fine{color:#7f96ab;font-size:12.5px;margin-top:24px;font-family:'IBM Plex Mono',monospace;line-height:1.6}
+
+.gabi .split{display:grid;grid-template-columns:.82fr 1.18fr;gap:48px;align-items:center}
+@media(max-width:820px){.gabi .split{grid-template-columns:1fr;gap:26px}}
+.gabi .photo{aspect-ratio:4/5;border-radius:20px;background:linear-gradient(155deg,#0d3352,#02101d);position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.gabi .photo::after{content:"Save the photo as ../images/gabriel-neshto-boost-club-bucuresti.jpg in this folder";position:absolute;bottom:16px;left:16px;right:16px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.04em;color:#6f8ba2}
+.gabi .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 58%;display:block;z-index:2}
+.gabi h2{font-size:clamp(27px,3.8vw,40px)}
+.gabi p{color:var(--slate);font-size:16.5px;margin-top:16px}
+.gabi .facts{display:flex;gap:30px;flex-wrap:wrap;margin-top:26px;border-top:1px solid var(--line2);padding-top:22px}
+.gabi .facts div b{font-size:22px;font-weight:800;letter-spacing:-.02em;display:block}
+.gabi .facts div span{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--slate);margin-top:3px;display:block}
+
+/* faq — accessible animated accordion */
+.faq{max-width:780px}
+.qa{border-top:1px solid var(--line)}
+.faq .qa:last-child{border-bottom:1px solid var(--line)}
+.qa .q{width:100%;text-align:left;background:none;border:none;font-family:inherit;cursor:pointer;font-weight:600;font-size:17px;color:var(--navy);padding:20px 0;display:flex;justify-content:space-between;align-items:center;gap:14px;transition:padding-left var(--d2) var(--ease)}
+.qa .q:hover{padding-left:4px}
+.qa .q .ic{color:var(--blue);font-weight:500;font-size:22px;line-height:1;transition:transform var(--d2) var(--ease);flex-shrink:0}
+.qa .q[aria-expanded="true"] .ic{transform:rotate(45deg)}
+.qa .a{display:grid;grid-template-rows:0fr;transition:grid-template-rows var(--d2) var(--ease)}
+.qa.open .a{grid-template-rows:1fr}
+.qa .a-in{overflow:hidden}
+.qa .a-in p{color:var(--slate);font-size:15.5px;padding:0 0 22px}
+
+.final{text-align:center;padding:100px 0;position:relative;overflow:hidden}
+.final .aurora{position:absolute;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(167,223,242,.4),transparent 62%);top:-260px;left:50%;transform:translateX(-50%);z-index:0}
+.final>*{position:relative;z-index:1}
+.final h2{font-size:clamp(30px,5vw,54px);font-weight:800;letter-spacing:-.04em;max-width:780px;margin:14px auto 0}
+.final p{color:var(--slate);font-size:clamp(16px,2vw,19px);max-width:540px;margin:18px auto 0}
+.final .rr{font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--slate);margin-top:16px}
+
+.foot{background:var(--navy);color:#fff;padding:56px 0 40px}
+.foot .top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:32px}
+@media(max-width:760px){.foot .top{grid-template-columns:1fr;gap:24px}}
+.foot .brand{color:#fff;font-size:22px}
+.foot small,.foot a{color:#8fa6ba;font-size:13.5px;display:block;line-height:2}
+.foot a{position:relative;display:inline-block}
+.foot a::after{content:"";position:absolute;left:0;bottom:2px;width:100%;height:1px;background:#8fa6ba;transform:scaleX(0);transform-origin:left;transition:transform var(--d2) var(--ease)}
+.foot a:hover::after{transform:scaleX(1)}
+.foot h5{font-family:'IBM Plex Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#fff;margin-bottom:10px;font-weight:500}
+.foot .disc{border-top:1px solid rgba(255,255,255,.1);margin-top:34px;padding-top:24px;font-size:12px;color:#7f96ab;line-height:1.7}
+
+/* ===== Path Configurator ===== */
+.cfg-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.cfg-chip{font-family:inherit;font-size:13px;font-weight:500;color:var(--navy);background:#fff;border:1px solid var(--line);border-radius:100px;padding:8px 14px;cursor:pointer;transition:border-color var(--d2) var(--ease),background var(--d2) var(--ease),transform var(--d1) var(--ease)}
+.cfg-chip:hover{border-color:var(--blue);transform:translateY(-2px)}
+.cfg-chip[aria-pressed="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.cfg-summary{margin-top:26px;border:1px solid var(--line);border-radius:var(--r);padding:22px 26px;background:linear-gradient(180deg,#fff,#fbfdff);display:flex;flex-wrap:wrap;align-items:center;gap:18px;justify-content:space-between}
+.cfg-summary p{font-size:17px;color:var(--navy);font-weight:500;max-width:600px;line-height:1.5}
+.cfg-summary p b{color:var(--blue)}
+.cfg-summary .cfg-hint{color:var(--slate);font-weight:400}
+.cfg-summary .btn{display:none}
+.cfg-summary .btn.show{display:inline-flex}
+.cwrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);-webkit-overflow-scrolling:touch}
+.ctable{min-width:680px;display:grid;grid-template-columns:1.2fr 1fr 1fr 1.1fr;background:#fff}
+.ctable>div{padding:15px 18px;border-top:1px solid var(--line2)}
+.ctable .ch{border-top:none;font-family:'IBM Plex Mono',monospace;font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;font-weight:500}
+.ctable .ch.crit{background:#fbfdff;color:var(--slate)}
+.ctable .ch.job,.ctable .ch.fr{background:#f3f5f8;color:var(--slate)}
+.ctable .ch.this{background:var(--navy);color:#fff}
+.ctable .cc{font-size:14px}
+.ctable .cc.crit{font-weight:600;color:var(--navy);background:#fbfdff}
+.ctable .cc.job,.ctable .cc.fr{color:var(--slate)}
+.ctable .cc.job::before,.ctable .cc.fr::before{content:"\2715 ";color:#c0392b;font-weight:800}
+.ctable .cc.this{background:rgba(16,152,212,.06);color:var(--navy);font-weight:500}
+.ctable .cc.this::before{content:"\2713 ";color:var(--blue);font-weight:800}
+.cscroll-hint{display:none;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--slate);margin-top:10px}
+@media(max-width:720px){.cscroll-hint{display:block}}
+.aftercall{margin-top:36px;border-top:1px dashed var(--line);padding-top:28px}
+.acsteps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:20px;position:relative}
+@media(max-width:720px){.acsteps{grid-template-columns:1fr;gap:16px}}
+.acstep{position:relative;padding-right:14px}
+.acstep .d{width:13px;height:13px;border-radius:50%;background:var(--blue);position:relative;z-index:2;box-shadow:0 0 0 4px rgba(16,152,212,.12)}
+.acstep .cn{position:absolute;top:6px;left:13px;right:-6px;height:2px;background:var(--line)}
+.acstep:last-child .cn{display:none}
+@media(max-width:720px){.acstep .cn{display:none}}
+.acstep b{display:block;margin-top:14px;font-size:14.5px;font-weight:600}
+.acstep span{font-size:13.5px;color:var(--slate);display:block;margin-top:4px}
+.acstep .t{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--blue);letter-spacing:.06em}
+.arclayer .arc{fill:none;stroke:var(--blue);stroke-width:1.6;stroke-linecap:round}
+.arclayer .arc-dot{fill:var(--blue)}
+.origin-note{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--slate)}
+.origin-note b{color:var(--navy)}
+
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important}
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .clipin{clip-path:none;transition:none}
+  .stepfill{transform:scaleX(1)!important}
+  .pointlist .p::before{transform:scaleY(1)}
+}
+#bc-arrival{position:fixed;inset:0;z-index:9999;pointer-events:none;background:radial-gradient(circle at 50% 45%,#0f3f63,#061a2f 76%)}
+#bc-arrival.go{transition:clip-path .85s cubic-bezier(.2,.7,.2,1),opacity .85s ease;clip-path:circle(0 at 50% 50%)!important;opacity:0}
+body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
+@keyframes bcEmerge{from{transform:scale(.97);opacity:.35}to{transform:none;opacity:1}}
+@media(prefers-reduced-motion:reduce){#bc-arrival{display:none!important}body.bc-emerge #main{animation:none}}
+.topbar-right{display:flex;align-items:center;gap:14px}
+.langsw{display:inline-flex;align-items:center;gap:6px;font-family:'IBM Plex Mono',monospace;font-size:12px}
+.langsw a,.langsw span{color:var(--slate);text-decoration:none;padding:4px 6px;border-radius:6px}
+.langsw a:hover{color:var(--navy);background:rgba(16,152,212,.08)}
+.langsw .active{color:var(--navy);font-weight:600}
+@media(max-width:520px){.langsw{display:none}}
+.leadform-wrap{max-width:560px;margin:32px auto 0;text-align:center}
+.leadform-toggle{background:none;border:none;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.04em;color:var(--slate);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.leadform-toggle:hover{color:var(--blue)}
+.leadform{margin-top:20px;text-align:left;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:0 12px 34px -26px rgba(6,26,47,.4)}
+.leadform .lf-grid{display:grid;gap:12px}
+.leadform input,.leadform textarea{font-family:inherit;font-size:15px;padding:13px 15px;border:1px solid var(--line);border-radius:12px;background:#fbfdff;color:var(--navy);width:100%}
+.leadform input:focus,.leadform textarea:focus{outline:2px solid var(--blue);outline-offset:1px;border-color:var(--blue)}
+.leadform .btn{margin-top:16px;width:100%;justify-content:center}
+.leadform .lf-note{font-size:12.5px;color:var(--slate);margin-top:12px;text-align:center}
+.lf-hp{position:absolute;left:-9999px}
+.lf-thanks{margin-top:20px;font-weight:600;color:var(--navy)}
+</style>
+</head>
+<body>
+<div id="bc-arrival" hidden></div>
+<script>(function(){try{if(sessionStorage.getItem('bc-portal')){sessionStorage.removeItem('bc-portal');if(!matchMedia('(prefers-reduced-motion:reduce)').matches){var a=document.getElementById('bc-arrival');if(a){a.hidden=false;if(document.body)document.body.classList.add('bc-emerge');requestAnimationFrame(function(){requestAnimationFrame(function(){a.classList.add('go');});});setTimeout(function(){if(a&&a.parentNode)a.parentNode.removeChild(a);},1000);}}}}catch(e){}})();</script>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress"></div>
+
+<div class="topbar" id="topbar">
+  <a class="brand back" href="index.html" aria-label="Назад на сайт"><span class="bk" aria-hidden="true">←</span> BOOST CLUB<span class="dot">.</span></a>
+  <div class="topbar-right">
+  <nav class="langsw" aria-label="Language"><a href="../en/business.html" hreflang="en">EN</a><span class="active">RU</span></nav>
+  <a class="btn btn-cta btn-mag" href="https://wa.me/40726205752?text=Hi%20Gabi%2C%20I'd%20like%20to%20book%20a%20call%20about%20building%20my%20own." target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l1.9.9c.3.1.4.2.5.3.1.2.1.6-.1 1.4z"/></svg>
+    Записаться на звонок
+  </a>
+  </div>
+</div>
+<div class="stickycta" id="stickycta">
+  <a class="btn btn-cta" href="https://wa.me/40726205752?text=Hi%20Gabi%2C%20I'd%20like%20to%20book%20a%20call%20about%20building%20my%20own." target="_blank" rel="noopener">Записаться — WhatsApp</a>
+</div>
+
+<main id="main">
+
+<!-- HERO -->
+<header class="hero" data-seq>
+  <div class="wrap grid">
+    <div>
+      <span class="klabel reveal">Партнёрская программа</span>
+      <h1 class="reveal">Построй свой бизнес в сфере питания <em>внутри той, что уже работает.</em></h1>
+      <p class="sub reveal">Ты строишь на бизнес-модели, которая уже работает — проверенной в 67 000 клубах питания в более чем 90 странах. Свой бизнес ты ведёшь в своей стране, с тем же методом, наставничеством и поддержкой. Меняется только то, как всё устроено под твой рынок и твою точку старта.</p>
+      <div class="cta-row reveal">
+        <a class="btn btn-cta btn-lg btn-mag" href="https://wa.me/40726205752?text=Hi%20Gabi%2C%20I'd%20like%20to%20book%20a%20call%20about%20building%20my%20own." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l1.9.9c.3.1.4.2.5.3.1.2.1.6-.1 1.4z"/></svg>
+          Записаться на звонок
+        </a>
+        <a class="btn btn-line btn-lg" href="#how">Как это работает <span class="arw">→</span></a>
+      </div>
+      <div class="facts reveal">
+        <div>Опыт не требуется</div>
+        <div>Можно совмещать с текущей работой</div>
+        <div>Первый разговор — лично с Габриэлем</div>
+      </div>
+      <a class="scrollcue reveal" href="#where" aria-label="Scroll to see how it works"><span class="c"></span> Листай</a>
+    </div>
+    <div class="heroimg clipin"><img src="../images/familie-neshto-wellness.jpg" alt="The Boost Club community in Bucharest" onerror="if(!this.dataset.p){this.dataset.p=1;this.src='../images/familie-neshto-wellness.jpg'}else{this.style.display='none'}"><div class="scrim"></div><span class="cap">Boost Club · Sevastopol 24, Бухарест</span></div>
+  </div>
+</header>
+
+<!-- BUILD WHERE YOU ARE -->
+<section id="where" data-seq>
+  <div class="wrap">
+    <div class="head">
+      <span class="klabel reveal">Где можно начать</span>
+      <h2 class="reveal">Где бы ты ни был, способ начать найдётся.</h2>
+      <p class="reveal">Ты строишь собственный бизнес там, где живёшь. Везде, где работает Herbalife, эта возможность доступна тебе.</p>
+    </div>
+    <div class="cols" id="cfg">
+      <div class="col reveal">
+        <div class="t">01</div>
+        <h3>Твоя страна</h3>
+        <p>Ты строишь там, где живёшь, по версии системы, адаптированной под твой рынок — на основе того же метода, что уже работает у команды Boost Club.</p>
+        <div class="cfg-chips">
+          <button class="cfg-chip" type="button" data-cat="country" data-v="Франции" aria-pressed="false">Франция</button>
+          <button class="cfg-chip" type="button" data-cat="country" data-v="Великобритании" aria-pressed="false">Великобритания</button>
+          <button class="cfg-chip" type="button" data-cat="country" data-v="США" aria-pressed="false">США</button>
+          <button class="cfg-chip" type="button" data-link="map">Выбрать на карте ↓</button>
+        </div>
+      </div>
+      <div class="col reveal">
+        <div class="t">02</div>
+        <h3>Твоя точка старта</h3>
+        <p>Может, ты уже консультируешь клиентов, ведёшь зал, работаешь на серьёзной должности или начинаешь с нуля. План строится под твой опыт, а не по шаблону.</p>
+        <div class="cfg-chips">
+          <button class="cfg-chip" type="button" data-cat="start" data-v="с работы" aria-pressed="false">С работы</button>
+          <button class="cfg-chip" type="button" data-cat="start" data-v="из зала или студии" aria-pressed="false">Из зала/студии</button>
+          <button class="cfg-chip" type="button" data-cat="start" data-v="уже консультируя" aria-pressed="false">Уже консультирую</button>
+          <button class="cfg-chip" type="button" data-cat="start" data-v="как студент" aria-pressed="false">Студент</button>
+          <button class="cfg-chip" type="button" data-cat="start" data-v="с нуля" aria-pressed="false">С нуля</button>
+        </div>
+      </div>
+      <div class="col reveal">
+        <div class="t">03</div>
+        <h3>Твой темп</h3>
+        <p>Кто-то год совмещает с другой работой, прежде чем уйти полностью. Кто-то движется быстро. Оба пути нормальны, и я честно скажу, какой подходит именно тебе.</p>
+        <div class="cfg-chips">
+          <button class="cfg-chip" type="button" data-cat="pace" data-v="неполный день" aria-pressed="false">Неполный день</button>
+          <button class="cfg-chip" type="button" data-cat="pace" data-v="полный день" aria-pressed="false">Полный день</button>
+          <button class="cfg-chip" type="button" data-cat="pace" data-v="undecided" aria-pressed="false">Пока не знаю</button>
+        </div>
+      </div>
+    </div>
+    <div class="cfg-summary reveal">
+      <p id="cfg-out"><span class="cfg-hint">Выбери по одному в каждом ряду — твой путь соберётся здесь.</span></p>
+      <a class="btn btn-cta btn-mag" id="cfg-cta" href="#" target="_blank" rel="noopener">Записаться на персональный звонок <span class="arw">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<section class="map-sec" data-seq>
+  <div class="wrap">
+    <div class="head">
+      <span class="klabel reveal">Где это работает</span>
+      <h2 class="reveal">Модель уже работает в большей части мира.</h2>
+      <p class="reveal">Herbalife работает более чем в 90 странах. Наша первая локация — один адрес в Бухаресте. Всё, что отмечено синим, — рынок, где ты можешь построить свой.</p>
+      <div class="mapstat reveal"><b><span data-count="90">0</span>+</b><span>рынков доступно по всему миру</span></div>
+    </div>
+    <div class="mapbar reveal">
+      <input id="mapsearch" type="text" placeholder="Введите свою страну, чтобы проверить доступность…" aria-label="Search for your country" autocomplete="off" list="countrylist">
+      <datalist id="countrylist"></datalist>
+      <button class="reset" id="mapreset" type="button">Сбросить</button>
+    </div>
+    <div class="mapstatus" id="mapstatus" aria-live="polite" role="status">Введите страну или нажмите на карту, чтобы проверить, доступна ли возможность.</div>
+    <div class="mapwrap loading" id="mapwrap">
+      <svg id="worldmap" viewBox="0 0 960 480" role="img" aria-label="World map showing markets where you can build"></svg>
+      <div class="maptip" id="maptip"></div>
+      <div class="map-fallback" id="map-fallback">
+        Herbalife работает более чем в 90 странах Америки, Европы, Ближнего Востока, Африки и Азиатско-Тихоокеанского региона. Если она работает там, где ты живёшь, ты можешь строить там. <br><br>(Для загрузки интерактивной карты нужен интернет.)
+      </div>
+    </div>
+    <div class="mapcta" id="mapcta" hidden>
+      <a class="btn btn-cta btn-mag" id="mapctalink" href="#" target="_blank" rel="noopener">Записаться на звонок о твоей стране <span class="arw">→</span></a>
+    </div>
+    <div class="legend">
+      <span><i class="b"></i> Доступно для развития</span>
+      <span><i class="g"></i> Пока недоступно</span>
+      <span><i class="n"></i> Node 00 · Boost Club, Sevastopol 24, Бухарест</span>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- HOW IT'S DIFFERENT -->
+<section data-seq>
+  <div class="wrap">
+    <div class="head">
+      <span class="klabel reveal">Работа · франшиза · это</span>
+      <h2 class="reveal">Чем это отличается.</h2>
+      <p class="reveal">Честный вопрос, который задаёт каждый серьёзный человек: чем это отличается от работы или от покупки франшизы? Сравним.</p>
+    </div>
+    <div class="cwrap reveal">
+      <div class="ctable">
+        <div class="ch crit"></div>
+        <div class="ch job">Работа</div>
+        <div class="ch fr">Франшиза</div>
+        <div class="ch this">Эта модель</div>
+        <div class="cc crit">Стартовые вложения</div>
+        <div class="cc job">Нет — но ты меняешь своё время на зарплату.</div>
+        <div class="cc fr">Часто €100k+ плюс постоянные роялти.</div>
+        <div class="cc this">Без франшизных взносов. Стартуешь там, где ты есть.</div>
+        <div class="cc crit">Потолок дохода</div>
+        <div class="cc job">Ограничен зарплатой.</div>
+        <div class="cc fr">Ограничен территорией и взносами.</div>
+        <div class="cc this">Нет фиксированного потолка — зависит от тебя.</div>
+        <div class="cc crit">Собственность</div>
+        <div class="cc job">Ты не владеешь тем, что строишь.</div>
+        <div class="cc fr">Ты владеешь лицензией, связанной правилами.</div>
+        <div class="cc this">Это твой бизнес.</div>
+        <div class="cc crit">Поддержка</div>
+        <div class="cc job">Начальник, а не наставник.</div>
+        <div class="cc fr">Инструкция и горячая линия.</div>
+        <div class="cc this">Наставник и партнёры, которые это уже прошли.</div>
+        <div class="cc crit">Гибкость</div>
+        <div class="cc job">Фиксированные часы и место.</div>
+        <div class="cc fr">Правила франшизы и фиксированная локация.</div>
+        <div class="cc this">Твои часы, твоё место, неполный или полный день.</div>
+      </div>
+    </div>
+    <div class="cscroll-hint">Листай таблицу вбок для сравнения →</div>
+  </div>
+</section>
+
+<!-- HOW YOU START -->
+<section id="how" data-seq>
+  <div class="wrap">
+    <div class="head">
+      <span class="klabel reveal">Как это работает</span>
+      <h2 class="reveal">С чего ты начинаешь.</h2>
+    </div>
+    <div class="steps" id="steps">
+      <div class="steptrack"><div class="stepfill"></div></div>
+      <div class="step reveal">
+        <div class="n">СНАЧАЛА</div>
+        <h3>Первичная консультация</h3>
+        <p>Начинаем с первичной консультации — в WhatsApp или по видео. Обсуждаем твои цели, как ты хочешь строить и подходит ли это тебе, прежде чем идти дальше.</p>
+      </div>
+      <div class="step reveal">
+        <div class="n">ЗАТЕМ</div>
+        <h3>Мы строим твою версию системы</h3>
+        <p>Работай под именем Boost Club в своей локации или создай что-то со своим лицом — возможно и то, и другое. Это ведь твой бизнес.</p>
+      </div>
+      <div class="step reveal">
+        <div class="n">ПОСЛЕ</div>
+        <h3>Ты запускаешься, команда остаётся рядом</h3>
+        <p>Ты работаешь внутри проверенной системы, а команда — во главе с Габриэлем Нешто — остаётся вовлечённой, чтобы помочь тебе раскрыть весь потенциал.</p>
+      </div>
+    </div>
+    <div class="aftercall reveal">
+      <span class="klabel">Что происходит после записи</span>
+      <div class="acsteps">
+        <div class="acstep reveal"><div class="d"></div><div class="cn"></div><div class="t">ШАГ 1</div><b>Ты записываешься</b><span>Одно сообщение в WhatsApp — без форм и без оплаты.</span></div>
+        <div class="acstep reveal"><div class="d"></div><div class="cn"></div><div class="t">ШАГ 2</div><b>Первый звонок с Габриэлем</b><span>Около 20 минут. Твои цели и вопросы. Без давления.</span></div>
+        <div class="acstep reveal"><div class="d"></div><div class="cn"></div><div class="t">ШАГ 3</div><b>Прорабатываем твой старт</b><span>Как выглядит развитие в твоей стране и ситуации.</span></div>
+        <div class="acstep reveal"><div class="d"></div><div class="cn"></div><div class="t">ШАГ 4</div><b>Ты стартуешь</b><span>Только если это тебе подходит — в своём темпе.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- HOW THE MONEY WORKS -->
+<section data-seq>
+  <div class="wrap">
+    <div class="head">
+      <span class="klabel reveal">Как устроены деньги</span>
+      <h2 class="reveal">Из чего складывается твой доход.</h2>
+    </div>
+    <div class="income">
+      <div class="box reveal">
+        <div class="t">Основной источник · один</div>
+        <h3>Клиенты, которых ты ведёшь</h3>
+        <p>Ты зарабатываешь маржу на продуктах, которые твои клиенты покупают и заказывают снова каждый месяц. Это регулярный доход, и он напрямую зависит от того, скольких людей ты ведёшь и насколько хорошо.</p>
+      </div>
+      <div class="plus reveal" aria-hidden="true">+</div>
+      <div class="box reveal">
+        <div class="t">Основной источник · два</div>
+        <h3>Люди, которых ты развиваешь</h3>
+        <p>Когда ты закрепишься, ты можешь зарабатывать на обороте людей, которым помогаешь стартовать и которых обучаешь — так же, как команда поддерживает тебя сейчас.</p>
+      </div>
+    </div>
+    <div class="perks reveal">
+      <span class="klabel">А для тех, кто выполняет условия</span>
+      <div class="perkrow">
+        <div class="perk">Годовые бонусы за результат</div>
+        <div class="perk">Подарки и признание</div>
+        <div class="perk">Оплачиваемые поездки для отличившихся</div>
+      </div>
+    </div>
+    <p class="closing reveal">Здесь нет потолка по доходу. Сколько построишь — столько и заработаешь; всё зависит только от тебя.</p>
+    <div class="ctx reveal">
+      <p>Реальные цифры зависят от твоей страны и твоей ситуации.</p>
+      <a class="btn btn-cta btn-mag" href="https://wa.me/40726205752?text=Hi%20Gabi%2C%20I'd%20like%20to%20talk%20through%20the%20numbers%20for%20my%20situation." target="_blank" rel="noopener">Поговорить с Габриэлем <span class="arw">→</span></a>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- LIFESTYLE / WHAT OWNERSHIP CHANGES -->
+<section data-seq>
+  <div class="wrap">
+    <div class="quiet reveal">
+      <div class="aurora" aria-hidden="true"></div>
+      <span class="klabel" style="color:var(--sky)">Что меняет собственный бизнес</span>
+      <div class="prose">
+        <p class="lead">Дело не в цифре на экране. Дело в контроле над своим временем, своим потолком и тем, откуда ты работаешь.</p>
+        <p>Ты сам решаешь, сколько работать, выбираешь клиентов и то, как далеко зайдёшь. Поскольку модель работает в десятках стран, она не привязана к одному столу или городу — некоторые ведут бизнес из другой страны, не из той, где начинали. Клиенты, которые заказывают снова, дают регулярный доход, поэтому постоянная работа накапливается, а не обнуляется каждый месяц, как зарплата.</p>
+        <p>И это открыто для каждого. Неважно, откуда ты начинаешь, что изучал и чем занимался раньше — здесь строили что-то настоящее люди с самым разным прошлым. Вознаграждаются терпение и постоянство, а это доступно каждому, кто готов работать.</p>
+      </div>
+      <div class="fine">Независимый дистрибьютор Herbalife. Это предпринимательская возможность, а не трудоустройство. Результаты не гарантированы и зависят от усилий, навыков, рынка и соответствия. Цифры дохода, если они упоминаются, относятся к официальному Заявлению Herbalife о средних валовых доходах независимых дистрибьюторов.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SUPPORT -->
+<section data-seq>
+  <div class="wrap">
+    <div class="head">
+      <span class="klabel reveal">Поддержка</span>
+      <h2 class="reveal">Команда рядом на всём пути.</h2>
+    </div>
+    <div class="pointlist">
+      <div class="p reveal"><b>Наставничество от Габриэля Нешто</b><span>А также опытные партнёры бизнеса, которые направляют тебя, пока ты строишь.</span></div>
+      <div class="p reveal"><b>Ведущие партнёры на своих рынках</b><span>Люди, которые строили в странах, похожих на твою, и могут точно сказать, что сработало, а что нет.</span></div>
+      <div class="p reveal"><b>Рабочий метод с первого дня</b><span>Ежедневные процессы — как ведут клиентов, как выстроена неделя — а не теория со слайдов.</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- WHO IT'S FOR -->
+<section data-seq>
+  <div class="wrap">
+    <div class="head">
+      <span class="klabel reveal">Кому это подходит</span>
+      <h2 class="reveal">Начни свой бизнес.</h2>
+      <p class="reveal">Кто-то открывает локацию с первого дня. Кто-то сначала набирает базу клиентов, чтобы её поддержать. В любом случае это обычно подходит таким людям — нажми на то, что похоже на тебя:</p>
+    </div>
+    <div class="personas reveal" role="group" aria-label="Who this is for — select the one that fits you">
+      <button class="chip" aria-pressed="false" data-r="Идеальный старт — остальному научим." data-detail="Ты начинаешь с нуля и готов учиться.">Начинаю с нуля</button>
+      <button class="chip" aria-pressed="false" data-r="Строй вокруг семьи, в своём темпе." data-detail="Ты родитель и хочешь построить что-то вокруг своей семьи.">Родитель</button>
+      <button class="chip" aria-pressed="false" data-r="Начни сейчас — и будешь на годы впереди." data-detail="Ты студент и предпочитаешь начать сейчас, а не ждать.">Студент</button>
+      <button class="chip" aria-pressed="false" data-r="Стройте вместе — у пар это отлично выходит." data-detail="Вы пара и хотите строить что-то вместе.">Пара</button>
+      <button class="chip" aria-pressed="false" data-r="Оставь работу — строй это параллельно." data-detail="У тебя есть карьера, и ты хочешь серьёзный второй доход.">Карьера + доп. доход</button>
+      <button class="chip" aria-pressed="false" data-r="Ты уже делаешь самое сложное." data-detail="Ты уже тренируешь или консультируешь людей.">Тренер или коуч</button>
+      <button class="chip" aria-pressed="false" data-r="Твоя история — твой главный актив." data-detail="Ты прошёл собственные перемены в здоровье и хочешь помочь другим пройти их.">Прошёл свой путь</button>
+      <button class="chip" aria-pressed="false" data-r="Это доверие и есть весь навык." data-detail="Ты общителен по натуре, и люди уже доверяют твоим рекомендациям.">Общительный по натуре</button>
+      <button class="chip" aria-pressed="false" data-r="Ты уже умеешь заботиться о людях." data-detail="Ты из сферы фитнеса, гостеприимства или ухода — оттуда, где работа — это забота о людях.">Фитнес / сервис / забота</button>
+      <button class="chip" aria-pressed="false" data-r="Добавь это к тому, что уже ведёшь." data-detail="Ты уже управляешь залом или студией.">Владелец зала или студии</button>
+    </div>
+    <div class="persona-detail" aria-live="polite">
+      <p id="pdetail"><span class="hint">Выбери вариант выше — он должен звучать как описание тебя.</span></p>
+      <a class="btn btn-cta btn-mag pcta" id="pcta" href="https://wa.me/40726205752?text=Hi%20Gabi%2C%20I%20think%20this%20fits%20me.%20I'd%20like%20to%20start%20with%20a%20conversation." target="_blank" rel="noopener">Начать с разговора <span class="arw">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- GABI -->
+<section class="gabi" data-seq>
+  <div class="wrap split">
+    <div class="photo clipin"><img src="../images/gabriel-neshto-boost-club-bucuresti.jpg" alt="Gabriel Neshto, founder of Boost Club" onerror="if(!this.dataset.p){this.dataset.p=1;this.src='../images/gabriel-neshto-boost-club-bucuresti.jpg'}else{this.style.display='none'}"></div>
+    <div>
+      <span class="klabel reveal">Основатель · Boost Club</span>
+      <h2 class="reveal">Габриэль Нешто</h2>
+      <p class="reveal">Основатель Boost Club в Бухаресте и сертифицированный ISSA коуч, из семьи, которая работает в этой сфере 36 лет более чем в 60 странах.</p>
+      <div class="facts reveal">
+        <div><b><span data-count="36">0</span></b><span>лет семья в этой сфере</span></div>
+        <div><b><span data-count="60">0</span>+</b><span>стран, где они работали</span></div>
+        <div><b>ISSA</b><span>сертифицированный коуч</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<!-- FAQ -->
+<section data-seq>
+  <div class="wrap">
+    <div class="head"><span class="klabel reveal">Вопросы</span><h2 class="reveal">Честные ответы.</h2></div>
+    <div class="faq reveal" id="faq">
+      <div class="qa"><button class="q" aria-expanded="false"><span>Нужно ли переезжать в Бухарест?</span><span class="ic" aria-hidden="true">+</span></button><div class="a"><div class="a-in"><p>Нет. В Бухаресте наша первая локация. Ты строишь в своей стране. Бухарест важен, только если ты сам здесь.</p></div></div></div>
+      <div class="qa"><button class="q" aria-expanded="false"><span>Нужно ли сначала работать в вашей локации в Бухаресте?</span><span class="ic" aria-hidden="true">+</span></button><div class="a"><div class="a-in"><p>Нет. Ты не стажёр в нашей первой локации. Ты строишь собственный бизнес на своём рынке, а команда сопровождает тебя — удалённо и лично, где это уместно.</p></div></div></div>
+      <div class="qa"><button class="q" aria-expanded="false"><span>Как именно я зарабатываю?</span><span class="ic" aria-hidden="true">+</span></button><div class="a"><div class="a-in"><p>Двумя способами. Маржа на том, что твои клиенты покупают и заказывают снова, и — когда ты закрепишься — доля от оборота людей, которым ты помогаешь стартовать и расти. Здесь нет зарплаты и фиксированного потолка. Доход никогда не гарантирован и зависит от усилий, навыков, рынка и соответствия.</p></div></div></div>
+      <div class="qa"><button class="q" aria-expanded="false"><span>Может ли это заменить мой текущий доход?</span><span class="ic" aria-hidden="true">+</span></button><div class="a"><div class="a-in"><p>Для одних это стало основным доходом, для других — хорошим вторым. Что получится, зависит от того, сколько и насколько стабильно ты строишь. Мы не будем делать вид, что результат предопределён, и тебе стоит остерегаться тех, кто так говорит.</p></div></div></div>
+      <div class="qa"><button class="q" aria-expanded="false"><span>Это Herbalife? Это MLM?</span><span class="ic" aria-hidden="true">+</span></button><div class="a"><div class="a-in"><p>Да, это работает через Herbalife — именно так одна и та же модель действует более чем в 90 странах. Это предпринимательская возможность как независимый дистрибьютор — не работа и не зарплата. Если кто-то говорит, что это лёгкие деньги, уходи от него.</p></div></div></div>
+      <div class="qa"><button class="q" aria-expanded="false"><span>Сколько стоит старт?</span><span class="ic" aria-hidden="true">+</span></button><div class="a"><div class="a-in"><p>Зависит от твоей страны и того, как ты начинаешь. Франшизных взносов нет. Вместо того чтобы публиковать вводящую в заблуждение цифру, мы разберём реальные числа для твоей ситуации на звонке.</p></div></div></div>
+      <div class="qa"><button class="q" aria-expanded="false"><span>Нужен ли опыт?</span><span class="ic" aria-hidden="true">+</span></button><div class="a"><div class="a-in"><p>Нет. Большинство начинают без него. Важнее готовность общаться с людьми и следовать методу, а не импровизировать.</p></div></div></div>
+    </div>
+    <div class="ctx reveal">
+      <p>Ещё сомневаешься? Один звонок обычно всё проясняет.</p>
+      <a class="btn btn-cta btn-mag" href="https://wa.me/40726205752?text=Hi%20Gabi%2C%20I%20still%20have%20a%20question%20%E2%80%94%20can%20we%20talk%3F" target="_blank" rel="noopener">Book a call <span class="arw">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="final" data-seq>
+  <div class="aurora" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="klabel reveal">Следующий шаг</span>
+    <h2 class="reveal">Если хочешь владеть чем-то своим — давай поговорим.</h2>
+    <p class="reveal">Один звонок, с Габриэлем. Бесплатно и без давления. Разберёмся, есть ли путь для тебя там, где ты живёшь, и как на самом деле выглядят цифры.</p>
+    <div class="reveal" style="margin-top:30px">
+      <a class="btn btn-cta btn-lg btn-mag" href="https://wa.me/40726205752?text=Hi%20Gabi%2C%20I'd%20like%20to%20book%20a%20call%20about%20building%20my%20own." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.6 1 1.3 1.6.9.8 1.6 1 1.9 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l1.9.9c.3.1.4.2.5.3.1.2.1.6-.1 1.4z"/></svg>
+        Записаться на звонок с Габриэлем
+      </a>
+    </div>
+    <div class="rr reveal">Отвечает лично · обычно в течение нескольких часов</div>
+    <div class="leadform-wrap reveal">
+      <button class="leadform-toggle" id="leadToggle" type="button" aria-expanded="false">Предпочитаешь почту? Оставь свои контакты</button>
+      <form class="leadform" id="leadForm" name="partner-lead" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+        <input type="hidden" name="form-name" value="partner-lead">
+        <p class="lf-hp"><label>Оставьте пустым: <input name="bot-field"></label></p>
+        <div class="lf-grid">
+          <input type="text" name="name" placeholder="Твоё имя" required>
+          <input type="text" name="contact" placeholder="Email или телефон" required>
+          <input type="text" name="country" placeholder="Где будешь строить (страна)">
+          <textarea name="message" placeholder="Что хочешь сообщить Габриэлю (необязательно)" rows="2"></textarea>
+        </div>
+        <button class="btn btn-cta" type="submit">Отправить контакты <span class="arw">&rarr;</span></button>
+        <p class="lf-note">Габриэль отвечает лично, обычно в течение нескольких часов.</p>
+      </form>
+      <p class="lf-thanks" id="leadThanks" hidden>Спасибо — твои контакты получены. Габриэль свяжется лично.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <div class="brand">BOOST CLUB<span class="dot">.</span></div>
+        <small style="margin-top:8px">Sevastopol 24, Sector 1, București</small>
+        <small>Основатель — Габриэль Нешто</small>
+      </div>
+      <div>
+        <h5>Ещё</h5>
+        <a href="https://boostclub.ro">boostclub.ro</a>
+        <a href="https://boostclub.ro/consultatie-gratuita">Стать клиентом</a>
+      </div>
+      <div>
+        <h5>Связаться с Габриэлем</h5>
+        <a href="https://wa.me/40726205752" target="_blank" rel="noopener">WhatsApp · +40 726 205 752</a>
+        <small>Пн–Пт 07:00–20:00 · Вс 10:00–18:00</small>
+      </div>
+    </div>
+    <div class="disc">
+      Независимый дистрибьютор Herbalife. Это образовательная и предпринимательская возможность, а не трудоустройство. Успех не гарантирован и зависит от усилий, навыков, рынка и соответствия. Цифры дохода, если они упоминаются, относятся к официальному Заявлению Herbalife о средних валовых доходах независимых дистрибьюторов. Boost Club предоставляет консультации по здоровому образу жизни и образовательные консультации; это не диагностика, не лечение и не замена медицинской помощи. Результаты различаются от человека к человеку. © 2026 Boost Club.
+    </div>
+  </div>
+</footer>
+
+<script>
+const REDUCE=matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+/* progress bar */
+const prog=document.getElementById('progress');
+/* header shrink + sticky cta show/hide */
+const topbar=document.getElementById('topbar');
+const sticky=document.getElementById('stickycta');
+let ticking=false;
+function onScroll(){
+  const h=document.documentElement, y=h.scrollTop, max=h.scrollHeight-h.clientHeight;
+  prog.style.width=(y/max*100)+'%';
+  topbar.classList.toggle('shrink',y>40);
+  const nearFooter=(h.scrollHeight-(y+innerHeight))<420;
+  sticky.classList.toggle('show', y>560 && !nearFooter);
+  stepScroll(y);
+  ticking=false;
+}
+addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(onScroll);}},{passive:true});
+
+/* ---- unified reveal system (staggered) ---- */
+if(REDUCE){
+  document.querySelectorAll('.reveal,.clipin,.pointlist .p').forEach(e=>e.classList.add('in'));
+}else{
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{
+    if(e.isIntersecting){
+      const items=e.target.querySelectorAll('.reveal,.clipin,.pointlist .p');
+      items.forEach((el,i)=>{el.style.setProperty('--rd',(i*70)+'ms');el.classList.add('in');});
+      if(e.target.matches('.reveal,.clipin'))e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  })},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('[data-seq]').forEach(s=>io.observe(s));
+}
+
+/* ---- count-up ---- */
+function countUp(el){
+  const t=+el.dataset.count, dur=1100, st=performance.now();
+  (function tick(now){const p=Math.min(1,(now-st)/dur);el.textContent=Math.round(t*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(tick);})(st);
+}
+document.querySelectorAll('[data-count]').forEach(el=>{
+  if(REDUCE){el.textContent=el.dataset.count;return;}
+  const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){countUp(el);o.disconnect();}}),{threshold:.6});
+  o.observe(el);
+});
+
+/* ---- magnetic buttons (desktop pointer only) ---- */
+if(matchMedia('(hover:hover) and (pointer:fine)').matches && !REDUCE){
+  document.querySelectorAll('.btn-mag').forEach(b=>{
+    b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*0.18}px,${(e.clientY-r.top-r.height/2)*0.3}px)`;});
+    b.addEventListener('mouseleave',()=>{b.style.transform='';});
+  });
+}
+
+/* ---- steps: scroll-drawn progress line ---- */
+const steps=document.getElementById('steps');
+function stepScroll(){
+  if(!steps||REDUCE)return;
+  const r=steps.getBoundingClientRect(), start=innerHeight*0.82;
+  let p=(start-r.top)/(r.height*0.9);
+  p=Math.max(0,Math.min(1,p));
+  steps.style.setProperty('--p',p.toFixed(3));
+}
+stepScroll();
+
+/* ---- FAQ accordion (accessible, animated) ---- */
+document.querySelectorAll('#faq .qa').forEach(qa=>{
+  const btn=qa.querySelector('.q');
+  btn.addEventListener('click',()=>{
+    const open=qa.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open?'true':'false');
+  });
+});
+
+/* ---- who: persona chips ---- */
+const chips=document.querySelectorAll('.chip');
+const pdetail=document.getElementById('pdetail');
+const pcta=document.getElementById('pcta');
+chips.forEach(chip=>{
+  chip.addEventListener('click',()=>{
+    const already=chip.getAttribute('aria-pressed')==='true';
+    chips.forEach(c=>c.setAttribute('aria-pressed','false'));
+    if(already){pdetail.innerHTML='<span class="hint">Выбери вариант выше — он должен звучать как описание тебя.</span>';pcta.classList.remove('show');return;}
+    chip.setAttribute('aria-pressed','true');
+    pdetail.innerHTML=chip.dataset.detail+' <b>'+(chip.dataset.r||'')+'</b>';
+    pcta.href='https://wa.me/40726205752?text='+encodeURIComponent("Здравствуйте, Габриэль! Похоже, это про меня ("+chip.textContent.trim()+"). Хочу начать с разговора.");
+    pcta.classList.add('show');
+  });
+});
+
+/* ---- interactive world map ---- */
+const AVAILABLE=new Set([
+ "United States of America","Canada","Mexico","Guatemala","Honduras","El Salvador","Nicaragua","Costa Rica","Panama","Dominican Republic","Jamaica","Trinidad and Tobago","Colombia","Venezuela","Ecuador","Peru","Bolivia","Brazil","Chile","Argentina","Uruguay","Paraguay",
+ "United Kingdom","Ireland","France","Spain","Portugal","Italy","Germany","Netherlands","Belgium","Luxembourg","Switzerland","Austria","Denmark","Sweden","Norway","Finland","Iceland","Poland","Czechia","Slovakia","Hungary","Romania","Bulgaria","Greece","Croatia","Slovenia","Serbia","Bosnia and Herzegovina","North Macedonia","Albania","Montenegro","Estonia","Latvia","Lithuania","Ukraine","Belarus","Moldova","Russia","Cyprus",
+ "Israel","Turkey","Lebanon","Jordan","Saudi Arabia","United Arab Emirates","Kuwait","Qatar","Oman","Morocco","Tunisia","Algeria","Egypt","South Africa","Zambia","Botswana","Namibia","Ghana","Nigeria","Kenya","Mozambique",
+ "India","Pakistan","Sri Lanka","China","Japan","South Korea","Taiwan","Philippines","Vietnam","Thailand","Cambodia","Malaysia","Singapore","Indonesia","Australia","New Zealand","Kazakhstan","Georgia","Armenia","Azerbaijan"
+]);
+const WA_COUNTRY=n=>`https://wa.me/40726205752?text=${encodeURIComponent("Здравствуйте, Габриэль! Я из "+n+". Хочу записаться на звонок о развитии там.")}`;
+
+function initMap(){
+  const wrap=document.getElementById('mapwrap');
+  const svg=d3.select('#worldmap'), W=960,H=480;
+  const tip=document.getElementById('maptip');
+  const statusEl=document.getElementById('mapstatus');
+  const ctaBox=document.getElementById('mapcta'), ctaLink=document.getElementById('mapctalink');
+  const proj=d3.geoNaturalEarth1(), pathGen=d3.geoPath(proj);
+  d3.json("../vendor/countries-110m.json").catch(function(){return d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json");}).then(topo=>{
+    wrap.classList.remove('loading');
+    const feats=topojson.feature(topo,topo.objects.countries).features;
+    proj.fitSize([W,H],{type:"Sphere"});
+    const view=svg.append("g").attr("id","mapview");
+    view.append("path").attr("class","sphere").attr("d",pathGen({type:"Sphere"}));
+    const byName={};
+    const paths=view.append("g").selectAll("path").data(feats).join("path")
+      .attr("d",pathGen)
+      .attr("class",d=>AVAILABLE.has(d.properties.name)?"c on":"c off")
+      .each(function(d){byName[d.properties.name.toLowerCase()]=this;})
+      .on("mousemove",function(ev,d){
+        const on=AVAILABLE.has(d.properties.name), r=wrap.getBoundingClientRect();
+        tip.style.left=(ev.clientX-r.left)+"px";tip.style.top=(ev.clientY-r.top)+"px";
+        tip.innerHTML=on?d.properties.name+' · <span class="avail">Доступно для развития</span>':d.properties.name+' · Пока недоступно';
+        tip.classList.add("on");
+      })
+      .on("mouseleave",()=>tip.classList.remove("on"))
+      .on("click",(ev,d)=>select(d.properties.name));
+    /* staggered west→east fill-in */
+    if(!REDUCE){
+      const on=paths.filter(d=>AVAILABLE.has(d.properties.name));
+      on.style("opacity",0).transition().delay((d)=>{const c=pathGen.centroid(d);return isNaN(c[0])?0:c[0]*1.1;}).duration(500).style("opacity",1);
+    }
+    /* origin -> country arc layer (under the pin) */
+    const arcLayer=view.append("g").attr("class","arclayer");
+    const BUC=proj([26.1025,44.4268]);
+    function drawArc(dest){
+      arcLayer.selectAll("*").remove();
+      if(!dest||isNaN(dest[0]))return;
+      const p0=BUC,p1=dest,mx=(p0[0]+p1[0])/2,my=(p0[1]+p1[1])/2;
+      const dx=p1[0]-p0[0],dy=p1[1]-p0[1],dist=Math.hypot(dx,dy)||1;
+      const lift=Math.min(90,dist*0.3),nx=-dy/dist,ny=dx/dist;
+      const cx=mx+nx*lift,cy=my+ny*lift-Math.abs(lift)*0.15;
+      const path=arcLayer.append("path").attr("class","arc").attr("d",`M${p0[0]},${p0[1]} Q${cx},${cy} ${p1[0]},${p1[1]}`);
+      const dot=arcLayer.append("circle").attr("class","arc-dot").attr("r",3).attr("transform",`translate(${p1[0]},${p1[1]})`);
+      if(!REDUCE){
+        const len=path.node().getTotalLength();
+        path.attr("stroke-dasharray",len).attr("stroke-dashoffset",len).transition().duration(750).ease(d3.easeCubicOut).attr("stroke-dashoffset",0);
+        dot.attr("opacity",0).transition().delay(600).duration(220).attr("opacity",1);
+      }
+    }
+    /* Bucharest flagship */
+    const p=proj([26.1025,44.4268]);
+    const g=view.append("g").attr("transform",`translate(${p[0]},${p[1]})`);
+    g.append("circle").attr("class","pin-halo").attr("r",5);
+    g.append("circle").attr("class","pin-core").attr("r",4);
+    g.append("text").attr("class","pin-label").attr("x",9).attr("y",3.5).text("Boost Club");
+    g.style("cursor","pointer").on("click",()=>select("Romania"))
+     .on("mousemove",function(ev){const r=wrap.getBoundingClientRect();tip.style.left=(ev.clientX-r.left)+"px";tip.style.top=(ev.clientY-r.top)+"px";tip.innerHTML='Boost Club · Sevastopol 24, Бухарест';tip.classList.add("on");})
+     .on("mouseleave",()=>tip.classList.remove("on"));
+
+    /* search datalist */
+    const dl=document.getElementById('countrylist');
+    feats.map(f=>f.properties.name).sort().forEach(n=>{const o=document.createElement('option');o.value=n;dl.appendChild(o);});
+    const search=document.getElementById('mapsearch');
+    const run=()=>{const v=search.value.trim();if(v)select(v);};
+    search.addEventListener('change',run);
+    search.addEventListener('keydown',e=>{if(e.key==='Enter')run();});
+    document.getElementById('mapreset').addEventListener('click',resetView);
+
+    function zoomTo(node){
+      const d=d3.select(node).datum();
+      const [[x0,y0],[x1,y1]]=pathGen.bounds(d);
+      const cx=(x0+x1)/2, cy=(y0+y1)/2;
+      const k=Math.max(1.6,Math.min(4,0.55*Math.min(W/(x1-x0||1),H/(y1-y0||1))));
+      const t=`translate(${W/2},${H/2}) scale(${k}) translate(${-cx},${-cy})`;
+      if(REDUCE)view.attr("transform",t); else view.transition().duration(650).attr("transform",t);
+    }
+    function resetView(){
+      paths.classed("sel",false).classed("dim",false);
+      arcLayer.selectAll("*").remove();
+      if(REDUCE)view.attr("transform",null); else view.transition().duration(500).attr("transform",null);
+      statusEl.innerHTML="Введите страну или нажмите на карту, чтобы проверить, доступна ли возможность.";
+      ctaBox.hidden=true;
+      document.getElementById('mapsearch').value="";
+    }
+    function select(name){
+      const node=byName[name.toLowerCase()];
+      if(!node){statusEl.textContent="Не удалось найти страну — попробуйте точное название или нажмите на карту.";return;}
+      const d=d3.select(node).datum(), nm=d.properties.name, on=AVAILABLE.has(nm);
+      paths.classed("sel",false).classed("dim",true);
+      d3.select(node).classed("sel",true).classed("dim",false).raise();
+      zoomTo(node);
+      if(on){
+        drawArc(pathGen.centroid(d));
+        statusEl.innerHTML='<b>'+nm+'</b> — <span class="ok">✓ Доступно для развития</span> · <span class="origin-note">линия от <b>Node 00 · Бухарест</b> к тебе</span>';
+        ctaLink.href=WA_COUNTRY(nm);
+        ctaLink.firstChild.textContent="Записаться на звонок: "+nm+" ";
+        ctaBox.hidden=false;
+        if(window.__cfgAwait){window.__cfgAwait=false;if(window.__cfgSetCountry)window.__cfgSetCountry(nm);var wsec=document.getElementById('where');if(wsec)setTimeout(function(){wsec.scrollIntoView({behavior:'smooth'});},550);}
+      }else{
+        arcLayer.selectAll("*").remove();
+        statusEl.innerHTML='<b>'+nm+'</b> — пока недоступно. Herbalife есть в 90+ странах и продолжает расширяться.';
+        ctaBox.hidden=true;
+      }
+    }
+    window.__mapSelect=select;
+  }).catch(()=>{document.getElementById('map-fallback').style.display='block';document.getElementById('worldmap').style.display='none';wrap.classList.remove('loading');});
+}
+/* ---- lazy-load map libraries when the map nears view (vendor/ first, CDN fallback) ---- */
+(function(){
+  var mapSec=document.querySelector('.map-sec'); if(!mapSec)return;
+  var started=false;
+  function loadScript(list,cb){var i=0;(function next(){if(i>=list.length){cb();return;}var sc=document.createElement('script');sc.src=list[i++];sc.onload=function(){cb();};sc.onerror=next;document.head.appendChild(sc);})();}
+  function ensure(cb){
+    if(window.d3&&window.topojson){cb();return;}
+    loadScript(['../vendor/d3.min.js','https://cdn.jsdelivr.net/npm/d3@7'],function(){
+      loadScript(['../vendor/topojson-client.min.js','https://cdn.jsdelivr.net/npm/topojson-client@3'],cb);
+    });
+  }
+  function go(){if(started)return;started=true;ensure(function(){
+    if(window.d3&&window.topojson){initMap();}
+    else{var mf=document.getElementById('map-fallback');if(mf)mf.style.display='block';var mw=document.getElementById('mapwrap');if(mw)mw.classList.remove('loading');}
+  });}
+  if('IntersectionObserver' in window){var mo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)go();});},{rootMargin:'400px'});mo.observe(mapSec);}else{go();}
+})();
+
+/* ---- Path Configurator ---- */
+(function(){
+  var wrap=document.getElementById('cfg');
+  if(!wrap)return;
+  var out=document.getElementById('cfg-out'), cta=document.getElementById('cfg-cta');
+  var state={country:null,start:null,pace:null};
+  wrap.querySelectorAll('.cfg-chip').forEach(function(chip){
+    chip.addEventListener('click',function(){
+      if(chip.dataset.link==='map'){window.__cfgAwait=true;var m=document.querySelector('.map-sec');if(m)m.scrollIntoView({behavior:'smooth'});return;}
+      var cat=chip.dataset.cat, val=chip.dataset.v;
+      var group=wrap.querySelectorAll('.cfg-chip[data-cat="'+cat+'"]');
+      var wasOn=chip.getAttribute('aria-pressed')==='true';
+      group.forEach(function(c){c.setAttribute('aria-pressed','false');});
+      state[cat]=wasOn?null:val;
+      if(!wasOn)chip.setAttribute('aria-pressed','true');
+      render();
+    });
+  });
+  function paceText(p){return p==='undecided'?"в темпе, который решим вместе":'работая <b>'+p+'</b>';}
+  function render(){
+    var c=state.country,s=state.start,p=state.pace;
+    if(!c&&!s&&!p){out.innerHTML='<span class="cfg-hint">Выбери по одному в каждом ряду — твой путь соберётся здесь.</span>';cta.classList.remove('show');return;}
+    var parts=['строишь в <b>'+(c||'своей стране')+'</b>'];
+    if(s)parts.push('стартуешь <b>'+s+'</b>');
+    if(p)parts.push(paceText(p));
+    out.innerHTML='Твой путь: '+parts.join(', ')+'.';
+    if(c&&s&&p){
+      cta.href='https://wa.me/40726205752?text='+encodeURIComponent("Здравствуйте, Габриэль! Хочу записаться на персональный звонок ("+c+", "+s+", "+(p==='undecided'?'темп решим вместе':p)+").");
+      cta.classList.add('show');
+    }else{cta.classList.remove('show');}
+  }
+  window.__cfgSetCountry=function(name){
+    state.country=name;
+    wrap.querySelectorAll('.cfg-chip[data-cat="country"]').forEach(function(c){c.setAttribute('aria-pressed',c.dataset.v===name?'true':'false');});
+    render();
+  };
+})();
+
+/* ---- lead form (Netlify) ---- */
+(function(){
+  var lt=document.getElementById('leadToggle'), lf=document.getElementById('leadForm'), th=document.getElementById('leadThanks');
+  if(lt&&lf){lt.addEventListener('click',function(){lf.hidden=!lf.hidden;lt.setAttribute('aria-expanded',lf.hidden?'false':'true');});}
+  if(lf){lf.addEventListener('submit',function(e){e.preventDefault();var b=new URLSearchParams(new FormData(lf)).toString();fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:b}).then(function(){lf.hidden=true;if(th)th.hidden=false;}).catch(function(){lf.submit();});});}
+})();
+</script>
+</body>
+</html>
