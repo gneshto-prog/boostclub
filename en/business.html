@@ -1181,7 +1181,7 @@ function initMap(){
   vid.preload='metadata';
   vid.addEventListener('loadedmetadata',function(){
     if(vid.videoWidth)vid.style.aspectRatio=vid.videoWidth+'/'+vid.videoHeight;
-    if(current)place(current);
+    if(current){place(current);requestAnimationFrame(clampIntoView);}
   });
   function place(perk){
     var vsrc=perk.dataset.video;
@@ -1196,26 +1196,33 @@ function initMap(){
     pop.style.left=x+'px';
     pop.style.top=top+'px';
   }
+  function clampIntoView(){
+    var r=pop.getBoundingClientRect(), dy=0;
+    if(r.bottom>innerHeight-10)dy=innerHeight-10-r.bottom;
+    if(r.top+dy<10)dy=10-r.top;
+    if(dy)pop.style.top=(parseFloat(pop.style.top||0)+dy)+'px';
+  }
   function show(perk){
     var src=perk.dataset.img, vsrc=perk.dataset.video; if(!src&&!vsrc)return;
     clearTimeout(hideT); current=perk;
     pop.classList.toggle('vid',!!vsrc);
+    if(vsrc){ img.hidden=true; vid.hidden=false; }
+    else{ vid.hidden=true; vid.pause(); img.hidden=false; }
+    cap.textContent=perk.dataset.cap||'';
+    place(perk);                 // position first — Chrome won't load media on offscreen elements
+    showY=scrollY;
+    pop.classList.add('on');
+    veil.classList.add('on');
+    requestAnimationFrame(clampIntoView);
     if(vsrc){
-      img.hidden=true; vid.hidden=false;
       vid.onerror=function(){ vid.hidden=true; if(src){img.hidden=false;img.src=src;} else hideNow(); };
       if(vid.getAttribute('src')!==vsrc){ vid.src=vsrc; vid.load(); }
       else if(vid.readyState===0&&vid.networkState!==1){ vid.load(); }
       vid.play().catch(function(){});
     }else{
-      vid.hidden=true; vid.pause(); img.hidden=false;
       img.onerror=function(){hideNow();};
       if(img.getAttribute('src')!==src)img.src=src;
     }
-    place(perk);
-    showY=scrollY;
-    pop.classList.add('on');
-    veil.classList.add('on');
-    cap.textContent=perk.dataset.cap||'';
   }
   function hideNow(){pop.classList.remove('on');veil.classList.remove('on');current=null;vid.pause();}
   function hide(){hideT=setTimeout(hideNow,120);}
