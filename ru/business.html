@@ -337,6 +337,9 @@ section{padding:78px 0}
 #perkpop video{width:100%;height:auto;max-height:min(60vh,520px);display:block;background:#061A2F}
 #perkveil{position:fixed;inset:0;z-index:9;pointer-events:none;background:linear-gradient(180deg,rgba(167,223,242,.34),rgba(167,223,242,.16));opacity:0;transition:opacity .45s var(--ease)}
 #perkveil.on{opacity:1}
+.perk-fine{margin-top:14px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;line-height:1.6;color:#93a4b3}
+.perk-fine a{color:#7b90a1;text-decoration:underline;text-underline-offset:2px}
+.perk-fine a:hover{color:var(--slate)}
 .perks{z-index:12}
 #perkpop img{width:100%;height:150px;object-fit:cover;display:block}
 #perkpop figcaption{padding:9px 13px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;color:var(--slate)}
@@ -678,10 +681,11 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
       <span class="klabel">А для тех, кто выполняет условия</span>
       <div class="perkrow">
         <button class="perk" type="button" data-img="../images/perks/bonusuri.jpg" data-cap="Годовые бонусы за результат">Годовые бонусы за результат</button>
-        <button class="perk" type="button" data-img="../images/perks/cadouri.jpg" data-cap="Подарки и признание">Подарки и признание</button>
+        <button class="perk" type="button" data-img="../images/perks/cadouri.jpg" data-video="../images/perks/cadouri.mp4" data-cap="Подарки и признание">Подарки и признание</button>
         <button class="perk" type="button" data-img="../images/perks/vacante.jpg" data-video="../images/perks/vacante.mp4" data-cap="Оплачиваемые путешествия для квалифицировавшихся">Оплачиваемые путешествия для квалифицировавшихся</button>
       </div>
       <figure id="perkpop" aria-hidden="true"><img alt=""><video muted loop playsinline preload="none" hidden></video><figcaption></figcaption></figure>
+      <p class="perk-fine">Atypical achievements came from hard work, skill and dedication. For more, see <a href="https://hrbl.me/STE_WW" target="_blank" rel="noopener">hrbl.me/STE_WW</a>.</p>
     </div>
     <p class="closing reveal">Здесь нет потолка по доходу. Сколько построишь — столько и заработаешь; всё зависит только от тебя.</p>
     <div class="ctx reveal">
