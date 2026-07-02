@@ -1164,6 +1164,7 @@ function initMap(){
   var pop=document.getElementById('perkpop');
   if(!pop)return;
   var veil=document.createElement('div');veil.id='perkveil';document.body.appendChild(veil);
+  document.body.appendChild(pop); // escape .reveal transforms that break position:fixed
   var img=pop.querySelector('img'), vid=pop.querySelector('video'), cap=pop.querySelector('figcaption');
   var hideT=null, current=null;
   vid.preload='metadata';
@@ -1191,7 +1192,8 @@ function initMap(){
     if(vsrc){
       img.hidden=true; vid.hidden=false;
       vid.onerror=function(){ vid.hidden=true; if(src){img.hidden=false;img.src=src;} else hideNow(); };
-      if(vid.getAttribute('src')!==vsrc)vid.src=vsrc;
+      if(vid.getAttribute('src')!==vsrc){ vid.src=vsrc; vid.load(); }
+      else if(vid.readyState===0&&vid.networkState!==1){ vid.load(); }
       vid.play().catch(function(){});
     }else{
       vid.hidden=true; vid.pause(); img.hidden=false;
@@ -1199,13 +1201,15 @@ function initMap(){
       if(img.getAttribute('src')!==src)img.src=src;
     }
     place(perk);
+    showY=scrollY;
     pop.classList.add('on');
     veil.classList.add('on');
     cap.textContent=perk.dataset.cap||'';
   }
   function hideNow(){pop.classList.remove('on');veil.classList.remove('on');current=null;vid.pause();}
   function hide(){hideT=setTimeout(hideNow,120);}
-  addEventListener('scroll',function(){if(current)hideNow();},{passive:true});
+  var showY=0;
+  addEventListener('scroll',function(){if(current&&Math.abs(scrollY-showY)>48)hideNow();},{passive:true});
   document.querySelectorAll('.perk[data-img],.perk[data-video]').forEach(function(p){
     p.addEventListener('mouseenter',function(){show(p);});
     p.addEventListener('mouseleave',hide);
