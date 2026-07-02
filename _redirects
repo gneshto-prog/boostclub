@@ -4,3 +4,7 @@
 /business     /business.html     200
 /en/business  /en/business.html  200
 /ru/business  /ru/business.html  200
+# Founder page
+/gabi     /gabi.html     200
+/en/gabi  /en/gabi.html  200
+/ru/gabi  /ru/gabi.html  200

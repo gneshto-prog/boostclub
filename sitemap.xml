@@ -231,4 +231,25 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/business"/>
     <lastmod>2026-07-02</lastmod>
   </url>
+  <url>
+    <loc>https://boostclub.ro/gabi</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/gabi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/gabi"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/gabi"/>
+    <lastmod>2026-07-02</lastmod>
+  </url>
+  <url>
+    <loc>https://boostclub.ro/en/gabi</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/gabi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/gabi"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/gabi"/>
+    <lastmod>2026-07-02</lastmod>
+  </url>
+  <url>
+    <loc>https://boostclub.ro/ru/gabi</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://boostclub.ro/gabi"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://boostclub.ro/en/gabi"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/gabi"/>
+    <lastmod>2026-07-02</lastmod>
+  </url>
 </urlset>
