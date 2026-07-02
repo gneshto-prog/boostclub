@@ -8,3 +8,7 @@
 /gabi     /gabi.html     200
 /en/gabi  /en/gabi.html  200
 /ru/gabi  /ru/gabi.html  200
+
+# CRM entry point (D6): boostclub.ro/crm -> crm.boostclub.ro, :splat preserves deep links
+/crm    https://crm.boostclub.ro         301
+/crm/*  https://crm.boostclub.ro/:splat  301
