@@ -288,7 +288,9 @@
 /* ===== Partner "world-change" transition (blue tab -> business.html) ===== */
 (function () {
   "use strict";
-  var links = document.querySelectorAll('.nav a[href="business.html"], .mobile-menu a[href="business.html"]');
+  // Netlify's Pretty URLs post-processing rewrites "business.html" to "/business"
+  // in the served HTML, so match any business href rather than the exact file name.
+  var links = document.querySelectorAll('.nav a[href*="business"], .mobile-menu a[href*="business"]');
   if (!links.length) return;
   var rm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var veil = document.createElement("div");

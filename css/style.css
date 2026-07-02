@@ -1077,14 +1077,14 @@ a:focus-visible, button:focus-visible, .btn:focus-visible { outline: 3px solid v
 @media (prefers-reduced-motion: reduce) { .hero-badge { animation: none; } }
 
 /* ===== Partner "Program Partener" — blue nav tab + world-change transition ===== */
-.nav a[href="business.html"], .mobile-menu a[href="business.html"]{
+.nav a[href*="business"], .mobile-menu a[href*="business"]{
   color:#1098D4;font-weight:600;position:relative;display:inline-flex;align-items:center;gap:7px;
 }
-.nav a[href="business.html"]::before, .mobile-menu a[href="business.html"]::before{
+.nav a[href*="business"]::before, .mobile-menu a[href*="business"]::before{
   content:"";width:7px;height:7px;border-radius:50%;background:#1098D4;
   box-shadow:0 0 0 0 rgba(16,152,212,.45);animation:bcWorkPulse 2.6s ease-out infinite;
 }
-.nav a[href="business.html"]:hover, .mobile-menu a[href="business.html"]:hover{color:#0a79ac}
+.nav a[href*="business"]:hover, .mobile-menu a[href*="business"]:hover{color:#0a79ac}
 @keyframes bcWorkPulse{0%{box-shadow:0 0 0 0 rgba(16,152,212,.5)}70%{box-shadow:0 0 0 7px rgba(16,152,212,0)}100%{box-shadow:0 0 0 0 rgba(16,152,212,0)}}
 /* the client world dims/recedes as the portal opens */
 #bc-veil{position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:0;transition:opacity .5s ease;
@@ -1126,7 +1126,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible { outline: 3px solid v
 @keyframes bcdrift{from{transform:translateY(0)}to{transform:translateY(-16px)}}
 @keyframes bcflash{0%{opacity:0}70%{opacity:.9}100%{opacity:0}}
 @media(prefers-reduced-motion:reduce){
-  .nav a[href="business.html"]::before, .mobile-menu a[href="business.html"]::before{animation:none}
+  .nav a[href*="business"]::before, .mobile-menu a[href*="business"]::before{animation:none}
   #bc-xover::before,#bc-xover .bc-stars{animation:none!important}
   #bc-xover.go{transition:opacity .2s}
 }
