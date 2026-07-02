@@ -6,6 +6,10 @@
 <title>Construiește-ți propria afacere în nutriție — Boost Club</title>
 <meta name="description" content="Construiește-ți propria afacere în nutriție, într-un model care funcționează deja — în țara ta. Programează un apel cu Gabi Neshto.">
 <link rel="canonical" href="https://boostclub.ro/business">
+<link rel="alternate" hreflang="ro" href="https://boostclub.ro/business">
+<link rel="alternate" hreflang="en" href="https://boostclub.ro/en/business">
+<link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/business">
+<link rel="alternate" hreflang="x-default" href="https://boostclub.ro/en/business">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://boostclub.ro/business">
 <meta property="og:title" content="Construiește-ți propria afacere în nutriție — cu Gabi Neshto">
@@ -218,7 +222,6 @@ section{padding:78px 0}
 .gabi .split{display:grid;grid-template-columns:.82fr 1.18fr;gap:48px;align-items:center}
 @media(max-width:820px){.gabi .split{grid-template-columns:1fr;gap:26px}}
 .gabi .photo{aspect-ratio:4/5;border-radius:20px;background:linear-gradient(155deg,#0d3352,#02101d);position:relative;overflow:hidden;box-shadow:var(--shadow)}
-.gabi .photo::after{content:"Save the photo as images/gabriel-neshto-boost-club-bucuresti.jpg in this folder";position:absolute;bottom:16px;left:16px;right:16px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.04em;color:#6f8ba2}
 .gabi .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 58%;display:block;z-index:2}
 .gabi h2{font-size:clamp(27px,3.8vw,40px)}
 .gabi p{color:var(--slate);font-size:16.5px;margin-top:16px}
@@ -280,7 +283,7 @@ section{padding:78px 0}
 .ctable .cc{font-size:14px}
 .ctable .cc.crit{font-weight:600;color:var(--navy);background:#fbfdff}
 .ctable .cc.job,.ctable .cc.fr{color:var(--slate)}
-.ctable .cc.job::before,.ctable .cc.fr::before{content:"✕ ";color:#c0392b;font-weight:800}
+.ctable .cc.job::before,.ctable .cc.fr::before{content:"— ";color:#9fb0be;font-weight:700}
 .ctable .cc.this{background:rgba(16,152,212,.06);color:var(--navy);font-weight:500}
 .ctable .cc.this::before{content:"✓ ";color:var(--blue);font-weight:800}
 .cscroll-hint{display:none;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--slate);margin-top:10px}
@@ -305,6 +308,56 @@ section{padding:78px 0}
 .origin-note{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--slate)}
 .origin-note b{color:var(--navy)}
 
+/* ===== Guided flow: sky shift + step lighting ===== */
+#where{transition:background .9s var(--ease)}
+#where.sky{background:linear-gradient(180deg,#EDF7FD 0%,#DCEFFA 100%)}
+.col{position:relative}
+.col.await{opacity:.62}
+.col.lit{opacity:1;border-color:var(--blue);background:#fff;box-shadow:0 0 0 3px rgba(16,152,212,.16),var(--shadow);animation:colPulse 2.2s var(--ease) infinite}
+@keyframes colPulse{0%,100%{box-shadow:0 0 0 3px rgba(16,152,212,.16),var(--shadow)}50%{box-shadow:0 0 0 9px rgba(16,152,212,.05),var(--shadow)}}
+.col.done{opacity:1;border-color:rgba(16,152,212,.45)}
+.col .t::after{content:"";display:inline-block;margin-left:8px;font-weight:700}
+.col.done .t::after{content:"✓";color:#0a9e6e}
+.map-sec.lit .mapwrap{border-color:var(--blue);box-shadow:0 0 0 3px rgba(16,152,212,.14)}
+
+/* ===== Clubs gallery ===== */
+.clubs{margin-top:34px}
+.clubrow{display:flex;gap:14px;margin-top:16px;overflow-x:auto;padding:4px 2px 14px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.clubrow::-webkit-scrollbar{height:6px}
+.clubrow::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
+.clubcard{flex:0 0 200px;scroll-snap-align:start;margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#fff;transition:transform var(--d2) var(--ease),box-shadow var(--d2) var(--ease)}
+.clubcard:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.clubcard img{width:100%;height:126px;object-fit:cover;display:block}
+.clubcard.noimg img{display:none}
+.clubcard.noimg::before{content:attr(data-cc);display:flex;align-items:center;justify-content:center;height:126px;background:linear-gradient(150deg,#0d3352,#061A2F);color:#7fd0f2;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.clubcard figcaption{padding:10px 14px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);display:flex;align-items:center;gap:8px}
+.clubcard figcaption::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--blue)}
+
+/* ===== Perk hover photo reveal ===== */
+.perks{position:relative}
+.perk{cursor:pointer}
+#perkpop{position:absolute;z-index:20;width:230px;border-radius:16px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 26px 60px -18px rgba(6,26,47,.4);opacity:0;transform:translateY(10px) scale(.88);transform-origin:50% 100%;pointer-events:none;transition:opacity .28s var(--ease),transform .34s cubic-bezier(.34,1.56,.64,1)}
+#perkpop.on{opacity:1;transform:translateY(0) scale(1)}
+#perkpop img{width:100%;height:150px;object-fit:cover;display:block}
+#perkpop figcaption{padding:9px 13px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;color:var(--slate)}
+
+/* ===== Club vs Online modes ===== */
+.modes{display:inline-flex;border:1px solid var(--line);border-radius:100px;padding:4px;background:#fff;gap:4px}
+.mode{font-family:inherit;font-size:14px;font-weight:600;color:var(--slate);background:none;border:none;border-radius:100px;padding:10px 22px;cursor:pointer;transition:color var(--d2),background var(--d2)}
+.mode[aria-selected="true"]{background:var(--navy);color:#fff}
+.mpanel{margin-top:26px}
+.mpanel[hidden]{display:none}
+.mpanel h3{font-size:clamp(21px,2.6vw,27px);font-weight:700;letter-spacing:-.02em}
+.mpanel p{color:var(--slate);font-size:16px;margin-top:12px;max-width:640px}
+.mpanel .mp-points{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.mpanel .mp-points span{font-family:'IBM Plex Mono',monospace;font-size:12.5px;border:1px solid var(--line);border-radius:100px;padding:9px 16px;background:#fff}
+.mpanel .btn{margin-top:22px}
+
+/* ===== quiet text links (CTA hierarchy) ===== */
+.tlink{font-weight:600;color:var(--blue);display:inline-flex;align-items:center;gap:7px;font-size:15.5px}
+.tlink .arw{transition:transform var(--d2) var(--ease)}
+.tlink:hover .arw{transform:translateX(4px)}
+
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important}
   html{scroll-behavior:auto}
@@ -323,7 +376,7 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
 .langsw a,.langsw span{color:var(--slate);text-decoration:none;padding:4px 6px;border-radius:6px}
 .langsw a:hover{color:var(--navy);background:rgba(16,152,212,.08)}
 .langsw .active{color:var(--navy);font-weight:600}
-@media(max-width:520px){.langsw{display:none}}
+@media(max-width:520px){.langsw{font-size:11px;gap:2px}.langsw a,.langsw span{padding:3px 4px}}
 .leadform-wrap{max-width:560px;margin:32px auto 0;text-align:center}
 .leadform-toggle{background:none;border:none;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.04em;color:var(--slate);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
 .leadform-toggle:hover{color:var(--blue)}
@@ -336,6 +389,18 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
 .lf-hp{position:absolute;left:-9999px}
 .lf-thanks{margin-top:20px;font-weight:600;color:var(--navy)}
 </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Person","@id":"https://boostclub.ro/gabi#person","name":"Gabriel Neshto","alternateName":"Gabi Neshto","jobTitle":"Fondator","worksFor":{"@type":"Organization","name":"Boost Club","address":{"@type":"PostalAddress","streetAddress":"Strada Sevastopol 24","addressLocality":"București","addressCountry":"RO"}},"url":"https://boostclub.ro/gabi","sameAs":["https://www.instagram.com/gabineshto"]},
+ {"@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"Trebuie să mă mut la București?","acceptedAnswer":{"@type":"Answer","text":"Nu. București e locul primei noastre locații. Tu construiești în țara ta."}},
+  {"@type":"Question","name":"Cum câștig, concret?","acceptedAnswer":{"@type":"Answer","text":"O marjă din ce cumpără și comandă din nou clienții tăi și — odată consolidat — o parte din volumul construit de oamenii pe care îi ajuți să înceapă. Venitul nu este garantat și depinde de efort, abilități, piață și potrivire."}},
+  {"@type":"Question","name":"Este Herbalife? Este MLM?","acceptedAnswer":{"@type":"Answer","text":"Da, funcționează prin Herbalife — o oportunitate antreprenorială ca distribuitor independent, nu un job și nu un salariu."}},
+  {"@type":"Question","name":"Cât costă să încep?","acceptedAnswer":{"@type":"Answer","text":"Depinde de țara ta și de felul în care începi. Nu există taxe de franciză — cifrele reale pentru situația ta se discută la apel."}},
+  {"@type":"Question","name":"Am nevoie de experiență?","acceptedAnswer":{"@type":"Answer","text":"Nu. Cei mai mulți încep fără. Contează disponibilitatea de a vorbi cu oamenii și de a urma o metodă."}}
+ ]}
+]}
+</script>
 </head>
 <body>
 <div id="bc-arrival" hidden></div>
@@ -378,19 +443,66 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
         <div>Construiești în paralel cu cariera ta actuală</div>
         <div>Prima discuție e direct cu Gabriel</div>
       </div>
-      <a class="scrollcue reveal" href="#where" aria-label="Derulează ca să vezi cum funcționează"><span class="c"></span> Derulează</a>
+      <a class="scrollcue reveal" href="#map" aria-label="Derulează ca să începi cu țara ta"><span class="c"></span> Derulează</a>
     </div>
     <div class="heroimg clipin"><img src="images/familie-neshto-wellness.jpg" alt="Comunitatea Boost Club din București" onerror="if(!this.dataset.p){this.dataset.p=1;this.src='images/familie-neshto-wellness.jpg'}else{this.style.display='none'}"><div class="scrim"></div><span class="cap">Boost Club · Sevastopol 24, București</span></div>
   </div>
 </header>
 
+<!-- MAP -->
+<section class="map-sec" id="map" data-seq>
+  <div class="wrap">
+    <div class="head">
+      <span class="klabel reveal">Pasul 01 · Țara ta</span>
+      <h2 class="reveal">Începe cu țara ta.</h2>
+      <p class="reveal">Scrie-o sau atinge-o pe hartă. Herbalife activează în peste 90 de țări — tot ce e albastru e o piață în care ți-ai putea construi propria afacere. Prima noastră locație e o singură adresă în București.</p>
+      <div class="mapstat reveal"><b><span data-count="90">0</span>+</b><span>piețe disponibile în lume</span></div>
+    </div>
+    <div class="mapbar reveal">
+      <input id="mapsearch" type="text" placeholder="Scrie țara ta ca să verifici disponibilitatea…" aria-label="Caută țara ta" autocomplete="off" list="countrylist">
+      <datalist id="countrylist"></datalist>
+      <button class="reset" id="mapreset" type="button">Resetează harta</button>
+    </div>
+    <div class="mapstatus" id="mapstatus" aria-live="polite" role="status">Scrie țara ta sau atinge harta, ca să verifici dacă oportunitatea este disponibilă acolo.</div>
+    <div class="mapwrap loading" id="mapwrap">
+      <svg id="worldmap" viewBox="0 0 960 480" role="img" aria-label="Hartă a lumii cu piețele în care poți construi"></svg>
+      <div class="maptip" id="maptip"></div>
+      <div class="map-fallback" id="map-fallback">
+        Herbalife operează în peste 90 de țări din cele două Americi, Europa, Orientul Mijlociu, Africa și Asia-Pacific. Dacă operează acolo unde locuiești, poți construi acolo. <br><br>(Harta interactivă are nevoie de conexiune la internet pentru a se încărca.)
+      </div>
+    </div>
+    <div class="mapcta" id="mapcta" hidden>
+      <a class="btn btn-line" id="mapctalink" href="#" target="_blank" rel="noopener">Programează un apel despre țara ta <span class="arw">→</span></a>
+    </div>
+    <div class="legend">
+      <span><i class="b"></i> Disponibil pentru a construi</span>
+      <span><i class="g"></i> Momentan indisponibil</span>
+      <span><i class="n"></i> Node 00 · Boost Club, Sevastopol 24, București</span>
+    </div>
+    <div class="clubs reveal">
+      <span class="klabel">Cluburi construite pe același model, în lume</span>
+      <div class="clubrow">
+        <figure class="clubcard" data-cc="România"><img src="images/clubs/romania.jpg" alt="Club de nutriție — România" loading="lazy" onerror="this.closest('.clubcard').classList.add('noimg')"><figcaption>România</figcaption></figure>
+        <figure class="clubcard" data-cc="Israel"><img src="images/clubs/israel.jpg" alt="Club de nutriție — Israel" loading="lazy" onerror="this.closest('.clubcard').classList.add('noimg')"><figcaption>Israel</figcaption></figure>
+        <figure class="clubcard" data-cc="Uzbekistan"><img src="images/clubs/uzbekistan.jpg" alt="Club de nutriție — Uzbekistan" loading="lazy" onerror="this.closest('.clubcard').classList.add('noimg')"><figcaption>Uzbekistan</figcaption></figure>
+        <figure class="clubcard" data-cc="Kazahstan"><img src="images/clubs/kazakhstan.jpg" alt="Club de nutriție — Kazahstan" loading="lazy" onerror="this.closest('.clubcard').classList.add('noimg')"><figcaption>Kazahstan</figcaption></figure>
+        <figure class="clubcard" data-cc="Mexic"><img src="images/clubs/mexico.jpg" alt="Club de nutriție — Mexic" loading="lazy" onerror="this.closest('.clubcard').classList.add('noimg')"><figcaption>Mexic</figcaption></figure>
+        <figure class="clubcard" data-cc="Puerto Rico"><img src="images/clubs/puerto-rico.jpg" alt="Club de nutriție — Puerto Rico" loading="lazy" onerror="this.closest('.clubcard').classList.add('noimg')"><figcaption>Puerto Rico</figcaption></figure>
+        <figure class="clubcard" data-cc="SUA"><img src="images/clubs/usa.jpg" alt="Club de nutriție — SUA" loading="lazy" onerror="this.closest('.clubcard').classList.add('noimg')"><figcaption>SUA</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
 <!-- BUILD WHERE YOU ARE -->
 <section id="where" data-seq>
   <div class="wrap">
     <div class="head">
-      <span class="klabel reveal">De unde poți începe</span>
+      <span class="klabel reveal">Pașii 01–03 · Configurează-ți drumul</span>
       <h2 class="reveal">Oriunde te afli, există un mod de a începe.</h2>
-      <p class="reveal">Îți construiești propria afacere acolo unde ești. Oriunde operează Herbalife, oportunitatea îți este disponibilă.</p>
+      <p class="reveal">Ai ales țara pe hartă? Ferestrele de mai jos se aprind pe rând — completează-le și drumul tău prinde formă.</p>
     </div>
     <div class="cols" id="cfg">
       <div class="col reveal">
@@ -398,10 +510,10 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
         <h3>Țara ta</h3>
         <p>Construiești acolo unde locuiești, în jurul unei versiuni a sistemului adaptate pieței tale — pe aceeași metodă care funcționează deja pentru echipa Boost Club.</p>
         <div class="cfg-chips">
-          <button class="cfg-chip" type="button" data-cat="country" data-v="Franța" aria-pressed="false">Franța</button>
-          <button class="cfg-chip" type="button" data-cat="country" data-v="Marea Britanie" aria-pressed="false">Marea Britanie</button>
-          <button class="cfg-chip" type="button" data-cat="country" data-v="SUA" aria-pressed="false">SUA</button>
-          <button class="cfg-chip" type="button" data-link="map">Alege pe hartă ↓</button>
+          <button class="cfg-chip" type="button" data-cat="country" data-v="France" aria-pressed="false">Franța</button>
+          <button class="cfg-chip" type="button" data-cat="country" data-v="United Kingdom" aria-pressed="false">Marea Britanie</button>
+          <button class="cfg-chip" type="button" data-cat="country" data-v="United States of America" aria-pressed="false">SUA</button>
+          <button class="cfg-chip" type="button" data-link="map">Alege pe hartă ↑</button>
         </div>
       </div>
       <div class="col reveal">
@@ -430,39 +542,6 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
     <div class="cfg-summary reveal">
       <p id="cfg-out"><span class="cfg-hint">Alege câte una din fiecare rând — drumul tău se conturează aici.</span></p>
       <a class="btn btn-cta btn-mag" id="cfg-cta" href="#" target="_blank" rel="noopener">Programează un apel personalizat <span class="arw">→</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- MAP -->
-<section class="map-sec" data-seq>
-  <div class="wrap">
-    <div class="head">
-      <span class="klabel reveal">Unde operează</span>
-      <h2 class="reveal">Modelul operează deja în cea mai mare parte a lumii.</h2>
-      <p class="reveal">Herbalife activează în peste 90 de țări. Prima noastră locație este o singură adresă în București. Tot ce e marcat cu albastru este o piață în care ți-ai putea construi propria afacere.</p>
-      <div class="mapstat reveal"><b><span data-count="90">0</span>+</b><span>piețe disponibile în lume</span></div>
-    </div>
-    <div class="mapbar reveal">
-      <input id="mapsearch" type="text" placeholder="Scrie țara ta ca să verifici disponibilitatea…" aria-label="Caută țara ta" autocomplete="off" list="countrylist">
-      <datalist id="countrylist"></datalist>
-      <button class="reset" id="mapreset" type="button">Resetează harta</button>
-    </div>
-    <div class="mapstatus" id="mapstatus" aria-live="polite" role="status">Scrie țara ta sau atinge harta, ca să verifici dacă oportunitatea este disponibilă acolo.</div>
-    <div class="mapwrap loading" id="mapwrap">
-      <svg id="worldmap" viewBox="0 0 960 480" role="img" aria-label="Hartă a lumii cu piețele în care poți construi"></svg>
-      <div class="maptip" id="maptip"></div>
-      <div class="map-fallback" id="map-fallback">
-        Herbalife operează în peste 90 de țări din cele două Americi, Europa, Orientul Mijlociu, Africa și Asia-Pacific. Dacă operează acolo unde locuiești, poți construi acolo. <br><br>(Harta interactivă are nevoie de conexiune la internet pentru a se încărca.)
-      </div>
-    </div>
-    <div class="mapcta" id="mapcta" hidden>
-      <a class="btn btn-cta btn-mag" id="mapctalink" href="#" target="_blank" rel="noopener">Programează un apel despre țara ta <span class="arw">→</span></a>
-    </div>
-    <div class="legend">
-      <span><i class="b"></i> Disponibil pentru a construi</span>
-      <span><i class="g"></i> Momentan indisponibil</span>
-      <span><i class="n"></i> Node 00 · Boost Club, Sevastopol 24, București</span>
     </div>
   </div>
 </section>
@@ -553,6 +632,33 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
 
 <div class="rule"></div>
 
+<!-- CLUB vs ONLINE -->
+<section id="online" data-seq>
+  <div class="wrap">
+    <div class="head">
+      <span class="klabel reveal">Două moduri de a construi</span>
+      <h2 class="reveal">Cu locație. Sau complet online.</h2>
+    </div>
+    <div class="modes reveal" role="tablist" aria-label="Alege modul de a construi">
+      <button class="mode" id="tab-club" role="tab" aria-selected="true" aria-controls="mp-club" type="button">Club fizic</button>
+      <button class="mode" id="tab-online" role="tab" aria-selected="false" aria-controls="mp-online" type="button">100% online</button>
+    </div>
+    <div class="mpanel reveal" id="mp-club" role="tabpanel" aria-labelledby="tab-club">
+      <h3>Un club de nutriție, ca al nostru.</h3>
+      <p>Modelul-far: o locație în orașul tău, construită pe sistemul Boost Club — comunitate de dimineață, clienți care revin zilnic, un loc fizic pe care oamenii îl au al lor. Este drumul principal descris pe această pagină.</p>
+      <div class="mp-points"><span>O adresă, o comunitate</span><span>Ritual zilnic</span><span>Venit recurent local</span></div>
+    </div>
+    <div class="mpanel" id="mp-online" role="tabpanel" aria-labelledby="tab-online" hidden>
+      <h3>Nu vrei să fii legat de o locație fizică?</h3>
+      <p>Îți poți construi afacerea complet online: maratoane de wellness, provocări de 21 de zile, coaching și comunități la distanță. Aceiași clienți, aceeași metodă, același mentorat — fără chirie și fără adresă. Unii operatori încep online și deschid o locație mai târziu. Alții rămân online. Ambele sunt afaceri reale.</p>
+      <div class="mp-points"><span>Maratoane de wellness</span><span>Provocări de 21 de zile</span><span>Clienți din orice țară</span><span>De oriunde lucrezi</span></div>
+      <a class="btn btn-cta btn-mag" href="https://wa.me/40726205752?text=Bun%C4%83%20Gabi%2C%20m%C4%83%20intereseaz%C4%83%20varianta%20100%25%20online%20%E2%80%94%20maratoane%20%C8%99i%20provoc%C4%83ri%20de%2021%20de%20zile.%20Putem%20vorbi%3F" target="_blank" rel="noopener">Începe-ți afacerea online <span class="arw">→</span></a>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
 <!-- HOW THE MONEY WORKS -->
 <section data-seq>
   <div class="wrap">
@@ -576,15 +682,16 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
     <div class="perks reveal">
       <span class="klabel">Și, pentru cei care se califică</span>
       <div class="perkrow">
-        <div class="perk">Bonusuri anuale de performanță</div>
-        <div class="perk">Cadouri &amp; recunoaștere</div>
-        <div class="perk">Vacanțe plătite pentru cei calificați</div>
+        <button class="perk" type="button" data-img="images/perks/bonusuri.jpg" data-cap="Bonusuri anuale de performanță">Bonusuri anuale de performanță</button>
+        <button class="perk" type="button" data-img="images/perks/cadouri.jpg" data-cap="Cadouri &amp; recunoaștere">Cadouri &amp; recunoaștere</button>
+        <button class="perk" type="button" data-img="images/perks/vacante.jpg" data-cap="Vacanțe plătite pentru cei calificați">Vacanțe plătite pentru cei calificați</button>
       </div>
+      <figure id="perkpop" aria-hidden="true"><img alt=""><figcaption></figcaption></figure>
     </div>
     <p class="closing reveal">Aici nu există un plafon pentru cât poți câștiga. Ce construiești este ce câștigi — depinde în întregime de tine.</p>
     <div class="ctx reveal">
       <p>Cifrele reale depind de țara ta și de situația ta.</p>
-      <a class="btn btn-cta btn-mag" href="https://wa.me/40726205752?text=Bun%C4%83%20Gabi%2C%20a%C8%99%20vrea%20s%C4%83%20discut%C4%83m%20cifrele%20pentru%20situa%C8%9Bia%20mea." target="_blank" rel="noopener">Vorbește cu Gabi <span class="arw">→</span></a>
+      <a class="tlink" href="https://wa.me/40726205752?text=Bun%C4%83%20Gabi%2C%20a%C8%99%20vrea%20s%C4%83%20discut%C4%83m%20cifrele%20pentru%20situa%C8%9Bia%20mea." target="_blank" rel="noopener">Vorbește cu Gabi despre cifre <span class="arw">→</span></a>
     </div>
   </div>
 </section>
@@ -650,7 +757,7 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
     </div>
     <div class="persona-detail" aria-live="polite">
       <p id="pdetail"><span class="hint">Alege una de mai sus — ar trebui să sune ca o descriere a ta.</span></p>
-      <a class="btn btn-cta btn-mag pcta" id="pcta" href="https://wa.me/40726205752?text=Bun%C4%83%20Gabi%2C%20cred%20c%C4%83%20mi%20se%20potrive%C8%99te.%20A%C8%99%20vrea%20s%C4%83%20%C3%AEncep%20cu%20o%20discu%C8%9Bie." target="_blank" rel="noopener">Începe cu o discuție <span class="arw">→</span></a>
+      <a class="btn btn-line pcta" id="pcta" href="https://wa.me/40726205752?text=Bun%C4%83%20Gabi%2C%20cred%20c%C4%83%20mi%20se%20potrive%C8%99te.%20A%C8%99%20vrea%20s%C4%83%20%C3%AEncep%20cu%20o%20discu%C8%9Bie." target="_blank" rel="noopener">Începe cu o discuție <span class="arw">→</span></a>
     </div>
   </div>
 </section>
@@ -658,7 +765,7 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
 <!-- GABI -->
 <section class="gabi" data-seq>
   <div class="wrap split">
-    <div class="photo clipin"><img src="images/gabriel-neshto-boost-club-bucuresti.jpg" alt="Gabriel Neshto, fondatorul Boost Club" onerror="if(!this.dataset.p){this.dataset.p=1;this.src='images/gabriel-neshto-boost-club-bucuresti.jpg'}else{this.style.display='none'}"></div>
+    <div class="photo clipin"><img loading="lazy" src="images/gabriel-neshto-boost-club-bucuresti.jpg" alt="Gabriel Neshto, fondatorul Boost Club" onerror="if(!this.dataset.p){this.dataset.p=1;this.src='images/gabriel-neshto-boost-club-bucuresti.jpg'}else{this.style.display='none'}"></div>
     <div>
       <span class="klabel reveal">Fondator · Boost Club</span>
       <h2 class="reveal">Gabriel Neshto</h2>
@@ -690,7 +797,7 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
     </div>
     <div class="ctx reveal">
       <p>Încă te decizi? Un apel lămurește de obicei lucrurile.</p>
-      <a class="btn btn-cta btn-mag" href="https://wa.me/40726205752?text=Bun%C4%83%20Gabi%2C%20mai%20am%20o%20%C3%AEntrebare%20%E2%80%94%20putem%20vorbi%3F" target="_blank" rel="noopener">Programează un apel <span class="arw">→</span></a>
+      <a class="tlink" href="https://wa.me/40726205752?text=Bun%C4%83%20Gabi%2C%20mai%20am%20o%20%C3%AEntrebare%20%E2%80%94%20putem%20vorbi%3F" target="_blank" rel="noopener">Pune-i lui Gabi întrebarea ta <span class="arw">→</span></a>
     </div>
   </div>
 </section>
@@ -713,6 +820,7 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
       <button class="leadform-toggle" id="leadToggle" type="button" aria-expanded="false">Preferi emailul? Lasă-ți datele aici</button>
       <form class="leadform" id="leadForm" name="partner-lead" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
         <input type="hidden" name="form-name" value="partner-lead">
+        <input type="hidden" name="lang" value="ro">
         <p class="lf-hp"><label>Lasă acest câmp gol: <input name="bot-field"></label></p>
         <div class="lf-grid">
           <input type="text" name="name" placeholder="Numele tău" required>
@@ -848,10 +956,10 @@ chips.forEach(chip=>{
 
 /* ---- interactive world map ---- */
 const AVAILABLE=new Set([
- "United States of America","Canada","Mexico","Guatemala","Honduras","El Salvador","Nicaragua","Costa Rica","Panama","Dominican Republic","Jamaica","Trinidad and Tobago","Colombia","Venezuela","Ecuador","Peru","Bolivia","Brazil","Chile","Argentina","Uruguay","Paraguay",
- "United Kingdom","Ireland","France","Spain","Portugal","Italy","Germany","Netherlands","Belgium","Luxembourg","Switzerland","Austria","Denmark","Sweden","Norway","Finland","Iceland","Poland","Czechia","Slovakia","Hungary","Romania","Bulgaria","Greece","Croatia","Slovenia","Serbia","Bosnia and Herzegovina","North Macedonia","Albania","Montenegro","Estonia","Latvia","Lithuania","Ukraine","Belarus","Moldova","Russia","Cyprus",
- "Israel","Turkey","Lebanon","Jordan","Saudi Arabia","United Arab Emirates","Kuwait","Qatar","Oman","Morocco","Tunisia","Algeria","Egypt","South Africa","Zambia","Botswana","Namibia","Ghana","Nigeria","Kenya","Mozambique",
- "India","Pakistan","Sri Lanka","China","Japan","South Korea","Taiwan","Philippines","Vietnam","Thailand","Cambodia","Malaysia","Singapore","Indonesia","Australia","New Zealand","Kazakhstan","Georgia","Armenia","Azerbaijan"
+ "United States of America","Canada","Mexico","Guatemala","Honduras","El Salvador","Nicaragua","Costa Rica","Panama","Dominican Republic","Jamaica","Trinidad and Tobago","Puerto Rico","Colombia","Venezuela","Ecuador","Peru","Bolivia","Brazil","Chile","Argentina","Uruguay","Paraguay",
+ "United Kingdom","Ireland","France","Spain","Portugal","Italy","Germany","Netherlands","Belgium","Switzerland","Austria","Denmark","Sweden","Norway","Finland","Iceland","Poland","Czechia","Slovakia","Hungary","Romania","Bulgaria","Greece","Croatia","Slovenia","Serbia","Bosnia and Herzegovina","North Macedonia","Estonia","Latvia","Lithuania","Ukraine","Belarus","Moldova","Russia","Cyprus","Kazakhstan","Kyrgyzstan","Uzbekistan","Mongolia","Georgia","Armenia","Azerbaijan",
+ "Israel","Turkey","Lebanon","South Africa","Zambia","Botswana","Namibia","Ghana","eSwatini","Lesotho",
+ "India","Japan","South Korea","Taiwan","Philippines","Vietnam","Thailand","Cambodia","Malaysia","Indonesia","Australia","New Zealand"
 ]);
 const WA_COUNTRY=n=>`https://wa.me/40726205752?text=${encodeURIComponent("Bună Gabi, sunt în "+n+". Aș vrea să programez un apel despre a construi acolo.")}`;
 
@@ -952,7 +1060,8 @@ function initMap(){
         ctaLink.href=WA_COUNTRY(nm);
         ctaLink.firstChild.textContent="Programează un apel despre "+nm+" ";
         ctaBox.hidden=false;
-        if(window.__cfgAwait){window.__cfgAwait=false;if(window.__cfgSetCountry)window.__cfgSetCountry(nm);var wsec=document.getElementById('where');if(wsec)setTimeout(function(){wsec.scrollIntoView({behavior:'smooth'});},550);}
+        if(window.__cfgSetCountry)window.__cfgSetCountry(nm);
+        if(window.__cfgAwait){window.__cfgAwait=false;var wsec=document.getElementById('where');if(wsec)setTimeout(function(){wsec.scrollIntoView({behavior:'smooth'});},550);}
       }else{
         arcLayer.selectAll("*").remove();
         statusEl.innerHTML='<b>'+nm+'</b> — momentan indisponibil. Herbalife e în peste 90 de țări și continuă să se extindă.';
@@ -986,6 +1095,9 @@ function initMap(){
   if(!wrap)return;
   var out=document.getElementById('cfg-out'), cta=document.getElementById('cfg-cta');
   var state={country:null,start:null,pace:null};
+  window.__cfgState=state;
+  var CN={'France':'Franța','United Kingdom':'Marea Britanie','United States of America':'SUA','Romania':'România','Germany':'Germania','Italy':'Italia','Spain':'Spania','Moldova':'Moldova','Israel':'Israel','Kazakhstan':'Kazahstan','Uzbekistan':'Uzbekistan','Mexico':'Mexic','Puerto Rico':'Puerto Rico','Russia':'Rusia','Ukraine':'Ucraina','Turkey':'Turcia','Greece':'Grecia','Ireland':'Irlanda','Switzerland':'Elveția','Austria':'Austria','Belgium':'Belgia','Netherlands':'Olanda','Portugal':'Portugalia','Poland':'Polonia','Hungary':'Ungaria','Bulgaria':'Bulgaria','Canada':'Canada','Australia':'Australia','Japan':'Japonia','South Korea':'Coreea de Sud','India':'India','Brazil':'Brazilia','Argentina':'Argentina','Chile':'Chile','Colombia':'Columbia','Peru':'Peru'};
+  function cname(c){return CN[c]||c;}
   wrap.querySelectorAll('.cfg-chip').forEach(function(chip){
     chip.addEventListener('click',function(){
       if(chip.dataset.link==='map'){window.__cfgAwait=true;var m=document.querySelector('.map-sec');if(m)m.scrollIntoView({behavior:'smooth'});return;}
@@ -1002,20 +1114,103 @@ function initMap(){
   function render(){
     var c=state.country,s=state.start,p=state.pace;
     if(!c&&!s&&!p){out.innerHTML='<span class="cfg-hint">Alege câte una din fiecare rând — drumul tău se conturează aici.</span>';cta.classList.remove('show');return;}
-    var parts=['Construiești în <b>'+(c||'țara ta')+'</b>'];
+    var parts=['Construiești în <b>'+(c?cname(c):'țara ta')+'</b>'];
     if(s)parts.push('pornind <b>'+s+'</b>');
     if(p)parts.push(paceText(p));
     out.innerHTML='Drumul tău: '+parts.join(', ')+'.';
     if(c&&s&&p){
-      cta.href='https://wa.me/40726205752?text='+encodeURIComponent("Bună Gabi, aș vrea să programez un apel personalizat. Construiesc în "+c+", pornind "+s+", "+(p==='undecided'?'într-un ritm pe care îl decidem împreună':'într-un ritm '+p)+".");
+      cta.href='https://wa.me/40726205752?text='+encodeURIComponent("Bună Gabi, aș vrea să programez un apel personalizat. Construiesc în "+cname(c)+", pornind "+s+", "+(p==='undecided'?'într-un ritm pe care îl decidem împreună':'într-un ritm '+p)+".");
       cta.classList.add('show');
     }else{cta.classList.remove('show');}
+    if(window.__flowLights)window.__flowLights();
   }
   window.__cfgSetCountry=function(name){
     state.country=name;
     wrap.querySelectorAll('.cfg-chip[data-cat="country"]').forEach(function(c){c.setAttribute('aria-pressed',c.dataset.v===name?'true':'false');});
     render();
   };
+})();
+
+
+/* ---- guided flow: sky background + sequential step lighting ---- */
+(function(){
+  var whereSec=document.getElementById('where'), mapSec=document.querySelector('.map-sec');
+  function lights(){
+    var st=window.__cfgState||{};
+    if(mapSec)mapSec.classList.toggle('lit',!st.country);
+    var cols=document.querySelectorAll('#cfg .col');
+    if(!cols.length)return;
+    var keys=['country','start','pace'];
+    var next=-1;
+    for(var i=0;i<keys.length;i++){if(!st[keys[i]]){next=i;break;}}
+    cols.forEach(function(col,i){
+      col.classList.remove('lit','done','await');
+      if(st[keys[i]])col.classList.add('done');
+      else if(i===next)col.classList.add('lit');
+      else if(next>-1&&i>next)col.classList.add('await');
+    });
+  }
+  window.__flowLights=lights;
+  if('IntersectionObserver' in window && whereSec){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.target===whereSec)whereSec.classList.toggle('sky',e.isIntersecting);
+      if(e.isIntersecting)lights();
+    });},{threshold:.22});
+    io.observe(whereSec);
+    if(mapSec)io.observe(mapSec);
+  }else{lights();}
+})();
+
+/* ---- perk photo reveal ---- */
+(function(){
+  var pop=document.getElementById('perkpop');
+  if(!pop)return;
+  var img=pop.querySelector('img'), cap=pop.querySelector('figcaption');
+  var perksBox=document.querySelector('.perks');
+  var hideT=null, current=null;
+  function show(perk){
+    var src=perk.dataset.img; if(!src)return;
+    clearTimeout(hideT); current=perk;
+    img.onerror=function(){pop.classList.remove('on');};
+    if(img.getAttribute('src')!==src)img.src=src;
+    cap.textContent=perk.dataset.cap||'';
+    var pr=perk.getBoundingClientRect(), br=perksBox.getBoundingClientRect();
+    var x=pr.left-br.left+pr.width/2-115;
+    x=Math.max(0,Math.min(x,br.width-230));
+    pop.style.left=x+'px';
+    pop.style.top=(pr.top-br.top-166)+'px';
+    pop.classList.add('on');
+  }
+  function hide(){hideT=setTimeout(function(){pop.classList.remove('on');current=null;},120);}
+  document.querySelectorAll('.perk[data-img]').forEach(function(p){
+    p.addEventListener('mouseenter',function(){show(p);});
+    p.addEventListener('mouseleave',hide);
+    p.addEventListener('focus',function(){show(p);});
+    p.addEventListener('blur',hide);
+    p.addEventListener('click',function(e){ if(current===p&&pop.classList.contains('on')&&!matchMedia('(hover:hover)').matches){pop.classList.remove('on');current=null;} else show(p); });
+  });
+})();
+
+/* ---- club vs online tabs ---- */
+(function(){
+  var tabs=document.querySelectorAll('.mode');
+  if(!tabs.length)return;
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){
+      tabs.forEach(function(o){o.setAttribute('aria-selected','false');var p=document.getElementById(o.getAttribute('aria-controls'));if(p)p.hidden=true;});
+      t.setAttribute('aria-selected','true');
+      var panel=document.getElementById(t.getAttribute('aria-controls'));
+      if(panel){panel.hidden=false;panel.classList.remove('reveal','in');void panel.offsetWidth;panel.style.animation='none';requestAnimationFrame(function(){panel.style.animation='';});}
+    });
+  });
+})();
+
+/* ---- keep sticky CTA out of the way while typing ---- */
+(function(){
+  var lf=document.getElementById('leadForm'), st=document.getElementById('stickycta');
+  if(!lf||!st)return;
+  lf.addEventListener('focusin',function(){st.style.display='none';});
+  lf.addEventListener('focusout',function(){st.style.display='';});
 })();
 
 /* ---- lead form (Netlify) ---- */

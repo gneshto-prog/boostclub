@@ -6,6 +6,10 @@
 <title>Построй свой бизнес в сфере питания — Boost Club</title>
 <meta name="description" content="Построй свой бизнес в сфере питания на основе модели, которая уже работает — в своей стране. Запишись на звонок с Габриэлем.">
 <link rel="canonical" href="https://boostclub.ro/ru/business">
+<link rel="alternate" hreflang="ro" href="https://boostclub.ro/business">
+<link rel="alternate" hreflang="en" href="https://boostclub.ro/en/business">
+<link rel="alternate" hreflang="ru" href="https://boostclub.ro/ru/business">
+<link rel="alternate" hreflang="x-default" href="https://boostclub.ro/en/business">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://boostclub.ro/ru/business">
 <meta property="og:title" content="Построй свой бизнес в сфере питания — с Габриэлем Нешто">
@@ -218,7 +222,6 @@ section{padding:78px 0}
 .gabi .split{display:grid;grid-template-columns:.82fr 1.18fr;gap:48px;align-items:center}
 @media(max-width:820px){.gabi .split{grid-template-columns:1fr;gap:26px}}
 .gabi .photo{aspect-ratio:4/5;border-radius:20px;background:linear-gradient(155deg,#0d3352,#02101d);position:relative;overflow:hidden;box-shadow:var(--shadow)}
-.gabi .photo::after{content:"Save the photo as ../images/gabriel-neshto-boost-club-bucuresti.jpg in this folder";position:absolute;bottom:16px;left:16px;right:16px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.04em;color:#6f8ba2}
 .gabi .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 58%;display:block;z-index:2}
 .gabi h2{font-size:clamp(27px,3.8vw,40px)}
 .gabi p{color:var(--slate);font-size:16.5px;margin-top:16px}
@@ -278,7 +281,7 @@ section{padding:78px 0}
 .ctable .cc{font-size:14px}
 .ctable .cc.crit{font-weight:600;color:var(--navy);background:#fbfdff}
 .ctable .cc.job,.ctable .cc.fr{color:var(--slate)}
-.ctable .cc.job::before,.ctable .cc.fr::before{content:"\2715 ";color:#c0392b;font-weight:800}
+.ctable .cc.job::before,.ctable .cc.fr::before{content:"— ";color:#9fb0be;font-weight:700}
 .ctable .cc.this{background:rgba(16,152,212,.06);color:var(--navy);font-weight:500}
 .ctable .cc.this::before{content:"\2713 ";color:var(--blue);font-weight:800}
 .cscroll-hint{display:none;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--slate);margin-top:10px}
@@ -299,6 +302,56 @@ section{padding:78px 0}
 .origin-note{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--slate)}
 .origin-note b{color:var(--navy)}
 
+/* ===== Guided flow: sky shift + step lighting ===== */
+#where{transition:background .9s var(--ease)}
+#where.sky{background:linear-gradient(180deg,#EDF7FD 0%,#DCEFFA 100%)}
+.col{position:relative}
+.col.await{opacity:.62}
+.col.lit{opacity:1;border-color:var(--blue);background:#fff;box-shadow:0 0 0 3px rgba(16,152,212,.16),var(--shadow);animation:colPulse 2.2s var(--ease) infinite}
+@keyframes colPulse{0%,100%{box-shadow:0 0 0 3px rgba(16,152,212,.16),var(--shadow)}50%{box-shadow:0 0 0 9px rgba(16,152,212,.05),var(--shadow)}}
+.col.done{opacity:1;border-color:rgba(16,152,212,.45)}
+.col .t::after{content:"";display:inline-block;margin-left:8px;font-weight:700}
+.col.done .t::after{content:"✓";color:#0a9e6e}
+.map-sec.lit .mapwrap{border-color:var(--blue);box-shadow:0 0 0 3px rgba(16,152,212,.14)}
+
+/* ===== Clubs gallery ===== */
+.clubs{margin-top:34px}
+.clubrow{display:flex;gap:14px;margin-top:16px;overflow-x:auto;padding:4px 2px 14px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.clubrow::-webkit-scrollbar{height:6px}
+.clubrow::-webkit-scrollbar-thumb{background:var(--line);border-radius:3px}
+.clubcard{flex:0 0 200px;scroll-snap-align:start;margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#fff;transition:transform var(--d2) var(--ease),box-shadow var(--d2) var(--ease)}
+.clubcard:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.clubcard img{width:100%;height:126px;object-fit:cover;display:block}
+.clubcard.noimg img{display:none}
+.clubcard.noimg::before{content:attr(data-cc);display:flex;align-items:center;justify-content:center;height:126px;background:linear-gradient(150deg,#0d3352,#061A2F);color:#7fd0f2;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.clubcard figcaption{padding:10px 14px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);display:flex;align-items:center;gap:8px}
+.clubcard figcaption::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--blue)}
+
+/* ===== Perk hover photo reveal ===== */
+.perks{position:relative}
+.perk{cursor:pointer}
+#perkpop{position:absolute;z-index:20;width:230px;border-radius:16px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 26px 60px -18px rgba(6,26,47,.4);opacity:0;transform:translateY(10px) scale(.88);transform-origin:50% 100%;pointer-events:none;transition:opacity .28s var(--ease),transform .34s cubic-bezier(.34,1.56,.64,1)}
+#perkpop.on{opacity:1;transform:translateY(0) scale(1)}
+#perkpop img{width:100%;height:150px;object-fit:cover;display:block}
+#perkpop figcaption{padding:9px 13px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;color:var(--slate)}
+
+/* ===== Club vs Online modes ===== */
+.modes{display:inline-flex;border:1px solid var(--line);border-radius:100px;padding:4px;background:#fff;gap:4px}
+.mode{font-family:inherit;font-size:14px;font-weight:600;color:var(--slate);background:none;border:none;border-radius:100px;padding:10px 22px;cursor:pointer;transition:color var(--d2),background var(--d2)}
+.mode[aria-selected="true"]{background:var(--navy);color:#fff}
+.mpanel{margin-top:26px}
+.mpanel[hidden]{display:none}
+.mpanel h3{font-size:clamp(21px,2.6vw,27px);font-weight:700;letter-spacing:-.02em}
+.mpanel p{color:var(--slate);font-size:16px;margin-top:12px;max-width:640px}
+.mpanel .mp-points{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.mpanel .mp-points span{font-family:'IBM Plex Mono',monospace;font-size:12.5px;border:1px solid var(--line);border-radius:100px;padding:9px 16px;background:#fff}
+.mpanel .btn{margin-top:22px}
+
+/* ===== quiet text links (CTA hierarchy) ===== */
+.tlink{font-weight:600;color:var(--blue);display:inline-flex;align-items:center;gap:7px;font-size:15.5px}
+.tlink .arw{transition:transform var(--d2) var(--ease)}
+.tlink:hover .arw{transform:translateX(4px)}
+
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important}
   html{scroll-behavior:auto}
@@ -317,7 +370,7 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
 .langsw a,.langsw span{color:var(--slate);text-decoration:none;padding:4px 6px;border-radius:6px}
 .langsw a:hover{color:var(--navy);background:rgba(16,152,212,.08)}
 .langsw .active{color:var(--navy);font-weight:600}
-@media(max-width:520px){.langsw{display:none}}
+@media(max-width:520px){.langsw{font-size:11px;gap:2px}.langsw a,.langsw span{padding:3px 4px}}
 .leadform-wrap{max-width:560px;margin:32px auto 0;text-align:center}
 .leadform-toggle{background:none;border:none;font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.04em;color:var(--slate);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
 .leadform-toggle:hover{color:var(--blue)}
@@ -330,6 +383,18 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
 .lf-hp{position:absolute;left:-9999px}
 .lf-thanks{margin-top:20px;font-weight:600;color:var(--navy)}
 </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Person","@id":"https://boostclub.ro/gabi#person","name":"Gabriel Neshto","alternateName":"Gabi Neshto","jobTitle":"Основатель","worksFor":{"@type":"Organization","name":"Boost Club","address":{"@type":"PostalAddress","streetAddress":"Strada Sevastopol 24","addressLocality":"București","addressCountry":"RO"}},"url":"https://boostclub.ro/gabi","sameAs":["https://www.instagram.com/gabineshto"]},
+ {"@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"Нужно ли переезжать в Бухарест?","acceptedAnswer":{"@type":"Answer","text":"Нет. В Бухаресте наша первая локация. Ты строишь в своей стране."}},
+  {"@type":"Question","name":"Как именно я зарабатываю?","acceptedAnswer":{"@type":"Answer","text":"Маржа на том, что твои клиенты покупают и заказывают снова, и — когда ты закрепишься — доля от оборота людей, которым ты помогаешь стартовать. Доход не гарантирован и зависит от усилий, навыков, рынка и соответствия."}},
+  {"@type":"Question","name":"Это Herbalife? Это MLM?","acceptedAnswer":{"@type":"Answer","text":"Да, это работает через Herbalife — предпринимательская возможность как независимый дистрибьютор, не работа и не зарплата."}},
+  {"@type":"Question","name":"Сколько стоит старт?","acceptedAnswer":{"@type":"Answer","text":"Зависит от твоей страны и того, как ты начинаешь. Франшизных взносов нет — реальные цифры для твоей ситуации разбираются на звонке."}},
+  {"@type":"Question","name":"Нужен ли опыт?","acceptedAnswer":{"@type":"Answer","text":"Нет. Большинство начинают без него. Важнее готовность общаться с людьми и следовать методу."}}
+ ]}
+]}
+</script>
 </head>
 <body>
 <div id="bc-arrival" hidden></div>
@@ -372,19 +437,66 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
         <div>Можно совмещать с текущей работой</div>
         <div>Первый разговор — лично с Габриэлем</div>
       </div>
-      <a class="scrollcue reveal" href="#where" aria-label="Scroll to see how it works"><span class="c"></span> Листай</a>
+      <a class="scrollcue reveal" href="#map" aria-label="Листай, чтобы начать со своей страны"><span class="c"></span> Листай</a>
     </div>
     <div class="heroimg clipin"><img src="../images/familie-neshto-wellness.jpg" alt="The Boost Club community in Bucharest" onerror="if(!this.dataset.p){this.dataset.p=1;this.src='../images/familie-neshto-wellness.jpg'}else{this.style.display='none'}"><div class="scrim"></div><span class="cap">Boost Club · Sevastopol 24, Бухарест</span></div>
   </div>
 </header>
 
+<!-- MAP -->
+<section class="map-sec" id="map" data-seq>
+  <div class="wrap">
+    <div class="head">
+      <span class="klabel reveal">Шаг 01 · Твоя страна</span>
+      <h2 class="reveal">Начни со своей страны.</h2>
+      <p class="reveal">Впиши её или коснись на карте. Herbalife работает более чем в 90 странах — всё синее — это рынок, где ты можешь построить своё дело. Наша первая локация — один адрес в Бухаресте.</p>
+      <div class="mapstat reveal"><b><span data-count="90">0</span>+</b><span>рынков доступно по всему миру</span></div>
+    </div>
+    <div class="mapbar reveal">
+      <input id="mapsearch" type="text" placeholder="Введите свою страну, чтобы проверить доступность…" aria-label="Поиск своей страны" autocomplete="off" list="countrylist">
+      <datalist id="countrylist"></datalist>
+      <button class="reset" id="mapreset" type="button">Сбросить</button>
+    </div>
+    <div class="mapstatus" id="mapstatus" aria-live="polite" role="status">Введите страну или нажмите на карту, чтобы проверить, доступна ли возможность.</div>
+    <div class="mapwrap loading" id="mapwrap">
+      <svg id="worldmap" viewBox="0 0 960 480" role="img" aria-label="Карта мира с рынками, где можно строить"></svg>
+      <div class="maptip" id="maptip"></div>
+      <div class="map-fallback" id="map-fallback">
+        Herbalife работает более чем в 90 странах Америки, Европы, Ближнего Востока, Африки и Азиатско-Тихоокеанского региона. Если она работает там, где ты живёшь, ты можешь строить там. <br><br>(Для загрузки интерактивной карты нужен интернет.)
+      </div>
+    </div>
+    <div class="mapcta" id="mapcta" hidden>
+      <a class="btn btn-line" id="mapctalink" href="#" target="_blank" rel="noopener">Записаться на звонок о твоей стране <span class="arw">→</span></a>
+    </div>
+    <div class="legend">
+      <span><i class="b"></i> Доступно для развития</span>
+      <span><i class="g"></i> Пока недоступно</span>
+      <span><i class="n"></i> Node 00 · Boost Club, Sevastopol 24, Бухарест</span>
+    </div>
+    <div class="clubs reveal">
+      <span class="klabel">Клубы, построенные по той же модели, по всему миру</span>
+      <div class="clubrow">
+        <figure class="clubcard" data-cc="Румыния"><img src="../images/clubs/romania.jpg" alt="Нутрициологический клуб — Румыния" loading="lazy" onerror="this.closest('.clubcard').classList.add('noimg')"><figcaption>Румыния</figcaption></figure>
+        <figure class="clubcard" data-cc="Израиль"><img src="../images/clubs/israel.jpg" alt="Нутрициологический клуб — Израиль" loading="lazy" onerror="this.closest('.clubcard').classList.add('noimg')"><figcaption>Израиль</figcaption></figure>
+        <figure class="clubcard" data-cc="Узбекистан"><img src="../images/clubs/uzbekistan.jpg" alt="Нутрициологический клуб — Узбекистан" loading="lazy" onerror="this.closest('.clubcard').classList.add('noimg')"><figcaption>Узбекистан</figcaption></figure>
+        <figure class="clubcard" data-cc="Казахстан"><img src="../images/clubs/kazakhstan.jpg" alt="Нутрициологический клуб — Казахстан" loading="lazy" onerror="this.closest('.clubcard').classList.add('noimg')"><figcaption>Казахстан</figcaption></figure>
+        <figure class="clubcard" data-cc="Мексика"><img src="../images/clubs/mexico.jpg" alt="Нутрициологический клуб — Мексика" loading="lazy" onerror="this.closest('.clubcard').classList.add('noimg')"><figcaption>Мексика</figcaption></figure>
+        <figure class="clubcard" data-cc="Пуэрто-Рико"><img src="../images/clubs/puerto-rico.jpg" alt="Нутрициологический клуб — Пуэрто-Рико" loading="lazy" onerror="this.closest('.clubcard').classList.add('noimg')"><figcaption>Пуэрто-Рико</figcaption></figure>
+        <figure class="clubcard" data-cc="США"><img src="../images/clubs/usa.jpg" alt="Нутрициологический клуб — США" loading="lazy" onerror="this.closest('.clubcard').classList.add('noimg')"><figcaption>США</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
 <!-- BUILD WHERE YOU ARE -->
 <section id="where" data-seq>
   <div class="wrap">
     <div class="head">
-      <span class="klabel reveal">Где можно начать</span>
+      <span class="klabel reveal">Шаги 01–03 · Настрой свой путь</span>
       <h2 class="reveal">Где бы ты ни был, способ начать найдётся.</h2>
-      <p class="reveal">Ты строишь собственный бизнес там, где живёшь. Везде, где работает Herbalife, эта возможность доступна тебе.</p>
+      <p class="reveal">Выбрал страну на карте? Окна ниже загораются по очереди — заполни их, и твой путь обретёт форму.</p>
     </div>
     <div class="cols" id="cfg">
       <div class="col reveal">
@@ -392,10 +504,10 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
         <h3>Твоя страна</h3>
         <p>Ты строишь там, где живёшь, по версии системы, адаптированной под твой рынок — на основе того же метода, что уже работает у команды Boost Club.</p>
         <div class="cfg-chips">
-          <button class="cfg-chip" type="button" data-cat="country" data-v="Франции" aria-pressed="false">Франция</button>
-          <button class="cfg-chip" type="button" data-cat="country" data-v="Великобритании" aria-pressed="false">Великобритания</button>
-          <button class="cfg-chip" type="button" data-cat="country" data-v="США" aria-pressed="false">США</button>
-          <button class="cfg-chip" type="button" data-link="map">Выбрать на карте ↓</button>
+          <button class="cfg-chip" type="button" data-cat="country" data-v="France" aria-pressed="false">Франция</button>
+          <button class="cfg-chip" type="button" data-cat="country" data-v="United Kingdom" aria-pressed="false">Великобритания</button>
+          <button class="cfg-chip" type="button" data-cat="country" data-v="United States of America" aria-pressed="false">США</button>
+          <button class="cfg-chip" type="button" data-link="map">Выбрать на карте ↑</button>
         </div>
       </div>
       <div class="col reveal">
@@ -424,39 +536,6 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
     <div class="cfg-summary reveal">
       <p id="cfg-out"><span class="cfg-hint">Выбери по одному в каждом ряду — твой путь соберётся здесь.</span></p>
       <a class="btn btn-cta btn-mag" id="cfg-cta" href="#" target="_blank" rel="noopener">Записаться на персональный звонок <span class="arw">→</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- MAP -->
-<section class="map-sec" data-seq>
-  <div class="wrap">
-    <div class="head">
-      <span class="klabel reveal">Где это работает</span>
-      <h2 class="reveal">Модель уже работает в большей части мира.</h2>
-      <p class="reveal">Herbalife работает более чем в 90 странах. Наша первая локация — один адрес в Бухаресте. Всё, что отмечено синим, — рынок, где ты можешь построить свой.</p>
-      <div class="mapstat reveal"><b><span data-count="90">0</span>+</b><span>рынков доступно по всему миру</span></div>
-    </div>
-    <div class="mapbar reveal">
-      <input id="mapsearch" type="text" placeholder="Введите свою страну, чтобы проверить доступность…" aria-label="Search for your country" autocomplete="off" list="countrylist">
-      <datalist id="countrylist"></datalist>
-      <button class="reset" id="mapreset" type="button">Сбросить</button>
-    </div>
-    <div class="mapstatus" id="mapstatus" aria-live="polite" role="status">Введите страну или нажмите на карту, чтобы проверить, доступна ли возможность.</div>
-    <div class="mapwrap loading" id="mapwrap">
-      <svg id="worldmap" viewBox="0 0 960 480" role="img" aria-label="World map showing markets where you can build"></svg>
-      <div class="maptip" id="maptip"></div>
-      <div class="map-fallback" id="map-fallback">
-        Herbalife работает более чем в 90 странах Америки, Европы, Ближнего Востока, Африки и Азиатско-Тихоокеанского региона. Если она работает там, где ты живёшь, ты можешь строить там. <br><br>(Для загрузки интерактивной карты нужен интернет.)
-      </div>
-    </div>
-    <div class="mapcta" id="mapcta" hidden>
-      <a class="btn btn-cta btn-mag" id="mapctalink" href="#" target="_blank" rel="noopener">Записаться на звонок о твоей стране <span class="arw">→</span></a>
-    </div>
-    <div class="legend">
-      <span><i class="b"></i> Доступно для развития</span>
-      <span><i class="g"></i> Пока недоступно</span>
-      <span><i class="n"></i> Node 00 · Boost Club, Sevastopol 24, Бухарест</span>
     </div>
   </div>
 </section>
@@ -542,6 +621,33 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
 
 <div class="rule"></div>
 
+<!-- CLUB vs ONLINE -->
+<section id="online" data-seq>
+  <div class="wrap">
+    <div class="head">
+      <span class="klabel reveal">Два способа строить</span>
+      <h2 class="reveal">С локацией. Или полностью онлайн.</h2>
+    </div>
+    <div class="modes reveal" role="tablist" aria-label="Выбери способ строить">
+      <button class="mode" id="tab-club" role="tab" aria-selected="true" aria-controls="mp-club" type="button">Физический клуб</button>
+      <button class="mode" id="tab-online" role="tab" aria-selected="false" aria-controls="mp-online" type="button">100% онлайн</button>
+    </div>
+    <div class="mpanel reveal" id="mp-club" role="tabpanel" aria-labelledby="tab-club">
+      <h3>Нутрициологический клуб, как наш.</h3>
+      <p>Флагманская модель: локация в твоём городе, построенная на системе Boost Club — утреннее комьюнити, клиенты, которые возвращаются каждый день, физическое место, которое люди считают своим. Это основной путь, описанный на этой странице.</p>
+      <div class="mp-points"><span>Один адрес, одно комьюнити</span><span>Ежедневный ритуал</span><span>Регулярный локальный доход</span></div>
+    </div>
+    <div class="mpanel" id="mp-online" role="tabpanel" aria-labelledby="tab-online" hidden>
+      <h3>Не хочешь быть привязан к физической локации?</h3>
+      <p>Свой бизнес можно построить полностью онлайн: wellness-марафоны, 21-дневные челленджи, коучинг и комьюнити на расстоянии. Те же клиенты, тот же метод, то же наставничество — без аренды и без адреса. Кто-то начинает онлайн и позже открывает локацию. Кто-то остаётся онлайн. Обе модели — настоящий бизнес.</p>
+      <div class="mp-points"><span>Wellness-марафоны</span><span>21-дневные челленджи</span><span>Клиенты из любой страны</span><span>Работа откуда угодно</span></div>
+      <a class="btn btn-cta btn-mag" href="https://wa.me/40726205752?text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%2C%20%D0%93%D0%B0%D0%B1%D0%B8%21%20%D0%9C%D0%BD%D0%B5%20%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D0%B5%D0%BD%20%D0%B2%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82%20100%25%20%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD%20%E2%80%94%20%D0%BC%D0%B0%D1%80%D0%B0%D1%84%D0%BE%D0%BD%D1%8B%20%D0%B8%2021-%D0%B4%D0%BD%D0%B5%D0%B2%D0%BD%D1%8B%D0%B5%20%D1%87%D0%B5%D0%BB%D0%BB%D0%B5%D0%BD%D0%B4%D0%B6%D0%B8.%20%D0%9C%D0%BE%D0%B6%D0%B5%D0%BC%20%D0%BF%D0%BE%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%D0%B8%D1%82%D1%8C%3F" target="_blank" rel="noopener">Начни свой онлайн-бизнес <span class="arw">→</span></a>
+    </div>
+  </div>
+</section>
+
+<div class="rule"></div>
+
 <!-- HOW THE MONEY WORKS -->
 <section data-seq>
   <div class="wrap">
@@ -565,15 +671,16 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
     <div class="perks reveal">
       <span class="klabel">А для тех, кто выполняет условия</span>
       <div class="perkrow">
-        <div class="perk">Годовые бонусы за результат</div>
-        <div class="perk">Подарки и признание</div>
-        <div class="perk">Оплачиваемые поездки для отличившихся</div>
+        <button class="perk" type="button" data-img="../images/perks/bonusuri.jpg" data-cap="Годовые бонусы за результат">Годовые бонусы за результат</button>
+        <button class="perk" type="button" data-img="../images/perks/cadouri.jpg" data-cap="Подарки и признание">Подарки и признание</button>
+        <button class="perk" type="button" data-img="../images/perks/vacante.jpg" data-cap="Оплачиваемые путешествия для квалифицировавшихся">Оплачиваемые путешествия для квалифицировавшихся</button>
       </div>
+      <figure id="perkpop" aria-hidden="true"><img alt=""><figcaption></figcaption></figure>
     </div>
     <p class="closing reveal">Здесь нет потолка по доходу. Сколько построишь — столько и заработаешь; всё зависит только от тебя.</p>
     <div class="ctx reveal">
       <p>Реальные цифры зависят от твоей страны и твоей ситуации.</p>
-      <a class="btn btn-cta btn-mag" href="https://wa.me/40726205752?text=Hi%20Gabi%2C%20I'd%20like%20to%20talk%20through%20the%20numbers%20for%20my%20situation." target="_blank" rel="noopener">Поговорить с Габриэлем <span class="arw">→</span></a>
+      <a class="tlink" href="https://wa.me/40726205752?text=Hi%20Gabi%2C%20I'd%20like%20to%20talk%20through%20the%20numbers%20for%20my%20situation." target="_blank" rel="noopener">Обсудить цифры с Габи <span class="arw">→</span></a>
     </div>
   </div>
 </section>
@@ -639,7 +746,7 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
     </div>
     <div class="persona-detail" aria-live="polite">
       <p id="pdetail"><span class="hint">Выбери вариант выше — он должен звучать как описание тебя.</span></p>
-      <a class="btn btn-cta btn-mag pcta" id="pcta" href="https://wa.me/40726205752?text=Hi%20Gabi%2C%20I%20think%20this%20fits%20me.%20I'd%20like%20to%20start%20with%20a%20conversation." target="_blank" rel="noopener">Начать с разговора <span class="arw">→</span></a>
+      <a class="btn btn-line pcta" id="pcta" href="https://wa.me/40726205752?text=Hi%20Gabi%2C%20I%20think%20this%20fits%20me.%20I'd%20like%20to%20start%20with%20a%20conversation." target="_blank" rel="noopener">Начать с разговора <span class="arw">→</span></a>
     </div>
   </div>
 </section>
@@ -647,7 +754,7 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
 <!-- GABI -->
 <section class="gabi" data-seq>
   <div class="wrap split">
-    <div class="photo clipin"><img src="../images/gabriel-neshto-boost-club-bucuresti.jpg" alt="Gabriel Neshto, founder of Boost Club" onerror="if(!this.dataset.p){this.dataset.p=1;this.src='../images/gabriel-neshto-boost-club-bucuresti.jpg'}else{this.style.display='none'}"></div>
+    <div class="photo clipin"><img loading="lazy" src="../images/gabriel-neshto-boost-club-bucuresti.jpg" alt="Gabriel Neshto, founder of Boost Club" onerror="if(!this.dataset.p){this.dataset.p=1;this.src='../images/gabriel-neshto-boost-club-bucuresti.jpg'}else{this.style.display='none'}"></div>
     <div>
       <span class="klabel reveal">Основатель · Boost Club</span>
       <h2 class="reveal">Габриэль Нешто</h2>
@@ -679,7 +786,7 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
     </div>
     <div class="ctx reveal">
       <p>Ещё сомневаешься? Один звонок обычно всё проясняет.</p>
-      <a class="btn btn-cta btn-mag" href="https://wa.me/40726205752?text=Hi%20Gabi%2C%20I%20still%20have%20a%20question%20%E2%80%94%20can%20we%20talk%3F" target="_blank" rel="noopener">Book a call <span class="arw">→</span></a>
+      <a class="tlink" href="https://wa.me/40726205752?text=Hi%20Gabi%2C%20I%20still%20have%20a%20question%20%E2%80%94%20can%20we%20talk%3F" target="_blank" rel="noopener">Задай Габи свой вопрос <span class="arw">→</span></a>
     </div>
   </div>
 </section>
@@ -702,6 +809,7 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
       <button class="leadform-toggle" id="leadToggle" type="button" aria-expanded="false">Предпочитаешь почту? Оставь свои контакты</button>
       <form class="leadform" id="leadForm" name="partner-lead" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
         <input type="hidden" name="form-name" value="partner-lead">
+        <input type="hidden" name="lang" value="ru">
         <p class="lf-hp"><label>Оставьте пустым: <input name="bot-field"></label></p>
         <div class="lf-grid">
           <input type="text" name="name" placeholder="Твоё имя" required>
@@ -837,10 +945,10 @@ chips.forEach(chip=>{
 
 /* ---- interactive world map ---- */
 const AVAILABLE=new Set([
- "United States of America","Canada","Mexico","Guatemala","Honduras","El Salvador","Nicaragua","Costa Rica","Panama","Dominican Republic","Jamaica","Trinidad and Tobago","Colombia","Venezuela","Ecuador","Peru","Bolivia","Brazil","Chile","Argentina","Uruguay","Paraguay",
- "United Kingdom","Ireland","France","Spain","Portugal","Italy","Germany","Netherlands","Belgium","Luxembourg","Switzerland","Austria","Denmark","Sweden","Norway","Finland","Iceland","Poland","Czechia","Slovakia","Hungary","Romania","Bulgaria","Greece","Croatia","Slovenia","Serbia","Bosnia and Herzegovina","North Macedonia","Albania","Montenegro","Estonia","Latvia","Lithuania","Ukraine","Belarus","Moldova","Russia","Cyprus",
- "Israel","Turkey","Lebanon","Jordan","Saudi Arabia","United Arab Emirates","Kuwait","Qatar","Oman","Morocco","Tunisia","Algeria","Egypt","South Africa","Zambia","Botswana","Namibia","Ghana","Nigeria","Kenya","Mozambique",
- "India","Pakistan","Sri Lanka","China","Japan","South Korea","Taiwan","Philippines","Vietnam","Thailand","Cambodia","Malaysia","Singapore","Indonesia","Australia","New Zealand","Kazakhstan","Georgia","Armenia","Azerbaijan"
+ "United States of America","Canada","Mexico","Guatemala","Honduras","El Salvador","Nicaragua","Costa Rica","Panama","Dominican Republic","Jamaica","Trinidad and Tobago","Puerto Rico","Colombia","Venezuela","Ecuador","Peru","Bolivia","Brazil","Chile","Argentina","Uruguay","Paraguay",
+ "United Kingdom","Ireland","France","Spain","Portugal","Italy","Germany","Netherlands","Belgium","Switzerland","Austria","Denmark","Sweden","Norway","Finland","Iceland","Poland","Czechia","Slovakia","Hungary","Romania","Bulgaria","Greece","Croatia","Slovenia","Serbia","Bosnia and Herzegovina","North Macedonia","Estonia","Latvia","Lithuania","Ukraine","Belarus","Moldova","Russia","Cyprus","Kazakhstan","Kyrgyzstan","Uzbekistan","Mongolia","Georgia","Armenia","Azerbaijan",
+ "Israel","Turkey","Lebanon","South Africa","Zambia","Botswana","Namibia","Ghana","eSwatini","Lesotho",
+ "India","Japan","South Korea","Taiwan","Philippines","Vietnam","Thailand","Cambodia","Malaysia","Indonesia","Australia","New Zealand"
 ]);
 const WA_COUNTRY=n=>`https://wa.me/40726205752?text=${encodeURIComponent("Здравствуйте, Габриэль! Я из "+n+". Хочу записаться на звонок о развитии там.")}`;
 
@@ -941,7 +1049,8 @@ function initMap(){
         ctaLink.href=WA_COUNTRY(nm);
         ctaLink.firstChild.textContent="Записаться на звонок: "+nm+" ";
         ctaBox.hidden=false;
-        if(window.__cfgAwait){window.__cfgAwait=false;if(window.__cfgSetCountry)window.__cfgSetCountry(nm);var wsec=document.getElementById('where');if(wsec)setTimeout(function(){wsec.scrollIntoView({behavior:'smooth'});},550);}
+        if(window.__cfgSetCountry)window.__cfgSetCountry(nm);
+        if(window.__cfgAwait){window.__cfgAwait=false;var wsec=document.getElementById('where');if(wsec)setTimeout(function(){wsec.scrollIntoView({behavior:'smooth'});},550);}
       }else{
         arcLayer.selectAll("*").remove();
         statusEl.innerHTML='<b>'+nm+'</b> — пока недоступно. Herbalife есть в 90+ странах и продолжает расширяться.';
@@ -975,6 +1084,9 @@ function initMap(){
   if(!wrap)return;
   var out=document.getElementById('cfg-out'), cta=document.getElementById('cfg-cta');
   var state={country:null,start:null,pace:null};
+  window.__cfgState=state;
+  var CN={'France':'Франция','United Kingdom':'Великобритания','United States of America':'США','Romania':'Румыния','Germany':'Германия','Italy':'Италия','Spain':'Испания','Israel':'Израиль','Kazakhstan':'Казахстан','Uzbekistan':'Узбекистан','Mexico':'Мексика','Puerto Rico':'Пуэрто-Рико','Russia':'Россия','Ukraine':'Украина','Moldova':'Молдова','Belarus':'Беларусь','Kyrgyzstan':'Кыргызстан','Georgia':'Грузия','Armenia':'Армения','Azerbaijan':'Азербайджан','Turkey':'Турция','Poland':'Польша','Portugal':'Португалия','Greece':'Греция','Canada':'Канада','Australia':'Австралия','Japan':'Япония','India':'Индия','Brazil':'Бразилия'};
+  function cname(c){return CN[c]||c;}
   wrap.querySelectorAll('.cfg-chip').forEach(function(chip){
     chip.addEventListener('click',function(){
       if(chip.dataset.link==='map'){window.__cfgAwait=true;var m=document.querySelector('.map-sec');if(m)m.scrollIntoView({behavior:'smooth'});return;}
@@ -991,20 +1103,103 @@ function initMap(){
   function render(){
     var c=state.country,s=state.start,p=state.pace;
     if(!c&&!s&&!p){out.innerHTML='<span class="cfg-hint">Выбери по одному в каждом ряду — твой путь соберётся здесь.</span>';cta.classList.remove('show');return;}
-    var parts=['строишь в <b>'+(c||'своей стране')+'</b>'];
+    var parts=[c?'строишь в стране <b>'+cname(c)+'</b>':'строишь в <b>своей стране</b>'];
     if(s)parts.push('стартуешь <b>'+s+'</b>');
     if(p)parts.push(paceText(p));
     out.innerHTML='Твой путь: '+parts.join(', ')+'.';
     if(c&&s&&p){
-      cta.href='https://wa.me/40726205752?text='+encodeURIComponent("Здравствуйте, Габриэль! Хочу записаться на персональный звонок ("+c+", "+s+", "+(p==='undecided'?'темп решим вместе':p)+").");
+      cta.href='https://wa.me/40726205752?text='+encodeURIComponent("Здравствуйте, Габриэль! Хочу записаться на персональный звонок ("+cname(c)+", "+s+", "+(p==='undecided'?'темп решим вместе':p)+").");
       cta.classList.add('show');
     }else{cta.classList.remove('show');}
+    if(window.__flowLights)window.__flowLights();
   }
   window.__cfgSetCountry=function(name){
     state.country=name;
     wrap.querySelectorAll('.cfg-chip[data-cat="country"]').forEach(function(c){c.setAttribute('aria-pressed',c.dataset.v===name?'true':'false');});
     render();
   };
+})();
+
+
+/* ---- guided flow: sky background + sequential step lighting ---- */
+(function(){
+  var whereSec=document.getElementById('where'), mapSec=document.querySelector('.map-sec');
+  function lights(){
+    var st=window.__cfgState||{};
+    if(mapSec)mapSec.classList.toggle('lit',!st.country);
+    var cols=document.querySelectorAll('#cfg .col');
+    if(!cols.length)return;
+    var keys=['country','start','pace'];
+    var next=-1;
+    for(var i=0;i<keys.length;i++){if(!st[keys[i]]){next=i;break;}}
+    cols.forEach(function(col,i){
+      col.classList.remove('lit','done','await');
+      if(st[keys[i]])col.classList.add('done');
+      else if(i===next)col.classList.add('lit');
+      else if(next>-1&&i>next)col.classList.add('await');
+    });
+  }
+  window.__flowLights=lights;
+  if('IntersectionObserver' in window && whereSec){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.target===whereSec)whereSec.classList.toggle('sky',e.isIntersecting);
+      if(e.isIntersecting)lights();
+    });},{threshold:.22});
+    io.observe(whereSec);
+    if(mapSec)io.observe(mapSec);
+  }else{lights();}
+})();
+
+/* ---- perk photo reveal ---- */
+(function(){
+  var pop=document.getElementById('perkpop');
+  if(!pop)return;
+  var img=pop.querySelector('img'), cap=pop.querySelector('figcaption');
+  var perksBox=document.querySelector('.perks');
+  var hideT=null, current=null;
+  function show(perk){
+    var src=perk.dataset.img; if(!src)return;
+    clearTimeout(hideT); current=perk;
+    img.onerror=function(){pop.classList.remove('on');};
+    if(img.getAttribute('src')!==src)img.src=src;
+    cap.textContent=perk.dataset.cap||'';
+    var pr=perk.getBoundingClientRect(), br=perksBox.getBoundingClientRect();
+    var x=pr.left-br.left+pr.width/2-115;
+    x=Math.max(0,Math.min(x,br.width-230));
+    pop.style.left=x+'px';
+    pop.style.top=(pr.top-br.top-166)+'px';
+    pop.classList.add('on');
+  }
+  function hide(){hideT=setTimeout(function(){pop.classList.remove('on');current=null;},120);}
+  document.querySelectorAll('.perk[data-img]').forEach(function(p){
+    p.addEventListener('mouseenter',function(){show(p);});
+    p.addEventListener('mouseleave',hide);
+    p.addEventListener('focus',function(){show(p);});
+    p.addEventListener('blur',hide);
+    p.addEventListener('click',function(e){ if(current===p&&pop.classList.contains('on')&&!matchMedia('(hover:hover)').matches){pop.classList.remove('on');current=null;} else show(p); });
+  });
+})();
+
+/* ---- club vs online tabs ---- */
+(function(){
+  var tabs=document.querySelectorAll('.mode');
+  if(!tabs.length)return;
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){
+      tabs.forEach(function(o){o.setAttribute('aria-selected','false');var p=document.getElementById(o.getAttribute('aria-controls'));if(p)p.hidden=true;});
+      t.setAttribute('aria-selected','true');
+      var panel=document.getElementById(t.getAttribute('aria-controls'));
+      if(panel){panel.hidden=false;panel.classList.remove('reveal','in');void panel.offsetWidth;panel.style.animation='none';requestAnimationFrame(function(){panel.style.animation='';});}
+    });
+  });
+})();
+
+/* ---- keep sticky CTA out of the way while typing ---- */
+(function(){
+  var lf=document.getElementById('leadForm'), st=document.getElementById('stickycta');
+  if(!lf||!st)return;
+  lf.addEventListener('focusin',function(){st.style.display='none';});
+  lf.addEventListener('focusout',function(){st.style.display='';});
 })();
 
 /* ---- lead form (Netlify) ---- */
