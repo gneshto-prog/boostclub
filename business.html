@@ -336,9 +336,15 @@ section{padding:78px 0}
 /* ===== Perk hover photo reveal ===== */
 .perks{position:relative}
 .perk{cursor:pointer}
-#perkpop{position:absolute;z-index:20;width:230px;border-radius:16px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 26px 60px -18px rgba(6,26,47,.4);opacity:0;transform:translateY(10px) scale(.88);transform-origin:50% 100%;pointer-events:none;transition:opacity .28s var(--ease),transform .34s cubic-bezier(.34,1.56,.64,1)}
-#perkpop.on{opacity:1;transform:translateY(0) scale(1)}
-#perkpop img,#perkpop video{width:100%;height:150px;object-fit:cover;display:block}
+#perkpop{position:absolute;z-index:20;width:230px;border-radius:16px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 26px 60px -18px rgba(6,26,47,.4);opacity:0;transform:translate3d(0,calc(-100% + 12px),0) scale(.88);transform-origin:50% 100%;pointer-events:none;transition:opacity .28s var(--ease),transform .34s cubic-bezier(.34,1.56,.64,1)}
+#perkpop.on{opacity:1;transform:translate3d(0,-100%,0) scale(1)}
+#perkpop [hidden]{display:none!important}
+#perkpop.vid{width:280px}
+#perkpop video{width:100%;height:auto;max-height:min(60vh,520px);display:block;background:#061A2F}
+#perkveil{position:fixed;inset:0;z-index:9;pointer-events:none;background:linear-gradient(180deg,rgba(167,223,242,.34),rgba(167,223,242,.16));opacity:0;transition:opacity .45s var(--ease)}
+#perkveil.on{opacity:1}
+.perks{z-index:12}
+#perkpop img{width:100%;height:150px;object-fit:cover;display:block}
 #perkpop figcaption{padding:9px 13px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;color:var(--slate)}
 
 /* ===== Club vs Online modes ===== */
@@ -1165,6 +1171,7 @@ function initMap(){
 (function(){
   var pop=document.getElementById('perkpop');
   if(!pop)return;
+  var veil=document.createElement('div');veil.id='perkveil';document.body.appendChild(veil);
   var img=pop.querySelector('img'), cap=pop.querySelector('figcaption');
   var perksBox=document.querySelector('.perks');
   var hideT=null, current=null;
@@ -1183,14 +1190,17 @@ function initMap(){
       if(img.getAttribute('src')!==src)img.src=src;
     }
     cap.textContent=perk.dataset.cap||'';
+    pop.classList.toggle('vid',!!vsrc);
+    var pw=vsrc?280:230;
     var pr=perk.getBoundingClientRect(), br=perksBox.getBoundingClientRect();
-    var x=pr.left-br.left+pr.width/2-115;
-    x=Math.max(0,Math.min(x,br.width-230));
+    var x=pr.left-br.left+pr.width/2-pw/2;
+    x=Math.max(0,Math.min(x,br.width-pw));
     pop.style.left=x+'px';
-    pop.style.top=(pr.top-br.top-166)+'px';
+    pop.style.top=(pr.top-br.top-14)+'px';
     pop.classList.add('on');
+    veil.classList.add('on');
   }
-  function hide(){hideT=setTimeout(function(){pop.classList.remove('on');current=null;var v=pop.querySelector('video');if(v)v.pause();},120);}
+  function hide(){hideT=setTimeout(function(){pop.classList.remove('on');veil.classList.remove('on');current=null;var v=pop.querySelector('video');if(v)v.pause();},120);}
   document.querySelectorAll('.perk[data-img]').forEach(function(p){
     p.addEventListener('mouseenter',function(){show(p);});
     p.addEventListener('mouseleave',hide);
