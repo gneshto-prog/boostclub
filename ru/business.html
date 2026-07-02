@@ -332,7 +332,7 @@ section{padding:78px 0}
 .perk{cursor:pointer}
 #perkpop{position:absolute;z-index:20;width:230px;border-radius:16px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 26px 60px -18px rgba(6,26,47,.4);opacity:0;transform:translateY(10px) scale(.88);transform-origin:50% 100%;pointer-events:none;transition:opacity .28s var(--ease),transform .34s cubic-bezier(.34,1.56,.64,1)}
 #perkpop.on{opacity:1;transform:translateY(0) scale(1)}
-#perkpop img{width:100%;height:150px;object-fit:cover;display:block}
+#perkpop img,#perkpop video{width:100%;height:150px;object-fit:cover;display:block}
 #perkpop figcaption{padding:9px 13px;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;color:var(--slate)}
 
 /* ===== Club vs Online modes ===== */
@@ -673,9 +673,9 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
       <div class="perkrow">
         <button class="perk" type="button" data-img="../images/perks/bonusuri.jpg" data-cap="Годовые бонусы за результат">Годовые бонусы за результат</button>
         <button class="perk" type="button" data-img="../images/perks/cadouri.jpg" data-cap="Подарки и признание">Подарки и признание</button>
-        <button class="perk" type="button" data-img="../images/perks/vacante.jpg" data-cap="Оплачиваемые путешествия для квалифицировавшихся">Оплачиваемые путешествия для квалифицировавшихся</button>
+        <button class="perk" type="button" data-img="../images/perks/vacante.jpg" data-video="../images/perks/vacante.mp4" data-cap="Оплачиваемые путешествия для квалифицировавшихся">Оплачиваемые путешествия для квалифицировавшихся</button>
       </div>
-      <figure id="perkpop" aria-hidden="true"><img alt=""><figcaption></figcaption></figure>
+      <figure id="perkpop" aria-hidden="true"><img alt=""><video muted loop playsinline preload="none" hidden></video><figcaption></figcaption></figure>
     </div>
     <p class="closing reveal">Здесь нет потолка по доходу. Сколько построишь — столько и заработаешь; всё зависит только от тебя.</p>
     <div class="ctx reveal">
@@ -1158,10 +1158,19 @@ function initMap(){
   var perksBox=document.querySelector('.perks');
   var hideT=null, current=null;
   function show(perk){
-    var src=perk.dataset.img; if(!src)return;
+    var src=perk.dataset.img, vsrc=perk.dataset.video; if(!src&&!vsrc)return;
     clearTimeout(hideT); current=perk;
-    img.onerror=function(){pop.classList.remove('on');};
-    if(img.getAttribute('src')!==src)img.src=src;
+    var vid=pop.querySelector('video');
+    if(vsrc){
+      img.hidden=true; vid.hidden=false;
+      vid.onerror=function(){ vid.hidden=true; if(src){img.hidden=false;img.src=src;} else pop.classList.remove('on'); };
+      if(vid.getAttribute('src')!==vsrc)vid.src=vsrc;
+      vid.play().catch(function(){});
+    }else{
+      vid.hidden=true; vid.pause(); img.hidden=false;
+      img.onerror=function(){pop.classList.remove('on');};
+      if(img.getAttribute('src')!==src)img.src=src;
+    }
     cap.textContent=perk.dataset.cap||'';
     var pr=perk.getBoundingClientRect(), br=perksBox.getBoundingClientRect();
     var x=pr.left-br.left+pr.width/2-115;
@@ -1170,7 +1179,7 @@ function initMap(){
     pop.style.top=(pr.top-br.top-166)+'px';
     pop.classList.add('on');
   }
-  function hide(){hideT=setTimeout(function(){pop.classList.remove('on');current=null;},120);}
+  function hide(){hideT=setTimeout(function(){pop.classList.remove('on');current=null;var v=pop.querySelector('video');if(v)v.pause();},120);}
   document.querySelectorAll('.perk[data-img]').forEach(function(p){
     p.addEventListener('mouseenter',function(){show(p);});
     p.addEventListener('mouseleave',hide);
