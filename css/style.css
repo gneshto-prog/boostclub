@@ -611,7 +611,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible { outline: 3px solid v
 .logo .dot { color: var(--gold); }
 .logo .logo-leaf { width: 0.64em; height: 0.64em; margin: 0 0.5px; flex-shrink: 0; transform: translateY(0.06em); }
 .logo .logo-leaf .leaf-body { fill: var(--gold); transition: fill .35s; }
-.logo .logo-leaf .leaf-slash { fill: none; stroke: var(--green-deep); stroke-width: 1.6; stroke-linecap: round; transition: stroke .35s; }
+.logo .logo-leaf .leaf-slash { fill: none; stroke: var(--green-deep); stroke-width: 1; stroke-linecap: butt; transition: stroke .35s; }
 .site-header.scrolled .logo { color: var(--text); }
 .site-header.scrolled .logo .logo-leaf .leaf-body { fill: var(--green); }
 .site-header.scrolled .logo .logo-leaf .leaf-slash { stroke: var(--bg); }
@@ -929,8 +929,8 @@ a:focus-visible, button:focus-visible, .btn:focus-visible { outline: 3px solid v
 .curtain .logo-leaf { width: 24px; height: 24px; margin: 0 2px; transform: translateY(2px); }
 .curtain .logo-leaf .leaf-body { fill: var(--green); }
 .curtain .logo-leaf .leaf-slash {
-  fill: none; stroke: var(--bg); stroke-width: 1.6; stroke-linecap: round;
-  stroke-dasharray: 14; stroke-dashoffset: 14;
+  fill: none; stroke: var(--bg); stroke-width: 1; stroke-linecap: butt;
+  stroke-dasharray: 16; stroke-dashoffset: 16;
   animation: drawSlash .5s .55s forwards;
 }
 @keyframes markIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
