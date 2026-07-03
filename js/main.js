@@ -285,6 +285,64 @@
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 })();
 
+/* ===== 16. Cookie consent + consent-gated GA4 (G-1KJ6EQDN8Q) ===== */
+/* GDPR: analytics load ONLY after explicit Accept; choice persisted; banner
+   follows the page language; cookies.html documents the policy. */
+(function () {
+  "use strict";
+  var GA_ID = "G-1KJ6EQDN8Q";
+  var KEY = "bc-consent"; // "granted" | "denied"
+
+  function loadGA() {
+    if (window.__bcGaLoaded) return;
+    window.__bcGaLoaded = true;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag("js", new Date());
+    window.gtag("config", GA_ID, { anonymize_ip: true });
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+    document.head.appendChild(s);
+  }
+
+  var choice = null;
+  try { choice = localStorage.getItem(KEY); } catch (e) {}
+  if (choice === "granted") { loadGA(); return; }
+  if (choice === "denied") return;
+
+  var lang = (document.documentElement.getAttribute("lang") || "ro").slice(0, 2);
+  var T = {
+    ro: { msg: 'Folosim cookie-uri de analiză (Google Analytics, IP mascat) doar cu acordul tău. <a href="/cookies.html">Detalii</a>', yes: "Accept", no: "Refuz" },
+    en: { msg: 'We use analytics cookies (Google Analytics, masked IP) only with your consent. <a href="/en/cookies.html">Details</a>', yes: "Accept", no: "Decline" },
+    ru: { msg: 'Мы используем аналитические cookie (Google Analytics, маскированный IP) только с вашего согласия. <a href="/ru/cookies.html">Подробнее</a>', yes: "Принять", no: "Отклонить" }
+  };
+  var t = T[lang] || T.ro;
+
+  var bar = document.createElement("div");
+  bar.id = "bc-consent";
+  bar.setAttribute("role", "dialog");
+  bar.setAttribute("aria-live", "polite");
+  bar.style.cssText = "position:fixed;left:16px;right:16px;bottom:16px;z-index:2147483000;max-width:600px;margin:0 auto;background:#fff;color:#1f2a26;border:1px solid rgba(13,86,69,.18);border-radius:14px;box-shadow:0 12px 34px rgba(0,0,0,.18);padding:14px 18px;font-size:14px;line-height:1.55";
+  bar.innerHTML =
+    '<p style="margin:0 0 10px 0;">' + t.msg + '</p>' +
+    '<div style="display:flex;gap:10px;justify-content:flex-end;">' +
+    '<button type="button" class="bc-c-no" style="background:transparent;border:1px solid rgba(31,42,38,.35);color:#1f2a26;border-radius:10px;padding:8px 16px;font:inherit;cursor:pointer;">' + t.no + '</button>' +
+    '<button type="button" class="bc-c-yes" style="background:#0D5645;border:1px solid #0D5645;color:#fff;border-radius:10px;padding:8px 16px;font:inherit;cursor:pointer;">' + t.yes + '</button>' +
+    '</div>';
+
+  function close(v) {
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+    if (bar.parentNode) bar.parentNode.removeChild(bar);
+    if (v === "granted") loadGA();
+  }
+  bar.querySelector(".bc-c-yes").addEventListener("click", function () { close("granted"); });
+  bar.querySelector(".bc-c-no").addEventListener("click", function () { close("denied"); });
+
+  if (document.body) document.body.appendChild(bar);
+  else document.addEventListener("DOMContentLoaded", function () { document.body.appendChild(bar); });
+})();
+
 /* ===== Partner "world-change" transition (blue tab -> business.html) ===== */
 (function () {
   "use strict";
