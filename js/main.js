@@ -268,7 +268,11 @@
   /* ---------- 14. Event tracking (GA4/dataLayer-ready) ---------- */
   window.bcTrack = function (action, label) {
     try {
-      if (typeof window.gtag === "function") window.gtag("event", action, { event_label: label || "" });
+      if (typeof window.gtag === "function") {
+        window.gtag("event", action, { event_label: label || "" });
+        var conv = window.__bcConv && window.__bcConv[action];
+        if (conv) window.gtag("event", "conversion", { send_to: conv });
+      }
       else if (window.dataLayer) window.dataLayer.push({ event: action, label: label || "" });
     } catch (err) { /* no-op */ }
   };
@@ -285,37 +289,60 @@
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 })();
 
-/* ===== 16. Cookie consent + consent-gated GA4 (G-1KJ6EQDN8Q) ===== */
-/* GDPR: analytics load ONLY after explicit Accept; choice persisted; banner
-   follows the page language; cookies.html documents the policy. */
+/* ===== 16. Cookie consent + Consent Mode v2 (GA4 + Google Ads) ===== */
+/* GDPR via Google Consent Mode v2: the tag loads on every visit but starts
+   fully DENIED — no cookies, no identifiers, anonymous pings only. Explicit
+   Accept upgrades consent; choice persisted; banner follows the page
+   language; cookies.html documents the policy. */
 (function () {
   "use strict";
   var GA_ID = "G-1KJ6EQDN8Q";
+  var AW_ID = "AW-18231341661";
   var KEY = "bc-consent"; // "granted" | "denied"
 
-  function loadGA() {
-    if (window.__bcGaLoaded) return;
-    window.__bcGaLoaded = true;
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = function () { window.dataLayer.push(arguments); };
-    window.gtag("js", new Date());
-    window.gtag("config", GA_ID, { anonymize_ip: true });
-    var s = document.createElement("script");
-    s.async = true;
-    s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
-    document.head.appendChild(s);
+  // Google Ads conversion labels fired by bcTrack (section 14)
+  window.__bcConv = {
+    form_submit:    AW_ID + "/jmI4CJyms8McEN3ksPVD", // Book appointment
+    whatsapp_click: AW_ID + "/u70-CJOg1sMcEN3ksPVD", // Contact
+    phone_click:    AW_ID + "/u70-CJOg1sMcEN3ksPVD"  // Contact
+  };
+
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { window.dataLayer.push(arguments); };
+  window.gtag("consent", "default", {
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+    analytics_storage: "denied",
+    wait_for_update: 500
+  });
+  window.gtag("js", new Date());
+  window.gtag("config", GA_ID, { anonymize_ip: true });
+  window.gtag("config", AW_ID);
+  var s = document.createElement("script");
+  s.async = true;
+  s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+  document.head.appendChild(s);
+
+  function grant() {
+    window.gtag("consent", "update", {
+      ad_storage: "granted",
+      ad_user_data: "granted",
+      ad_personalization: "granted",
+      analytics_storage: "granted"
+    });
   }
 
   var choice = null;
   try { choice = localStorage.getItem(KEY); } catch (e) {}
-  if (choice === "granted") { loadGA(); return; }
+  if (choice === "granted") { grant(); return; }
   if (choice === "denied") return;
 
   var lang = (document.documentElement.getAttribute("lang") || "ro").slice(0, 2);
   var T = {
-    ro: { msg: 'Folosim cookie-uri de analiză (Google Analytics, IP mascat) doar cu acordul tău. <a href="/cookies.html">Detalii</a>', yes: "Accept", no: "Refuz" },
-    en: { msg: 'We use analytics cookies (Google Analytics, masked IP) only with your consent. <a href="/en/cookies.html">Details</a>', yes: "Accept", no: "Decline" },
-    ru: { msg: 'Мы используем аналитические cookie (Google Analytics, маскированный IP) только с вашего согласия. <a href="/ru/cookies.html">Подробнее</a>', yes: "Принять", no: "Отклонить" }
+    ro: { msg: 'Folosim cookie-uri de analiză și publicitate (Google Analytics & Google Ads, IP mascat) doar cu acordul tău. <a href="/cookies.html">Detalii</a>', yes: "Accept", no: "Refuz" },
+    en: { msg: 'We use analytics & advertising cookies (Google Analytics & Google Ads, masked IP) only with your consent. <a href="/en/cookies.html">Details</a>', yes: "Accept", no: "Decline" },
+    ru: { msg: 'Мы используем cookie аналитики и рекламы (Google Analytics и Google Ads, маскированный IP) только с вашего согласия. <a href="/ru/cookies.html">Подробнее</a>', yes: "Принять", no: "Отклонить" }
   };
   var t = T[lang] || T.ro;
 
@@ -334,7 +361,7 @@
   function close(v) {
     try { localStorage.setItem(KEY, v); } catch (e) {}
     if (bar.parentNode) bar.parentNode.removeChild(bar);
-    if (v === "granted") loadGA();
+    if (v === "granted") grant();
   }
   bar.querySelector(".bc-c-yes").addEventListener("click", function () { close("granted"); });
   bar.querySelector(".bc-c-no").addEventListener("click", function () { close("denied"); });
