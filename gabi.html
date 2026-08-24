@@ -149,9 +149,10 @@ footer a:hover{color:var(--navy)}
 footer .flinks{display:flex;gap:18px;flex-wrap:wrap}
 footer .fine{width:100%;margin-top:22px;padding-top:18px;border-top:1px solid var(--line);font-size:12.5px;color:#8AA0B2}
 
-/* reveal */
-.rvl{opacity:0;transform:translateY(18px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
-.rvl.in{opacity:1;transform:none}
+/* reveal — readable without JavaScript; motion is armed only after IO is ready */
+.rvl{opacity:1;transform:none;transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.motion-ready .rvl{opacity:0;transform:translateY(18px)}
+.motion-ready .rvl.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.rvl{opacity:1;transform:none;transition:none}}
 </style>
 </head>
@@ -302,13 +303,19 @@ footer .fine{width:100%;margin-top:22px;padding-top:18px;border-top:1px solid va
 <script>
 (function(){
   var els=document.querySelectorAll('.rvl');
-  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion:reduce)').matches){
-    els.forEach(function(e){e.classList.add('in')});return;
+  try{
+    if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion:reduce)').matches){
+      els.forEach(function(e){e.classList.add('in')});return;
+    }
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{rootMargin:'0px 0px -8% 0px'});
+    document.documentElement.classList.add('motion-ready');
+    els.forEach(function(e){io.observe(e)});
+  }catch(error){
+    document.documentElement.classList.remove('motion-ready');
+    els.forEach(function(e){e.classList.add('in')});
   }
-  var io=new IntersectionObserver(function(entries){
-    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
-  },{rootMargin:'0px 0px -8% 0px'});
-  els.forEach(function(e){io.observe(e)});
 })();
 </script>
 </body>

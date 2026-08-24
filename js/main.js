@@ -167,22 +167,29 @@
 
   /* ---------- 8. IntersectionObserver — one for everything ---------- */
   var revealEls = document.querySelectorAll(".rv, [data-reveal]");
-  if (RM || !("IntersectionObserver" in window)) {
+  try {
+    if (RM || !("IntersectionObserver" in window)) {
+      revealEls.forEach(function (el) { el.classList.add("in"); });
+      armCounters(document);
+    } else {
+      var counted = false;
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          e.target.classList.add("in");
+          if (!counted && e.target.classList.contains("trust-strip")) { counted = true; armCounters(document); }
+          io.unobserve(e.target);
+        });
+      }, { rootMargin: "0px 0px -10% 0px" });
+      document.documentElement.classList.add("motion-ready");
+      revealEls.forEach(function (el) { io.observe(el); });
+      // trust strips that aren't .rv targets themselves
+      if (!document.querySelector(".trust-strip.rv")) armCounters(document);
+    }
+  } catch (error) {
+    document.documentElement.classList.remove("motion-ready");
     revealEls.forEach(function (el) { el.classList.add("in"); });
     armCounters(document);
-  } else {
-    var counted = false;
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (!e.isIntersecting) return;
-        e.target.classList.add("in");
-        if (!counted && e.target.classList.contains("trust-strip")) { counted = true; armCounters(document); }
-        io.unobserve(e.target);
-      });
-    }, { rootMargin: "0px 0px -10% 0px" });
-    revealEls.forEach(function (el) { io.observe(el); });
-    // trust strips that aren't .rv targets themselves
-    if (!document.querySelector(".trust-strip.rv")) armCounters(document);
   }
 
   /* ---------- 9. Scroll loop: header transform + peek + parallax ---------- */

@@ -74,10 +74,12 @@ h1,h2,h3{letter-spacing:-.028em;line-height:1.06;font-weight:700}
 @media(max-width:760px){.stickycta{display:block;transform:translateY(120%);transition:transform var(--d2) var(--ease)}.stickycta.show{transform:none}body{padding-bottom:76px}}
 
 /* ---- reveal / motion ---- */
-.reveal{opacity:0;transform:translateY(18px);transition:opacity var(--d3) var(--ease),transform var(--d3) var(--ease);transition-delay:var(--rd,0ms)}
-.reveal.in{opacity:1;transform:none}
-.clipin{clip-path:inset(0 0 100% 0);transition:clip-path .8s var(--ease);transition-delay:var(--rd,0ms)}
-.clipin.in{clip-path:inset(0 0 0 0)}
+.reveal{opacity:1;transform:none;transition:opacity var(--d3) var(--ease),transform var(--d3) var(--ease);transition-delay:var(--rd,0ms)}
+.motion-ready .reveal{opacity:0;transform:translateY(18px)}
+.motion-ready .reveal.in{opacity:1;transform:none}
+.clipin{clip-path:inset(0 0 0 0);transition:clip-path .8s var(--ease);transition-delay:var(--rd,0ms)}
+.motion-ready .clipin{clip-path:inset(0 0 100% 0)}
+.motion-ready .clipin.in{clip-path:inset(0 0 0 0)}
 
 .hero{padding:150px 0 40px}
 .hero .grid{display:grid;grid-template-columns:1.08fr .92fr;gap:56px;align-items:center}
