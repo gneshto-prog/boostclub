@@ -830,6 +830,10 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
       <form class="leadform" id="leadForm" name="partner-lead" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
         <input type="hidden" name="form-name" value="partner-lead">
         <input type="hidden" name="lang" value="ro">
+        <input type="hidden" name="idempotency_key" value="">
+        <input type="hidden" name="lead_type" value="business">
+        <input type="hidden" name="landing_page" value="">
+        <input type="hidden" name="click_id" value="">
         <p class="lf-hp"><label>Lasă acest câmp gol: <input name="bot-field"></label></p>
         <div class="lf-grid">
           <input type="text" name="name" placeholder="Numele tău" required>
@@ -873,6 +877,8 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
   </div>
 </footer>
 
+<script src="js/attribution.js?v=1"></script>
+<script src="js/lead-pipeline.js?v=1"></script>
 <script>
 const REDUCE=matchMedia('(prefers-reduced-motion:reduce)').matches;
 
@@ -1263,7 +1269,13 @@ function initMap(){
 (function(){
   var lt=document.getElementById('leadToggle'), lf=document.getElementById('leadForm'), th=document.getElementById('leadThanks');
   if(lt&&lf){lt.addEventListener('click',function(){lf.hidden=!lf.hidden;lt.setAttribute('aria-expanded',lf.hidden?'false':'true');});}
-  if(lf){lf.addEventListener('submit',function(e){e.preventDefault();var b=new URLSearchParams(new FormData(lf)).toString();fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:b}).then(function(){lf.hidden=true;if(th)th.hidden=false;}).catch(function(){lf.submit();});});}
+  if(lf){lf.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!lf.checkValidity()){lf.reportValidity();return;}
+    var btn=lf.querySelector('[type="submit"]');if(btn)btn.disabled=true;
+    window.BoostLeadPipeline.submit(lf).then(function(){lf.hidden=true;if(th)th.hidden=false;})
+      .catch(function(error){if(btn)btn.disabled=false;var ref=error&&error.requestId?' Referință: '+error.requestId:'';alert(error&&error.savedToCrm?'Datele sunt în CRM, dar calendarul nu s-a actualizat. Încearcă din nou sau sună-l pe Gabi.'+ref:'Nu am putut salva datele. Încearcă din nou sau sună-l pe Gabi.'+ref);});
+  });}
 })();
 </script>
 </body>

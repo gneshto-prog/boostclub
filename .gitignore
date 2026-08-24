@@ -1,5 +1,12 @@
 .DS_Store
 images/.DS_Store
+.netlify/
+netlify/functions/*.zip
+netlify/functions/manifest.json
+supabase/.temp/
+.env
+.env.*
+!.env.example
 images_backup/
 MASTER-PROMPT.md
 docs/

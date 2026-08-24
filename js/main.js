@@ -266,18 +266,18 @@
   }
 
   /* ---------- 14. Event tracking (GA4/dataLayer-ready) ---------- */
-  window.bcTrack = function (action, label) {
+  window.bcTrack = function (action, label, params) {
     try {
-      if (typeof window.gtag === "function") window.gtag("event", action, { event_label: label || "" });
-      else if (window.dataLayer) window.dataLayer.push({ event: action, label: label || "" });
+      var payload = Object.assign({ event_label: label || "" }, params || {});
+      if (typeof window.gtag === "function") window.gtag("event", action, payload);
+      else if (window.dataLayer) window.dataLayer.push(Object.assign({ event: action }, payload));
     } catch (err) { /* no-op */ }
   };
   document.addEventListener("click", function (ev) {
     var a = ev.target.closest ? ev.target.closest("a[href]") : null;
     if (!a) return;
     var href = a.getAttribute("href") || "";
-    if (href.indexOf("wa.me") > -1) window.bcTrack("whatsapp_click", location.pathname);
-    else if (href.indexOf("tel:") === 0) window.bcTrack("phone_click", location.pathname);
+    if (href.indexOf("tel:") === 0) window.bcTrack("phone_click", location.pathname);
   }, true);
 
   /* ---------- 15. Year ---------- */
