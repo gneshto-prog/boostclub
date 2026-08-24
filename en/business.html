@@ -397,7 +397,7 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
 .lf-hp{position:absolute;left:-9999px}
 .lf-thanks{margin-top:20px;font-weight:600;color:var(--navy)}
 </style>
-<link rel="stylesheet" href="../css/business-phase2.css?v=1">
+<link rel="stylesheet" href="../css/business-phase2.css?v=2">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
  {"@type":"Person","@id":"https://boostclub.ro/gabi#person","name":"Gabriel Neshto","alternateName":"Gabi Neshto","jobTitle":"Founder","worksFor":{"@type":"Organization","name":"Boost Club","address":{"@type":"PostalAddress","streetAddress":"Strada Sevastopol 24","addressLocality":"București","addressCountry":"RO"}},"url":"https://boostclub.ro/gabi","sameAs":["https://www.instagram.com/gabineshto"]},
@@ -439,6 +439,27 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
     <div>
       <span class="klabel reveal">Partner Program</span>
       <h1 class="reveal">Build your own nutrition business <em>inside one that already works.</em></h1>
+      <div class="hero-lead reveal">
+        <p class="hero-lead-title">Want to see what this could look like in your country?</p>
+        <p class="hero-lead-copy">Leave three details. Gabriel replies personally, with no cost and no pressure.</p>
+        <form class="leadform hero-lead-form" id="leadForm" name="partner-lead" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="partner-lead">
+          <input type="hidden" name="lang" value="en">
+          <input type="hidden" name="idempotency_key" value="">
+          <input type="hidden" name="lead_type" value="business">
+          <input type="hidden" name="landing_page" value="">
+          <input type="hidden" name="click_id" value="">
+          <p class="lf-hp"><label>Leave this empty: <input name="bot-field"></label></p>
+          <div class="lf-grid">
+            <input type="text" name="name" placeholder="Your name" aria-label="Your name" autocomplete="name" required>
+            <input type="text" name="contact" placeholder="Email or phone" aria-label="Email or phone" autocomplete="email" required>
+            <input type="text" name="country" placeholder="Your country" aria-label="Country where you would build" autocomplete="country-name" required>
+          </div>
+          <button class="btn btn-cta" type="submit">Send my details <span class="arw">&rarr;</span></button>
+          <p class="lf-note">Personal reply · usually within a few hours</p>
+        </form>
+        <p class="lf-thanks" id="leadThanks" hidden>Thanks — your details are in. Gabriel will reach out personally.</p>
+      </div>
       <p class="sub reveal">You build on a business model that already runs — proven across 67,000 nutrition club locations in over 90 countries. You run yours in your own country, with the same method, mentoring and support. What changes is how it's structured for your market and where you're starting from.</p>
       <div class="cta-row reveal">
         <a class="btn btn-cta btn-lg btn-mag" href="https://wa.me/40726205752?text=Hi%20Gabi%2C%20I'd%20like%20to%20book%20a%20call%20about%20building%20my%20own." target="_blank" rel="noopener">
@@ -826,27 +847,7 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
       </a>
     </div>
     <div class="rr reveal">Replies personally · usually within a few hours</div>
-    <div class="leadform-wrap reveal">
-      <button class="leadform-toggle" id="leadToggle" type="button" aria-expanded="false">Prefer email? Leave your details instead</button>
-      <form class="leadform" id="leadForm" name="partner-lead" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
-        <input type="hidden" name="form-name" value="partner-lead">
-        <input type="hidden" name="lang" value="en">
-        <input type="hidden" name="idempotency_key" value="">
-        <input type="hidden" name="lead_type" value="business">
-        <input type="hidden" name="landing_page" value="">
-        <input type="hidden" name="click_id" value="">
-        <p class="lf-hp"><label>Leave this empty: <input name="bot-field"></label></p>
-        <div class="lf-grid">
-          <input type="text" name="name" placeholder="Your name" required>
-          <input type="text" name="contact" placeholder="Email or phone" required>
-          <input type="text" name="country" placeholder="Where you'd build (country)">
-          <textarea name="message" placeholder="Anything you want Gabriel to know (optional)" rows="2"></textarea>
-        </div>
-        <button class="btn btn-cta" type="submit">Send my details <span class="arw">&rarr;</span></button>
-        <p class="lf-note">Gabriel replies personally, usually within a few hours.</p>
-      </form>
-      <p class="lf-thanks" id="leadThanks" hidden>Thanks — your details are in. Gabriel will reach out personally.</p>
-    </div>
+    <div class="leadform-wrap reveal"><a class="leadform-toggle" href="#leadForm">Prefer email? Complete the form above ↑</a></div>
   </div>
 </section>
 
@@ -904,15 +905,22 @@ addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(o
 if(REDUCE){
   document.querySelectorAll('.reveal,.clipin,.pointlist .p').forEach(e=>e.classList.add('in'));
 }else{
-  const io=new IntersectionObserver((es)=>{es.forEach(e=>{
-    if(e.isIntersecting){
-      const items=e.target.querySelectorAll('.reveal,.clipin,.pointlist .p');
-      items.forEach((el,i)=>{el.style.setProperty('--rd',(i*70)+'ms');el.classList.add('in');});
-      if(e.target.matches('.reveal,.clipin'))e.target.classList.add('in');
-      io.unobserve(e.target);
-    }
-  })},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
-  document.querySelectorAll('[data-seq]').forEach(s=>io.observe(s));
+  try{
+    const sequences=document.querySelectorAll('[data-seq]');
+    const io=new IntersectionObserver((es)=>{es.forEach(e=>{
+      if(e.isIntersecting){
+        const items=e.target.querySelectorAll('.reveal,.clipin,.pointlist .p');
+        items.forEach((el,i)=>{el.style.setProperty('--rd',(i*70)+'ms');el.classList.add('in');});
+        if(e.target.matches('.reveal,.clipin'))e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    })},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+    document.documentElement.classList.add('motion-ready');
+    sequences.forEach(s=>io.observe(s));
+  }catch(error){
+    document.documentElement.classList.remove('motion-ready');
+    document.querySelectorAll('.reveal,.clipin,.pointlist .p').forEach(e=>e.classList.add('in'));
+  }
 }
 
 /* ---- count-up ---- */
@@ -1268,8 +1276,7 @@ function initMap(){
 
 /* ---- lead form (Netlify) ---- */
 (function(){
-  var lt=document.getElementById('leadToggle'), lf=document.getElementById('leadForm'), th=document.getElementById('leadThanks');
-  if(lt&&lf){lt.addEventListener('click',function(){lf.hidden=!lf.hidden;lt.setAttribute('aria-expanded',lf.hidden?'false':'true');});}
+  var lf=document.getElementById('leadForm'), th=document.getElementById('leadThanks');
   if(lf){lf.addEventListener('submit',function(e){
     e.preventDefault();
     if(!lf.checkValidity()){lf.reportValidity();return;}

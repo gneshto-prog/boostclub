@@ -397,7 +397,7 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
 .lf-hp{position:absolute;left:-9999px}
 .lf-thanks{margin-top:20px;font-weight:600;color:var(--navy)}
 </style>
-<link rel="stylesheet" href="css/business-phase2.css?v=1">
+<link rel="stylesheet" href="css/business-phase2.css?v=2">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
  {"@type":"Person","@id":"https://boostclub.ro/gabi#person","name":"Gabriel Neshto","alternateName":"Gabi Neshto","jobTitle":"Fondator","worksFor":{"@type":"Organization","name":"Boost Club","address":{"@type":"PostalAddress","streetAddress":"Strada Sevastopol 24","addressLocality":"București","addressCountry":"RO"}},"url":"https://boostclub.ro/gabi","sameAs":["https://www.instagram.com/gabineshto"]},
@@ -439,6 +439,27 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
     <div>
       <span class="klabel reveal">Program Partener</span>
       <h1 class="reveal">Construiește-ți propria afacere în nutriție <em>în interiorul uneia care funcționează deja.</em></h1>
+      <div class="hero-lead reveal">
+        <p class="hero-lead-title">Vrei să vezi cum ar arăta în țara ta?</p>
+        <p class="hero-lead-copy">Lasă trei detalii. Gabriel îți răspunde personal, fără costuri și fără presiune.</p>
+        <form class="leadform hero-lead-form" id="leadForm" name="partner-lead" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="partner-lead">
+          <input type="hidden" name="lang" value="ro">
+          <input type="hidden" name="idempotency_key" value="">
+          <input type="hidden" name="lead_type" value="business">
+          <input type="hidden" name="landing_page" value="">
+          <input type="hidden" name="click_id" value="">
+          <p class="lf-hp"><label>Lasă acest câmp gol: <input name="bot-field"></label></p>
+          <div class="lf-grid">
+            <input type="text" name="name" placeholder="Numele tău" aria-label="Numele tău" autocomplete="name" required>
+            <input type="text" name="contact" placeholder="Email sau telefon" aria-label="Email sau telefon" autocomplete="email" required>
+            <input type="text" name="country" placeholder="Țara ta" aria-label="Țara în care ai construi" autocomplete="country-name" required>
+          </div>
+          <button class="btn btn-cta" type="submit">Trimite datele mele <span class="arw">&rarr;</span></button>
+          <p class="lf-note">Răspunde personal · de obicei în câteva ore</p>
+        </form>
+        <p class="lf-thanks" id="leadThanks" hidden>Mulțumim — datele tale au ajuns. Gabriel te va contacta personal.</p>
+      </div>
       <p class="sub reveal">Construiești pe un model de business care rulează deja — dovedit în 67.000 de cluburi de nutriție din peste 90 de țări. Tu îl conduci pe al tău în țara ta, cu aceeași metodă, același mentorat și același sprijin. Ce se schimbă este felul în care e structurat pentru piața ta și punctul din care pornești.</p>
       <div class="cta-row reveal">
         <a class="btn btn-cta btn-lg btn-mag" href="https://wa.me/40726205752?text=Bun%C4%83%20Gabi%2C%20a%C8%99%20vrea%20s%C4%83%20programez%20un%20apel%20despre%20programul%20de%20parteneriat." target="_blank" rel="noopener">
@@ -826,27 +847,7 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
       </a>
     </div>
     <div class="rr reveal">Răspunde personal · de obicei în câteva ore</div>
-    <div class="leadform-wrap reveal">
-      <button class="leadform-toggle" id="leadToggle" type="button" aria-expanded="false">Preferi emailul? Lasă-ți datele aici</button>
-      <form class="leadform" id="leadForm" name="partner-lead" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
-        <input type="hidden" name="form-name" value="partner-lead">
-        <input type="hidden" name="lang" value="ro">
-        <input type="hidden" name="idempotency_key" value="">
-        <input type="hidden" name="lead_type" value="business">
-        <input type="hidden" name="landing_page" value="">
-        <input type="hidden" name="click_id" value="">
-        <p class="lf-hp"><label>Lasă acest câmp gol: <input name="bot-field"></label></p>
-        <div class="lf-grid">
-          <input type="text" name="name" placeholder="Numele tău" required>
-          <input type="text" name="contact" placeholder="Email sau telefon" required>
-          <input type="text" name="country" placeholder="Unde ai construi (țara)">
-          <textarea name="message" placeholder="Orice vrei să știe Gabriel (opțional)" rows="2"></textarea>
-        </div>
-        <button class="btn btn-cta" type="submit">Trimite datele mele <span class="arw">&rarr;</span></button>
-        <p class="lf-note">Gabriel răspunde personal, de obicei în câteva ore.</p>
-      </form>
-      <p class="lf-thanks" id="leadThanks" hidden>Mulțumim — datele tale au ajuns. Gabriel te va contacta personal.</p>
-    </div>
+    <div class="leadform-wrap reveal"><a class="leadform-toggle" href="#leadForm">Preferi emailul? Completează formularul de sus ↑</a></div>
   </div>
 </section>
 
@@ -904,15 +905,22 @@ addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(o
 if(REDUCE){
   document.querySelectorAll('.reveal,.clipin,.pointlist .p').forEach(e=>e.classList.add('in'));
 }else{
-  const io=new IntersectionObserver((es)=>{es.forEach(e=>{
-    if(e.isIntersecting){
-      const items=e.target.querySelectorAll('.reveal,.clipin,.pointlist .p');
-      items.forEach((el,i)=>{el.style.setProperty('--rd',(i*70)+'ms');el.classList.add('in');});
-      if(e.target.matches('.reveal,.clipin'))e.target.classList.add('in');
-      io.unobserve(e.target);
-    }
-  })},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
-  document.querySelectorAll('[data-seq]').forEach(s=>io.observe(s));
+  try{
+    const sequences=document.querySelectorAll('[data-seq]');
+    const io=new IntersectionObserver((es)=>{es.forEach(e=>{
+      if(e.isIntersecting){
+        const items=e.target.querySelectorAll('.reveal,.clipin,.pointlist .p');
+        items.forEach((el,i)=>{el.style.setProperty('--rd',(i*70)+'ms');el.classList.add('in');});
+        if(e.target.matches('.reveal,.clipin'))e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    })},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+    document.documentElement.classList.add('motion-ready');
+    sequences.forEach(s=>io.observe(s));
+  }catch(error){
+    document.documentElement.classList.remove('motion-ready');
+    document.querySelectorAll('.reveal,.clipin,.pointlist .p').forEach(e=>e.classList.add('in'));
+  }
 }
 
 /* ---- count-up ---- */
@@ -1268,8 +1276,7 @@ function initMap(){
 
 /* ---- lead form (Netlify) ---- */
 (function(){
-  var lt=document.getElementById('leadToggle'), lf=document.getElementById('leadForm'), th=document.getElementById('leadThanks');
-  if(lt&&lf){lt.addEventListener('click',function(){lf.hidden=!lf.hidden;lt.setAttribute('aria-expanded',lf.hidden?'false':'true');});}
+  var lf=document.getElementById('leadForm'), th=document.getElementById('leadThanks');
   if(lf){lf.addEventListener('submit',function(e){
     e.preventDefault();
     if(!lf.checkValidity()){lf.reportValidity();return;}
