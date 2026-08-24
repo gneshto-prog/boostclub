@@ -25,18 +25,7 @@ const slugs = [
   "termeni",
 ];
 const expectedHreflang = new Set(["ro", "en", "ru", "x-default"]);
-const knownOwnerAssets = new Set([
-  "images/clubs/romania.jpg",
-  "images/clubs/israel.jpg",
-  "images/clubs/uzbekistan.jpg",
-  "images/clubs/kazakhstan.jpg",
-  "images/clubs/mexico.jpg",
-  "images/clubs/puerto-rico.jpg",
-  "images/clubs/usa.jpg",
-]);
-
 const errors = [];
-const warnings = [];
 const pages = [];
 
 function fail(message) {
@@ -153,11 +142,7 @@ for (const file of assetFiles) {
   for (const reference of references) {
     const resolved = resolveLocal(reference, file);
     if (!resolved || fs.existsSync(resolved.absolute)) continue;
-    if (knownOwnerAssets.has(resolved.relative)) {
-      warnings.push(`awaiting owner photo ${resolved.relative}`);
-    } else {
-      fail(`${file}: missing referenced asset ${reference} (${resolved.relative})`);
-    }
+    fail(`${file}: missing referenced asset ${reference} (${resolved.relative})`);
   }
 }
 
@@ -187,12 +172,6 @@ for (const page of pages) {
   if (!new RegExp(`^${escaped}\\s+${page.route.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\s+301(?:!|\\s|$)`, "m").test(redirects)) {
     fail(`_redirects: missing 301 from ${oldRoute} to ${page.route}`);
   }
-}
-
-const uniqueWarnings = [...new Set(warnings)];
-if (uniqueWarnings.length) {
-  console.warn(`Site validation warnings (${uniqueWarnings.length}):`);
-  for (const warning of uniqueWarnings) console.warn(`  WARN ${warning}`);
 }
 
 if (errors.length) {

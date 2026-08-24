@@ -19,10 +19,6 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
   --blue:#1098D4;--navy:#061A2F;--sky:#A7DFF2;--white:#FFFFFF;
@@ -259,7 +255,7 @@ section{padding:78px 0}
 .foot a{position:relative;display:inline-block}
 .foot a::after{content:"";position:absolute;left:0;bottom:2px;width:100%;height:1px;background:#8fa6ba;transform:scaleX(0);transform-origin:left;transition:transform var(--d2) var(--ease)}
 .foot a:hover::after{transform:scaleX(1)}
-.foot h5{font-family:'IBM Plex Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#fff;margin-bottom:10px;font-weight:500}
+.foot h3{font-family:'IBM Plex Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#fff;margin-bottom:10px;font-weight:500}
 .foot .disc{border-top:1px solid rgba(255,255,255,.1);margin-top:34px;padding-top:24px;font-size:12px;color:#7f96ab;line-height:1.7}
 
 /* ===== Path Configurator ===== */
@@ -399,7 +395,7 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
 .lf-hp{position:absolute;left:-9999px}
 .lf-thanks{margin-top:20px;font-weight:600;color:var(--navy)}
 </style>
-<link rel="stylesheet" href="../css/business-phase2.css?v=3">
+<link rel="stylesheet" href="../css/business-phase2.css?v=6">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
  {"@type":"Person","@id":"https://boostclub.ro/gabi#person","name":"Gabriel Neshto","alternateName":"Gabi Neshto","jobTitle":"Founder","worksFor":{"@type":"Organization","name":"Boost Club","address":{"@type":"PostalAddress","streetAddress":"Strada Sevastopol 24","addressLocality":"București","addressCountry":"RO"}},"url":"https://boostclub.ro/gabi","sameAs":["https://www.instagram.com/gabineshto"]},
@@ -477,7 +473,7 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
       </div>
       <a class="scrollcue reveal" href="#map" aria-label="Scroll to start with your country"><span class="c"></span> Scroll</a>
     </div>
-    <div class="heroimg clipin"><img src="../images/familie-neshto-wellness.webp" alt="The Boost Club community in Bucharest" onerror="if(!this.dataset.p){this.dataset.p=1;this.src='../images/familie-neshto-wellness.webp'}else{this.style.display='none'}" width="896" height="1193" fetchpriority="high"><div class="scrim"></div><span class="cap">Boost Club · Sevastopol 24, Bucharest</span></div>
+    <div class="heroimg clipin"><img src="../images/familie-neshto-wellness.webp" alt="The Boost Club community in Bucharest" onerror="if(!this.dataset.p){this.dataset.p=1;this.src='../images/familie-neshto-wellness.webp'}else{this.style.display='none'}" width="896" height="1193" fetchpriority="low"><div class="scrim"></div><span class="cap">Boost Club · Sevastopol 24, Bucharest</span></div>
   </div>
 </header>
 
@@ -514,13 +510,13 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
     <div class="clubs reveal">
       <span class="klabel">Clubs built on the same model, worldwide</span>
       <div class="clubrow">
-        <figure class="clubcard" data-cc="Romania"><img src="../images/clubs/romania.jpg" alt="Nutrition club — Romania" loading="lazy" onerror="this.closest('.clubcard').classList.add('noimg')"><figcaption>Romania</figcaption></figure>
-        <figure class="clubcard" data-cc="Israel"><img src="../images/clubs/israel.jpg" alt="Nutrition club — Israel" loading="lazy" onerror="this.closest('.clubcard').classList.add('noimg')"><figcaption>Israel</figcaption></figure>
-        <figure class="clubcard" data-cc="Uzbekistan"><img src="../images/clubs/uzbekistan.jpg" alt="Nutrition club — Uzbekistan" loading="lazy" onerror="this.closest('.clubcard').classList.add('noimg')"><figcaption>Uzbekistan</figcaption></figure>
-        <figure class="clubcard" data-cc="Kazakhstan"><img src="../images/clubs/kazakhstan.jpg" alt="Nutrition club — Kazakhstan" loading="lazy" onerror="this.closest('.clubcard').classList.add('noimg')"><figcaption>Kazakhstan</figcaption></figure>
-        <figure class="clubcard" data-cc="Mexico"><img src="../images/clubs/mexico.jpg" alt="Nutrition club — Mexico" loading="lazy" onerror="this.closest('.clubcard').classList.add('noimg')"><figcaption>Mexico</figcaption></figure>
-        <figure class="clubcard" data-cc="Puerto Rico"><img src="../images/clubs/puerto-rico.jpg" alt="Nutrition club — Puerto Rico" loading="lazy" onerror="this.closest('.clubcard').classList.add('noimg')"><figcaption>Puerto Rico</figcaption></figure>
-        <figure class="clubcard" data-cc="USA"><img src="../images/clubs/usa.jpg" alt="Nutrition club — USA" loading="lazy" onerror="this.closest('.clubcard').classList.add('noimg')"><figcaption>USA</figcaption></figure>
+        <figure class="clubcard noimg" data-cc="Romania"><figcaption>Romania</figcaption></figure>
+        <figure class="clubcard noimg" data-cc="Israel"><figcaption>Israel</figcaption></figure>
+        <figure class="clubcard noimg" data-cc="Uzbekistan"><figcaption>Uzbekistan</figcaption></figure>
+        <figure class="clubcard noimg" data-cc="Kazakhstan"><figcaption>Kazakhstan</figcaption></figure>
+        <figure class="clubcard noimg" data-cc="Mexico"><figcaption>Mexico</figcaption></figure>
+        <figure class="clubcard noimg" data-cc="Puerto Rico"><figcaption>Puerto Rico</figcaption></figure>
+        <figure class="clubcard noimg" data-cc="USA"><figcaption>USA</figcaption></figure>
       </div>
     </div>
   </div>
@@ -865,12 +861,12 @@ body.bc-emerge #main{animation:bcEmerge .85s cubic-bezier(.2,.7,.2,1)}
         <small>Founded by Gabriel Neshto</small>
       </div>
       <div>
-        <h5>More</h5>
+        <h3>More</h3>
         <a href="https://boostclub.ro">boostclub.ro</a>
         <a href="https://boostclub.ro/consultatie-gratuita">Become a client</a>
       </div>
       <div>
-        <h5>Talk to Gabriel</h5>
+        <h3>Talk to Gabriel</h3>
         <a href="https://wa.me/40726205752" target="_blank" rel="noopener">WhatsApp · +40 726 205 752</a>
         <small>Mon–Fri 07:00–20:00 · Sun 10:00–18:00</small>
       </div>
