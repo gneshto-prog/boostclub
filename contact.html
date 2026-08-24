@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
   <meta name="theme-color" content="#0D5645">
-  <link rel="stylesheet" href="css/style.css?v=9">
+  <link rel="stylesheet" href="css/style.css?v=10">
   <link rel="canonical" href="https://boostclub.ro/contact">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://boostclub.ro/contact">
@@ -182,6 +182,9 @@
       border-bottom: 1px solid var(--line);
     }
     .route-step:last-child { border-bottom: none; }
+    .route-grid { display: grid; grid-template-columns: 1fr; gap: var(--s4); min-width: 0; }
+    .route-text { min-width: 0; overflow-wrap: anywhere; }
+    @media (min-width: 760px) { .route-grid { grid-template-columns: 1fr 1fr; } }
     .route-num {
       width: 28px; height: 28px;
       border-radius: 50%;
@@ -353,28 +356,24 @@
 
         <img src="images/gabriel-neshto-boost-club-bucuresti.jpg" alt="Boost Club — Strada Sevastopol 24, Sector 1, București" class="entrance-photo" width="800" height="600" loading="lazy">
 
-        <!-- Hartă Google Maps embed -->
-        <!--
-          INSTRUCȚIUNI HARTĂ:
-          1. Mergi la maps.google.com și caută "Strada Sevastopol 24, Sector 1, București"
-          2. Click pe Share → Embed a map → copiază codul <iframe>
-          3. Înlocuiește placeholder-ul de mai jos cu iframe-ul copiat
-          4. Adaugă loading="lazy" la iframe pentru performanță
-        -->
+        <!-- Profilul exact Boost Club, nu doar o căutare după adresă. -->
         <div class="map-embed" aria-label="Hartă locație Boost Club">
           <iframe
-            src="https://www.google.com/maps?q=Strada+Sevastopol+24,+Sector+1,+Bucure%C8%99ti&output=embed"
+            src="https://www.google.com/maps?q=Boost+Club,+Strada+Sevastopol+24,+Bucuresti&output=embed"
             title="Locație Boost Club pe hartă"
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
             allowfullscreen>
           </iframe>
-          <!-- NOTĂ: Înlocuiește src-ul de mai sus cu embed-ul real de pe Google Maps -->
         </div>
+
+        <a id="google-profile" href="https://maps.app.goo.gl/yZJkKDwB5sqtPskf8" target="_blank" rel="noopener" class="rating-chip" aria-label="Vezi profilul Boost Club și recenziile pe Google">
+          <span class="rc-g">G</span><span class="rc-stars">★★★★★</span><span class="rc-score">5,0</span><span class="rc-cnt">34 recenzii Google</span>
+        </a>
 
         <!-- Link Google Maps -->
         <a
-          href="https://www.google.com/maps/search/Strada+Sevastopol+24+Sector+1+Bucuresti"
+          href="https://maps.app.goo.gl/yZJkKDwB5sqtPskf8"
           target="_blank"
           rel="noopener"
           class="btn btn-secondary"
@@ -397,7 +396,7 @@
     </div>
 
     <div style="display:grid; grid-template-columns:1fr; gap:var(--s5); max-width:860px;">
-      <div style="display:grid; grid-template-columns: 1fr 1fr; gap:var(--s4);">
+      <div class="route-grid">
 
         <!-- Traseu metrou + pietonal -->
         <div class="contact-card">

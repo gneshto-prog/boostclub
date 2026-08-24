@@ -1062,7 +1062,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible { outline: 3px solid v
 @media (prefers-reduced-motion: reduce) { .step-panel.is-active { animation: none; } .step-dot span { transition: none; } }
 
 /* ---- 29. HERO RATING CHIP + FLOATING BADGE ---- */
-.rating-chip { display: inline-flex; align-items: center; gap: 8px; background: #fff; border-radius: 999px; padding: 8px 15px; box-shadow: var(--shadow); text-decoration: none; margin-top: var(--s3); }
+.rating-chip { display: inline-flex; max-width: 100%; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px; background: #fff; border-radius: 999px; padding: 8px 15px; box-shadow: var(--shadow); text-decoration: none; margin-top: var(--s3); }
 .rating-chip .rc-g { font: 800 15px/1 'Poppins', sans-serif; color: #1a73e8; }
 .rating-chip .rc-stars { color: #fbbc04; letter-spacing: 1px; }
 .rating-chip .rc-score { font-weight: 800; color: var(--text); }
