@@ -285,11 +285,10 @@
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 })();
 
-/* ===== Partner "world-change" transition (blue tab -> business.html) ===== */
+/* ===== Partner "world-change" transition (blue tab -> /business) ===== */
 (function () {
   "use strict";
-  // Netlify's Pretty URLs post-processing rewrites "business.html" to "/business"
-  // in the served HTML, so match any business href rather than the exact file name.
+  // Match every localized clean business URL without coupling this effect to one language.
   var links = document.querySelectorAll('.nav a[href*="business"], .mobile-menu a[href*="business"]');
   if (!links.length) return;
   var rm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
