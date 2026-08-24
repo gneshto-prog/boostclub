@@ -1,0 +1,101 @@
+/* Phase 2: mobile conversion safety and 44px interaction targets. */
+
+.topbar .back,
+.topbar .btn,
+.scrollcue,
+.tlink,
+.leadform-toggle,
+button {
+  min-height: 44px;
+}
+
+.langsw a,
+.langsw span {
+  display: inline-flex;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+
+.foot a,
+.gabi a:not(.btn),
+a[href*="hrbl.me/"] {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+}
+
+.leadform-toggle {
+  padding: 12px 8px;
+}
+
+.skip {
+  left: 0;
+  transform: translateY(-120%);
+}
+
+.skip:focus {
+  transform: none;
+}
+
+@media (max-width: 760px) {
+  body {
+    padding-bottom: calc(77px + env(safe-area-inset-bottom));
+  }
+
+  .topbar {
+    min-height: 68px;
+    gap: 10px;
+    padding: 10px max(14px, env(safe-area-inset-right)) 10px max(14px, env(safe-area-inset-left));
+  }
+
+  .topbar.shrink {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .topbar-right {
+    min-width: 0;
+    margin-left: auto;
+  }
+
+  .topbar .btn-cta {
+    display: none;
+  }
+
+  .langsw {
+    gap: 0;
+  }
+
+  .langsw a,
+  .langsw span {
+    padding: 0;
+  }
+
+  .stickycta {
+    display: block;
+    padding: 10px max(14px, env(safe-area-inset-right)) calc(10px + env(safe-area-inset-bottom)) max(14px, env(safe-area-inset-left));
+    transform: none;
+  }
+
+  .stickycta .btn {
+    min-height: 52px;
+  }
+
+  .btn {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero .cta-row .btn,
+  .final .btn,
+  .ctx .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
