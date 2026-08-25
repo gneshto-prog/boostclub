@@ -1,3 +1,14 @@
+import {
+  rangesOverlap,
+  validateRequestedBooking,
+} from "./_shared/booking.mts";
+import {
+  getGoogleAccessToken,
+  getGoogleCalendarBusy,
+  googleCalendarId,
+} from "./_shared/google-calendar.mts";
+import { SupabaseRpcError, supabaseRpc } from "./_shared/supabase.mts";
+
 declare const Netlify: {
   env: { get(name: string): string | undefined };
 };
@@ -36,115 +47,11 @@ const normalizePhone = (value: unknown) => {
   return digits;
 };
 
-const base64Url = (input: string | Uint8Array) => {
-  const bytes = typeof input === "string" ? new TextEncoder().encode(input) : input;
-  let binary = "";
-  for (const byte of bytes) binary += String.fromCharCode(byte);
-  return btoa(binary).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/g, "");
-};
-
-const importPrivateKey = async (pem: string) => {
-  const body = pem
-    .replace(/-----BEGIN PRIVATE KEY-----/g, "")
-    .replace(/-----END PRIVATE KEY-----/g, "")
-    .replace(/\s/g, "");
-  const binary = atob(body);
-  const bytes = new Uint8Array(binary.length);
-  for (let i = 0; i < binary.length; i += 1) bytes[i] = binary.charCodeAt(i);
-  return crypto.subtle.importKey(
-    "pkcs8",
-    bytes,
-    { name: "RSASSA-PKCS1-v1_5", hash: "SHA-256" },
-    false,
-    ["sign"],
-  );
-};
-
-const getGoogleAccessToken = async () => {
-  const raw = Netlify.env.get("GOOGLE_SERVICE_ACCOUNT_JSON");
-  if (!raw) throw new Error("GOOGLE_SERVICE_ACCOUNT_JSON is not configured");
-
-  const credentials = JSON.parse(raw) as {
-    client_email?: string;
-    private_key?: string;
-    private_key_id?: string;
-    token_uri?: string;
-  };
-  if (!credentials.client_email || !credentials.private_key) {
-    throw new Error("Google service-account credentials are incomplete");
-  }
-
-  const now = Math.floor(Date.now() / 1000);
-  const header = {
-    alg: "RS256",
-    typ: "JWT",
-    ...(credentials.private_key_id ? { kid: credentials.private_key_id } : {}),
-  };
-  const claims = {
-    iss: credentials.client_email,
-    scope: "https://www.googleapis.com/auth/calendar.events",
-    aud: credentials.token_uri || "https://oauth2.googleapis.com/token",
-    iat: now - 30,
-    exp: now + 3300,
-  };
-  const unsigned = `${base64Url(JSON.stringify(header))}.${base64Url(JSON.stringify(claims))}`;
-  const key = await importPrivateKey(credentials.private_key);
-  const signature = new Uint8Array(
-    await crypto.subtle.sign("RSASSA-PKCS1-v1_5", key, new TextEncoder().encode(unsigned)),
-  );
-  const assertion = `${unsigned}.${base64Url(signature)}`;
-
-  const tokenResponse = await fetch(claims.aud, {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams({
-      grant_type: "urn:ietf:params:oauth:grant-type:jwt-bearer",
-      assertion,
-    }),
-  });
-  const tokenBody = (await tokenResponse.json()) as { access_token?: string; error?: string };
-  if (!tokenResponse.ok || !tokenBody.access_token) {
-    throw new Error(`Google token request failed (${tokenResponse.status})`);
-  }
-  return tokenBody.access_token;
-};
-
-const supabaseRpc = async (name: string, body: JsonRecord) => {
-  const supabaseUrl = Netlify.env.get("SUPABASE_URL")?.replace(/\/$/, "");
-  const secretKey = Netlify.env.get("SUPABASE_SECRET_KEY");
-  if (!supabaseUrl || !secretKey) {
-    throw new Error("Supabase server credentials are not configured");
-  }
-
-  const response = await fetch(`${supabaseUrl}/rest/v1/rpc/${name}`, {
-    method: "POST",
-    headers: {
-      apikey: secretKey,
-      Authorization: `Bearer ${secretKey}`,
-      "Content-Type": "application/json",
-      Prefer: "return=representation",
-    },
-    body: JSON.stringify(body),
-  });
-  const raw = await response.text();
-  let parsed: unknown = null;
-  try {
-    parsed = raw ? JSON.parse(raw) : null;
-  } catch {
-    parsed = null;
-  }
-  if (!response.ok) {
-    const code = typeof parsed === "object" && parsed && "code" in parsed
-      ? String((parsed as { code: unknown }).code)
-      : `HTTP_${response.status}`;
-    throw new Error(`Supabase RPC ${name} failed (${code})`);
-  }
-  return (Array.isArray(parsed) ? parsed[0] : parsed) as JsonRecord;
-};
-
 const createCalendarEvent = async (payload: JsonRecord, crm: JsonRecord) => {
-  const accessToken = await getGoogleAccessToken();
-  const calendarId = Netlify.env.get("GOOGLE_CALENDAR_ID") || "gneshto@gmail.com";
+  const accessToken = await getGoogleAccessToken([
+    "https://www.googleapis.com/auth/calendar.events",
+  ]);
+  const calendarId = googleCalendarId();
   const idempotencyKey = clean(payload.idempotencyKey, 36);
   const eventId = `bc${idempotencyKey.replace(/-/g, "").toLowerCase()}`;
   const leadType = payload.leadType === "business" ? "business" : "client";
@@ -159,7 +66,7 @@ const createCalendarEvent = async (payload: JsonRecord, crm: JsonRecord) => {
   const consultationId = clean(crm.consultation_id, 50);
 
   const summary = leadType === "client"
-    ? `Boost Club — confirmă scanarea: ${fullName}`
+    ? `${payload.requestedStart ? "Boost Club — scanare rezervată" : "Boost Club — confirmă scanarea"}: ${fullName}`
     : `Boost Club — răspunde lead business: ${fullName}`;
   const description = [
     `Lead website (${formName}, ${language})`,
@@ -260,6 +167,12 @@ export default async (req: Request, context: { requestId?: string }) => {
   const fullName = clean(payload.fullName, 120);
   const contact = clean(payload.contact, 200);
   const phone = normalizePhone(payload.phone || contact);
+  const requestedStart = clean(payload.requestedStart, 40);
+  const preferredWeekday = Number.isInteger(payload.preferredWeekday)
+    ? payload.preferredWeekday as number
+    : null;
+  const preferredStart = clean(payload.preferredStart, 8);
+  const preferredEnd = clean(payload.preferredEnd, 8);
 
   if (!/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(idempotencyKey)) {
     return json({ ok: false, code: "INVALID_IDEMPOTENCY_KEY", requestId }, 422);
@@ -275,6 +188,41 @@ export default async (req: Request, context: { requestId?: string }) => {
   }
   if (leadType === "business" && !contact) {
     return json({ ok: false, code: "CONTACT_REQUIRED", requestId }, 422);
+  }
+
+  let requestedSlot: ReturnType<typeof validateRequestedBooking> | null = null;
+  if (leadType === "client" && requestedStart) {
+    try {
+      requestedSlot = validateRequestedBooking(requestedStart);
+      const replay = await supabaseRpc("get_website_booking_replay", {
+        p_idempotency_key: idempotencyKey,
+      }) as JsonRecord | null;
+      const isKnownReplay = replay
+        && typeof replay.booking_slot === "string"
+        && new Date(replay.booking_slot).toISOString() === requestedSlot.startAt;
+      if (!isKnownReplay) {
+        const busy = await getGoogleCalendarBusy(requestedSlot.startAt, requestedSlot.endAt);
+        if (busy.some((range) => rangesOverlap(
+          requestedSlot!.startAt,
+          requestedSlot!.endAt,
+          range.start,
+          range.end,
+        ))) {
+          return json({ ok: false, code: "BOOKING_SLOT_UNAVAILABLE", requestId }, 409);
+        }
+      }
+    } catch (error) {
+      if (error instanceof Error && error.message === "INVALID_BOOKING_SLOT") {
+        return json({ ok: false, code: "INVALID_BOOKING_SLOT", requestId }, 422);
+      }
+      const message = error instanceof Error ? error.message : "Availability check failed";
+      console.error(JSON.stringify({ requestId, stage: "booking_validation", error: message }));
+      return json({ ok: false, code: "AVAILABILITY_UNAVAILABLE", requestId }, 503);
+    }
+  } else if (leadType === "client" && (!preferredWeekday || !preferredStart)) {
+    // Allows already-open legacy booking pages to finish their preference-window
+    // submission while all current pages require an exact live-calendar slot.
+    return json({ ok: false, code: "INVALID_BOOKING_SLOT", requestId }, 422);
   }
 
   const attribution = typeof payload.attribution === "object" && payload.attribution
@@ -293,16 +241,15 @@ export default async (req: Request, context: { requestId?: string }) => {
     p_landing_page: clean(payload.landingPage, 300) || null,
     p_page_url: clean(payload.pageUrl, 1000) || null,
     p_attribution: attribution,
-    p_preferred_weekday: Number.isInteger(payload.preferredWeekday)
-      ? payload.preferredWeekday
-      : null,
-    p_preferred_start: clean(payload.preferredStart, 8) || null,
-    p_preferred_end: clean(payload.preferredEnd, 8) || null,
+    p_preferred_weekday: preferredWeekday,
+    p_preferred_start: preferredStart || null,
+    p_preferred_end: preferredEnd || null,
     p_goal_category: clean(payload.goalCategory, 20) || null,
+    p_requested_start: requestedSlot?.startAt || null,
   };
 
   try {
-    const crm = await supabaseRpc("ingest_website_lead", rpcBody);
+    const crm = await supabaseRpc("ingest_website_lead", rpcBody) as JsonRecord;
     if (!crm) throw new Error("Supabase RPC returned no result");
 
     if (!crm.calendar_synced_at) {
@@ -345,8 +292,16 @@ export default async (req: Request, context: { requestId?: string }) => {
       consultationId: crm.consultation_id,
       actionId: crm.action_id,
       calendarEventId: crm.calendar_event_id,
+      calendarStartAt: crm.calendar_start_at,
+      calendarEndAt: crm.calendar_end_at,
     });
   } catch (error) {
+    if (error instanceof SupabaseRpcError && /booking_slot_unavailable/.test(error.apiMessage)) {
+      return json({ ok: false, code: "BOOKING_SLOT_UNAVAILABLE", requestId }, 409);
+    }
+    if (error instanceof SupabaseRpcError && /person_already_has_booking/.test(error.apiMessage)) {
+      return json({ ok: false, code: "PERSON_ALREADY_BOOKED", requestId }, 409);
+    }
     const message = error instanceof Error ? error.message : "Lead pipeline failed";
     console.error(JSON.stringify({ requestId, idempotencyKey, stage: "crm", error: message }));
     return json({ ok: false, code: "LEAD_PIPELINE_FAILED", requestId }, 503);

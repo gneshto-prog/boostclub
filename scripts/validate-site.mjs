@@ -20,6 +20,7 @@ const slugs = [
   "cum-functioneaza",
   "gabi",
   "gabriel",
+  "multumim",
   "recenzii",
   "rezultate",
   "termeni",
@@ -98,6 +99,9 @@ for (const [lang, config] of Object.entries(languages)) {
     if (!html.includes(config.distributor)) {
       fail(`${file}: missing required Independent Herbalife Distributor disclosure`);
     }
+    if (slug === "multumim" && !/<meta\s+name=["']robots["'][^>]+content=["'][^"']*noindex/i.test(html)) {
+      fail(`${file}: confirmation page must remain noindex`);
+    }
   }
 }
 
@@ -155,12 +159,13 @@ for (const lang of Object.keys(languages)) {
 }
 
 const sitemap = fs.readFileSync(path.join(root, "sitemap.xml"), "utf8");
+const indexablePages = pages.filter((page) => page.slug !== "multumim");
 const sitemapRoutes = [...sitemap.matchAll(/<loc>https:\/\/boostclub\.ro([^<]*)<\/loc>/g)].map((match) => match[1] || "/");
 const uniqueSitemapRoutes = new Set(sitemapRoutes);
-if (sitemapRoutes.length !== pages.length || uniqueSitemapRoutes.size !== pages.length) {
-  fail(`sitemap.xml: expected ${pages.length} unique live URLs, found ${sitemapRoutes.length} entries / ${uniqueSitemapRoutes.size} unique`);
+if (sitemapRoutes.length !== indexablePages.length || uniqueSitemapRoutes.size !== indexablePages.length) {
+  fail(`sitemap.xml: expected ${indexablePages.length} unique indexable URLs, found ${sitemapRoutes.length} entries / ${uniqueSitemapRoutes.size} unique`);
 }
-for (const route of pages.map((page) => page.route)) {
+for (const route of indexablePages.map((page) => page.route)) {
   if (!uniqueSitemapRoutes.has(route)) fail(`sitemap.xml: missing ${route}`);
 }
 

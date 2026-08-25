@@ -84,24 +84,37 @@
       payload.country = (form.elements.country && form.elements.country.value || "").trim();
       payload.message = (form.elements.message && form.elements.message.value || "").trim();
     } else {
+      var exactSlot = selected(form, ["booking_slot"]);
+      var bookingDate = form.elements.booking_date;
       var day = selected(form, ["ziua", "day"]);
       var time = selected(form, ["interval", "time"]);
       var goal = selected(form, ["obiectiv", "goal"]);
-      var dayIndex = suffixIndex(day);
-      var timeIndex = suffixIndex(time);
-      var weekdays = [1, 2, 3, 4, 5, 7];
-      var starts = ["07:00", "10:00", "13:00", "16:00"];
-      var ends = ["10:00", "13:00", "16:00", dayIndex === 5 ? "18:00" : "20:00"];
       payload.fullName = ((form.elements.prenume && form.elements.prenume.value)
         || (form.elements.firstname && form.elements.firstname.value) || "").trim();
       payload.phone = ((form.elements.telefon && form.elements.telefon.value)
         || (form.elements.phone && form.elements.phone.value) || "").trim();
       payload.contact = payload.phone;
-      payload.preferredWeekday = weekdays[dayIndex];
-      payload.preferredStart = starts[timeIndex];
-      payload.preferredEnd = ends[timeIndex];
+      if (exactSlot) {
+        payload.requestedStart = exactSlot.value;
+        hidden(form, "requested_start", payload.requestedStart);
+      } else {
+        var dayIndex = suffixIndex(day);
+        var timeIndex = suffixIndex(time);
+        var weekdays = [1, 2, 3, 4, 5, 7];
+        var starts = ["07:00", "10:00", "13:00", "16:00"];
+        var ends = ["10:00", "13:00", "16:00", dayIndex === 5 ? "18:00" : "20:00"];
+        payload.preferredWeekday = weekdays[dayIndex];
+        payload.preferredStart = starts[timeIndex];
+        payload.preferredEnd = ends[timeIndex];
+      }
       payload.goalCategory = goalCategory(goal);
-      payload.message = [day && day.value, time && time.value, goal && goal.value].filter(Boolean).join(" · ");
+      payload.message = [
+        bookingDate && bookingDate.value,
+        exactSlot && exactSlot.dataset.label,
+        day && day.value,
+        time && time.value,
+        goal && goal.value
+      ].filter(Boolean).join(" · ");
     }
 
     hidden(form, "idempotency_key", idempotency);

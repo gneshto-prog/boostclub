@@ -14,6 +14,36 @@ Work through this top to bottom. Tick each box as you go.
 - [ ] Open the live site and hard-refresh: **Cmd + Shift + R** (Mac)
 - [ ] Quick look: new design loads, logo correct, founder photo now visible
 
+### Booking hours: 20:00/21:00 dependent schedule
+
+The booking calendar has no maximum advance-booking horizon. It defaults to a
+conservative weekday close of 20:00, then accepts recurring weekday rules and
+one-off date changes through the Netlify environment variable
+`BOOST_BOOKING_HOURS_JSON`. ISO weekdays are `1` Monday through `7` Sunday.
+
+Example — Mondays and Wednesdays close at 21:00, one exceptional Tuesday also
+closes at 21:00, and one date is closed:
+
+```json
+{
+  "weekday": { "open": "07:00", "close": "20:00" },
+  "sunday": { "open": "10:00", "close": "18:00" },
+  "byWeekday": {
+    "1": { "close": "21:00" },
+    "3": { "close": "21:00" }
+  },
+  "overrides": {
+    "2026-09-01": { "close": "21:00" },
+    "2026-12-25": { "closed": true }
+  }
+}
+```
+
+After changing this value in **Netlify → Site configuration → Environment
+variables**, redeploy so the function uses the new schedule. Only slots returned
+by the live calendar can be booked, and the database enforces one active booking
+per exact slot even if two people submit at the same moment.
+
 ---
 
 ## 2. Verify all 4 forms appear in Netlify
@@ -46,9 +76,9 @@ So every booking lands in your inbox:
 
 **Booking form (RO):**
 - [ ] Open `/consultatie-gratuita` on the live site
-- [ ] Fill in: Prenume `Test`, your real phone, any day, any interval, any goal
-- [ ] Press **Trimite cererea →**
-- [ ] You should see the green "Cerere trimisă cu succes!" message
+- [ ] Fill in: Prenume `Test`, your real phone, a future date, one available exact time, and any goal
+- [ ] Press **Confirmă rezervarea →**
+- [ ] You should reach `/multumim` with the confirmed date and time
 - [ ] Check Netlify **Forms → consultatie** — the submission must be listed there
 - [ ] Check your email for the notification
 

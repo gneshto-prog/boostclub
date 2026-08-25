@@ -291,8 +291,8 @@
         <!-- Mesaj confirmare (ascuns inițial, afișat după submit în preview local) -->
         <div class="form-success-msg" id="success-msg" role="alert" aria-live="polite">
           <div class="check-icon" aria-hidden="true">✓</div>
-          <h3>Gata, <strong id="success-name"></strong>! Mai e un singur pas.</h3>
-          <p>Trimite-ne un mesaj acum pe WhatsApp și îți confirmăm ora pe loc — alegi intervalul și ești programat în câteva minute.</p>
+          <h3>Rezervare confirmată, <strong id="success-name"></strong>!</h3>
+          <p>Îți pregătim imediat detaliile vizitei.</p>
           <a href="https://wa.me/40726205752?text=Bun%C4%83!%20Tocmai%20am%20completat%20formularul%20de%20rezervare.%20A%C8%99%20vrea%20s%C4%83-mi%20confirm%20ora%20pe%20loc."
              class="btn btn-whatsapp btn-lg mt-3" style="width:100%;">
             <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -304,12 +304,13 @@
         <!-- FORMULARUL — 5 câmpuri + GDPR + buton submit -->
         <!-- data-netlify="true": formularul va fi procesat de Netlify la deploy -->
         <!-- Preview local: JS de mai jos afișează confirmare fără a trimite datele -->
-        <form id="booking-form" name="consultatie" method="POST" data-netlify="true" netlify-honeypot="bot-field" netlify novalidate>
+        <form id="booking-form" name="consultatie" method="POST" data-real-booking="true" data-netlify="true" netlify-honeypot="bot-field" netlify novalidate>
           <input type="hidden" name="form-name" value="consultatie">
           <input type="hidden" name="idempotency_key" value="">
           <input type="hidden" name="lead_type" value="client">
           <input type="hidden" name="landing_page" value="">
           <input type="hidden" name="click_id" value="">
+          <input type="hidden" name="requested_start" value="">
           <p style="display:none;"><label>Nu completa: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
 
           <div class="form-group">
@@ -339,40 +340,16 @@
           </div>
 
           <div class="form-group">
-            <fieldset>
-              <legend>Ziua preferată <span aria-hidden="true">*</span></legend>
-              <div class="pill-group pill-group-3">
-                <input type="radio" id="ziua-p0" name="ziua" value="Luni" required>
-                <label class="pill" for="ziua-p0">Luni</label>
-                <input type="radio" id="ziua-p1" name="ziua" value="Marți">
-                <label class="pill" for="ziua-p1">Marți</label>
-                <input type="radio" id="ziua-p2" name="ziua" value="Miercuri">
-                <label class="pill" for="ziua-p2">Miercuri</label>
-                <input type="radio" id="ziua-p3" name="ziua" value="Joi">
-                <label class="pill" for="ziua-p3">Joi</label>
-                <input type="radio" id="ziua-p4" name="ziua" value="Vineri">
-                <label class="pill" for="ziua-p4">Vineri</label>
-                <input type="radio" id="ziua-p5" name="ziua" value="Duminică">
-                <label class="pill" for="ziua-p5">Duminică</label>
-              </div>
-            </fieldset>
+            <label for="booking-date">Data consultației <span aria-hidden="true">*</span></label>
+            <input class="booking-date-input" type="date" id="booking-date" name="booking_date" required aria-required="true">
+            <p class="booking-live-note">Poți alege orice dată viitoare. Ora de închidere variază între 20:00 și 21:00; mai jos apar doar locurile confirmabile în ziua aleasă.</p>
           </div>
 
-          <div class="form-group">
-            <fieldset>
-              <legend>Intervalul orar preferat <span aria-hidden="true">*</span></legend>
-              <div class="pill-group">
-                <input type="radio" id="interval-p0" name="interval" value="Dimineața 07:00–10:00" required>
-                <label class="pill" for="interval-p0">Dimineața<small>07–10</small></label>
-                <input type="radio" id="interval-p1" name="interval" value="Înainte de prânz 10:00–13:00">
-                <label class="pill" for="interval-p1">Înainte de prânz<small>10–13</small></label>
-                <input type="radio" id="interval-p2" name="interval" value="După-amiaza 13:00–16:00">
-                <label class="pill" for="interval-p2">După-amiaza<small>13–16</small></label>
-                <input type="radio" id="interval-p3" name="interval" value="Seara 16:00–20:00">
-                <label class="pill" for="interval-p3">Seara<small>16–20</small></label>
-              </div>
-            </fieldset>
-          </div>
+          <fieldset class="form-group">
+            <legend>Alege ora exactă <span aria-hidden="true">*</span></legend>
+            <div class="booking-slot-grid" data-booking-slots aria-live="polite"></div>
+            <p class="booking-slot-status" data-booking-status role="status" aria-live="polite">Alege data pentru a vedea orele disponibile.</p>
+          </fieldset>
 
           <div class="form-group">
             <fieldset>
@@ -395,7 +372,7 @@
           </p>
 
           <button type="submit" class="btn btn-primary btn-lg" style="width:100%;">
-            Trimite cererea →
+            Confirmă rezervarea →
           </button>
           <p class="small" style="text-align:center; margin-top:12px;">Consultație gratuită · Confirmare rapidă · Date protejate</p>
         </form>
@@ -574,7 +551,8 @@
 
 <script src="js/attribution.js?v=1"></script>
 <script src="js/main.js?v=7"></script>
-<script src="js/lead-pipeline.js?v=1"></script>
+<script src="js/booking-slots.js?v=1"></script>
+<script src="js/lead-pipeline.js?v=2"></script>
 <script>
   /* Booking form — CRM first, then Netlify Forms archival. */
   (function () {
@@ -587,47 +565,23 @@
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+      if (!window.BoostBookingSlots.validate(form)) return;
       if (!form.checkValidity()) { form.reportValidity(); return; }
       var btn = form.querySelector('[type="submit"]');
       if (btn) btn.disabled = true;
-      window.BoostLeadPipeline.submit(form).then(function () {
+      window.BoostLeadPipeline.submit(form).then(function (result) {
         if (successMsg) {
           successMsg.classList.add('visible');
           if (successName && nameInput) successName.textContent = nameInput.value.trim();
-          successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
-        form.style.display = 'none';
+        window.BoostBookingSlots.confirm(result);
       }).catch(function (error) {
         if (btn) btn.disabled = false;
-        var ref = error && error.requestId ? ' Referință: ' + error.requestId : '';
-        alert(error && error.savedToCrm
-          ? 'Cererea a ajuns în sistem, dar calendarul nu a putut fi actualizat. Încearcă din nou sau sună-ne.' + ref
-          : 'Nu am putut salva cererea. Te rugăm să încerci din nou sau să ne suni.' + ref);
+        if (error && error.message === 'BOOKING_SLOT_UNAVAILABLE') window.BoostBookingSlots.refresh(form);
+        alert(window.BoostBookingSlots.errorMessage(error));
       });
     });
   })();
-
-    /* Time slots follow the chosen day: Sunday has no morning, evening ends 18:00 */
-    (function () {
-      var SLOT_ALL = document.querySelectorAll('input[name="interval"]');
-      SLOT_ALL.forEach(function (r) { r.required = true; });
-      var morning = document.getElementById('interval-p0');
-      var mLabel = document.querySelector('label[for="interval-p0"]');
-      var evening = document.getElementById('interval-p3');
-      var eLabel = document.querySelector('label[for="interval-p3"]');
-      function updateSlots() {
-        var sel = document.querySelector('input[name="ziua"]:checked');
-        var sunday = !!sel && sel.value === 'Duminică';
-        morning.disabled = sunday;
-        mLabel.style.display = sunday ? 'none' : '';
-        if (sunday && morning.checked) morning.checked = false;
-        evening.value = sunday ? 'Seara 16:00–18:00' : 'Seara 16:00–20:00';
-        eLabel.querySelector('small').textContent = sunday ? '16–18' : '16–20';
-      }
-      document.querySelectorAll('input[name="ziua"]').forEach(function (r) {
-        r.addEventListener('change', updateSlots);
-      });
-    })();
 </script>
 
 </body>
