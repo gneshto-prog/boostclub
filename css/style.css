@@ -672,6 +672,10 @@ a:focus-visible, button:focus-visible, .btn:focus-visible { outline: 3px solid v
   white-space: nowrap;
   transition: color .35s;
 }
+.logo-visual {
+  display: flex;
+  align-items: center;
+}
 .logo .dot { color: var(--gold); }
 .logo .logo-leaf { width: 0.64em; height: 0.64em; margin: 0 0.5px; flex-shrink: 0; transform: translateY(0.06em); }
 .logo .logo-leaf .leaf-body { fill: var(--gold); transition: fill .35s; }
