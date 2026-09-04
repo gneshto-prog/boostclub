@@ -1,0 +1,107 @@
+
+    /* ---- recenzii — componente specifice ---- */
+
+    /* Card recenzie mare — pentru story blocks */
+    .review-story {
+      background: var(--card);
+      border: var(--length-93e20626) solid var(--line);
+      border-radius: var(--radius);
+      padding: var(--s4);
+      position: relative;
+    }
+    .review-story::before {
+      content: "\201C";
+      position: absolute;
+      top: var(--length-7adef6a0); left: var(--length-9bf0c8e6);
+      font-family: 'Poppins', serif;
+      font-size: var(--length-686f5c06);
+      line-height: var(--line-height-6b86b273);
+      color: var(--gold);
+      opacity: 0.7;
+    }
+    .review-story p {
+      font-size: var(--length-ab98c047);
+      line-height: var(--line-height-8f652230);
+      padding-top: var(--s4);
+      color: var(--text);
+    }
+    .review-story footer {
+      margin-top: var(--s3);
+      padding-top: var(--s3);
+      border-top: var(--length-93e20626) solid var(--line);
+      display: flex;
+      align-items: center;
+      gap: var(--s2);
+    }
+    .review-story .reviewer-avatar {
+      width: var(--length-717594bb); height: var(--length-717594bb);
+      border-radius: 50%;
+      background: var(--sage);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: var(--length-ab98c047);
+      color: var(--green);
+      flex-shrink: 0;
+    }
+    .review-story .reviewer-info strong { display: block; font-size: var(--length-67931646); }
+    .review-story .reviewer-info span   { font-size: var(--length-09f97395); color: var(--text-soft); }
+    .review-story .stars { color: var(--gold); letter-spacing: var(--length-74761400); }
+
+    /* Tag tematică recenzie */
+    .review-tag {
+      display: inline-block;
+      font-size: var(--length-145f2f53);
+      font-weight: 600;
+      padding: var(--length-ac33ff91) var(--length-38cb6b4a);
+      border-radius: var(--length-9bf0c8e6);
+      background: var(--sage);
+      color: var(--green-dark);
+      margin-top: var(--s2);
+    }
+
+    /* Disclosure banner */
+    .disclosure-banner {
+      background: var(--card);
+      border: var(--length-93e20626) solid var(--line);
+      border-left: var(--length-35660153) solid var(--gold);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: var(--s3);
+      font-size: var(--length-7f108801);
+      color: var(--text-soft);
+    }
+    .disclosure-banner strong { color: var(--text); }
+
+    /* Sumarul dovezilor sociale */
+    .proof-summary {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--s3);
+    }
+    @media (min-width: 640px) {
+      .proof-summary { grid-template-columns: repeat(4, 1fr); }
+    }
+    .proof-stat {
+      background: var(--card);
+      border: var(--length-93e20626) solid var(--line);
+      border-radius: var(--radius);
+      padding: var(--s3);
+      text-align: center;
+    }
+    .proof-stat .stat-num {
+      display: block;
+      font-family: 'Poppins', sans-serif;
+      font-size: var(--length-9d9bfb35);
+      font-weight: 800;
+      color: var(--green);
+      line-height: var(--line-height-b05e2447);
+    }
+    .proof-stat .stat-label {
+      font-size: var(--length-09f97395);
+      color: var(--text-soft);
+      margin-top: var(--length-35660153);
+      display: block;
+    }
+  

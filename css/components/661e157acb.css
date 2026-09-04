@@ -1,0 +1,11 @@
+
+    .legal-body h2 { font-size: var(--length-9bf0c8e6); margin-top: var(--s5); margin-bottom: var(--s2); }
+    .legal-body h3 { font-size: var(--length-9bb5d32d); margin-top: var(--s4); margin-bottom: var(--s2); color: var(--green); }
+    .legal-body p, .legal-body li { font-size: var(--length-67931646); line-height: var(--line-height-a97b042d); color: var(--text); }
+    .legal-body ul { padding-left: var(--s4); margin: var(--s2) var(--space-5feceb66); }
+    .legal-body li { margin-bottom: var(--length-7adef6a0); }
+    .legal-body table { width: 100%; border-collapse: collapse; margin: var(--s3) var(--space-5feceb66); font-size: var(--length-7f108801); }
+    .legal-body th, .legal-body td { border: var(--length-93e20626) solid var(--line); padding: var(--length-38cb6b4a) var(--length-7769e817); text-align: left; vertical-align: top; }
+    .legal-body th { background: var(--sage); font-weight: 700; }
+    .legal-updated { font-size: var(--length-09f97395); color: var(--text-soft); margin-bottom: var(--s5); }
+  

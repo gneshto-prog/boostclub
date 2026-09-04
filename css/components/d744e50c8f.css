@@ -1,0 +1,13 @@
+
+.about-hero-grid{display:grid;grid-template-columns:1fr;gap:var(--s6);align-items:center}
+@media(min-width:900px){.about-hero-grid{grid-template-columns:1fr 1fr}}
+.cred-card{background:var(--card);border:var(--length-93e20626) solid var(--line);border-radius:var(--radius);padding:var(--s3);display:flex;gap:var(--s3);align-items:flex-start}
+.cred-icon{width:var(--length-47128122);height:var(--length-47128122);min-width:var(--length-47128122);border-radius:var(--length-38cb6b4a);background:var(--sage);display:flex;align-items:center;justify-content:center;font-size:var(--length-5d6c4397)}
+.cred-card h3{font-size:var(--length-ab98c047);margin-bottom:var(--length-35660153)}
+.cred-card p{color:var(--text-soft);font-size:var(--length-7f108801);margin:var(--space-5feceb66)}
+.personal-quote{border-left:var(--length-35660153) solid var(--gold);padding:var(--s3) var(--s4);margin:var(--s4) var(--space-5feceb66);background:var(--card);border-radius:0 var(--radius-sm) var(--radius-sm) 0}
+.personal-quote p{font-size:var(--length-6ddf4727);font-style:italic;color:var(--text);line-height:var(--line-height-b7e2620d)}
+.personal-quote cite{display:block;margin-top:var(--s2);font-size:var(--length-7f108801);font-style:normal;font-weight:600;color:var(--text-soft)}
+.philosophy-card{border-top:var(--length-ac33ff91) solid var(--gold);padding-top:var(--s3)}
+.philosophy-card h3{margin-bottom:var(--length-eb4ebe48)}
+.philosophy-card p{color:var(--text-soft)}

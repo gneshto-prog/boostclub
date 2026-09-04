@@ -1,0 +1,28 @@
+/* Dormant structure for the next art direction pass. No current page uses these hooks. */
+.u-fluid-type { font-size: var(--type-fluid-body); }
+.u-layout-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--layout-grid-columns), minmax(0, 1fr));
+  gap: var(--layout-grid-gap);
+}
+
+html[data-motion-scaffold="on"] .u-scroll-reveal {
+  opacity: 0;
+  transform: translateY(var(--motion-reveal-distance));
+  transition: opacity var(--motion-page-duration) var(--easing-914ff41a), transform var(--motion-page-duration) var(--easing-914ff41a);
+}
+html[data-motion-scaffold="on"] .u-scroll-reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+html[data-motion-scaffold="on"] .u-page-transition {
+  transition: opacity var(--motion-page-duration) var(--easing-914ff41a);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .u-scroll-reveal,
+  .u-page-transition {
+    animation: none !important;
+    transition: none !important;
+  }
+}

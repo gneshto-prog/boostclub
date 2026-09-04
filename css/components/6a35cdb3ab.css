@@ -1,0 +1,69 @@
+
+    /* ---- program-trainee ---- */
+
+    .criteria-card {
+      background: var(--card);
+      border: var(--length-93e20626) solid var(--line);
+      border-radius: var(--radius);
+      padding: var(--s4);
+    }
+    .criteria-card h3 {
+      margin-top: 0;
+      margin-bottom: var(--s3);
+      font-size: var(--length-9bb5d32d);
+    }
+    .criteria-list {
+      list-style: none;
+      padding: var(--space-5feceb66); margin: var(--space-5feceb66);
+      display: flex;
+      flex-direction: column;
+      gap: var(--s2);
+    }
+    .criteria-list li {
+      display: flex;
+      gap: var(--length-38cb6b4a);
+      align-items: flex-start;
+      font-size: var(--length-7f108801);
+      line-height: var(--line-height-9f29a130);
+      padding: var(--s2) var(--space-5feceb66);
+      border-bottom: var(--length-93e20626) solid var(--line);
+    }
+    .criteria-list li:last-child { border-bottom: none; }
+    .criteria-list .check { color: var(--green); font-size: var(--length-9bb5d32d); flex-shrink: 0; margin-top: var(--length-93e20626); }
+    .criteria-list .cross  { color: var(--color-00cb76cc);       font-size: var(--length-9bb5d32d); flex-shrink: 0; margin-top: var(--length-93e20626); }
+
+    /* Etape program */
+    .program-step {
+      display: flex;
+      gap: var(--s3);
+      padding: var(--s4) var(--space-5feceb66);
+      border-bottom: var(--length-93e20626) solid var(--line);
+    }
+    .program-step:last-child { border-bottom: none; }
+    .program-step-num {
+      width: var(--length-717594bb); height: var(--length-717594bb);
+      border-radius: 50%;
+      background: var(--green);
+      color: var(--color-e08de713);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: var(--length-ab98c047);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .program-step-body h3 { margin: var(--space-5feceb66) var(--space-5feceb66) var(--length-7adef6a0); font-size: var(--length-9bb5d32d); }
+    .program-step-body p  { margin: var(--space-5feceb66); font-size: var(--length-7f108801); color: var(--text-soft); line-height: var(--line-height-ec6c168f); }
+
+    /* Disclaimer banner */
+    .disclaimer-box {
+      background: var(--color-f10b1d90);
+      border: var(--length-93e20626) solid var(--color-66118498);
+      border-left: var(--length-35660153) solid var(--gold);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: var(--s3);
+      font-size: var(--length-09f97395);
+      color: var(--color-d18d52ef);
+      line-height: var(--line-height-ec6c168f);
+    }
+    .disclaimer-box strong { color: var(--color-cae93783); }
+  

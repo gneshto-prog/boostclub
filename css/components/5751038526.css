@@ -1,0 +1,145 @@
+
+    /* ---- contact — componente specifice ---- */
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--s5);
+    }
+    @media (min-width: 900px) {
+      .contact-layout {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+      }
+    }
+
+    /* Card info contact */
+    .contact-card {
+      background: var(--card);
+      border: var(--length-93e20626) solid var(--line);
+      border-radius: var(--radius);
+      padding: var(--s4);
+    }
+    .contact-card h3 {
+      margin-top: 0;
+      margin-bottom: var(--s3);
+      font-size: var(--length-ab98c047);
+    }
+
+    /* Rând info (icon + text) */
+    .info-row {
+      display: flex;
+      gap: var(--s2);
+      align-items: flex-start;
+      padding: var(--s2) var(--space-5feceb66);
+      border-bottom: var(--length-93e20626) solid var(--line);
+    }
+    .info-row:last-child { border-bottom: none; }
+    .info-icon {
+      width: var(--length-a0a3565c); height: var(--length-a0a3565c);
+      background: var(--sage);
+      border-radius: var(--length-eb4ebe48);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      font-size: var(--length-9bb5d32d);
+    }
+    .info-text { flex: 1; }
+    .info-text strong { display: block; font-size: var(--length-7f108801); margin-bottom: var(--length-74761400); }
+    .info-text span, .info-text a { font-size: var(--length-7f108801); color: var(--text-soft); }
+    .info-text a:hover { color: var(--green); }
+
+    /* Tabel program */
+    .hours-table { width: 100%; border-collapse: collapse; }
+    .hours-table tr { border-bottom: var(--length-93e20626) solid var(--line); }
+    .hours-table tr:last-child { border-bottom: none; }
+    .hours-table td {
+      padding: var(--length-38cb6b4a) var(--length-35660153);
+      font-size: var(--length-7f108801);
+      vertical-align: top;
+    }
+    .hours-table td:first-child { font-weight: 600; color: var(--text); }
+    .hours-table td:last-child  { text-align: right; color: var(--text-soft); }
+    .hours-table .today td { color: var(--green); }
+    .closed-tag {
+      display: inline-block;
+      font-size: var(--length-7769e817);
+      font-weight: 600;
+      padding: var(--length-74761400) var(--length-eb4ebe48);
+      background: var(--color-6ff9e27e);
+      color: var(--color-c4649dfe);
+      border-radius: var(--length-9bf0c8e6);
+    }
+    .open-tag {
+      display: inline-block;
+      font-size: var(--length-7769e817);
+      font-weight: 600;
+      padding: var(--length-74761400) var(--length-eb4ebe48);
+      background: var(--sage);
+      color: var(--green-dark);
+      border-radius: var(--length-9bf0c8e6);
+    }
+
+    /* Poza intrare — slot */
+    .entrance-photo {
+      width: 100%;
+      aspect-ratio: 4/3;
+      border-radius: var(--radius);
+      object-fit: cover;
+    }
+    .entrance-placeholder {
+      width: 100%;
+      aspect-ratio: 4/3;
+      border-radius: var(--radius);
+      background: var(--sage);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--s2);
+      color: var(--green);
+      font-size: var(--length-7f108801);
+      font-weight: 600;
+      border: var(--length-74761400) dashed var(--green);
+    }
+    .entrance-placeholder span { font-size: var(--length-a0a3565c); }
+
+    /* Hartă embed */
+    .map-embed {
+      width: 100%;
+      height: var(--length-9b10085a);
+      border-radius: var(--radius);
+      border: var(--length-93e20626) solid var(--line);
+      overflow: hidden;
+    }
+    .map-embed iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* Pași traseu */
+    .route-step {
+      display: flex;
+      gap: var(--s2);
+      padding: var(--s2) var(--space-5feceb66);
+      border-bottom: var(--length-93e20626) solid var(--line);
+    }
+    .route-step:last-child { border-bottom: none; }
+    .route-grid { display: grid; grid-template-columns: 1fr; gap: var(--s4); min-width: 0; }
+    .route-text { min-width: 0; overflow-wrap: anywhere; }
+    @media (min-width: 760px) { .route-grid { grid-template-columns: 1fr 1fr; } }
+    .route-num {
+      width: var(--length-c80bfee3); height: var(--length-c80bfee3);
+      border-radius: 50%;
+      background: var(--green);
+      color: var(--color-e08de713);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: var(--length-09f97395);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      margin-top: var(--length-74761400);
+    }
+    .route-text { font-size: var(--length-7f108801); line-height: var(--line-height-9f29a130); }
+  

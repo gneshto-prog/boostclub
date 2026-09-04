@@ -1,0 +1,72 @@
+
+    /* ---- ambasador — componente specifice ---- */
+    .build-card { display: flex; flex-direction: column; }
+    .build-card p { flex: 1; }
+
+    .highlight-band {
+      background: var(--card);
+      border: var(--length-93e20626) solid var(--color-60fb502b);
+      border-radius: var(--radius);
+      padding: var(--s4);
+      box-shadow: var(--shadow-lg);
+    }
+    @media (min-width: 900px) {
+      .highlight-band {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: var(--s6);
+        align-items: center;
+        padding: var(--s6);
+      }
+    }
+
+    .step-card {
+      display: flex;
+      gap: var(--s3);
+      align-items: flex-start;
+      background: var(--card);
+      border: var(--length-93e20626) solid var(--line);
+      border-radius: var(--radius);
+      padding: var(--s4);
+      margin-bottom: var(--s2);
+    }
+    .step-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: var(--length-717594bb); height: var(--length-717594bb);
+      min-width: var(--length-717594bb);
+      border-radius: 50%;
+      background: linear-gradient(180deg, var(--green-mid), var(--green));
+      color: var(--color-e08de713);
+      font-family: 'Poppins';
+      font-weight: 800;
+      font-size: var(--length-ab98c047);
+    }
+    .step-card h3 { margin-bottom: var(--length-7adef6a0); }
+    .step-card p { color: var(--text-soft); }
+
+    .apply-card {
+      background: var(--card);
+      border: var(--length-93e20626) solid var(--line);
+      border-radius: var(--radius);
+      padding: var(--s4);
+      box-shadow: var(--shadow-lg);
+      max-width: var(--length-ae6cfbb1);
+      margin: var(--space-5feceb66) auto;
+    }
+    @media (min-width: 768px) { .apply-card { padding: var(--s6); } }
+
+    .gdpr-note { font-size: var(--length-09f97395); color: var(--text-soft); line-height: var(--line-height-9f29a130); margin: var(--s2) var(--space-5feceb66) var(--s3); }
+
+    .form-success-msg {
+      display: none;
+      text-align: center;
+      padding: var(--s4);
+      background: var(--color-87bcc1c8);
+      border: var(--length-74761400) solid var(--success);
+      border-radius: var(--radius);
+    }
+    .form-success-msg.visible { display: block; }
+    .form-success-msg h3 { color: var(--success); margin-bottom: var(--s2); }
+  

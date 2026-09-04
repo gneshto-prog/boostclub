@@ -1,0 +1,233 @@
+{
+  "compared": 44,
+  "equivalent": 44,
+  "different": 0,
+  "intentionalStructuralTransformations": [
+    "Inline CSS moved to external component stylesheets.",
+    "Inline style attributes moved to generated utility classes.",
+    "Executable inline scripts moved to external component scripts.",
+    "The shared site header and common footer are rendered by components."
+  ],
+  "rows": [
+    {
+      "page": "index.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "ambasador.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "business.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "confidentialitate.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "consultatie-gratuita.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "contact.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "cookies.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "cum-functioneaza.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "gabi.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "gabriel.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "multumim.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "recenzii.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "rezultate.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "termeni.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "en/index.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "en/ambasador.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "en/business.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "en/confidentialitate.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "en/consultatie-gratuita.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "en/contact.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "en/cookies.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "en/cum-functioneaza.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "en/gabi.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "en/gabriel.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "en/multumim.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "en/recenzii.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "en/rezultate.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "en/termeni.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "ru/index.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "ru/ambasador.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "ru/business.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "ru/confidentialitate.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "ru/consultatie-gratuita.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "ru/contact.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "ru/cookies.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "ru/cum-functioneaza.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "ru/gabi.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "ru/gabriel.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "ru/multumim.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "ru/recenzii.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "ru/rezultate.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "ru/termeni.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "404.html",
+      "result": "Equivalent",
+      "reason": "None"
+    },
+    {
+      "page": "program-trainee.html",
+      "result": "Equivalent",
+      "reason": "None"
+    }
+  ]
+}

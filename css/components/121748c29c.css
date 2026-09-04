@@ -1,0 +1,92 @@
+
+    /* ---- Cum funcționează — componente specifice ---- */
+
+    /* Pași numerotați verticali cu linie conectoare */
+    .steps-v {
+      display: grid;
+      gap: var(--s4);
+      position: relative;
+    }
+    .step-v {
+      display: grid;
+      grid-template-columns: var(--length-7d247640) 1fr;
+      gap: var(--s3);
+      align-items: start;
+    }
+    .step-v-num {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: var(--length-7d247640); height: var(--length-7d247640);
+      min-width: var(--length-7d247640);
+      border-radius: 50%;
+      background: var(--green);
+      color: var(--color-e08de713);
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: var(--length-9bf0c8e6);
+      box-shadow: var(--shadow-5e3b61e5);
+    }
+    .step-v-body h3 { margin-bottom: var(--length-7adef6a0); }
+    .step-v-body p  { color: var(--text-soft); }
+
+    /* Card cu icon gold */
+    .icon-card {
+      background: var(--card);
+      border: var(--length-93e20626) solid var(--line);
+      border-radius: var(--radius);
+      padding: var(--s3);
+    }
+    .icon-card .icon-wrap {
+      width: var(--length-717594bb); height: var(--length-717594bb);
+      border-radius: var(--length-38cb6b4a);
+      background: var(--sage);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--s2);
+      font-size: var(--length-5d6c4397);
+    }
+    .icon-card h3 { margin-bottom: var(--length-7adef6a0); }
+    .icon-card p  { color: var(--text-soft); font-size: var(--length-67931646); }
+
+    /* CTA inline (mid-page) */
+    .cta-inline {
+      background: var(--sage);
+      border-radius: var(--radius);
+      padding: var(--s4) var(--s4);
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--s3);
+      align-items: center;
+      justify-content: space-between;
+    }
+    .cta-inline p { max-width: var(--length-7a17b054); margin: var(--space-5feceb66); font-weight: 600; }
+    @media (max-width: 640px) {
+      .cta-inline { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* Tabel metrici corporale */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--s2);
+    }
+    @media (min-width: 640px) {
+      .metrics-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .metric-item {
+      background: var(--card);
+      border: var(--length-93e20626) solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: var(--s2) var(--s3);
+    }
+    .metric-item strong {
+      display: block;
+      font-family: 'Poppins', sans-serif;
+      font-size: var(--length-7f108801);
+      color: var(--green);
+      margin-bottom: var(--length-35660153);
+    }
+    .metric-item span { font-size: var(--length-09f97395); color: var(--text-soft); }
+  

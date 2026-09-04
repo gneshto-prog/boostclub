@@ -1,6 +1,6 @@
 [build]
-  command = "node scripts/validate-site.mjs"
-  publish = "."
+  command = "node scripts/prepare-site.mjs"
+  publish = "_site"
 
 [build.environment]
   NODE_VERSION = "20"

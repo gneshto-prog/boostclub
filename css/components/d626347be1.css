@@ -1,0 +1,20 @@
+
+.booking-layout{display:grid;gap:var(--s6);grid-template-columns:1fr}
+@media(min-width:900px){.booking-layout{grid-template-columns:1.15fr 0.85fr;align-items:start}}
+.booking-card{background:var(--card);border:var(--length-93e20626) solid var(--line);border-radius:var(--radius);padding:var(--s4);box-shadow:var(--shadow-lg)}
+@media(min-width:768px){.booking-card{padding:var(--s6)}}
+.booking-card h2{margin-bottom:var(--s4)}
+.wa-booking{background:var(--card);border: var(--length-67792bd0) solid var(--color-22e351ad);
+      box-shadow: var(--shadow-f6ae1ef2);border-radius:var(--radius);padding:var(--s4);text-align:center}
+.wa-booking .wa-icon-big{display:block;width:var(--length-da5e345c);height:var(--length-da5e345c);fill:var(--whatsapp);margin:var(--space-5feceb66) auto var(--s2)}
+.wa-booking h3{margin-bottom:var(--length-eb4ebe48)}
+.wa-booking p{color:var(--text-soft);font-size:var(--length-7f108801);margin-bottom:var(--s3)}
+.bullet-list{list-style:none;display:grid;gap:var(--length-7769e817);margin-top:var(--s3)}
+.bullet-list li{display:flex;align-items:flex-start;gap:var(--length-38cb6b4a);font-size:var(--length-67931646)}
+.bullet-list .dot-g{display:inline-block;width:var(--length-a15202ec);height:var(--length-a15202ec);min-width:var(--length-a15202ec);border-radius:50%;background:var(--gold);margin-top:var(--length-eb4ebe48)}
+.form-success-msg{display:none;text-align:center;padding:var(--s4);background:var(--color-5424bb10);border:var(--length-74761400) solid var(--success);border-radius:var(--radius)}
+.form-success-msg.visible{display:block}
+.form-success-msg .check-icon{font-size:var(--length-47128122);line-height:var(--line-height-6b86b273);margin-bottom:var(--s2)}
+.form-success-msg h3{color:var(--success);font-size:var(--length-5d6c4397);margin-bottom:var(--s2)}
+.form-success-msg p{max-width:var(--length-948261b7);margin:var(--space-5feceb66) auto;color:var(--text-soft)}
+.gdpr-note{font-size:var(--length-09f97395);color:var(--text-soft);line-height:var(--line-height-9f29a130);margin-top:var(--s2);margin-bottom:var(--s3)}

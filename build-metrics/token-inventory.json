@@ -1,0 +1,13 @@
+{
+  "hardcodedOccurrencesBefore": 3541,
+  "primitiveTokensAfter": 464,
+  "semanticAliases": 99,
+  "inlineStyleBlocksBefore": 36,
+  "inlineStyleLinesBefore": 2620,
+  "uniqueInlineStyleBlocksAfter": 27,
+  "inlineStyleAttributesBefore": 294,
+  "uniqueInlineStyleUtilitiesAfter": 76,
+  "executableInlineScriptsBefore": 18,
+  "uniqueInlineScriptsAfter": 11,
+  "pageCount": 44
+}
