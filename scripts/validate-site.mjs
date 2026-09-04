@@ -2,8 +2,10 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { findHardcodedDesignValues } from "./lib/css-policy.mjs";
 
-const root = process.cwd();
+const projectRoot = process.cwd();
+const root = path.join(projectRoot, "_site");
 const languages = {
   ro: { dir: "", htmlLang: "ro", distributor: "Distribuitor Independent Herbalife" },
   en: { dir: "en", htmlLang: "en", distributor: "Independent Herbalife Distributor" },
@@ -35,6 +37,15 @@ function fail(message) {
 
 function cleanHtml(source) {
   return source.replace(/<!--[\s\S]*?-->/g, "");
+}
+
+function filesUnder(directory, extension) {
+  if (!fs.existsSync(directory)) return [];
+  return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
+    const absolute = path.join(directory, entry.name);
+    if (entry.isDirectory()) return filesUnder(absolute, extension);
+    return !extension || entry.name.endsWith(extension) ? [absolute] : [];
+  });
 }
 
 function routeFor(lang, slug) {
@@ -135,13 +146,23 @@ function resolveLocal(reference, baseFile) {
   return { absolute, relative: path.relative(root, absolute).split(path.sep).join("/") };
 }
 
-const assetFiles = ["css/style.css", "css/business-phase2.css", "js/main.js", ...pages.map((page) => page.file)];
+const assetFiles = [
+  ...filesUnder(path.join(root, "css"), ".css").map((file) => path.relative(root, file)),
+  ...filesUnder(path.join(root, "js"), ".js").map((file) => path.relative(root, file)),
+  ...pages.map((page) => page.file),
+  "404.html",
+  "program-trainee.html",
+];
 for (const file of assetFiles) {
   const raw = cleanHtml(fs.readFileSync(path.join(root, file), "utf8"));
   const references = [];
-  for (const match of raw.matchAll(/\b(?:src|poster|data-img|data-video)=["']([^"']+)["']/gi)) references.push(match[1]);
-  for (const match of raw.matchAll(/<link\b[^>]*\bhref=["']([^"']+)["']/gi)) references.push(match[1]);
-  for (const match of raw.matchAll(/url\(\s*["']?([^"')]+)["']?\s*\)/gi)) references.push(match[1]);
+  if (file.endsWith(".html")) {
+    for (const match of raw.matchAll(/\b(?:src|poster|data-img|data-video)=["']([^"']+)["']/gi)) references.push(match[1]);
+    for (const match of raw.matchAll(/<link\b[^>]*\bhref=["']([^"']+)["']/gi)) references.push(match[1]);
+  }
+  if (file.endsWith(".css")) {
+    for (const match of raw.matchAll(/url\(\s*["']?([^"')]+)["']?\s*\)/gi)) references.push(match[1]);
+  }
 
   for (const reference of references) {
     const resolved = resolveLocal(reference, file);
@@ -156,7 +177,39 @@ for (const lang of Object.keys(languages)) {
   if (!/(?:not guaranteed|nu sunt garantate|не гарантированы)/i.test(business?.html || "")) {
     fail(`${lang}/business: missing earnings-results disclaimer`);
   }
+  const emptyClubCards = (business?.html.match(/class=["'][^"']*\bclubcard\b[^"']*\bnoimg\b[^"']*["']/gi) || []).length;
+  if (emptyClubCards !== 7) fail(`${lang}/business: expected seven defined club-photo empty states, found ${emptyClubCards}`);
 }
+
+for (const file of [...pages.map((page) => page.file), "404.html", "program-trainee.html"]) {
+  const html = fs.readFileSync(path.join(root, file), "utf8");
+  if (/<style\b/i.test(html)) fail(`${file}: inline style block remains`);
+  if (/\sstyle=(?:"[^"]*"|'[^']*')/i.test(html)) fail(`${file}: inline style attribute remains`);
+  if (!/css\/tokens\.css/i.test(html)) fail(`${file}: token stylesheet is not linked`);
+  for (const match of html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script>/gi)) {
+    if (!/\bsrc\s*=/i.test(match[1]) && !/application\/ld\+json/i.test(match[1]) && match[2].trim()) {
+      fail(`${file}: executable inline script remains`);
+    }
+  }
+}
+
+for (const cssFile of filesUnder(path.join(root, "css"), ".css")) {
+  if (path.basename(cssFile) === "tokens.css") continue;
+  const findings = findHardcodedDesignValues(fs.readFileSync(cssFile, "utf8"));
+  for (const finding of findings.slice(0, 10)) {
+    fail(`${path.relative(root, cssFile)}: hardcoded ${finding.finding} in ${finding.property}`);
+  }
+  if (findings.length > 10) fail(`${path.relative(root, cssFile)}: ${findings.length - 10} additional hardcoded design values`);
+}
+
+for (const lang of Object.keys(languages)) {
+  const booking = pages.find((page) => page.lang === lang && page.slug === "consultatie-gratuita");
+  if (!/name=["']form-name["']/i.test(booking?.html || "")) fail(`${lang}/consultatie-gratuita: Netlify form-name input is missing`);
+  if (!/name=["']bot-field["']/i.test(booking?.html || "")) fail(`${lang}/consultatie-gratuita: bot-field honeypot is missing`);
+}
+
+const componentScripts = filesUnder(path.join(root, "js", "components"), ".js").map((file) => fs.readFileSync(file, "utf8")).join("\n");
+if (!componentScripts.includes("preventDefault()")) fail("Externalized form handlers no longer contain preventDefault()");
 
 const sitemap = fs.readFileSync(path.join(root, "sitemap.xml"), "utf8");
 const indexablePages = pages.filter((page) => page.slug !== "multumim");
@@ -185,4 +238,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`Site validation passed: ${pages.length} pages, ${liveRoutes.size - 1} live routes, 3-language parity, SEO and compliance checks.`);
+console.log(`Site validation passed: 44 generated pages, ${liveRoutes.size - 1} localized routes, token policy, SEO, forms and compliance checks.`);

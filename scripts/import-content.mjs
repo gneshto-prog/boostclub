@@ -175,9 +175,22 @@ function replaceStyleBlocks(html, pageFile) {
     inlineStyleLinesBefore += css.split(/\r?\n/).length;
     const hash = digest(css);
     const sourceId = `component-${hash}`;
-    componentCss.set(sourceId, css);
+    if (!componentCss.has(sourceId)) componentCss.set(sourceId, { css, pageFile });
     addUsage(sourceId, pageFile);
     return `<link rel="stylesheet" href="${componentHref(pageFile, "css", `${hash}.css`)}">`;
+  });
+}
+
+function rewriteComponentUrls(css, pageFile) {
+  return css.replace(/url\(\s*(["']?)([^"')]+)\1\s*\)/gi, (match, quote, reference) => {
+    const clean = reference.trim();
+    if (/^(?:data:|https?:|\/\/|#)/i.test(clean)) return match;
+    const suffixMatch = clean.match(/([?#].*)$/);
+    const suffix = suffixMatch?.[1] || "";
+    const pathPart = suffix ? clean.slice(0, -suffix.length) : clean;
+    const target = path.normalize(path.join(path.dirname(pageFile), pathPart));
+    const rewritten = path.relative("css/components", target).split(path.sep).join("/");
+    return `url(${quote}${rewritten}${suffix}${quote})`;
   });
 }
 
@@ -283,7 +296,7 @@ for (const page of pageSpecs) {
 
 const cssSources = new Map([
   ["style", readBaseline("css/style.css")],
-  ...componentCss.entries(),
+  ...[...componentCss.entries()].map(([sourceId, record]) => [sourceId, rewriteComponentUrls(record.css, record.pageFile)]),
   ["inline-utilities", [...utilityDeclarations.entries()].map(([className, declaration]) => `.${className} { ${declaration} }`).join("\n")],
   ["business-phase2", readBaseline("css/business-phase2.css")],
   ["scaffolding", fs.readFileSync(path.join(root, "css/scaffolding.css"), "utf8")],
