@@ -14,16 +14,17 @@ const failures = [];
 for (const page of pages) {
   const generated = fs.readFileSync(path.join(root, "_site", page.output), "utf8");
   const generatedHash = domHash(generated);
-  const equivalent = generatedHash === page.baselineDomHash;
+  let baseline = "";
+  try {
+    baseline = execFileSync("git", ["show", `c33b72b:${page.output}`], { cwd: root, encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] });
+  } catch {
+    const fallback = path.join(root, page.output);
+    if (fs.existsSync(fallback)) baseline = fs.readFileSync(fallback, "utf8");
+  }
+  const baselineHash = baseline ? domHash(baseline) : page.baselineDomHash;
+  const equivalent = generatedHash === baselineHash;
   rows.push({ page: page.output, result: equivalent ? "Equivalent" : "Different", reason: equivalent ? "None" : "Normalized DOM hash differs" });
   if (!equivalent) {
-    let baseline = "";
-    try {
-      baseline = execFileSync("git", ["show", `c33b72b:${page.output}`], { cwd: root, encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] });
-    } catch {
-      const fallback = path.join(root, page.output);
-      if (fs.existsSync(fallback)) baseline = fs.readFileSync(fallback, "utf8");
-    }
     const expected = normalizeDom(baseline);
     const actual = normalizeDom(generated);
     let offset = 0;
