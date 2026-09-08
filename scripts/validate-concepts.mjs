@@ -2,7 +2,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
-import { concepts } from "../content/homepage-concepts.mjs";
+import { concepts, finalistSites } from "../content/homepage-concepts.mjs";
 
 const projectRoot = process.cwd();
 const outputRoot = path.join(projectRoot, "_site");
@@ -24,7 +24,16 @@ function resolveLocal(reference, baseFile) {
   return path.resolve(path.dirname(baseFile), clean);
 }
 
-const expectedFiles = new Set(["index.html", "styles.css", "interactions.js", ...concepts.map(({ slug }) => `${slug}.html`)]);
+const supportingPages = Object.entries(finalistSites).flatMap(([theme, site]) =>
+  site.pages.filter((page) => page.id !== "home").map((page) => ({ ...page, theme, site })),
+);
+const expectedFiles = new Set([
+  "index.html",
+  "styles.css",
+  "interactions.js",
+  ...concepts.map(({ slug }) => `${slug}.html`),
+  ...supportingPages.map(({ slug }) => `${slug}.html`),
+]);
 if (!fs.existsSync(conceptRoot)) {
   fail("Missing generated concepts directory");
 } else {
@@ -80,6 +89,44 @@ for (const concept of concepts) {
   }
 }
 
+for (const page of supportingPages) {
+  const file = path.join(conceptRoot, `${page.slug}.html`);
+  if (!fs.existsSync(file)) continue;
+  const html = fs.readFileSync(file, "utf8");
+
+  if (!html.includes(`<html lang="en" data-concept="${page.theme}"`)) fail(`${page.slug}.html: missing matching finalist theme root`);
+  if (count(html, /<h1\b/gi) !== 1) fail(`${page.slug}.html: expected exactly one H1`);
+  if (!/<title>[^<]+<\/title>/i.test(html)) fail(`${page.slug}.html: missing title`);
+  if (!/name=["']description["'][^>]+content=["'][^"']+["']/i.test(html)) fail(`${page.slug}.html: missing description`);
+  if (!/name=["']robots["'][^>]+noindex,nofollow/i.test(html)) fail(`${page.slug}.html: must remain noindex,nofollow`);
+  if (!html.includes('href="styles.css"')) fail(`${page.slug}.html: missing concept stylesheet`);
+  if (!html.includes('src="interactions.js"')) fail(`${page.slug}.html: missing interaction script`);
+  if (!html.includes('aria-label="Concept preview controls"')) fail(`${page.slug}.html: missing preview controls`);
+  if (!html.includes(`aria-label="${page.site.navLabel}"`)) fail(`${page.slug}.html: missing full finalist navigation`);
+  if (!html.includes(`href="${page.slug}.html" aria-current="page"`)) fail(`${page.slug}.html: missing active navigation state`);
+  for (const targetPage of page.site.pages) {
+    if (!html.includes(`href="${targetPage.slug}.html"`)) fail(`${page.slug}.html: missing navigation link to ${targetPage.slug}.html`);
+  }
+
+  const references = [];
+  for (const match of html.matchAll(/\b(?:src|poster)=["']([^"']+)["']/gi)) references.push(match[1]);
+  for (const match of html.matchAll(/<link\b[^>]*\bhref=["']([^"']+)["']/gi)) references.push(match[1]);
+  for (const reference of references) {
+    const target = resolveLocal(reference, file);
+    if (target && !fs.existsSync(target)) fail(`${page.slug}.html: missing asset ${reference}`);
+  }
+}
+
+for (const fileName of [...concepts.map(({ slug }) => `${slug}.html`), ...supportingPages.map(({ slug }) => `${slug}.html`)]) {
+  const file = path.join(conceptRoot, fileName);
+  if (!fs.existsSync(file)) continue;
+  const html = fs.readFileSync(file, "utf8");
+  for (const match of html.matchAll(/<a\b[^>]*\bhref=["']([^"']+\.html)(?:[?#][^"']*)?["']/gi)) {
+    const target = resolveLocal(match[1], file);
+    if (target && !fs.existsSync(target)) fail(`${fileName}: broken concept page link ${match[1]}`);
+  }
+}
+
 const stylesFile = path.join(conceptRoot, "styles.css");
 if (fs.existsSync(stylesFile)) {
   const styles = fs.readFileSync(stylesFile, "utf8");
@@ -90,6 +137,9 @@ if (fs.existsSync(stylesFile)) {
   }
   for (const concept of concepts) {
     if (!styles.includes(`[data-concept="${concept.slug}"]`)) fail(`styles.css: missing theme scope for ${concept.slug}`);
+  }
+  for (const color of ["#0d5645", "#c9a24b", "#11705a", "#0a4537", "#08382d", "#e0be6e", "#e6e9de", "#f5f3ee", "#1a1f1c", "#5c6660"]) {
+    if (!styles.toLowerCase().includes(color)) fail(`styles.css: missing Boost Club brand color ${color}`);
   }
   if (!styles.includes("prefers-reduced-motion")) fail("styles.css: missing reduced motion treatment");
 }
@@ -115,4 +165,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`Homepage concept validation passed: gallery plus ${concepts.length} distinct, noindex English directions.`);
+console.log(`Homepage concept validation passed: gallery, ${concepts.length} homepages and ${supportingPages.length} finalist supporting pages.`);

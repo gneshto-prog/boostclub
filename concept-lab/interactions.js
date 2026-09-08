@@ -61,7 +61,32 @@
     });
   });
 
-  const parallaxTargets = document.querySelectorAll(".ag-dashboard, .ke-photo, .of-photo");
+  const progressBar = document.querySelector(".scroll-progress");
+  let progressFrame = 0;
+  const updateProgress = () => {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = scrollable > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollable)) : 0;
+    root.style.setProperty("--scroll-progress", String(progress));
+    progressFrame = 0;
+  };
+  if (progressBar) {
+    updateProgress();
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (!progressFrame) progressFrame = window.requestAnimationFrame(updateProgress);
+      },
+      { passive: true },
+    );
+  }
+
+  const themeTabs = document.querySelector(".theme-tabs");
+  const activeThemeTab = themeTabs?.querySelector('[aria-current="page"]');
+  if (themeTabs && activeThemeTab) {
+    themeTabs.scrollLeft = Math.max(0, activeThemeTab.offsetLeft - (themeTabs.clientWidth - activeThemeTab.clientWidth) / 2);
+  }
+
+  const parallaxTargets = document.querySelectorAll(".ag-dashboard, .ke-photo, .of-photo, .organic-visual, .cinematic-frame");
   parallaxTargets.forEach((target) => {
     target.addEventListener("pointermove", (event) => {
       if (root.dataset.motion === "off") return;

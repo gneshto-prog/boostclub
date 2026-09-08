@@ -15,6 +15,17 @@ The concept lab lives at `/concepts/` and is intentionally separate from the cur
 | 09 | The Proof Wall | Social proof, transformations and momentum | `/concepts/proof-wall.html` |
 | 10 | Quiet Luxury | Founder authority and high-touch service | `/concepts/quiet-luxury.html` |
 
+## Finalist mini-sites
+
+Organic Flow and Cinematic Journey are expanded into complete five-page concept systems. Both now use the exact Boost Club palette from `BOOST-CLUB-BRAND-KIT.md`: brand green, supporting greens, gold, cream, sage, white, ink and slate. The previous blue and orange concept accents are no longer used in either finalist.
+
+| Finalist | Home | Experience | Method | Stories | Visit |
+| --- | --- | --- | --- | --- | --- |
+| Organic Flow | `/concepts/organic-flow.html` | `/concepts/organic-flow-experience.html` | `/concepts/organic-flow-method.html` | `/concepts/organic-flow-stories.html` | `/concepts/organic-flow-visit.html` |
+| Cinematic Journey | `/concepts/cinematic-journey.html` | `/concepts/cinematic-journey-experience.html` | `/concepts/cinematic-journey-method.html` | `/concepts/cinematic-journey-stories.html` | `/concepts/cinematic-journey-visit.html` |
+
+Each finalist includes persistent page tabs, scroll progress, animated visual motifs, responsive layouts, reduced-motion support, free-assessment calls to action, contact information, review content and a visit FAQ.
+
 ## Review method
 
 Choose one primary direction and, if useful, one secondary direction for specific elements. The most useful feedback is:

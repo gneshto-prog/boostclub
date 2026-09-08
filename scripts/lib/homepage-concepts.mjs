@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import { benefits, brand, concepts, images, proof, reviews, steps } from "../../content/homepage-concepts.mjs";
+import { benefits, brand, concepts, finalistSites, images, proof, reviews, steps } from "../../content/homepage-concepts.mjs";
 
 const arrow = '<span aria-hidden="true">↗</span>';
 
@@ -18,6 +18,38 @@ function nav(modifier = "") {
     </nav>
     <a class="nav-cta" href="${brand.bookingHref}">Book free ${arrow}</a>
   </header>`;
+}
+
+function finalistNav(theme, activePage) {
+  const site = finalistSites[theme];
+  const modifier = theme === "organic-flow" ? "nav-organic" : "nav-cinematic";
+  const links = site.pages
+    .map((page) => `<a href="${page.slug}.html"${page.id === activePage ? ' aria-current="page"' : ""}>${page.label}</a>`)
+    .join("");
+  return `<header class="concept-nav ${modifier} finalist-nav">
+    <a class="brand-link" href="${site.pages[0].slug}.html">${logo()}</a>
+    <span class="finalist-edition">${site.label} / finalist</span>
+    <a class="nav-cta" href="${brand.bookingHref}">Book free ${arrow}</a>
+  </header>
+  <nav class="theme-tabs ${theme === "organic-flow" ? "organic-tabs" : "cinematic-tabs"}" aria-label="${site.navLabel}">${links}</nav>
+  <div class="scroll-progress" aria-hidden="true"><i></i></div>`;
+}
+
+function themeRibbon(theme) {
+  const words = theme === "organic-flow"
+    ? "ENERGY · CLARITY · COMMUNITY · CONSISTENCY · YOUR PACE · "
+    : "ARRIVE · MEASURE · UNDERSTAND · RETURN · YOUR STORY · ";
+  return `<div class="theme-ribbon ${theme === "organic-flow" ? "organic-ribbon" : "cinematic-ribbon"}" aria-hidden="true"><div>${words.repeat(3)}</div></div>`;
+}
+
+function faqMarkup(className) {
+  const items = [
+    ["free", "Is the first assessment really free?", "Yes. Your first body composition assessment and the explanation that follows are complimentary."],
+    ["time", "How long should I allow?", "Plan for 30 to 40 minutes, so there is enough time to understand the numbers and ask questions."],
+    ["prepare", "Do I need to prepare anything?", "Come as you are. Comfortable clothing and normal hydration are helpful, but no special preparation is required."],
+    ["choice", "Will I be pressured to buy something?", "No. The first visit is designed to give you clarity. Any next step is discussed openly and remains your choice."],
+  ];
+  return `<div class="${className}">${items.map(([id, question, answer]) => `<details class="reveal" data-faq="${id}"><summary>${question}<span>+</span></summary><p>${answer}</p></details>`).join("")}</div>`;
 }
 
 function conceptDock(concept) {
@@ -150,34 +182,147 @@ function neoSwiss() {
 }
 
 function cinematicJourney() {
-  return `${nav("nav-cinematic")}
-  <main>
+  return `${finalistNav("cinematic-journey", "home")}
+  <main class="finalist-home cinematic-home">
     <section class="cj-hero">
       <img class="cj-backdrop" src="${images.portrait}" alt="Gabriel Neshto welcoming clients at Boost Club">
       <div class="cj-shade"></div><div class="cj-frame"></div>
       <div class="cj-copy reveal"><span>BOOST CLUB PRESENTS</span><h1>The moment your health stops feeling like a solo project.</h1><p>A personal wellness experience in the heart of Bucharest.</p><a class="primary-cta" href="${brand.bookingHref}">Book your first scene ${arrow}</a></div>
       <div class="cj-caption"><b>01</b><span>THE ARRIVAL</span><i>Scroll to continue</i></div>
     </section>
-    <section class="cj-chapter chapter-light" id="experience"><div class="cj-number">01</div><figure><img src="${images.consultation}" alt="Body composition consultation at Boost Club"></figure><div><span class="eyebrow">The first visit</span><h2>You arrive with questions.</h2><p>No judgement. No pressure. Just a welcoming space and a professional measurement of your real starting point.</p></div></section>
-    <section class="cj-chapter chapter-dark" id="method"><div class="cj-number">02</div><figure><img src="${images.founder}" alt="Gabriel Neshto, founder and consultant"></figure><div><span class="eyebrow">The conversation</span><h2>The numbers start making sense.</h2><p>Gabriel explains the full picture in plain language, connects it to your goal and helps you choose a realistic direction.</p></div></section>
-    <section class="cj-chapter chapter-blue" id="stories"><div class="cj-number">03</div><figure><img src="${images.family}" alt="Boost Club community"></figure><div><span class="eyebrow">The rhythm</span><h2>You stop doing it alone.</h2><p>Come back for the people, the morning energy and the kind of accountability that feels like belonging.</p></div></section>
+    ${themeRibbon("cinematic-journey")}
+    <section class="cj-chapter chapter-light" id="experience"><div class="cj-number">01</div><figure><img src="${images.consultation}" alt="Body composition consultation at Boost Club"></figure><div><span class="eyebrow">The first visit</span><h2>You arrive with questions.</h2><p>No judgement. No pressure. Just a welcoming space and a professional measurement of your real starting point.</p><a class="chapter-link" href="cinematic-journey-experience.html">Enter the experience ${arrow}</a></div></section>
+    <section class="cj-chapter chapter-dark" id="method"><div class="cj-number">02</div><figure><img src="${images.founder}" alt="Gabriel Neshto, founder and consultant"></figure><div><span class="eyebrow">The conversation</span><h2>The numbers start making sense.</h2><p>Gabriel explains the full picture in plain language, connects it to your goal and helps you choose a realistic direction.</p><a class="chapter-link" href="cinematic-journey-method.html">See the method ${arrow}</a></div></section>
+    <section class="cj-chapter chapter-blue" id="stories"><div class="cj-number">03</div><figure><img src="${images.family}" alt="Boost Club community"></figure><div><span class="eyebrow">The rhythm</span><h2>You stop doing it alone.</h2><p>Come back for the people, the morning energy and the kind of accountability that feels like belonging.</p><a class="chapter-link" href="cinematic-journey-stories.html">Meet the community ${arrow}</a></div></section>
     <section class="cj-credits">${proofMarkup("cj-proof")}<p>YOUR STORY / NEXT</p></section>${finalCta("Now showing in Victoria Square", "Your first visit costs nothing. It can change the whole plot.")}
   </main>`;
 }
 
 function organicFlow() {
-  return `${nav("nav-organic")}
-  <main>
+  return `${finalistNav("organic-flow", "home")}
+  <main class="finalist-home organic-home">
     <section class="of-hero">
       <div class="of-blob blob-one" aria-hidden="true"></div><div class="of-blob blob-two" aria-hidden="true"></div>
       <div class="of-copy reveal"><span class="eyebrow">Feel good. For real.</span><h1>A softer way to build stronger habits.</h1><p>Friendly guidance, real body insights and a community that makes healthy mornings something to look forward to.</p><a class="primary-cta" href="${brand.bookingHref}">Find your starting point ${arrow}</a></div>
       <figure class="of-photo reveal"><img src="${images.consultation}" alt="A friendly wellness consultation"><figcaption>Come exactly as you are</figcaption></figure>
       <div class="of-orbit-word word-one">ENERGY</div><div class="of-orbit-word word-two">SUPPORT</div><div class="of-orbit-word word-three">YOU</div>
     </section>
-    <section class="of-wave" id="experience"><div><span class="eyebrow">A little structure. A lot of humanity.</span><h2>Wellness can be serious without feeling severe.</h2></div>${benefitMarkup("of-benefits")}</section>
+    ${themeRibbon("organic-flow")}
+    <section class="of-wave" id="experience"><div><span class="eyebrow">A little structure. A lot of humanity.</span><h2>Wellness can be serious without feeling severe.</h2></div>${benefitMarkup("of-benefits")}<a class="chapter-link" href="organic-flow-experience.html">Explore the whole experience ${arrow}</a></section>
     <section class="of-playground" id="method"><header><span class="eyebrow">Choose your focus</span><h2>What would make today feel better?</h2></header><div class="goal-picker" role="group" aria-label="Choose a wellness goal"><button type="button" data-goal="energy" aria-pressed="true">More energy</button><button type="button" data-goal="strength" aria-pressed="false">More strength</button><button type="button" data-goal="balance" aria-pressed="false">More balance</button></div><div class="goal-answer" data-goal-answer><strong>Start with what fuels your day.</strong><span>We will map your current rhythm and find the easiest win to repeat.</span></div></section>
-    <section class="of-community" id="stories"><div><img src="${images.family}" alt="The Boost Club community"></div><div><span class="eyebrow">The people effect</span><h2>Small steps grow faster in good company.</h2>${proofMarkup("of-proof")}</div></section>
+    <section class="of-community" id="stories"><div><img src="${images.family}" alt="The Boost Club community"></div><div><span class="eyebrow">The people effect</span><h2>Small steps grow faster in good company.</h2>${proofMarkup("of-proof")}<a class="chapter-link" href="organic-flow-stories.html">Read the real stories ${arrow}</a></div></section>
     ${finalCta("Your body. Your pace.", "Let the first step feel light.")}
+  </main>`;
+}
+
+function organicExperience() {
+  return `${finalistNav("organic-flow", "experience")}
+  <main class="finalist-subpage organic-subpage">
+    <section class="of-page-hero">
+      <div class="of-blob blob-one" aria-hidden="true"></div><div class="of-blob blob-two" aria-hidden="true"></div>
+      <div class="reveal"><span class="eyebrow">The experience</span><h1>A morning that meets you where you are.</h1><p>No white coats. No performance. Just useful insight, a warm welcome and a place that is easy to return to.</p></div>
+      <figure class="organic-visual reveal"><img src="${images.consultation}" alt="A relaxed personal consultation at Boost Club"><figcaption>Sevastopol 24 / Sector 1</figcaption></figure>
+    </section>
+    ${themeRibbon("organic-flow")}
+    <section class="of-rhythm">
+      <header class="reveal"><span class="eyebrow">A simple rhythm</span><h2>Your first visit, from hello to clear next step.</h2></header>
+      <div class="of-timeline">
+        <article class="reveal"><b>00</b><span>Arrive</span><h3>Walk in as you are.</h3><p>Settle in, share what brought you here and tell us what you want to feel different.</p></article>
+        <article class="reveal"><b>10</b><span>Measure</span><h3>See the real starting point.</h3><p>A professional body composition assessment gives the conversation something concrete.</p></article>
+        <article class="reveal"><b>20</b><span>Understand</span><h3>Make the numbers human.</h3><p>Gabriel explains what matters, what does not and how it connects to your goal.</p></article>
+        <article class="reveal"><b>35</b><span>Leave clear</span><h3>Take one realistic direction.</h3><p>No overloaded plan. Just a next step simple enough to remember tomorrow morning.</p></article>
+      </div>
+    </section>
+    <section class="of-senses">
+      <div class="reveal"><span class="eyebrow">What it feels like</span><h2>Thoughtful enough to be useful. Relaxed enough to feel natural.</h2></div>
+      <div class="of-sense-cards"><article class="reveal"><span>01</span><h3>Welcomed</h3><p>Someone knows your name, your goal and the context around it.</p></article><article class="reveal"><span>02</span><h3>Understood</h3><p>Your questions get plain answers without clinical language or judgement.</p></article><article class="reveal"><span>03</span><h3>Included</h3><p>The morning community turns consistency into a shared rhythm.</p></article></div>
+    </section>
+    <section class="of-wide-story"><figure><img src="${images.family}" alt="The welcoming Boost Club community"></figure><div class="reveal"><span class="eyebrow">Stay for the people</span><h2>The assessment opens the door. The atmosphere brings you back.</h2><a class="primary-cta" href="organic-flow-visit.html">Plan your visit ${arrow}</a></div></section>
+    ${finalCta("A free first visit", "Come curious. Leave knowing what comes next.")}
+  </main>`;
+}
+
+function organicMethod() {
+  return `${finalistNav("organic-flow", "method")}
+  <main class="finalist-subpage organic-subpage">
+    <section class="of-page-hero of-method-hero">
+      <div class="of-blob blob-one" aria-hidden="true"></div>
+      <div class="reveal"><span class="eyebrow">The method</span><h1>Useful numbers. Human translation. Your pace.</h1><p>The process is structured, but the direction is personal. We measure first, listen closely and simplify what comes next.</p></div>
+      <div class="of-body-map reveal"><div class="body-map-orbit"><strong>YOU</strong><span>the whole picture</span></div><ul><li>Muscle mass <b>measured</b></li><li>Body fat <b>understood</b></li><li>Water balance <b>considered</b></li><li>Metabolic age <b>explained</b></li></ul></div>
+    </section>
+    <section class="of-method-path"><header class="reveal"><span class="eyebrow">Four gentle moves</span><h2>A clear process, without the pressure.</h2></header>${stepMarkup("of-full-steps")}</section>
+    <section class="of-principles"><div class="reveal"><span class="eyebrow">Built for real life</span><h2>Three principles keep the plan grounded.</h2></div><div><article class="reveal"><span>Enough</span><h3>Start with enough clarity to act.</h3><p>You do not need every answer today. You need the right first answer.</p></article><article class="reveal"><span>Repeatable</span><h3>Make the next step easy to repeat.</h3><p>Consistency grows from routines that fit mornings, work and family life.</p></article><article class="reveal"><span>Personal</span><h3>Keep your goal at the centre.</h3><p>Your data informs the conversation. It never replaces your lived experience.</p></article></div></section>
+    <section class="of-method-photo"><figure><img src="${images.founder}" alt="Gabriel Neshto explaining a personal wellness plan"></figure><div class="reveal"><span class="eyebrow">Your guide</span><h2>Science is only helpful when someone makes it understandable.</h2><p>Gabriel combines professional assessment, personal experience and a community-first approach to turn information into a practical direction.</p><a class="chapter-link" href="organic-flow-stories.html">See what members say ${arrow}</a></div></section>
+    ${finalCta("Clarity before commitment", "Begin with the full picture, then choose your pace.")}
+  </main>`;
+}
+
+function organicStories() {
+  return `${finalistNav("organic-flow", "stories")}
+  <main class="finalist-subpage organic-subpage">
+    <section class="of-stories-hero"><div class="reveal"><span class="eyebrow">Real people, real mornings</span><h1>Progress feels better when someone notices.</h1><p>Every story starts somewhere different. The common thread is practical guidance, steady support and a place people enjoy returning to.</p></div>${proofMarkup("of-story-proof")}</section>
+    <section class="of-story-mosaic"><figure class="reveal"><img src="${images.resultOne}" alt="A Boost Club member progress story"><figcaption>Consistency</figcaption></figure><blockquote class="reveal"><div>★★★★★</div><p>“Gabriel was incredibly welcoming, kind and supportive from the very beginning.”</p><span>Andreea Popa</span></blockquote><figure class="reveal"><img src="${images.resultTwo}" alt="A Boost Club community progress story"><figcaption>Support</figcaption></figure><blockquote class="reveal"><div>★★★★★</div><p>“Friendly people, good energy and coaching you can actually understand.”</p><span>Kevin R.</span></blockquote><figure class="reveal"><img src="${images.resultThree}" alt="A Boost Club member wellbeing story"><figcaption>Momentum</figcaption></figure></section>
+    <p class="story-disclaimer">Individual results vary. Images show personal experiences and do not guarantee a specific outcome.</p>
+    <section class="of-community-notes"><header class="reveal"><span class="eyebrow">What people remember</span><h2>The feeling around the progress matters too.</h2></header>${reviewMarkup("of-full-reviews")}</section>
+    <section class="of-story-invite"><img src="${images.consultation}" alt="A personal Boost Club consultation"><div class="reveal"><span class="eyebrow">Your story can start quietly</span><h2>One visit. One honest conversation. No pressure to know the ending.</h2><a class="primary-cta" href="organic-flow-visit.html">See how to visit ${arrow}</a></div></section>
+    ${finalCta("Your starting point is enough", "Come in exactly as you are.")}
+  </main>`;
+}
+
+function organicVisit() {
+  return `${finalistNav("organic-flow", "visit")}
+  <main class="finalist-subpage organic-subpage">
+    <section class="of-visit-hero"><div class="reveal"><span class="eyebrow">Visit Boost Club</span><h1>Your first visit is free. Your next step stays yours.</h1><p>Find us near Victoria Square for a welcoming 30 to 40 minute body composition assessment and conversation.</p><div class="cta-group"><a class="primary-cta" href="${brand.bookingHref}">Choose a time ${arrow}</a><a class="text-cta" href="${brand.whatsappHref}">Ask on WhatsApp</a></div></div><figure class="organic-visual reveal"><img src="${images.consultation}" alt="Inside a consultation at Boost Club"><figcaption>Strada Sevastopol 24</figcaption></figure></section>
+    <section class="of-visit-grid"><article class="reveal"><span>Where</span><h2>Five minutes from Victoria Square.</h2><p>Strada Sevastopol 24<br>Sector 1, Bucharest</p><a href="https://maps.google.com/?q=Strada+Sevastopol+24+Bucharest">Open in Maps ${arrow}</a></article><article class="reveal"><span>When</span><h2>Build it into your morning.</h2><dl><div><dt>Monday to Friday</dt><dd>07:00 onward</dd></div><div><dt>First consultation</dt><dd>30 to 40 min</dd></div><div><dt>Booking</dt><dd>Online or WhatsApp</dd></div></dl></article><article class="reveal"><span>Talk</span><h2>A real person answers.</h2><p>Call or message Gabriel if you want to ask something before choosing a time.</p><a href="${brand.phoneHref}">${brand.phone}</a></article></section>
+    <section class="of-faq"><header class="reveal"><span class="eyebrow">Before you come</span><h2>Everything you might want to ask.</h2></header>${faqMarkup("of-faq-list")}</section>
+    ${finalCta("Sevastopol 24 / Sector 1", "A warm hello and a clearer direction are waiting.")}
+  </main>`;
+}
+
+function cinematicExperience() {
+  return `${finalistNav("cinematic-journey", "experience")}
+  <main class="finalist-subpage cinematic-subpage">
+    <section class="cj-page-hero"><img src="${images.consultation}" alt="The first Boost Club consultation"><div class="cj-shade"></div><div class="cj-frame"></div><div class="reveal"><span>CHAPTER ONE / THE EXPERIENCE</span><h1>Every first visit has a turning point.</h1><p>This one begins when vague questions become something you can finally see.</p></div><b>01</b></section>
+    ${themeRibbon("cinematic-journey")}
+    <section class="cj-scene chapter-cream"><div class="scene-index">SCENE 01<br>00:00</div><figure class="cinematic-frame reveal"><img src="${images.consultation}" alt="Arriving at Boost Club"></figure><div class="reveal"><span class="eyebrow">The arrival</span><h2>No performance required.</h2><p>You are welcomed into a relaxed club, asked what matters to you and given space to tell the honest version.</p></div></section>
+    <section class="cj-scene chapter-deep"><div class="scene-index">SCENE 02<br>00:10</div><figure class="cinematic-frame reveal"><img src="${images.founder}" alt="Gabriel explaining body composition results"></figure><div class="reveal"><span class="eyebrow">The reveal</span><h2>The numbers find their meaning.</h2><p>Your body composition is measured, placed in context and translated into language that feels useful immediately.</p></div></section>
+    <section class="cj-scene chapter-green"><div class="scene-index">SCENE 03<br>00:35</div><figure class="cinematic-frame reveal"><img src="${images.family}" alt="The wider Boost Club community"></figure><div class="reveal"><span class="eyebrow">The return</span><h2>The plan becomes a place.</h2><p>What brings you back is not a dashboard. It is the welcome, the rhythm and the feeling that your progress has witnesses.</p></div></section>
+    <section class="cj-pullquote reveal"><span>THE FEELING TO REMEMBER</span><blockquote>“I do not have to figure this out alone.”</blockquote></section>
+    ${finalCta("Chapter one is complimentary", "See what your own turning point could feel like.")}
+  </main>`;
+}
+
+function cinematicMethod() {
+  return `${finalistNav("cinematic-journey", "method")}
+  <main class="finalist-subpage cinematic-subpage">
+    <section class="cj-page-hero cj-method-cover"><img src="${images.founder}" alt="Gabriel Neshto guiding a Boost Club consultation"><div class="cj-shade"></div><div class="cj-frame"></div><div class="reveal"><span>CHAPTER TWO / THE METHOD</span><h1>The plot becomes clear when the signals connect.</h1><p>Measure the full picture. Translate it honestly. Choose one direction that belongs in real life.</p></div><b>02</b></section>
+    <section class="cj-method-acts"><header class="reveal"><span>THE FOUR ACT STRUCTURE</span><h2>No mystery. Just a well-directed beginning.</h2></header><div>${steps.map((item) => `<article class="reveal"><span>ACT ${item.number}</span><h3>${item.title}</h3><p>${item.copy}</p></article>`).join("")}</div></section>
+    <section class="cj-measurement"><div class="cj-measurement-copy reveal"><span class="eyebrow">What we look at</span><h2>Not one number. The relationship between them.</h2><p>Muscle, body fat, water, visceral fat and metabolic age are considered together, then connected back to your priorities.</p></div><div class="cj-reel reveal"><div><span>MUSCLE</span><b>01</b></div><div><span>BODY FAT</span><b>02</b></div><div><span>WATER</span><b>03</b></div><div><span>METABOLIC AGE</span><b>04</b></div><i></i></div></section>
+    <section class="cj-director"><figure class="cinematic-frame"><img src="${images.mma}" alt="Gabriel Neshto during athletic training"></figure><div class="reveal"><span class="eyebrow">The guide behind the process</span><h2>Built through experience. Explained without ego.</h2><p>Gabriel brings professional accreditation, years of study and his own transformation into a method centred on clear communication.</p><a class="chapter-link" href="cinematic-journey-stories.html">Continue to the stories ${arrow}</a></div></section>
+    ${finalCta("The method begins with listening", "Your numbers deserve a human explanation.")}
+  </main>`;
+}
+
+function cinematicStories() {
+  return `${finalistNav("cinematic-journey", "stories")}
+  <main class="finalist-subpage cinematic-subpage">
+    <section class="cj-page-hero cj-stories-cover"><img src="${images.family}" alt="People in the Boost Club wellness community"><div class="cj-shade"></div><div class="cj-frame"></div><div class="reveal"><span>CHAPTER THREE / THE STORIES</span><h1>The credits belong to the people who kept going.</h1><p>Progress is personal. Community is what gives it a soundtrack.</p></div><b>03</b></section>
+    <section class="cj-testimonials"><header class="reveal"><span>VOICES FROM THE CLUB</span><h2>Three honest reviews. One unmistakable feeling.</h2></header>${reviewMarkup("cj-full-reviews")}</section>
+    <section class="cj-filmstrip"><figure class="reveal"><img src="${images.resultOne}" alt="Boost Club member progress"><figcaption>01 / CONSISTENCY</figcaption></figure><figure class="reveal"><img src="${images.resultTwo}" alt="Boost Club member progress"><figcaption>02 / SUPPORT</figcaption></figure><figure class="reveal"><img src="${images.resultThree}" alt="Boost Club member progress"><figcaption>03 / MOMENTUM</figcaption></figure></section>
+    <p class="story-disclaimer cinematic-disclaimer">Individual results vary. Images show personal experiences and do not guarantee a specific outcome.</p>
+    <section class="cj-credits cj-story-credits">${proofMarkup("cj-proof")}<p>THE NEXT NAME IN THE CREDITS COULD BE YOURS</p><a class="primary-cta" href="cinematic-journey-visit.html">Plan the first scene ${arrow}</a></section>
+    ${finalCta("No perfect ending required", "Just a first scene that feels possible.")}
+  </main>`;
+}
+
+function cinematicVisit() {
+  return `${finalistNav("cinematic-journey", "visit")}
+  <main class="finalist-subpage cinematic-subpage">
+    <section class="cj-page-hero cj-visit-cover"><img src="${images.portrait}" alt="Gabriel Neshto welcoming a visitor"><div class="cj-shade"></div><div class="cj-frame"></div><div class="reveal"><span>NOW SHOWING / VICTORIA SQUARE</span><h1>Your first scene is already set.</h1><p>Thirty to forty minutes. A complete assessment. A conversation that puts you at the centre.</p><div class="cta-group"><a class="primary-cta" href="${brand.bookingHref}">Book the free visit ${arrow}</a><a class="text-cta" href="${brand.whatsappHref}">Message Gabriel</a></div></div><b>04</b></section>
+    <section class="cj-showtimes"><header class="reveal"><span>LOCATION / SHOWTIMES / CONTACT</span><h2>Everything you need before you arrive.</h2></header><div><article class="reveal"><span>LOCATION</span><h3>Strada Sevastopol 24</h3><p>Sector 1, Bucharest<br>Five minutes from Victoria Square</p><a href="https://maps.google.com/?q=Strada+Sevastopol+24+Bucharest">Open in Maps ${arrow}</a></article><article class="reveal"><span>SESSION</span><h3>30 to 40 minutes</h3><p>Morning appointments available Monday to Friday from 07:00 onward.</p><a href="${brand.bookingHref}">See available times ${arrow}</a></article><article class="reveal"><span>CONTACT</span><h3>${brand.phone}</h3><p>Call directly or send a WhatsApp message before you book.</p><a href="${brand.whatsappHref}">Start a conversation ${arrow}</a></article></div></section>
+    <section class="cj-faq"><header class="reveal"><span class="eyebrow">Before the opening scene</span><h2>The practical questions, answered.</h2></header>${faqMarkup("cj-faq-list")}</section>
+    <section class="cj-closing-frame"><figure class="cinematic-frame"><img src="${images.consultation}" alt="A welcoming first Boost Club visit"></figure><div class="reveal"><span>FINAL CARD</span><h2>Arrive with questions. Leave with direction.</h2><a class="primary-cta" href="${brand.bookingHref}">Reserve your visit ${arrow}</a></div></section>
+    ${finalCta("Boost Club / Bucharest", "Your story deserves a strong beginning.")}
   </main>`;
 }
 
@@ -249,16 +394,34 @@ const renderers = [
   quietLuxury,
 ];
 
+const finalistRenderers = {
+  "organic-flow": {
+    experience: organicExperience,
+    method: organicMethod,
+    stories: organicStories,
+    visit: organicVisit,
+  },
+  "cinematic-journey": {
+    experience: cinematicExperience,
+    method: cinematicMethod,
+    stories: cinematicStories,
+    visit: cinematicVisit,
+  },
+};
+
 function pageShell(concept, content) {
+  const isFinalist = Boolean(finalistSites[concept.slug]);
+  const title = concept.pageTitle || concept.title;
+  const description = concept.pageDescription || concept.subtitle;
   return `<!doctype html>
 <html lang="en" data-concept="${concept.slug}" data-motion="on">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
-  <meta name="theme-color" content="#061a2f">
-  <title>${concept.title} | Boost Club homepage concept</title>
-  <meta name="description" content="${concept.subtitle}">
+  <meta name="theme-color" content="${isFinalist ? "#0D5645" : "#061a2f"}">
+  <title>${title} | Boost Club concept</title>
+  <meta name="description" content="${description}">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -312,5 +475,15 @@ export function buildHomepageConcepts(root, outputRoot) {
   concepts.forEach((concept, index) => {
     fs.writeFileSync(path.join(destination, `${concept.slug}.html`), pageShell(concept, renderers[index]()));
   });
+  for (const [theme, renderMap] of Object.entries(finalistRenderers)) {
+    const concept = concepts.find((item) => item.slug === theme);
+    for (const page of finalistSites[theme].pages.filter((item) => item.id !== "home")) {
+      const render = renderMap[page.id];
+      fs.writeFileSync(
+        path.join(destination, `${page.slug}.html`),
+        pageShell({ ...concept, pageTitle: page.title, pageDescription: page.description }, render()),
+      );
+    }
+  }
   return concepts;
 }

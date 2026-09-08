@@ -141,3 +141,28 @@ export const concepts = [
     signal: "Elegant / calm / founder-led",
   },
 ];
+
+export const finalistSites = {
+  "organic-flow": {
+    label: "Organic Flow",
+    navLabel: "Organic Flow concept pages",
+    pages: [
+      { id: "home", label: "Home", slug: "organic-flow", title: "Organic Flow", description: "A softer, community-first Boost Club homepage." },
+      { id: "experience", label: "Experience", slug: "organic-flow-experience", title: "The Organic Flow Experience", description: "See how a welcoming morning at Boost Club unfolds." },
+      { id: "method", label: "Method", slug: "organic-flow-method", title: "The Organic Flow Method", description: "Explore the measurement, conversation and practical next steps." },
+      { id: "stories", label: "Stories", slug: "organic-flow-stories", title: "Organic Flow Stories", description: "Real Boost Club voices, progress and community moments." },
+      { id: "visit", label: "Visit", slug: "organic-flow-visit", title: "Visit Organic Flow", description: "Plan a free first visit to Boost Club in central Bucharest." },
+    ],
+  },
+  "cinematic-journey": {
+    label: "Cinematic Journey",
+    navLabel: "Cinematic Journey concept pages",
+    pages: [
+      { id: "home", label: "Home", slug: "cinematic-journey", title: "Cinematic Journey", description: "A cinematic, human-first Boost Club homepage." },
+      { id: "experience", label: "Experience", slug: "cinematic-journey-experience", title: "The Cinematic Experience", description: "Follow the first Boost Club visit as a sequence of human moments." },
+      { id: "method", label: "Method", slug: "cinematic-journey-method", title: "The Cinematic Method", description: "Discover how body insights become a clear personal direction." },
+      { id: "stories", label: "Stories", slug: "cinematic-journey-stories", title: "Cinematic Stories", description: "Member voices and personal progress from the Boost Club community." },
+      { id: "visit", label: "Visit", slug: "cinematic-journey-visit", title: "Visit Cinematic Journey", description: "Book a free Boost Club assessment near Victoria Square." },
+    ],
+  },
+};
