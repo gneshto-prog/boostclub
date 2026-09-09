@@ -68,7 +68,8 @@ for (const page of softCurrentPages) {
 }
 
 const home = allHtml[0] || "";
-const firstHomeImage = home.match(/<img\b[^>]*src="([^"]+)"/i)?.[1];
+const homeMain = home.slice(home.indexOf("<main>"));
+const firstHomeImage = homeMain.match(/<img\b[^>]*src="([^"]+)"/i)?.[1];
 if (firstHomeImage !== "../images/boost-club-community.jpg") fail("Homepage must open with boost-club-community.jpg as its first image");
 if (count(home, /data-autoplay-video/gi) !== 2) fail("Homepage must contain the two cinematic club films");
 if (count(home, /data-video-toggle/gi) !== 2 || count(home, /data-audio-toggle/gi) !== 2) fail("Cinematic films must include play and sound controls");
@@ -83,8 +84,13 @@ for (const relative of ["images/soft-current-shake-01.jpg", "images/soft-current
 const combined = allHtml.join("\n");
 if (count(combined, /\.\.\/images\/soft-current-founder-portrait\.jpg/gi) !== 2) fail("Soft Current must use the official founder portrait in both founder placements");
 if (!fs.existsSync(path.join(outputRoot, "images", "soft-current-founder-portrait.jpg"))) fail("Missing official founder portrait asset");
-if (!combined.includes('content="https://boostclub.ro/images/soft-current-og-v2.png"')) fail("Soft Current pages must use the official-wordmark social card");
-if (!fs.existsSync(path.join(outputRoot, "images", "soft-current-og-v2.png"))) fail("Missing official-wordmark social card asset");
+if (count(combined, /class="sc-logo"/gi) !== softCurrentPages.length * 2) fail("Every Soft Current header and footer must use the official wordmark component");
+if (combined.includes('class="leaves"') || combined.includes('class="dot"')) fail("Soft Current must not use the generated text logo");
+for (const relative of ["images/boostclub-wordmark-dark.png", "images/boostclub-wordmark-cream.png"]) {
+  if (!fs.existsSync(path.join(outputRoot, relative))) fail(`Missing official wordmark asset ${relative}`);
+}
+if (!combined.includes('content="https://boostclub.ro/images/soft-current-og-v3.png"')) fail("Soft Current pages must use the tagline-free social card");
+if (!fs.existsSync(path.join(outputRoot, "images", "soft-current-og-v3.png"))) fail("Missing tagline-free social card asset");
 for (let index = 1; index <= 30; index += 1) {
   const slot = String(index).padStart(2, "0");
   if (!combined.includes(`PHOTO SLOT ${slot}`)) fail(`Missing photography brief slot ${slot}`);

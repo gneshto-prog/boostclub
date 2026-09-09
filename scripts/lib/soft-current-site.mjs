@@ -33,7 +33,7 @@ const steps = [
 ];
 
 function logo() {
-  return `<span class="sc-logo" aria-label="Boost Club">B<span class="leaves">oo</span>st Club<span class="dot">.</span></span>`;
+  return `<span class="sc-logo" role="img" aria-label="Boost Club"><img class="sc-logo-dark" src="../images/boostclub-wordmark-dark.png" alt=""><img class="sc-logo-cream" src="../images/boostclub-wordmark-cream.png" alt=""></span>`;
 }
 
 function symbolCluster(label = "Grow at your pace") {
@@ -239,7 +239,7 @@ function shell(page, content) {
   <meta name="description" content="${page.description}">
   <meta property="og:title" content="${page.title}">
   <meta property="og:description" content="${page.description}">
-  <meta property="og:image" content="https://boostclub.ro/images/soft-current-og-v2.png">
+  <meta property="og:image" content="https://boostclub.ro/images/soft-current-og-v3.png">
   <meta property="og:image:width" content="1730">
   <meta property="og:image:height" content="909">
   <meta name="twitter:card" content="summary_large_image">
