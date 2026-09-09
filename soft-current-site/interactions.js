@@ -6,6 +6,7 @@
   const motionToggle = document.querySelector("[data-motion-toggle]");
   const menuToggle = document.querySelector("[data-menu-toggle]");
   const mobileMenu = document.querySelector(".mobile-nav");
+  let syncAutoplayVideos = () => {};
 
   if (reducedMotion.matches) root.dataset.motion = "off";
 
@@ -45,6 +46,7 @@
   motionToggle?.addEventListener("click", () => {
     root.dataset.motion = root.dataset.motion === "off" ? "on" : "off";
     updateMotionControl();
+    syncAutoplayVideos();
   });
   updateMotionControl();
 
@@ -78,6 +80,103 @@
     );
     reveals.forEach((element) => observer.observe(element));
   }
+
+  const cinematicVideos = [...document.querySelectorAll("[data-autoplay-video]")];
+  const hydrateVideo = (video) => {
+    const source = video.querySelector("source[data-src]");
+    if (!source) return;
+    source.src = source.dataset.src;
+    source.removeAttribute("data-src");
+    video.load();
+  };
+  const updateVideoControls = (video) => {
+    const film = video.closest(".motion-film");
+    const playToggle = film?.querySelector("[data-video-toggle]");
+    const audioToggle = film?.querySelector("[data-audio-toggle]");
+    if (playToggle) {
+      const playing = !video.paused;
+      playToggle.setAttribute("aria-label", playing ? "Pause film" : "Play film");
+      playToggle.querySelector("span")?.replaceChildren(playing ? "Ⅱ" : "▶");
+    }
+    if (audioToggle) {
+      audioToggle.textContent = video.muted ? "Sound off" : "Sound on";
+      audioToggle.setAttribute("aria-label", video.muted ? "Turn sound on" : "Turn sound off");
+      audioToggle.setAttribute("aria-pressed", String(!video.muted));
+    }
+  };
+  const playVideo = async (video, userInitiated = false) => {
+    if (!userInitiated && (root.dataset.motion === "off" || video.dataset.manuallyPaused === "true")) return;
+    hydrateVideo(video);
+    if (userInitiated) video.dataset.manuallyPaused = "false";
+    try {
+      await video.play();
+    } catch {
+      // The poster and explicit play control remain available if autoplay is blocked.
+    }
+    updateVideoControls(video);
+  };
+  const isNearViewport = (video) => {
+    const bounds = video.getBoundingClientRect();
+    return bounds.bottom > -120 && bounds.top < window.innerHeight + 120;
+  };
+  syncAutoplayVideos = () => {
+    cinematicVideos.forEach((video) => {
+      if (root.dataset.motion === "on" && isNearViewport(video)) playVideo(video);
+      else {
+        video.pause();
+        updateVideoControls(video);
+      }
+    });
+  };
+  cinematicVideos.forEach((video) => {
+    const film = video.closest(".motion-film");
+    film?.querySelector("[data-video-toggle]")?.addEventListener("click", () => {
+      if (video.paused) playVideo(video, true);
+      else {
+        video.dataset.manuallyPaused = "true";
+        video.pause();
+        updateVideoControls(video);
+      }
+    });
+    film?.querySelector("[data-audio-toggle]")?.addEventListener("click", () => {
+      const nextMuted = !video.muted;
+      cinematicVideos.forEach((other) => {
+        if (other !== video) {
+          other.muted = true;
+          updateVideoControls(other);
+        }
+      });
+      video.muted = nextMuted;
+      if (!video.muted && video.paused) playVideo(video, true);
+      updateVideoControls(video);
+    });
+    video.addEventListener("play", () => updateVideoControls(video));
+    video.addEventListener("pause", () => updateVideoControls(video));
+    video.addEventListener("timeupdate", () => {
+      const progress = video.duration ? video.currentTime / video.duration : 0;
+      film?.style.setProperty("--video-progress", String(progress));
+    });
+    updateVideoControls(video);
+  });
+  if (cinematicVideos.length && "IntersectionObserver" in window) {
+    const filmObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const video = entry.target;
+        if (entry.isIntersecting) playVideo(video);
+        else {
+          video.pause();
+          updateVideoControls(video);
+        }
+      });
+    }, { rootMargin: "320px 0px", threshold: 0.08 });
+    cinematicVideos.forEach((video) => filmObserver.observe(video));
+  } else {
+    syncAutoplayVideos();
+  }
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) cinematicVideos.forEach((video) => video.pause());
+    else syncAutoplayVideos();
+  });
 
   let frame = 0;
   const updateScroll = () => {

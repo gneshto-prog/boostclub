@@ -51,6 +51,17 @@ function realPhoto(src, alt, caption = "", modifier = "") {
   return `<figure class="real-photo ${modifier}" data-parallax><img src="${src}" alt="${alt}"${priority}>${caption ? `<figcaption>${caption}</figcaption>` : ""}</figure>`;
 }
 
+function motionFilm(src, poster, alt, label, caption, modifier = "") {
+  return `<figure class="motion-film ${modifier} reveal">
+    <div class="motion-frame">
+      <video muted loop playsinline preload="none" poster="${poster}" data-autoplay-video aria-label="${alt}"><source data-src="${src}" type="video/mp4"></video>
+      <div class="film-controls"><button type="button" data-video-toggle aria-label="Play film"><span aria-hidden="true">▶</span></button><button type="button" data-audio-toggle aria-label="Turn sound on" aria-pressed="false">Sound off</button></div>
+      <span class="film-progress" aria-hidden="true"><i></i></span>
+    </div>
+    <figcaption><span>${label}</span><strong>${caption}</strong></figcaption>
+  </figure>`;
+}
+
 function reviewsMarkup() {
   return `<div class="review-cloud">${reviews.map(([quote, author], index) => `<blockquote class="review-bubble reveal bubble-${index + 1}"><span>★★★★★</span><p>“${quote}”</p><footer>${author} · Google</footer></blockquote>`).join("")}</div>`;
 }
@@ -105,9 +116,17 @@ function homePage() {
       <header class="section-heading reveal"><span class="eyebrow">This is Boost Club</span><h2>A place where feeling welcome is part of the plan.</h2><p>The same faces return, small wins get noticed and health stops feeling like a solo project.</p></header>
       <div class="value-petals"><article class="petal-card reveal"><span>01</span><div class="petal-symbol">○</div><h3>Known by name</h3><p>Personal attention from the moment you walk through the door.</p></article><article class="petal-card reveal"><span>02</span><div class="petal-symbol">✦</div><h3>Clear, not clinical</h3><p>Useful information explained in plain language and without judgement.</p></article><article class="petal-card reveal"><span>03</span><div class="petal-symbol">∞</div><h3>Easier together</h3><p>A community rhythm that makes consistency feel more natural.</p></article></div>
     </section>
+    <section class="cinematic-morning" aria-labelledby="cinematic-heading">
+      <div class="cinema-copy reveal"><span class="eyebrow">A morning in motion</span><h2 id="cinematic-heading">The ritual is simple. The feeling is <em>real.</em></h2><p>A fresh start does not happen outside real life. It happens between the first pour, a familiar face and all the small moments that make the club feel human.</p><div class="cinema-chapters" aria-label="Film chapters"><span><b>01</b> Made fresh</span><span><b>02</b> Made for real life</span></div></div>
+      <div class="cinema-stage">
+        <div class="cinema-orbits" aria-hidden="true"><i></i><i></i><i></i></div><span class="cinema-word" aria-hidden="true">MORNING</span>
+        ${motionFilm("../videos/soft-current-shake.mp4", "../images/soft-current-shake-poster.jpg", "A breakfast shake being poured into a Boost Club cup", "01 · The morning ritual", "Made one pour at a time.", "film-shake")}
+        ${motionFilm("../videos/soft-current-club-baby.mp4", "../images/soft-current-club-baby-poster.jpg", "A young child sitting comfortably inside Boost Club", "02 · Life belongs here", "A club warm enough for real life.", "film-baby")}
+      </div>
+    </section>
     <section class="photo-stream section-pad">
       <header class="section-heading reveal"><span class="eyebrow">A morning at the club</span><h2>Real moments belong in the story.</h2><p>These photo briefs are ready for the images you will add next.</p></header>
-      <div class="photo-stream-grid">${photoBrief("01", "members arriving and greeting each other", "A candid wide shot with people entering, smiling and saying hello.", "brief-round")}${photoBrief("02", "a colourful breakfast shake being prepared", "Hands, ingredients and the club counter in warm morning light.", "brief-tall")}${photoBrief("03", "two members laughing over breakfast", "A close, natural moment that feels social rather than posed.", "brief-wide")}${photoBrief("04", "a small group celebrating a weekly win", "Genuine applause, high-fives or a shared progress moment.", "brief-soft")}</div>
+      <div class="photo-stream-grid">${photoBrief("01", "members arriving and greeting each other", "A candid wide shot with people entering, smiling and saying hello.", "brief-round")}${photoBrief("02", "fresh fruit and toppings on the breakfast counter", "Hands, ingredients and colour in warm morning light.", "brief-tall")}${photoBrief("03", "two members laughing over breakfast", "A close, natural moment that feels social rather than posed.", "brief-wide")}${photoBrief("04", "a small group celebrating a weekly win", "Genuine applause, high-fives or a shared progress moment.", "brief-soft")}</div>
     </section>
     <section class="first-visit-preview">
       <div class="visit-copy reveal"><span class="eyebrow">Your free first visit</span><h2>Come with questions. Leave with a clear starting point.</h2><p>In 30 to 40 minutes, you get a professional body composition assessment, a clear explanation and one realistic next step. No hidden cost and no obligation.</p><a class="button" href="first-visit.html">See the whole experience <span aria-hidden="true">↗</span></a></div>

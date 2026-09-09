@@ -70,6 +70,12 @@ for (const page of softCurrentPages) {
 const home = allHtml[0] || "";
 const firstHomeImage = home.match(/<img\b[^>]*src="([^"]+)"/i)?.[1];
 if (firstHomeImage !== "../images/boost-club-community.jpg") fail("Homepage must open with boost-club-community.jpg as its first image");
+if (count(home, /data-autoplay-video/gi) !== 2) fail("Homepage must contain the two cinematic club films");
+if (count(home, /data-video-toggle/gi) !== 2 || count(home, /data-audio-toggle/gi) !== 2) fail("Cinematic films must include play and sound controls");
+if (!home.includes('data-src="../videos/soft-current-shake.mp4"') || !home.includes('data-src="../videos/soft-current-club-baby.mp4"')) fail("Homepage is missing a cinematic video source");
+for (const relative of ["videos/soft-current-shake.mp4", "videos/soft-current-club-baby.mp4", "images/soft-current-shake-poster.jpg", "images/soft-current-club-baby-poster.jpg"]) {
+  if (!fs.existsSync(path.join(outputRoot, relative))) fail(`Missing cinematic asset ${relative}`);
+}
 
 const combined = allHtml.join("\n");
 if (!combined.includes('content="https://boostclub.ro/images/soft-current-og-v2.png"')) fail("Soft Current pages must use the official-wordmark social card");
