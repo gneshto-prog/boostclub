@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import { benefits, brand, concepts, finalistSites, images, proof, reviews, steps } from "../../content/homepage-concepts.mjs";
+import { benefits, brand, concepts, finalistRound, finalistSites, images, proof, reviews, steps } from "../../content/homepage-concepts.mjs";
 
 const arrow = '<span aria-hidden="true">↗</span>';
 
@@ -58,6 +58,30 @@ function conceptDock(concept) {
     <span>${concept.id} / 10</span>
     <button type="button" data-motion-toggle aria-pressed="true">Motion on</button>
   </aside>`;
+}
+
+function finalistRoundNav(finalist) {
+  return `<header class="round-nav">
+    <a class="brand-link" href="finalists.html">${logo()}</a>
+    <span class="round-edition">${finalist.family} / finalist ${finalist.id}</span>
+    <a class="nav-cta" href="${brand.bookingHref}">Book free ${arrow}</a>
+  </header>
+  <nav class="round-tabs" aria-label="Finalist navigation">
+    <a href="#welcome">Welcome</a><a href="#experience">Experience</a><a href="#method">Method</a><a href="#stories">Stories</a><a href="#visit">Visit</a>
+  </nav>
+  <div class="scroll-progress" aria-hidden="true"><i></i></div>`;
+}
+
+function finalistRoundDock(finalist) {
+  return `<aside class="concept-dock round-dock" aria-label="Concept preview controls">
+    <a href="finalists.html" aria-label="Back to the six finalists">Final 6</a>
+    <span>${finalist.id} / 06</span>
+    <button type="button" data-motion-toggle aria-pressed="true">Motion on</button>
+  </aside>`;
+}
+
+function roundRibbon(words) {
+  return `<div class="round-ribbon" aria-hidden="true"><div>${(`${words} · `).repeat(8)}</div></div>`;
 }
 
 function proofMarkup(className = "proof-strip") {
@@ -381,6 +405,172 @@ function quietLuxury() {
   </main>`;
 }
 
+function finalistOrganicSoftCurrent(finalist) {
+  return `${finalistRoundNav(finalist)}
+  <main class="round-page soft-current">
+    <section class="sc-hero" id="welcome">
+      <div class="sc-orb sc-orb-a" aria-hidden="true"></div><div class="sc-orb sc-orb-b" aria-hidden="true"></div>
+      <div class="sc-copy reveal"><span class="eyebrow">A softer way forward</span><h1>Feel well, without forcing the pace.</h1><p>Begin with a clear picture of your body, then find a rhythm that feels natural enough to keep.</p><div class="cta-group"><a class="primary-cta" href="${brand.bookingHref}">Book a free assessment ${arrow}</a><a class="text-cta" href="#experience">Follow the flow</a></div></div>
+      <figure class="sc-portrait round-parallax reveal"><img src="${images.consultation}" alt="A relaxed personal consultation at Boost Club"><figcaption>30 to 40 quiet, useful minutes</figcaption></figure>
+      <span class="sc-float-note note-a">Your pace</span><span class="sc-float-note note-b">Real clarity</span>
+    </section>
+    ${roundRibbon("MEASURE GENTLY · UNDERSTAND CLEARLY · MOVE NATURALLY")}
+    <section class="sc-welcome round-section" id="experience">
+      <header class="round-heading reveal"><span class="eyebrow">A gentle current</span><h2>Everything you need to begin. Nothing you need to perform.</h2><p>The experience moves from curiosity to clarity, one comfortable step at a time.</p></header>
+      <div class="sc-petals">${benefits.map((item) => `<article class="round-card reveal"><span>${item.number}</span><h3>${item.title}</h3><p>${item.copy}</p></article>`).join("")}</div>
+    </section>
+    <section class="sc-path" id="method">
+      <div class="sc-path-copy reveal"><span class="eyebrow">The first visit</span><h2>A smooth line from question to next step.</h2><p>Your data matters, but the conversation gives it meaning. Gabriel helps you understand the full picture and choose one realistic move.</p></div>
+      <div class="sc-current" aria-hidden="true"><i></i></div>
+      <div class="sc-path-steps">${steps.map((item) => `<article class="reveal"><b>${item.number}</b><div><h3>${item.title}</h3><p>${item.copy}</p></div></article>`).join("")}</div>
+    </section>
+    <section class="sc-community" id="stories">
+      <figure class="round-parallax reveal"><img src="${images.family}" alt="The Boost Club community together"></figure>
+      <div class="reveal"><span class="eyebrow">People create momentum</span><h2>A place that notices when you come back.</h2><p>Friendly faces, honest encouragement and mornings that feel a little lighter together.</p>${proofMarkup("round-proof")}</div>
+    </section>
+    <section class="sc-voices">${reviewMarkup("round-reviews")}</section>
+    <div id="visit">${finalCta("Your first visit is free", "A calm beginning. A direction you can trust.")}</div>
+  </main>`;
+}
+
+function finalistOrganicBotanicalRhythm(finalist) {
+  return `${finalistRoundNav(finalist)}
+  <main class="round-page botanical-rhythm">
+    <section class="br-hero" id="welcome">
+      <div class="br-contour" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="br-intro reveal"><span class="eyebrow">Wellness, grown around you</span><h1>Follow what feels alive.</h1><p>A body assessment, a human conversation and an organic rhythm shaped around real life.</p><a class="primary-cta" href="${brand.bookingHref}">Find your starting point ${arrow}</a></div>
+      <figure class="br-main-photo round-parallax reveal"><img src="${images.portrait}" alt="Gabriel Neshto welcoming visitors to Boost Club"></figure>
+      <figure class="br-small-photo reveal"><img src="${images.family}" alt="A warm Boost Club community moment"></figure>
+      <div class="br-seed"><span>01</span><b>Start where you are</b></div>
+    </section>
+    ${roundRibbon("ROOTED IN CLARITY · GUIDED BY PEOPLE · BUILT TO GROW")}
+    <section class="br-trail round-section" id="experience">
+      <header class="round-heading reveal"><span class="eyebrow">The path through the club</span><h2>One continuous experience, from first hello to lasting habit.</h2></header>
+      <div class="br-trail-line" aria-hidden="true"></div>
+      ${steps.map((item, index) => `<article class="br-trail-stop reveal"><span>${item.number}</span><div><small>${["ARRIVE", "DISCOVER", "TRANSLATE", "GROW"][index]}</small><h3>${item.title}</h3><p>${item.copy}</p></div></article>`).join("")}
+    </section>
+    <section class="br-canopy" id="method">
+      <div class="reveal"><span class="eyebrow">A full picture</span><h2>Useful signals, seen in relation.</h2><p>Muscle, body fat, water and metabolic age become a meaningful map when someone explains how the pieces connect.</p><a class="text-cta" href="${brand.bookingHref}">See your own map ${arrow}</a></div>
+      <div class="br-rings reveal"><i></i><i></i><i></i><strong>YOU</strong><span>Body · goal · routine</span></div>
+    </section>
+    <section class="br-stories" id="stories">
+      <header class="round-heading reveal"><span class="eyebrow">The people in the landscape</span><h2>Progress grows better in good company.</h2></header>
+      <div class="br-story-grid"><figure class="reveal"><img src="${images.resultOne}" alt="A Boost Club member progress story"><figcaption>Consistency</figcaption></figure><figure class="reveal"><img src="${images.consultation}" alt="Personal guidance inside Boost Club"><figcaption>Clarity</figcaption></figure><blockquote class="reveal"><div>★★★★★</div><p>“Amazing and positive environment. The best coach and a great community.”</p><span>Lana G. · Google</span></blockquote></div>
+      <p class="story-disclaimer">Individual results vary. Images show personal experiences and do not guarantee a specific outcome.</p>
+    </section>
+    <div id="visit">${finalCta("Plant the first seed", "Thirty minutes can change the shape of what comes next.")}</div>
+  </main>`;
+}
+
+function finalistMorningSunriseRitual(finalist) {
+  return `${finalistRoundNav(finalist)}
+  <main class="round-page sunrise-ritual">
+    <section class="sr-hero" id="welcome">
+      <div class="sr-sun" aria-hidden="true"></div>
+      <div class="sr-copy reveal"><span class="eyebrow">Good morning, Bucharest</span><h1>A better day can start around one friendly table.</h1><p>Drop in for a body assessment, stay for the warm welcome and leave with a simple plan for the day ahead.</p><div class="cta-group"><a class="primary-cta" href="${brand.bookingHref}">Join a free morning ${arrow}</a><a class="text-cta" href="#experience">See the ritual</a></div></div>
+      <figure class="sr-arch round-parallax reveal"><img src="${images.consultation}" alt="A friendly morning consultation at Boost Club"><figcaption><b>07:00</b><span>Doors open</span></figcaption></figure>
+      <div class="sr-sticker sticker-one">Come<br>as you are</div><div class="sr-sticker sticker-two">5 min from<br>Victoria Square</div>
+    </section>
+    ${roundRibbon("SHAKE · TALK · LEARN · LAUGH · RESET · RETURN")}
+    <section class="sr-schedule" id="experience">
+      <header class="round-heading reveal"><span class="eyebrow">Your morning, made easier</span><h2>A small ritual with a surprisingly big lift.</h2></header>
+      <div class="sr-times">${["07:00|A warm hello", "07:10|Your breakfast ritual", "07:20|A personal check-in", "07:30|Back into your day"].map((entry) => { const [time, label] = entry.split("|"); return `<article class="reveal"><b>${time}</b><span>${label}</span><i></i></article>`; }).join("")}</div>
+    </section>
+    <section class="sr-table" id="method">
+      <figure class="reveal"><img src="${images.family}" alt="The friendly Boost Club wellness community"></figure>
+      <div class="reveal"><span class="eyebrow">The club feeling</span><h2>Guidance feels different when it comes with belonging.</h2><p>We measure where you are, listen to where you want to go and help build a repeatable routine with people around you.</p>${benefitMarkup("sr-benefits")}</div>
+    </section>
+    <section class="sr-notes" id="stories"><div class="sr-note-title reveal"><span class="eyebrow">Notes from the table</span><h2>What people take into the rest of their day.</h2></div>${reviews.map((item, index) => `<blockquote class="reveal note-${index + 1}"><div>★★★★★</div><p>“${item.quote}”</p><footer>${item.author}</footer></blockquote>`).join("")}</section>
+    <div id="visit">${finalCta("Tomorrow morning is open", "Come for the clarity. Stay for how it feels.")}</div>
+  </main>`;
+}
+
+function finalistMorningNeighbourhoodTable(finalist) {
+  return `${finalistRoundNav(finalist)}
+  <main class="round-page neighbourhood-table">
+    <section class="nt-hero" id="welcome">
+      <div class="nt-headline reveal"><span class="eyebrow">Your friendly corner of Bucharest</span><h1>Pull up a chair. We saved you a place.</h1><p>Boost Club is a welcoming morning community where nutrition gets simpler, progress gets noticed and everybody starts somewhere.</p><a class="primary-cta" href="${brand.bookingHref}">Say hello for free ${arrow}</a></div>
+      <div class="nt-collage">
+        <figure class="nt-photo photo-one round-parallax reveal"><img src="${images.family}" alt="People together in the Boost Club community"><figcaption>Morning people</figcaption></figure>
+        <figure class="nt-photo photo-two reveal"><img src="${images.portrait}" alt="Gabriel Neshto inside Boost Club"><figcaption>Your host, Gabriel</figcaption></figure>
+        <span class="nt-pin pin-one">No judgement</span><span class="nt-pin pin-two">Plenty of questions</span><span class="nt-pin pin-three">Good energy</span>
+      </div>
+    </section>
+    ${roundRibbon("KNOWN BY NAME · SUPPORTED IN PERSON · WELCOME TOMORROW")}
+    <section class="nt-board" id="experience">
+      <header class="round-heading reveal"><span class="eyebrow">On the noticeboard</span><h2>Four things happening around the table.</h2></header>
+      <div class="nt-board-grid">${steps.map((item, index) => `<article class="reveal card-${index + 1}"><span>${item.number}</span><h3>${item.title}</h3><p>${item.copy}</p><small>BOOST CLUB / MORNING NOTE</small></article>`).join("")}</div>
+    </section>
+    <section class="nt-menu" id="method">
+      <div class="reveal"><span class="eyebrow">Today at the club</span><h2>Clear numbers, simple choices and a little more confidence.</h2></div>
+      <div class="nt-menu-list">${benefits.map((item) => `<article class="reveal"><span>${item.number}</span><h3>${item.title}</h3><p>${item.copy}</p><b>INCLUDED</b></article>`).join("")}</div>
+    </section>
+    <section class="nt-wall" id="stories">
+      <figure class="reveal"><img src="${images.resultTwo}" alt="A Boost Club progress story"></figure>
+      <div class="nt-wall-copy reveal"><span class="eyebrow">The regulars say</span><blockquote>“Friendly people, good energy and coaching you can actually understand.”</blockquote><p>Kevin R. · Google review</p>${proofMarkup("round-proof")}</div>
+      <div class="nt-postcard reveal"><strong>SEE YOU<br>TOMORROW?</strong><span>Sevastopol 24</span></div>
+    </section>
+    <div id="visit">${finalCta("There is room at the table", "Your first visit is free and your questions are welcome.")}</div>
+  </main>`;
+}
+
+function finalistHybridGentleMomentum(finalist) {
+  return `${finalistRoundNav(finalist)}
+  <main class="round-page gentle-momentum">
+    <section class="gm-hero" id="welcome">
+      <div class="gm-copy reveal"><span class="eyebrow">A morning rhythm made personal</span><h1>Start gently. Keep moving.</h1><p>The warmth of a familiar morning club, carried through a clear and beautifully simple wellness journey.</p><div class="cta-group"><a class="primary-cta" href="${brand.bookingHref}">Begin for free ${arrow}</a><a class="text-cta" href="#experience">See how it flows</a></div></div>
+      <div class="gm-visual">
+        <div class="gm-shape" aria-hidden="true"></div>
+        <figure class="round-parallax reveal"><img src="${images.portrait}" alt="Gabriel Neshto in the welcoming Boost Club space"></figure>
+        <span class="gm-badge badge-one">Morning energy</span><span class="gm-badge badge-two">Personal clarity</span><span class="gm-badge badge-three">Shared momentum</span>
+      </div>
+    </section>
+    <section class="gm-proof">${proofMarkup("round-proof")}</section>
+    <section class="gm-flow round-section" id="experience">
+      <header class="round-heading reveal"><span class="eyebrow">Your first morning</span><h2>Every moment carries you naturally into the next.</h2></header>
+      <div class="gm-journey">${steps.map((item, index) => `<article class="reveal"><b>${item.number}</b><span>${["Welcome", "Insight", "Meaning", "Momentum"][index]}</span><h3>${item.title}</h3><p>${item.copy}</p></article>`).join("")}</div>
+    </section>
+    <section class="gm-method" id="method">
+      <div class="gm-method-copy reveal"><span class="eyebrow">Personal, not complicated</span><h2>Good guidance should fit into your life like a familiar habit.</h2><p>The body assessment creates clarity. The conversation makes it useful. The club helps it become consistent.</p>${benefitMarkup("gm-benefits")}</div>
+      <figure class="round-parallax reveal"><img src="${images.consultation}" alt="A one-to-one Boost Club body assessment"><figcaption>Measure · understand · move</figcaption></figure>
+    </section>
+    <section class="gm-community" id="stories">
+      <header class="round-heading reveal"><span class="eyebrow">The social side of consistency</span><h2>A plan feels lighter when the room is on your side.</h2></header>
+      <div class="gm-community-grid"><figure class="reveal"><img src="${images.family}" alt="The Boost Club morning community"></figure>${reviewMarkup("round-reviews")}</div>
+    </section>
+    <div id="visit">${finalCta("One free morning to begin", "Meet your numbers. Then meet the people who help them matter.")}</div>
+  </main>`;
+}
+
+function finalistHybridLivingClub(finalist) {
+  return `${finalistRoundNav(finalist)}
+  <main class="round-page living-club">
+    <section class="lc-hero" id="welcome">
+      <div class="lc-copy reveal"><span class="eyebrow">Wellness with a pulse</span><h1>A club that moves with you.</h1><p>Real insight, organic momentum and a room full of people making their next healthy choice together.</p><a class="primary-cta" href="${brand.bookingHref}">Step inside for free ${arrow}</a></div>
+      <div class="lc-mosaic">
+        <figure class="lc-tall round-parallax reveal"><img src="${images.consultation}" alt="A Boost Club consultation in progress"></figure>
+        <figure class="lc-small reveal"><img src="${images.family}" alt="The Boost Club community"></figure>
+        <div class="lc-pulse-card reveal"><span>THIS WEEK</span><strong>FREE</strong><p>Body composition assessment</p></div>
+      </div>
+      <div class="lc-ring" aria-hidden="true"><span>BOOST · CLUB · BUCHAREST · </span></div>
+    </section>
+    ${roundRibbon("COME CURIOUS · LEAVE CLEAR · RETURN ENERGISED")}
+    <section class="lc-manifesto" id="experience">
+      <span class="eyebrow">The living system</span><h2 class="reveal">Numbers give you direction. People give you momentum.</h2>
+      <div class="lc-manifesto-grid">${benefits.map((item) => `<article class="reveal"><span>${item.number}</span><h3>${item.title}</h3><p>${item.copy}</p></article>`).join("")}</div>
+    </section>
+    <section class="lc-sequence" id="method">
+      ${steps.map((item, index) => `<article class="reveal"><div class="lc-number">${item.number}</div><figure><img src="${[images.portrait, images.consultation, images.founder, images.family][index]}" alt=""></figure><div><span>${["COME IN", "SEE CLEARLY", "MAKE SENSE", "KEEP GOING"][index]}</span><h3>${item.title}</h3><p>${item.copy}</p></div></article>`).join("")}
+    </section>
+    <section class="lc-voices" id="stories">
+      <div class="lc-voices-title reveal"><span class="eyebrow">The room is talking</span><h2>Good energy is hard to fake.</h2></div>
+      ${reviews.map((item, index) => `<blockquote class="reveal voice-${index + 1}"><div>★★★★★</div><p>“${item.quote}”</p><footer>${item.author} · Google</footer></blockquote>`).join("")}
+      <div class="lc-score reveal"><strong>5.0</strong><span>Google rating</span></div>
+    </section>
+    <div id="visit">${finalCta("The door is open", "Bring your questions. Leave with energy and a clear next move.")}</div>
+  </main>`;
+}
+
 const renderers = [
   kineticEditorial,
   wellnessObservatory,
@@ -409,12 +599,22 @@ const finalistRenderers = {
   },
 };
 
+const finalistRoundRenderers = {
+  "finalist-organic-soft-current": finalistOrganicSoftCurrent,
+  "finalist-organic-botanical-rhythm": finalistOrganicBotanicalRhythm,
+  "finalist-morning-sunrise-ritual": finalistMorningSunriseRitual,
+  "finalist-morning-neighbourhood-table": finalistMorningNeighbourhoodTable,
+  "finalist-hybrid-gentle-momentum": finalistHybridGentleMomentum,
+  "finalist-hybrid-living-club": finalistHybridLivingClub,
+};
+
 function pageShell(concept, content) {
-  const isFinalist = Boolean(finalistSites[concept.slug]);
+  const isFinalist = Boolean(finalistSites[concept.slug] || concept.finalistRound);
   const title = concept.pageTitle || concept.title;
   const description = concept.pageDescription || concept.subtitle;
+  const finalistAttribute = concept.finalistRound ? ` data-finalist="${concept.slug}"` : "";
   return `<!doctype html>
-<html lang="en" data-concept="${concept.slug}" data-motion="on">
+<html lang="en" data-concept="${concept.themeSlug || concept.slug}"${finalistAttribute} data-motion="on">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -426,9 +626,43 @@ function pageShell(concept, content) {
 </head>
 <body>
   <a class="skip-link" href="#concept-main">Skip to content</a>
-  ${conceptDock(concept)}
+  ${concept.finalistRound ? finalistRoundDock(concept) : conceptDock(concept)}
   <div id="concept-main" class="concept-page">${content}${footer()}</div>
   <script src="interactions.js" defer></script>
+</body>
+</html>
+`;
+}
+
+function finalistRoundCard(finalist, index) {
+  const imageSet = [images.consultation, images.portrait, images.consultation, images.family, images.portrait, images.family];
+  return `<a class="round-gallery-card finalist-card-${finalist.id}" href="${finalist.slug}.html">
+    <div class="round-gallery-visual"><img src="${imageSet[index]}" alt=""><span>${finalist.family}</span><b>${finalist.id}</b><i></i></div>
+    <div class="round-gallery-copy"><span>${finalist.signal}</span><h2>${finalist.title}</h2><p>${finalist.subtitle}</p><strong>Open finalist ${arrow}</strong></div>
+  </a>`;
+}
+
+function finalistGalleryShell() {
+  return `<!doctype html>
+<html lang="en" data-concept="finalist-gallery">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#0D5645">
+  <title>Boost Club | Final six homepage directions</title>
+  <meta name="description" content="Six finalist homepage directions combining Organic Flow and The Morning Club for Boost Club.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="finalist-gallery-body">
+  <main class="finalist-gallery">
+    <header class="finalist-gallery-header"><div><a href="./">${logo()}</a><span>Final selection / English homepage</span></div><div><span class="eyebrow">Six distinct directions</span><h1>Flow you can feel. Warmth you can belong to.</h1></div><p>Two Organic Flow evolutions, two Morning Club evolutions and two hybrids. Every option uses the exact Boost Club brand palette.</p></header>
+    <nav class="finalist-filter" aria-label="Finalist groups"><a href="#organic">Organic Flow · 2</a><a href="#morning">Morning Club · 2</a><a href="#hybrid">Hybrids · 2</a></nav>
+    <section class="finalist-gallery-group" id="organic"><header><span>01 + 02</span><h2>Organic Flow</h2><p>Calm movement, tactile layers and the best long-form pacing.</p></header><div>${finalistRound.slice(0, 2).map(finalistRoundCard).join("")}</div></section>
+    <section class="finalist-gallery-group" id="morning"><header><span>03 + 04</span><h2>The Morning Club</h2><p>Friendly, optimistic and built around the feeling of joining in.</p></header><div>${finalistRound.slice(2, 4).map((item, index) => finalistRoundCard(item, index + 2)).join("")}</div></section>
+    <section class="finalist-gallery-group" id="hybrid"><header><span>05 + 06</span><h2>The Hybrids</h2><p>Morning warmth carried through Organic Flow's smoother journey.</p></header><div>${finalistRound.slice(4, 6).map((item, index) => finalistRoundCard(item, index + 4)).join("")}</div></section>
+    <footer class="gallery-footer"><span>BOOST CLUB / BUCHAREST / FINAL SIX</span><a href="./">Back to all ten concepts ${arrow}</a></footer>
+  </main>
 </body>
 </html>
 `;
@@ -457,6 +691,7 @@ function galleryShell() {
 <body class="gallery-body">
   <main class="concept-gallery">
     <header class="gallery-header"><div>${logo()}<span>English homepage study</span></div><h1>Ten ways Boost Club could feel unforgettable.</h1><p>Same identity. Same real offer. Ten completely different creative worlds. Open each direction full-screen and choose the one worth developing.</p></header>
+    <a class="finalist-callout" href="finalists.html"><span>New / finalist round</span><strong>Six refined directions from Organic Flow and The Morning Club.</strong><i>Compare the final six ${arrow}</i></a>
     <div class="gallery-grid">${concepts.map(galleryCard).join("")}</div>
     <footer class="gallery-footer"><span>BOOST CLUB / BUCHAREST / 2026</span><a href="../en/">Current English homepage ${arrow}</a></footer>
   </main>
@@ -472,6 +707,7 @@ export function buildHomepageConcepts(root, outputRoot) {
   fs.copyFileSync(path.join(sourceRoot, "styles.css"), path.join(destination, "styles.css"));
   fs.copyFileSync(path.join(sourceRoot, "interactions.js"), path.join(destination, "interactions.js"));
   fs.writeFileSync(path.join(destination, "index.html"), galleryShell());
+  fs.writeFileSync(path.join(destination, "finalists.html"), finalistGalleryShell());
   concepts.forEach((concept, index) => {
     fs.writeFileSync(path.join(destination, `${concept.slug}.html`), pageShell(concept, renderers[index]()));
   });
@@ -485,5 +721,11 @@ export function buildHomepageConcepts(root, outputRoot) {
       );
     }
   }
-  return concepts;
+  finalistRound.forEach((finalist) => {
+    fs.writeFileSync(
+      path.join(destination, `${finalist.slug}.html`),
+      pageShell({ ...finalist, finalistRound: true }, finalistRoundRenderers[finalist.slug](finalist)),
+    );
+  });
+  return [...concepts, ...finalistRound];
 }

@@ -26,6 +26,21 @@ Organic Flow and Cinematic Journey are expanded into complete five-page concept 
 
 Each finalist includes persistent page tabs, scroll progress, animated visual motifs, responsive layouts, reduced-motion support, free-assessment calls to action, contact information, review content and a visit FAQ.
 
+## Final six
+
+The final selection is available at `/concepts/finalists.html`. It includes two Organic Flow evolutions, two friendlier Morning Club evolutions and two hybrids that combine Morning Club warmth with Organic Flow pacing. All six use the exact Boost Club brand palette.
+
+| No. | Family | Direction | Route |
+| --- | --- | --- | --- |
+| 01 | Organic Flow | Soft Current | `/concepts/finalist-organic-soft-current.html` |
+| 02 | Organic Flow | Botanical Rhythm | `/concepts/finalist-organic-botanical-rhythm.html` |
+| 03 | The Morning Club | Sunrise Ritual | `/concepts/finalist-morning-sunrise-ritual.html` |
+| 04 | The Morning Club | Neighbourhood Table | `/concepts/finalist-morning-neighbourhood-table.html` |
+| 05 | Hybrid | Gentle Momentum | `/concepts/finalist-hybrid-gentle-momentum.html` |
+| 06 | Hybrid | The Living Club | `/concepts/finalist-hybrid-living-club.html` |
+
+Each direction is a long-form homepage with persistent section tabs for Welcome, Experience, Method, Stories and Visit. The pages include scroll progress, section-aware navigation, animated art-direction details, pointer depth, responsive layouts and reduced-motion support.
+
 ## Review method
 
 Choose one primary direction and, if useful, one secondary direction for specific elements. The most useful feedback is:

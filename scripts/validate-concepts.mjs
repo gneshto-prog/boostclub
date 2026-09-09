@@ -2,12 +2,20 @@
 
 import fs from "node:fs";
 import path from "node:path";
-import { concepts, finalistSites } from "../content/homepage-concepts.mjs";
+import { concepts, finalistRound, finalistSites } from "../content/homepage-concepts.mjs";
 
 const projectRoot = process.cwd();
 const outputRoot = path.join(projectRoot, "_site");
 const conceptRoot = path.join(outputRoot, "concepts");
 const errors = [];
+const finalistCssHooks = {
+  "finalist-organic-soft-current": ".sc-hero",
+  "finalist-organic-botanical-rhythm": ".br-hero",
+  "finalist-morning-sunrise-ritual": ".sr-hero",
+  "finalist-morning-neighbourhood-table": ".nt-hero",
+  "finalist-hybrid-gentle-momentum": ".gm-hero",
+  "finalist-hybrid-living-club": ".lc-hero",
+};
 
 function fail(message) {
   errors.push(message);
@@ -29,10 +37,12 @@ const supportingPages = Object.entries(finalistSites).flatMap(([theme, site]) =>
 );
 const expectedFiles = new Set([
   "index.html",
+  "finalists.html",
   "styles.css",
   "interactions.js",
   ...concepts.map(({ slug }) => `${slug}.html`),
   ...supportingPages.map(({ slug }) => `${slug}.html`),
+  ...finalistRound.map(({ slug }) => `${slug}.html`),
 ]);
 if (!fs.existsSync(conceptRoot)) {
   fail("Missing generated concepts directory");
@@ -44,6 +54,18 @@ if (!fs.existsSync(conceptRoot)) {
   for (const file of actualFiles) {
     if (!expectedFiles.has(file)) fail(`Unexpected generated concept asset: concepts/${file}`);
   }
+}
+
+const finalistGalleryFile = path.join(conceptRoot, "finalists.html");
+if (fs.existsSync(finalistGalleryFile)) {
+  const gallery = fs.readFileSync(finalistGalleryFile, "utf8");
+  if (count(gallery, /class=["']round-gallery-card\s/gi) !== finalistRound.length) {
+    fail(`Finalist gallery must contain exactly ${finalistRound.length} cards`);
+  }
+  for (const finalist of finalistRound) {
+    if (!gallery.includes(`href="${finalist.slug}.html"`)) fail(`Finalist gallery is missing link to ${finalist.slug}.html`);
+  }
+  if (!/name=["']robots["'][^>]+noindex,nofollow/i.test(gallery)) fail("Finalist gallery must remain noindex,nofollow");
 }
 
 const galleryFile = path.join(conceptRoot, "index.html");
@@ -117,7 +139,39 @@ for (const page of supportingPages) {
   }
 }
 
-for (const fileName of [...concepts.map(({ slug }) => `${slug}.html`), ...supportingPages.map(({ slug }) => `${slug}.html`)]) {
+for (const finalist of finalistRound) {
+  const file = path.join(conceptRoot, `${finalist.slug}.html`);
+  if (!fs.existsSync(file)) continue;
+  const html = fs.readFileSync(file, "utf8");
+
+  if (!html.includes(`<html lang="en" data-concept="${finalist.slug}" data-finalist="${finalist.slug}"`)) fail(`${finalist.slug}.html: missing matching finalist root`);
+  if (count(html, /<h1\b/gi) !== 1) fail(`${finalist.slug}.html: expected exactly one H1`);
+  if (!/<title>[^<]+<\/title>/i.test(html)) fail(`${finalist.slug}.html: missing title`);
+  if (!/name=["']description["'][^>]+content=["'][^"']+["']/i.test(html)) fail(`${finalist.slug}.html: missing description`);
+  if (!/name=["']robots["'][^>]+noindex,nofollow/i.test(html)) fail(`${finalist.slug}.html: must remain noindex,nofollow`);
+  if (!html.includes('href="styles.css"')) fail(`${finalist.slug}.html: missing concept stylesheet`);
+  if (!html.includes('src="interactions.js"')) fail(`${finalist.slug}.html: missing interaction script`);
+  if (!html.includes('aria-label="Concept preview controls"')) fail(`${finalist.slug}.html: missing preview controls`);
+  if (!html.includes('aria-label="Finalist navigation"')) fail(`${finalist.slug}.html: missing finalist navigation`);
+
+  const ids = new Set([...html.matchAll(/\bid=["']([^"']+)["']/gi)].map((match) => match[1]));
+  for (const expectedId of ["welcome", "experience", "method", "stories", "visit"]) {
+    if (!ids.has(expectedId)) fail(`${finalist.slug}.html: missing section #${expectedId}`);
+  }
+  for (const match of html.matchAll(/<a\b[^>]*\bhref=["']#([^"']+)["']/gi)) {
+    if (!ids.has(match[1])) fail(`${finalist.slug}.html: missing target for #${match[1]}`);
+  }
+
+  const references = [];
+  for (const match of html.matchAll(/\b(?:src|poster)=["']([^"']+)["']/gi)) references.push(match[1]);
+  for (const match of html.matchAll(/<link\b[^>]*\bhref=["']([^"']+)["']/gi)) references.push(match[1]);
+  for (const reference of references) {
+    const target = resolveLocal(reference, file);
+    if (target && !fs.existsSync(target)) fail(`${finalist.slug}.html: missing asset ${reference}`);
+  }
+}
+
+for (const fileName of ["index.html", "finalists.html", ...concepts.map(({ slug }) => `${slug}.html`), ...supportingPages.map(({ slug }) => `${slug}.html`), ...finalistRound.map(({ slug }) => `${slug}.html`)]) {
   const file = path.join(conceptRoot, fileName);
   if (!fs.existsSync(file)) continue;
   const html = fs.readFileSync(file, "utf8");
@@ -137,6 +191,11 @@ if (fs.existsSync(stylesFile)) {
   }
   for (const concept of concepts) {
     if (!styles.includes(`[data-concept="${concept.slug}"]`)) fail(`styles.css: missing theme scope for ${concept.slug}`);
+  }
+  for (const finalist of finalistRound) {
+    if (!styles.includes(finalistCssHooks[finalist.slug])) {
+      fail(`styles.css: missing visual treatment for ${finalist.slug}`);
+    }
   }
   for (const color of ["#0d5645", "#c9a24b", "#11705a", "#0a4537", "#08382d", "#e0be6e", "#e6e9de", "#f5f3ee", "#1a1f1c", "#5c6660"]) {
     if (!styles.toLowerCase().includes(color)) fail(`styles.css: missing Boost Club brand color ${color}`);
@@ -165,4 +224,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`Homepage concept validation passed: gallery, ${concepts.length} homepages and ${supportingPages.length} finalist supporting pages.`);
+console.log(`Homepage concept validation passed: gallery, ${concepts.length} homepages, ${supportingPages.length} finalist supporting pages and ${finalistRound.length} final-round homepages.`);

@@ -86,7 +86,27 @@
     themeTabs.scrollLeft = Math.max(0, activeThemeTab.offsetLeft - (themeTabs.clientWidth - activeThemeTab.clientWidth) / 2);
   }
 
-  const parallaxTargets = document.querySelectorAll(".ag-dashboard, .ke-photo, .of-photo, .organic-visual, .cinematic-frame");
+  const roundTabs = document.querySelector(".round-tabs");
+  if (roundTabs && "IntersectionObserver" in window) {
+    const roundLinks = [...roundTabs.querySelectorAll('a[href^="#"]')];
+    const roundSections = roundLinks
+      .map((link) => document.querySelector(link.getAttribute("href")))
+      .filter(Boolean);
+    const sectionObserver = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (!visible) return;
+        roundLinks.forEach((link) => {
+          if (link.getAttribute("href") === `#${visible.target.id}`) link.setAttribute("aria-current", "location");
+          else link.removeAttribute("aria-current");
+        });
+      },
+      { rootMargin: "-25% 0px -60%", threshold: [0, 0.1, 0.4] },
+    );
+    roundSections.forEach((section) => sectionObserver.observe(section));
+  }
+
+  const parallaxTargets = document.querySelectorAll(".ag-dashboard, .ke-photo, .of-photo, .organic-visual, .cinematic-frame, .round-parallax");
   parallaxTargets.forEach((target) => {
     target.addEventListener("pointermove", (event) => {
       if (root.dataset.motion === "off") return;

@@ -166,3 +166,54 @@ export const finalistSites = {
     ],
   },
 };
+
+export const finalistRound = [
+  {
+    id: "01",
+    family: "Organic Flow",
+    slug: "finalist-organic-soft-current",
+    title: "Soft Current",
+    subtitle: "A calm, tactile evolution of Organic Flow with generous pacing and soft moments of discovery.",
+    signal: "Quiet / fluid / reassuring",
+  },
+  {
+    id: "02",
+    family: "Organic Flow",
+    slug: "finalist-organic-botanical-rhythm",
+    title: "Botanical Rhythm",
+    subtitle: "A deeper, more expressive Organic Flow built around a continuous path through the whole page.",
+    signal: "Layered / natural / immersive",
+  },
+  {
+    id: "03",
+    family: "The Morning Club",
+    slug: "finalist-morning-sunrise-ritual",
+    title: "Sunrise Ritual",
+    subtitle: "A bright and friendly morning routine that makes the club feel instantly easy to join.",
+    signal: "Warm / optimistic / social",
+  },
+  {
+    id: "04",
+    family: "The Morning Club",
+    slug: "finalist-morning-neighbourhood-table",
+    title: "Neighbourhood Table",
+    subtitle: "A lively community scrapbook full of notes, faces and the feeling of being known by name.",
+    signal: "Playful / familiar / human",
+  },
+  {
+    id: "05",
+    family: "Hybrid",
+    slug: "finalist-hybrid-gentle-momentum",
+    title: "Gentle Momentum",
+    subtitle: "Morning Club warmth carried through the smoother, more premium pacing of Organic Flow.",
+    signal: "Balanced / polished / inviting",
+  },
+  {
+    id: "06",
+    family: "Hybrid",
+    slug: "finalist-hybrid-living-club",
+    title: "The Living Club",
+    subtitle: "A bold community-led hybrid where organic movement meets the energy of a shared morning.",
+    signal: "Expressive / communal / energising",
+  },
+];
