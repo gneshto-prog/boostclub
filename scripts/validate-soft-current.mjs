@@ -72,6 +72,8 @@ const firstHomeImage = home.match(/<img\b[^>]*src="([^"]+)"/i)?.[1];
 if (firstHomeImage !== "../images/boost-club-community.jpg") fail("Homepage must open with boost-club-community.jpg as its first image");
 
 const combined = allHtml.join("\n");
+if (!combined.includes('content="https://boostclub.ro/images/soft-current-og-v2.png"')) fail("Soft Current pages must use the official-wordmark social card");
+if (!fs.existsSync(path.join(outputRoot, "images", "soft-current-og-v2.png"))) fail("Missing official-wordmark social card asset");
 for (let index = 1; index <= 30; index += 1) {
   const slot = String(index).padStart(2, "0");
   if (!combined.includes(`PHOTO SLOT ${slot}`)) fail(`Missing photography brief slot ${slot}`);
