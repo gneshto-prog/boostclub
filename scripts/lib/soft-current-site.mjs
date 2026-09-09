@@ -62,6 +62,13 @@ function motionFilm(src, poster, alt, label, caption, modifier = "") {
   </figure>`;
 }
 
+function shakePhoto(src, alt, number, title, copy, modifier = "") {
+  return `<figure class="shake-card ${modifier} reveal" data-parallax data-shake-photo>
+    <div class="shake-card-media"><img src="${src}" alt="${alt}" loading="lazy" decoding="async"><span>${number}</span></div>
+    <figcaption><strong>${title}</strong><p>${copy}</p></figcaption>
+  </figure>`;
+}
+
 function reviewsMarkup() {
   return `<div class="review-cloud">${reviews.map(([quote, author], index) => `<blockquote class="review-bubble reveal bubble-${index + 1}"><span>★★★★★</span><p>“${quote}”</p><footer>${author} · Google</footer></blockquote>`).join("")}</div>`;
 }
@@ -123,6 +130,11 @@ function homePage() {
         ${motionFilm("../videos/soft-current-shake.mp4", "../images/soft-current-shake-poster.jpg", "A breakfast shake being poured into a Boost Club cup", "01 · The morning ritual", "Made one pour at a time.", "film-shake")}
         ${motionFilm("../videos/soft-current-club-baby.mp4", "../images/soft-current-club-baby-poster.jpg", "A young child sitting comfortably inside Boost Club", "02 · Life belongs here", "A club warm enough for real life.", "film-baby")}
       </div>
+    </section>
+    <section class="shake-edit section-pad" aria-labelledby="shake-edit-heading">
+      <header class="shake-edit-heading reveal"><span class="eyebrow">From the counter</span><h2 id="shake-edit-heading">Three shakes. Three moods. One morning ritual.</h2><p>Made fresh, finished with personality and easy to enjoy around the table with everyone else.</p></header>
+      <div class="shake-edit-grid"><div class="shake-loop" aria-hidden="true"><i></i><i></i><strong>Fresh<br>every<br>morning</strong></div>${shakePhoto("../images/soft-current-shake-02.jpg", "A creamy Boost Club shake topped with cocoa, drizzle and crunchy pieces", "01", "Cocoa on top.", "Creamy, layered and made to feel like a treat.", "shake-left")}${shakePhoto("../images/soft-current-shake-01.jpg", "A chocolate-swirled Boost Club shake with whipped topping", "02", "A little drama.", "Chocolate swirls, a cloud-like top and the club mark front and centre.", "shake-centre")}${shakePhoto("../images/soft-current-shake-03.jpg", "A pale Boost Club shake with whipped topping and golden crunch", "03", "Golden finish.", "Bright, crunchy and ready for the first conversation of the day.", "shake-right")}</div>
+      <div class="shake-edit-footer reveal"><span>SWIRL · LAYER · CRUNCH</span><p>Ask what is being made at the club today.</p></div>
     </section>
     <section class="photo-stream section-pad">
       <header class="section-heading reveal"><span class="eyebrow">A morning at the club</span><h2>Real moments belong in the story.</h2><p>These photo briefs are ready for the images you will add next.</p></header>

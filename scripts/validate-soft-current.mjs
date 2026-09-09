@@ -76,6 +76,10 @@ if (!home.includes('data-src="../videos/soft-current-shake.mp4"') || !home.inclu
 for (const relative of ["videos/soft-current-shake.mp4", "videos/soft-current-club-baby.mp4", "images/soft-current-shake-poster.jpg", "images/soft-current-club-baby-poster.jpg"]) {
   if (!fs.existsSync(path.join(outputRoot, relative))) fail(`Missing cinematic asset ${relative}`);
 }
+if (count(home, /data-shake-photo/gi) !== 3) fail("Homepage must contain the three real shake photographs");
+for (const relative of ["images/soft-current-shake-01.jpg", "images/soft-current-shake-02.jpg", "images/soft-current-shake-03.jpg"]) {
+  if (!fs.existsSync(path.join(outputRoot, relative))) fail(`Missing shake photograph ${relative}`);
+}
 
 const combined = allHtml.join("\n");
 if (!combined.includes('content="https://boostclub.ro/images/soft-current-og-v2.png"')) fail("Soft Current pages must use the official-wordmark social card");
