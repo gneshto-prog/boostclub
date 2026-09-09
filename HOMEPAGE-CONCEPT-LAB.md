@@ -41,6 +41,20 @@ The final selection is available at `/concepts/finalists.html`. It includes two 
 
 Each direction is a long-form homepage with persistent section tabs for Welcome, Experience, Method, Stories and Visit. The pages include scroll progress, section-aware navigation, animated art-direction details, pointer depth, responsive layouts and reduced-motion support.
 
+## Selected direction: Soft Current
+
+The selected direction is now expanded into a complete seven-page website at `/soft-current/`:
+
+- Home
+- The Club
+- First Visit
+- Our Method
+- Stories
+- About
+- Visit and booking
+
+The homepage opens with the real Boost Club community photograph instead of a founder portrait. The system includes light and dark modes, persistent navigation, organic symbols, animated circles, scroll reveals, pointer depth, a booking form and 30 labelled future-photography slots. The complete shooting list is documented in `SOFT-CURRENT-PHOTO-BRIEFS.md`.
+
 ## Review method
 
 Choose one primary direction and, if useful, one secondary direction for specific elements. The most useful feedback is:

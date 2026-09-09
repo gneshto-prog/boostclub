@@ -4,6 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { documentTemplate, footer, header, renderRegisteredComponents } from "./lib/components.mjs";
 import { buildHomepageConcepts } from "./lib/homepage-concepts.mjs";
+import { buildSoftCurrentSite } from "./lib/soft-current-site.mjs";
 
 const root = process.cwd();
 const outputRoot = path.join(root, "_site");
@@ -49,8 +50,9 @@ export function buildSite() {
   for (const directory of assetDirectories) copyIfPresent(directory);
   for (const file of rootAssets) copyIfPresent(file);
   const concepts = buildHomepageConcepts(root, outputRoot);
+  const softCurrentPages = buildSoftCurrentSite(root, outputRoot);
 
-  console.log(`Built ${pages.length} site pages and ${concepts.length} homepage concepts in _site.`);
+  console.log(`Built ${pages.length} site pages, ${concepts.length} homepage concepts and ${softCurrentPages.length} Soft Current pages in _site.`);
   return pages;
 }
 

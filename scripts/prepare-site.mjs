@@ -7,3 +7,4 @@ buildSite();
 execFileSync(process.execPath, ["scripts/compare-parity.mjs"], { cwd: process.cwd(), stdio: "inherit" });
 execFileSync(process.execPath, ["scripts/validate-site.mjs"], { cwd: process.cwd(), stdio: "inherit" });
 execFileSync(process.execPath, ["scripts/validate-concepts.mjs"], { cwd: process.cwd(), stdio: "inherit" });
+execFileSync(process.execPath, ["scripts/validate-soft-current.mjs"], { cwd: process.cwd(), stdio: "inherit" });
