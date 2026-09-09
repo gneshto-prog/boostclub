@@ -80,8 +80,9 @@ if (count(home, /data-shake-photo/gi) !== 3) fail("Homepage must contain the thr
 for (const relative of ["images/soft-current-shake-01.jpg", "images/soft-current-shake-02.jpg", "images/soft-current-shake-03.jpg"]) {
   if (!fs.existsSync(path.join(outputRoot, relative))) fail(`Missing shake photograph ${relative}`);
 }
-
 const combined = allHtml.join("\n");
+if (count(combined, /\.\.\/images\/soft-current-founder-portrait\.jpg/gi) !== 2) fail("Soft Current must use the official founder portrait in both founder placements");
+if (!fs.existsSync(path.join(outputRoot, "images", "soft-current-founder-portrait.jpg"))) fail("Missing official founder portrait asset");
 if (!combined.includes('content="https://boostclub.ro/images/soft-current-og-v2.png"')) fail("Soft Current pages must use the official-wordmark social card");
 if (!fs.existsSync(path.join(outputRoot, "images", "soft-current-og-v2.png"))) fail("Missing official-wordmark social card asset");
 for (let index = 1; index <= 30; index += 1) {
