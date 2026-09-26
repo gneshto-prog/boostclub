@@ -90,3 +90,31 @@ VERIFY: semantic content order, current original-review preservation, all reques
 - Existing referral terms were moved from consumer pages into a collapsed section after successful booking. They remain preserved and need L06 review; no rewards or eligibility invented. The earlier plan's contact-placement option was superseded by this final placement.
 - Practical FAQ content now exists in all languages. Removed unsubstantiated “few percent” precision/no-electrode claims; operator/device-specific guidance remains L02.
 - Detailed photo/result provenance and current prices/qualifications remain owner decisions, so the homepage does not fabricate new evidence or case studies.
+
+## 2026-09-26 — Batch 5 plan: responsive assets and optional maps
+
+AUDIT FINDINGS: B35/B36/B40/X11.
+CURRENT BEHAVIOR: small result tiles download 960px originals (results13: 160,360 bytes); map libraries load near the viewport; Google iframes connect as the visitor scrolls; mutable asset filenames cannot safely use immutable caching.
+CHANGE: generate uncropped 320/640 WebP derivatives with content hashes, preserve original full images/dimensions and high-priority hero loading; add sizes/srcset at build time. Immutable caching applies only to hashed derivatives. Google Maps and the partner country map load on an explicit button press; plain directions and fallback enquiry routes remain available. Keep map libraries/data self-hosted.
+EXPECTED RESULT: fewer initial/thumbnail bytes, no involuntary map connection, accurate image layout and no stale mutable-asset cache.
+VERIFY: actual selected image resources at mobile DPR 1/2 and desktop, before/after byte totals, map network absence before click and function after click/failure, visual legibility, regression suite and build.
+
+### Final accessibility plan
+
+AUDIT FINDING: X25/B30 keyboard/reflow and preservation of usable FAQs.
+CURRENT BEHAVIOR: FAQ answers use a visual zero-height grid without removing their links from keyboard/screen-reader navigation; without JavaScript the answers stay collapsed. A partner brand link's accessible name omits its visible name.
+CHANGE: hide collapsed FAQ panels semantically after JavaScript initializes, keep answers expanded in static HTML/CSS, synchronize aria-controls/expanded, and include Boost Club in the partner brand label.
+EXPECTED RESULT: keyboard users cannot enter invisible answers, no-JavaScript visitors can read them, and speech-control users can identify the brand link by visible text.
+VERIFY: keyboard Enter/Space, no-JavaScript content visibility, five-width regression plus 320px reflow and 200% text enlargement, local confirmation and UTC calendar download.
+
+### Batch 5 and final acceptance verification
+
+- Responsive derivatives preserve all 18 originals, aspect ratios and content hashes. At 375px, the results grid transfers 192,230 bytes instead of 788,680 (75.6% less) at DPR 1 and 2. Desktop DPR 1/2 also verified; original files remain available when that is the correct resolution. Hero preload and actual source agree with no duplicate download.
+- Google embeds and D3/topology load only after an explicit visitor action. Real self-hosted country-map rendering, simulated Google embed load and failed-library fallback pass in every locale. Independent directions and enquiry links survive.
+- Closed label is 9.06:1; 16px earnings disclosure is 6.37:1. Full axe 4.13 scan found remaining partner small-blue labels and nested table scrolling; corrected in shared CSS and actual focusable scroll regions, then all 39 public routes passed.
+- FAQ answers now stay readable without JavaScript and leave the accessibility/keyboard tree when collapsed with JavaScript. Russian metric cards no longer overflow at 320px. All 42 localized routes passed 320px reflow and 200% root text; confirmation passed all five widths with keyboard .ics download, UTC dates, expired/missing storage and noindex recovery.
+- Final preservation comparison confirms all 24 full review quotes exactly match newer live selections, original files/URLs remain, founder video controls/preload and existing contacts/sticky bars survive, robots/route redirects are unchanged. No tracked file deleted.
+- Final copy sweep corrected remaining “few minutes” WhatsApp/“30 seconds” contact promises and unverified “no preparation” statements in process copy. This narrows unsupported claims; actual device guidance remains L02.
+- Final syntax lint (52 scripts), strict typecheck, 19 tests and full 44+16+7-page production-artifact build passed. Build must finish before tests that read `_site`; one parallel local check raced against output regeneration, then the correctly ordered run passed. Browser tests use synthetic intercepted responses, never real customer bookings.
+- Lighthouse 13.5 with Brotli preview: home 99 / booking 98 / business 93 performance; SEO and automated accessibility 100 each. LCP is 1.8s / 1.8s / 2.6s versus original 1.5s / 1.4s / 2.1s. These are different local-preview versus public-CDN runs, not evidence of universal speed improvement. Confirm field metrics after publication. Exact measurements and limits are in FINAL-IMPLEMENTATION-REPORT.md.
+- 69 findings reconciled: 40 VERIFIED FIXED locally, 11 REQUIRES EXTERNAL ACTION, 9 REQUIRES OWNER DECISION, 9 REQUIRES LEGAL/COMPLIANCE REVIEW. X26 explicitly records actual device/assistive-technology acceptance; X23 remains gated on live P0 repair. No silent TODOs, invented facts, secret values, production changes or deployment.

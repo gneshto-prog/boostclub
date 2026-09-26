@@ -1217,3 +1217,79 @@ Companion to section 6 of the 28-section audit. Each discovered HTML endpoint ap
 - Preserve native video controls and `preload="none"`; add captions instead of autoplay.
 - Preserve usable FAQs and labels. Their value is answering real questions, not winning discontinued FAQ rich results.
 
+
+## Final reconciliation crosswalk
+
+Final states live in AUDIT-FINDINGS.json and the generated IMPLEMENTATION-STATUS.md. B01–B43 correspond, in order, to all 43 rows of the audit's prioritized master backlog. X01–X26 cover recommendations outside those rows. “Verified” always means the tested local implementation; the live 503 remains an external action. No proposal below authorizes fabricated facts, medical instructions, earnings, photography, captions or testimonials.
+
+### All 26 exact copy proposals
+
+| Proposal | Finding and final disposition |
+|---|---|
+| 1 offer-led hero | B10 — VERIFIED FIXED, RO headline and equivalent EN/RU. |
+| 2 estimates/time/no purchase hero body | B10/X02 — VERIFIED FIXED. |
+| 3 realistic WhatsApp response | B07 — VERIFIED FIXED, including final sidebar/contact sweep. |
+| 4 BIA estimates | X02 — VERIFIED FIXED for certainty wording; exact supported outputs/device instructions X15 — REQUIRES LEGAL/COMPLIANCE REVIEW. |
+| 5 describe slot selection | B07 — VERIFIED FIXED locally; publication/working production calendar B01 — REQUIRES EXTERNAL ACTION. |
+| 6 consistent final duration | B07/B10 — VERIFIED FIXED. |
+| 7 actual confirmation mechanism | B07 — VERIFIED FIXED locally; real persistence B04 — REQUIRES EXTERNAL ACTION. |
+| 8 booking form title | X04 — VERIFIED FIXED in all locales. |
+| 9 privacy-use summary/link | B12 — VERIFIED FIXED; approved full policy B13 — REQUIRES LEGAL/COMPLIANCE REVIEW. |
+| 10 confirmation FAQ | B07/B30 — VERIFIED FIXED with truthful failure/unknown-outcome distinction. |
+| 11 inline recovery | B02 — VERIFIED FIXED; retry/WhatsApp/call never pretend the booking succeeded. |
+| 12 metro M1/M2 | B06 — VERIFIED FIXED; unknown entrance details B08 — REQUIRES OWNER DECISION. |
+| 13 visit-gallery heading | B23 — REQUIRES OWNER DECISION. Misleading family/sport “club” gallery removed from home; originals remain on disk/other relevant routes. Proposed heading awaits actual visit photos. |
+| 14 free/paid boundary | X01 — VERIFIED FIXED for existing optional continuation/Herbalife explanation. Actual prices, frequency, inclusions and cancellation B09 — REQUIRES OWNER DECISION. |
+| 15 since 1989 | B19 — REQUIRES OWNER DECISION; no invented origin date or annual counter update. |
+| 16 supportive founder approach | X03 — VERIFIED FIXED. |
+| 17 neutral result heading | X08/B18 — REQUIRES OWNER DECISION for full resolution: neutral heading implemented; cases still need factual relationship, duration, readable captions and permission. |
+| 18 secondary partnership navigation | B11 — VERIFIED FIXED; footer destination retained in all locales. |
+| 19 plain business-opening/market terms | B20/X19 — REQUIRES LEGAL/COMPLIANCE REVIEW with O10; no invented costs, eligibility or approved mentoring scope. |
+| 20 realistic earnings paragraph | B20/X19 — REQUIRES LEGAL/COMPLIANCE REVIEW; exact absolute claims/comparison remain flagged, not silently approved by a disclaimer. |
+| 21 talk CTA | X22 — VERIFIED FIXED in page actions and contact metadata. |
+| 22 both contact mechanisms | X22 — VERIFIED FIXED, WhatsApp or enquiry form; accepted enquiry is not a booked call. |
+| 23 wrong statutory reference | B14 — VERIFIED FIXED; broader terms X17 — REQUIRES LEGAL/COMPLIANCE REVIEW. |
+| 24 RU hydration wording | X15 — REQUIRES LEGAL/COMPLIANCE REVIEW. No device-specific preparation prescription published without device guidance; generic “no preparation” claim removed. |
+| 25 local place name | X06/B06 — VERIFIED FIXED; Piața Victoriei remains searchable in original spelling. |
+| 26 outage message | B02 — VERIFIED FIXED locally; actual public rollout/repair B01 — REQUIRES EXTERNAL ACTION. |
+
+### Page-by-page actions, including smaller recommendations
+
+Each row applies to all RO/EN/RU equivalents preserved above. Common canonicals, hreflang, social previews, labels, links and responsive checks map to B27/B30/B32/B34/B37/X12/X14/X25.
+
+| Page family | Reconciled actions and dependencies |
+|---|---|
+| Homepage | B10/B11/B26/X01: deliverables immediately after hero, shorter faithful review excerpts, concise founder, earlier arrival information, consistent main CTA, no recruitment billboard/referral pitch. B23: real venue gallery waits for photos. B18/X18: three contextual cases wait for permissions/facts. Decorative counters/shadows/cards/icons/section rhythm beyond the functional fixes stay explicitly under X23. |
+| Booking | B01/B02/B04/B07/B12/X04/X05: root cause documented, local recovery/timeouts/date-first/optional goal/privacy/conflict/confirmation/input preservation verified; real provider persistence remains E01. Referral removed from acquisition path (B26). B30: six RO FAQs and equivalent core mechanisms in EN/RU; exact questionnaire count is not itself a defect. |
+| How it works | X01/X02/B30: first visit and optional continuation explained; shared essential FAQs and estimate limitations. B09: actual frequency/prices/inclusions. B08/B23: accessibility/entrance and real visit photos. X15: model, outputs and manufacturer preparation. No full referral block remains. |
+| Reviews | B31/X24: one dated snapshot, full original quotes and Google source preserved; excerpt language marked with lang attributes. Individual review URLs/local-client context await actual source evidence under B18/O05. An expand button is NOT APPLICABLE to the current full review page: all eight reviews are already visible and untruncated, so no artificial collapse was introduced. |
+| Gabriel | X03: supportive working-method wording. B19: qualifications, issuer evidence and family-history/counters. B23: actual assessment photo. B29: faithful video captions/transcript. X23: remaining cosmetic counter/layout simplification after P0. Native video controls/preload preserved (X14). |
+| Contact | B06: corrected metro and direct directions. B26: referral removed. B08/O02: precise staffed hours, pin, door/floor/intercom, accessibility and parking availability require operator facts; no speculative route or parking guarantee added. B23: entrance photo. X11: map loads only on request. |
+| Ambassador | B24/O07 and X20/L06: current offer status, eligibility, obligations/costs and possible locale-preserving consolidation. Existing form/route preserved; no duplicate-offer deletion or redirect without business/traffic evidence. |
+| Privacy | B13/X16/X17: legal bases, retention, identifiability, processor locations and health-data consent remain L01/L02 review items. B12: immediate form summary fixed; B28: keyboard tables fixed. No rewritten legal basis or claim of anonymity. |
+| Terms | B14: incorrect citation removed. X17/L01/L02: trader identity, actual paid service/product/cancellation/liability terms await review. |
+| Cookies | B15/L03: factual storage inventory and final notice remain legal review. Local analytics/attribution default-denied, revocable and non-PII; X11 click-to-load maps. A visible CMP preferences button/accept/reject flow is NOT APPLICABLE while no optional provider is installed and collection remains off; required as part of approved E03 activation. Tables accessible (B28). |
+| Business | B11/X21/X22: distinct secondary funnel, labelled enquiry, privacy, no false call appointment. B21/B22: legible localized disclosure and localized messages. B36: optional map consistently self-hosted, independent enquiry fallback. B20/X19/O10: commercial opening, costs/expenses, certainty/comparison, typical-earnings/market eligibility require review. B23: seven real club-image slots await assets. B28: both horizontal rows are labelled keyboard scroll regions. X23: broad visual reduction remains gated. |
+| Gabi | B25/O07: distinct partner-founder role versus merge depends on traffic/campaign ownership. B19: credential/history/counters; B23: real context; X23: residual decorative slogans/counter simplification. Stable route, contacts and equivalent-language switching preserved. |
+| Results | X08: neutral heading implemented. B18/X18/O05/L05: subject/relationship/duration/support/measurement, three narrative cases, accessible embedded-number equivalents and offsite consent register await verified inputs. B35: uncropped thumbnails and full-resolution originals linked. No fabricated captions. |
+| Confirmation | X06: truthful invalid session, explicit date/time/place, map/.ics/change request; noindex retained. B04: actual persistence requires internal provider test; X07/E02 durable channel/reminders require approved sender. Referral now collapsed after success (B26), terms remain X20. |
+| 404 | X13: real unknown-route 404 locally, noindex and RO/EN/RU home/booking recovery links. Separate translated 404 templates are NOT APPLICABLE to the chosen shared trilingual recovery; all locales have clear destinations. Production HTTP status is rechecked after deploy under E01. |
+
+### Category, quick-win and project coverage
+
+- Executive summary, critical bugs, top ten and 43 backlog rows: B01–B43; no new homepage was substituted for booking diagnosis.
+- All ten quick wins: B02, B05, B06, B07, B12, B14, B11, B21/B22, B19, B27 respectively. Quick win 9 depends on evidenced history; it is not falsely fixed.
+- Seven high-impact projects: reliable booking B01–B04/X04–X07; transparent offer B09/B19/X01/X15–X17; consumer homepage B10/B11/B23/B26/X23; proof library B18–B21/B23/B29/B31/X18/X24; measurement B15–B17/X10; partner funnel B20–B22/B36/X21/X22; multilingual sharing B08/B13/B30/B31/B37.
+- Ten ideal-home sections: 1–2 B10; 3–4 X01/B09; 5 B31/X24; 6 X03/B19; 7 B18/X18; 8 B06/B08/B23/X11; 9 B30; 10 B07/B10. This preserves the useful existing design/brand and does not invent missing proof.
+- Mobile: five requested widths, menu/sticky/form/review/gallery/footer/long labels X25; deliberate Cyrillic font B39; physical iOS/Android, virtual keyboard and real screen-reader validation X26/E08. No claim of full accessibility certification.
+- Copy/trust/multilingual: all exact proposals above plus B30 for practical parity. Native external review may refine tone, but no existing original quotation was translated or rewritten. The newer live September review selections were restored before changing the homepage.
+- SEO/local: stable intent roles and metadata B34; schema IDs/types B32/X12; NAP/hours/entrance B08; GBP X09; sitemap B43; legacy domain B33; canonical redirect hops B41; Search Console X10. FAQ rich-result and self-serving review-star markup are NOT APPLICABLE; ordinary crawlable FAQ/review content remains.
+- Performance: measured responsive images B35, optional D3 B36 and Google map X11, intentional font support B39, safe immutable cache B40. Wholesale CSS/JS/framework rewrites and blind breakpoint consolidation are NOT APPLICABLE: the audit explicitly says the footprint is modest and to avoid them. P3 minification/surface polish remains X23.
+- Accessibility: B05/B21/B27/B28/B29/B42/X04/X06/X08/X25/X26. Small inline links are not automatically failures; no indiscriminate 44px expansion. Real captions and numerical-image equivalents stay open under B29/B18, even though automatic axe checks pass.
+- Analytics: the user's 11 named browser events are implemented behind consent (B16), with backend-confirmed booking completion and separate enquiry completion. Audit aliases `generate_lead`, `booking_confirmed`, `partner_page_view`, `partner_lead` must map to these existing outcomes in E03, not create duplicate conversions. Page-view/device/placement diagnostics, `availability_loaded/error`, `slot_selected`, `booking_submit_error` and `language_changed` require the approved measurement contract in E03; availability errors already have server requestId logs. `consultation_attended`, `client_started`, cancellation/reschedule, qualified assisted leads, cohort reports and cost metrics belong to E02/CRM (B17/X10). No browser click is treated as an attended visit or a sent WhatsApp message.
+- Competitor/benchmark observations guide offer clarity and truthful proof; copying competitor assets, claims or protected material is NOT APPLICABLE. No new low-quality location/service doorway pages created.
+- Design: entry/portal delay B38; functional contrast/form/nav work verified. Remaining shadow/card/icon/spacing reduction, counter simplification and broad partner redesign remain X23 until B01 is verified. Missing photography B23; no stock or generated “clients”.
+
+### Preservation evidence
+
+`evidence/final/preservation.json` (external evidence directory named in the final report) confirms 24 original full live review blocks, existing phone/WhatsApp routes, existing sticky bars, founder controls/preload, noindex confirmation, unchanged robots/route redirects and no deleted tracked files. Build validators preserve 44 main pages, 16 homepage concepts and 7 Soft Current pages. Existing static routes, language equivalence, social preview image and real founder/green/cream identity remain. Ten comparison sheets cover desktop/mobile home, booking, results, reviews and business; full-resolution screenshots accompany them. No public customer booking, customer data mutation, message, production deploy or optional analytics installation was made.

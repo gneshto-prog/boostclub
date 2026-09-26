@@ -5,7 +5,7 @@ These are business facts or permissions, not implementation tasks silently dropp
 ## O01 — Production recovery and publication (B01/B04)
 
 QUESTION: May the existing booking configuration be assigned to Production and the tested booking commit deployed?
-CURRENT STATE: Production has no Supabase URL/key or Google service-account value; Deploy Previews does. Booking returns 503. Local batch is isolated in commit 1bb5089.
+CURRENT STATE: Production has no Supabase URL/key or Google service-account value; Deploy Previews does. Booking returns 503. Booking code is recorded in commit 1bb5089; the reviewed branch also reconciles newer live content. Publishing that early commit alone would restore older static reviews, so use the final reviewed branch or extract the booking changes onto verified current production source.
 AUDIT RECOMMENDATION: Restore booking before cosmetic work.
 OPTIONS: Keep local and have the owner follow E01; authorize the isolated booking deployment after source/config reconciliation.
 IMPLICATIONS: Local fixes cannot restore the public service. A deployment changes the live website.

@@ -7,7 +7,7 @@ Status: REQUIRES THIRD PARTY / REQUIRES EXTERNAL ACTION. Root cause verified; li
 1. Open Netlify project resplendent-starlight-5bdd62 → Project configuration → Environment variables.
 2. For SUPABASE_URL, SUPABASE_SECRET_KEY and GOOGLE_SERVICE_ACCOUNT_JSON, set the correct existing values in **Production**, retaining Functions scope (and Builds scope for preflight validation). Values currently exist only for Deploy Previews. Keep secrets out of source control and chat. Confirm GOOGLE_CALENDAR_ID identifies the intended calendar.
 3. Verify the Google service account has the intended calendar access and the Calendar API is enabled. No wider permissions are needed.
-4. After review and explicit deployment authorization, run the production build with production context and deploy the reviewed source. Environment updates require a new deploy. Do not upload the old audit source snapshot or publish the preserved concept routes as a new homepage.
+4. After review and explicit deployment authorization, run the production build with production context and deploy the final reviewed branch or a booking-only patch on verified current source. Do not deploy early commit 1bb5089 as a whole static site: the later content reconciliation preserves newer live reviews. Environment updates require a new deploy. Do not upload the old audit source snapshot or publish the preserved concept routes as a new homepage.
 5. Read-only checks: /api/availability?date=2026-09-27, 2026-09-28, 2026-09-29; Saturday 2026-10-03 must be closed. Repeat using current future dates if action is later. Verify genuine slots against calendar/CRM; do not fabricate availability.
 6. Use a designated internal test contact and test calendar/database to verify accepted booking, replay, conflict, partial archive failure and attendance handoff in every locale. Never use customer data for tests.
 7. Recheck production function logs by requestId, without logging tokens, names, phones or upstream response bodies.
@@ -47,3 +47,17 @@ Confirm ownership of romnutriclub.ro and its hosting/DNS first. If it is a true 
 ## E07 — Qualification/photo/story/video evidence (B18/B19/B23/B29)
 
 Supply the approved materials described in O04–O08. Video needs a faithful time-aligned transcript, spoken-language captions and reviewed translations; a biography is not an audio transcript. No callable speech-transcription tool was available in this session. Publish VTT tracks only after verifying them against the actual audio. Preserve originals and a permission register outside public assets.
+
+## E08 — Physical-device and assistive-technology acceptance (X26)
+
+The local checks use macOS Chromium; 320 CSS pixels approximate full-page zoom reflow and 200% root text checks enlarged text, not a claim of having operated every browser zoom mode.
+
+1. On actual iOS Safari and Android Chrome, open each localized homepage, booking, contact and partner form. Use both orientations, enlarged text and the on-screen keyboard.
+2. Confirm the existing sticky action bar never covers the focused field, date picker, error, submit button or footer; confirm safe-area inset and menu closing after navigation.
+3. With VoiceOver/TalkBack (and a desktop screen reader if available), verify meaningful date/slot loading, closed/full/failure announcements; label/input associations; radio selection; focused conflict/error recovery; no false confirmation. Use a designated test environment and synthetic contact data only.
+4. Test horizontal legal/business rows by keyboard and touch, FAQ disclosures, reduced motion, no-JavaScript assisted contact, downloaded UTC .ics in Apple/Google/Outlook calendars, and missing/expired confirmation.
+5. Record device/OS/browser, language and result. Any real-device defect must be fixed and retested before treating that scope as verified. Video captions and image case descriptions still require O05/O08 regardless of automatic scores.
+
+## E09 — Release the gated design work after booking recovery (X23)
+
+The user explicitly required booking verification before cosmetic work. After E01/B01 and B04 pass with internal test data, continue the existing audit's restrained shadow/card/icon/spacing reduction, remaining decorative counters and partner visual simplification. Preserve the green/cream identity, static stack, real assets, working links and both funnels. Do not publish unsupported business copy while L04/O10 remain open. Repeat affected screenshots, five widths and performance/a11y checks. This work is deliberately not claimed complete by the functional homepage hierarchy changes.

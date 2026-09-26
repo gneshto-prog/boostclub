@@ -6,7 +6,7 @@
     "finding": "503 availability blocks self-booking",
     "change": "Inspect production requestIds/logs, restore upstream calendar availability, test working/closed/full dates.",
     "reference": "Main audit §27 row 1",
-    "status": "REQUIRES THIRD PARTY",
+    "status": "REQUIRES EXTERNAL ACTION",
     "current": "Production is missing SUPABASE_URL, SUPABASE_SECRET_KEY and GOOGLE_SERVICE_ACCOUNT_JSON; all are preview-only. 503 correlated with production Netlify log.",
     "expected": "Restores primary acquisition route",
     "files": [
@@ -22,7 +22,7 @@
     "finding": "Failed availability leaves no selectable time",
     "change": "Show truthful failure plus retry/WhatsApp/call; retain inputs and avoid false success.",
     "reference": "Main audit §27 row 2",
-    "status": "VERIFIED",
+    "status": "VERIFIED FIXED",
     "current": "Previously retry-only availability failure; no inline contact path.",
     "expected": "Recovers affected enquiries",
     "files": [
@@ -39,7 +39,7 @@
     "finding": "Public repo differs from live booking system",
     "change": "Locate authoritative commit/config/backend; reconcile before redeploying.",
     "reference": "Main audit §27 row 3",
-    "status": "VERIFIED",
+    "status": "VERIFIED FIXED",
     "current": "Initial source dd4a115 had older static content but its public booking frontend scripts matched production exactly. Netlify deploy has no commit_ref.",
     "expected": "Prevents loss of current functionality",
     "files": [
@@ -48,7 +48,7 @@
       "content/ru/pages.json",
       "css/components/inline-utilities.css"
     ],
-    "verification": "42 live HTML snapshots compared and three-way reconciled; 24 review blocks match exactly; function architecture/config/logs traced; all tests and 3-locale mock browser journeys pass. Before deployment, verify the reviewed new release artifacts; historical deployed commit remains unavailable."
+    "verification": "42 live HTML snapshots compared and three-way reconciled; 24 review blocks match exactly; function architecture/config/logs traced; all tests and 3-locale mock browser journeys pass. Before deployment, verify the reviewed new release artifacts; historical deployed commit remains unavailable. The live CLI deploy has no commit_ref. Public scripts matched the initial source; all 42 current live HTML pages were reconciled, including newer reviews. Server deployment linkage remains E01, not a claim of verified deployed commit."
   },
   {
     "id": "B04",
@@ -57,7 +57,7 @@
     "finding": "Real calendar/CRM success unverified",
     "change": "Run internal end-to-end test per locale; verify persistence, duplicates, conflicts, timezone and partial archive failure.",
     "reference": "Main audit §27 row 4",
-    "status": "REQUIRES THIRD PARTY",
+    "status": "REQUIRES EXTERNAL ACTION",
     "current": "Local full handler tested with isolated fake CRM/calendar; production configuration missing.",
     "expected": "Reliable appointments and counts",
     "files": [
@@ -73,7 +73,7 @@
     "finding": "Pale text on gold 1.38–1.60:1",
     "change": "Set deep-green primary-button text and test every state against 4.5:1.",
     "reference": "Main audit §27 row 5",
-    "status": "VERIFIED",
+    "status": "VERIFIED FIXED",
     "current": "Original behavior recorded in Batch 2 plan of AUDIT-FIX-CHANGELOG.md.",
     "expected": "Readable primary action",
     "files": [
@@ -88,7 +88,7 @@
     "finding": "Wrong metroM3",
     "change": "Correct toM2; validate route/entrance before precise turns.",
     "reference": "Main audit §27 row 6",
-    "status": "VERIFIED",
+    "status": "VERIFIED FIXED",
     "current": "Original behavior recorded in Batch 2 plan of AUDIT-FIX-CHANGELOG.md.",
     "expected": "Fewer arrival errors",
     "files": [
@@ -105,7 +105,7 @@
     "finding": "Instant and callback promises contradict actual model",
     "change": "Use exact confirmed-slot wording and realistic assisted-response expectations.",
     "reference": "Main audit §27 row 7",
-    "status": "VERIFIED",
+    "status": "VERIFIED FIXED",
     "current": "Audit finding pending source comparison.",
     "expected": "Clear expectations",
     "files": [
@@ -115,7 +115,7 @@
       "content/ru/pages.json",
       "scripts/build-site.mjs"
     ],
-    "verification": "Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions."
+    "verification": "Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions. Final source sweep removed remaining minutes/seconds promises in booking sidebars and contact pages; all three locales checked."
   },
   {
     "id": "B08",
@@ -152,7 +152,7 @@
     "finding": "Offer details too late",
     "change": "Move assessment deliverables immediately below shorter offer-led hero.",
     "reference": "Main audit §27 row 10",
-    "status": "VERIFIED",
+    "status": "VERIFIED FIXED",
     "current": "Audit finding pending source comparison.",
     "expected": "Faster comprehension",
     "files": [
@@ -171,7 +171,7 @@
     "finding": "Secondary business overshadows primary goal",
     "change": "Footer-labelled business link; remove full partner billboard; preserve dedicated landing.",
     "reference": "Main audit §27 row 11",
-    "status": "VERIFIED",
+    "status": "VERIFIED FIXED",
     "current": "Audit finding pending source comparison.",
     "expected": "Clearer consumer intent",
     "files": [
@@ -190,7 +190,7 @@
     "finding": "Absolute no-third-party promise",
     "change": "Replace with accurate booking-use summary and privacy link; verify processing inventory.",
     "reference": "Main audit §27 row 12",
-    "status": "VERIFIED",
+    "status": "VERIFIED FIXED",
     "current": "Audit finding pending source comparison.",
     "expected": "Truthful data collection",
     "files": [
@@ -221,7 +221,7 @@
     "finding": "Incorrect Law 53/2003 reference",
     "change": "Remove and obtain correct service-scope review.",
     "reference": "Main audit §27 row 14",
-    "status": "VERIFIED",
+    "status": "VERIFIED FIXED",
     "current": "Original behavior recorded in Batch 2 plan of AUDIT-FIX-CHANGELOG.md.",
     "expected": "Removes factual legal error",
     "files": [
@@ -249,7 +249,7 @@
     "finding": "Hooks without observed destination",
     "change": "Configure approved destination and verify events/consent; no personal/health data in analytics.",
     "reference": "Main audit §27 row 16",
-    "status": "REQUIRES THIRD PARTY",
+    "status": "REQUIRES EXTERNAL ACTION",
     "current": "Audit finding pending source comparison.",
     "expected": "Usable acquisition evidence",
     "files": [],
@@ -262,7 +262,7 @@
     "finding": "Attendance/client outcomes unmeasured",
     "change": "Add due/attended/cancelled/client statuses and protected lead reconciliation.",
     "reference": "Main audit §27 row 17",
-    "status": "REQUIRES THIRD PARTY",
+    "status": "REQUIRES EXTERNAL ACTION",
     "current": "Audit finding pending source comparison.",
     "expected": "Optimise real business outcome",
     "files": [],
@@ -314,16 +314,19 @@
     "finding": "Tiny English earnings disclosure",
     "change": "Translate, enlarge/darken and place beside related claims; validate market document.",
     "reference": "Main audit §27 row 21",
-    "status": "FIXED",
+    "status": "VERIFIED FIXED",
     "current": "Audit finding pending source comparison.",
     "expected": "Readable disclosure",
     "files": [
+      "content/en/pages.json",
       "content/ro/pages.json",
       "content/ru/pages.json",
+      "css/business-phase2.css",
       "css/components/7ec7fdeb08.css",
-      "css/components/8247048a39.css"
+      "css/components/8247048a39.css",
+      "tests/axe-browser.mjs"
     ],
-    "verification": "RO/RU existing disclaimer translated without changing its meaning; enlarged to 16px. Final computed contrast check still pending; commercial claims remain L04."
+    "verification": "Disclosure is 16px with measured 6.37:1 contrast in all locales; remaining small blue labels/links darkened. Axe 4.13 passes all 39 public routes. Market/legal substance remains B20/X19."
   },
   {
     "id": "B22",
@@ -332,7 +335,7 @@
     "finding": "English WhatsApp payloads",
     "change": "Localise every static and dynamically built message; compose-only test.",
     "reference": "Main audit §27 row 22",
-    "status": "VERIFIED",
+    "status": "VERIFIED FIXED",
     "current": "Audit finding pending source comparison.",
     "expected": "Consistent contact journey",
     "files": [
@@ -387,7 +390,7 @@
     "finding": "Referral pitch before membership understanding",
     "change": "Move full incentive to member programme with complete conditions.",
     "reference": "Main audit §27 row 26",
-    "status": "VERIFIED",
+    "status": "VERIFIED FIXED",
     "current": "Audit finding pending source comparison.",
     "expected": "Less acquisition distraction",
     "files": [
@@ -406,7 +409,7 @@
     "finding": "Results omission and state/Escape inconsistency",
     "change": "Generate same links; synchronise expanded state and close/focus behaviour.",
     "reference": "Main audit §27 row 27",
-    "status": "VERIFIED",
+    "status": "VERIFIED FIXED",
     "current": "Original behavior recorded in Batch 2 plan of AUDIT-FIX-CHANGELOG.md.",
     "expected": "Predictable navigation",
     "files": [
@@ -423,16 +426,17 @@
     "finding": "Keyboard access missing",
     "change": "Focusable labelled wrapper or readable reflow; test Safari/keyboard.",
     "reference": "Main audit §27 row 28",
-    "status": "VERIFIED",
+    "status": "VERIFIED FIXED",
     "current": "Original behavior recorded in Batch 2 plan of AUDIT-FIX-CHANGELOG.md.",
     "expected": "Accessible content",
     "files": [
-      "content/ro/pages.json",
       "content/en/pages.json",
+      "content/ro/pages.json",
       "content/ru/pages.json",
-      "css/style.css"
+      "css/style.css",
+      "tests/accessibility-browser.mjs"
     ],
-    "verification": "12 regression tests; strict typecheck/syntax lint and all build validators passed. 39 public routes × 5 widths checked in browser, with menu Escape/focus and primary CTA contrast >=4.5:1. Local only; screenshot evidence in batch2. Hours/credentials remain explicitly withheld pending confirmation."
+    "verification": "Final axe scan caught nested scrolling tables and production-merge loss of business scroll attributes; fixed the actual scrolling element. All 39 routes pass axe; keyboard focus checked in every locale."
   },
   {
     "id": "B29",
@@ -454,7 +458,7 @@
     "finding": "Important process/FAQ parity gaps",
     "change": "Share key offer/confirmation/continuation facts, then native-edit EN/RU.",
     "reference": "Main audit §27 row 30",
-    "status": "VERIFIED",
+    "status": "VERIFIED FIXED",
     "current": "Audit finding pending source comparison.",
     "expected": "Equal service understanding",
     "files": [
@@ -464,7 +468,7 @@
       "content/ru/pages.json",
       "scripts/build-site.mjs"
     ],
-    "verification": "Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions."
+    "verification": "Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions. FAQ panels now hide semantically with synchronized controls; answers remain expanded without JavaScript."
   },
   {
     "id": "B31",
@@ -473,7 +477,7 @@
     "finding": "Hardcoded counts repeated",
     "change": "Shared rating/count/source/verifiedAt record; monthly review or authorised API sync.",
     "reference": "Main audit §27 row 31",
-    "status": "VERIFIED",
+    "status": "VERIFIED FIXED",
     "current": "Audit finding pending source comparison.",
     "expected": "No stale contradictory proof",
     "files": [
@@ -492,7 +496,7 @@
     "finding": "Unsupported WellnessCenter type",
     "change": "Use truthful valid LocalBusiness type, stable IDs and verified location data.",
     "reference": "Main audit §27 row 32",
-    "status": "VERIFIED",
+    "status": "VERIFIED FIXED",
     "current": "Original behavior recorded in Batch 2 plan of AUDIT-FIX-CHANGELOG.md.",
     "expected": "Machine-readable entity clarity",
     "files": [
@@ -507,7 +511,7 @@
     "finding": "Duplicate 200 homepage on romnutriclub.ro",
     "change": "If owned/retired,301 mapped paths to Boost; verify alternatives before switch.",
     "reference": "Main audit §27 row 33",
-    "status": "REQUIRES THIRD PARTY",
+    "status": "REQUIRES EXTERNAL ACTION",
     "current": "Audit finding pending source comparison.",
     "expected": "Clear domain consolidation",
     "files": [],
@@ -520,7 +524,7 @@
     "finding": "Service/brand/process overlap",
     "change": "Use keyword-intent map; refine titles/internal anchors and content roles.",
     "reference": "Main audit §27 row 34",
-    "status": "VERIFIED",
+    "status": "VERIFIED FIXED",
     "current": "Original behavior recorded in Batch 2 plan of AUDIT-FIX-CHANGELOG.md.",
     "expected": "Relevant organic landing paths",
     "files": [
@@ -537,11 +541,18 @@
     "finding": "960 px thumbnails, `results13.webp`, largest at 156.6 KiB",
     "change": "Add 320/640/960 srcset and accurate sizes/dimensions; retain proof readability.",
     "reference": "Main audit §27 row 35",
-    "status": "TODO",
+    "status": "VERIFIED FIXED",
     "current": "Audit finding pending source comparison.",
     "expected": "Lower mobile transfer",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "content/responsive-images.json",
+      "images/responsive/",
+      "scripts/lib/responsive-images.mjs",
+      "scripts/resize-images.py",
+      "tests/assets.test.mjs",
+      "tests/performance-browser.mjs"
+    ],
+    "verification": "18 original assets preserved; content-hashed 320/640 variants. Mobile result images: 788,680 to 192,230 bytes (75.6% reduction), DPR 1/2. Full originals remain linked; hero preload matches srcset."
   },
   {
     "id": "B36",
@@ -550,11 +561,17 @@
     "finding": "Large D3/map and locale loading drift",
     "change": "Use optional country selector; lazy-load map consistently if retained.",
     "reference": "Main audit §27 row 36",
-    "status": "TODO",
+    "status": "VERIFIED FIXED",
     "current": "Audit finding pending source comparison.",
     "expected": "Simpler faster interaction",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "js/components/1c780d7082.js",
+      "js/components/95fd94c780.js",
+      "js/components/a436a2e6c4.js",
+      "tests/performance-browser.mjs",
+      "tests/reliability-browser.mjs"
+    ],
+    "verification": "D3/topology/country data make no request until explicit map button; actual self-hosted map renders in RO/EN/RU. Failed library load retains enquiry fallback."
   },
   {
     "id": "B37",
@@ -563,7 +580,7 @@
     "finding": "Manual template/fact duplication",
     "change": "Shared static templates and locale data for nav, hours, proof and legal facts.",
     "reference": "Main audit §27 row 37",
-    "status": "VERIFIED",
+    "status": "VERIFIED FIXED",
     "current": "Audit finding pending source comparison.",
     "expected": "Lower future drift",
     "files": [
@@ -573,20 +590,24 @@
       "content/ru/pages.json",
       "scripts/build-site.mjs"
     ],
-    "verification": "Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions."
+    "verification": "Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions. Hours, approved legal master and unsupported business facts remain B08/B13/B19 owner/legal decisions; shared code does not manufacture them."
   },
   {
     "id": "B38",
     "priority": "P2",
     "area": "Motion",
-    "finding": "Intro/portal and decorative repetition",
+    "finding": "Entry/portal delays and reduced-motion access",
     "change": "Remove entry/transition delay; retain content-visible reduced-motion behaviour.",
     "reference": "Main audit §27 row 38",
-    "status": "IN PROGRESS",
+    "status": "VERIFIED FIXED",
     "current": "Audit finding pending source comparison.",
     "expected": "More direct access",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "js/main.js",
+      "scripts/lib/components.mjs",
+      "tests/accessibility-browser.mjs"
+    ],
+    "verification": "Entry curtain and navigation portal delay removed. Reduced-motion/browser/no-JavaScript checks preserve content. Remaining broad decorative simplification is explicitly tracked separately under X23 and gated on B01."
   },
   {
     "id": "B39",
@@ -595,7 +616,7 @@
     "finding": "Multiple subsets/weights, Cyrillic fallback",
     "change": "Confirm used weights and intentional Cyrillic font metrics before changing files.",
     "reference": "Main audit §27 row 39",
-    "status": "VERIFIED",
+    "status": "VERIFIED FIXED",
     "current": "Audit finding pending source comparison.",
     "expected": "Consistent multilingual typography",
     "files": [
@@ -614,11 +635,15 @@
     "finding": "Assets revalidate every request",
     "change": "Fingerprint assets then long-cache immutable; keep HTML fresh.",
     "reference": "Main audit §27 row 40",
-    "status": "TODO",
+    "status": "VERIFIED FIXED",
     "current": "Audit finding pending source comparison.",
     "expected": "Faster repeat visits",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "content/responsive-images.json",
+      "netlify.toml",
+      "tests/assets.test.mjs"
+    ],
+    "verification": "Immutable one-year cache limited to hashed derivatives. Byte hashes verified automatically; HTML and mutable URLs keep revalidation. Actual CDN headers need post-deployment E01 verification."
   },
   {
     "id": "B41",
@@ -627,7 +652,7 @@
     "finding": "HTTPwww two-hop chain",
     "change": "Consolidate to one canonical hop when adjusting hosting rules.",
     "reference": "Main audit §27 row 41",
-    "status": "REQUIRES THIRD PARTY",
+    "status": "REQUIRES EXTERNAL ACTION",
     "current": "Audit finding pending source comparison.",
     "expected": "Minor crawl/navigation efficiency",
     "files": [],
@@ -640,11 +665,15 @@
     "finding": "Contrast 4.41:1",
     "change": "Slightly darken foreground and retest.",
     "reference": "Main audit §27 row 42",
-    "status": "TODO",
+    "status": "VERIFIED FIXED",
     "current": "Audit finding pending source comparison.",
     "expected": "Small readability improvement",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "css/components/inline-utilities.css",
+      "tests/axe-browser.mjs",
+      "tests/performance-browser.mjs"
+    ],
+    "verification": "Closed-day label measured 9.06:1. Final axe scan passes all contact locales."
   },
   {
     "id": "B43",
@@ -653,7 +682,7 @@
     "finding": "Uniform stale lastmod",
     "change": "Use real significant modification dates.",
     "reference": "Main audit §27 row 43",
-    "status": "VERIFIED",
+    "status": "VERIFIED FIXED",
     "current": "Original behavior recorded in Batch 2 plan of AUDIT-FIX-CHANGELOG.md.",
     "expected": "Accurate crawl hints",
     "files": [
@@ -668,7 +697,7 @@
     "finding": "Publish optional paid continuation and independent Herbalife relationship without inventing prices",
     "change": "Publish optional paid continuation and independent Herbalife relationship without inventing prices",
     "reference": "§§5,8,22.4,23.14",
-    "status": "VERIFIED",
+    "status": "VERIFIED FIXED",
     "current": "Pending source comparison.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
     "files": [
@@ -687,7 +716,7 @@
     "finding": "Replace exact-measurement language with estimates without adding medical advice",
     "change": "Replace exact-measurement language with estimates without adding medical advice",
     "reference": "§§9,23.4",
-    "status": "VERIFIED",
+    "status": "VERIFIED FIXED",
     "current": "Pending source comparison.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
     "files": [
@@ -706,7 +735,7 @@
     "finding": "Replace judgmental systems paragraph with supportive concrete wording",
     "change": "Replace judgmental systems paragraph with supportive concrete wording",
     "reference": "§§9,23.16",
-    "status": "VERIFIED",
+    "status": "VERIFIED FIXED",
     "current": "Pending source comparison.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
     "files": [
@@ -725,7 +754,7 @@
     "finding": "Date/time first, optional goal, persistent input, accessible submit error, no false success",
     "change": "Date/time first, optional goal, persistent input, accessible submit error, no false success",
     "reference": "§§7,8,16; page-by-page booking",
-    "status": "VERIFIED",
+    "status": "VERIFIED FIXED",
     "current": "Date after contact, required goal, alert errors, no provider deadlines or stale-response guard.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
     "files": [
@@ -744,19 +773,22 @@
     "finding": "Timeouts, stale date races, schema errors, duplicate submit, replay and archive failure",
     "change": "Timeouts, stale date races, schema errors, duplicate submit, replay and archive failure",
     "reference": "§8",
-    "status": "FIXED",
+    "status": "VERIFIED FIXED",
     "current": "Date after contact, required goal, alert errors, no provider deadlines or stale-response guard.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
     "files": [
-      "js/booking-slots.js",
+      "content/en/pages.json",
+      "content/ro/pages.json",
+      "content/ru/pages.json",
       "js/booking-form.js",
+      "js/booking-slots.js",
       "js/lead-pipeline.js",
       "netlify/functions/_shared/upstream.mts",
-      "content/ro/pages.json",
-      "content/en/pages.json",
-      "content/ru/pages.json"
+      "tests/booking-browser.mjs",
+      "tests/booking.test.mjs",
+      "tests/reliability-browser.mjs"
     ],
-    "verification": "Backend and five-width browser checks pass. Extended duplicate/date-race/timeout tests still to run."
+    "verification": "19 tests include provider bounds, malformed responses, DST, conflict, replay, partial failure and no real writes. Browser tests verify stale-response rejection, client timeout, duplicate requests, archive failure, Back/Forward and storage failure in all languages."
   },
   {
     "id": "X06",
@@ -765,7 +797,7 @@
     "finding": "Invalid/expired session, ICS, local place names, modification request wording",
     "change": "Invalid/expired session, ICS, local place names, modification request wording",
     "reference": "§23.25; page-by-page confirmation",
-    "status": "VERIFIED",
+    "status": "VERIFIED FIXED",
     "current": "Pending source comparison.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
     "files": [
@@ -783,7 +815,7 @@
     "finding": "Deliver confirmation and reminders through a verified contact channel",
     "change": "Deliver confirmation and reminders through a verified contact channel",
     "reference": "page-by-page confirmation",
-    "status": "REQUIRES THIRD PARTY",
+    "status": "REQUIRES EXTERNAL ACTION",
     "current": "Pending source comparison.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
     "files": [],
@@ -813,7 +845,7 @@
     "finding": "Verify listing, categories, holiday hours, photos, appointment link and honest review requests",
     "change": "Verify listing, categories, holiday hours, photos, appointment link and honest review requests",
     "reference": "§13",
-    "status": "REQUIRES THIRD PARTY",
+    "status": "REQUIRES EXTERNAL ACTION",
     "current": "Pending source comparison.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
     "files": [],
@@ -826,7 +858,7 @@
     "finding": "Search Console intent validation and booking/attendance funnel baseline",
     "change": "Search Console intent validation and booking/attendance funnel baseline",
     "reference": "§§8,12,18",
-    "status": "REQUIRES THIRD PARTY",
+    "status": "REQUIRES EXTERNAL ACTION",
     "current": "Pending source comparison.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
     "files": [],
@@ -839,11 +871,15 @@
     "finding": "Load third-party map only on explicit visitor action with independent directions link",
     "change": "Load third-party map only on explicit visitor action with independent directions link",
     "reference": "§§15,19",
-    "status": "TODO",
+    "status": "VERIFIED FIXED",
     "current": "Pending source comparison.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "js/maps.js",
+      "scripts/build-site.mjs",
+      "tests/performance-browser.mjs"
+    ],
+    "verification": "No Google iframe or request before explicit map action; iframe request tested after click. Independent directions links preserved."
   },
   {
     "id": "X12",
@@ -852,7 +888,7 @@
     "finding": "Shared LocalBusiness/Person IDs and reciprocal locale markup, no review-star claims",
     "change": "Shared LocalBusiness/Person IDs and reciprocal locale markup, no review-star claims",
     "reference": "§§12–14",
-    "status": "VERIFIED",
+    "status": "VERIFIED FIXED",
     "current": "Original behavior recorded in Batch 2 plan of AUDIT-FIX-CHANGELOG.md.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
     "files": [
@@ -867,7 +903,7 @@
     "finding": "Retain proper 404 and noindex; provide locale-aware home/booking links",
     "change": "Retain proper 404 and noindex; provide locale-aware home/booking links",
     "reference": "page-by-page /404.html",
-    "status": "VERIFIED",
+    "status": "VERIFIED FIXED",
     "current": "Original behavior recorded in Batch 2 plan of AUDIT-FIX-CHANGELOG.md.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
     "files": [
@@ -882,11 +918,15 @@
     "finding": "Preserve working routes, contacts, reviews, HTML, sticky bar, video controls and free nonmedical scope",
     "change": "Preserve working routes, contacts, reviews, HTML, sticky bar, video controls and free nonmedical scope",
     "reference": "§26",
-    "status": "TODO",
+    "status": "VERIFIED FIXED",
     "current": "Pending source comparison.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "AUDIT-COVERAGE.md",
+      "scripts/validate-site.mjs",
+      "tests/site.test.mjs"
+    ],
+    "verification": "42 locale routes retained; 24 complete original live review quotations match; existing phone/WhatsApp, sticky bars and native founder video preserved. robots/_redirects unchanged, confirmation noindex retained, no tracked file deleted. Evidence final/preservation.json and full build validators."
   },
   {
     "id": "X15",
@@ -973,7 +1013,7 @@
     "finding": "Visible labels, privacy link, contact validation and separate accepted-enquiry state",
     "change": "Visible labels, privacy link, contact validation and separate accepted-enquiry state",
     "reference": "§8; page-by-page business",
-    "status": "VERIFIED",
+    "status": "VERIFIED FIXED",
     "current": "Pending source comparison.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
     "files": [
@@ -991,7 +1031,7 @@
     "finding": "Replace booked-call and no-form promises with truthful conversation wording",
     "change": "Replace booked-call and no-form promises with truthful conversation wording",
     "reference": "§23.21–22",
-    "status": "VERIFIED",
+    "status": "VERIFIED FIXED",
     "current": "Pending source comparison.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
     "files": [
@@ -1007,14 +1047,17 @@
     "id": "X23",
     "priority": "P3",
     "area": "Polish",
-    "finding": "Reduce decorative shadows/cards/icons only after P0 is verified; preserve brand",
+    "finding": "Remaining decorative repetition, shadows, cards, counters, icons and visual polish after P0",
     "change": "Reduce decorative shadows/cards/icons only after P0 is verified; preserve brand",
     "reference": "§10",
-    "status": "TODO",
+    "status": "REQUIRES EXTERNAL ACTION",
     "current": "Pending source comparison.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "AUDIT-COVERAGE.md",
+      "EXTERNAL-ACTIONS.md"
+    ],
+    "verification": "Functional motion/access fixes and homepage hierarchy are complete. Broad shadow/card/icon/spacing/counter redesign is deliberately unstarted because the user explicitly requires live booking verification first. E01 production restoration is the prerequisite, then carry out the original audit design specification without new business claims."
   },
   {
     "id": "X24",
@@ -1023,7 +1066,7 @@
     "finding": "Keep original quotes and dates; individual links/translated labels where supported",
     "change": "Keep original quotes and dates; individual links/translated labels where supported",
     "reference": "§11; page-by-page reviews",
-    "status": "VERIFIED",
+    "status": "VERIFIED FIXED",
     "current": "Pending source comparison.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
     "files": [
@@ -1042,10 +1085,30 @@
     "finding": "Five requested widths, zoom/reflow, keyboard and console checks for affected pages",
     "change": "Five requested widths, zoom/reflow, keyboard and console checks for affected pages",
     "reference": "§§7,16; implementation request",
-    "status": "TODO",
+    "status": "VERIFIED FIXED",
     "current": "Pending source comparison.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "tests/accessibility-browser.mjs",
+      "tests/axe-browser.mjs",
+      "tests/forms-browser.mjs",
+      "tests/site-browser.mjs"
+    ],
+    "verification": "All 39 content routes × 375/430/768/1366/1440; all 42 locale routes at 320px and 200% root text; confirmation at five widths; keyboard menu/FAQ/table and UTC ICS; no-JS FAQ/booking fallback; no uncaught page errors. Actual hardware and assistive-tech review is separately X26."
+  },
+  {
+    "id": "X26",
+    "priority": "P2",
+    "area": "Accessibility / mobile",
+    "finding": "Physical iOS/Android, screen keyboard and screen-reader acceptance",
+    "reference": "Main audit §7 and §16 extended manual acceptance checks",
+    "current": "Browser automation on macOS Chromium covers layout, semantics and keyboard; it is not a test on actual mobile hardware or a screen-reader certification.",
+    "change": "Supply a concrete device/assistive-technology acceptance script in E08.",
+    "expected": "Confirm real touchscreen, virtual keyboard and spoken date/error announcements before publication.",
+    "status": "REQUIRES EXTERNAL ACTION",
+    "files": [
+      "EXTERNAL-ACTIONS.md"
+    ],
+    "verification": "Automated scope and limitations are explicit. Physical devices/assistive-technology user acceptance remains external."
   }
 ]
