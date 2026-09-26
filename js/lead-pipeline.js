@@ -72,7 +72,7 @@
       language: language,
       leadType: isBusiness ? "business" : "client",
       landingPage: location.pathname,
-      pageUrl: location.href.split("#")[0],
+      pageUrl: location.origin + location.pathname,
       attribution: attribution,
       botField: (form.elements["bot-field"] && form.elements["bot-field"].value) || ""
     };
@@ -160,16 +160,9 @@
       console.warn("Lead reached CRM but the Netlify Forms archive failed.", archiveError);
     }
 
-    if (window.BoostAttribution && window.BoostAttribution.track) {
-      window.BoostAttribution.track("generate_lead", payload.formName, {
-        lead_type: payload.leadType,
-        language: payload.language,
-        page_path: location.pathname
-      });
-    } else if (window.bcTrack) {
-      window.bcTrack("generate_lead", payload.formName, {
-        lead_type: payload.leadType,
-        language: payload.language
+    if (window.BoostAnalytics && result.calendarEventId && Number.isFinite(Date.parse(result.calendarStartAt)) && Number.isFinite(Date.parse(result.calendarEndAt)) && Date.parse(result.calendarEndAt) > Date.parse(result.calendarStartAt)) {
+      window.BoostAnalytics.track(payload.leadType === "business" ? "partner_lead_completed" : "booking_completed", {
+        onceKey: "completed:" + payload.idempotencyKey
       });
     }
     return result;

@@ -23,6 +23,8 @@ function renderPage(page) {
     .replace("{{shared-header}}", header({ lang: page.lang, slug: page.slug }))
     .replace("{{shared-footer}}", footer({ lang: page.lang }));
   body = renderRegisteredComponents(body);
+  // Shared consent/event contract runs before the page scripts in every locale.
+  body = body.replace(/<script\b/, '<script src="/js/analytics.js"></script>\n<script');
   return documentTemplate({
     doctype: page.doctype,
     htmlOpen: page.htmlOpen,

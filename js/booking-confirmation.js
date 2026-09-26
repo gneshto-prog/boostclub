@@ -21,7 +21,6 @@
     && Date.now() - saved.getTime() < 24 * 60 * 60 * 1000;
 
   if (!valid) {
-    location.replace("consultatie-gratuita");
     return;
   }
 
@@ -98,6 +97,9 @@
     });
   }
 
+  var unavailable = document.getElementById("confirmation-unavailable");
+  if (unavailable) unavailable.hidden = true;
+  text("confirmation-heading", { ro: "Te așteptăm la Boost Club", en: "See you at Boost Club", ru: "Ждём вас в Boost Club" }[language] || "Boost Club");
   var content = document.getElementById("confirmation-content");
   if (content) content.hidden = false;
 })();

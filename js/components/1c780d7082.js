@@ -390,14 +390,3 @@ function initMap(){
   lf.addEventListener('focusout',function(){st.style.display='';});
 })();
 
-/* ---- lead form (Netlify) ---- */
-(function(){
-  var lf=document.getElementById('leadForm'), th=document.getElementById('leadThanks');
-  if(lf){lf.addEventListener('submit',function(e){
-    e.preventDefault();
-    if(!lf.checkValidity()){lf.reportValidity();return;}
-    var btn=lf.querySelector('[type="submit"]');if(btn)btn.disabled=true;
-    window.BoostLeadPipeline.submit(lf).then(function(){lf.hidden=true;if(th)th.hidden=false;})
-      .catch(function(error){if(btn)btn.disabled=false;var ref=error&&error.requestId?' Код: '+error.requestId:'';alert(error&&error.savedToCrm?'Контакты сохранены в CRM, но календарь не обновился. Попробуйте ещё раз или позвоните Габи.'+ref:'Не удалось сохранить контакты. Попробуйте ещё раз или позвоните Габи.'+ref);});
-  });}
-})();

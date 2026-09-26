@@ -167,11 +167,16 @@
     "finding": "Absolute no-third-party promise",
     "change": "Replace with accurate booking-use summary and privacy link; verify processing inventory.",
     "reference": "Main audit §27 row 12",
-    "status": "TODO",
+    "status": "VERIFIED",
     "current": "Audit finding pending source comparison.",
     "expected": "Truthful data collection",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "js/booking-form.js",
+      "content/ro/pages.json",
+      "content/en/pages.json",
+      "content/ru/pages.json"
+    ],
+    "verification": "Batch 3: 16 regression tests and all build checks pass; 3-locale mock booking and partner-browser journeys verify recovery, input retention, success focus, duplicate requests, deduplicated events, blocked storage and no-JavaScript assisted booking. No production submissions."
   },
   {
     "id": "B13",
@@ -180,11 +185,11 @@
     "finding": "Different basis/retention/provider facts",
     "change": "Approve current factual master and equivalent translations.",
     "reference": "Main audit §27 row 13",
-    "status": "TODO",
+    "status": "REQUIRES LEGAL/COMPLIANCE REVIEW",
     "current": "Audit finding pending source comparison.",
     "expected": "Consistent rights information",
     "files": [],
-    "verification": "Not yet run."
+    "verification": "See LEGAL-COMPLIANCE-REVIEW.md L01–L07 for current exact wording, location, audit concern and decision. Technical fixes do not approve the underlying legal content."
   },
   {
     "id": "B14",
@@ -208,11 +213,11 @@
     "finding": "Policy and deployment disagree",
     "change": "Audit browser storage/maps/ad IDs, implement required choices and matching policy.",
     "reference": "Main audit §27 row 15",
-    "status": "TODO",
+    "status": "REQUIRES LEGAL/COMPLIANCE REVIEW",
     "current": "Audit finding pending source comparison.",
     "expected": "Valid informed choices",
     "files": [],
-    "verification": "Not yet run."
+    "verification": "See LEGAL-COMPLIANCE-REVIEW.md L01–L07 for current exact wording, location, audit concern and decision. Technical fixes do not approve the underlying legal content."
   },
   {
     "id": "B16",
@@ -221,11 +226,11 @@
     "finding": "Hooks without observed destination",
     "change": "Configure approved destination and verify events/consent; no personal/health data in analytics.",
     "reference": "Main audit §27 row 16",
-    "status": "TODO",
+    "status": "REQUIRES THIRD PARTY",
     "current": "Audit finding pending source comparison.",
     "expected": "Usable acquisition evidence",
     "files": [],
-    "verification": "Not yet run."
+    "verification": "See EXTERNAL-ACTIONS.md E02–E06. Consent-gated analytics contract is tested locally; no provider, external account, message delivery, DNS or attendance workflow was changed."
   },
   {
     "id": "B17",
@@ -234,11 +239,11 @@
     "finding": "Attendance/client outcomes unmeasured",
     "change": "Add due/attended/cancelled/client statuses and protected lead reconciliation.",
     "reference": "Main audit §27 row 17",
-    "status": "TODO",
+    "status": "REQUIRES THIRD PARTY",
     "current": "Audit finding pending source comparison.",
     "expected": "Optimise real business outcome",
     "files": [],
-    "verification": "Not yet run."
+    "verification": "See EXTERNAL-ACTIONS.md E02–E06. Consent-gated analytics contract is tested locally; no provider, external account, message delivery, DNS or attendance workflow was changed."
   },
   {
     "id": "B18",
@@ -273,11 +278,11 @@
     "finding": "Earnings certainty and selective comparisons",
     "change": "Remove absolute claims/caricature table; show work, cost categories and current-market typical outcomes.",
     "reference": "Main audit §27 row 20",
-    "status": "TODO",
+    "status": "REQUIRES LEGAL/COMPLIANCE REVIEW",
     "current": "Audit finding pending source comparison.",
     "expected": "Better informed prospects",
     "files": [],
-    "verification": "Not yet run."
+    "verification": "See LEGAL-COMPLIANCE-REVIEW.md L01–L07 for current exact wording, location, audit concern and decision. Technical fixes do not approve the underlying legal content."
   },
   {
     "id": "B21",
@@ -286,11 +291,16 @@
     "finding": "Tiny English earnings disclosure",
     "change": "Translate, enlarge/darken and place beside related claims; validate market document.",
     "reference": "Main audit §27 row 21",
-    "status": "TODO",
+    "status": "FIXED",
     "current": "Audit finding pending source comparison.",
     "expected": "Readable disclosure",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "content/ro/pages.json",
+      "content/ru/pages.json",
+      "css/components/7ec7fdeb08.css",
+      "css/components/8247048a39.css"
+    ],
+    "verification": "RO/RU existing disclaimer translated without changing its meaning; enlarged to 16px. Final computed contrast check still pending; commercial claims remain L04."
   },
   {
     "id": "B22",
@@ -299,11 +309,14 @@
     "finding": "English WhatsApp payloads",
     "change": "Localise every static and dynamically built message; compose-only test.",
     "reference": "Main audit §27 row 22",
-    "status": "TODO",
+    "status": "VERIFIED",
     "current": "Audit finding pending source comparison.",
     "expected": "Consistent contact journey",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "content/ru/pages.json",
+      "content/site.mjs"
+    ],
+    "verification": "Batch 3: 16 regression tests and all build checks pass; 3-locale mock booking and partner-browser journeys verify recovery, input retention, success focus, duplicate requests, deduplicated events, blocked storage and no-JavaScript assisted booking. No production submissions."
   },
   {
     "id": "B23",
@@ -453,11 +466,11 @@
     "finding": "Duplicate 200 homepage on romnutriclub.ro",
     "change": "If owned/retired,301 mapped paths to Boost; verify alternatives before switch.",
     "reference": "Main audit §27 row 33",
-    "status": "TODO",
+    "status": "REQUIRES THIRD PARTY",
     "current": "Audit finding pending source comparison.",
     "expected": "Clear domain consolidation",
     "files": [],
-    "verification": "Not yet run."
+    "verification": "See EXTERNAL-ACTIONS.md E02–E06. Consent-gated analytics contract is tested locally; no provider, external account, message delivery, DNS or attendance workflow was changed."
   },
   {
     "id": "B34",
@@ -561,11 +574,11 @@
     "finding": "HTTPwww two-hop chain",
     "change": "Consolidate to one canonical hop when adjusting hosting rules.",
     "reference": "Main audit §27 row 41",
-    "status": "TODO",
+    "status": "REQUIRES THIRD PARTY",
     "current": "Audit finding pending source comparison.",
     "expected": "Minor crawl/navigation efficiency",
     "files": [],
-    "verification": "Not yet run."
+    "verification": "See EXTERNAL-ACTIONS.md E02–E06. Consent-gated analytics contract is tested locally; no provider, external account, message delivery, DNS or attendance workflow was changed."
   },
   {
     "id": "B42",
@@ -683,11 +696,16 @@
     "finding": "Invalid/expired session, ICS, local place names, modification request wording",
     "change": "Invalid/expired session, ICS, local place names, modification request wording",
     "reference": "§23.25; page-by-page confirmation",
-    "status": "TODO",
+    "status": "VERIFIED",
     "current": "Pending source comparison.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "js/booking-confirmation.js",
+      "content/ro/pages.json",
+      "content/en/pages.json",
+      "content/ru/pages.json"
+    ],
+    "verification": "Batch 3: 16 regression tests and all build checks pass; 3-locale mock booking and partner-browser journeys verify recovery, input retention, success focus, duplicate requests, deduplicated events, blocked storage and no-JavaScript assisted booking. No production submissions."
   },
   {
     "id": "X07",
@@ -696,11 +714,11 @@
     "finding": "Deliver confirmation and reminders through a verified contact channel",
     "change": "Deliver confirmation and reminders through a verified contact channel",
     "reference": "page-by-page confirmation",
-    "status": "TODO",
+    "status": "REQUIRES THIRD PARTY",
     "current": "Pending source comparison.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
     "files": [],
-    "verification": "Not yet run."
+    "verification": "See EXTERNAL-ACTIONS.md E02–E06. Consent-gated analytics contract is tested locally; no provider, external account, message delivery, DNS or attendance workflow was changed."
   },
   {
     "id": "X08",
@@ -722,11 +740,11 @@
     "finding": "Verify listing, categories, holiday hours, photos, appointment link and honest review requests",
     "change": "Verify listing, categories, holiday hours, photos, appointment link and honest review requests",
     "reference": "§13",
-    "status": "TODO",
+    "status": "REQUIRES THIRD PARTY",
     "current": "Pending source comparison.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
     "files": [],
-    "verification": "Not yet run."
+    "verification": "See EXTERNAL-ACTIONS.md E02–E06. Consent-gated analytics contract is tested locally; no provider, external account, message delivery, DNS or attendance workflow was changed."
   },
   {
     "id": "X10",
@@ -735,11 +753,11 @@
     "finding": "Search Console intent validation and booking/attendance funnel baseline",
     "change": "Search Console intent validation and booking/attendance funnel baseline",
     "reference": "§§8,12,18",
-    "status": "TODO",
+    "status": "REQUIRES THIRD PARTY",
     "current": "Pending source comparison.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
     "files": [],
-    "verification": "Not yet run."
+    "verification": "See EXTERNAL-ACTIONS.md E02–E06. Consent-gated analytics contract is tested locally; no provider, external account, message delivery, DNS or attendance workflow was changed."
   },
   {
     "id": "X11",
@@ -804,11 +822,11 @@
     "finding": "Confirm analyser identity, suitability/preparation and outputs with operator/manufacturer",
     "change": "Confirm analyser identity, suitability/preparation and outputs with operator/manufacturer",
     "reference": "§§20,22.2,22.9; process pages",
-    "status": "TODO",
+    "status": "REQUIRES LEGAL/COMPLIANCE REVIEW",
     "current": "Pending source comparison.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
     "files": [],
-    "verification": "Not yet run."
+    "verification": "See LEGAL-COMPLIANCE-REVIEW.md L01–L07 for current exact wording, location, audit concern and decision. Technical fixes do not approve the underlying legal content."
   },
   {
     "id": "X16",
@@ -817,11 +835,11 @@
     "finding": "Health-data legal basis, documented consent, retention, withdrawal and access",
     "change": "Health-data legal basis, documented consent, retention, withdrawal and access",
     "reference": "§19",
-    "status": "TODO",
+    "status": "REQUIRES LEGAL/COMPLIANCE REVIEW",
     "current": "Pending source comparison.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
     "files": [],
-    "verification": "Not yet run."
+    "verification": "See LEGAL-COMPLIANCE-REVIEW.md L01–L07 for current exact wording, location, audit concern and decision. Technical fixes do not approve the underlying legal content."
   },
   {
     "id": "X17",
@@ -830,11 +848,11 @@
     "finding": "Confirm trader identity, service/product terms and processor/transfer inventory",
     "change": "Confirm trader identity, service/product terms and processor/transfer inventory",
     "reference": "§19",
-    "status": "TODO",
+    "status": "REQUIRES LEGAL/COMPLIANCE REVIEW",
     "current": "Pending source comparison.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
     "files": [],
-    "verification": "Not yet run."
+    "verification": "See LEGAL-COMPLIANCE-REVIEW.md L01–L07 for current exact wording, location, audit concern and decision. Technical fixes do not approve the underlying legal content."
   },
   {
     "id": "X18",
@@ -843,11 +861,11 @@
     "finding": "Review numerical weight/health claims and permission per image",
     "change": "Review numerical weight/health claims and permission per image",
     "reference": "§19",
-    "status": "TODO",
+    "status": "REQUIRES LEGAL/COMPLIANCE REVIEW",
     "current": "Pending source comparison.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
     "files": [],
-    "verification": "Not yet run."
+    "verification": "See LEGAL-COMPLIANCE-REVIEW.md L01–L07 for current exact wording, location, audit concern and decision. Technical fixes do not approve the underlying legal content."
   },
   {
     "id": "X19",
@@ -856,11 +874,11 @@
     "finding": "Review certainty, expenses, typical earnings, bonuses and market eligibility",
     "change": "Review certainty, expenses, typical earnings, bonuses and market eligibility",
     "reference": "§19",
-    "status": "TODO",
+    "status": "REQUIRES LEGAL/COMPLIANCE REVIEW",
     "current": "Pending source comparison.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
     "files": [],
-    "verification": "Not yet run."
+    "verification": "See LEGAL-COMPLIANCE-REVIEW.md L01–L07 for current exact wording, location, audit concern and decision. Technical fixes do not approve the underlying legal content."
   },
   {
     "id": "X20",
@@ -869,11 +887,11 @@
     "finding": "Approve full referral/sample terms before promoting to members",
     "change": "Approve full referral/sample terms before promoting to members",
     "reference": "§19",
-    "status": "TODO",
+    "status": "REQUIRES LEGAL/COMPLIANCE REVIEW",
     "current": "Pending source comparison.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
     "files": [],
-    "verification": "Not yet run."
+    "verification": "See LEGAL-COMPLIANCE-REVIEW.md L01–L07 for current exact wording, location, audit concern and decision. Technical fixes do not approve the underlying legal content."
   },
   {
     "id": "X21",
@@ -882,11 +900,16 @@
     "finding": "Visible labels, privacy link, contact validation and separate accepted-enquiry state",
     "change": "Visible labels, privacy link, contact validation and separate accepted-enquiry state",
     "reference": "§8; page-by-page business",
-    "status": "TODO",
+    "status": "VERIFIED",
     "current": "Pending source comparison.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "js/partner-form.js",
+      "content/ro/pages.json",
+      "content/en/pages.json",
+      "content/ru/pages.json"
+    ],
+    "verification": "Batch 3: 16 regression tests and all build checks pass; 3-locale mock booking and partner-browser journeys verify recovery, input retention, success focus, duplicate requests, deduplicated events, blocked storage and no-JavaScript assisted booking. No production submissions."
   },
   {
     "id": "X22",

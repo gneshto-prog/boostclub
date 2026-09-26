@@ -42,3 +42,20 @@ VERIFY: local semantic/SEO regression tests, keyboard/contrast/browser checks at
 - Preserved the intentional EN x-default on the international business and Gabi funnels; all alternate links remain reciprocal. Other x-defaults remain RO.
 - No review-rich-result or FAQ-rich-result claim. Google’s former FAQ documentation URL currently redirects to Search updates; ordinary FAQs remain visible without duplicated JSON-LD answers.
 - Sources: https://schema.org/LocalBusiness; Metrorex map cited in the audit; Romanian Labour Code source linked in compliance notes. No production changes.
+
+## 2026-09-26 — Batch 3 plan: truthful forms and consent contract
+
+AUDIT FINDINGS: B07/B12/B15/B16/B21/B22, X04/X06/X21/X22.
+CURRENT BEHAVIOR: attribution automatically stores click IDs and appends tracking references to WhatsApp; duplicate wrappers can emit events without a consent gate; partner forms use placeholders and alert dialogs; invalid confirmation state redirects without explanation; Russian static partner WhatsApp links contain English messages.
+CHANGE: one allowlisted, non-PII analytics adapter disabled by default; explicit consent API; no automatic analytics provider; attribution disabled without analytics and marketing consent; no WhatsApp URL mutation; completion only after a real handler success, deduplicated by submission key; accessible partner labels/privacy link/error/success; explanatory confirmation fallback; localized RU links and realistic assisted-contact copy.
+EXPECTED RESULT: no optional tracking before consent, no duplicate completion, no false appointment from a contact request, and accessible recovery when session state is unavailable.
+VERIFY: isolated browser requests only, consent/revocation/dedup/storage-blocked/confirmation/partner states, then full build and regression suite. Actual analytics destination and durable messaging remain external actions.
+
+### Batch 3 verification
+
+- 16 tests passed (including default denial, explicit consent, revocation, event allowlist/non-PII payloads and unchanged WhatsApp URLs), strict types, syntax lint and full production build validators passed.
+- All three booking locales still pass the five-width mock journey. Partner form tests pass for failure, retained input, focused error/success and repeated submissions; concurrent calls share one request and replay does not double-count completion.
+- Empty confirmation state stays on-page with a truthful contact path. Blocked sessionStorage still shows a confirmed booking. No-JavaScript form cannot submit a false exact booking and has visible phone/WhatsApp recovery.
+- A real browser test caught the form's named `name` input shadowing `form.name`; changed event detection to getAttribute('name') and reran successfully.
+- Public production booking-slots.js and lead-pipeline.js exactly match the initial dd4a115 versions (SHA-256 recorded in tool evidence). This confirms the baseline frontend; production deployment has no commit_ref and must still reconcile the server bundle before publication.
+- Local partner screenshots saved in evidence/batch3. No live lead, external analytics provider or deployment was created.

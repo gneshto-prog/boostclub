@@ -262,21 +262,6 @@
     }, { rootMargin: "-20% 0px -20% 0px" }).observe(formZone);
   }
 
-  /* ---------- 14. Event tracking (GA4/dataLayer-ready) ---------- */
-  window.bcTrack = function (action, label, params) {
-    try {
-      var payload = Object.assign({ event_label: label || "" }, params || {});
-      if (typeof window.gtag === "function") window.gtag("event", action, payload);
-      else if (window.dataLayer) window.dataLayer.push(Object.assign({ event: action }, payload));
-    } catch (err) { /* no-op */ }
-  };
-  document.addEventListener("click", function (ev) {
-    var a = ev.target.closest ? ev.target.closest("a[href]") : null;
-    if (!a) return;
-    var href = a.getAttribute("href") || "";
-    if (href.indexOf("tel:") === 0) window.bcTrack("phone_click", location.pathname);
-  }, true);
-
   /* ---------- 15. Year ---------- */
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();

@@ -306,8 +306,8 @@ section{padding:var(--length-43b2253d) var(--space-5feceb66)}
 #perkpop figcaption{padding:var(--length-12a8299a) var(--length-145f2f53);font-family:'IBM Plex Mono',monospace;font-size:var(--length-6d3b65a0);letter-spacing:var(--length-9679667b);color:var(--slate)}
 #perkveil{position:fixed;inset:var(--space-5feceb66);z-index:110;pointer-events:none;background:linear-gradient(180deg,var(--color-80e2c208),var(--color-1798bcfd));opacity:0;will-change:opacity;transition:opacity var(--duration-889c2fb8) var(--ease)}
 #perkveil.on{opacity:1}
-.perk-fine{margin-top:var(--length-09f97395);font-family:'IBM Plex Mono',monospace;font-size:var(--length-2b4d5a0e);line-height:var(--line-height-ec6c168f);color:var(--color-52de1ef4)}
-.perk-fine a{color:var(--color-9ecb266f);text-decoration:underline;text-underline-offset:var(--length-74761400)}
+.perk-fine{margin-top:var(--length-09f97395);font-family:inherit;font-size:var(--length-67931646);line-height:var(--line-height-ec6c168f);color:var(--slate)}
+.perk-fine a{color:inherit;text-decoration:underline;text-underline-offset:var(--length-74761400)}
 .perk-fine a:hover{color:var(--slate)}
 .perks{z-index:12}
 
@@ -358,3 +358,7 @@ body.bc-emerge #main{animation:bcEmerge var(--duration-d8643a63) var(--easing-bc
 .leadform .lf-note{font-size:var(--length-8aeb429e);color:var(--slate);margin-top:var(--length-7769e817);text-align:center}
 .lf-hp{position:absolute;left:var(--length-58b24f71)}
 .lf-thanks{margin-top:var(--length-9bf0c8e6);font-weight:600;color:var(--navy)}
+/* Accessible partnership enquiry fields and recovery. */
+.lf-field { display: flex; flex-direction: column; gap: var(--s1); text-align: left; font-size: var(--length-67931646); }
+.lf-error { color: var(--color-07ee686b); border: var(--border-width) solid currentColor; padding: var(--s2); margin-bottom: var(--s2); }
+.lf-error a, .lf-note a { color: inherit; text-decoration: underline; }

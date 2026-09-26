@@ -9,6 +9,8 @@
   errorNode.hidden = true;
   form.prepend(errorNode);
   var pending = false;
+  var submitButton = form.querySelector('[type="submit"]');
+  if (submitButton) submitButton.disabled = false;
   form.addEventListener('submit', function (event) {
     event.preventDefault();
     if (pending || !window.BoostBookingSlots.validate(form)) return;

@@ -3,12 +3,12 @@
 ## Summary
 
 Total audit findings: 68 (consolidated; repeated page/copy recommendations are retained in AUDIT-COVERAGE.md)
-Fixed: 2
-Verified: 11
-Remaining: 47
-External: 2
+Fixed: 3
+Verified: 15
+Remaining: 27
+External: 9
 Owner decision: 8
-Legal review: 0
+Legal review: 9
 
 VERIFIED means verified in the local implementation unless production evidence is explicitly stated. Nothing has been deployed. Production booking restoration is not marked fixed.
 
@@ -115,23 +115,23 @@ VERIFIED means verified in the local implementation unless production evidence i
   Files changed: None yet.
   Verification: Not yet run.
 
-- [ ] **B12 — Absolute no-third-party promise** — TODO
+- [x] **B12 — Absolute no-third-party promise** — VERIFIED
 
   Audit reference: Main audit §27 row 12. Area: Forms.
   Current behavior: Audit finding pending source comparison.
   Change: Replace with accurate booking-use summary and privacy link; verify processing inventory.
   Expected result: Truthful data collection
-  Files changed: None yet.
-  Verification: Not yet run.
+  Files changed: js/booking-form.js, content/ro/pages.json, content/en/pages.json, content/ru/pages.json
+  Verification: Batch 3: 16 regression tests and all build checks pass; 3-locale mock booking and partner-browser journeys verify recovery, input retention, success focus, duplicate requests, deduplicated events, blocked storage and no-JavaScript assisted booking. No production submissions.
 
-- [ ] **B13 — Different basis/retention/provider facts** — TODO
+- [ ] **B13 — Different basis/retention/provider facts** — REQUIRES LEGAL/COMPLIANCE REVIEW
 
   Audit reference: Main audit §27 row 13. Area: Privacy locales.
   Current behavior: Audit finding pending source comparison.
   Change: Approve current factual master and equivalent translations.
   Expected result: Consistent rights information
   Files changed: None yet.
-  Verification: Not yet run.
+  Verification: See LEGAL-COMPLIANCE-REVIEW.md L01–L07 for current exact wording, location, audit concern and decision. Technical fixes do not approve the underlying legal content.
 
 - [x] **B14 — Incorrect Law 53/2003 reference** — VERIFIED
 
@@ -142,32 +142,32 @@ VERIFIED means verified in the local implementation unless production evidence i
   Files changed: content/ro/pages.json
   Verification: 12 regression tests; strict typecheck/syntax lint and all build validators passed. 39 public routes × 5 widths checked in browser, with menu Escape/focus and primary CTA contrast >=4.5:1. Local only; screenshot evidence in batch2. Hours/credentials remain explicitly withheld pending confirmation.
 
-- [ ] **B15 — Policy and deployment disagree** — TODO
+- [ ] **B15 — Policy and deployment disagree** — REQUIRES LEGAL/COMPLIANCE REVIEW
 
   Audit reference: Main audit §27 row 15. Area: Storage/cookies.
   Current behavior: Audit finding pending source comparison.
   Change: Audit browser storage/maps/ad IDs, implement required choices and matching policy.
   Expected result: Valid informed choices
   Files changed: None yet.
-  Verification: Not yet run.
+  Verification: See LEGAL-COMPLIANCE-REVIEW.md L01–L07 for current exact wording, location, audit concern and decision. Technical fixes do not approve the underlying legal content.
 
-- [ ] **B16 — Hooks without observed destination** — TODO
+- [ ] **B16 — Hooks without observed destination** — REQUIRES THIRD PARTY
 
   Audit reference: Main audit §27 row 16. Area: Analytics.
   Current behavior: Audit finding pending source comparison.
   Change: Configure approved destination and verify events/consent; no personal/health data in analytics.
   Expected result: Usable acquisition evidence
   Files changed: None yet.
-  Verification: Not yet run.
+  Verification: See EXTERNAL-ACTIONS.md E02–E06. Consent-gated analytics contract is tested locally; no provider, external account, message delivery, DNS or attendance workflow was changed.
 
-- [ ] **B17 — Attendance/client outcomes unmeasured** — TODO
+- [ ] **B17 — Attendance/client outcomes unmeasured** — REQUIRES THIRD PARTY
 
   Audit reference: Main audit §27 row 17. Area: CRM/operations.
   Current behavior: Audit finding pending source comparison.
   Change: Add due/attended/cancelled/client statuses and protected lead reconciliation.
   Expected result: Optimise real business outcome
   Files changed: None yet.
-  Verification: Not yet run.
+  Verification: See EXTERNAL-ACTIONS.md E02–E06. Consent-gated analytics contract is tested locally; no provider, external account, message delivery, DNS or attendance workflow was changed.
 
 - [ ] **B18 — Unsubstantiated provenance/context** — REQUIRES OWNER DECISION
 
@@ -187,32 +187,32 @@ VERIFIED means verified in the local implementation unless production evidence i
   Files changed: None yet.
   Verification: See OWNER-DECISIONS.md O03–O08; no missing business fact, permission, transcript or offer status invented.
 
-- [ ] **B20 — Earnings certainty and selective comparisons** — TODO
+- [ ] **B20 — Earnings certainty and selective comparisons** — REQUIRES LEGAL/COMPLIANCE REVIEW
 
   Audit reference: Main audit §27 row 20. Area: Business.
   Current behavior: Audit finding pending source comparison.
   Change: Remove absolute claims/caricature table; show work, cost categories and current-market typical outcomes.
   Expected result: Better informed prospects
   Files changed: None yet.
-  Verification: Not yet run.
+  Verification: See LEGAL-COMPLIANCE-REVIEW.md L01–L07 for current exact wording, location, audit concern and decision. Technical fixes do not approve the underlying legal content.
 
-- [ ] **B21 — Tiny English earnings disclosure** — TODO
+- [ ] **B21 — Tiny English earnings disclosure** — FIXED
 
   Audit reference: Main audit §27 row 21. Area: Business RO/RU.
   Current behavior: Audit finding pending source comparison.
   Change: Translate, enlarge/darken and place beside related claims; validate market document.
   Expected result: Readable disclosure
-  Files changed: None yet.
-  Verification: Not yet run.
+  Files changed: content/ro/pages.json, content/ru/pages.json, css/components/7ec7fdeb08.css, css/components/8247048a39.css
+  Verification: RO/RU existing disclaimer translated without changing its meaning; enlarged to 16px. Final computed contrast check still pending; commercial claims remain L04.
 
-- [ ] **B22 — English WhatsApp payloads** — TODO
+- [x] **B22 — English WhatsApp payloads** — VERIFIED
 
   Audit reference: Main audit §27 row 22. Area: RU business.
   Current behavior: Audit finding pending source comparison.
   Change: Localise every static and dynamically built message; compose-only test.
   Expected result: Consistent contact journey
-  Files changed: None yet.
-  Verification: Not yet run.
+  Files changed: content/ru/pages.json, content/site.mjs
+  Verification: Batch 3: 16 regression tests and all build checks pass; 3-locale mock booking and partner-browser journeys verify recovery, input retention, success focus, duplicate requests, deduplicated events, blocked storage and no-JavaScript assisted booking. No production submissions.
 
 - [ ] **B23 — Insufficient actual-club evidence** — REQUIRES OWNER DECISION
 
@@ -232,41 +232,41 @@ VERIFIED means verified in the local implementation unless production evidence i
   Files changed: None yet.
   Verification: Not yet run.
 
-- [ ] **X16 — Health-data legal basis, documented consent, retention, withdrawal and access** — TODO
+- [ ] **X16 — Health-data legal basis, documented consent, retention, withdrawal and access** — REQUIRES LEGAL/COMPLIANCE REVIEW
 
   Audit reference: §19. Area: Sensitive data.
   Current behavior: Pending source comparison.
   Change: Health-data legal basis, documented consent, retention, withdrawal and access
   Expected result: Resolve the referenced audit recommendation without unsupported facts.
   Files changed: None yet.
-  Verification: Not yet run.
+  Verification: See LEGAL-COMPLIANCE-REVIEW.md L01–L07 for current exact wording, location, audit concern and decision. Technical fixes do not approve the underlying legal content.
 
-- [ ] **X17 — Confirm trader identity, service/product terms and processor/transfer inventory** — TODO
+- [ ] **X17 — Confirm trader identity, service/product terms and processor/transfer inventory** — REQUIRES LEGAL/COMPLIANCE REVIEW
 
   Audit reference: §19. Area: Operator legal facts.
   Current behavior: Pending source comparison.
   Change: Confirm trader identity, service/product terms and processor/transfer inventory
   Expected result: Resolve the referenced audit recommendation without unsupported facts.
   Files changed: None yet.
-  Verification: Not yet run.
+  Verification: See LEGAL-COMPLIANCE-REVIEW.md L01–L07 for current exact wording, location, audit concern and decision. Technical fixes do not approve the underlying legal content.
 
-- [ ] **X18 — Review numerical weight/health claims and permission per image** — TODO
+- [ ] **X18 — Review numerical weight/health claims and permission per image** — REQUIRES LEGAL/COMPLIANCE REVIEW
 
   Audit reference: §19. Area: Results compliance.
   Current behavior: Pending source comparison.
   Change: Review numerical weight/health claims and permission per image
   Expected result: Resolve the referenced audit recommendation without unsupported facts.
   Files changed: None yet.
-  Verification: Not yet run.
+  Verification: See LEGAL-COMPLIANCE-REVIEW.md L01–L07 for current exact wording, location, audit concern and decision. Technical fixes do not approve the underlying legal content.
 
-- [ ] **X19 — Review certainty, expenses, typical earnings, bonuses and market eligibility** — TODO
+- [ ] **X19 — Review certainty, expenses, typical earnings, bonuses and market eligibility** — REQUIRES LEGAL/COMPLIANCE REVIEW
 
   Audit reference: §19. Area: Partner earnings compliance.
   Current behavior: Pending source comparison.
   Change: Review certainty, expenses, typical earnings, bonuses and market eligibility
   Expected result: Resolve the referenced audit recommendation without unsupported facts.
   Files changed: None yet.
-  Verification: Not yet run.
+  Verification: See LEGAL-COMPLIANCE-REVIEW.md L01–L07 for current exact wording, location, audit concern and decision. Technical fixes do not approve the underlying legal content.
 
 ## P2
 
@@ -351,14 +351,14 @@ VERIFIED means verified in the local implementation unless production evidence i
   Files changed: scripts/lib/structured-data.mjs
   Verification: 12 regression tests; strict typecheck/syntax lint and all build validators passed. 39 public routes × 5 widths checked in browser, with menu Escape/focus and primary CTA contrast >=4.5:1. Local only; screenshot evidence in batch2. Hours/credentials remain explicitly withheld pending confirmation.
 
-- [ ] **B33 — Duplicate 200 homepage on romnutriclub.ro** — TODO
+- [ ] **B33 — Duplicate 200 homepage on romnutriclub.ro** — REQUIRES THIRD PARTY
 
   Audit reference: Main audit §27 row 33. Area: Legacy domain.
   Current behavior: Audit finding pending source comparison.
   Change: If owned/retired,301 mapped paths to Boost; verify alternatives before switch.
   Expected result: Clear domain consolidation
   Files changed: None yet.
-  Verification: Not yet run.
+  Verification: See EXTERNAL-ACTIONS.md E02–E06. Consent-gated analytics contract is tested locally; no provider, external account, message delivery, DNS or attendance workflow was changed.
 
 - [x] **B34 — Service/brand/process overlap** — VERIFIED
 
@@ -441,23 +441,23 @@ VERIFIED means verified in the local implementation unless production evidence i
   Files changed: js/booking-slots.js, js/booking-form.js, js/lead-pipeline.js, netlify/functions/_shared/upstream.mts, content/ro/pages.json, content/en/pages.json, content/ru/pages.json
   Verification: Backend and five-width browser checks pass. Extended duplicate/date-race/timeout tests still to run.
 
-- [ ] **X06 — Invalid/expired session, ICS, local place names, modification request wording** — TODO
+- [x] **X06 — Invalid/expired session, ICS, local place names, modification request wording** — VERIFIED
 
   Audit reference: §23.25; page-by-page confirmation. Area: Confirmation.
   Current behavior: Pending source comparison.
   Change: Invalid/expired session, ICS, local place names, modification request wording
   Expected result: Resolve the referenced audit recommendation without unsupported facts.
-  Files changed: None yet.
-  Verification: Not yet run.
+  Files changed: js/booking-confirmation.js, content/ro/pages.json, content/en/pages.json, content/ru/pages.json
+  Verification: Batch 3: 16 regression tests and all build checks pass; 3-locale mock booking and partner-browser journeys verify recovery, input retention, success focus, duplicate requests, deduplicated events, blocked storage and no-JavaScript assisted booking. No production submissions.
 
-- [ ] **X07 — Deliver confirmation and reminders through a verified contact channel** — TODO
+- [ ] **X07 — Deliver confirmation and reminders through a verified contact channel** — REQUIRES THIRD PARTY
 
   Audit reference: page-by-page confirmation. Area: Durable confirmation.
   Current behavior: Pending source comparison.
   Change: Deliver confirmation and reminders through a verified contact channel
   Expected result: Resolve the referenced audit recommendation without unsupported facts.
   Files changed: None yet.
-  Verification: Not yet run.
+  Verification: See EXTERNAL-ACTIONS.md E02–E06. Consent-gated analytics contract is tested locally; no provider, external account, message delivery, DNS or attendance workflow was changed.
 
 - [ ] **X08 — Neutral provenance heading and translated-review labels; no fabricated captions** — TODO
 
@@ -468,23 +468,23 @@ VERIFIED means verified in the local implementation unless production evidence i
   Files changed: None yet.
   Verification: Not yet run.
 
-- [ ] **X09 — Verify listing, categories, holiday hours, photos, appointment link and honest review requests** — TODO
+- [ ] **X09 — Verify listing, categories, holiday hours, photos, appointment link and honest review requests** — REQUIRES THIRD PARTY
 
   Audit reference: §13. Area: GBP.
   Current behavior: Pending source comparison.
   Change: Verify listing, categories, holiday hours, photos, appointment link and honest review requests
   Expected result: Resolve the referenced audit recommendation without unsupported facts.
   Files changed: None yet.
-  Verification: Not yet run.
+  Verification: See EXTERNAL-ACTIONS.md E02–E06. Consent-gated analytics contract is tested locally; no provider, external account, message delivery, DNS or attendance workflow was changed.
 
-- [ ] **X10 — Search Console intent validation and booking/attendance funnel baseline** — TODO
+- [ ] **X10 — Search Console intent validation and booking/attendance funnel baseline** — REQUIRES THIRD PARTY
 
   Audit reference: §§8,12,18. Area: Measurement baseline.
   Current behavior: Pending source comparison.
   Change: Search Console intent validation and booking/attendance funnel baseline
   Expected result: Resolve the referenced audit recommendation without unsupported facts.
   Files changed: None yet.
-  Verification: Not yet run.
+  Verification: See EXTERNAL-ACTIONS.md E02–E06. Consent-gated analytics contract is tested locally; no provider, external account, message delivery, DNS or attendance workflow was changed.
 
 - [ ] **X11 — Load third-party map only on explicit visitor action with independent directions link** — TODO
 
@@ -522,32 +522,32 @@ VERIFIED means verified in the local implementation unless production evidence i
   Files changed: None yet.
   Verification: Not yet run.
 
-- [ ] **X15 — Confirm analyser identity, suitability/preparation and outputs with operator/manufacturer** — TODO
+- [ ] **X15 — Confirm analyser identity, suitability/preparation and outputs with operator/manufacturer** — REQUIRES LEGAL/COMPLIANCE REVIEW
 
   Audit reference: §§20,22.2,22.9; process pages. Area: Device guidance.
   Current behavior: Pending source comparison.
   Change: Confirm analyser identity, suitability/preparation and outputs with operator/manufacturer
   Expected result: Resolve the referenced audit recommendation without unsupported facts.
   Files changed: None yet.
-  Verification: Not yet run.
+  Verification: See LEGAL-COMPLIANCE-REVIEW.md L01–L07 for current exact wording, location, audit concern and decision. Technical fixes do not approve the underlying legal content.
 
-- [ ] **X20 — Approve full referral/sample terms before promoting to members** — TODO
+- [ ] **X20 — Approve full referral/sample terms before promoting to members** — REQUIRES LEGAL/COMPLIANCE REVIEW
 
   Audit reference: §19. Area: Referral conditions.
   Current behavior: Pending source comparison.
   Change: Approve full referral/sample terms before promoting to members
   Expected result: Resolve the referenced audit recommendation without unsupported facts.
   Files changed: None yet.
-  Verification: Not yet run.
+  Verification: See LEGAL-COMPLIANCE-REVIEW.md L01–L07 for current exact wording, location, audit concern and decision. Technical fixes do not approve the underlying legal content.
 
-- [ ] **X21 — Visible labels, privacy link, contact validation and separate accepted-enquiry state** — TODO
+- [x] **X21 — Visible labels, privacy link, contact validation and separate accepted-enquiry state** — VERIFIED
 
   Audit reference: §8; page-by-page business. Area: Partner form.
   Current behavior: Pending source comparison.
   Change: Visible labels, privacy link, contact validation and separate accepted-enquiry state
   Expected result: Resolve the referenced audit recommendation without unsupported facts.
-  Files changed: None yet.
-  Verification: Not yet run.
+  Files changed: js/partner-form.js, content/ro/pages.json, content/en/pages.json, content/ru/pages.json
+  Verification: Batch 3: 16 regression tests and all build checks pass; 3-locale mock booking and partner-browser journeys verify recovery, input retention, success focus, duplicate requests, deduplicated events, blocked storage and no-JavaScript assisted booking. No production submissions.
 
 - [ ] **X22 — Replace booked-call and no-form promises with truthful conversation wording** — TODO
 
@@ -596,14 +596,14 @@ VERIFIED means verified in the local implementation unless production evidence i
   Files changed: None yet.
   Verification: Not yet run.
 
-- [ ] **B41 — HTTPwww two-hop chain** — TODO
+- [ ] **B41 — HTTPwww two-hop chain** — REQUIRES THIRD PARTY
 
   Audit reference: Main audit §27 row 41. Area: Redirects.
   Current behavior: Audit finding pending source comparison.
   Change: Consolidate to one canonical hop when adjusting hosting rules.
   Expected result: Minor crawl/navigation efficiency
   Files changed: None yet.
-  Verification: Not yet run.
+  Verification: See EXTERNAL-ACTIONS.md E02–E06. Consent-gated analytics contract is tested locally; no provider, external account, message delivery, DNS or attendance workflow was changed.
 
 - [ ] **B42 — Contrast 4.41:1** — TODO
 
