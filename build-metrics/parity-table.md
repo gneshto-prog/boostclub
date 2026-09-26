@@ -1,46 +1,46 @@
 | Page | DOM result | Intentional difference or reason |
 |---|---|---|
-| `index.html` | Equivalent | Batch 4A: preserve current production content using existing external CSS |
-| `ambasador.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `business.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `confidentialitate.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `consultatie-gratuita.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `contact.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `cookies.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `cum-functioneaza.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `gabi.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `gabriel.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `multumim.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `recenzii.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `rezultate.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `termeni.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `en/index.html` | Equivalent | Batch 4A: preserve current production content using existing external CSS |
-| `en/ambasador.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `en/business.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `en/confidentialitate.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `en/consultatie-gratuita.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `en/contact.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `en/cookies.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `en/cum-functioneaza.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `en/gabi.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `en/gabriel.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `en/multumim.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `en/recenzii.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `en/rezultate.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `en/termeni.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `ru/index.html` | Equivalent | Batch 4A: preserve current production content using existing external CSS |
-| `ru/ambasador.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `ru/business.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `ru/confidentialitate.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `ru/consultatie-gratuita.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `ru/contact.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `ru/cookies.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `ru/cum-functioneaza.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `ru/gabi.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `ru/gabriel.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `ru/multumim.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `ru/recenzii.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `ru/rezultate.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
-| `ru/termeni.html` | Equivalent | Batch 4A: preserve current production review refresh and copy while retaining audit fixes |
+| `index.html` | Equivalent | Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy |
+| `ambasador.html` | Equivalent | Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy |
+| `business.html` | Equivalent | Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy |
+| `confidentialitate.html` | Equivalent | Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy |
+| `consultatie-gratuita.html` | Equivalent | Batch 4B: keep referral details after confirmed booking instead of the first-visit path |
+| `contact.html` | Equivalent | Batch 4B: keep referral details after confirmed booking instead of the first-visit path |
+| `cookies.html` | Equivalent | Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy |
+| `cum-functioneaza.html` | Equivalent | Batch 4B: practical FAQ parity without unsupported device precision or comfort claims |
+| `gabi.html` | Equivalent | Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy |
+| `gabriel.html` | Equivalent | Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy |
+| `multumim.html` | Equivalent | Batch 4B: keep referral details after confirmed booking instead of the first-visit path |
+| `recenzii.html` | Equivalent | Batch 4B: shared review count and correct original quote languages |
+| `rezultate.html` | Equivalent | Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy |
+| `termeni.html` | Equivalent | Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy |
+| `en/index.html` | Equivalent | Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy |
+| `en/ambasador.html` | Equivalent | Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy |
+| `en/business.html` | Equivalent | Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy |
+| `en/confidentialitate.html` | Equivalent | Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy |
+| `en/consultatie-gratuita.html` | Equivalent | Batch 4B: keep referral details after confirmed booking instead of the first-visit path |
+| `en/contact.html` | Equivalent | Batch 4B: keep referral details after confirmed booking instead of the first-visit path |
+| `en/cookies.html` | Equivalent | Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy |
+| `en/cum-functioneaza.html` | Equivalent | Batch 4B: practical FAQ parity without unsupported device precision or comfort claims |
+| `en/gabi.html` | Equivalent | Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy |
+| `en/gabriel.html` | Equivalent | Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy |
+| `en/multumim.html` | Equivalent | Batch 4B: keep referral details after confirmed booking instead of the first-visit path |
+| `en/recenzii.html` | Equivalent | Batch 4B: shared review count and correct original quote languages |
+| `en/rezultate.html` | Equivalent | Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy |
+| `en/termeni.html` | Equivalent | Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy |
+| `ru/index.html` | Equivalent | Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy |
+| `ru/ambasador.html` | Equivalent | Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy |
+| `ru/business.html` | Equivalent | Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy |
+| `ru/confidentialitate.html` | Equivalent | Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy |
+| `ru/consultatie-gratuita.html` | Equivalent | Batch 4B: keep referral details after confirmed booking instead of the first-visit path |
+| `ru/contact.html` | Equivalent | Batch 4B: keep referral details after confirmed booking instead of the first-visit path |
+| `ru/cookies.html` | Equivalent | Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy |
+| `ru/cum-functioneaza.html` | Equivalent | Batch 4B: practical FAQ parity without unsupported device precision or comfort claims |
+| `ru/gabi.html` | Equivalent | Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy |
+| `ru/gabriel.html` | Equivalent | Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy |
+| `ru/multumim.html` | Equivalent | Batch 4B: keep referral details after confirmed booking instead of the first-visit path |
+| `ru/recenzii.html` | Equivalent | Batch 4B: shared review count and correct original quote languages |
+| `ru/rezultate.html` | Equivalent | Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy |
+| `ru/termeni.html` | Equivalent | Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy |
 | `404.html` | Equivalent | Batch 3: consent-gated events, localized enquiries and confirmation recovery |
 | `program-trainee.html` | Equivalent | Batch 3: consent-gated events, localized enquiries and confirmation recovery |

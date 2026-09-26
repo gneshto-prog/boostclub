@@ -26,3 +26,11 @@ html[data-motion-scaffold="on"] .u-page-transition {
     transition: none !important;
   }
 }
+
+/* Poppins files contain Latin glyphs only. Use one consistent Cyrillic-capable
+   system face for Russian text and Latin place names, without another download. */
+html:lang(ru) body,
+html:lang(ru) h1,
+html:lang(ru) h2,
+html:lang(ru) h3,
+html:lang(ru) .btn { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }

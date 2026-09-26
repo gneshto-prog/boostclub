@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import { header } from '../scripts/lib/components.mjs';
 import { structuredHead } from '../scripts/lib/structured-data.mjs';
+import { reviewSnapshot } from '../content/consumer-copy.mjs';
 
 const pages = ['ro','en','ru'].flatMap(lang => JSON.parse(fs.readFileSync(`content/${lang}/pages.json`)));
 test('localized canonicals, reciprocal alternates and schema identities remain consistent', () => {
@@ -50,4 +51,22 @@ test('contact, terms and scroll regions implement factual and keyboard correctio
   }
   assert.doesNotMatch(pages.find(p=>p.lang==='ro'&&p.slug==='termeni').body, /53\/2003/);
   assert.ok(structuredHead(pages[0]).includes('https://boostclub.ro/#gabriel'));
+});
+test('homepage prioritizes assessment and preserves excerpts from the current original reviews', () => {
+  for(const lang of ['ro','en','ru']) {
+    const home=pages.find(p=>p.lang===lang&&p.slug==='index').body;
+    const sections=[...home.matchAll(/<section\b[\s\S]*?<\/section>/g)].map(m=>m[0]);
+    assert.equal(sections.length,11);
+    assert.ok(sections[1].includes(['Ce primești','What you get','Что вы получите'][['ro','en','ru'].indexOf(lang)]));
+    assert.match(sections[0],/class="hero-ctas"><a href="consultatie-gratuita" class="btn btn-primary/);
+    assert.match(sections[0],/fetchpriority="high"/);
+    assert.ok(home.includes('{{after-visit}}'));
+    assert.doesNotMatch(home,/id="program-partener"|Adu-ți prietenii|Bring your friends|Приводите друзей/);
+    const full=pages.find(p=>p.lang===lang&&p.slug==='recenzii').body;
+    const excerpts=[...home.matchAll(/<blockquote\b[\s\S]*?<p[^>]*>([\s\S]*?)<\/p>[\s\S]*?<\/blockquote>/g)];
+    assert.equal(excerpts.length,3);
+    for(const excerpt of excerpts)assert.ok(full.includes(excerpt[1]),lang);
+    assert.equal((full.match(/<blockquote\b/g)||[]).length,8);
+    assert.equal(reviewSnapshot.count,40);assert.equal(reviewSnapshot.date,'2026-09-01');
+  }
 });

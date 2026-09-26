@@ -6,6 +6,7 @@ import { documentTemplate, footer, header, renderRegisteredComponents } from "./
 import { buildHomepageConcepts } from "./lib/homepage-concepts.mjs";
 import { buildSoftCurrentSite } from "./lib/soft-current-site.mjs";
 import { structuredHead } from "./lib/structured-data.mjs";
+import { reviewSnapshot, reviewSummary, afterVisit, processFaq } from "../content/consumer-copy.mjs";
 
 const root = process.cwd();
 const outputRoot = path.join(root, "_site");
@@ -22,6 +23,12 @@ function renderPage(page) {
   let body = page.body
     .replace("{{shared-header}}", header({ lang: page.lang, slug: page.slug }))
     .replace("{{shared-footer}}", footer({ lang: page.lang }));
+  if (['ro','en','ru'].includes(page.lang)) body = body
+    .replaceAll('{{review-summary}}', reviewSummary(page.lang))
+    .replaceAll('{{review-count}}', String(reviewSnapshot.count))
+    .replaceAll('{{review-rating}}', reviewSnapshot.rating)
+    .replaceAll('{{after-visit}}', afterVisit(page.lang))
+    .replaceAll('{{process-faq}}', processFaq(page.lang));
   body = renderRegisteredComponents(body);
   // Shared consent/event contract runs before the page scripts in every locale.
   body = body.replace(/<script\b/, '<script src="/js/analytics.js"></script>\n<script');

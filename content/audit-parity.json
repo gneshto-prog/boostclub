@@ -1,171 +1,171 @@
 {
   "consultatie-gratuita.html": {
-    "hash": "070f8d9c7369b91e0f03dd584c2430ffcec98089fa403a870725c1eb8676fca3",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "hash": "340013ce6926ea33900ecd669f4e4342e48977dadd5df0b0fdddacd45d064ba0",
+    "reason": "Batch 4B: keep referral details after confirmed booking instead of the first-visit path"
   },
   "en/consultatie-gratuita.html": {
-    "hash": "2d9d7b2f991d6dc25000029f7accab131aee3b318698c6797b69fa5ed640a77e",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "hash": "7495a55f1f4fe07414774413e17459156ab0ea40d52855db63d1df2c75b84a0e",
+    "reason": "Batch 4B: keep referral details after confirmed booking instead of the first-visit path"
   },
   "ru/consultatie-gratuita.html": {
-    "hash": "3fd81499d5410e4bc3d9fd80e767a4b37f929e9159623ade298f985db4eaf75e",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "hash": "f728de7d87e391427463249181c6f36075e1cca8cf8fc74a8d37a1c4f701f761",
+    "reason": "Batch 4B: keep referral details after confirmed booking instead of the first-visit path"
   },
   "index.html": {
-    "hash": "8bc88e018e8c72fd25fd99443c659d5233de67428b99c4ae37e5a831ceb0aaed",
-    "reason": "Batch 4A: preserve current production content using existing external CSS"
+    "hash": "39f2da936ccfa56644f34e7dcbf7763cc70cafba520b7672bf18e1aec7f58bd4",
+    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
   },
   "ambasador.html": {
     "hash": "95d0833bbf7c6cde786b509f2b25d582ef38f2ec3667b847c539face119f19f9",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
   },
   "business.html": {
-    "hash": "4d0027b0889af7218a95c036abe46ed963a55eea4e7f848e9693186b18bfdde5",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "hash": "a75b4a9bcc5ef34476df17a689974f1adedef053f08a3d5f61b047aa62ab4254",
+    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
   },
   "confidentialitate.html": {
     "hash": "a256ff1500b521710902169ae9173c368c9a59fe528f6763c2e6094c9003baee",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
   },
   "contact.html": {
-    "hash": "f6a7835752fb82cfc6b8728b550896de9daeefa9c9b3f9ac5537f22a9da81b1c",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "hash": "878085d95c2b4b08d696f3fc40ce3e7140938febaae6cb577712c94bef0b6d0a",
+    "reason": "Batch 4B: keep referral details after confirmed booking instead of the first-visit path"
   },
   "cookies.html": {
     "hash": "0744d5b7552e018b71e325c2cc5b73a6684f1782336c10204fa965091c27e924",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
   },
   "cum-functioneaza.html": {
-    "hash": "4a545097fba3e8440195ec2fef945b966763e28122f9333e4b4968d438716cf9",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "hash": "bb282592332a2ba1108643fe86a8493ba3188c129f1797381f9e0a4b6ff27dcd",
+    "reason": "Batch 4B: practical FAQ parity without unsupported device precision or comfort claims"
   },
   "gabi.html": {
     "hash": "c43b39f72cea20c7644ba577b5e5079d3da06b4bb071330beb3316bcc53c7e9d",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
   },
   "gabriel.html": {
-    "hash": "7bdccdab04c8f5394a3b0a0875b9a8d1428bba57b25192b3e2e5e59a1c52b7a3",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "hash": "7744229adc49eddcbd7088139d37029b1facef864c2bf959488afaeed1d15481",
+    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
   },
   "multumim.html": {
-    "hash": "c1458ed63bf313ea0ef80aa7981576747371d90abf9a211446580896c42b2d61",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "hash": "285a5fb3dd60eb1c7093bc44d5199291e2396f5e9e11d12c127eaab17e9100f3",
+    "reason": "Batch 4B: keep referral details after confirmed booking instead of the first-visit path"
   },
   "recenzii.html": {
-    "hash": "119d8d53a6038187c6ab132482a892ee16210eaae4ca9a5c96b8efedcc5ad7b9",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "hash": "7d605e6c53f342b90bcfa8d1eb2da498cc40e45d899331ca52fa1351e79bc87f",
+    "reason": "Batch 4B: shared review count and correct original quote languages"
   },
   "rezultate.html": {
-    "hash": "fd9ca8b6fff2d30579acba91ad42fb52bd3c008d14fd15e4ddb38919ff73aaf2",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "hash": "44fccdd5e7a811063bb890abc212b22f1eed9dc736f5d02c6120663b4618e0bc",
+    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
   },
   "termeni.html": {
     "hash": "838fa3557986ee26fa76fe08499df43b1dae95579e0c3b0d309a8d2cd8988895",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
   },
   "en/index.html": {
-    "hash": "98b81ab9acba738c8dfdf627d2e184514e3f96f239567258260533aab89bb777",
-    "reason": "Batch 4A: preserve current production content using existing external CSS"
+    "hash": "e7e17c5a9e22a7ffe0aec58d41175a092cecea7025ef8d2335442e1e6bd5f617",
+    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
   },
   "en/ambasador.html": {
     "hash": "65786d1e31a0a7a23ed7effb9a30fc7f941226f51cfe16d4f5e260827eee6d98",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
   },
   "en/business.html": {
-    "hash": "5e42f94dbe35a5a9982c44e91fb6961be6c1dfdf3fc0105b3ea5dbd583c17a8e",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "hash": "c77883cd0a123d1f15ace965a2d5d3d946dfa901a671ad96c1f159410099d8a8",
+    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
   },
   "en/confidentialitate.html": {
     "hash": "692eb7a4058c82b28ff6f65a011dde98ebdfd423e1301769953587dae15e76b0",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
   },
   "en/contact.html": {
-    "hash": "e7f86dc7fdba2905c181d0825d7b748ecec733a7deafcf4b079ce253a91aed1c",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "hash": "b10ef8f34a6d353d97b9bad48773d125cc53d65b5c1fcc38e6a487f69804ce7b",
+    "reason": "Batch 4B: keep referral details after confirmed booking instead of the first-visit path"
   },
   "en/cookies.html": {
     "hash": "48cca9f53f316dcfc77bc880d522a4b546c88e07c409b07a1bf093b6b2fadeeb",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
   },
   "en/cum-functioneaza.html": {
-    "hash": "8e0f6fd61e056727ddc20ebce520ba3551d70d2ab6a9d12a252300e0eb8e1c55",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "hash": "ef35f656c553adcc6c07b508bb4a03219e38d9855bbeed035f678036ff171247",
+    "reason": "Batch 4B: practical FAQ parity without unsupported device precision or comfort claims"
   },
   "en/gabi.html": {
     "hash": "6fa3542be8ded491244b1c6ceed38a73851c58b6e1c60ef9099712e89bfe098b",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
   },
   "en/gabriel.html": {
-    "hash": "deed0ebb9d4d58c12915a5264d7fe1e15ac12c0856b01906e999fa831e3ab703",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "hash": "bfcb2f335e12433772da953b80bd228e9ff3614839de31002ad550190d9b8224",
+    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
   },
   "en/multumim.html": {
-    "hash": "3d685f583c00c4b5b1c8fd3dbfbaa77cf7e9beaac6aca8abd4f4f9b5e3274072",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "hash": "078dddb3afc01b07c9b8b66cb34bfd572e6d62953021a283086074b56f14c6da",
+    "reason": "Batch 4B: keep referral details after confirmed booking instead of the first-visit path"
   },
   "en/recenzii.html": {
-    "hash": "820c6747db97296f01306a72cd2989619d05499a250627cf2cdb76a1359f1fe6",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "hash": "9163f5c535f8f18b83f3ebe1899cb857f40351238aad3dbacc471234d59b5039",
+    "reason": "Batch 4B: shared review count and correct original quote languages"
   },
   "en/rezultate.html": {
-    "hash": "d347a65067c2ec98c2decdc4b86e293c6ee64fb869ec55727c5a1a9f93a10bd1",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "hash": "d886699ceff4aa6e91cd7afe57efbdc5758a73d310e905d53572ef2a338ef064",
+    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
   },
   "en/termeni.html": {
     "hash": "f33c21b05a537b880427bc090b3539dc12ef272f2974485b07d495a6081ee5aa",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
   },
   "ru/index.html": {
-    "hash": "2b915cce022cd8eee9411680cc3f72c48564ed7d3999e48bbe1031f09376066a",
-    "reason": "Batch 4A: preserve current production content using existing external CSS"
+    "hash": "926442c6478e83bd72b26e8a4a5cb128da6bc25d55ceed2580484492ae8b75b6",
+    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
   },
   "ru/ambasador.html": {
     "hash": "143f8c22ea1addb51afa9a8410c449f2aeb52c376abadd46e86d0617e7330862",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
   },
   "ru/business.html": {
-    "hash": "e1c766716cdb1ed46d4a1ea9e6dc33ba2b1245f75dbe03dfa443213bfcbddbca",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "hash": "9d16f9dfcc739d140df4bb9343297af48062ca079ead1a7ede49ecdd564c3bf4",
+    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
   },
   "ru/confidentialitate.html": {
     "hash": "289c6c899e5c5b57fc26b4b963e31d489f0c7e669a351d90de31db85ffb4ef95",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
   },
   "ru/contact.html": {
-    "hash": "d165a5acf30d9af6f1e80ee19f84d1bfad0b050ca912edfdab798d55a16250da",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "hash": "c28f6ae356599e450fa742f18f6b94f09f6e1afbbfc32c63a79bb1f403d45033",
+    "reason": "Batch 4B: keep referral details after confirmed booking instead of the first-visit path"
   },
   "ru/cookies.html": {
     "hash": "45d089a78f5897121e781dd002c13b49f9eb87543ae506299f9d9161262c99e6",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
   },
   "ru/cum-functioneaza.html": {
-    "hash": "1e62e1fabec70a1674a2faad64e223e000d8cf5cc36b5e1528152fdc43ffa9bd",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "hash": "568bc213cafc56ce195d271b84fb60d4c6ac7b18cf82816c4f70627c33c35de0",
+    "reason": "Batch 4B: practical FAQ parity without unsupported device precision or comfort claims"
   },
   "ru/gabi.html": {
     "hash": "97b74a7fb630acaea52889729ecd715725cbe6391a6e7fd7075a332dc03f4a72",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
   },
   "ru/gabriel.html": {
-    "hash": "aab2601621f25c834ff6a645be47cd417bdce41cd9c24ff196f4e666dbcff4ad",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "hash": "b708577e38de9f80e6d1ace9a48b90239b62bbc5d73c1b702c2c93f95075fe21",
+    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
   },
   "ru/multumim.html": {
-    "hash": "c2e142b8e4a54366f6a06c3ecdb7155607d7be19f5e6e97d14161fcc0b880a3d",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "hash": "0671e4906ebab19fd50d10f5bf8582edf1ae5663d8cdea864c57dbd94eb8d1f3",
+    "reason": "Batch 4B: keep referral details after confirmed booking instead of the first-visit path"
   },
   "ru/recenzii.html": {
-    "hash": "849075e1bf5e5a964f5613b7dba14f1a14b45729b9d860f8341c9a18562c19d0",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "hash": "b6a67c220fbd42c098606ffade0231ec8300a8d313a75beb0b6f8e3e30276659",
+    "reason": "Batch 4B: shared review count and correct original quote languages"
   },
   "ru/rezultate.html": {
-    "hash": "4f795a69d8fa9e289a4f653bd811e58e2b0e67e0e4d84947aeba3c928ebefc47",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "hash": "8ada09ef4d42abd2f8bd42e72185912abf9edf2f158333bd673d8771673ae803",
+    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
   },
   "ru/termeni.html": {
     "hash": "fc0414d58e74e83e1e67b9a0e2213557e085f575e62355c2a1fff0eb40201e0c",
-    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
+    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
   },
   "404.html": {
     "hash": "6d8c0ff5b5f3b3bedc19cabb1d07c951e3580423ab44a39abbe13a08ad41d2a4",

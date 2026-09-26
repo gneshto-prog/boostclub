@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import { chromium } from '/Users/Gabi/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs';
-const out='/Users/Gabi/boostclub-audit-implementation-evidence-2026-09-26/batch2';
+const out=process.env.BOOST_EVIDENCE_DIR || '/Users/Gabi/boostclub-audit-implementation-evidence-2026-09-26/batch2';
 fs.mkdirSync(out,{recursive:true});
 const browser=await chromium.launch({headless:true,executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'});
 const results=[];
@@ -15,7 +15,7 @@ try {
   const page=await context.newPage(); const errors=[];
   page.on('pageerror',error=>errors.push(error.message));
   await page.route('**/api/**',route=>route.fulfill({status:503,json:{ok:false,code:'TEST_UNAVAILABLE'}}));
-  const pages=JSON.parse(fs.readFileSync(`content/${lang}/pages.json`)).filter(p=>p.slug!=='multumim');
+  const pages=JSON.parse(fs.readFileSync(`content/${lang}/pages.json`)).filter(p=>p.slug!=='multumim' && (!process.env.BOOST_PAGE_FILTER || process.env.BOOST_PAGE_FILTER.split(',').includes(p.slug)));
   for(const item of pages) {
     const prefix=lang==='ro'?'':`/${lang}`;
     await page.goto(`http://127.0.0.1:4173${prefix}/${item.slug==='index'?'':item.slug}`,{waitUntil:'domcontentloaded'});
@@ -32,13 +32,15 @@ try {
         assert.equal(await page.locator('.menu-toggle').getAttribute('aria-expanded'),'false');
         assert.equal(await page.locator('.menu-toggle').evaluate(e=>e===document.activeElement),true);
       }
-      if(['index','contact','consultatie-gratuita','rezultate','recenzii','business','cookies'].includes(item.slug)) {
-        await page.evaluate(()=>document.querySelectorAll('.rv,[data-reveal]').forEach(e=>e.classList.add('in')));
+      if(['index','contact','consultatie-gratuita','rezultate','recenzii','business','cookies','cum-functioneaza'].includes(item.slug)) {
+        await page.evaluate(async()=>{document.querySelectorAll('.rv,[data-reveal]').forEach(e=>e.classList.add('in'));await Promise.all([...document.images].map(async img=>{img.loading='eager';try{await img.decode();}catch{}}));});
+        await page.evaluate(()=>scrollTo(0,0));
         await page.screenshot({path:`${out}/${lang}-${item.slug}-${width}.png`,fullPage:true});
+        if(item.slug==='index') await page.screenshot({path:`${out}/${lang}-home-top-${width}.png`});
       }
       results.push({lang,slug:item.slug,width,overflow});
     }
-    const buttons=page.locator('.section-dark a.btn-primary');
+    const buttons=page.locator('.site-header a.btn-primary, .section-dark a.btn-primary');
     for(let n=0;n<await buttons.count();n++) {
       const button=buttons.nth(n);
       for(const state of ['normal','hover','focus']) {

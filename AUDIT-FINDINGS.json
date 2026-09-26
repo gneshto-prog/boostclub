@@ -105,11 +105,17 @@
     "finding": "Instant and callback promises contradict actual model",
     "change": "Use exact confirmed-slot wording and realistic assisted-response expectations.",
     "reference": "Main audit §27 row 7",
-    "status": "TODO",
+    "status": "VERIFIED",
     "current": "Audit finding pending source comparison.",
     "expected": "Clear expectations",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "content/consumer-copy.mjs",
+      "content/ro/pages.json",
+      "content/en/pages.json",
+      "content/ru/pages.json",
+      "scripts/build-site.mjs"
+    ],
+    "verification": "Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions."
   },
   {
     "id": "B08",
@@ -146,11 +152,17 @@
     "finding": "Offer details too late",
     "change": "Move assessment deliverables immediately below shorter offer-led hero.",
     "reference": "Main audit §27 row 10",
-    "status": "TODO",
+    "status": "VERIFIED",
     "current": "Audit finding pending source comparison.",
     "expected": "Faster comprehension",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "content/consumer-copy.mjs",
+      "content/ro/pages.json",
+      "content/en/pages.json",
+      "content/ru/pages.json",
+      "scripts/build-site.mjs"
+    ],
+    "verification": "Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions."
   },
   {
     "id": "B11",
@@ -159,11 +171,17 @@
     "finding": "Secondary business overshadows primary goal",
     "change": "Footer-labelled business link; remove full partner billboard; preserve dedicated landing.",
     "reference": "Main audit §27 row 11",
-    "status": "IN PROGRESS",
+    "status": "VERIFIED",
     "current": "Audit finding pending source comparison.",
     "expected": "Clearer consumer intent",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "content/consumer-copy.mjs",
+      "content/ro/pages.json",
+      "content/en/pages.json",
+      "content/ru/pages.json",
+      "scripts/build-site.mjs"
+    ],
+    "verification": "Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions."
   },
   {
     "id": "B12",
@@ -369,11 +387,17 @@
     "finding": "Referral pitch before membership understanding",
     "change": "Move full incentive to member programme with complete conditions.",
     "reference": "Main audit §27 row 26",
-    "status": "TODO",
+    "status": "VERIFIED",
     "current": "Audit finding pending source comparison.",
     "expected": "Less acquisition distraction",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "content/consumer-copy.mjs",
+      "content/ro/pages.json",
+      "content/en/pages.json",
+      "content/ru/pages.json",
+      "scripts/build-site.mjs"
+    ],
+    "verification": "Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions."
   },
   {
     "id": "B27",
@@ -430,11 +454,17 @@
     "finding": "Important process/FAQ parity gaps",
     "change": "Share key offer/confirmation/continuation facts, then native-edit EN/RU.",
     "reference": "Main audit §27 row 30",
-    "status": "TODO",
+    "status": "VERIFIED",
     "current": "Audit finding pending source comparison.",
     "expected": "Equal service understanding",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "content/consumer-copy.mjs",
+      "content/ro/pages.json",
+      "content/en/pages.json",
+      "content/ru/pages.json",
+      "scripts/build-site.mjs"
+    ],
+    "verification": "Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions."
   },
   {
     "id": "B31",
@@ -443,11 +473,17 @@
     "finding": "Hardcoded counts repeated",
     "change": "Shared rating/count/source/verifiedAt record; monthly review or authorised API sync.",
     "reference": "Main audit §27 row 31",
-    "status": "TODO",
+    "status": "VERIFIED",
     "current": "Audit finding pending source comparison.",
     "expected": "No stale contradictory proof",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "content/consumer-copy.mjs",
+      "content/ro/pages.json",
+      "content/en/pages.json",
+      "content/ru/pages.json",
+      "scripts/build-site.mjs"
+    ],
+    "verification": "Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions."
   },
   {
     "id": "B32",
@@ -527,11 +563,17 @@
     "finding": "Manual template/fact duplication",
     "change": "Shared static templates and locale data for nav, hours, proof and legal facts.",
     "reference": "Main audit §27 row 37",
-    "status": "IN PROGRESS",
+    "status": "VERIFIED",
     "current": "Audit finding pending source comparison.",
     "expected": "Lower future drift",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "content/consumer-copy.mjs",
+      "content/ro/pages.json",
+      "content/en/pages.json",
+      "content/ru/pages.json",
+      "scripts/build-site.mjs"
+    ],
+    "verification": "Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions."
   },
   {
     "id": "B38",
@@ -553,11 +595,17 @@
     "finding": "Multiple subsets/weights, Cyrillic fallback",
     "change": "Confirm used weights and intentional Cyrillic font metrics before changing files.",
     "reference": "Main audit §27 row 39",
-    "status": "TODO",
+    "status": "VERIFIED",
     "current": "Audit finding pending source comparison.",
     "expected": "Consistent multilingual typography",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "content/consumer-copy.mjs",
+      "content/ro/pages.json",
+      "content/en/pages.json",
+      "content/ru/pages.json",
+      "scripts/build-site.mjs"
+    ],
+    "verification": "Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions."
   },
   {
     "id": "B40",
@@ -620,11 +668,17 @@
     "finding": "Publish optional paid continuation and independent Herbalife relationship without inventing prices",
     "change": "Publish optional paid continuation and independent Herbalife relationship without inventing prices",
     "reference": "§§5,8,22.4,23.14",
-    "status": "TODO",
+    "status": "VERIFIED",
     "current": "Pending source comparison.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "content/consumer-copy.mjs",
+      "content/ro/pages.json",
+      "content/en/pages.json",
+      "content/ru/pages.json",
+      "scripts/build-site.mjs"
+    ],
+    "verification": "Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions."
   },
   {
     "id": "X02",
@@ -633,11 +687,17 @@
     "finding": "Replace exact-measurement language with estimates without adding medical advice",
     "change": "Replace exact-measurement language with estimates without adding medical advice",
     "reference": "§§9,23.4",
-    "status": "TODO",
+    "status": "VERIFIED",
     "current": "Pending source comparison.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "content/consumer-copy.mjs",
+      "content/ro/pages.json",
+      "content/en/pages.json",
+      "content/ru/pages.json",
+      "scripts/build-site.mjs"
+    ],
+    "verification": "Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions."
   },
   {
     "id": "X03",
@@ -646,11 +706,17 @@
     "finding": "Replace judgmental systems paragraph with supportive concrete wording",
     "change": "Replace judgmental systems paragraph with supportive concrete wording",
     "reference": "§§9,23.16",
-    "status": "TODO",
+    "status": "VERIFIED",
     "current": "Pending source comparison.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "content/consumer-copy.mjs",
+      "content/ro/pages.json",
+      "content/en/pages.json",
+      "content/ru/pages.json",
+      "scripts/build-site.mjs"
+    ],
+    "verification": "Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions."
   },
   {
     "id": "X04",
@@ -659,19 +725,17 @@
     "finding": "Date/time first, optional goal, persistent input, accessible submit error, no false success",
     "change": "Date/time first, optional goal, persistent input, accessible submit error, no false success",
     "reference": "§§7,8,16; page-by-page booking",
-    "status": "FIXED",
+    "status": "VERIFIED",
     "current": "Date after contact, required goal, alert errors, no provider deadlines or stale-response guard.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
     "files": [
-      "js/booking-slots.js",
-      "js/booking-form.js",
-      "js/lead-pipeline.js",
-      "netlify/functions/_shared/upstream.mts",
+      "content/consumer-copy.mjs",
       "content/ro/pages.json",
       "content/en/pages.json",
-      "content/ru/pages.json"
+      "content/ru/pages.json",
+      "scripts/build-site.mjs"
     ],
-    "verification": "Backend and five-width browser checks pass. Extended duplicate/date-race/timeout tests still to run."
+    "verification": "Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions."
   },
   {
     "id": "X05",
@@ -732,11 +796,15 @@
     "finding": "Neutral provenance heading and translated-review labels; no fabricated captions",
     "change": "Neutral provenance heading and translated-review labels; no fabricated captions",
     "reference": "§§17,23.17; page-by-page results",
-    "status": "TODO",
+    "status": "REQUIRES OWNER DECISION",
     "current": "Pending source comparison.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "content/ro/pages.json",
+      "content/en/pages.json",
+      "content/ru/pages.json"
+    ],
+    "verification": "Neutral progress headings and localized metadata implemented. Approved case captions, durations, image permissions and relationship to Boost Club remain O05/L05; not fabricated."
   },
   {
     "id": "X09",
@@ -923,11 +991,17 @@
     "finding": "Replace booked-call and no-form promises with truthful conversation wording",
     "change": "Replace booked-call and no-form promises with truthful conversation wording",
     "reference": "§23.21–22",
-    "status": "TODO",
+    "status": "VERIFIED",
     "current": "Pending source comparison.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "content/consumer-copy.mjs",
+      "content/ro/pages.json",
+      "content/en/pages.json",
+      "content/ru/pages.json",
+      "scripts/build-site.mjs"
+    ],
+    "verification": "Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions."
   },
   {
     "id": "X23",
@@ -949,11 +1023,17 @@
     "finding": "Keep original quotes and dates; individual links/translated labels where supported",
     "change": "Keep original quotes and dates; individual links/translated labels where supported",
     "reference": "§11; page-by-page reviews",
-    "status": "TODO",
+    "status": "VERIFIED",
     "current": "Pending source comparison.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "content/consumer-copy.mjs",
+      "content/ro/pages.json",
+      "content/en/pages.json",
+      "content/ru/pages.json",
+      "scripts/build-site.mjs"
+    ],
+    "verification": "Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions."
   },
   {
     "id": "X25",

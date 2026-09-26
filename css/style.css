@@ -1224,3 +1224,8 @@ a:focus-visible, button:focus-visible, .btn:focus-visible { outline: var(--lengt
 .booking-recovery a, .booking-recovery button { display: inline-flex; align-items: center; min-height: var(--tap-target); padding: var(--space-3); }
 .booking-submit-error { color: var(--text); border: var(--border-width) solid currentColor; padding: var(--space-4); margin-bottom: var(--space-4); }
 .booking-submit-error:focus { outline: var(--border-width) solid var(--green); outline-offset: var(--space-1); }
+
+/* Shared evidence remains legible against the existing dark hero. */
+.review-summary { margin-top: var(--s3); }
+.section-dark .review-summary .small { color: var(--color-fca22cd7); }
+.site-header .nav a.btn-primary { color: var(--green-dark); }

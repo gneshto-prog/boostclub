@@ -73,3 +73,20 @@ VERIFY: original live review text equality, body integrity, all build checks and
 - All eight live review blocks match exactly in RO, EN and RU after the merge; original languages/authors and 1 September 2026 date retained.
 - Production inline styles reused existing external tokenized components; four newly encountered utility declarations added without introducing inline styles.
 - 16 tests, syntax lint, strict typecheck, full build and both complete three-locale mock browser journeys passed after reconciliation.
+
+## 2026-09-26 — Batch 4B plan: homepage booking hierarchy and truthful copy
+
+AUDIT FINDINGS: B07/B10/B11/B26/B30/B31/B37, X01/X02/X03/X08/X22/X24.
+CURRENT BEHAVIOR: homepage deliverables are several screens down, recruitment/referral promotions compete with the first visit, four long review quotes and repeated credential counters obscure the offer, copy overstates bioimpedance precision and contact speed.
+CHANGE: retain existing green/cream sections and genuine imagery; lead with the audited free-assessment headline, time/location/no-purchase commitment and booking action; move deliverables immediately after hero, explain optional continuation and Herbalife relationship, retain three exact short review excerpts with full originals on /recenzii, concise founder introduction, earlier arrival information and consistent final action. Remove the recruitment billboard and referral block from the first-visit path; dedicated business/legacy offers and referral details on contact remain. Share dated review/after-visit copy across RO/EN/RU. Correct supportive founder wording, neutral progress headings and partner enquiry labels.
+EXPECTED RESULT: a shorter, understandable consumer path using the existing design system; no invented business facts, outcomes, new credentials, prices or photography. Broad decorative redesign remains gated on production booking recovery.
+VERIFY: semantic content order, current original-review preservation, all requested viewports, hero/LCP image priority, forms and existing build checks. Detailed result captions/prices/credentials remain owner/legal items.
+
+### Batch 4B verification
+
+- 17 automated tests, full build, strict types and syntax lint passed. New hierarchy regression checks assert assessment details follow hero, primary action is booking, hero remains high-priority, three excerpts occur verbatim in the eight full originals, and partner/referral blocks no longer compete on the homepage.
+- 39 public routes × five requested widths passed overflow/menu/CTA checks. Shared process FAQs and reviews rerun after final localization updates. Screenshots in evidence/batch4 use fully decoded local images for visual inspection; these screenshot loads are not performance measurements.
+- Visual review caught header CTA white-on-gold text and dark review-date text; both corrected. Russian uses a consistent Cyrillic-capable system face for Latin place names and Cyrillic text; no extra font network dependency.
+- Existing referral terms were moved from consumer pages into a collapsed section after successful booking. They remain preserved and need L06 review; no rewards or eligibility invented. The earlier plan's contact-placement option was superseded by this final placement.
+- Practical FAQ content now exists in all languages. Removed unsubstantiated “few percent” precision/no-electrode claims; operator/device-specific guidance remains L02.
+- Detailed photo/result provenance and current prices/qualifications remain owner decisions, so the homepage does not fabricate new evidence or case studies.

@@ -3,11 +3,11 @@
 ## Summary
 
 Total audit findings: 68 (consolidated; repeated page/copy recommendations are retained in AUDIT-COVERAGE.md)
-Fixed: 3
-Verified: 16
-Remaining: 26
+Fixed: 2
+Verified: 30
+Remaining: 11
 External: 9
-Owner decision: 8
+Owner decision: 9
 Legal review: 9
 
 VERIFIED means verified in the local implementation unless production evidence is explicitly stated. Nothing has been deployed. Production booking restoration is not marked fixed.
@@ -70,14 +70,14 @@ VERIFIED means verified in the local implementation unless production evidence i
   Files changed: content/ro/pages.json, content/en/pages.json, content/ru/pages.json
   Verification: 12 regression tests; strict typecheck/syntax lint and all build validators passed. 39 public routes × 5 widths checked in browser, with menu Escape/focus and primary CTA contrast >=4.5:1. Local only; screenshot evidence in batch2. Hours/credentials remain explicitly withheld pending confirmation.
 
-- [ ] **B07 — Instant and callback promises contradict actual model** — TODO
+- [x] **B07 — Instant and callback promises contradict actual model** — VERIFIED
 
   Audit reference: Main audit §27 row 7. Area: Booking/home.
   Current behavior: Audit finding pending source comparison.
   Change: Use exact confirmed-slot wording and realistic assisted-response expectations.
   Expected result: Clear expectations
-  Files changed: None yet.
-  Verification: Not yet run.
+  Files changed: content/consumer-copy.mjs, content/ro/pages.json, content/en/pages.json, content/ru/pages.json, scripts/build-site.mjs
+  Verification: Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions.
 
 - [ ] **B08 — Variable hours and mismatched coordinates** — REQUIRES OWNER DECISION
 
@@ -97,23 +97,23 @@ VERIFIED means verified in the local implementation unless production evidence i
   Files changed: None yet.
   Verification: See OWNER-DECISIONS.md O03–O08; no missing business fact, permission, transcript or offer status invented.
 
-- [ ] **B10 — Offer details too late** — TODO
+- [x] **B10 — Offer details too late** — VERIFIED
 
   Audit reference: Main audit §27 row 10. Area: Homepage.
   Current behavior: Audit finding pending source comparison.
   Change: Move assessment deliverables immediately below shorter offer-led hero.
   Expected result: Faster comprehension
-  Files changed: None yet.
-  Verification: Not yet run.
+  Files changed: content/consumer-copy.mjs, content/ro/pages.json, content/en/pages.json, content/ru/pages.json, scripts/build-site.mjs
+  Verification: Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions.
 
-- [ ] **B11 — Secondary business overshadows primary goal** — IN PROGRESS
+- [x] **B11 — Secondary business overshadows primary goal** — VERIFIED
 
   Audit reference: Main audit §27 row 11. Area: Consumer header/home.
   Current behavior: Audit finding pending source comparison.
   Change: Footer-labelled business link; remove full partner billboard; preserve dedicated landing.
   Expected result: Clearer consumer intent
-  Files changed: None yet.
-  Verification: Not yet run.
+  Files changed: content/consumer-copy.mjs, content/ro/pages.json, content/en/pages.json, content/ru/pages.json, scripts/build-site.mjs
+  Verification: Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions.
 
 - [x] **B12 — Absolute no-third-party promise** — VERIFIED
 
@@ -223,14 +223,14 @@ VERIFIED means verified in the local implementation unless production evidence i
   Files changed: None yet.
   Verification: See OWNER-DECISIONS.md O03–O08; no missing business fact, permission, transcript or offer status invented.
 
-- [ ] **X01 — Publish optional paid continuation and independent Herbalife relationship without inventing prices** — TODO
+- [x] **X01 — Publish optional paid continuation and independent Herbalife relationship without inventing prices** — VERIFIED
 
   Audit reference: §§5,8,22.4,23.14. Area: Offer disclosure.
   Current behavior: Pending source comparison.
   Change: Publish optional paid continuation and independent Herbalife relationship without inventing prices
   Expected result: Resolve the referenced audit recommendation without unsupported facts.
-  Files changed: None yet.
-  Verification: Not yet run.
+  Files changed: content/consumer-copy.mjs, content/ro/pages.json, content/en/pages.json, content/ru/pages.json, scripts/build-site.mjs
+  Verification: Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions.
 
 - [ ] **X16 — Health-data legal basis, documented consent, retention, withdrawal and access** — REQUIRES LEGAL/COMPLIANCE REVIEW
 
@@ -288,14 +288,14 @@ VERIFIED means verified in the local implementation unless production evidence i
   Files changed: None yet.
   Verification: See OWNER-DECISIONS.md O03–O08; no missing business fact, permission, transcript or offer status invented.
 
-- [ ] **B26 — Referral pitch before membership understanding** — TODO
+- [x] **B26 — Referral pitch before membership understanding** — VERIFIED
 
   Audit reference: Main audit §27 row 26. Area: Home/booking/contact.
   Current behavior: Audit finding pending source comparison.
   Change: Move full incentive to member programme with complete conditions.
   Expected result: Less acquisition distraction
-  Files changed: None yet.
-  Verification: Not yet run.
+  Files changed: content/consumer-copy.mjs, content/ro/pages.json, content/en/pages.json, content/ru/pages.json, scripts/build-site.mjs
+  Verification: Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions.
 
 - [x] **B27 — Results omission and state/Escape inconsistency** — VERIFIED
 
@@ -324,23 +324,23 @@ VERIFIED means verified in the local implementation unless production evidence i
   Files changed: None yet.
   Verification: See OWNER-DECISIONS.md O03–O08; no missing business fact, permission, transcript or offer status invented.
 
-- [ ] **B30 — Important process/FAQ parity gaps** — TODO
+- [x] **B30 — Important process/FAQ parity gaps** — VERIFIED
 
   Audit reference: Main audit §27 row 30. Area: Locale content.
   Current behavior: Audit finding pending source comparison.
   Change: Share key offer/confirmation/continuation facts, then native-edit EN/RU.
   Expected result: Equal service understanding
-  Files changed: None yet.
-  Verification: Not yet run.
+  Files changed: content/consumer-copy.mjs, content/ro/pages.json, content/en/pages.json, content/ru/pages.json, scripts/build-site.mjs
+  Verification: Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions.
 
-- [ ] **B31 — Hardcoded counts repeated** — TODO
+- [x] **B31 — Hardcoded counts repeated** — VERIFIED
 
   Audit reference: Main audit §27 row 31. Area: Reviews.
   Current behavior: Audit finding pending source comparison.
   Change: Shared rating/count/source/verifiedAt record; monthly review or authorised API sync.
   Expected result: No stale contradictory proof
-  Files changed: None yet.
-  Verification: Not yet run.
+  Files changed: content/consumer-copy.mjs, content/ro/pages.json, content/en/pages.json, content/ru/pages.json, scripts/build-site.mjs
+  Verification: Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions.
 
 - [x] **B32 — Unsupported WellnessCenter type** — VERIFIED
 
@@ -387,14 +387,14 @@ VERIFIED means verified in the local implementation unless production evidence i
   Files changed: None yet.
   Verification: Not yet run.
 
-- [ ] **B37 — Manual template/fact duplication** — IN PROGRESS
+- [x] **B37 — Manual template/fact duplication** — VERIFIED
 
   Audit reference: Main audit §27 row 37. Area: Shared components.
   Current behavior: Audit finding pending source comparison.
   Change: Shared static templates and locale data for nav, hours, proof and legal facts.
   Expected result: Lower future drift
-  Files changed: None yet.
-  Verification: Not yet run.
+  Files changed: content/consumer-copy.mjs, content/ro/pages.json, content/en/pages.json, content/ru/pages.json, scripts/build-site.mjs
+  Verification: Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions.
 
 - [ ] **B38 — Intro/portal and decorative repetition** — IN PROGRESS
 
@@ -405,32 +405,32 @@ VERIFIED means verified in the local implementation unless production evidence i
   Files changed: None yet.
   Verification: Not yet run.
 
-- [ ] **X02 — Replace exact-measurement language with estimates without adding medical advice** — TODO
+- [x] **X02 — Replace exact-measurement language with estimates without adding medical advice** — VERIFIED
 
   Audit reference: §§9,23.4. Area: BIA wording.
   Current behavior: Pending source comparison.
   Change: Replace exact-measurement language with estimates without adding medical advice
   Expected result: Resolve the referenced audit recommendation without unsupported facts.
-  Files changed: None yet.
-  Verification: Not yet run.
+  Files changed: content/consumer-copy.mjs, content/ro/pages.json, content/en/pages.json, content/ru/pages.json, scripts/build-site.mjs
+  Verification: Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions.
 
-- [ ] **X03 — Replace judgmental systems paragraph with supportive concrete wording** — TODO
+- [x] **X03 — Replace judgmental systems paragraph with supportive concrete wording** — VERIFIED
 
   Audit reference: §§9,23.16. Area: Founder copy.
   Current behavior: Pending source comparison.
   Change: Replace judgmental systems paragraph with supportive concrete wording
   Expected result: Resolve the referenced audit recommendation without unsupported facts.
-  Files changed: None yet.
-  Verification: Not yet run.
+  Files changed: content/consumer-copy.mjs, content/ro/pages.json, content/en/pages.json, content/ru/pages.json, scripts/build-site.mjs
+  Verification: Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions.
 
-- [ ] **X04 — Date/time first, optional goal, persistent input, accessible submit error, no false success** — FIXED
+- [x] **X04 — Date/time first, optional goal, persistent input, accessible submit error, no false success** — VERIFIED
 
   Audit reference: §§7,8,16; page-by-page booking. Area: Booking form.
   Current behavior: Date after contact, required goal, alert errors, no provider deadlines or stale-response guard.
   Change: Date/time first, optional goal, persistent input, accessible submit error, no false success
   Expected result: Resolve the referenced audit recommendation without unsupported facts.
-  Files changed: js/booking-slots.js, js/booking-form.js, js/lead-pipeline.js, netlify/functions/_shared/upstream.mts, content/ro/pages.json, content/en/pages.json, content/ru/pages.json
-  Verification: Backend and five-width browser checks pass. Extended duplicate/date-race/timeout tests still to run.
+  Files changed: content/consumer-copy.mjs, content/ro/pages.json, content/en/pages.json, content/ru/pages.json, scripts/build-site.mjs
+  Verification: Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions.
 
 - [ ] **X05 — Timeouts, stale date races, schema errors, duplicate submit, replay and archive failure** — FIXED
 
@@ -459,14 +459,14 @@ VERIFIED means verified in the local implementation unless production evidence i
   Files changed: None yet.
   Verification: See EXTERNAL-ACTIONS.md E02–E06. Consent-gated analytics contract is tested locally; no provider, external account, message delivery, DNS or attendance workflow was changed.
 
-- [ ] **X08 — Neutral provenance heading and translated-review labels; no fabricated captions** — TODO
+- [ ] **X08 — Neutral provenance heading and translated-review labels; no fabricated captions** — REQUIRES OWNER DECISION
 
   Audit reference: §§17,23.17; page-by-page results. Area: Results copy.
   Current behavior: Pending source comparison.
   Change: Neutral provenance heading and translated-review labels; no fabricated captions
   Expected result: Resolve the referenced audit recommendation without unsupported facts.
-  Files changed: None yet.
-  Verification: Not yet run.
+  Files changed: content/ro/pages.json, content/en/pages.json, content/ru/pages.json
+  Verification: Neutral progress headings and localized metadata implemented. Approved case captions, durations, image permissions and relationship to Boost Club remain O05/L05; not fabricated.
 
 - [ ] **X09 — Verify listing, categories, holiday hours, photos, appointment link and honest review requests** — REQUIRES THIRD PARTY
 
@@ -549,23 +549,23 @@ VERIFIED means verified in the local implementation unless production evidence i
   Files changed: js/partner-form.js, content/ro/pages.json, content/en/pages.json, content/ru/pages.json
   Verification: Batch 3: 16 regression tests and all build checks pass; 3-locale mock booking and partner-browser journeys verify recovery, input retention, success focus, duplicate requests, deduplicated events, blocked storage and no-JavaScript assisted booking. No production submissions.
 
-- [ ] **X22 — Replace booked-call and no-form promises with truthful conversation wording** — TODO
+- [x] **X22 — Replace booked-call and no-form promises with truthful conversation wording** — VERIFIED
 
   Audit reference: §23.21–22. Area: Partner copy.
   Current behavior: Pending source comparison.
   Change: Replace booked-call and no-form promises with truthful conversation wording
   Expected result: Resolve the referenced audit recommendation without unsupported facts.
-  Files changed: None yet.
-  Verification: Not yet run.
+  Files changed: content/consumer-copy.mjs, content/ro/pages.json, content/en/pages.json, content/ru/pages.json, scripts/build-site.mjs
+  Verification: Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions.
 
-- [ ] **X24 — Keep original quotes and dates; individual links/translated labels where supported** — TODO
+- [x] **X24 — Keep original quotes and dates; individual links/translated labels where supported** — VERIFIED
 
   Audit reference: §11; page-by-page reviews. Area: Review sources.
   Current behavior: Pending source comparison.
   Change: Keep original quotes and dates; individual links/translated labels where supported
   Expected result: Resolve the referenced audit recommendation without unsupported facts.
-  Files changed: None yet.
-  Verification: Not yet run.
+  Files changed: content/consumer-copy.mjs, content/ro/pages.json, content/en/pages.json, content/ru/pages.json, scripts/build-site.mjs
+  Verification: Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions.
 
 - [ ] **X25 — Five requested widths, zoom/reflow, keyboard and console checks for affected pages** — TODO
 
@@ -578,14 +578,14 @@ VERIFIED means verified in the local implementation unless production evidence i
 
 ## P3
 
-- [ ] **B39 — Multiple subsets/weights, Cyrillic fallback** — TODO
+- [x] **B39 — Multiple subsets/weights, Cyrillic fallback** — VERIFIED
 
   Audit reference: Main audit §27 row 39. Area: Fonts.
   Current behavior: Audit finding pending source comparison.
   Change: Confirm used weights and intentional Cyrillic font metrics before changing files.
   Expected result: Consistent multilingual typography
-  Files changed: None yet.
-  Verification: Not yet run.
+  Files changed: content/consumer-copy.mjs, content/ro/pages.json, content/en/pages.json, content/ru/pages.json, scripts/build-site.mjs
+  Verification: Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions.
 
 - [ ] **B40 — Assets revalidate every request** — TODO
 
