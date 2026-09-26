@@ -1,171 +1,171 @@
 {
   "consultatie-gratuita.html": {
-    "hash": "8e718eb83a8f6e4f51959db1f69d163ab563a8f98a6f45f1f77d2453bc1452b0",
-    "reason": "Batch 3: consent-gated events, localized enquiries and confirmation recovery"
+    "hash": "070f8d9c7369b91e0f03dd584c2430ffcec98089fa403a870725c1eb8676fca3",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "en/consultatie-gratuita.html": {
-    "hash": "31a858fd02f4d05504981d61c6cb2c34e2a4ef6810f366fcf3e3a5d9149e26a4",
-    "reason": "Batch 3: consent-gated events, localized enquiries and confirmation recovery"
+    "hash": "2d9d7b2f991d6dc25000029f7accab131aee3b318698c6797b69fa5ed640a77e",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "ru/consultatie-gratuita.html": {
-    "hash": "95c519f2bc0b7dc7d4a62fade25f094bc696858620e98e847841679ebe87b42c",
-    "reason": "Batch 3: Russian WhatsApp messages use the selected language"
+    "hash": "3fd81499d5410e4bc3d9fd80e767a4b37f929e9159623ade298f985db4eaf75e",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "index.html": {
-    "hash": "e4938a287b86dd04048b028f8466e1dd51ec1054626844669b918747579799f4",
-    "reason": "Batch 3: consent-gated events, localized enquiries and confirmation recovery"
+    "hash": "8bc88e018e8c72fd25fd99443c659d5233de67428b99c4ae37e5a831ceb0aaed",
+    "reason": "Batch 4A: preserve current production content using existing external CSS"
   },
   "ambasador.html": {
-    "hash": "7a47226ff41bca6b79f194382d18033c9f195dbcf5aa9ba34d0209c8339d520a",
-    "reason": "Batch 3: consent-gated events, localized enquiries and confirmation recovery"
+    "hash": "95d0833bbf7c6cde786b509f2b25d582ef38f2ec3667b847c539face119f19f9",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "business.html": {
-    "hash": "38cb8c46dfd9636498152a44676ec631717c5edb82fec48d46484fd91d421e3b",
-    "reason": "Batch 3: translate and enlarge existing partnership disclosures"
+    "hash": "4d0027b0889af7218a95c036abe46ed963a55eea4e7f848e9693186b18bfdde5",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "confidentialitate.html": {
-    "hash": "ef92a0b0547417f0aeef09df54744a949fe1c47f431c83d4921b400ae49bf629",
-    "reason": "Batch 3: consent-gated events, localized enquiries and confirmation recovery"
+    "hash": "a256ff1500b521710902169ae9173c368c9a59fe528f6763c2e6094c9003baee",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "contact.html": {
-    "hash": "4808b6fe87f8afeeee0d5dc291b92fa99dbbdda8a66c796fe73c333eb9db4969",
-    "reason": "Batch 3: consent-gated events, localized enquiries and confirmation recovery"
+    "hash": "f6a7835752fb82cfc6b8728b550896de9daeefa9c9b3f9ac5537f22a9da81b1c",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "cookies.html": {
-    "hash": "d7e72b67a6446db67a920338fa2ea069bff5f7496b8599bdbb33f4a97855ab55",
-    "reason": "Batch 3: consent-gated events, localized enquiries and confirmation recovery"
+    "hash": "0744d5b7552e018b71e325c2cc5b73a6684f1782336c10204fa965091c27e924",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "cum-functioneaza.html": {
-    "hash": "453618fd9ef37e7d98359ec86084730baaa28f0c92df8b0cb9b0a49f8a3cfa7a",
-    "reason": "Batch 3: consent-gated events, localized enquiries and confirmation recovery"
+    "hash": "4a545097fba3e8440195ec2fef945b966763e28122f9333e4b4968d438716cf9",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "gabi.html": {
-    "hash": "b96accc2bfef19fecbb92a1fcdc08b9820f5820441e6ea7d3deb1611b30f9581",
-    "reason": "Batch 3: consent-gated events, localized enquiries and confirmation recovery"
+    "hash": "c43b39f72cea20c7644ba577b5e5079d3da06b4bb071330beb3316bcc53c7e9d",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "gabriel.html": {
-    "hash": "380011ef42e0eeae498ca464a47ceaf4d1bf38bbb5039e83b4bea589a0465576",
-    "reason": "Batch 3: consent-gated events, localized enquiries and confirmation recovery"
+    "hash": "7bdccdab04c8f5394a3b0a0875b9a8d1428bba57b25192b3e2e5e59a1c52b7a3",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "multumim.html": {
     "hash": "c1458ed63bf313ea0ef80aa7981576747371d90abf9a211446580896c42b2d61",
-    "reason": "Batch 3: consent-gated events, localized enquiries and confirmation recovery"
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "recenzii.html": {
-    "hash": "a54f2edf2e0535e93319654456e365122fde0666dd1ac3748ec9ac35c949085b",
-    "reason": "Batch 3: consent-gated events, localized enquiries and confirmation recovery"
+    "hash": "119d8d53a6038187c6ab132482a892ee16210eaae4ca9a5c96b8efedcc5ad7b9",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "rezultate.html": {
-    "hash": "149d5e9096c455327c29a15f4654c274a62f5be891b523a21c675194e54a4bf2",
-    "reason": "Batch 3: consent-gated events, localized enquiries and confirmation recovery"
+    "hash": "fd9ca8b6fff2d30579acba91ad42fb52bd3c008d14fd15e4ddb38919ff73aaf2",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "termeni.html": {
-    "hash": "4bbc7487c672cef352fe7146dc1fb653bab6a68f3b53a153f26dce6561c45b6b",
-    "reason": "Batch 3: consent-gated events, localized enquiries and confirmation recovery"
+    "hash": "838fa3557986ee26fa76fe08499df43b1dae95579e0c3b0d309a8d2cd8988895",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "en/index.html": {
-    "hash": "1cc4b52f9a74f17c11b4ab2f05949bb153daccb5b205452e947bc867cf2472a6",
-    "reason": "Batch 3: consent-gated events, localized enquiries and confirmation recovery"
+    "hash": "98b81ab9acba738c8dfdf627d2e184514e3f96f239567258260533aab89bb777",
+    "reason": "Batch 4A: preserve current production content using existing external CSS"
   },
   "en/ambasador.html": {
-    "hash": "bf516bc9769500244231fa3f8038e90123a57642f7ec7adfc9efcc11ca2da44e",
-    "reason": "Batch 3: consent-gated events, localized enquiries and confirmation recovery"
+    "hash": "65786d1e31a0a7a23ed7effb9a30fc7f941226f51cfe16d4f5e260827eee6d98",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "en/business.html": {
-    "hash": "fe3aa82e9a29722007a6a40d715586189373737f18865efc9d83ef8c1d904d58",
-    "reason": "Batch 3: translate and enlarge existing partnership disclosures"
+    "hash": "5e42f94dbe35a5a9982c44e91fb6961be6c1dfdf3fc0105b3ea5dbd583c17a8e",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "en/confidentialitate.html": {
-    "hash": "b164c9004e39ce90304bf9669201f440a36e0211ff8778abc5192812970f201a",
-    "reason": "Batch 3: consent-gated events, localized enquiries and confirmation recovery"
+    "hash": "692eb7a4058c82b28ff6f65a011dde98ebdfd423e1301769953587dae15e76b0",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "en/contact.html": {
-    "hash": "dc470d605d5b9426ab29f6309c6b348668100eb0c2b64fc1d817d798bdcb8b15",
-    "reason": "Batch 3: consent-gated events, localized enquiries and confirmation recovery"
+    "hash": "e7f86dc7fdba2905c181d0825d7b748ecec733a7deafcf4b079ce253a91aed1c",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "en/cookies.html": {
-    "hash": "6f7d6904ba85b621580370c516e55c921808548a775b96dc0aaaff48b26377a9",
-    "reason": "Batch 3: consent-gated events, localized enquiries and confirmation recovery"
+    "hash": "48cca9f53f316dcfc77bc880d522a4b546c88e07c409b07a1bf093b6b2fadeeb",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "en/cum-functioneaza.html": {
-    "hash": "86510adfbbdc9e5e42f56b0fbf9fe2a321edd795e30d4fac178fb240ef9c2a02",
-    "reason": "Batch 3: consent-gated events, localized enquiries and confirmation recovery"
+    "hash": "8e0f6fd61e056727ddc20ebce520ba3551d70d2ab6a9d12a252300e0eb8e1c55",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "en/gabi.html": {
-    "hash": "fc5de572f06ce87c0d655376fd76955679e62298ffea4361ab85ef9ba30bbee6",
-    "reason": "Batch 3: consent-gated events, localized enquiries and confirmation recovery"
+    "hash": "6fa3542be8ded491244b1c6ceed38a73851c58b6e1c60ef9099712e89bfe098b",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "en/gabriel.html": {
-    "hash": "d3951736febd66947e1c0b9203b9d47e7ebd12ee7123da3b87330857c89e5b51",
-    "reason": "Batch 3: consent-gated events, localized enquiries and confirmation recovery"
+    "hash": "deed0ebb9d4d58c12915a5264d7fe1e15ac12c0856b01906e999fa831e3ab703",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "en/multumim.html": {
     "hash": "3d685f583c00c4b5b1c8fd3dbfbaa77cf7e9beaac6aca8abd4f4f9b5e3274072",
-    "reason": "Batch 3: consent-gated events, localized enquiries and confirmation recovery"
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "en/recenzii.html": {
-    "hash": "44dfe8a028016e9f4f603455d7972c7e0ec4cb1344f18fb91a144fdc817c3fab",
-    "reason": "Batch 3: consent-gated events, localized enquiries and confirmation recovery"
+    "hash": "820c6747db97296f01306a72cd2989619d05499a250627cf2cdb76a1359f1fe6",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "en/rezultate.html": {
-    "hash": "7c212b83aca09566e06032de8c4108455e322b49e4ce975227f7c7be72205db4",
-    "reason": "Batch 3: consent-gated events, localized enquiries and confirmation recovery"
+    "hash": "d347a65067c2ec98c2decdc4b86e293c6ee64fb869ec55727c5a1a9f93a10bd1",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "en/termeni.html": {
-    "hash": "c65e9d466382367edca6ea0e463d2a2db56dd35ce77c2d5c9d0c7ec07fce88bb",
-    "reason": "Batch 3: consent-gated events, localized enquiries and confirmation recovery"
+    "hash": "f33c21b05a537b880427bc090b3539dc12ef272f2974485b07d495a6081ee5aa",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "ru/index.html": {
-    "hash": "19c21fceb35125c13032e7e21790a2b146f0a9203ccaf76f0e53f4b11c3d64e8",
-    "reason": "Batch 3: Russian WhatsApp messages use the selected language"
+    "hash": "2b915cce022cd8eee9411680cc3f72c48564ed7d3999e48bbe1031f09376066a",
+    "reason": "Batch 4A: preserve current production content using existing external CSS"
   },
   "ru/ambasador.html": {
-    "hash": "1bbee10cc2a1dbd42eaa16146b9b758c51d08e5c35995b88df682d10099c25f4",
-    "reason": "Batch 3: Russian WhatsApp messages use the selected language"
+    "hash": "143f8c22ea1addb51afa9a8410c449f2aeb52c376abadd46e86d0617e7330862",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "ru/business.html": {
-    "hash": "f8a97b5d3e1d854cc3b253624752bdcae222b8917f61d6984fd5879c2f099719",
-    "reason": "Batch 3: Russian WhatsApp messages use the selected language"
+    "hash": "e1c766716cdb1ed46d4a1ea9e6dc33ba2b1245f75dbe03dfa443213bfcbddbca",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "ru/confidentialitate.html": {
-    "hash": "551dac8e43c91134f07cf91a196bf17199adf76ebaa62a5cbef4befa3dfb8211",
-    "reason": "Batch 3: Russian WhatsApp messages use the selected language"
+    "hash": "289c6c899e5c5b57fc26b4b963e31d489f0c7e669a351d90de31db85ffb4ef95",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "ru/contact.html": {
-    "hash": "b748d791426b5dc58956340d675453823fbd16d54cbcf7d5ceb8dbd8261ada58",
-    "reason": "Batch 3: Russian WhatsApp messages use the selected language"
+    "hash": "d165a5acf30d9af6f1e80ee19f84d1bfad0b050ca912edfdab798d55a16250da",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "ru/cookies.html": {
-    "hash": "930cfbb7fc14b5e891df0070dc849d9c1e3815b7d904cf83ad5f3bc3cfcc6d9b",
-    "reason": "Batch 3: Russian WhatsApp messages use the selected language"
+    "hash": "45d089a78f5897121e781dd002c13b49f9eb87543ae506299f9d9161262c99e6",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "ru/cum-functioneaza.html": {
-    "hash": "8666a543d0c5bd7faf48cbacbc64cd8e470882c78e2ab43f2096d041a57bb174",
-    "reason": "Batch 3: Russian WhatsApp messages use the selected language"
+    "hash": "1e62e1fabec70a1674a2faad64e223e000d8cf5cc36b5e1528152fdc43ffa9bd",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "ru/gabi.html": {
-    "hash": "e54c77208f59d3d9c4ada31a1fe7fbcc5a5a8e9a2680485072aea87cf36fb0a7",
-    "reason": "Batch 3: Russian WhatsApp messages use the selected language"
+    "hash": "97b74a7fb630acaea52889729ecd715725cbe6391a6e7fd7075a332dc03f4a72",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "ru/gabriel.html": {
-    "hash": "9930538ce19b18057ca0a646d198501605f8dd32a3eb0cfeb38febfab36024de",
-    "reason": "Batch 3: Russian WhatsApp messages use the selected language"
+    "hash": "aab2601621f25c834ff6a645be47cd417bdce41cd9c24ff196f4e666dbcff4ad",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "ru/multumim.html": {
     "hash": "c2e142b8e4a54366f6a06c3ecdb7155607d7be19f5e6e97d14161fcc0b880a3d",
-    "reason": "Batch 3: Russian WhatsApp messages use the selected language"
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "ru/recenzii.html": {
-    "hash": "3b12178eda7ff39c71390daf72e57b7e58ac0ea91341ca278429fde712baf48c",
-    "reason": "Batch 3: Russian WhatsApp messages use the selected language"
+    "hash": "849075e1bf5e5a964f5613b7dba14f1a14b45729b9d860f8341c9a18562c19d0",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "ru/rezultate.html": {
-    "hash": "834a5a4911112e01d092cb683fbf9c1bfa43fb6fe71a7abd40499b2311bf781b",
-    "reason": "Batch 3: Russian WhatsApp messages use the selected language"
+    "hash": "4f795a69d8fa9e289a4f653bd811e58e2b0e67e0e4d84947aeba3c928ebefc47",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "ru/termeni.html": {
-    "hash": "131631645f329434dc5da3b0633869b82de62c492830b1cf69246a87c0179776",
-    "reason": "Batch 3: Russian WhatsApp messages use the selected language"
+    "hash": "fc0414d58e74e83e1e67b9a0e2213557e085f575e62355c2a1fff0eb40201e0c",
+    "reason": "Batch 4A: preserve current production review refresh and copy while retaining audit fixes"
   },
   "404.html": {
     "hash": "6d8c0ff5b5f3b3bedc19cabb1d07c951e3580423ab44a39abbe13a08ad41d2a4",

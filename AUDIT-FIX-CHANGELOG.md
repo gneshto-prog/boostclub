@@ -59,3 +59,17 @@ VERIFY: isolated browser requests only, consent/revocation/dedup/storage-blocked
 - A real browser test caught the form's named `name` input shadowing `form.name`; changed event detection to getAttribute('name') and reran successfully.
 - Public production booking-slots.js and lead-pipeline.js exactly match the initial dd4a115 versions (SHA-256 recorded in tool evidence). This confirms the baseline frontend; production deployment has no commit_ref and must still reconcile the server bundle before publication.
 - Local partner screenshots saved in evidence/batch3. No live lead, external analytics provider or deployment was created.
+
+## 2026-09-26 — Batch 4A: reconcile live content before homepage work
+
+AUDIT FINDING: B03, preservation of current public reviews and copy.
+CURRENT BEHAVIOR: the located source's booking scripts match production, but static content predates the September review refresh and punctuation edits. Initial checkout had 34 reviews; live dated snapshot has 40 and eight different original-language review selections.
+CHANGE: saved all 42 localized public HTML endpoints read-only; three-way merged their main content against dd4a115 and current fixes. Converted production inline styles to the existing hashed utility/token system. Inspected conflicts and retained the intentional booking, metro and Russian WhatsApp fixes. No user work reset or overwritten.
+EXPECTED RESULT: later publication preserves newer live testimonials, date/count and unrelated copy updates while retaining audit fixes. Production snapshot and word-level change inventory saved in the external evidence folder.
+VERIFY: original live review text equality, body integrity, all build checks and booking regression; deployed server commit still cannot be inferred from its null commit_ref.
+
+### Batch 4A verification
+
+- All eight live review blocks match exactly in RO, EN and RU after the merge; original languages/authors and 1 September 2026 date retained.
+- Production inline styles reused existing external tokenized components; four newly encountered utility declarations added without introducing inline styles.
+- 16 tests, syntax lint, strict typecheck, full build and both complete three-locale mock browser journeys passed after reconciliation.

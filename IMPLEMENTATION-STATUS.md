@@ -4,8 +4,8 @@
 
 Total audit findings: 68 (consolidated; repeated page/copy recommendations are retained in AUDIT-COVERAGE.md)
 Fixed: 3
-Verified: 15
-Remaining: 27
+Verified: 16
+Remaining: 26
 External: 9
 Owner decision: 8
 Legal review: 9
@@ -34,14 +34,14 @@ VERIFIED means verified in the local implementation unless production evidence i
 
 ## P1
 
-- [ ] **B03 — Public repo differs from live booking system** — TODO
+- [x] **B03 — Public repo differs from live booking system** — VERIFIED
 
   Audit reference: Main audit §27 row 3. Area: Deployment/source.
-  Current behavior: Audit finding pending source comparison.
+  Current behavior: Initial source dd4a115 had older static content but its public booking frontend scripts matched production exactly. Netlify deploy has no commit_ref.
   Change: Locate authoritative commit/config/backend; reconcile before redeploying.
   Expected result: Prevents loss of current functionality
-  Files changed: None yet.
-  Verification: Not yet run.
+  Files changed: content/ro/pages.json, content/en/pages.json, content/ru/pages.json, css/components/inline-utilities.css
+  Verification: 42 live HTML snapshots compared and three-way reconciled; 24 review blocks match exactly; function architecture/config/logs traced; all tests and 3-locale mock browser journeys pass. Before deployment, verify the reviewed new release artifacts; historical deployed commit remains unavailable.
 
 - [ ] **B04 — Real calendar/CRM success unverified** — REQUIRES THIRD PARTY
 

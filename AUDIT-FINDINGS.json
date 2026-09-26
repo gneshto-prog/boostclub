@@ -39,11 +39,16 @@
     "finding": "Public repo differs from live booking system",
     "change": "Locate authoritative commit/config/backend; reconcile before redeploying.",
     "reference": "Main audit §27 row 3",
-    "status": "TODO",
-    "current": "Audit finding pending source comparison.",
+    "status": "VERIFIED",
+    "current": "Initial source dd4a115 had older static content but its public booking frontend scripts matched production exactly. Netlify deploy has no commit_ref.",
     "expected": "Prevents loss of current functionality",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "content/ro/pages.json",
+      "content/en/pages.json",
+      "content/ru/pages.json",
+      "css/components/inline-utilities.css"
+    ],
+    "verification": "42 live HTML snapshots compared and three-way reconciled; 24 review blocks match exactly; function architecture/config/logs traced; all tests and 3-locale mock browser journeys pass. Before deployment, verify the reviewed new release artifacts; historical deployed commit remains unavailable."
   },
   {
     "id": "B04",
