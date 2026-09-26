@@ -133,7 +133,9 @@ for (const page of pages) {
     if (url.hostname !== "boostclub.ro" && url.hostname !== "www.boostclub.ro") continue;
     const pathname = url.pathname.replace(/\.html$/, "").replace(/\/{2,}/g, "/");
     const normalized = pathname === "" ? "/" : pathname;
-    if (!liveRoutes.has(normalized)) fail(`${page.file}: internal link has no live route: ${href}`);
+    const localAsset = path.join(root, normalized.replace(/^\/+/, ''));
+    const isImage = /\.(?:webp|png|jpe?g|avif)$/i.test(normalized) && fs.existsSync(localAsset) && fs.statSync(localAsset).isFile();
+    if (!liveRoutes.has(normalized) && !isImage) fail(`${page.file}: internal link has no live route or image: ${href}`);
   }
 }
 
@@ -159,6 +161,9 @@ for (const file of assetFiles) {
   if (file.endsWith(".html")) {
     for (const match of raw.matchAll(/\b(?:src|poster|data-img|data-video)=["']([^"']+)["']/gi)) references.push(match[1]);
     for (const match of raw.matchAll(/<link\b[^>]*\bhref=["']([^"']+)["']/gi)) references.push(match[1]);
+    for (const match of raw.matchAll(/\b(?:srcset|imagesrcset)="([^"]+)"/g)) {
+      for (const candidate of match[1].split(',')) references.push(candidate.trim().split(/\s+/)[0]);
+    }
   }
   if (file.endsWith(".css")) {
     for (const match of raw.matchAll(/url\(\s*["']?([^"')]+)["']?\s*\)/gi)) references.push(match[1]);

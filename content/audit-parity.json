@@ -1,178 +1,178 @@
 {
   "consultatie-gratuita.html": {
-    "hash": "340013ce6926ea33900ecd669f4e4342e48977dadd5df0b0fdddacd45d064ba0",
-    "reason": "Batch 4B: keep referral details after confirmed booking instead of the first-visit path"
+    "hash": "ca8f870f1e378c755bca0da576dd521fd38af383917ed350ba0765ae8d470eab",
+    "reason": "B07/X02 final copy consistency: remove remaining response-time and preparation promises"
   },
   "en/consultatie-gratuita.html": {
     "hash": "7495a55f1f4fe07414774413e17459156ab0ea40d52855db63d1df2c75b84a0e",
-    "reason": "Batch 4B: keep referral details after confirmed booking instead of the first-visit path"
+    "reason": "B07/X02 final copy consistency: remove remaining response-time and preparation promises"
   },
   "ru/consultatie-gratuita.html": {
-    "hash": "f728de7d87e391427463249181c6f36075e1cca8cf8fc74a8d37a1c4f701f761",
-    "reason": "Batch 4B: keep referral details after confirmed booking instead of the first-visit path"
+    "hash": "2a6392764d912665d2963fc4eb47a23a370c32953313cf62321c092dca68330e",
+    "reason": "B07/X02 final copy consistency: remove remaining response-time and preparation promises"
   },
   "index.html": {
-    "hash": "39f2da936ccfa56644f34e7dcbf7763cc70cafba520b7672bf18e1aec7f58bd4",
-    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
+    "hash": "535a30bac3959b4ffcca2a449ffe369d101b9179c32fbae8ef48fb722a57b2f6",
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "ambasador.html": {
-    "hash": "95d0833bbf7c6cde786b509f2b25d582ef38f2ec3667b847c539face119f19f9",
-    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
+    "hash": "d96367f2d3a2a568f326c5268c1c4a2b895682010dd4afc7051f4c3c6e591181",
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "business.html": {
-    "hash": "a75b4a9bcc5ef34476df17a689974f1adedef053f08a3d5f61b047aa62ab4254",
-    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
+    "hash": "5209816a5c6ba5001fb57a77150d31054a534591e0eea5ae5e20277e3b5ceba6",
+    "reason": "B21/B28 final accessibility: keyboard scroll areas, legible text and truthful contact metadata"
   },
   "confidentialitate.html": {
     "hash": "a256ff1500b521710902169ae9173c368c9a59fe528f6763c2e6094c9003baee",
-    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "contact.html": {
-    "hash": "878085d95c2b4b08d696f3fc40ce3e7140938febaae6cb577712c94bef0b6d0a",
-    "reason": "Batch 4B: keep referral details after confirmed booking instead of the first-visit path"
+    "hash": "8c3d2badc610e8ba72e5410167f50cd4d35c15f1cda32dcbdd825fda65005762",
+    "reason": "B07/X02 final copy consistency: remove remaining response-time and preparation promises"
   },
   "cookies.html": {
     "hash": "0744d5b7552e018b71e325c2cc5b73a6684f1782336c10204fa965091c27e924",
-    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "cum-functioneaza.html": {
-    "hash": "bb282592332a2ba1108643fe86a8493ba3188c129f1797381f9e0a4b6ff27dcd",
-    "reason": "Batch 4B: practical FAQ parity without unsupported device precision or comfort claims"
+    "hash": "46b72fb35fe1e2d5e7bbf3f70b0b0b9e7573d54730835453d77c0e8aa79ff10a",
+    "reason": "B07/X02 final copy consistency: remove remaining response-time and preparation promises"
   },
   "gabi.html": {
-    "hash": "c43b39f72cea20c7644ba577b5e5079d3da06b4bb071330beb3316bcc53c7e9d",
-    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
+    "hash": "0f2e048c2449885c7bbae06daac45a8d5a147ff986e010221255730d1d2f6893",
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "gabriel.html": {
-    "hash": "7744229adc49eddcbd7088139d37029b1facef864c2bf959488afaeed1d15481",
-    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
+    "hash": "b1c66cea9d4ea7298a5e289d6e86eff58ce7f1148238b511d5effd317786700f",
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "multumim.html": {
     "hash": "285a5fb3dd60eb1c7093bc44d5199291e2396f5e9e11d12c127eaab17e9100f3",
-    "reason": "Batch 4B: keep referral details after confirmed booking instead of the first-visit path"
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "recenzii.html": {
     "hash": "7d605e6c53f342b90bcfa8d1eb2da498cc40e45d899331ca52fa1351e79bc87f",
-    "reason": "Batch 4B: shared review count and correct original quote languages"
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "rezultate.html": {
-    "hash": "44fccdd5e7a811063bb890abc212b22f1eed9dc736f5d02c6120663b4618e0bc",
-    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
+    "hash": "59b15269d77dcdff935c2cc6783eea941be55a86da36ed6d28b105ef78679d46",
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "termeni.html": {
     "hash": "838fa3557986ee26fa76fe08499df43b1dae95579e0c3b0d309a8d2cd8988895",
-    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "en/index.html": {
-    "hash": "e7e17c5a9e22a7ffe0aec58d41175a092cecea7025ef8d2335442e1e6bd5f617",
-    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
+    "hash": "aeacda1e5d215504785735daaad19fab31f0052f19580fe7fff9a735e08d58fb",
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "en/ambasador.html": {
-    "hash": "65786d1e31a0a7a23ed7effb9a30fc7f941226f51cfe16d4f5e260827eee6d98",
-    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
+    "hash": "89fd70020a4108a9ee18fb92bf7cd919715710eb8e7a74de807a424f1925c296",
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "en/business.html": {
-    "hash": "c77883cd0a123d1f15ace965a2d5d3d946dfa901a671ad96c1f159410099d8a8",
-    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
+    "hash": "b37c757574c507dd5eb902524d56f498b86ce4269a53d82bd78204d5c977ce4b",
+    "reason": "B21/B28 final accessibility: keyboard scroll areas, legible text and truthful contact metadata"
   },
   "en/confidentialitate.html": {
     "hash": "692eb7a4058c82b28ff6f65a011dde98ebdfd423e1301769953587dae15e76b0",
-    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "en/contact.html": {
-    "hash": "b10ef8f34a6d353d97b9bad48773d125cc53d65b5c1fcc38e6a487f69804ce7b",
-    "reason": "Batch 4B: keep referral details after confirmed booking instead of the first-visit path"
+    "hash": "d206464adbd86acd4a00388a9999105ee95a3a0346ec1bb6a9b78a53a059d62a",
+    "reason": "B07/X02 final copy consistency: remove remaining response-time and preparation promises"
   },
   "en/cookies.html": {
     "hash": "48cca9f53f316dcfc77bc880d522a4b546c88e07c409b07a1bf093b6b2fadeeb",
-    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "en/cum-functioneaza.html": {
-    "hash": "ef35f656c553adcc6c07b508bb4a03219e38d9855bbeed035f678036ff171247",
-    "reason": "Batch 4B: practical FAQ parity without unsupported device precision or comfort claims"
+    "hash": "7a5675c5d11073639ba6b879c79343b0b097a92c901aec11e47c4044d429246b",
+    "reason": "B07/X02 final copy consistency: remove remaining response-time and preparation promises"
   },
   "en/gabi.html": {
-    "hash": "6fa3542be8ded491244b1c6ceed38a73851c58b6e1c60ef9099712e89bfe098b",
-    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
+    "hash": "781e48dd5f2e751fd046a82d46645f5e890e7f3c29cd55b9256f1f4dea240fdc",
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "en/gabriel.html": {
-    "hash": "bfcb2f335e12433772da953b80bd228e9ff3614839de31002ad550190d9b8224",
-    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
+    "hash": "ed04650e990872cd4ac2b8271e4d06c17c167f09ffc23580a737f00878d6d051",
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "en/multumim.html": {
     "hash": "078dddb3afc01b07c9b8b66cb34bfd572e6d62953021a283086074b56f14c6da",
-    "reason": "Batch 4B: keep referral details after confirmed booking instead of the first-visit path"
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "en/recenzii.html": {
     "hash": "9163f5c535f8f18b83f3ebe1899cb857f40351238aad3dbacc471234d59b5039",
-    "reason": "Batch 4B: shared review count and correct original quote languages"
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "en/rezultate.html": {
-    "hash": "d886699ceff4aa6e91cd7afe57efbdc5758a73d310e905d53572ef2a338ef064",
-    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
+    "hash": "c1882cada668f6d8b5b5cb4b3cdf3450db588c8ec1249a46e8e8778ec9c71f77",
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "en/termeni.html": {
     "hash": "f33c21b05a537b880427bc090b3539dc12ef272f2974485b07d495a6081ee5aa",
-    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "ru/index.html": {
-    "hash": "926442c6478e83bd72b26e8a4a5cb128da6bc25d55ceed2580484492ae8b75b6",
-    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
+    "hash": "7c12bc571ab6e175340b58f22503f93e39c0c19e5d05201c030ce3283050b071",
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "ru/ambasador.html": {
-    "hash": "143f8c22ea1addb51afa9a8410c449f2aeb52c376abadd46e86d0617e7330862",
-    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
+    "hash": "9594aab29d10c562cff542f16975e203818940c7bb2fae042571aac69e7fe541",
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "ru/business.html": {
-    "hash": "9d16f9dfcc739d140df4bb9343297af48062ca079ead1a7ede49ecdd564c3bf4",
-    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
+    "hash": "3ccef1534929de6a09b57b1941830e0d4c18543a73413bcaef39d8c5ea5b01f2",
+    "reason": "B21/B28 final accessibility: keyboard scroll areas, legible text and truthful contact metadata"
   },
   "ru/confidentialitate.html": {
     "hash": "289c6c899e5c5b57fc26b4b963e31d489f0c7e669a351d90de31db85ffb4ef95",
-    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "ru/contact.html": {
-    "hash": "c28f6ae356599e450fa742f18f6b94f09f6e1afbbfc32c63a79bb1f403d45033",
-    "reason": "Batch 4B: keep referral details after confirmed booking instead of the first-visit path"
+    "hash": "3aee76337322101979757e8accb6ad4554db29fd749ce18ddac2e37577141788",
+    "reason": "B07/X02 final copy consistency: remove remaining response-time and preparation promises"
   },
   "ru/cookies.html": {
     "hash": "45d089a78f5897121e781dd002c13b49f9eb87543ae506299f9d9161262c99e6",
-    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "ru/cum-functioneaza.html": {
-    "hash": "568bc213cafc56ce195d271b84fb60d4c6ac7b18cf82816c4f70627c33c35de0",
-    "reason": "Batch 4B: practical FAQ parity without unsupported device precision or comfort claims"
+    "hash": "bb56058e506bd6b29515bf97ac314fd542526790e522dd08fe9232d224a7a3a5",
+    "reason": "B07/X02 final copy consistency: remove remaining response-time and preparation promises"
   },
   "ru/gabi.html": {
-    "hash": "97b74a7fb630acaea52889729ecd715725cbe6391a6e7fd7075a332dc03f4a72",
-    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
+    "hash": "e737b93d7b10a83bf71da940cd0e8f1b5fb90b1ea80d0dfa5062785eca054e61",
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "ru/gabriel.html": {
-    "hash": "b708577e38de9f80e6d1ace9a48b90239b62bbc5d73c1b702c2c93f95075fe21",
-    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
+    "hash": "f48e3b24e89a929d34acb8c7aff21fa84bbca3edc305a90b529b5937210bc9b2",
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "ru/multumim.html": {
     "hash": "0671e4906ebab19fd50d10f5bf8582edf1ae5663d8cdea864c57dbd94eb8d1f3",
-    "reason": "Batch 4B: keep referral details after confirmed booking instead of the first-visit path"
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "ru/recenzii.html": {
     "hash": "b6a67c220fbd42c098606ffade0231ec8300a8d313a75beb0b6f8e3e30276659",
-    "reason": "Batch 4B: shared review count and correct original quote languages"
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "ru/rezultate.html": {
-    "hash": "8ada09ef4d42abd2f8bd42e72185912abf9edf2f158333bd673d8771673ae803",
-    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
+    "hash": "8bc4a72e0b00f972495a074bbe2c34377bc4677533651844dd689f863a6dfcaa",
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "ru/termeni.html": {
     "hash": "fc0414d58e74e83e1e67b9a0e2213557e085f575e62355c2a1fff0eb40201e0c",
-    "reason": "Batch 4B: assessment-first hierarchy, shared offer and review facts, clearer localized copy"
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "404.html": {
     "hash": "6d8c0ff5b5f3b3bedc19cabb1d07c951e3580423ab44a39abbe13a08ad41d2a4",
-    "reason": "Batch 3: consent-gated events, localized enquiries and confirmation recovery"
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "program-trainee.html": {
     "hash": "5de6624ad2c36eab600e50697522bb1b07cc1ac497f1b8895cf67f6a9f755506",
-    "reason": "Batch 3: consent-gated events, localized enquiries and confirmation recovery"
+    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   }
 }

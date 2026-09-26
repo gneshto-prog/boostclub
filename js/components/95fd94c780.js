@@ -110,7 +110,7 @@ function initMap(){
   const statusEl=document.getElementById('mapstatus');
   const ctaBox=document.getElementById('mapcta'), ctaLink=document.getElementById('mapctalink');
   const proj=d3.geoNaturalEarth1(), pathGen=d3.geoPath(proj);
-  d3.json("vendor/countries-110m.json").catch(function(){return d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json");}).then(topo=>{
+  d3.json("vendor/countries-110m.json").then(topo=>{
     wrap.classList.remove('loading');
     const feats=topojson.feature(topo,topo.objects.countries).features;
     proj.fitSize([W,H],{type:"Sphere"});
@@ -218,15 +218,19 @@ function initMap(){
   function loadScript(list,cb){var i=0;(function next(){if(i>=list.length){cb();return;}var sc=document.createElement('script');sc.src=list[i++];sc.onload=function(){cb();};sc.onerror=next;document.head.appendChild(sc);})();}
   function ensure(cb){
     if(window.d3&&window.topojson){cb();return;}
-    loadScript(['vendor/d3.min.js','https://cdn.jsdelivr.net/npm/d3@7'],function(){
-      loadScript(['vendor/topojson-client.min.js','https://cdn.jsdelivr.net/npm/topojson-client@3'],cb);
+    loadScript(['vendor/d3.min.js'],function(){
+      loadScript(['vendor/topojson-client.min.js'],cb);
     });
   }
   function go(){if(started)return;started=true;ensure(function(){
     if(window.d3&&window.topojson){initMap();}
     else{var mf=document.getElementById('map-fallback');if(mf)mf.style.display='block';var mw=document.getElementById('mapwrap');if(mw)mw.classList.remove('loading');}
   });}
-  if('IntersectionObserver' in window){var mo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)go();});},{rootMargin:'400px'});mo.observe(mapSec);}else{go();}
+  var loadButton=document.getElementById('load-world-map');
+  if(loadButton)loadButton.addEventListener('click',function(){
+    document.getElementById('mapwrap').hidden=false;
+    loadButton.hidden=true;go();
+  });
 })();
 
 /* ---- Path Configurator ---- */

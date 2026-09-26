@@ -60,6 +60,10 @@ for(const lang of ['ro','en','ru']) {
   assert.equal(await page.locator('#confirmation-content').isVisible(),true);
   assert.equal(archive,1);assert.equal(submissions,2);
   await page.reload();assert.equal(await page.locator('#confirmation-content').isVisible(),true);
+  await page.goBack();assert.ok(page.url().endsWith('/consultatie-gratuita'));
+  assert.equal(submissions,2,'Back navigation must not submit another booking');
+  await page.goForward();assert.equal(await page.locator('#confirmation-content').isVisible(),true);
+  assert.equal(submissions,2);
   assert.deepEqual(errors,[]);findings.push({lang,confirmation:true,archiveFailureDidNotCancel:true,errors});
   await context.close();
 }

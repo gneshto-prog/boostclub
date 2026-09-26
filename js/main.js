@@ -237,11 +237,20 @@
   }
 
   /* ---------- 12. FAQ ---------- */
-  document.querySelectorAll(".faq-q").forEach(function (btn) {
+  document.querySelectorAll(".faq-q").forEach(function (btn, index) {
+    var item = btn.closest(".faq-item");
+    var answer = item.querySelector(".faq-a");
+    if (!answer) return;
+    if (!answer.id) answer.id = "faq-answer-" + index;
+    btn.setAttribute("aria-controls", answer.id);
+    function setAnswer(open) {
+      item.classList.toggle("open", open);
+      answer.hidden = !open;
+      btn.setAttribute("aria-expanded", String(open));
+    }
+    setAnswer(item.classList.contains("open"));
     btn.addEventListener("click", function () {
-      var item = btn.closest(".faq-item");
-      var open = item.classList.toggle("open");
-      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      setAnswer(answer.hidden);
     });
   });
 
@@ -266,4 +275,3 @@
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 })();
-

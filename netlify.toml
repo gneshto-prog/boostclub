@@ -16,3 +16,10 @@
     X-Frame-Options = "SAMEORIGIN"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Only content-hashed derivatives get an immutable browser cache.
+# Existing mutable assets and HTML keep Netlify's revalidation behavior.
+[[headers]]
+  for = "/images/responsive/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

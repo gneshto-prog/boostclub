@@ -286,3 +286,11 @@ a[href*="hrbl.me/"] {
     overflow-wrap: anywhere;
   }
 }
+
+/* Meaningful small blue labels need text contrast, independently of accents. */
+.col .t, .step .n, .acstep .t, .income .box .t, .tlink,
+.u-inline-7f130918 { color: var(--color-87b7054a); }
+.clubrow:focus-visible, .cwrap:focus-visible {
+  outline: var(--length-ac33ff91) solid var(--color-87b7054a);
+  outline-offset: var(--length-74761400);
+}

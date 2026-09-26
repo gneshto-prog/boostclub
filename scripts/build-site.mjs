@@ -7,6 +7,7 @@ import { buildHomepageConcepts } from "./lib/homepage-concepts.mjs";
 import { buildSoftCurrentSite } from "./lib/soft-current-site.mjs";
 import { structuredHead } from "./lib/structured-data.mjs";
 import { reviewSnapshot, reviewSummary, afterVisit, processFaq } from "../content/consumer-copy.mjs";
+import { responsiveImages, responsivePreloads } from './lib/responsive-images.mjs';
 
 const root = process.cwd();
 const outputRoot = path.join(root, "_site");
@@ -30,12 +31,13 @@ function renderPage(page) {
     .replaceAll('{{after-visit}}', afterVisit(page.lang))
     .replaceAll('{{process-faq}}', processFaq(page.lang));
   body = renderRegisteredComponents(body);
+  body = responsiveImages(body);
   // Shared consent/event contract runs before the page scripts in every locale.
   body = body.replace(/<script\b/, '<script src="/js/analytics.js"></script>\n<script');
   return documentTemplate({
     doctype: page.doctype,
     htmlOpen: page.htmlOpen,
-    head: structuredHead(page),
+    head: responsivePreloads(structuredHead(page), body),
     bodyOpen: page.bodyOpen,
     body,
   });

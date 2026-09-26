@@ -1,0 +1,338 @@
+{
+  "images/before.webp": {
+    "width": 960,
+    "height": 1056,
+    "bytes": 61090,
+    "variants": [
+      {
+        "width": 320,
+        "height": 352,
+        "src": "images/responsive/before.e5847f8cdc12.320.webp",
+        "bytes": 17382
+      },
+      {
+        "width": 640,
+        "height": 704,
+        "src": "images/responsive/before.00b3285d2288.640.webp",
+        "bytes": 39920
+      }
+    ]
+  },
+  "images/Results1.webp": {
+    "width": 960,
+    "height": 869,
+    "bytes": 60470,
+    "variants": [
+      {
+        "width": 320,
+        "height": 290,
+        "src": "images/responsive/Results1.d1f872fb7645.320.webp",
+        "bytes": 12592
+      },
+      {
+        "width": 640,
+        "height": 579,
+        "src": "images/responsive/Results1.4b3c177b0f25.640.webp",
+        "bytes": 34450
+      }
+    ]
+  },
+  "images/results3.webp": {
+    "width": 622,
+    "height": 643,
+    "bytes": 30060,
+    "variants": [
+      {
+        "width": 320,
+        "height": 331,
+        "src": "images/responsive/results3.a48a3e5259d2.320.webp",
+        "bytes": 13246
+      }
+    ]
+  },
+  "images/results5.webp": {
+    "width": 960,
+    "height": 1200,
+    "bytes": 75920,
+    "variants": [
+      {
+        "width": 320,
+        "height": 400,
+        "src": "images/responsive/results5.a6a99fb71211.320.webp",
+        "bytes": 20124
+      },
+      {
+        "width": 640,
+        "height": 800,
+        "src": "images/responsive/results5.f402adcf4a5e.640.webp",
+        "bytes": 50326
+      }
+    ]
+  },
+  "images/results6.webp": {
+    "width": 960,
+    "height": 960,
+    "bytes": 82442,
+    "variants": [
+      {
+        "width": 320,
+        "height": 320,
+        "src": "images/responsive/results6.0f3d0af55ea6.320.webp",
+        "bytes": 18894
+      },
+      {
+        "width": 640,
+        "height": 640,
+        "src": "images/responsive/results6.efafb13fbfab.640.webp",
+        "bytes": 50160
+      }
+    ]
+  },
+  "images/results7.webp": {
+    "width": 960,
+    "height": 960,
+    "bytes": 33464,
+    "variants": [
+      {
+        "width": 320,
+        "height": 320,
+        "src": "images/responsive/results7.b2230b2dff52.320.webp",
+        "bytes": 9280
+      },
+      {
+        "width": 640,
+        "height": 640,
+        "src": "images/responsive/results7.fdac47c60a57.640.webp",
+        "bytes": 22692
+      }
+    ]
+  },
+  "images/results8.webp": {
+    "width": 960,
+    "height": 960,
+    "bytes": 104846,
+    "variants": [
+      {
+        "width": 320,
+        "height": 320,
+        "src": "images/responsive/results8.addacaae1bab.320.webp",
+        "bytes": 24064
+      },
+      {
+        "width": 640,
+        "height": 640,
+        "src": "images/responsive/results8.64fae5377c97.640.webp",
+        "bytes": 66564
+      }
+    ]
+  },
+  "images/results9.webp": {
+    "width": 960,
+    "height": 960,
+    "bytes": 91032,
+    "variants": [
+      {
+        "width": 320,
+        "height": 320,
+        "src": "images/responsive/results9.63d3037a6331.320.webp",
+        "bytes": 21846
+      },
+      {
+        "width": 640,
+        "height": 640,
+        "src": "images/responsive/results9.2c017a9a4ab2.640.webp",
+        "bytes": 57600
+      }
+    ]
+  },
+  "images/results11.webp": {
+    "width": 960,
+    "height": 960,
+    "bytes": 36788,
+    "variants": [
+      {
+        "width": 320,
+        "height": 320,
+        "src": "images/responsive/results11.257b945bded6.320.webp",
+        "bytes": 10896
+      },
+      {
+        "width": 640,
+        "height": 640,
+        "src": "images/responsive/results11.d5410f3811ac.640.webp",
+        "bytes": 25222
+      }
+    ]
+  },
+  "images/results12.webp": {
+    "width": 960,
+    "height": 960,
+    "bytes": 52208,
+    "variants": [
+      {
+        "width": 320,
+        "height": 320,
+        "src": "images/responsive/results12.a9251d239983.320.webp",
+        "bytes": 14932
+      },
+      {
+        "width": 640,
+        "height": 640,
+        "src": "images/responsive/results12.dd16988adb48.640.webp",
+        "bytes": 34912
+      }
+    ]
+  },
+  "images/results13.webp": {
+    "width": 960,
+    "height": 960,
+    "bytes": 160360,
+    "variants": [
+      {
+        "width": 320,
+        "height": 320,
+        "src": "images/responsive/results13.0850e811ab93.320.webp",
+        "bytes": 28974
+      },
+      {
+        "width": 640,
+        "height": 640,
+        "src": "images/responsive/results13.1a2af01d5ef6.640.webp",
+        "bytes": 90336
+      }
+    ]
+  },
+  "images/familie-neshto-wellness.webp": {
+    "width": 896,
+    "height": 1193,
+    "bytes": 101080,
+    "variants": [
+      {
+        "width": 320,
+        "height": 426,
+        "src": "images/responsive/familie-neshto-wellness.7308474a2714.320.webp",
+        "bytes": 21836
+      },
+      {
+        "width": 640,
+        "height": 852,
+        "src": "images/responsive/familie-neshto-wellness.0933d9b349c4.640.webp",
+        "bytes": 62242
+      }
+    ]
+  },
+  "images/gabriel-competitie-atletism.webp": {
+    "width": 1200,
+    "height": 800,
+    "bytes": 96986,
+    "variants": [
+      {
+        "width": 320,
+        "height": 213,
+        "src": "images/responsive/gabriel-competitie-atletism.cc34495da244.320.webp",
+        "bytes": 12276
+      },
+      {
+        "width": 640,
+        "height": 427,
+        "src": "images/responsive/gabriel-competitie-atletism.404cebba2230.640.webp",
+        "bytes": 38972
+      }
+    ]
+  },
+  "images/gabriel-neshto-mma.webp": {
+    "width": 896,
+    "height": 1195,
+    "bytes": 65628,
+    "variants": [
+      {
+        "width": 320,
+        "height": 427,
+        "src": "images/responsive/gabriel-neshto-mma.ad4288bb4452.320.webp",
+        "bytes": 14264
+      },
+      {
+        "width": 640,
+        "height": 854,
+        "src": "images/responsive/gabriel-neshto-mma.f3b1e95ac4c5.640.webp",
+        "bytes": 40930
+      }
+    ]
+  },
+  "images/gabriel-antrenament.webp": {
+    "width": 1187,
+    "height": 1600,
+    "bytes": 54062,
+    "variants": [
+      {
+        "width": 320,
+        "height": 431,
+        "src": "images/responsive/gabriel-antrenament.e13863bcb1c2.320.webp",
+        "bytes": 11142
+      },
+      {
+        "width": 640,
+        "height": 863,
+        "src": "images/responsive/gabriel-antrenament.dd36e16b9129.640.webp",
+        "bytes": 24862
+      }
+    ]
+  },
+  "images/consultatie-wellness-boost-club.webp": {
+    "width": 1050,
+    "height": 1400,
+    "bytes": 47298,
+    "variants": [
+      {
+        "width": 320,
+        "height": 427,
+        "src": "images/responsive/consultatie-wellness-boost-club.4666e22a70a0.320.webp",
+        "bytes": 12808
+      },
+      {
+        "width": 640,
+        "height": 853,
+        "src": "images/responsive/consultatie-wellness-boost-club.b2c86094a8c8.640.webp",
+        "bytes": 28644
+      }
+    ]
+  },
+  "images/gabriel-neshto-boost-club-bucuresti.webp": {
+    "width": 1050,
+    "height": 1400,
+    "bytes": 37146,
+    "variants": [
+      {
+        "width": 320,
+        "height": 427,
+        "src": "images/responsive/gabriel-neshto-boost-club-bucuresti.652b08202ee2.320.webp",
+        "bytes": 9190
+      },
+      {
+        "width": 640,
+        "height": 853,
+        "src": "images/responsive/gabriel-neshto-boost-club-bucuresti.325fe8ebcc73.640.webp",
+        "bytes": 21120
+      }
+    ]
+  },
+  "images/gabriel-neshto-consultant-wellness.webp": {
+    "width": 788,
+    "height": 1400,
+    "bytes": 32934,
+    "variants": [
+      {
+        "width": 320,
+        "height": 569,
+        "src": "images/responsive/gabriel-neshto-consultant-wellness.dd83d7afc6dc.320.webp",
+        "bytes": 10424
+      },
+      {
+        "width": 640,
+        "height": 1137,
+        "src": "images/responsive/gabriel-neshto-consultant-wellness.697bfa4bc040.640.webp",
+        "bytes": 25674
+      }
+    ]
+  }
+}
