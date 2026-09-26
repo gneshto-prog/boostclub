@@ -4,7 +4,8 @@
   var language = (document.documentElement.lang || "ro").toLowerCase();
   var locale = language === "en" ? "en-GB" : language === "ru" ? "ru-RU" : "ro-RO";
   var storageKey = "boost_booking_confirmation";
-  var raw = sessionStorage.getItem(storageKey);
+  var raw = null;
+  try { raw = sessionStorage.getItem(storageKey); } catch (_) { /* Storage can be blocked. */ }
   var state = null;
   try { state = raw ? JSON.parse(raw) : null; } catch (error) { state = null; }
 
@@ -16,6 +17,7 @@
     && !Number.isNaN(end.getTime())
     && !Number.isNaN(saved.getTime())
     && end > start
+    && saved.getTime() <= Date.now()
     && Date.now() - saved.getTime() < 24 * 60 * 60 * 1000;
 
   if (!valid) {

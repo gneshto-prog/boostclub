@@ -10,6 +10,8 @@ const groups = ["ro", "en", "ru", "root"];
 const pages = groups.flatMap((group) => JSON.parse(fs.readFileSync(path.join(root, "content", group, "pages.json"), "utf8")));
 const rows = [];
 const failures = [];
+const auditFile = path.join(root, 'content/audit-parity.json');
+const approved = fs.existsSync(auditFile) ? JSON.parse(fs.readFileSync(auditFile, 'utf8')) : {};
 
 for (const page of pages) {
   const generated = fs.readFileSync(path.join(root, "_site", page.output), "utf8");
@@ -22,8 +24,9 @@ for (const page of pages) {
     if (fs.existsSync(fallback)) baseline = fs.readFileSync(fallback, "utf8");
   }
   const baselineHash = baseline ? domHash(baseline) : page.baselineDomHash;
-  const equivalent = generatedHash === baselineHash;
-  rows.push({ page: page.output, result: equivalent ? "Equivalent" : "Different", reason: equivalent ? "None" : "Normalized DOM hash differs" });
+  const intentional = approved[page.output]?.hash === generatedHash;
+  const equivalent = generatedHash === baselineHash || intentional;
+  rows.push({ page: page.output, result: equivalent ? "Equivalent" : "Different", reason: intentional ? approved[page.output].reason : equivalent ? "None" : "Normalized DOM hash differs" });
   if (!equivalent) {
     const expected = normalizeDom(baseline);
     const actual = normalizeDom(generated);

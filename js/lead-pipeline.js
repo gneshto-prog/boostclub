@@ -128,6 +128,7 @@
     var response = await fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      signal: AbortSignal.timeout(5000),
       body: new URLSearchParams(new FormData(form)).toString()
     });
     if (!response.ok) throw new Error("Netlify Forms archive failed");
@@ -139,11 +140,13 @@
       throw new Error("FORM_INVALID");
     }
     var payload = canonicalPayload(form);
-    var response = await fetch("/api/lead", {
+    var response;
+    try { response = await fetch("/api/lead", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
-    });
+      body: JSON.stringify(payload),
+      signal: AbortSignal.timeout(30000)
+    }); } catch (_) { throw new Error("BOOKING_OUTCOME_UNKNOWN"); }
     var result = {};
     try { result = await response.json(); } catch (err) { /* handled below */ }
     if (!response.ok || !result.ok) {
@@ -172,5 +175,11 @@
     return result;
   }
 
-  window.BoostLeadPipeline = { submit: submit };
+  var pending = new WeakMap();
+  window.BoostLeadPipeline = { submit: function (form) {
+    if (pending.has(form)) return pending.get(form);
+    var request = submit(form).finally(function () { pending.delete(form); });
+    pending.set(form, request);
+    return request;
+  } };
 })();

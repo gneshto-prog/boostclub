@@ -11,3 +11,4 @@ images_backup/
 MASTER-PROMPT.md
 docs/
 _site/
+node_modules/

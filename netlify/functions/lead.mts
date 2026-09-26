@@ -111,6 +111,7 @@ const createCalendarEvent = async (payload: JsonRecord, crm: JsonRecord) => {
   const eventUrl = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(calendarId)}/events`;
   let response = await fetch(`${eventUrl}?sendUpdates=none`, {
     method: "POST",
+    signal: AbortSignal.timeout(8000),
     headers: {
       Authorization: `Bearer ${accessToken}`,
       "Content-Type": "application/json",
@@ -120,6 +121,7 @@ const createCalendarEvent = async (payload: JsonRecord, crm: JsonRecord) => {
 
   if (response.status === 409) {
     response = await fetch(`${eventUrl}/${encodeURIComponent(eventId)}`, {
+      signal: AbortSignal.timeout(8000),
       headers: { Authorization: `Bearer ${accessToken}` },
     });
   }

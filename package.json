@@ -1,0 +1,11 @@
+{
+  "name": "boostclub-website", "private": true, "type": "module",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "build": "node scripts/prepare-site.mjs",
+    "lint": "node scripts/check-syntax.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "devDependencies": { "typescript": "5.9.3" }
+}

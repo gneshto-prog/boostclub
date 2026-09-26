@@ -1211,3 +1211,9 @@ a:focus-visible, button:focus-visible, .btn:focus-visible { outline: var(--lengt
 .confirmation-actions{display:flex;flex-wrap:wrap;gap:var(--length-7769e817);margin-top:var(--s5)}
 .confirmation-list{display:grid;gap:var(--length-38cb6b4a);margin-top:var(--s4);padding-left:var(--length-c10b7e1d)}
 @media(min-width:620px){.confirmation-time{grid-template-columns:1fr auto;align-items:center}.confirmation-time>div:last-child{text-align:right}}
+
+/* Booking recovery remains usable during provider or network failure. */
+.booking-recovery { display: flex; flex-wrap: wrap; gap: var(--space-9); margin-top: var(--space-3); }
+.booking-recovery a, .booking-recovery button { display: inline-flex; align-items: center; min-height: var(--tap-target); padding: var(--space-3); }
+.booking-submit-error { color: var(--text); border: var(--border-width) solid currentColor; padding: var(--space-4); margin-bottom: var(--space-4); }
+.booking-submit-error:focus { outline: var(--border-width) solid var(--green); outline-offset: var(--space-1); }

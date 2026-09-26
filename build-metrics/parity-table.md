@@ -4,7 +4,7 @@
 | `ambasador.html` | Equivalent | None |
 | `business.html` | Equivalent | None |
 | `confidentialitate.html` | Equivalent | None |
-| `consultatie-gratuita.html` | Equivalent | None |
+| `consultatie-gratuita.html` | Equivalent | Batch 1: translated resilient booking form and optional goal |
 | `contact.html` | Equivalent | None |
 | `cookies.html` | Equivalent | None |
 | `cum-functioneaza.html` | Equivalent | None |
@@ -18,7 +18,7 @@
 | `en/ambasador.html` | Equivalent | None |
 | `en/business.html` | Equivalent | None |
 | `en/confidentialitate.html` | Equivalent | None |
-| `en/consultatie-gratuita.html` | Equivalent | None |
+| `en/consultatie-gratuita.html` | Equivalent | Batch 1: translated resilient booking form and optional goal |
 | `en/contact.html` | Equivalent | None |
 | `en/cookies.html` | Equivalent | None |
 | `en/cum-functioneaza.html` | Equivalent | None |
@@ -32,7 +32,7 @@
 | `ru/ambasador.html` | Equivalent | None |
 | `ru/business.html` | Equivalent | None |
 | `ru/confidentialitate.html` | Equivalent | None |
-| `ru/consultatie-gratuita.html` | Equivalent | None |
+| `ru/consultatie-gratuita.html` | Equivalent | Batch 1: translated resilient booking form and optional goal |
 | `ru/contact.html` | Equivalent | None |
 | `ru/cookies.html` | Equivalent | None |
 | `ru/cum-functioneaza.html` | Equivalent | None |

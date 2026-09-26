@@ -591,3 +591,5 @@ html[data-css~="component-a467f286be"] {
 html[data-css~="business-phase2"] {
   --orange: var(--color-01ef759a);
 }
+
+:root { --tap-target: 44px; --border-width: 2px; --space-1: 4px; --space-3: 12px; --space-4: 16px; --space-9: 12px; }

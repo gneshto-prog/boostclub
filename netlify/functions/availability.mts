@@ -45,8 +45,12 @@ export default async (req: Request, context: { requestId?: string }) => {
   try {
     hours = bookingHoursForDate(date);
     slots = bookingSlotsForDate(date);
-  } catch {
-    return json({ ok: false, code: "INVALID_DATE", requestId }, 422);
+  } catch (error) {
+    if (error instanceof Error && error.message === 'INVALID_BOOKING_DATE') {
+      return json({ ok: false, code: "INVALID_DATE", requestId }, 422);
+    }
+    console.error(JSON.stringify({ requestId, stage: 'booking_configuration', error: 'BOOKING_HOURS_INVALID' }));
+    return json({ ok: false, code: 'AVAILABILITY_UNAVAILABLE', requestId }, 503);
   }
 
   if (!hours || !slots.length) {
@@ -63,7 +67,11 @@ export default async (req: Request, context: { requestId?: string }) => {
         p_end: timeMax,
       }),
     ]);
-    const occupied = Array.isArray(occupiedRaw) ? occupiedRaw as OccupiedSlot[] : [];
+    if (!Array.isArray(occupiedRaw) || occupiedRaw.some(item =>
+      !item || typeof item.scheduled_at !== 'string' || !Number.isFinite(Date.parse(item.scheduled_at)))) {
+      throw new Error('SUPABASE_INVALID_OCCUPANCY_RESPONSE');
+    }
+    const occupied = occupiedRaw as OccupiedSlot[];
     const unavailable = [
       ...calendarBusy,
       ...occupied

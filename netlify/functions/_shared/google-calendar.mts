@@ -1,3 +1,5 @@
+import { upstreamJson } from './upstream.mts';
+
 declare const Netlify: {
   env: { get(name: string): string | undefined };
 };
@@ -63,15 +65,14 @@ export const getGoogleAccessToken = async (scopes: string[]) => {
   );
   const assertion = `${unsigned}.${base64Url(signature)}`;
 
-  const tokenResponse = await fetch(claims.aud, {
+  const { response: tokenResponse, body: tokenBody } = await upstreamJson<{ access_token?: string }>(claims.aud, {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams({
       grant_type: "urn:ietf:params:oauth:grant-type:jwt-bearer",
       assertion,
     }),
-  });
-  const tokenBody = (await tokenResponse.json()) as { access_token?: string };
+  }, 'GOOGLE_TOKEN');
   if (!tokenResponse.ok || !tokenBody.access_token) {
     throw new Error(`Google token request failed (${tokenResponse.status})`);
   }
@@ -83,7 +84,9 @@ export const getGoogleCalendarBusy = async (timeMin: string, timeMax: string): P
     "https://www.googleapis.com/auth/calendar.freebusy",
   ]);
   const calendarId = googleCalendarId();
-  const response = await fetch("https://www.googleapis.com/calendar/v3/freeBusy", {
+  const { response, body } = await upstreamJson<{
+    calendars?: Record<string, { busy?: BusyRange[]; errors?: unknown[] }>;
+  }>("https://www.googleapis.com/calendar/v3/freeBusy", {
     method: "POST",
     headers: {
       Authorization: `Bearer ${accessToken}`,
@@ -95,13 +98,15 @@ export const getGoogleCalendarBusy = async (timeMin: string, timeMax: string): P
       timeZone: "Europe/Bucharest",
       items: [{ id: calendarId }],
     }),
-  });
-  const body = (await response.json()) as {
-    calendars?: Record<string, { busy?: BusyRange[]; errors?: unknown[] }>;
-  };
+  }, 'GOOGLE_CALENDAR');
   const calendar = body.calendars?.[calendarId];
   if (!response.ok || !calendar || (calendar.errors && calendar.errors.length)) {
     throw new Error(`Google Calendar availability failed (${response.status})`);
   }
-  return calendar.busy || [];
+  if (!Array.isArray(calendar.busy) || calendar.busy.some(range =>
+    !Number.isFinite(Date.parse(range.start)) || !Number.isFinite(Date.parse(range.end))
+    || Date.parse(range.end) <= Date.parse(range.start))) {
+    throw new Error('GOOGLE_CALENDAR_INVALID_BUSY_RESPONSE');
+  }
+  return calendar.busy;
 };

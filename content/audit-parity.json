@@ -1,0 +1,14 @@
+{
+  "consultatie-gratuita.html": {
+    "hash": "04484d1838743f3e97fb51b57bffe1ed197e87fd8cd64af1e8ab6c405179028d",
+    "reason": "Batch 1: translated resilient booking form and optional goal"
+  },
+  "en/consultatie-gratuita.html": {
+    "hash": "1be10fec7ec00252cb850e35f11eb1578bfc237bbf4dd95c9b7deff26ea69218",
+    "reason": "Batch 1: translated resilient booking form and optional goal"
+  },
+  "ru/consultatie-gratuita.html": {
+    "hash": "ea2834a3def8eea3c789c663f38efbdde1a8a350a67aead2fe1ede91c3a4a5b0",
+    "reason": "Batch 1: translated resilient booking form and optional goal"
+  }
+}

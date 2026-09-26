@@ -1,3 +1,5 @@
+import { upstreamJson } from './upstream.mts';
+
 declare const Netlify: {
   env: { get(name: string): string | undefined };
 };
@@ -22,23 +24,16 @@ export const supabaseRpc = async (name: string, body: JsonRecord): Promise<unkno
     throw new Error("Supabase server credentials are not configured");
   }
 
-  const response = await fetch(`${supabaseUrl}/rest/v1/rpc/${name}`, {
+  const { response, body: parsed } = await upstreamJson<unknown>(`${supabaseUrl}/rest/v1/rpc/${name}`, {
     method: "POST",
     headers: {
       apikey: secretKey,
-      Authorization: `Bearer ${secretKey}`,
+      ...(secretKey.startsWith('eyJ') ? { Authorization: `Bearer ${secretKey}` } : {}),
       "Content-Type": "application/json",
       Prefer: "return=representation",
     },
     body: JSON.stringify(body),
-  });
-  const raw = await response.text();
-  let parsed: unknown = null;
-  try {
-    parsed = raw ? JSON.parse(raw) : null;
-  } catch {
-    parsed = null;
-  }
+  }, 'SUPABASE');
   if (!response.ok) {
     const details = typeof parsed === "object" && parsed ? parsed as JsonRecord : {};
     throw new SupabaseRpcError(
