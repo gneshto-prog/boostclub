@@ -4,10 +4,10 @@
 
 Total audit findings: 68 (consolidated; repeated page/copy recommendations are retained in AUDIT-COVERAGE.md)
 Fixed: 2
-Verified: 1
-Remaining: 65
+Verified: 11
+Remaining: 47
 External: 2
-Owner decision: 0
+Owner decision: 8
 Legal review: 0
 
 VERIFIED means verified in the local implementation unless production evidence is explicitly stated. Nothing has been deployed. Production booking restoration is not marked fixed.
@@ -52,23 +52,23 @@ VERIFIED means verified in the local implementation unless production evidence i
   Files changed: tests/booking.test.mjs, tests/booking-browser.mjs
   Verification: Local creation/replay/conflict/partial-failure tests pass. Real persistence and protected CRM/attendance reconciliation require E01 internal test workflow.
 
-- [ ] **B05 — Pale text on gold 1.38–1.60:1** — TODO
+- [x] **B05 — Pale text on gold 1.38–1.60:1** — VERIFIED
 
   Audit reference: Main audit §27 row 5. Area: Dark-section buttons.
-  Current behavior: Audit finding pending source comparison.
+  Current behavior: Original behavior recorded in Batch 2 plan of AUDIT-FIX-CHANGELOG.md.
   Change: Set deep-green primary-button text and test every state against 4.5:1.
   Expected result: Readable primary action
-  Files changed: None yet.
-  Verification: Not yet run.
+  Files changed: css/style.css
+  Verification: 12 regression tests; strict typecheck/syntax lint and all build validators passed. 39 public routes × 5 widths checked in browser, with menu Escape/focus and primary CTA contrast >=4.5:1. Local only; screenshot evidence in batch2. Hours/credentials remain explicitly withheld pending confirmation.
 
-- [ ] **B06 — Wrong metroM3** — TODO
+- [x] **B06 — Wrong metroM3** — VERIFIED
 
   Audit reference: Main audit §27 row 6. Area: Contact all locales.
-  Current behavior: Audit finding pending source comparison.
+  Current behavior: Original behavior recorded in Batch 2 plan of AUDIT-FIX-CHANGELOG.md.
   Change: Correct toM2; validate route/entrance before precise turns.
   Expected result: Fewer arrival errors
-  Files changed: None yet.
-  Verification: Not yet run.
+  Files changed: content/ro/pages.json, content/en/pages.json, content/ru/pages.json
+  Verification: 12 regression tests; strict typecheck/syntax lint and all build validators passed. 39 public routes × 5 widths checked in browser, with menu Escape/focus and primary CTA contrast >=4.5:1. Local only; screenshot evidence in batch2. Hours/credentials remain explicitly withheld pending confirmation.
 
 - [ ] **B07 — Instant and callback promises contradict actual model** — TODO
 
@@ -79,23 +79,23 @@ VERIFIED means verified in the local implementation unless production evidence i
   Files changed: None yet.
   Verification: Not yet run.
 
-- [ ] **B08 — Variable hours and mismatched coordinates** — TODO
+- [ ] **B08 — Variable hours and mismatched coordinates** — REQUIRES OWNER DECISION
 
   Audit reference: Main audit §27 row 8. Area: All NAP blocks/schema.
   Current behavior: Audit finding pending source comparison.
   Change: Verify actual staffed hours/entrance; publish one shared data record.
   Expected result: Reliable local information
-  Files changed: None yet.
-  Verification: Not yet run.
+  Files changed: scripts/lib/structured-data.mjs
+  Verification: O02: precise hours/entrance need owner confirmation. Mismatched geo/hours removed from schema; existing booking schedule unchanged.
 
-- [ ] **B09 — Paid continuation and products unclear** — TODO
+- [ ] **B09 — Paid continuation and products unclear** — REQUIRES OWNER DECISION
 
   Audit reference: Main audit §27 row 9. Area: Homepage/process.
   Current behavior: Audit finding pending source comparison.
   Change: Publish actual membership inclusions/costs; explain optional Herbalife purchase relationship near decision.
   Expected result: Informed qualified leads
   Files changed: None yet.
-  Verification: Not yet run.
+  Verification: See OWNER-DECISIONS.md O03–O08; no missing business fact, permission, transcript or offer status invented.
 
 - [ ] **B10 — Offer details too late** — TODO
 
@@ -106,7 +106,7 @@ VERIFIED means verified in the local implementation unless production evidence i
   Files changed: None yet.
   Verification: Not yet run.
 
-- [ ] **B11 — Secondary business overshadows primary goal** — TODO
+- [ ] **B11 — Secondary business overshadows primary goal** — IN PROGRESS
 
   Audit reference: Main audit §27 row 11. Area: Consumer header/home.
   Current behavior: Audit finding pending source comparison.
@@ -133,14 +133,14 @@ VERIFIED means verified in the local implementation unless production evidence i
   Files changed: None yet.
   Verification: Not yet run.
 
-- [ ] **B14 — Incorrect Law 53/2003 reference** — TODO
+- [x] **B14 — Incorrect Law 53/2003 reference** — VERIFIED
 
   Audit reference: Main audit §27 row 14. Area: RO terms.
-  Current behavior: Audit finding pending source comparison.
+  Current behavior: Original behavior recorded in Batch 2 plan of AUDIT-FIX-CHANGELOG.md.
   Change: Remove and obtain correct service-scope review.
   Expected result: Removes factual legal error
-  Files changed: None yet.
-  Verification: Not yet run.
+  Files changed: content/ro/pages.json
+  Verification: 12 regression tests; strict typecheck/syntax lint and all build validators passed. 39 public routes × 5 widths checked in browser, with menu Escape/focus and primary CTA contrast >=4.5:1. Local only; screenshot evidence in batch2. Hours/credentials remain explicitly withheld pending confirmation.
 
 - [ ] **B15 — Policy and deployment disagree** — TODO
 
@@ -169,23 +169,23 @@ VERIFIED means verified in the local implementation unless production evidence i
   Files changed: None yet.
   Verification: Not yet run.
 
-- [ ] **B18 — Unsubstantiated provenance/context** — TODO
+- [ ] **B18 — Unsubstantiated provenance/context** — REQUIRES OWNER DECISION
 
   Audit reference: Main audit §27 row 18. Area: Results/home.
   Current behavior: Audit finding pending source comparison.
   Change: Audit origin/permission; caption every retained image; build 3 real cases.
   Expected result: Credible proof
   Files changed: None yet.
-  Verification: Not yet run.
+  Verification: See OWNER-DECISIONS.md O03–O08; no missing business fact, permission, transcript or offer status invented.
 
-- [ ] **B19 — Credential/experience facts insufficiently evidenced** — TODO
+- [ ] **B19 — Credential/experience facts insufficiently evidenced** — REQUIRES OWNER DECISION
 
   Audit reference: Main audit §27 row 19. Area: Founder claims.
   Current behavior: Audit finding pending source comparison.
   Change: Publish exact verified qualification; source/date material statistics; separate family and personal experience.
   Expected result: Accountable expertise
   Files changed: None yet.
-  Verification: Not yet run.
+  Verification: See OWNER-DECISIONS.md O03–O08; no missing business fact, permission, transcript or offer status invented.
 
 - [ ] **B20 — Earnings certainty and selective comparisons** — TODO
 
@@ -214,14 +214,14 @@ VERIFIED means verified in the local implementation unless production evidence i
   Files changed: None yet.
   Verification: Not yet run.
 
-- [ ] **B23 — Insufficient actual-club evidence** — TODO
+- [ ] **B23 — Insufficient actual-club evidence** — REQUIRES OWNER DECISION
 
   Audit reference: Main audit §27 row 23. Area: Homepage/contact.
   Current behavior: Audit finding pending source comparison.
   Change: Photograph entrance, wide room, real assessment and consented daily activity.
   Expected result: Makes visit tangible
   Files changed: None yet.
-  Verification: Not yet run.
+  Verification: See OWNER-DECISIONS.md O03–O08; no missing business fact, permission, transcript or offer status invented.
 
 - [ ] **X01 — Publish optional paid continuation and independent Herbalife relationship without inventing prices** — TODO
 
@@ -270,23 +270,23 @@ VERIFIED means verified in the local implementation unless production evidence i
 
 ## P2
 
-- [ ] **B24 — Conflicting old programme/form** — TODO
+- [ ] **B24 — Conflicting old programme/form** — REQUIRES OWNER DECISION
 
   Audit reference: Main audit §27 row 24. Area: Legacy ambassador.
   Current behavior: Audit finding pending source comparison.
   Change: Confirm status; merge and 301 locale URLs to current business; update sitemap.
   Expected result: One coherent partner offer
   Files changed: None yet.
-  Verification: Not yet run.
+  Verification: See OWNER-DECISIONS.md O03–O08; no missing business fact, permission, transcript or offer status invented.
 
-- [ ] **B25 — Overlapping biographies** — TODO
+- [ ] **B25 — Overlapping biographies** — REQUIRES OWNER DECISION
 
   Audit reference: Main audit §27 row 25. Area: Gabi/Gabriel.
   Current behavior: Audit finding pending source comparison.
   Change: Decide distinct social/partner role using traffic/link evidence; otherwise merge with redirects.
   Expected result: Less content drift
   Files changed: None yet.
-  Verification: Not yet run.
+  Verification: See OWNER-DECISIONS.md O03–O08; no missing business fact, permission, transcript or offer status invented.
 
 - [ ] **B26 — Referral pitch before membership understanding** — TODO
 
@@ -297,32 +297,32 @@ VERIFIED means verified in the local implementation unless production evidence i
   Files changed: None yet.
   Verification: Not yet run.
 
-- [ ] **B27 — Results omission and state/Escape inconsistency** — TODO
+- [x] **B27 — Results omission and state/Escape inconsistency** — VERIFIED
 
   Audit reference: Main audit §27 row 27. Area: Mobile navigation.
-  Current behavior: Audit finding pending source comparison.
+  Current behavior: Original behavior recorded in Batch 2 plan of AUDIT-FIX-CHANGELOG.md.
   Change: Generate same links; synchronise expanded state and close/focus behaviour.
   Expected result: Predictable navigation
-  Files changed: None yet.
-  Verification: Not yet run.
+  Files changed: content/site.mjs, scripts/lib/components.mjs, js/main.js
+  Verification: 12 regression tests; strict typecheck/syntax lint and all build validators passed. 39 public routes × 5 widths checked in browser, with menu Escape/focus and primary CTA contrast >=4.5:1. Local only; screenshot evidence in batch2. Hours/credentials remain explicitly withheld pending confirmation.
 
-- [ ] **B28 — Keyboard access missing** — TODO
+- [x] **B28 — Keyboard access missing** — VERIFIED
 
   Audit reference: Main audit §27 row 28. Area: Legal/business scroll regions.
-  Current behavior: Audit finding pending source comparison.
+  Current behavior: Original behavior recorded in Batch 2 plan of AUDIT-FIX-CHANGELOG.md.
   Change: Focusable labelled wrapper or readable reflow; test Safari/keyboard.
   Expected result: Accessible content
-  Files changed: None yet.
-  Verification: Not yet run.
+  Files changed: content/ro/pages.json, content/en/pages.json, content/ru/pages.json, css/style.css
+  Verification: 12 regression tests; strict typecheck/syntax lint and all build validators passed. 39 public routes × 5 widths checked in browser, with menu Escape/focus and primary CTA contrast >=4.5:1. Local only; screenshot evidence in batch2. Hours/credentials remain explicitly withheld pending confirmation.
 
-- [ ] **B29 — Captions/transcript absent in markup** — TODO
+- [ ] **B29 — Captions/transcript absent in markup** — REQUIRES OWNER DECISION
 
   Audit reference: Main audit §27 row 29. Area: Founder video.
   Current behavior: Audit finding pending source comparison.
   Change: Add reviewed captions and transcript in available languages.
   Expected result: Accessible founder story
   Files changed: None yet.
-  Verification: Not yet run.
+  Verification: See OWNER-DECISIONS.md O03–O08; no missing business fact, permission, transcript or offer status invented.
 
 - [ ] **B30 — Important process/FAQ parity gaps** — TODO
 
@@ -342,14 +342,14 @@ VERIFIED means verified in the local implementation unless production evidence i
   Files changed: None yet.
   Verification: Not yet run.
 
-- [ ] **B32 — Unsupported WellnessCenter type** — TODO
+- [x] **B32 — Unsupported WellnessCenter type** — VERIFIED
 
   Audit reference: Main audit §27 row 32. Area: Schema.
-  Current behavior: Audit finding pending source comparison.
+  Current behavior: Original behavior recorded in Batch 2 plan of AUDIT-FIX-CHANGELOG.md.
   Change: Use truthful valid LocalBusiness type, stable IDs and verified location data.
   Expected result: Machine-readable entity clarity
-  Files changed: None yet.
-  Verification: Not yet run.
+  Files changed: scripts/lib/structured-data.mjs
+  Verification: 12 regression tests; strict typecheck/syntax lint and all build validators passed. 39 public routes × 5 widths checked in browser, with menu Escape/focus and primary CTA contrast >=4.5:1. Local only; screenshot evidence in batch2. Hours/credentials remain explicitly withheld pending confirmation.
 
 - [ ] **B33 — Duplicate 200 homepage on romnutriclub.ro** — TODO
 
@@ -360,14 +360,14 @@ VERIFIED means verified in the local implementation unless production evidence i
   Files changed: None yet.
   Verification: Not yet run.
 
-- [ ] **B34 — Service/brand/process overlap** — TODO
+- [x] **B34 — Service/brand/process overlap** — VERIFIED
 
   Audit reference: Main audit §27 row 34. Area: Page targeting.
-  Current behavior: Audit finding pending source comparison.
+  Current behavior: Original behavior recorded in Batch 2 plan of AUDIT-FIX-CHANGELOG.md.
   Change: Use keyword-intent map; refine titles/internal anchors and content roles.
   Expected result: Relevant organic landing paths
-  Files changed: None yet.
-  Verification: Not yet run.
+  Files changed: content/ro/pages.json, content/en/pages.json, content/ru/pages.json
+  Verification: 12 regression tests; strict typecheck/syntax lint and all build validators passed. 39 public routes × 5 widths checked in browser, with menu Escape/focus and primary CTA contrast >=4.5:1. Local only; screenshot evidence in batch2. Hours/credentials remain explicitly withheld pending confirmation.
 
 - [ ] **B35 — 960 px thumbnails, `results13.webp`, largest at 156.6 KiB** — TODO
 
@@ -387,7 +387,7 @@ VERIFIED means verified in the local implementation unless production evidence i
   Files changed: None yet.
   Verification: Not yet run.
 
-- [ ] **B37 — Manual template/fact duplication** — TODO
+- [ ] **B37 — Manual template/fact duplication** — IN PROGRESS
 
   Audit reference: Main audit §27 row 37. Area: Shared components.
   Current behavior: Audit finding pending source comparison.
@@ -396,7 +396,7 @@ VERIFIED means verified in the local implementation unless production evidence i
   Files changed: None yet.
   Verification: Not yet run.
 
-- [ ] **B38 — Intro/portal and decorative repetition** — TODO
+- [ ] **B38 — Intro/portal and decorative repetition** — IN PROGRESS
 
   Audit reference: Main audit §27 row 38. Area: Motion.
   Current behavior: Audit finding pending source comparison.
@@ -495,23 +495,23 @@ VERIFIED means verified in the local implementation unless production evidence i
   Files changed: None yet.
   Verification: Not yet run.
 
-- [ ] **X12 — Shared LocalBusiness/Person IDs and reciprocal locale markup, no review-star claims** — TODO
+- [x] **X12 — Shared LocalBusiness/Person IDs and reciprocal locale markup, no review-star claims** — VERIFIED
 
   Audit reference: §§12–14. Area: Schema entities.
-  Current behavior: Pending source comparison.
+  Current behavior: Original behavior recorded in Batch 2 plan of AUDIT-FIX-CHANGELOG.md.
   Change: Shared LocalBusiness/Person IDs and reciprocal locale markup, no review-star claims
   Expected result: Resolve the referenced audit recommendation without unsupported facts.
-  Files changed: None yet.
-  Verification: Not yet run.
+  Files changed: scripts/lib/structured-data.mjs
+  Verification: 12 regression tests; strict typecheck/syntax lint and all build validators passed. 39 public routes × 5 widths checked in browser, with menu Escape/focus and primary CTA contrast >=4.5:1. Local only; screenshot evidence in batch2. Hours/credentials remain explicitly withheld pending confirmation.
 
-- [ ] **X13 — Retain proper 404 and noindex; provide locale-aware home/booking links** — TODO
+- [x] **X13 — Retain proper 404 and noindex; provide locale-aware home/booking links** — VERIFIED
 
   Audit reference: page-by-page /404.html. Area: 404 recovery.
-  Current behavior: Pending source comparison.
+  Current behavior: Original behavior recorded in Batch 2 plan of AUDIT-FIX-CHANGELOG.md.
   Change: Retain proper 404 and noindex; provide locale-aware home/booking links
   Expected result: Resolve the referenced audit recommendation without unsupported facts.
-  Files changed: None yet.
-  Verification: Not yet run.
+  Files changed: content/root/pages.json
+  Verification: 12 regression tests; strict typecheck/syntax lint and all build validators passed. 39 public routes × 5 widths checked in browser, with menu Escape/focus and primary CTA contrast >=4.5:1. Local only; screenshot evidence in batch2. Hours/credentials remain explicitly withheld pending confirmation.
 
 - [ ] **X14 — Preserve working routes, contacts, reviews, HTML, sticky bar, video controls and free nonmedical scope** — TODO
 
@@ -614,14 +614,14 @@ VERIFIED means verified in the local implementation unless production evidence i
   Files changed: None yet.
   Verification: Not yet run.
 
-- [ ] **B43 — Uniform stale lastmod** — TODO
+- [x] **B43 — Uniform stale lastmod** — VERIFIED
 
   Audit reference: Main audit §27 row 43. Area: Sitemap dates.
-  Current behavior: Audit finding pending source comparison.
+  Current behavior: Original behavior recorded in Batch 2 plan of AUDIT-FIX-CHANGELOG.md.
   Change: Use real significant modification dates.
   Expected result: Accurate crawl hints
-  Files changed: None yet.
-  Verification: Not yet run.
+  Files changed: sitemap.xml
+  Verification: 12 regression tests; strict typecheck/syntax lint and all build validators passed. 39 public routes × 5 widths checked in browser, with menu Escape/focus and primary CTA contrast >=4.5:1. Local only; screenshot evidence in batch2. Hours/credentials remain explicitly withheld pending confirmation.
 
 - [ ] **X23 — Reduce decorative shadows/cards/icons only after P0 is verified; preserve brand** — TODO
 

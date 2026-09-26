@@ -25,3 +25,20 @@ VERIFY: deterministic backend tests and browser journeys across RO/EN/RU; produc
 - Syntax lint and strict TypeScript check passed. Production build and all existing validators passed; explicit reviewed parity hashes record intended booking HTML differences.
 - Browser: RO/EN/RU × 375/430/768/1366/1440, inline failure recovery, no overflow, closed/full/offline, input retention, focused 409 error, success/reload, Netlify archive failure. No real lead created.
 - Root cause is external deployment-context configuration. All live production claims remain unverified. Cosmetic work stays gated while that remains unresolved.
+
+## 2026-09-26 — Batch 2 plan: shared foundations and factual corrections
+
+AUDIT FINDINGS: B05/B06/B14/B27/B28/B32/B34/B37/B42/B43, X12/X13.
+CURRENT BEHAVIOR: dark-section links override primary CTA color; mobile Results is missing and Escape does not close the menu; legal navigation differs; contact directions identify the wrong metro line and conflicting turns; schema uses WellnessCenter and unverified coordinates/hours; old FAQ schema diverges from the booking UI; legal tables lack keyboard scroll regions; Romanian terms incorrectly cite the Labour Code as a nutrition regulation.
+CHANGE: shared consumer navigation/footer, accessible menu state, readable CTA/closed labels, M1/M2 and address-based navigation, one localized schema graph with stable business/person identities and no disputed facts, keyboard table regions, corrected irrelevant citation, targeted intent metadata and honest sitemap dates. Preserve all routes, reviews, disclosures and legal scope.
+EXPECTED RESULT: accessible discovery and booking CTAs; consistent crawlable identities; no misleading directions or false precision.
+VERIFY: local semantic/SEO regression tests, keyboard/contrast/browser checks at all required widths and existing build validators. Ambiguous opening hours, entrance pin and substantive legal wording remain owner/reviewer decisions.
+
+### Batch 2 verification
+
+- 12 backend/SEO/semantic regression tests passed; strict TypeScript, syntax lint, original site/concept/Soft Current validators passed.
+- 39 public routes × 375/430/768/1366/1440 passed document-overflow checks. Consumer mobile menus include Results, Escape closes them, aria-expanded resets and focus returns to the toggle.
+- Dark primary buttons passed 4.5:1 at both computed gradient stops in normal/hover/focus states. Screenshots inspected for RO contact/mobile, RU home/mobile and EN cookies/desktop; fullpage lazy images require viewport scrolling for final photo comparison.
+- Preserved the intentional EN x-default on the international business and Gabi funnels; all alternate links remain reciprocal. Other x-defaults remain RO.
+- No review-rich-result or FAQ-rich-result claim. Google’s former FAQ documentation URL currently redirects to Search updates; ordinary FAQs remain visible without duplicated JSON-LD answers.
+- Sources: https://schema.org/LocalBusiness; Metrorex map cited in the audit; Romanian Labour Code source linked in compliance notes. No production changes.

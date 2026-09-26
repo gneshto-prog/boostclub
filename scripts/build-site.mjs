@@ -5,6 +5,7 @@ import path from "node:path";
 import { documentTemplate, footer, header, renderRegisteredComponents } from "./lib/components.mjs";
 import { buildHomepageConcepts } from "./lib/homepage-concepts.mjs";
 import { buildSoftCurrentSite } from "./lib/soft-current-site.mjs";
+import { structuredHead } from "./lib/structured-data.mjs";
 
 const root = process.cwd();
 const outputRoot = path.join(root, "_site");
@@ -25,7 +26,7 @@ function renderPage(page) {
   return documentTemplate({
     doctype: page.doctype,
     htmlOpen: page.htmlOpen,
-    head: page.head,
+    head: structuredHead(page),
     bodyOpen: page.bodyOpen,
     body,
   });

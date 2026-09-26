@@ -593,3 +593,5 @@ html[data-css~="business-phase2"] {
 }
 
 :root { --tap-target: 44px; --border-width: 2px; --space-1: 4px; --space-3: 12px; --space-4: 16px; --space-9: 12px; }
+
+:root { --viewport-height: 100dvh; }

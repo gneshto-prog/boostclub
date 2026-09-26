@@ -1,14 +1,178 @@
 {
   "consultatie-gratuita.html": {
-    "hash": "04484d1838743f3e97fb51b57bffe1ed197e87fd8cd64af1e8ab6c405179028d",
-    "reason": "Batch 1: translated resilient booking form and optional goal"
+    "hash": "0ec704df92c1a3ddab8ee40556763d0ddf902756a0d36de3e176d63eee6c2a55",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
   },
   "en/consultatie-gratuita.html": {
-    "hash": "1be10fec7ec00252cb850e35f11eb1578bfc237bbf4dd95c9b7deff26ea69218",
-    "reason": "Batch 1: translated resilient booking form and optional goal"
+    "hash": "c5415b5b76f8983ba7ed67178403f7693b0249d51b1eeadd6afe0ebe3a3730bd",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
   },
   "ru/consultatie-gratuita.html": {
-    "hash": "ea2834a3def8eea3c789c663f38efbdde1a8a350a67aead2fe1ede91c3a4a5b0",
-    "reason": "Batch 1: translated resilient booking form and optional goal"
+    "hash": "703720b513c326a0b853fe2ac3b60c27aa697f4c03288689af3739c984479a35",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "index.html": {
+    "hash": "bb5f9bd3b63712c40d8be2ce3fb407df8d6a21a3c24e10675473256e33baa76e",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "ambasador.html": {
+    "hash": "d4b2dd96ad8337c2c3e47577945c8ec2e822945cb1995ffe3f6a706cfe05c272",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "business.html": {
+    "hash": "76a13a00f724ca82e41d86427baffd8eff8d126ea7693c81a60c3432e784370c",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "confidentialitate.html": {
+    "hash": "bbfb8f467bc7d0df63a1432ce0b7ba2b870b8f00a54b10af615dcad977956320",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "contact.html": {
+    "hash": "27a40c3d28728c0003dd1caadf9052537bd78a31f579bcf682373ee866ab56a1",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "cookies.html": {
+    "hash": "4b2a94574155c8b2776115987886be6d3cfe2dc70f8fe4ee3efeac706539e680",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "cum-functioneaza.html": {
+    "hash": "d4bba0abd2dbf37c60ef250ccf6297ca965dc5aaba1099bd257e4404e6a50dc1",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "gabi.html": {
+    "hash": "9dd0afc6d2397d511f3f1634edb3d83ec2b6d6cbc102c09ec3b131e93ecdbac6",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "gabriel.html": {
+    "hash": "c4ff0c2ebd58f5ca87553e2ec086f01e600ce67525ff302a257793843ab2e846",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "multumim.html": {
+    "hash": "a500c85279092634aaabcecd0bd33f7ad59a1b69ac869a79a294063a9c6c384e",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "recenzii.html": {
+    "hash": "e797ba2a5a5a2e3afd4ebef8bc95e435e5416cb4bb78a013d7f65d08788c5ef5",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "rezultate.html": {
+    "hash": "1322f1e7d4cd5ab7e67812b8744931c7a1c54cc15fc9c22b5532e5a0eea86601",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "termeni.html": {
+    "hash": "9d9cb0e98166ea5c18d56ea738152ae3c6d56a2f57fe9864427aa7b01a4fbf85",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "en/index.html": {
+    "hash": "fc0d8267142a575897b075ec229deb8e726c6ffd588f06925710b6932d2f857a",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "en/ambasador.html": {
+    "hash": "40d619ea75e9cfbff9963e35fde69f16ce30d8929c0e64668fcf282f7adb86a7",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "en/business.html": {
+    "hash": "e5b139c224454df547de4227145b3a2fe13f0708fe0141e8e90d5a9ae35a4384",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "en/confidentialitate.html": {
+    "hash": "54a628d2fae7f79a485ffbe745ec59b684d793b12aed9a57306e7480dcb4ba2a",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "en/contact.html": {
+    "hash": "b5859d347170770cbb2275e7860e07c71df41532ae283de40921357dac1148ff",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "en/cookies.html": {
+    "hash": "8cb2b4cf5fbdc67d6956c6f23e36f5b5a86f19e4baf7952f76616d89c2f98f32",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "en/cum-functioneaza.html": {
+    "hash": "ce2d634c6f2c3ef8b0a450f4e11012008fe9db12574f4725a548d02632e45d99",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "en/gabi.html": {
+    "hash": "440f54dfd6e40ce4efa75d9e1f927a07370be81c238f0a621419710aebe092e1",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "en/gabriel.html": {
+    "hash": "b2d3906e40ef61499099228ab9cc72ab743e890839345545d9276200096f82b8",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "en/multumim.html": {
+    "hash": "99e8ebcd2d2437979b9aac62acc2b85d7e38b708617220eb03c268234fdfb8ab",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "en/recenzii.html": {
+    "hash": "b05a17dc881772f0c8c9868f0df5e75fd4da191ecce29b352a707bb79e6bef2b",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "en/rezultate.html": {
+    "hash": "747b26b93a545cb51894998bc85f14fb083b625f843b79264d0179eefd3ad61a",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "en/termeni.html": {
+    "hash": "0030ae83d1b27d17825a992459ad2d6fed5cc57e11f290342eb8d00c9d5850b1",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "ru/index.html": {
+    "hash": "77610b767ef6a69763497d70ed3454cb7a0e5a276df7815c4168d16d60831b0e",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "ru/ambasador.html": {
+    "hash": "1abbb6f8f1e53884218ace17245e778944239d1c24353fcb6385b73316dede62",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "ru/business.html": {
+    "hash": "d69fb06f1baf1e70320006f85386baaf1b01751fc499778f75fe2663de14420c",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "ru/confidentialitate.html": {
+    "hash": "b9ca139f1cfca8ac9b712d03de44a0629e6c698ad9a56e6f1d0a99d07834cb5a",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "ru/contact.html": {
+    "hash": "007a8bb4e64cd1e09433921c58c6fcdbe3557af14fce7c69ba55041a3ffb7a4e",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "ru/cookies.html": {
+    "hash": "2eb7495a7d6139222ce4c9a3f3ab521dae456bebe718215a81bf3031cc258c04",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "ru/cum-functioneaza.html": {
+    "hash": "14af5c7bef166f1830c77a0d59e08fe86820b7b2a68cbd227819987d22e3229d",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "ru/gabi.html": {
+    "hash": "1b46f4ef8d5b88a387481f8244c65942b8ad3514e6f7908a73cc1aa644ac6f3b",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "ru/gabriel.html": {
+    "hash": "a34f00c4550a357e8707b509423d78e6d29a60baa473a9826fedb2967dbde4bf",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "ru/multumim.html": {
+    "hash": "9d0a55a3a30b1a51aaa9381de85acec42b656bc455ae07c9a4545acdbf0e461a",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "ru/recenzii.html": {
+    "hash": "eb6af0befb9ea151aac259151b6317a872dff3e64c54cde24ac1f05dc0afc5f2",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "ru/rezultate.html": {
+    "hash": "c6a6d73eea0ccc689b036bfdbb6c6ccc19c30b4259364249abee8eb4967dbab9",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "ru/termeni.html": {
+    "hash": "b55b1c1ca17f78171e20f1d0861eacf4c96b7068fd739c0c768ecb8bec7d69e0",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "404.html": {
+    "hash": "964fe3868fa4bd12de70f3bf18e4003556f6c4090bde9b38ba496e564fe90509",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
+  },
+  "program-trainee.html": {
+    "hash": "99422ecd93557cfa38416b683a1ca3c818fc93f94a83f6618ee3dd7a8aaba72c",
+    "reason": "Batch 2: shared SEO identities, factual corrections and accessible navigation/tables"
   }
 }

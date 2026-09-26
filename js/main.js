@@ -15,24 +15,6 @@
     return el;
   }
 
-  /* ---------- 0. Intro curtain — once per session ---------- */
-  if (!RM && !sessionStorage.getItem("bc-intro")) {
-    sessionStorage.setItem("bc-intro", "1");
-    var curtain = document.createElement("div");
-    curtain.className = "curtain";
-    curtain.setAttribute("aria-hidden", "true");
-    curtain.innerHTML =
-      '<div class="mark">B' +
-      '<svg class="logo-leaf" viewBox="0 0 24 24"><path class="leaf-body" d="M2 22C2 10 10 2 22 2c0 12-8 20-20 20Z"/><path class="leaf-slash" d="M7.5 16.5l9-9"/></svg>' +
-      '<svg class="logo-leaf" viewBox="0 0 24 24"><path class="leaf-body" d="M2 22C2 10 10 2 22 2c0 12-8 20-20 20Z"/><path class="leaf-slash" d="M7.5 16.5l9-9"/></svg>' +
-      'st&nbsp;Club<span class="dot">.</span></div>';
-    document.body.appendChild(curtain);
-    var killCurtain = function () { curtain.classList.add("done"); };
-    setTimeout(killCurtain, 1100);
-    setTimeout(function () { if (curtain.parentNode) curtain.parentNode.removeChild(curtain); }, 1700);
-    window.addEventListener("scroll", killCurtain, { once: true, passive: true });
-  }
-
   /* ---------- 1. Header — transparent over dark hero, frosted on scroll ---------- */
   var header = document.querySelector(".site-header");
   var main = document.querySelector("main");
@@ -235,14 +217,22 @@
   var toggle = document.querySelector(".menu-toggle");
   var menu = document.querySelector(".mobile-menu");
   if (toggle && menu) {
-    toggle.addEventListener("click", function () {
-      var open = menu.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    function setMenu(open, returnFocus) {
+      menu.classList.toggle("open", open);
+      toggle.setAttribute("aria-expanded", String(open));
       if (open && header) header.classList.add("scrolled");
-      else window.dispatchEvent(new Event("scroll"));
-    });
+      if (!open) window.dispatchEvent(new Event("scroll"));
+      if (returnFocus) toggle.focus();
+    }
+    toggle.addEventListener("click", function () { setMenu(!menu.classList.contains("open")); });
     menu.querySelectorAll("a").forEach(function (a) {
-      a.addEventListener("click", function () { menu.classList.remove("open"); });
+      a.addEventListener("click", function () { setMenu(false); });
+    });
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && menu.classList.contains("open")) setMenu(false, true);
+    });
+    window.matchMedia("(min-width: 920px)").addEventListener("change", function (event) {
+      if (event.matches) setMenu(false);
     });
   }
 
@@ -292,48 +282,3 @@
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 })();
 
-/* ===== Partner "world-change" transition (blue tab -> /business) ===== */
-(function () {
-  "use strict";
-  // Match every localized clean business URL without coupling this effect to one language.
-  var links = document.querySelectorAll('.nav a[href*="business"], .mobile-menu a[href*="business"]');
-  if (!links.length) return;
-  var rm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var veil = document.createElement("div");
-  veil.id = "bc-veil"; veil.setAttribute("aria-hidden", "true");
-  document.body.appendChild(veil);
-  var over = document.createElement("div");
-  over.id = "bc-xover";
-  over.setAttribute("aria-hidden", "true");
-  over.innerHTML = '<div class="bc-stars"></div><div class="bc-flash"></div><div class="bc-wm">GABI NESHTO<span class="d">.</span></div><div class="bc-sub">Program Partener</div><div class="bc-load"><i></i></div>';
-  document.body.appendChild(over);
-  Array.prototype.forEach.call(links, function (link) {
-    link.addEventListener("click", function (e) {
-      var href = link.getAttribute("href");
-      if (!href) return;
-      e.preventDefault();
-      try { sessionStorage.setItem("bc-portal", "1"); } catch (err) {}
-      if (rm) { location.href = href; return; }
-      var r = link.getBoundingClientRect();
-      var cx = r.left + r.width / 2, cy = r.top + r.height / 2;
-      veil.classList.add("on");                       // the client world dims & recedes
-      over.style.pointerEvents = "auto";
-      over.style.clipPath = "circle(0px at " + cx + "px " + cy + "px)";
-      void over.offsetWidth;
-      over.classList.add("go");                        // portal irises open, accelerating
-      over.style.clipPath = "circle(165% at " + cx + "px " + cy + "px)";
-      setTimeout(function () { over.classList.add("flash"); }, 540); // threshold flash
-      var done = false, go = function () { if (done) return; done = true; location.href = href; };
-      // Navigate when the loading bar finishes filling. Previously this
-      // listened for any transitionend on the overlay — transitions from
-      // .bc-wm/.bc-sub children bubble up and fired it early (~0.6s),
-      // cutting the portal short.
-      var bar = over.querySelector(".bc-load i");
-      over.addEventListener("transitionend", function (ev) {
-        if (bar ? (ev.target === bar && ev.propertyName === "transform")
-                : (ev.target === over && ev.propertyName.indexOf("clip") > -1)) go();
-      });
-      setTimeout(go, 1250);
-    });
-  });
-})();

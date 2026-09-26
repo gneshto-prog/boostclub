@@ -425,6 +425,9 @@ a:focus-visible, button:focus-visible, .btn:focus-visible { outline: var(--lengt
 .section-dark p, .section-dark .lead { color: var(--color-fca22cd7); }
 .section-dark .eyebrow { color: var(--gold-soft); }
 .section-dark a { color: var(--color-86842257); }
+.section-dark a.btn-primary,
+.section-dark a.btn-primary:hover,
+.section-dark a.btn-primary:focus-visible { color: var(--green-dark); }
 
 /* parallax leaves injected by JS into the first dark section */
 .bg-leaf { position: absolute; pointer-events: none; will-change: transform; z-index: 0; }
@@ -711,6 +714,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible { outline: var(--lengt
   padding-bottom: var(--s2);
 }
 .mobile-menu.open { display: block; }
+.mobile-menu { max-height: calc(var(--viewport-height) - var(--header-h)); overflow-y: auto; }
 .mobile-menu a {
   display: block;
   padding: var(--length-7f108801) var(--s3);
@@ -720,6 +724,9 @@ a:focus-visible, button:focus-visible, .btn:focus-visible { outline: var(--lengt
   border-bottom: var(--length-93e20626) solid var(--line);
 }
 .mobile-menu a:last-of-type { border-bottom: 0; }
+.table-scroll { overflow-x: auto; }
+.table-scroll:focus-visible, .cwrap:focus-visible { outline: var(--border-width) solid var(--green); outline-offset: var(--space-1); }
+.site-footer a { display: inline-block; padding-block: var(--s1); }
 
 /* ---- 15. FOOTER ---- */
 .site-footer {

@@ -24,19 +24,8 @@ function renderLanguageSwitcher(lang, slug) {
 const applyLabels = { ro: "Aplică acum", en: "Apply now", ru: "Подать заявку" };
 
 function navItems({ lang, slug, mobile }) {
-  if (slug === "program-trainee") {
-    const slugs = mobile
-      ? ["consultatie-gratuita", "cum-functioneaza", "recenzii", "rezultate", "gabriel", "contact", "business"]
-      : ["consultatie-gratuita", "cum-functioneaza", "recenzii", "gabriel", "contact", "business"];
-    return slugs.map((itemSlug) => ({
-      href: itemSlug,
-      label: itemSlug === "consultatie-gratuita" ? "Evaluare gratuită" : itemSlug === "business" ? "Program partener" : navigation.find((item) => item.slug === itemSlug).labels.ro,
-      current: false,
-    }));
-  }
   return navigation
-    .filter((item) => !mobile || item.mobile || item.slug === slug)
-    .filter((item) => !["confidentialitate", "cookies", "termeni"].includes(slug) || item.slug !== "rezultate")
+    .filter((item) => item.slug !== "business")
     .map((item) => ({
       href: slug === "ambasador" && item.slug === "business" ? "ambasador" : item.slug,
       label: item.labels[lang],
@@ -57,7 +46,7 @@ export function nav({ lang, slug, mobile = false }) {
   }
   const switcher = renderLanguageSwitcher(lang, slug);
   if (mobile) {
-    return `<nav class="mobile-menu" aria-label="${copy.mobileNavLabel}">\n    ${links}\n    <div class="lang-switcher" aria-label="Language">${switcher}</div>\n  </nav>`;
+    return `<nav id="mobile-navigation" class="mobile-menu" aria-label="${copy.mobileNavLabel}">\n    ${links}\n    <div class="lang-switcher" aria-label="Language">${switcher}</div>\n  </nav>`;
   }
   const ctaHref = slug === "ambasador" ? "#cerere" : slug === "consultatie-gratuita" ? (lang === "ro" ? "#formular" : "#form") : "consultatie-gratuita";
   const ctaLabel = slug === "ambasador" ? applyLabels[lang] : copy.book;
@@ -66,7 +55,7 @@ export function nav({ lang, slug, mobile = false }) {
 
 export function header({ lang, slug }) {
   const copy = localeContent[lang];
-  const controls = slug === "program-trainee" ? ' aria-controls="mobile-navigation"' : "";
+  const controls = ' aria-controls="mobile-navigation"';
   return `<header class="site-header">
   <div class="container header-inner">
     <a href="./" class="logo"><span class="sr-only">Boost Club</span><span class="logo-visual" aria-hidden="true">${logoVisual}</span></a>
@@ -80,7 +69,7 @@ export function header({ lang, slug }) {
 export function footer({ lang }) {
   const copy = localeContent[lang];
   const wa = `https://wa.me/40726205752?text=${copy.whatsappText}`;
-  const navLinks = navigation.filter((item) => ["consultatie-gratuita", "cum-functioneaza", "recenzii", "business"].includes(item.slug));
+  const navLinks = navigation;
   return `<footer class="site-footer">
   <div class="container">
     <div class="footer-grid">

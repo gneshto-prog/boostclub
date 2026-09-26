@@ -1,46 +1,46 @@
 | Page | DOM result | Intentional difference or reason |
 |---|---|---|
-| `index.html` | Equivalent | None |
-| `ambasador.html` | Equivalent | None |
-| `business.html` | Equivalent | None |
-| `confidentialitate.html` | Equivalent | None |
-| `consultatie-gratuita.html` | Equivalent | Batch 1: translated resilient booking form and optional goal |
-| `contact.html` | Equivalent | None |
-| `cookies.html` | Equivalent | None |
-| `cum-functioneaza.html` | Equivalent | None |
-| `gabi.html` | Equivalent | None |
-| `gabriel.html` | Equivalent | None |
-| `multumim.html` | Equivalent | None |
-| `recenzii.html` | Equivalent | None |
-| `rezultate.html` | Equivalent | None |
-| `termeni.html` | Equivalent | None |
-| `en/index.html` | Equivalent | None |
-| `en/ambasador.html` | Equivalent | None |
-| `en/business.html` | Equivalent | None |
-| `en/confidentialitate.html` | Equivalent | None |
-| `en/consultatie-gratuita.html` | Equivalent | Batch 1: translated resilient booking form and optional goal |
-| `en/contact.html` | Equivalent | None |
-| `en/cookies.html` | Equivalent | None |
-| `en/cum-functioneaza.html` | Equivalent | None |
-| `en/gabi.html` | Equivalent | None |
-| `en/gabriel.html` | Equivalent | None |
-| `en/multumim.html` | Equivalent | None |
-| `en/recenzii.html` | Equivalent | None |
-| `en/rezultate.html` | Equivalent | None |
-| `en/termeni.html` | Equivalent | None |
-| `ru/index.html` | Equivalent | None |
-| `ru/ambasador.html` | Equivalent | None |
-| `ru/business.html` | Equivalent | None |
-| `ru/confidentialitate.html` | Equivalent | None |
-| `ru/consultatie-gratuita.html` | Equivalent | Batch 1: translated resilient booking form and optional goal |
-| `ru/contact.html` | Equivalent | None |
-| `ru/cookies.html` | Equivalent | None |
-| `ru/cum-functioneaza.html` | Equivalent | None |
-| `ru/gabi.html` | Equivalent | None |
-| `ru/gabriel.html` | Equivalent | None |
-| `ru/multumim.html` | Equivalent | None |
-| `ru/recenzii.html` | Equivalent | None |
-| `ru/rezultate.html` | Equivalent | None |
-| `ru/termeni.html` | Equivalent | None |
-| `404.html` | Equivalent | None |
-| `program-trainee.html` | Equivalent | None |
+| `index.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `ambasador.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `business.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `confidentialitate.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `consultatie-gratuita.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `contact.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `cookies.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `cum-functioneaza.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `gabi.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `gabriel.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `multumim.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `recenzii.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `rezultate.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `termeni.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `en/index.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `en/ambasador.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `en/business.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `en/confidentialitate.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `en/consultatie-gratuita.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `en/contact.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `en/cookies.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `en/cum-functioneaza.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `en/gabi.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `en/gabriel.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `en/multumim.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `en/recenzii.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `en/rezultate.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `en/termeni.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `ru/index.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `ru/ambasador.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `ru/business.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `ru/confidentialitate.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `ru/consultatie-gratuita.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `ru/contact.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `ru/cookies.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `ru/cum-functioneaza.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `ru/gabi.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `ru/gabriel.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `ru/multumim.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `ru/recenzii.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `ru/rezultate.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `ru/termeni.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `404.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |
+| `program-trainee.html` | Equivalent | Batch 2: shared SEO identities, factual corrections and accessible navigation/tables |

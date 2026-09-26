@@ -68,11 +68,13 @@
     "finding": "Pale text on gold 1.38–1.60:1",
     "change": "Set deep-green primary-button text and test every state against 4.5:1.",
     "reference": "Main audit §27 row 5",
-    "status": "TODO",
-    "current": "Audit finding pending source comparison.",
+    "status": "VERIFIED",
+    "current": "Original behavior recorded in Batch 2 plan of AUDIT-FIX-CHANGELOG.md.",
     "expected": "Readable primary action",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "css/style.css"
+    ],
+    "verification": "12 regression tests; strict typecheck/syntax lint and all build validators passed. 39 public routes × 5 widths checked in browser, with menu Escape/focus and primary CTA contrast >=4.5:1. Local only; screenshot evidence in batch2. Hours/credentials remain explicitly withheld pending confirmation."
   },
   {
     "id": "B06",
@@ -81,11 +83,15 @@
     "finding": "Wrong metroM3",
     "change": "Correct toM2; validate route/entrance before precise turns.",
     "reference": "Main audit §27 row 6",
-    "status": "TODO",
-    "current": "Audit finding pending source comparison.",
+    "status": "VERIFIED",
+    "current": "Original behavior recorded in Batch 2 plan of AUDIT-FIX-CHANGELOG.md.",
     "expected": "Fewer arrival errors",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "content/ro/pages.json",
+      "content/en/pages.json",
+      "content/ru/pages.json"
+    ],
+    "verification": "12 regression tests; strict typecheck/syntax lint and all build validators passed. 39 public routes × 5 widths checked in browser, with menu Escape/focus and primary CTA contrast >=4.5:1. Local only; screenshot evidence in batch2. Hours/credentials remain explicitly withheld pending confirmation."
   },
   {
     "id": "B07",
@@ -107,11 +113,13 @@
     "finding": "Variable hours and mismatched coordinates",
     "change": "Verify actual staffed hours/entrance; publish one shared data record.",
     "reference": "Main audit §27 row 8",
-    "status": "TODO",
+    "status": "REQUIRES OWNER DECISION",
     "current": "Audit finding pending source comparison.",
     "expected": "Reliable local information",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "scripts/lib/structured-data.mjs"
+    ],
+    "verification": "O02: precise hours/entrance need owner confirmation. Mismatched geo/hours removed from schema; existing booking schedule unchanged."
   },
   {
     "id": "B09",
@@ -120,11 +128,11 @@
     "finding": "Paid continuation and products unclear",
     "change": "Publish actual membership inclusions/costs; explain optional Herbalife purchase relationship near decision.",
     "reference": "Main audit §27 row 9",
-    "status": "TODO",
+    "status": "REQUIRES OWNER DECISION",
     "current": "Audit finding pending source comparison.",
     "expected": "Informed qualified leads",
     "files": [],
-    "verification": "Not yet run."
+    "verification": "See OWNER-DECISIONS.md O03–O08; no missing business fact, permission, transcript or offer status invented."
   },
   {
     "id": "B10",
@@ -146,7 +154,7 @@
     "finding": "Secondary business overshadows primary goal",
     "change": "Footer-labelled business link; remove full partner billboard; preserve dedicated landing.",
     "reference": "Main audit §27 row 11",
-    "status": "TODO",
+    "status": "IN PROGRESS",
     "current": "Audit finding pending source comparison.",
     "expected": "Clearer consumer intent",
     "files": [],
@@ -185,11 +193,13 @@
     "finding": "Incorrect Law 53/2003 reference",
     "change": "Remove and obtain correct service-scope review.",
     "reference": "Main audit §27 row 14",
-    "status": "TODO",
-    "current": "Audit finding pending source comparison.",
+    "status": "VERIFIED",
+    "current": "Original behavior recorded in Batch 2 plan of AUDIT-FIX-CHANGELOG.md.",
     "expected": "Removes factual legal error",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "content/ro/pages.json"
+    ],
+    "verification": "12 regression tests; strict typecheck/syntax lint and all build validators passed. 39 public routes × 5 widths checked in browser, with menu Escape/focus and primary CTA contrast >=4.5:1. Local only; screenshot evidence in batch2. Hours/credentials remain explicitly withheld pending confirmation."
   },
   {
     "id": "B15",
@@ -237,11 +247,11 @@
     "finding": "Unsubstantiated provenance/context",
     "change": "Audit origin/permission; caption every retained image; build 3 real cases.",
     "reference": "Main audit §27 row 18",
-    "status": "TODO",
+    "status": "REQUIRES OWNER DECISION",
     "current": "Audit finding pending source comparison.",
     "expected": "Credible proof",
     "files": [],
-    "verification": "Not yet run."
+    "verification": "See OWNER-DECISIONS.md O03–O08; no missing business fact, permission, transcript or offer status invented."
   },
   {
     "id": "B19",
@@ -250,11 +260,11 @@
     "finding": "Credential/experience facts insufficiently evidenced",
     "change": "Publish exact verified qualification; source/date material statistics; separate family and personal experience.",
     "reference": "Main audit §27 row 19",
-    "status": "TODO",
+    "status": "REQUIRES OWNER DECISION",
     "current": "Audit finding pending source comparison.",
     "expected": "Accountable expertise",
     "files": [],
-    "verification": "Not yet run."
+    "verification": "See OWNER-DECISIONS.md O03–O08; no missing business fact, permission, transcript or offer status invented."
   },
   {
     "id": "B20",
@@ -302,11 +312,11 @@
     "finding": "Insufficient actual-club evidence",
     "change": "Photograph entrance, wide room, real assessment and consented daily activity.",
     "reference": "Main audit §27 row 23",
-    "status": "TODO",
+    "status": "REQUIRES OWNER DECISION",
     "current": "Audit finding pending source comparison.",
     "expected": "Makes visit tangible",
     "files": [],
-    "verification": "Not yet run."
+    "verification": "See OWNER-DECISIONS.md O03–O08; no missing business fact, permission, transcript or offer status invented."
   },
   {
     "id": "B24",
@@ -315,11 +325,11 @@
     "finding": "Conflicting old programme/form",
     "change": "Confirm status; merge and 301 locale URLs to current business; update sitemap.",
     "reference": "Main audit §27 row 24",
-    "status": "TODO",
+    "status": "REQUIRES OWNER DECISION",
     "current": "Audit finding pending source comparison.",
     "expected": "One coherent partner offer",
     "files": [],
-    "verification": "Not yet run."
+    "verification": "See OWNER-DECISIONS.md O03–O08; no missing business fact, permission, transcript or offer status invented."
   },
   {
     "id": "B25",
@@ -328,11 +338,11 @@
     "finding": "Overlapping biographies",
     "change": "Decide distinct social/partner role using traffic/link evidence; otherwise merge with redirects.",
     "reference": "Main audit §27 row 25",
-    "status": "TODO",
+    "status": "REQUIRES OWNER DECISION",
     "current": "Audit finding pending source comparison.",
     "expected": "Less content drift",
     "files": [],
-    "verification": "Not yet run."
+    "verification": "See OWNER-DECISIONS.md O03–O08; no missing business fact, permission, transcript or offer status invented."
   },
   {
     "id": "B26",
@@ -354,11 +364,15 @@
     "finding": "Results omission and state/Escape inconsistency",
     "change": "Generate same links; synchronise expanded state and close/focus behaviour.",
     "reference": "Main audit §27 row 27",
-    "status": "TODO",
-    "current": "Audit finding pending source comparison.",
+    "status": "VERIFIED",
+    "current": "Original behavior recorded in Batch 2 plan of AUDIT-FIX-CHANGELOG.md.",
     "expected": "Predictable navigation",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "content/site.mjs",
+      "scripts/lib/components.mjs",
+      "js/main.js"
+    ],
+    "verification": "12 regression tests; strict typecheck/syntax lint and all build validators passed. 39 public routes × 5 widths checked in browser, with menu Escape/focus and primary CTA contrast >=4.5:1. Local only; screenshot evidence in batch2. Hours/credentials remain explicitly withheld pending confirmation."
   },
   {
     "id": "B28",
@@ -367,11 +381,16 @@
     "finding": "Keyboard access missing",
     "change": "Focusable labelled wrapper or readable reflow; test Safari/keyboard.",
     "reference": "Main audit §27 row 28",
-    "status": "TODO",
-    "current": "Audit finding pending source comparison.",
+    "status": "VERIFIED",
+    "current": "Original behavior recorded in Batch 2 plan of AUDIT-FIX-CHANGELOG.md.",
     "expected": "Accessible content",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "content/ro/pages.json",
+      "content/en/pages.json",
+      "content/ru/pages.json",
+      "css/style.css"
+    ],
+    "verification": "12 regression tests; strict typecheck/syntax lint and all build validators passed. 39 public routes × 5 widths checked in browser, with menu Escape/focus and primary CTA contrast >=4.5:1. Local only; screenshot evidence in batch2. Hours/credentials remain explicitly withheld pending confirmation."
   },
   {
     "id": "B29",
@@ -380,11 +399,11 @@
     "finding": "Captions/transcript absent in markup",
     "change": "Add reviewed captions and transcript in available languages.",
     "reference": "Main audit §27 row 29",
-    "status": "TODO",
+    "status": "REQUIRES OWNER DECISION",
     "current": "Audit finding pending source comparison.",
     "expected": "Accessible founder story",
     "files": [],
-    "verification": "Not yet run."
+    "verification": "See OWNER-DECISIONS.md O03–O08; no missing business fact, permission, transcript or offer status invented."
   },
   {
     "id": "B30",
@@ -419,11 +438,13 @@
     "finding": "Unsupported WellnessCenter type",
     "change": "Use truthful valid LocalBusiness type, stable IDs and verified location data.",
     "reference": "Main audit §27 row 32",
-    "status": "TODO",
-    "current": "Audit finding pending source comparison.",
+    "status": "VERIFIED",
+    "current": "Original behavior recorded in Batch 2 plan of AUDIT-FIX-CHANGELOG.md.",
     "expected": "Machine-readable entity clarity",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "scripts/lib/structured-data.mjs"
+    ],
+    "verification": "12 regression tests; strict typecheck/syntax lint and all build validators passed. 39 public routes × 5 widths checked in browser, with menu Escape/focus and primary CTA contrast >=4.5:1. Local only; screenshot evidence in batch2. Hours/credentials remain explicitly withheld pending confirmation."
   },
   {
     "id": "B33",
@@ -445,11 +466,15 @@
     "finding": "Service/brand/process overlap",
     "change": "Use keyword-intent map; refine titles/internal anchors and content roles.",
     "reference": "Main audit §27 row 34",
-    "status": "TODO",
-    "current": "Audit finding pending source comparison.",
+    "status": "VERIFIED",
+    "current": "Original behavior recorded in Batch 2 plan of AUDIT-FIX-CHANGELOG.md.",
     "expected": "Relevant organic landing paths",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "content/ro/pages.json",
+      "content/en/pages.json",
+      "content/ru/pages.json"
+    ],
+    "verification": "12 regression tests; strict typecheck/syntax lint and all build validators passed. 39 public routes × 5 widths checked in browser, with menu Escape/focus and primary CTA contrast >=4.5:1. Local only; screenshot evidence in batch2. Hours/credentials remain explicitly withheld pending confirmation."
   },
   {
     "id": "B35",
@@ -484,7 +509,7 @@
     "finding": "Manual template/fact duplication",
     "change": "Shared static templates and locale data for nav, hours, proof and legal facts.",
     "reference": "Main audit §27 row 37",
-    "status": "TODO",
+    "status": "IN PROGRESS",
     "current": "Audit finding pending source comparison.",
     "expected": "Lower future drift",
     "files": [],
@@ -497,7 +522,7 @@
     "finding": "Intro/portal and decorative repetition",
     "change": "Remove entry/transition delay; retain content-visible reduced-motion behaviour.",
     "reference": "Main audit §27 row 38",
-    "status": "TODO",
+    "status": "IN PROGRESS",
     "current": "Audit finding pending source comparison.",
     "expected": "More direct access",
     "files": [],
@@ -562,11 +587,13 @@
     "finding": "Uniform stale lastmod",
     "change": "Use real significant modification dates.",
     "reference": "Main audit §27 row 43",
-    "status": "TODO",
-    "current": "Audit finding pending source comparison.",
+    "status": "VERIFIED",
+    "current": "Original behavior recorded in Batch 2 plan of AUDIT-FIX-CHANGELOG.md.",
     "expected": "Accurate crawl hints",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "sitemap.xml"
+    ],
+    "verification": "12 regression tests; strict typecheck/syntax lint and all build validators passed. 39 public routes × 5 widths checked in browser, with menu Escape/focus and primary CTA contrast >=4.5:1. Local only; screenshot evidence in batch2. Hours/credentials remain explicitly withheld pending confirmation."
   },
   {
     "id": "X01",
@@ -734,11 +761,13 @@
     "finding": "Shared LocalBusiness/Person IDs and reciprocal locale markup, no review-star claims",
     "change": "Shared LocalBusiness/Person IDs and reciprocal locale markup, no review-star claims",
     "reference": "§§12–14",
-    "status": "TODO",
-    "current": "Pending source comparison.",
+    "status": "VERIFIED",
+    "current": "Original behavior recorded in Batch 2 plan of AUDIT-FIX-CHANGELOG.md.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "scripts/lib/structured-data.mjs"
+    ],
+    "verification": "12 regression tests; strict typecheck/syntax lint and all build validators passed. 39 public routes × 5 widths checked in browser, with menu Escape/focus and primary CTA contrast >=4.5:1. Local only; screenshot evidence in batch2. Hours/credentials remain explicitly withheld pending confirmation."
   },
   {
     "id": "X13",
@@ -747,11 +776,13 @@
     "finding": "Retain proper 404 and noindex; provide locale-aware home/booking links",
     "change": "Retain proper 404 and noindex; provide locale-aware home/booking links",
     "reference": "page-by-page /404.html",
-    "status": "TODO",
-    "current": "Pending source comparison.",
+    "status": "VERIFIED",
+    "current": "Original behavior recorded in Batch 2 plan of AUDIT-FIX-CHANGELOG.md.",
     "expected": "Resolve the referenced audit recommendation without unsupported facts.",
-    "files": [],
-    "verification": "Not yet run."
+    "files": [
+      "content/root/pages.json"
+    ],
+    "verification": "12 regression tests; strict typecheck/syntax lint and all build validators passed. 39 public routes × 5 widths checked in browser, with menu Escape/focus and primary CTA contrast >=4.5:1. Local only; screenshot evidence in batch2. Hours/credentials remain explicitly withheld pending confirmation."
   },
   {
     "id": "X14",
