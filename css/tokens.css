@@ -1,4 +1,5 @@
 :root {
+  --community-title-size: clamp(2.5rem, 4.6vw, 4rem);
   --color-004f771a: #0f5c4a;
   --color-0081d2cb: rgba(167,223,242,.4);
   --color-00cb76cc: #cc4444;

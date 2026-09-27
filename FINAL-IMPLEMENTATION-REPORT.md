@@ -286,3 +286,9 @@ The final report/checklist reconciliation is recorded in the following documenta
 At the owner’s request, downloaded all 24 owner-gallery files and integrated 23 byte-unique images into the local Romanian, English and Russian website. The homepage now has three real-club highlights; contact pages have an interior photo plus the full expandable gallery. Source downloads and an archive are in `/Users/Gabi/boostclub-google-maps-photos-2026-09-27/`. Build, lint, typecheck and 19 tests pass; all six affected routes fit five viewport widths. All 23 gallery images loaded and keyboard expansion worked in all locales.
 
 This partially resolves B23: real interiors and daily activity are now present. Entrance/assessment photos, partner-location images and permission for customer-uploaded photos remain outstanding. Audit totals above are unchanged. These additions are local and have not been deployed.
+
+## Follow-up: community homepage — 2026-09-27
+
+The owner requested a community-focused opening in place of the large founder portrait. The Romanian, English and Russian homepages now pair a landscape-framed group photograph with “Mai bine, împreună” and localized equivalents. On phones the image follows the headline, ahead of supporting copy. First-visit details, booking, WhatsApp and the founder story farther down remain available.
+
+The photograph comes from the existing owner gallery, retrieved at a higher resolution and served through responsive, hashed WebP assets. Full build, validators, lint, typecheck and all 19 tests pass. All three homepages fit five viewport widths; desktop and phone visual checks passed. This is a local change, with no deployment or measured conversion/performance improvement. Audit totals are unchanged.

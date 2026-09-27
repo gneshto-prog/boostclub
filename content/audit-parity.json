@@ -12,8 +12,8 @@
     "reason": "B07/X02 final copy consistency: remove remaining response-time and preparation promises"
   },
   "index.html": {
-    "hash": "038358ebceb79e07a323d133e4319c453992a05270ee17737ff26db20f46169f",
-    "reason": "Owner requested real Google Maps photos: local gallery and homepage highlights, RO/EN/RU, 2026-09-27"
+    "hash": "2a78a19af7661f60acbeddf2e0986460d48524944a5af6d667bf7c60891e2cf5",
+    "reason": "Owner requested community-first homepage: shared landscape photo and welcoming copy in RO/EN/RU"
   },
   "ambasador.html": {
     "hash": "d96367f2d3a2a568f326c5268c1c4a2b895682010dd4afc7051f4c3c6e591181",
@@ -64,8 +64,8 @@
     "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "en/index.html": {
-    "hash": "33ebc8e37db6e8dc2dda9e4838972aea972bc5549466169ee7f0f1e2dd679a98",
-    "reason": "Owner requested real Google Maps photos: local gallery and homepage highlights, RO/EN/RU, 2026-09-27"
+    "hash": "580b816c167aba659dac1b9fa009ef2b48cc936a7af1fe79ccde38a116c39fb8",
+    "reason": "Owner requested community-first homepage: shared landscape photo and welcoming copy in RO/EN/RU"
   },
   "en/ambasador.html": {
     "hash": "89fd70020a4108a9ee18fb92bf7cd919715710eb8e7a74de807a424f1925c296",
@@ -116,8 +116,8 @@
     "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "ru/index.html": {
-    "hash": "d7646021236ff1b1db683f7201aee3db7c74ada6e104ce97b1ef1b4d41b3fcdf",
-    "reason": "Owner requested real Google Maps photos: local gallery and homepage highlights, RO/EN/RU, 2026-09-27"
+    "hash": "0c06bc1261f3780ec9a4a3f7e38da578addd1ff08dec8f1b7861d01390457306",
+    "reason": "Owner requested community-first homepage: shared landscape photo and welcoming copy in RO/EN/RU"
   },
   "ru/ambasador.html": {
     "hash": "9594aab29d10c562cff542f16975e203818940c7bb2fae042571aac69e7fe541",

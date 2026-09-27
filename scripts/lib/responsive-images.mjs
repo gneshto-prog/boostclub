@@ -13,7 +13,8 @@ export function responsiveImages(body) {
     const srcset=[...image.variants.map(v=>`${prefix}${v.src} ${v.width}w`),`${source} ${image.width}w`].join(', ');
     const hero=/fetchpriority="high"/.test(tag);
     const gallery=/(?:before|[Rr]esults\d+)\.webp$/.test(source);
-    const sizes=hero?'(max-width: 767px) calc(100vw - 48px), (max-width: 1199px) 42vw, 460px':gallery?'(max-width: 639px) calc((100vw - 64px) / 2), (max-width: 1023px) 30vw, 300px':'(max-width: 639px) calc(100vw - 48px), (max-width: 1023px) 45vw, 560px';
+    const community=key==='images/boost-club-community.webp';
+    const sizes=community?'(max-width: 899px) calc(100vw - 48px), (max-width: 1199px) 50vw, 580px':hero?'(max-width: 767px) calc(100vw - 48px), (max-width: 1199px) 42vw, 460px':gallery?'(max-width: 639px) calc((100vw - 64px) / 2), (max-width: 1023px) 30vw, 300px':'(max-width: 639px) calc(100vw - 48px), (max-width: 1023px) 45vw, 560px';
     return tag.replace(/>$/,` srcset="${srcset}" sizes="${sizes}">`);
   });
 }

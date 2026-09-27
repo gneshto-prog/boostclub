@@ -334,5 +334,30 @@
         "bytes": 25674
       }
     ]
+  },
+  "images/boost-club-community.webp": {
+    "width": 1536,
+    "height": 2048,
+    "bytes": 557878,
+    "variants": [
+      {
+        "width": 320,
+        "height": 427,
+        "src": "images/responsive/boost-club-community.1604042b39a4.320.webp",
+        "bytes": 26958
+      },
+      {
+        "width": 640,
+        "height": 853,
+        "src": "images/responsive/boost-club-community.16364b874eab.640.webp",
+        "bytes": 93882
+      },
+      {
+        "width": 960,
+        "height": 1280,
+        "src": "images/responsive/boost-club-community.bda5d51c9f56.960.webp",
+        "bytes": 210146
+      }
+    ]
   }
 }

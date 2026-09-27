@@ -1,0 +1,23 @@
+/* The opening photograph belongs to the whole club. */
+.community-hero { background: var(--green-deep); min-height: auto; padding-bottom: var(--s6); }
+.community-hero .bg-leaf { display: none; }
+.community-hero.hero-enter :is(.eyebrow, h1, .lead, .hero-ctas) { animation: none; }
+.community-layout { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s3); }
+.community-photo { min-width: 0; }
+.community-photo img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: center 55%; border-radius: var(--radius); }
+.community-photo figcaption { margin-top: var(--s1); color: var(--color-fca22cd7); font-size: var(--length-145f2f53); }
+.community-copy { min-width: 0; }
+.community-hero h1 { max-width: none; font-size: var(--community-title-size); line-height: var(--line-height-89e0e9d0); letter-spacing: var(--length-7ceacc98); text-wrap: initial; }
+.community-hero h1 span { color: var(--gold-soft); }
+.community-hero .lead { max-width: none; font-size: var(--length-9bb5d32d); margin-top: 0; }
+.community-hero .hero-ctas { margin-top: var(--s3); }
+.community-hero .community-visit { margin-top: var(--s2); font-size: var(--length-09f97395); }
+.community-hero .review-summary { margin-top: var(--s3); }
+.community-hero .community-address { margin-top: var(--s2); font-size: var(--length-145f2f53); }
+@media (min-width: 900px) {
+  .community-layout { grid-template-columns: minmax(0, .95fr) minmax(0, 1.1fr); column-gap: var(--s6); }
+  .community-intro { grid-column: 1; grid-row: 1; }
+  .community-copy { grid-column: 1; grid-row: 2; }
+  .community-photo { grid-column: 2; grid-row: 1 / 3; align-self: center; }
+  .community-hero { padding-bottom: var(--s8); }
+}

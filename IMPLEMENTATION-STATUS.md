@@ -102,7 +102,7 @@ VERIFIED FIXED means verified in the local implementation unless production evid
 
   Audit reference: Main audit §27 row 10. Area: Homepage.
   Current behavior: Audit finding pending source comparison.
-  Change: Move assessment deliverables immediately below shorter offer-led hero.
+  Change: Move assessment deliverables immediately below the shorter hero. The owner's 2026-09-27 visual follow-up replaces the founder portrait with a landscape community photo and welcoming headline; the first-visit offer and booking action remain in the hero.
   Expected result: Faster comprehension
   Files changed: content/consumer-copy.mjs, content/ro/pages.json, content/en/pages.json, content/ru/pages.json, scripts/build-site.mjs
   Verification: Batch 4B: 17 tests plus strict types, lint and production validators pass. All 39 public page families × 5 widths tested in RO/EN/RU; revised shared process FAQ/reviews retested. Hero and header CTA contrast checked; visual review corrected review-date contrast and Cyrillic/Latin font inconsistency. Current original reviews retained. Offer pricing, qualifications and legal evidence remain separate decisions.

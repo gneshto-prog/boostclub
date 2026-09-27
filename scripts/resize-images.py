@@ -19,13 +19,13 @@ names = ['before.webp', 'Results1.webp', 'results3.webp', 'results5.webp',
          'familie-neshto-wellness.webp', 'gabriel-competitie-atletism.webp',
          'gabriel-neshto-mma.webp', 'gabriel-antrenament.webp',
          'consultatie-wellness-boost-club.webp', 'gabriel-neshto-boost-club-bucuresti.webp',
-         'gabriel-neshto-consultant-wellness.webp']
+         'gabriel-neshto-consultant-wellness.webp', 'boost-club-community.webp']
 manifest = {}
 for name in names:
     original = images / name
     with Image.open(original) as image:
         variants = []
-        for width in [320, 640]:
+        for width in ([320, 640, 960] if name == 'boost-club-community.webp' else [320, 640]):
             if width >= image.width:
                 continue
             height = round(image.height * width / image.width)
