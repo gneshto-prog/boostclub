@@ -8,6 +8,7 @@ import { buildSoftCurrentSite } from "./lib/soft-current-site.mjs";
 import { structuredHead } from "./lib/structured-data.mjs";
 import { reviewSnapshot, reviewSummary, afterVisit, processFaq } from "../content/consumer-copy.mjs";
 import { responsiveImages, responsivePreloads } from './lib/responsive-images.mjs';
+import { clubPhotoPreview, clubContactPhoto, clubGallery } from './lib/club-gallery.mjs';
 
 const root = process.cwd();
 const outputRoot = path.join(root, "_site");
@@ -29,6 +30,9 @@ function renderPage(page) {
     .replaceAll('{{review-count}}', String(reviewSnapshot.count))
     .replaceAll('{{review-rating}}', reviewSnapshot.rating)
     .replaceAll('{{after-visit}}', afterVisit(page.lang))
+    .replaceAll('{{club-photo-preview}}', clubPhotoPreview(page.lang))
+    .replaceAll('{{club-contact-photo}}', clubContactPhoto(page.lang))
+    .replaceAll('{{club-gallery}}', clubGallery(page.lang))
     .replaceAll('{{process-faq}}', processFaq(page.lang));
   body = renderRegisteredComponents(body);
   body = responsiveImages(body);

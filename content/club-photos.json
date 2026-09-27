@@ -1,0 +1,668 @@
+{
+  "downloadedAt": "2026-09-27",
+  "source": "https://maps.app.goo.gl/yZJkKDwB5sqtPskf8",
+  "gallery": "By owner",
+  "downloadedCount": 24,
+  "duplicates": [
+    {
+      "number": 21,
+      "duplicateOf": 19
+    }
+  ],
+  "photos": [
+    {
+      "number": 1,
+      "sourceUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn-tQhA4EKRL9go_vdy2lEfvQXzE_gIwELxE-icIQzGZxrXURTrxDWaU1xgQ1r_bM-rUL4Q9fZw_rUxsDUPAraIGOTrqlVeTqHRD1v9CQBZ9AWQk6GIyvT3pybk7TxFOtNnwu07wLl8xa4=s1354-k-no",
+      "sourceSha256": "2ec6f16324c538cc3788e45158e3577a3310aacfe8658b4cecab0e137943f1d6",
+      "alt": {
+        "ro": "Un mesaj de bun venit în fața peretelui verde Boost Club",
+        "en": "A welcome message in front of the green Boost Club wall",
+        "ru": "Приветственная открытка на фоне зелёной стены Boost Club"
+      },
+      "variants": [
+        {
+          "src": "images/club-gallery/boost-club-01.36e2aaf242f6.320.webp",
+          "width": 320,
+          "height": 426,
+          "bytes": 9196
+        },
+        {
+          "src": "images/club-gallery/boost-club-01.8ec1165ca208.640.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 21056
+        },
+        {
+          "src": "images/club-gallery/boost-club-01.eba0b71de5ce.1016.webp",
+          "width": 1016,
+          "height": 1354,
+          "bytes": 38564
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "sourceUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkyZhAKbp7LF7rQssTWlWdTOK_ftFfp-zlEWO1ZWVxmbgF5_96OnBSnhRVUst1Nvh0sMxAh6eLlLwe8I5THZh8U3hfVndu_WCEr6-F9eJmxyUVo6PI_G7deXO0MuXyLANs2J6MbQtzA7sU=s812-k-no",
+      "sourceSha256": "0d9bef9749b70251c7a793a940c290979292bcacb80628822fb84ede9da65174",
+      "alt": {
+        "ro": "Un grup de oameni în interiorul Boost Club, lângă mesele albe și peretele verde",
+        "en": "A group inside Boost Club, beside the white tables and green wall",
+        "ru": "Группа людей в Boost Club рядом с белыми столами и зелёной стеной"
+      },
+      "variants": [
+        {
+          "src": "images/club-gallery/boost-club-02.02fac44713ca.320.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 26400
+        },
+        {
+          "src": "images/club-gallery/boost-club-02.78775253bf90.609.webp",
+          "width": 609,
+          "height": 812,
+          "bytes": 92428
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "sourceUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmLu2rFLohEsQ60WmkWhHvNyoEMzbqujNGgono3cnJOEo6Dl-XbUTrKejlLC2t6ycHOIkEGdHFgzXvphmy4g2gfvvZ6pHn-AT_X_8bMQuhcVupSUJhSwb11qtoQh2s-LMjGcYjHPsZDzVk4=s1016-k-no",
+      "sourceSha256": "19cdb65c13942cb326838ded76b92c8b5858d4fd0f3583329e9d93e7d73ece8d",
+      "alt": {
+        "ro": "Ursuleț de pluș pe o masă din club",
+        "en": "A teddy bear on a table in the club",
+        "ru": "Плюшевый медведь на столике в клубе"
+      },
+      "variants": [
+        {
+          "src": "images/club-gallery/boost-club-03.13387c5c861f.320.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 14680
+        },
+        {
+          "src": "images/club-gallery/boost-club-03.a704d6358778.640.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 38886
+        },
+        {
+          "src": "images/club-gallery/boost-club-03.3ffb49c2f778.762.webp",
+          "width": 762,
+          "height": 1016,
+          "bytes": 53892
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "sourceUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkjh5rOg-AxTQKWjlhCnQgqNh2ZlyGd6F61EbeDuthOjTCfjC0ttDbxPn2dSQSW3nNy-mLsj683ZCuIAJUqxwa8AwkCLCjro-bjTIyrZubv3bVsDeY0RHfq_cVDfHEENJYWJiPrjyDHp2Pi=s1016-k-no",
+      "sourceSha256": "d8506f1075765f98ed4550d9d312c6cf9696ae8bb2485c443397def5c3d4c3d7",
+      "alt": {
+        "ro": "Trei oameni fotografiați în fața siglei Boost Club",
+        "en": "Three people in front of the Boost Club sign",
+        "ru": "Три человека на фоне вывески Boost Club"
+      },
+      "variants": [
+        {
+          "src": "images/club-gallery/boost-club-04.76320e91f823.320.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 17240
+        },
+        {
+          "src": "images/club-gallery/boost-club-04.8e29688b0021.640.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 41324
+        },
+        {
+          "src": "images/club-gallery/boost-club-04.623fae5b4773.762.webp",
+          "width": 762,
+          "height": 1016,
+          "bytes": 53588
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "sourceUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlFQL8ECCMiZV_oGQwEIR73Y8XCrtrQcr89eYbgKzxbZUXIku1XqJeDf5RxZqfEV01ZpZjFqqvOqx0HYfUhE1yt0D3R65zFWbZlvLY_Y4K3yBrFXytNGbMP6KFeX9fLWH_42uiUj6DtK-U=s773-k-no",
+      "sourceSha256": "733b7e83778b57390da8f3cf86bcd4f3c79b7d97c70e6a3411dd0e22ff89bc72",
+      "alt": {
+        "ro": "Oameni adunați în jurul mesei, lângă ferestrele Boost Club",
+        "en": "People gathered around a table by the Boost Club windows",
+        "ru": "Люди за общим столом у окон Boost Club"
+      },
+      "variants": [
+        {
+          "src": "images/club-gallery/boost-club-05.d0726758ae93.320.webp",
+          "width": 320,
+          "height": 240,
+          "bytes": 19308
+        },
+        {
+          "src": "images/club-gallery/boost-club-05.2a671990a571.640.webp",
+          "width": 640,
+          "height": 480,
+          "bytes": 53802
+        },
+        {
+          "src": "images/club-gallery/boost-club-05.a8b3db6283dd.773.webp",
+          "width": 773,
+          "height": 580,
+          "bytes": 73868
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "sourceUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkXCaH3EFuvsvCzOevL0BHA5vJ4Kajeovan94TYhTSYnWdyS15dsGzJZNU4Vec0tzqXU-Zvw1qGTWOiEE7UCtHHMjl3RVtKubeKJbWbAJ0oMz92rFlD57yuuVyaty7zJkGFAFY4EXOrdpw=s1354-k-no",
+      "sourceSha256": "9d4e5d7ef756b4d3380ef21d5e2a222a60fbe102bf06c216b713495bafd91602",
+      "alt": {
+        "ro": "O conversație în jurul unei mese din club",
+        "en": "A conversation around a table in the club",
+        "ru": "Разговор за столиком в клубе"
+      },
+      "variants": [
+        {
+          "src": "images/club-gallery/boost-club-06.942766720e7a.320.webp",
+          "width": 320,
+          "height": 426,
+          "bytes": 27436
+        },
+        {
+          "src": "images/club-gallery/boost-club-06.e1e934839f85.640.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 82100
+        },
+        {
+          "src": "images/club-gallery/boost-club-06.345cc446185b.1016.webp",
+          "width": 1016,
+          "height": 1354,
+          "bytes": 160252
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "sourceUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmUwVJZ33uR0inAeBRPOrFj98TXKxUt1gSmBy4irrmL1xnfCM0dK3oljPI14fzOBJ6t8w7bgrstq-Pb_SLIuoFJsn2fTQwzlfQK0KyYE_2MLoIbVd8bXenj5mYMrLg3IFtmeVv8CJYwjI4=s1354-k-no",
+      "sourceSha256": "e97849e4e13b6380666af6b978426ce98cdd16eb348e1d4f3adb5c9d25c5e74f",
+      "alt": {
+        "ro": "Un copil cu un ursuleț pe canapeaua roșie din club",
+        "en": "A child with a teddy bear on the club’s red sofa",
+        "ru": "Ребёнок с плюшевым медведем на красном диване в клубе"
+      },
+      "variants": [
+        {
+          "src": "images/club-gallery/boost-club-07.66a4c8c24bbe.320.webp",
+          "width": 320,
+          "height": 426,
+          "bytes": 15154
+        },
+        {
+          "src": "images/club-gallery/boost-club-07.19910f0bf8fb.640.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 42524
+        },
+        {
+          "src": "images/club-gallery/boost-club-07.a763274b6d07.1016.webp",
+          "width": 1016,
+          "height": 1354,
+          "bytes": 90232
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "sourceUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkgsZTR8Ql2kUVxd6UrcDMnbh3oLf6pDS8CAd1LVrSQswycg8s_EZ98V1vz8YZT0UFIKFJLjdDwuzjUCZnn3HoO0_tBJkb0khtmB64FRZDqUa8uOBSqp54_pWkGPjgLEbZTnarVulJgfFo=s812-k-no",
+      "sourceSha256": "71417ce8261c3388a6c55445b9e016917e30dff43bda57ccc8bb35c8e08c95ae",
+      "alt": {
+        "ro": "O femeie zâmbitoare cu o băutură la masa din club",
+        "en": "A smiling woman with a drink at a club table",
+        "ru": "Улыбающаяся женщина с напитком за столом в клубе"
+      },
+      "variants": [
+        {
+          "src": "images/club-gallery/boost-club-08.cfa29a49da73.320.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 18188
+        },
+        {
+          "src": "images/club-gallery/boost-club-08.27b96ac6dd75.609.webp",
+          "width": 609,
+          "height": 812,
+          "bytes": 56278
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "sourceUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm-gyJDBOHDC9u3g1W4AXcpHw3p2FJheI1bGC2M95kQttu6budXpYjtN4kYqbaNRlTKixz49LvOjUK5NeSqDRv-_cvXyOEmSDG1zV0kyqRP4scI4QIPuSc9rhZ2zzsnZCJW_fP0heZhzAzb=s1354-k-no",
+      "sourceSha256": "305d25c1b6c7873fb671065c70b775932e8249b9814466bb78b0e42997397057",
+      "alt": {
+        "ro": "Un adult ține un copil în brațe în interiorul clubului",
+        "en": "An adult holding a child inside the club",
+        "ru": "Взрослый с ребёнком на руках в клубе"
+      },
+      "variants": [
+        {
+          "src": "images/club-gallery/boost-club-09.686cdedf8067.320.webp",
+          "width": 320,
+          "height": 426,
+          "bytes": 23228
+        },
+        {
+          "src": "images/club-gallery/boost-club-09.3362b408793f.640.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 60840
+        },
+        {
+          "src": "images/club-gallery/boost-club-09.694bac59efeb.1016.webp",
+          "width": 1016,
+          "height": 1354,
+          "bytes": 115892
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "sourceUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmvYGe2rWdIsQ5yXQuRnFkP1nfc78eGX7QXyXVXxhYjCK0GESXtM2F26qchcSV4VrXqb4GO-nT5ej1uEg7yahdkWqSavKiRfH-IehqT0sZHXrPttjEXuNUin2EnHaGDnVIMXGutUeLTECM2=s1016-k-no",
+      "sourceSha256": "a206a051db634be892a5641505a81539ff208c1a57589c08a356695117d5f1e2",
+      "alt": {
+        "ro": "O băutură cu topping într-un pahar cu sigla Boost Club",
+        "en": "A drink with toppings in a Boost Club cup",
+        "ru": "Напиток с топпингом в стакане Boost Club"
+      },
+      "variants": [
+        {
+          "src": "images/club-gallery/boost-club-10.baf4180827f2.320.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 17940
+        },
+        {
+          "src": "images/club-gallery/boost-club-10.35374153b86b.640.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 41138
+        },
+        {
+          "src": "images/club-gallery/boost-club-10.0b85224181e3.762.webp",
+          "width": 762,
+          "height": 1016,
+          "bytes": 51284
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "sourceUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnMd-tgnIebZhJqN_SkJ1pgmY82Q-MfyIwvhg7tG3KlbDk95ZwkMIuJBwYXs_FE_SutyJ-uGXxI0drtNM6_VYxHmL9ZVLmPy50DJIgeH1Sh8zEYYTjJGXVBlSZfXzljv4OI-Sty9NjNnjc=s676-k-no",
+      "sourceSha256": "03a45bb6aedb3473a64d6675e11be692a17508a70c7c7f108c01bf6f2651aea0",
+      "alt": {
+        "ro": "Prim-plan cu o băutură decorată cu frișcă într-un pahar Boost Club",
+        "en": "A close-up of a drink topped with cream in a Boost Club cup",
+        "ru": "Крупный план напитка со сливками в стакане Boost Club"
+      },
+      "variants": [
+        {
+          "src": "images/club-gallery/boost-club-11.f3271da1304e.320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 13366
+        },
+        {
+          "src": "images/club-gallery/boost-club-11.cdf92ae8409c.640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 31982
+        },
+        {
+          "src": "images/club-gallery/boost-club-11.8390794e5134.676.webp",
+          "width": 676,
+          "height": 676,
+          "bytes": 35694
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "sourceUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmBOcJZ5PpqvXByAr6CfeTBpIc9nivEtTY2ik_REgXJa_myCkitmdHGbq3-TD4TKk5rNnK-R8_PJpqcR-8IGg02wnjsDFe4Eeo3AAqhYwybslpRoB7jn0_KrpeciyS1wIfFCoFALSBesAcD=s1195-k-no",
+      "sourceSha256": "1524a362e55515bb7372b72f104394fad58f5b724fc156608a8088d14c25b51f",
+      "alt": {
+        "ro": "O băutură Boost Club pe masă, lângă un mesaj motivațional",
+        "en": "A Boost Club drink on a table beside a motivational sign",
+        "ru": "Напиток Boost Club на столе рядом с мотивационной надписью"
+      },
+      "variants": [
+        {
+          "src": "images/club-gallery/boost-club-12.4b72913c8cf5.320.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 12526
+        },
+        {
+          "src": "images/club-gallery/boost-club-12.595f6a9c091a.640.webp",
+          "width": 640,
+          "height": 854,
+          "bytes": 28782
+        },
+        {
+          "src": "images/club-gallery/boost-club-12.a6e0703a9a97.896.webp",
+          "width": 896,
+          "height": 1195,
+          "bytes": 44336
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "sourceUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkaV3mge8ql8x1AFNS9_ubo7QKR4KGeJavbS9Ce2-SO7O6PPmHXkqBGd1Im1-zx9opfWAADP7sXHxjpMzl5H0zKvZtlnosRxGwKbmfeyhH2eiwrO_nkrLdNOOgrbLD0MZ7C4WXb0266PrwX=s812-k-no",
+      "sourceSha256": "6484dfab5d7601bbf16b20dcba1cd0eac7095f2d3c02d7816d7dcaf87ac92037",
+      "alt": {
+        "ro": "Un pahar Boost Club fotografiat afară, cu clădiri în fundal",
+        "en": "A Boost Club cup outdoors with buildings in the background",
+        "ru": "Стакан Boost Club на улице на фоне зданий"
+      },
+      "variants": [
+        {
+          "src": "images/club-gallery/boost-club-13.7bb299868648.320.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 11848
+        },
+        {
+          "src": "images/club-gallery/boost-club-13.b8721bb685b6.609.webp",
+          "width": 609,
+          "height": 812,
+          "bytes": 28028
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "sourceUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnKKZIuQzZdu5Kouois-p8-jwvOk4qiygUF0oASOAge5FCYY8BbwPsbIjRZtph4zt6L0BWy9JEpdnFYwA_isbejC39qkc0qhBAvK4POyd7FEF0bRnbeJHcWBc4Oh8pm6p8048Cca6deXROk=s1111-k-no",
+      "sourceSha256": "955578c256882ebc3f94260fe8598a4e858e08f5a871eadf5cd94ed77b866f55",
+      "alt": {
+        "ro": "Sigla dreptunghiulară Boost Club, Be your best",
+        "en": "The rectangular Boost Club, Be your best logo",
+        "ru": "Прямоугольный логотип Boost Club, Be your best"
+      },
+      "variants": [
+        {
+          "src": "images/club-gallery/boost-club-14.89417f38fcde.320.webp",
+          "width": 320,
+          "height": 167,
+          "bytes": 3128
+        },
+        {
+          "src": "images/club-gallery/boost-club-14.14872e088196.640.webp",
+          "width": 640,
+          "height": 334,
+          "bytes": 5642
+        },
+        {
+          "src": "images/club-gallery/boost-club-14.c0aafb7cb87f.1111.webp",
+          "width": 1111,
+          "height": 580,
+          "bytes": 10276
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "sourceUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnksB37CfE--yas5kYhK1n0Dk72YSbSFRG85q4V626BTv7QQ75ZCoW6WawQVBekIXieDw2Cs4T1FQEhuEUvwyvSLMKAPk3v-g2h4Poe5Gj19JLxJLwsam2zkbfJopa1K9kGXKFvynvL0Wtm=s812-k-no",
+      "sourceSha256": "6883e91f8dec213d85f97ba077d8f7a5a83ab8f915e1c2074c2caa448750e46b",
+      "alt": {
+        "ro": "Un grup lângă mesele și ferestrele clubului",
+        "en": "A group beside the club’s tables and windows",
+        "ru": "Группа людей рядом со столиками и окнами клуба"
+      },
+      "variants": [
+        {
+          "src": "images/club-gallery/boost-club-15.55d1a83f32e8.320.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 28834
+        },
+        {
+          "src": "images/club-gallery/boost-club-15.51eaea37cf86.609.webp",
+          "width": 609,
+          "height": 812,
+          "bytes": 102438
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "sourceUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlQKFAENtD3FvvOmp9_l4ACquF_wuKjE2T6sS8Y8bBSMW2AZa3Gk71ml9juFuLneH0Y2Wp6AdxsLUVoYWWi63Kfg1xmpZbkc9P6IcG5r-WSBOW3G5941BBtmvLUkPp_WCxnb0ivEOV1uKno=s812-k-no",
+      "sourceSha256": "5bdd06706b680997bddbac231cfe0c37843ba817cee36bb695a9131e231df8fa",
+      "alt": {
+        "ro": "Sigla rotundă Boost Club cu margine verde",
+        "en": "The round Boost Club logo with a green border",
+        "ru": "Круглый логотип Boost Club с зелёной рамкой"
+      },
+      "variants": [
+        {
+          "src": "images/club-gallery/boost-club-16.662e91530fcc.320.webp",
+          "width": 320,
+          "height": 320,
+          "bytes": 7238
+        },
+        {
+          "src": "images/club-gallery/boost-club-16.db887a24a3b9.640.webp",
+          "width": 640,
+          "height": 640,
+          "bytes": 15634
+        },
+        {
+          "src": "images/club-gallery/boost-club-16.b60eed6c1fa1.812.webp",
+          "width": 812,
+          "height": 812,
+          "bytes": 21596
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "sourceUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnP-JOgRqVTRtOcqCyhzLWoocgw84aUZHc-hNAH8mg_pU1GpItHg2AuxFJFc5hUOALLOO_QZJwLa88Gr_vTbSEpSwqaJ03Ne_0CtsHaIw99oSdzGGUzwcmvU4WDn3_W3Ts5h_8rDMvJgFbl=s1016-k-no",
+      "sourceSha256": "5e683dd91835f66c9339d500d66f6a6dafc3ce9bd32ea9adeb9660bc72516953",
+      "alt": {
+        "ro": "Pregătirea unei băuturi la blender în club",
+        "en": "Preparing a drink in a blender at the club",
+        "ru": "Приготовление напитка в блендере в клубе"
+      },
+      "variants": [
+        {
+          "src": "images/club-gallery/boost-club-17.697086111a1d.320.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 15716
+        },
+        {
+          "src": "images/club-gallery/boost-club-17.0e499ac43c47.640.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 37716
+        },
+        {
+          "src": "images/club-gallery/boost-club-17.2512852f9cda.762.webp",
+          "width": 762,
+          "height": 1016,
+          "bytes": 48362
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "sourceUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmdN1482jPq006a1VEe95HD0HeF7UQhQVSUsE-klYwxaLumZ7Jcbxqh-s5Jvdqnl6xM4UKwIbQU0GUmq-zrQ4zKfuror597Xvn_FJkj4EFYJ1rUgsf_9VJ93QJFI_VLSHgAFbj4nmw4PIIL=s1354-k-no",
+      "sourceSha256": "4e23e5ede95c4331a9b100367a96060fa36990e8f4476f5d3e9b0d99ae286ead",
+      "alt": {
+        "ro": "O băutură este pregătită la tejgheaua Boost Club",
+        "en": "A drink being prepared at the Boost Club counter",
+        "ru": "Приготовление напитка у стойки Boost Club"
+      },
+      "variants": [
+        {
+          "src": "images/club-gallery/boost-club-18.d2f30eda9cdf.320.webp",
+          "width": 320,
+          "height": 426,
+          "bytes": 15792
+        },
+        {
+          "src": "images/club-gallery/boost-club-18.b1b604fed7b3.640.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 37092
+        },
+        {
+          "src": "images/club-gallery/boost-club-18.8b89b0a51b59.1016.webp",
+          "width": 1016,
+          "height": 1354,
+          "bytes": 67654
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "sourceUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmhtPbrNSh5K2tDn90B5yfLPzU7SZqad38U1uIOtobkq-NrJAHCuXeSO2ZaGKz_4CxwnTA4D67G5EtbgGpybt02HwQkwktIg5Cn8Ze1k7T48dVSg4kmc5FMiigMcwQ7FN83Oqpj-soaGUOZ=s1354-k-no",
+      "sourceSha256": "836cdb7a56199cbb50c8a1701b2bb7b986be795c2cde3c19faebadb692e6c18e",
+      "alt": {
+        "ro": "Un bărbat discută de pe canapeaua roșie, lângă o masă portocalie",
+        "en": "A man talking on the red sofa beside an orange table",
+        "ru": "Мужчина разговаривает на красном диване рядом с оранжевым столиком"
+      },
+      "variants": [
+        {
+          "src": "images/club-gallery/boost-club-19.c1b27d928869.320.webp",
+          "width": 320,
+          "height": 426,
+          "bytes": 16706
+        },
+        {
+          "src": "images/club-gallery/boost-club-19.860b3b38047c.640.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 47680
+        },
+        {
+          "src": "images/club-gallery/boost-club-19.61ff6f20b96c.1016.webp",
+          "width": 1016,
+          "height": 1354,
+          "bytes": 95396
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "sourceUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlGyVnFEKKGOm4KckQ-4fIpX5CLRBa8hWaIVHRdAv2_a30isHqHZSjfn9fKE4lEvceVPTbjufWF5JIzHvn3Usn2qJbXtCEUnNi6wNkUL03hpFbw4G-5_Xy2_LTYPi2c-Edqwq7da7W8jbS8=s1016-k-no",
+      "sourceSha256": "99dd536b292e801f90a51e7855adf8b3b21ab6257ab6ab09459be8a154a19a20",
+      "alt": {
+        "ro": "Moment de conversație în zona cu canapea a clubului",
+        "en": "A conversation in the club’s sofa area",
+        "ru": "Разговор в зоне с диваном в клубе"
+      },
+      "variants": [
+        {
+          "src": "images/club-gallery/boost-club-20.b61b21a2a1d5.320.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 16612
+        },
+        {
+          "src": "images/club-gallery/boost-club-20.40925afe9ee3.640.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 48262
+        },
+        {
+          "src": "images/club-gallery/boost-club-20.5f024613a803.762.webp",
+          "width": 762,
+          "height": 1016,
+          "bytes": 64746
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "sourceUrl": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9S_qsHGgIGiqpAj1PxfdRnyXfhyGjlZlAiBnF08tkmnNpgWqLUUL8pbdiZevkkGEizCLjWIK2uFcRVFwZ0nKT01NryBdmdVTKC8cvn-1tS3g1oBXUyPTUawx1X-zAKZk4kJszSF_BSbKeE=s812-k-no",
+      "sourceSha256": "80077dd98623e19de1566719192451940ce883a743daf4318c337aff74f2d915",
+      "alt": {
+        "ro": "Un bărbat la o masă din club, cu o plantă în prim-plan",
+        "en": "A man at a club table with a plant in the foreground",
+        "ru": "Мужчина за столиком в клубе, растение на переднем плане"
+      },
+      "variants": [
+        {
+          "src": "images/club-gallery/boost-club-22.c63c04c84aaa.320.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 15210
+        },
+        {
+          "src": "images/club-gallery/boost-club-22.06d4359eef12.609.webp",
+          "width": 609,
+          "height": 812,
+          "bytes": 33218
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "sourceUrl": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QyU7pG_XHfJGkrGA3SzPKGc5YyA13sRnp8XRnY-52OzVL-52mljhuBODL-GbXFkPz1iRlnjvYIGKoBxJtA1pRaaeOwObCPqPVYU70DnNv984TNcGzNFXDdh7_8Vy86QhZs-z-ul4h4i6E=s812-k-no",
+      "sourceSha256": "8616d17f161845c024fdba3e178278eeb24fe0d0ab09578b34f01a458e81c227",
+      "alt": {
+        "ro": "Un bărbat zâmbește la masa de lângă rafturile clubului",
+        "en": "A man smiling at a table beside the club’s shelves",
+        "ru": "Улыбающийся мужчина за столиком рядом с полками клуба"
+      },
+      "variants": [
+        {
+          "src": "images/club-gallery/boost-club-23.3493ec802065.320.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 15156
+        },
+        {
+          "src": "images/club-gallery/boost-club-23.09314a7e8dba.609.webp",
+          "width": 609,
+          "height": 812,
+          "bytes": 33262
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "sourceUrl": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9ScgVzi2zlDY-Tu2SKjU5v63qjYOeuTltK2rW5CE0ThCYVt_mWkmUlvguGWK8A6AJFbG3QCno7Y37yv-_Pwe3OHOiTr-GPeEFr-Oxftwwj5D4AHJTsyEHNUy6fzT1QTSwYONdh55iKxi77Z=s1016-k-no",
+      "sourceSha256": "e874c2385fad44701d29a611c1aebbc83cb12e627289093afbba331f7719cd4f",
+      "alt": {
+        "ro": "Un bărbat lângă peretele verde și un mesaj motivațional din Boost Club",
+        "en": "A man beside the green wall and a motivational sign at Boost Club",
+        "ru": "Мужчина у зелёной стены и мотивационной надписи в Boost Club"
+      },
+      "variants": [
+        {
+          "src": "images/club-gallery/boost-club-24.47a4dabc654a.320.webp",
+          "width": 320,
+          "height": 427,
+          "bytes": 16506
+        },
+        {
+          "src": "images/club-gallery/boost-club-24.cf5e6570f2f4.640.webp",
+          "width": 640,
+          "height": 853,
+          "bytes": 60790
+        },
+        {
+          "src": "images/club-gallery/boost-club-24.345bd74760fa.762.webp",
+          "width": 762,
+          "height": 1016,
+          "bytes": 92106
+        }
+      ]
+    }
+  ]
+}

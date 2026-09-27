@@ -56,6 +56,8 @@ OPTIONS: Supply selected photos; arrange a short shoot; leave explicit empty sta
 IMPLICATIONS: No fake venue/customer photographs will be created. Photography can materially change page trust.
 TECHNICAL RECOMMENDATION: Entrance/sign, room, assessment setup, founder at work, consented community moments; responsive crops after rights confirmation. Existing useful photos remain.
 
+2026-09-27 FOLLOW-UP: The owner requested importing the Google Maps photos. All 24 files in the listing’s “By owner” gallery were downloaded; 23 byte-unique images are now available locally on the RO/EN/RU contact pages, with three homepage highlights and a real interior image beside the contact details. One exact duplicate was omitted from the website only. Source files and their URL/hash manifest are preserved at `/Users/Gabi/boostclub-google-maps-photos-2026-09-27/`. Customer-uploaded photos are outside this batch while reuse permission remains unanswered. A clear exterior/entrance photo, assessment setup and the seven separate partner-club locations still need suitable assets. No deployment was performed.
+
 ## O07 — Legacy route strategy (B24/B25)
 
 QUESTION: Does /ambasador still describe a current offer, and should /gabi and /gabriel remain distinct?

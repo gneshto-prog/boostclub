@@ -221,8 +221,8 @@ VERIFIED FIXED means verified in the local implementation unless production evid
   Current behavior: Audit finding pending source comparison.
   Change: Photograph entrance, wide room, real assessment and consented daily activity.
   Expected result: Makes visit tangible
-  Files changed: None yet.
-  Verification: See OWNER-DECISIONS.md O03–O08; no missing business fact, permission, transcript or offer status invented.
+  Files changed: content/{ro,en,ru}/pages.json, content/club-photo-descriptions.json, content/club-photos.json, scripts/lib/club-gallery.mjs, scripts/import-club-photos.py, scripts/build-site.mjs, css/club-gallery.css, images/club-gallery/.
+  Verification: 2026-09-27 owner-requested follow-up downloaded all 24 owner-gallery files and integrated 23 unique images into all three languages. Build/lint/typecheck and 19 tests pass; six routes × five widths have no horizontal overflow; gallery expands with Enter in all locales; all 23 images loaded. Interior and daily activity now covered. Entrance/assessment and separate partner-location imagery remain outstanding; status/counts therefore stay unchanged. See OWNER-DECISIONS.md O06.
 
 - [x] **X01 — Publish optional paid continuation and independent Herbalife relationship without inventing prices** — VERIFIED FIXED
 

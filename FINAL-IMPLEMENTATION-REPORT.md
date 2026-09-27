@@ -280,3 +280,9 @@ abb6437 perf: serve responsive images and defer maps with accessible fallbacks
 ```
 
 The final report/checklist reconciliation is recorded in the following documentation commit. No commits were pushed.
+
+## Follow-up: Google Maps owner photos — 2026-09-27
+
+At the owner’s request, downloaded all 24 owner-gallery files and integrated 23 byte-unique images into the local Romanian, English and Russian website. The homepage now has three real-club highlights; contact pages have an interior photo plus the full expandable gallery. Source downloads and an archive are in `/Users/Gabi/boostclub-google-maps-photos-2026-09-27/`. Build, lint, typecheck and 19 tests pass; all six affected routes fit five viewport widths. All 23 gallery images loaded and keyboard expansion worked in all locales.
+
+This partially resolves B23: real interiors and daily activity are now present. Entrance/assessment photos, partner-location images and permission for customer-uploaded photos remain outstanding. Audit totals above are unchanged. These additions are local and have not been deployed.
