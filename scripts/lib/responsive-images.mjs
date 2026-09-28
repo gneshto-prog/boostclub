@@ -14,7 +14,8 @@ export function responsiveImages(body) {
     const hero=/fetchpriority="high"/.test(tag);
     const gallery=/(?:before|[Rr]esults\d+)\.webp$/.test(source);
     const community=key==='images/boost-club-community.webp';
-    const sizes=community?'(max-width: 899px) calc(100vw - 48px), (max-width: 1199px) 50vw, 580px':hero?'(max-width: 767px) calc(100vw - 48px), (max-width: 1199px) 42vw, 460px':gallery?'(max-width: 639px) calc((100vw - 64px) / 2), (max-width: 1023px) 30vw, 300px':'(max-width: 639px) calc(100vw - 48px), (max-width: 1023px) 45vw, 560px';
+    const card=key.startsWith('images/responsive/transformation-');
+    const sizes=card?'(max-width: 699px) calc(100vw - 48px), (max-width: 999px) calc((100vw - 72px) / 2), (max-width: 1180px) calc((100vw - 96px) / 3), 362px':community?'(max-width: 899px) calc(100vw - 48px), (max-width: 1199px) 50vw, 580px':hero?'(max-width: 767px) calc(100vw - 48px), (max-width: 1199px) 42vw, 460px':gallery?'(max-width: 639px) calc((100vw - 64px) / 2), (max-width: 1023px) 30vw, 300px':'(max-width: 639px) calc(100vw - 48px), (max-width: 1023px) 45vw, 560px';
     return tag.replace(/>$/,` srcset="${srcset}" sizes="${sizes}">`);
   });
 }

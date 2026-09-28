@@ -292,3 +292,9 @@ This partially resolves B23: real interiors and daily activity are now present. 
 The owner requested a community-focused opening in place of the large founder portrait. The Romanian, English and Russian homepages now pair a landscape-framed group photograph with “Mai bine, împreună” and localized equivalents. On phones the image follows the headline, ahead of supporting copy. First-visit details, booking, WhatsApp and the founder story farther down remain available.
 
 The photograph comes from the existing owner gallery, retrieved at a higher resolution and served through responsive, hashed WebP assets. Full build, validators, lint, typecheck and all 19 tests pass. All three homepages fit five viewport widths; desktop and phone visual checks passed. This is a local change, with no deployment or measured conversion/performance improvement. Audit totals are unchanged.
+
+## Follow-up: transformation cards and deployment gate — 2026-09-28
+
+All 54 approved finished transformation cards now replace the results gallery in RO/EN/RU, with responsive 480/800/1200 WebP images, a 1/2/3-column grid, the owner's exact wider-community introduction, anonymous numbered alt text and the retained results-vary disclaimer. Homepage previews and stale transformation attribution were corrected as well. No artwork was retouched or cropped; all seven held-back sources are excluded.
+
+The full build, validators, lint, typecheck and 21 tests pass. Real local Netlify availability requests in all three languages return HTTP 503 because production Supabase credentials are missing. No real booking confirmation was reached, so the owner's deployment condition is unmet. Nothing was deployed or pushed. Details and the scope of a future whole-branch release are in TRANSFORMATION-GALLERY-RELEASE.md.

@@ -9,6 +9,7 @@ import { structuredHead } from "./lib/structured-data.mjs";
 import { reviewSnapshot, reviewSummary, afterVisit, processFaq } from "../content/consumer-copy.mjs";
 import { responsiveImages, responsivePreloads } from './lib/responsive-images.mjs';
 import { clubPhotoPreview, clubContactPhoto, clubGallery } from './lib/club-gallery.mjs';
+import { transformationGallery } from './lib/transformation-gallery.mjs';
 
 const root = process.cwd();
 const outputRoot = path.join(root, "_site");
@@ -33,6 +34,8 @@ function renderPage(page) {
     .replaceAll('{{club-photo-preview}}', clubPhotoPreview(page.lang))
     .replaceAll('{{club-contact-photo}}', clubContactPhoto(page.lang))
     .replaceAll('{{club-gallery}}', clubGallery(page.lang))
+    .replaceAll('{{transformation-gallery}}', transformationGallery(page.lang))
+    .replaceAll('{{transformation-preview}}', transformationGallery(page.lang, true))
     .replaceAll('{{process-faq}}', processFaq(page.lang));
   body = renderRegisteredComponents(body);
   body = responsiveImages(body);

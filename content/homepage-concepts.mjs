@@ -65,7 +65,7 @@ export const images = {
   mma: "../images/gabriel-neshto-mma.webp",
   story: "../images/gabriel-story-poster.webp",
   resultOne: "../images/before.webp",
-  resultTwo: "../images/results9.webp",
+  resultTwo: "../images/results8.webp",
   resultThree: "../images/results13.webp",
 };
 

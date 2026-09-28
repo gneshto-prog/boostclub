@@ -1,0 +1,6 @@
+.results-grid.transformation-grid { grid-template-columns: minmax(0, 1fr); gap: var(--s3); }
+.transformation-grid figure { min-width: 0; border: 0; border-radius: 0; box-shadow: none; }
+.transformation-grid a { display: block; }
+.transformation-grid img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; }
+@media (min-width: 700px) { .results-grid.transformation-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1000px) { .results-grid.transformation-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
