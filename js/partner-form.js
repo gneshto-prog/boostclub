@@ -3,9 +3,9 @@
   var form = document.getElementById('leadForm');
   if (!form) return;
   var copy = {
-    ro: 'Nu am putut confirma primirea cererii. Datele ar putea fi deja salvate. Încearcă din nou cu aceleași date sau contactează-ne pe WhatsApp ori la +40 726 205 752.',
-    en: 'We could not confirm receipt of your enquiry. Your details may already be saved. Try again with the same details, or contact us on WhatsApp or +40 726 205 752.',
-    ru: 'Не удалось подтвердить получение запроса. Данные могли уже сохраниться. Повторите попытку с теми же данными или свяжитесь с нами через WhatsApp либо по телефону +40 726 205 752.'
+    ro: 'Nu am putut trimite cererea. Încearcă din nou sau scrie-ne direct pe WhatsApp ori sună la +40 726 205 752.',
+    en: 'We could not send your enquiry. Please try again, or message us directly on WhatsApp or call +40 726 205 752.',
+    ru: 'Не удалось отправить запрос. Попробуйте ещё раз или напишите нам в WhatsApp либо позвоните по номеру +40 726 205 752.'
   };
   var error = document.createElement('p');
   error.className = 'lf-error'; error.setAttribute('role', 'alert'); error.tabIndex = -1; error.hidden = true;

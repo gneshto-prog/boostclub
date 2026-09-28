@@ -140,20 +140,29 @@
       throw new Error("FORM_INVALID");
     }
     var payload = canonicalPayload(form);
+    // Partner enquiries have no booked slot and must never be lost: if the CRM call
+    // fails, the Netlify Forms archive becomes the record of the lead.
+    var archiveOnFailure = payload.leadType === "business" && form.id !== "booking-form";
+    async function fallback(error) {
+      if (!archiveOnFailure) throw error;
+      try { await archiveInNetlify(form); } catch (_) { throw error; }
+      return { ok: true, archivedOnly: true };
+    }
     var response;
     try { response = await fetch("/api/lead", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
       signal: AbortSignal.timeout(30000)
-    }); } catch (_) { throw new Error("BOOKING_OUTCOME_UNKNOWN"); }
+    }); } catch (_) { return fallback(new Error("BOOKING_OUTCOME_UNKNOWN")); }
     var result = {};
     try { result = await response.json(); } catch (err) { /* handled below */ }
     if (!response.ok || !result.ok) {
       var error = new Error(result.code || "LEAD_PIPELINE_FAILED");
       error.savedToCrm = !!result.savedToCrm;
       error.requestId = result.requestId || "";
-      throw error;
+      if (error.savedToCrm) throw error;
+      return fallback(error);
     }
 
     try { await archiveInNetlify(form); } catch (archiveError) {

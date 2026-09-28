@@ -213,6 +213,14 @@ for (const lang of Object.keys(languages)) {
   if (!/name=["']bot-field["']/i.test(booking?.html || "")) fail(`${lang}/consultatie-gratuita: bot-field honeypot is missing`);
 }
 
+// Scraped production HTML has Netlify's form attributes stripped; an
+// unregistered form silently loses every submission.
+for (const page of pages) {
+  for (const tag of (page.html || "").match(/<form\b[^>]*>/gi) || []) {
+    if (/\bname=/i.test(tag) && !/data-netlify=/i.test(tag)) fail(`${page.lang}/${page.slug}: form is not registered with Netlify Forms (data-netlify missing)`);
+  }
+}
+
 const componentScripts = filesUnder(path.join(root, "js", "components"), ".js").map((file) => fs.readFileSync(file, "utf8")).join("\n");
 if (!componentScripts.includes("preventDefault()")) fail("Externalized form handlers no longer contain preventDefault()");
 

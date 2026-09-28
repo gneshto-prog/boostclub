@@ -16,12 +16,12 @@
     "reason": "Owner requested a different community hero photo (Google Maps owner photo 5), RO/EN/RU, 2026-09-28"
   },
   "ambasador.html": {
-    "hash": "d96367f2d3a2a568f326c5268c1c4a2b895682010dd4afc7051f4c3c6e591181",
-    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
+    "hash": "74b972149deb6cead831d7068970951a6a2b062225b139acc6220690aa74e4f8",
+    "reason": "Restore Netlify Forms registration (data-netlify + honeypot) stripped by the production scrape, 2026-09-28"
   },
   "business.html": {
-    "hash": "5209816a5c6ba5001fb57a77150d31054a534591e0eea5ae5e20277e3b5ceba6",
-    "reason": "B21/B28 final accessibility: keyboard scroll areas, legible text and truthful contact metadata"
+    "hash": "9cb7eb9934078dc24e6a0a2c142f1f5f308cfb35bef5214dcb429bbfa7e11657",
+    "reason": "Restore Netlify Forms registration (data-netlify + honeypot) stripped by the production scrape, 2026-09-28"
   },
   "confidentialitate.html": {
     "hash": "a256ff1500b521710902169ae9173c368c9a59fe528f6763c2e6094c9003baee",
@@ -68,12 +68,12 @@
     "reason": "Owner requested a different community hero photo (Google Maps owner photo 5), RO/EN/RU, 2026-09-28"
   },
   "en/ambasador.html": {
-    "hash": "89fd70020a4108a9ee18fb92bf7cd919715710eb8e7a74de807a424f1925c296",
-    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
+    "hash": "8dc792d95b661b59294985ceb8673c33ccc49d67fd130e08d0157fc3205f6074",
+    "reason": "Restore Netlify Forms registration (data-netlify + honeypot) stripped by the production scrape, 2026-09-28"
   },
   "en/business.html": {
-    "hash": "b37c757574c507dd5eb902524d56f498b86ce4269a53d82bd78204d5c977ce4b",
-    "reason": "B21/B28 final accessibility: keyboard scroll areas, legible text and truthful contact metadata"
+    "hash": "82fd18e8d66a06695c09103e646700339566d11a20a73986889432874e3733ca",
+    "reason": "Restore Netlify Forms registration (data-netlify + honeypot) stripped by the production scrape, 2026-09-28"
   },
   "en/confidentialitate.html": {
     "hash": "692eb7a4058c82b28ff6f65a011dde98ebdfd423e1301769953587dae15e76b0",
@@ -120,12 +120,12 @@
     "reason": "Owner requested a different community hero photo (Google Maps owner photo 5), RO/EN/RU, 2026-09-28"
   },
   "ru/ambasador.html": {
-    "hash": "9594aab29d10c562cff542f16975e203818940c7bb2fae042571aac69e7fe541",
-    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
+    "hash": "cd5596f7723dcdac33c9bd6bf1dadc66453908c672a94beb596f965acfad38a5",
+    "reason": "Restore Netlify Forms registration (data-netlify + honeypot) stripped by the production scrape, 2026-09-28"
   },
   "ru/business.html": {
-    "hash": "3ccef1534929de6a09b57b1941830e0d4c18543a73413bcaef39d8c5ea5b01f2",
-    "reason": "B21/B28 final accessibility: keyboard scroll areas, legible text and truthful contact metadata"
+    "hash": "f4d72e5dd947a2c18751c76042642004e97c3a5b78141137678ce8885c2d6325",
+    "reason": "Restore Netlify Forms registration (data-netlify + honeypot) stripped by the production scrape, 2026-09-28"
   },
   "ru/confidentialitate.html": {
     "hash": "289c6c899e5c5b57fc26b4b963e31d489f0c7e669a351d90de31db85ffb4ef95",

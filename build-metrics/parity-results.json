@@ -12,17 +12,17 @@
     {
       "page": "index.html",
       "result": "Equivalent",
-      "reason": "Owner-approved 54 transformation cards and wider-community attribution in RO/EN/RU; updated homepage previews"
+      "reason": "Owner requested a different community hero photo (Google Maps owner photo 5), RO/EN/RU, 2026-09-28"
     },
     {
       "page": "ambasador.html",
       "result": "Equivalent",
-      "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
+      "reason": "Restore Netlify Forms registration (data-netlify + honeypot) stripped by the production scrape, 2026-09-28"
     },
     {
       "page": "business.html",
       "result": "Equivalent",
-      "reason": "B21/B28 final accessibility: keyboard scroll areas, legible text and truthful contact metadata"
+      "reason": "Restore Netlify Forms registration (data-netlify + honeypot) stripped by the production scrape, 2026-09-28"
     },
     {
       "page": "confidentialitate.html",
@@ -82,17 +82,17 @@
     {
       "page": "en/index.html",
       "result": "Equivalent",
-      "reason": "Owner-approved 54 transformation cards and wider-community attribution in RO/EN/RU; updated homepage previews"
+      "reason": "Owner requested a different community hero photo (Google Maps owner photo 5), RO/EN/RU, 2026-09-28"
     },
     {
       "page": "en/ambasador.html",
       "result": "Equivalent",
-      "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
+      "reason": "Restore Netlify Forms registration (data-netlify + honeypot) stripped by the production scrape, 2026-09-28"
     },
     {
       "page": "en/business.html",
       "result": "Equivalent",
-      "reason": "B21/B28 final accessibility: keyboard scroll areas, legible text and truthful contact metadata"
+      "reason": "Restore Netlify Forms registration (data-netlify + honeypot) stripped by the production scrape, 2026-09-28"
     },
     {
       "page": "en/confidentialitate.html",
@@ -152,17 +152,17 @@
     {
       "page": "ru/index.html",
       "result": "Equivalent",
-      "reason": "Owner-approved 54 transformation cards and wider-community attribution in RO/EN/RU; updated homepage previews"
+      "reason": "Owner requested a different community hero photo (Google Maps owner photo 5), RO/EN/RU, 2026-09-28"
     },
     {
       "page": "ru/ambasador.html",
       "result": "Equivalent",
-      "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
+      "reason": "Restore Netlify Forms registration (data-netlify + honeypot) stripped by the production scrape, 2026-09-28"
     },
     {
       "page": "ru/business.html",
       "result": "Equivalent",
-      "reason": "B21/B28 final accessibility: keyboard scroll areas, legible text and truthful contact metadata"
+      "reason": "Restore Netlify Forms registration (data-netlify + honeypot) stripped by the production scrape, 2026-09-28"
     },
     {
       "page": "ru/confidentialitate.html",
