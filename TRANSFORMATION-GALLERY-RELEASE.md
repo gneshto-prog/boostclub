@@ -38,4 +38,13 @@ The form therefore cannot proceed to the lead function or a real confirmation sc
 
 Restore valid production booking configuration in Netlify (`SUPABASE_URL`, `SUPABASE_SECRET_KEY`, `GOOGLE_SERVICE_ACCOUNT_JSON`, `GOOGLE_CALENDAR_ID`; Functions scope and Builds scope for preflight), then rerun the three real form-to-confirmation journeys using the designated internal test contact. Keep secret values out of chat and source control.
 
+### Configuration follow-up — 28 Sep
+
+- Restored the existing Deploy Preview `SUPABASE_URL` and `GOOGLE_CALENDAR_ID` values to Production, preserving their existing scopes. Verified the calendar against the connected owner's primary calendar and existing Boost Club booking events before the successful calendar update.
+- Read back the Netlify environment configuration: those two Production values are present; `SUPABASE_SECRET_KEY` and `GOOGLE_SERVICE_ACCOUNT_JSON` remain empty in Production. Existing Deploy Preview values remain present, and secrets remain marked secret. No masked value was copied as a credential.
+- At the owner's request, consulted Claude in a separate conversation, “BoostClub booking credentials audit.” Its non-secret findings are saved at `/Users/Gabi/Desktop/boostclub-booking-credential-handoff.md`. Neither lookup found an original service-account JSON or a relevant PEM private key in the checked local locations. No secret values were shared in either chat.
+- Located the existing Google service account `website-lead-calendar@boost-club-calendar-leads.iam.gserviceaccount.com` in project `boost-club-calendar-leads`. Its active key is marked uploaded/user-provided, created 24 Aug. Prepared the JSON key-creation dialog for the owner; no key has been created, removed, or rotated, and no permissions have changed.
+- The Supabase dashboard redirects to GitHub sign-in. The connected Supabase tools can inspect the project but do not expose its server key. Owner sign-in is required to retrieve that existing key.
+- No further real booking attempt can pass until the two credentials are available. No customer or booking records were changed during this configuration follow-up.
+
 **Nothing was deployed or pushed.** The full branch remains local. A later whole-branch deployment would include the earlier booking recovery, SEO/navigation, accessible forms, consent handling, reconciled live reviews, consumer copy/hierarchy, responsive assets/deferred maps, owner-photo gallery and community homepage work, as well as this transformation gallery. It must be reported as that full release, not as a gallery-only deployment.
