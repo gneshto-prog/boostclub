@@ -120,7 +120,7 @@
     hidden(form, "idempotency_key", idempotency);
     hidden(form, "lead_type", payload.leadType);
     hidden(form, "landing_page", payload.landingPage);
-    hidden(form, "click_id", attribution.last_whatsapp_click_id || "");
+    hidden(form, "click_id", (window.BoostAttribution && window.BoostAttribution.lastWhatsAppClickId && window.BoostAttribution.lastWhatsAppClickId()) || "");
     return payload;
   }
 

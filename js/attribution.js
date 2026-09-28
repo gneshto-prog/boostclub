@@ -31,4 +31,21 @@
   } };
   window.addEventListener('boost:consent',current);
   current();
+
+  // First-party reference in the WhatsApp message the visitor sends themselves,
+  // so website leads can be found in WhatsApp. Kept in memory only, never stored
+  // and never sent to analytics, so it does not depend on consent.
+  var lastClickId = '';
+  document.addEventListener('click', function (event) {
+    var link = event.target && event.target.closest ? event.target.closest('a[href*="wa.me/"]') : null;
+    if (!link) return;
+    try {
+      var url = new URL(link.href, location.href);
+      var text = (url.searchParams.get('text') || '').replace(/\n*Ref Boost Club: bc-[0-9a-f-]+[^\n]*/gi, '');
+      lastClickId = 'bc-' + newId();
+      url.searchParams.set('text', (text ? text + '\n\n' : '') + 'Ref Boost Club: ' + lastClickId + ' · ' + location.pathname);
+      link.href = url.toString();
+    } catch (_) { /* keep the original link usable */ }
+  }, true);
+  window.BoostAttribution.lastWhatsAppClickId = function () { return lastClickId; };
 })();
