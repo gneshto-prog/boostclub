@@ -336,27 +336,27 @@
     ]
   },
   "images/boost-club-community.webp": {
-    "width": 1536,
-    "height": 2048,
-    "bytes": 557878,
+    "width": 2048,
+    "height": 1536,
+    "bytes": 467384,
     "variants": [
       {
         "width": 320,
-        "height": 427,
-        "src": "images/responsive/boost-club-community.1604042b39a4.320.webp",
-        "bytes": 26958
+        "height": 240,
+        "src": "images/responsive/boost-club-community.a1ccc7b3cb87.320.webp",
+        "bytes": 19710
       },
       {
         "width": 640,
-        "height": 853,
-        "src": "images/responsive/boost-club-community.16364b874eab.640.webp",
-        "bytes": 93882
+        "height": 480,
+        "src": "images/responsive/boost-club-community.a309daf2d76a.640.webp",
+        "bytes": 54462
       },
       {
         "width": 960,
-        "height": 1280,
-        "src": "images/responsive/boost-club-community.bda5d51c9f56.960.webp",
-        "bytes": 210146
+        "height": 720,
+        "src": "images/responsive/boost-club-community.cf60a986baa5.960.webp",
+        "bytes": 97788
       }
     ]
   },

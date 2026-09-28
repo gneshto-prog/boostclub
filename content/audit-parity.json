@@ -12,8 +12,8 @@
     "reason": "B07/X02 final copy consistency: remove remaining response-time and preparation promises"
   },
   "index.html": {
-    "hash": "74b5b963fe537da84af182094cc6bf7db9706361a809fcb7c8babfe8acdb4d7b",
-    "reason": "Owner-approved 54 transformation cards and wider-community attribution in RO/EN/RU; updated homepage previews"
+    "hash": "c748c2c09747996bd93dd07c3eae8ff95e5e8a9023b331cc37854b7d7f0c0194",
+    "reason": "Owner requested a different community hero photo (Google Maps owner photo 5), RO/EN/RU, 2026-09-28"
   },
   "ambasador.html": {
     "hash": "d96367f2d3a2a568f326c5268c1c4a2b895682010dd4afc7051f4c3c6e591181",
@@ -64,8 +64,8 @@
     "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "en/index.html": {
-    "hash": "53d897995ca65b7e1906be9c9ef7b18cfd32969d68a011531aa75280a6145f49",
-    "reason": "Owner-approved 54 transformation cards and wider-community attribution in RO/EN/RU; updated homepage previews"
+    "hash": "cb2ec520df9adc4b68153cbd6bfbb2edf165709196ff40530b625c9b04325bc4",
+    "reason": "Owner requested a different community hero photo (Google Maps owner photo 5), RO/EN/RU, 2026-09-28"
   },
   "en/ambasador.html": {
     "hash": "89fd70020a4108a9ee18fb92bf7cd919715710eb8e7a74de807a424f1925c296",
@@ -116,8 +116,8 @@
     "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "ru/index.html": {
-    "hash": "028a52d2181318ac0539d56589744632dfffde81acd2e69ee9189b5ac44446b4",
-    "reason": "Owner-approved 54 transformation cards and wider-community attribution in RO/EN/RU; updated homepage previews"
+    "hash": "14b1a40b263bc5782874fda480d2e23fbe2ab7b65fc2ad162c361bbd1a43ba19",
+    "reason": "Owner requested a different community hero photo (Google Maps owner photo 5), RO/EN/RU, 2026-09-28"
   },
   "ru/ambasador.html": {
     "hash": "9594aab29d10c562cff542f16975e203818940c7bb2fae042571aac69e7fe541",
