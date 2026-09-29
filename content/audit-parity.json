@@ -12,8 +12,8 @@
     "reason": "B07/X02 final copy consistency: remove remaining response-time and preparation promises"
   },
   "index.html": {
-    "hash": "c748c2c09747996bd93dd07c3eae8ff95e5e8a9023b331cc37854b7d7f0c0194",
-    "reason": "Owner requested a different community hero photo (Google Maps owner photo 5), RO/EN/RU, 2026-09-28"
+    "hash": "d12cd33aff8fbfde3b31bd7c9dd80963712511e2d1fa421a11e9886493aa2867",
+    "reason": "Review snapshot refreshed from Google Maps 29 Sep 2026: 80 reviews, 5.0"
   },
   "ambasador.html": {
     "hash": "74b972149deb6cead831d7068970951a6a2b062225b139acc6220690aa74e4f8",
@@ -28,8 +28,8 @@
     "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "contact.html": {
-    "hash": "c93b530bec9332ba010f2761d4c65f559ac993e52cc4216306dbad123deccfc7",
-    "reason": "Owner requested real Google Maps photos: local gallery and homepage highlights, RO/EN/RU, 2026-09-27"
+    "hash": "9866b5133b9aa9bbbb76e05f63e37526e082118f7fe3f54f93a4c684630e1e7f",
+    "reason": "Review snapshot refreshed from Google Maps 29 Sep 2026: 80 reviews, 5.0"
   },
   "cookies.html": {
     "hash": "0744d5b7552e018b71e325c2cc5b73a6684f1782336c10204fa965091c27e924",
@@ -52,8 +52,8 @@
     "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "recenzii.html": {
-    "hash": "7d605e6c53f342b90bcfa8d1eb2da498cc40e45d899331ca52fa1351e79bc87f",
-    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
+    "hash": "3788c72a0d7a060068e307362b90f77e482f7feda165c2317b2fdadee7899f66",
+    "reason": "Review snapshot refreshed from Google Maps 29 Sep 2026: 80 reviews, 5.0"
   },
   "rezultate.html": {
     "hash": "b64ff3b663db44c9f3e05b07982fe239cc77c7a8f8736256d7dcd0cc4c144407",
@@ -64,8 +64,8 @@
     "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "en/index.html": {
-    "hash": "cb2ec520df9adc4b68153cbd6bfbb2edf165709196ff40530b625c9b04325bc4",
-    "reason": "Owner requested a different community hero photo (Google Maps owner photo 5), RO/EN/RU, 2026-09-28"
+    "hash": "e0b350279dfde51fd17b3b02ef2bd08f109e9850a54574e183755416551fb4bd",
+    "reason": "Review snapshot refreshed from Google Maps 29 Sep 2026: 80 reviews, 5.0"
   },
   "en/ambasador.html": {
     "hash": "8dc792d95b661b59294985ceb8673c33ccc49d67fd130e08d0157fc3205f6074",
@@ -80,8 +80,8 @@
     "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "en/contact.html": {
-    "hash": "91f35891d8bd697aaf6200e2bc171eea8ecf85e68c002735b847d59340d24a74",
-    "reason": "Owner requested real Google Maps photos: local gallery and homepage highlights, RO/EN/RU, 2026-09-27"
+    "hash": "dd628292ed532bc1cbef87177cf7e7d314f8241092d5e8e59a74e65a15b75f7b",
+    "reason": "Review snapshot refreshed from Google Maps 29 Sep 2026: 80 reviews, 5.0"
   },
   "en/cookies.html": {
     "hash": "48cca9f53f316dcfc77bc880d522a4b546c88e07c409b07a1bf093b6b2fadeeb",
@@ -104,8 +104,8 @@
     "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "en/recenzii.html": {
-    "hash": "9163f5c535f8f18b83f3ebe1899cb857f40351238aad3dbacc471234d59b5039",
-    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
+    "hash": "21c34299d1b770672721ba7b5fad0a1196b47c5c4e238f01c14eb89711316da8",
+    "reason": "Review snapshot refreshed from Google Maps 29 Sep 2026: 80 reviews, 5.0"
   },
   "en/rezultate.html": {
     "hash": "96769243f32939d5540cabad08068b7195c2510bda85d34027c8520fd8f3630e",
@@ -116,8 +116,8 @@
     "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "ru/index.html": {
-    "hash": "14b1a40b263bc5782874fda480d2e23fbe2ab7b65fc2ad162c361bbd1a43ba19",
-    "reason": "Owner requested a different community hero photo (Google Maps owner photo 5), RO/EN/RU, 2026-09-28"
+    "hash": "07f1f2e3d220b9c44dedbf6bb1f1948347c1b67c6ec45dd7fe64c1e11dcf0a5e",
+    "reason": "Review snapshot refreshed from Google Maps 29 Sep 2026: 80 reviews, 5.0"
   },
   "ru/ambasador.html": {
     "hash": "cd5596f7723dcdac33c9bd6bf1dadc66453908c672a94beb596f965acfad38a5",
@@ -132,8 +132,8 @@
     "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "ru/contact.html": {
-    "hash": "e6b5a1c909bdc01eb45c8efccd043e14d1e08109bf3c3532f20c3b31eabd0892",
-    "reason": "Owner requested real Google Maps photos: local gallery and homepage highlights, RO/EN/RU, 2026-09-27"
+    "hash": "1ebcf136b820b7758193e4665bb41c850789f56d5cca0b8a0a1f4a6519914412",
+    "reason": "Review snapshot refreshed from Google Maps 29 Sep 2026: 80 reviews, 5.0"
   },
   "ru/cookies.html": {
     "hash": "45d089a78f5897121e781dd002c13b49f9eb87543ae506299f9d9161262c99e6",
@@ -156,8 +156,8 @@
     "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "ru/recenzii.html": {
-    "hash": "b6a67c220fbd42c098606ffade0231ec8300a8d313a75beb0b6f8e3e30276659",
-    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
+    "hash": "021f4052c4d5a457992f92c5c374e160aa437c800c64a457cb9b8acb19dd6341",
+    "reason": "Review snapshot refreshed from Google Maps 29 Sep 2026: 80 reviews, 5.0"
   },
   "ru/rezultate.html": {
     "hash": "9253616bc782e0667c7585072a7b0fee281262fe4b17cbba69abb89e59ef4b4e",

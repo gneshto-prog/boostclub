@@ -1,18 +1,18 @@
 // Dated manual snapshot; not a live Google feed.
-export const reviewSnapshot = { rating: '5.0', count: 40, date: '2026-09-01', source: 'https://g.page/r/CUSJCWfOpKRSEAE' };
+export const reviewSnapshot = { rating: '5.0', count: 80, date: '2026-09-29', source: 'https://g.page/r/CUSJCWfOpKRSEAE' };
 export const consumerCopy = {
   ro: {
-    reviews: 'recenzii Google', date: 'Situație la 1 septembrie 2026',
+    reviews: 'recenzii Google', date: 'Situație la 29 septembrie 2026',
     afterTitle: 'Ce se întâmplă după vizita gratuită?',
     after: 'Poți pleca doar cu rezultatele și explicațiile primite. Dacă vrei să continui, discutăm despre opțiunile de sprijin, ce includ și cât costă. Gabriel este distribuitor independent Herbalife. Orice achiziție de produse este opțională și separată de evaluarea gratuită.',
   },
   en: {
-    reviews: 'Google reviews', date: 'Snapshot from 1 September 2026',
+    reviews: 'Google reviews', date: 'Snapshot from 29 September 2026',
     afterTitle: 'What happens after the free visit?',
     after: 'You can leave with your results and explanations, with no further commitment. If you want ongoing support, we can discuss the options, what they include and their costs. Gabriel is an Independent Herbalife Distributor. Product purchases are optional and separate from the free assessment.',
   },
   ru: {
-    reviews: 'отзывов в Google', date: 'Данные на 1 сентября 2026 года',
+    reviews: 'отзывов в Google', date: 'Данные на 29 сентября 2026 года',
     afterTitle: 'Что будет после бесплатного визита?',
     after: 'Вы можете уйти с результатами и объяснениями без дальнейших обязательств. Если захотите продолжить, обсудим варианты поддержки, их содержание и стоимость. Габриел — независимый дистрибьютор Herbalife. Покупка продуктов добровольна и не связана с бесплатной оценкой состава тела.',
   },
