@@ -22,7 +22,8 @@ export function structuredHead(page) {
       description: locale.description, image: `${origin}/images/og-image.jpg`,
       hasMap: 'https://www.google.com/maps/search/?api=1&query=Strada+Sevastopol+24+Bucuresti',
       founder: { '@id': personId } },
-    { '@type': 'Person', '@id': personId, name: 'Gabriel Neshto', url: `${origin}/gabriel` },
+    { '@type': 'Person', '@id': personId, name: 'Gabriel Neshto', url: `${origin}/gabriel`,
+      sameAs: ['https://gabrielneshto.com/', 'https://www.instagram.com/gabineshto'] },
     { '@type': 'WebPage', '@id': `${url}#webpage`, url, name: title, inLanguage: page.lang,
       isPartOf: { '@id': `${origin}/#website` }, about: { '@id': ['gabriel','gabi','business'].includes(page.slug) ? personId : businessId } },
   ];

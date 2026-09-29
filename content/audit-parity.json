@@ -1,171 +1,171 @@
 {
   "consultatie-gratuita.html": {
-    "hash": "ca8f870f1e378c755bca0da576dd521fd38af383917ed350ba0765ae8d470eab",
-    "reason": "B07/X02 final copy consistency: remove remaining response-time and preparation promises"
+    "hash": "f3485c393f77aa21bd3ba95939bd30a206eefb4794e19e66392690ee590b5a94",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "en/consultatie-gratuita.html": {
-    "hash": "7495a55f1f4fe07414774413e17459156ab0ea40d52855db63d1df2c75b84a0e",
-    "reason": "B07/X02 final copy consistency: remove remaining response-time and preparation promises"
+    "hash": "667cd10fc31d89d8ef933a1f55fc40a5058eae74e3461f1a1151ddeb9b0180ab",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "ru/consultatie-gratuita.html": {
-    "hash": "2a6392764d912665d2963fc4eb47a23a370c32953313cf62321c092dca68330e",
-    "reason": "B07/X02 final copy consistency: remove remaining response-time and preparation promises"
+    "hash": "db9a74d53d16063578b075982ad3358eedd750f03cf5c5ad5d21b7d99da6fb2e",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "index.html": {
-    "hash": "d12cd33aff8fbfde3b31bd7c9dd80963712511e2d1fa421a11e9886493aa2867",
-    "reason": "Review snapshot refreshed from Google Maps 29 Sep 2026: 80 reviews, 5.0"
+    "hash": "c340e36b4a1d2d9aaf3d54d563cf35219bfc9e0dbc314e2339917a473b96ba02",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "ambasador.html": {
-    "hash": "74b972149deb6cead831d7068970951a6a2b062225b139acc6220690aa74e4f8",
-    "reason": "Restore Netlify Forms registration (data-netlify + honeypot) stripped by the production scrape, 2026-09-28"
+    "hash": "985da73002abfb76e03ca9c74efac9d065262c1856a27379abb3ff0b159040b4",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "business.html": {
-    "hash": "9cb7eb9934078dc24e6a0a2c142f1f5f308cfb35bef5214dcb429bbfa7e11657",
-    "reason": "Restore Netlify Forms registration (data-netlify + honeypot) stripped by the production scrape, 2026-09-28"
+    "hash": "3053c2a5a61fd9435f2c9ca311f820dda9ba90e4d0f475d193277af31d3e432a",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "confidentialitate.html": {
-    "hash": "a256ff1500b521710902169ae9173c368c9a59fe528f6763c2e6094c9003baee",
-    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
+    "hash": "7b51d214d2566a35f37774fd0a06513b27212f0613290e949a3b7896e85f1477",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "contact.html": {
-    "hash": "9866b5133b9aa9bbbb76e05f63e37526e082118f7fe3f54f93a4c684630e1e7f",
-    "reason": "Review snapshot refreshed from Google Maps 29 Sep 2026: 80 reviews, 5.0"
+    "hash": "17c231d456be06a98f74d48fe1d2ad20a421439abd8fedaa563b9aeff55e0bf7",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "cookies.html": {
-    "hash": "0744d5b7552e018b71e325c2cc5b73a6684f1782336c10204fa965091c27e924",
-    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
+    "hash": "4180b21aae9765b5dbbdb2339e8b6780506c9df29e2da1cce754ac3f20015cbd",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "cum-functioneaza.html": {
-    "hash": "46b72fb35fe1e2d5e7bbf3f70b0b0b9e7573d54730835453d77c0e8aa79ff10a",
-    "reason": "B07/X02 final copy consistency: remove remaining response-time and preparation promises"
+    "hash": "c43387767c52cdc804eec3c2b9ddd86e261005aecf4808e219538955838fcb2e",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "gabi.html": {
-    "hash": "0f2e048c2449885c7bbae06daac45a8d5a147ff986e010221255730d1d2f6893",
-    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
+    "hash": "c8d51224c1371384830e91ef82f5cf1948473841921727b2df3b9d297b66b1ad",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "gabriel.html": {
-    "hash": "b1c66cea9d4ea7298a5e289d6e86eff58ce7f1148238b511d5effd317786700f",
-    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
+    "hash": "ac92ed7a6b38d716ff81c9815fbb645a549a5779abf79272f2f4c37223164048",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "multumim.html": {
     "hash": "285a5fb3dd60eb1c7093bc44d5199291e2396f5e9e11d12c127eaab17e9100f3",
     "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "recenzii.html": {
-    "hash": "3788c72a0d7a060068e307362b90f77e482f7feda165c2317b2fdadee7899f66",
-    "reason": "Review snapshot refreshed from Google Maps 29 Sep 2026: 80 reviews, 5.0"
+    "hash": "d84f1dde4903af90ee72c866dbb2436c3cf61db9cf9547af07584cfa896dcf47",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "rezultate.html": {
-    "hash": "b64ff3b663db44c9f3e05b07982fe239cc77c7a8f8736256d7dcd0cc4c144407",
-    "reason": "Owner-approved 54 transformation cards and wider-community attribution in RO/EN/RU; updated homepage previews"
+    "hash": "282a46f9a2a3ae900d099fc0dd82a17bc42369c36aef5c582625739ee96c561d",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "termeni.html": {
-    "hash": "838fa3557986ee26fa76fe08499df43b1dae95579e0c3b0d309a8d2cd8988895",
-    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
+    "hash": "d205d792316306e64cdfd1bd0ec2ab513c9e6ab911a215e8c460d9922052ea28",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "en/index.html": {
-    "hash": "e0b350279dfde51fd17b3b02ef2bd08f109e9850a54574e183755416551fb4bd",
-    "reason": "Review snapshot refreshed from Google Maps 29 Sep 2026: 80 reviews, 5.0"
+    "hash": "63330b7309210d4e7d369c00b85c83e7aad73ca22e495eed0da271e2aa522843",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "en/ambasador.html": {
-    "hash": "8dc792d95b661b59294985ceb8673c33ccc49d67fd130e08d0157fc3205f6074",
-    "reason": "Restore Netlify Forms registration (data-netlify + honeypot) stripped by the production scrape, 2026-09-28"
+    "hash": "5236aaf91b427c95cc94a0b6841993c26f8e6158628a6bb1871fd8b30aae2f46",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "en/business.html": {
-    "hash": "82fd18e8d66a06695c09103e646700339566d11a20a73986889432874e3733ca",
-    "reason": "Restore Netlify Forms registration (data-netlify + honeypot) stripped by the production scrape, 2026-09-28"
+    "hash": "81d7c333956da80491a913a02dd64c7479a0ca9efe989ee2a48e0e808c1455b5",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "en/confidentialitate.html": {
-    "hash": "692eb7a4058c82b28ff6f65a011dde98ebdfd423e1301769953587dae15e76b0",
-    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
+    "hash": "0df3d276a5c3065176b9a2054e040fc5510c5f085dcb958f38c7a868e858dbbe",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "en/contact.html": {
-    "hash": "dd628292ed532bc1cbef87177cf7e7d314f8241092d5e8e59a74e65a15b75f7b",
-    "reason": "Review snapshot refreshed from Google Maps 29 Sep 2026: 80 reviews, 5.0"
+    "hash": "efcb7eee4a8a4f4b90d97fc7dbac99282bdd94675573750c85a040bd1ad730ae",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "en/cookies.html": {
-    "hash": "48cca9f53f316dcfc77bc880d522a4b546c88e07c409b07a1bf093b6b2fadeeb",
-    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
+    "hash": "a2c16afa838f873fc143f76643f0200808c943c76805a0a624e7d686849d2206",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "en/cum-functioneaza.html": {
-    "hash": "7a5675c5d11073639ba6b879c79343b0b097a92c901aec11e47c4044d429246b",
-    "reason": "B07/X02 final copy consistency: remove remaining response-time and preparation promises"
+    "hash": "11a1b3cc9cc65074a5bb5f4e97595ba4bdaeea1c8e3cf997aa8c8995aac32969",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "en/gabi.html": {
-    "hash": "781e48dd5f2e751fd046a82d46645f5e890e7f3c29cd55b9256f1f4dea240fdc",
-    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
+    "hash": "5be51dfe61d389fcdf11a5167113e28d653112670f75d9998cda05b24de56774",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "en/gabriel.html": {
-    "hash": "ed04650e990872cd4ac2b8271e4d06c17c167f09ffc23580a737f00878d6d051",
-    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
+    "hash": "2babdf36ce12ea5abf2e012da606c319e990aefc13f62f1cb3a361980bb999b2",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "en/multumim.html": {
     "hash": "078dddb3afc01b07c9b8b66cb34bfd572e6d62953021a283086074b56f14c6da",
     "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "en/recenzii.html": {
-    "hash": "21c34299d1b770672721ba7b5fad0a1196b47c5c4e238f01c14eb89711316da8",
-    "reason": "Review snapshot refreshed from Google Maps 29 Sep 2026: 80 reviews, 5.0"
+    "hash": "0846690ecf0f97fdef6b57afbb3d007d44f502482dddf5efc4dad604a58f79f8",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "en/rezultate.html": {
-    "hash": "96769243f32939d5540cabad08068b7195c2510bda85d34027c8520fd8f3630e",
-    "reason": "Owner-approved 54 transformation cards and wider-community attribution in RO/EN/RU; updated homepage previews"
+    "hash": "1a07c493e5237414773ff39f0218be63c5fc3b60d0ba4c7b3bf194c8226e293d",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "en/termeni.html": {
-    "hash": "f33c21b05a537b880427bc090b3539dc12ef272f2974485b07d495a6081ee5aa",
-    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
+    "hash": "1092102e13cee0dd56895bc71e47ccb8bb19790ea9ef1709d5032f8c89c3e02d",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "ru/index.html": {
-    "hash": "07f1f2e3d220b9c44dedbf6bb1f1948347c1b67c6ec45dd7fe64c1e11dcf0a5e",
-    "reason": "Review snapshot refreshed from Google Maps 29 Sep 2026: 80 reviews, 5.0"
+    "hash": "15855c168171b037d644aaf817880f7309ddbef52bf004f54304df9a9252ed96",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "ru/ambasador.html": {
-    "hash": "cd5596f7723dcdac33c9bd6bf1dadc66453908c672a94beb596f965acfad38a5",
-    "reason": "Restore Netlify Forms registration (data-netlify + honeypot) stripped by the production scrape, 2026-09-28"
+    "hash": "b5513bfef2daced770391cc683df13b6846dd1ed75dcd4fa927ec17be9809398",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "ru/business.html": {
-    "hash": "f4d72e5dd947a2c18751c76042642004e97c3a5b78141137678ce8885c2d6325",
-    "reason": "Restore Netlify Forms registration (data-netlify + honeypot) stripped by the production scrape, 2026-09-28"
+    "hash": "4085432d4284692999a537e49ccafea8586ce1c7bded2c2c575d1f125c60d50d",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "ru/confidentialitate.html": {
-    "hash": "289c6c899e5c5b57fc26b4b963e31d489f0c7e669a351d90de31db85ffb4ef95",
-    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
+    "hash": "35ef2b112924e63b21d50e1d63c7b0d00441abfebf4097416514e0f5e11a5958",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "ru/contact.html": {
-    "hash": "1ebcf136b820b7758193e4665bb41c850789f56d5cca0b8a0a1f4a6519914412",
-    "reason": "Review snapshot refreshed from Google Maps 29 Sep 2026: 80 reviews, 5.0"
+    "hash": "902acd0457913133d54a95e7de6e44010376c30b2232bf4b77ad4fea9eb5dcaf",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "ru/cookies.html": {
-    "hash": "45d089a78f5897121e781dd002c13b49f9eb87543ae506299f9d9161262c99e6",
-    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
+    "hash": "4ca67df8af9d644d24fa9fcf6ed3bc567f6390074b45dbf437d221e3d8bbd465",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "ru/cum-functioneaza.html": {
-    "hash": "bb56058e506bd6b29515bf97ac314fd542526790e522dd08fe9232d224a7a3a5",
-    "reason": "B07/X02 final copy consistency: remove remaining response-time and preparation promises"
+    "hash": "262c47c5e425de133cd05ad05bb1c2cd85daa1cd75727a91972ebcde4bb32014",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "ru/gabi.html": {
-    "hash": "e737b93d7b10a83bf71da940cd0e8f1b5fb90b1ea80d0dfa5062785eca054e61",
-    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
+    "hash": "25a89d3b1dc237fa5d62c36ea61a33c05f571ee251634c654a173f4a99d04f14",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "ru/gabriel.html": {
-    "hash": "f48e3b24e89a929d34acb8c7aff21fa84bbca3edc305a90b529b5937210bc9b2",
-    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
+    "hash": "758f249c10879239c75eccaa920dd2989e89fa9c300c69c9472a6eed6b16d17b",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "ru/multumim.html": {
     "hash": "0671e4906ebab19fd50d10f5bf8582edf1ae5663d8cdea864c57dbd94eb8d1f3",
     "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
   },
   "ru/recenzii.html": {
-    "hash": "021f4052c4d5a457992f92c5c374e160aa437c800c64a457cb9b8acb19dd6341",
-    "reason": "Review snapshot refreshed from Google Maps 29 Sep 2026: 80 reviews, 5.0"
+    "hash": "73ee38cd636691c2b78b2d64eaa4f19d84cf014c6edb1a21bd86bddf30edb7e5",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "ru/rezultate.html": {
-    "hash": "9253616bc782e0667c7585072a7b0fee281262fe4b17cbba69abb89e59ef4b4e",
-    "reason": "Owner-approved 54 transformation cards and wider-community attribution in RO/EN/RU; updated homepage previews"
+    "hash": "25eb6e8ab462a2136b485496491fcbc55183ae7414f89819d88e8e83ea8d3f75",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "ru/termeni.html": {
-    "hash": "fc0414d58e74e83e1e67b9a0e2213557e085f575e62355c2a1fff0eb40201e0c",
-    "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
+    "hash": "f0aade2ec5647d85433a34745195b8684bad5847c61b93c2b3fd33ec1f86f3eb",
+    "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
   },
   "404.html": {
     "hash": "6d8c0ff5b5f3b3bedc19cabb1d07c951e3580423ab44a39abbe13a08ad41d2a4",

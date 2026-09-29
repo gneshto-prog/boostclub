@@ -66,7 +66,7 @@ test('homepage prioritizes assessment and preserves excerpts from the current or
     const excerpts=[...home.matchAll(/<blockquote\b[\s\S]*?<p[^>]*>([\s\S]*?)<\/p>[\s\S]*?<\/blockquote>/g)];
     assert.equal(excerpts.length,3);
     for(const excerpt of excerpts)assert.ok(full.includes(excerpt[1]),lang);
-    assert.equal((full.match(/<blockquote\b/g)||[]).length,8);
+    assert.equal((full.match(/<blockquote\b/g)||[]).length,10);
     assert.equal(reviewSnapshot.count,80);assert.equal(reviewSnapshot.date,'2026-09-29');
   }
 });
