@@ -28,6 +28,16 @@ const TOPPINGS: Record<string, string> = {
   talm: "Almonds",
   tpist: "Pistachio",
 };
+// Bar drinks (menutest): all optional, same allowlist rule.
+const TEAS: Record<string, string> = { original: "Original", lemon: "Lemon", peach: "Peach", mango: "Mango & Dragon Fruit" };
+const ALOES: Record<string, string> = { original: "Original", mango: "Mango" };
+const TEMPS: Record<string, string> = { iced: "iced", hot: "hot" };
+const XTRAS: Record<string, string> = { f3: "Formula 3 Protein", fibre: "Oat Apple Fibre", creatine: "Creatine+" };
+const PLUS: Record<string, string> = {
+  collagen: "Collagen Skin Booster", cr7: "CR7 Drive", hydrate: "H24 Hydrate", nightmode: "Night Mode",
+  betaheart: "Beta Heart", immune: "Immune Booster", aloemax: "Aloe Max", liftoff: "Liftoff",
+  icedcoffee: "High Protein Iced Coffee",
+};
 const SIGNATURES = new Set([
   "Bounty", "Ferrero", "Raffaello", "Dubai", "Snickers", "Kinder Bueno",
   "Caramel Macchiato", "Banoffee", "After Eight", "Strawberry Cheesecake",
@@ -69,6 +79,24 @@ export default async (request: Request, context: { ip?: string }) => {
   const toppings = pick(body.t ?? [], TOPPINGS, 2);
   if (!bases || !bases.length || !syrups || !toppings) return json({ ok: false, error: "invalid" }, 400);
 
+  // Optional bar drinks block. Anything off-list makes the whole block invalid -> ignored.
+  let drink = "";
+  let extra = "";
+  const d = body.d;
+  if (d && typeof d === "object") {
+    const o = d as Record<string, unknown>;
+    const tea = typeof o.tea === "string" && o.tea in TEAS ? TEAS[o.tea] : null;
+    const aloe = typeof o.aloe === "string" && o.aloe in ALOES ? ALOES[o.aloe] : null;
+    const temp = typeof o.temp === "string" && o.temp in TEMPS ? TEMPS[o.temp] : null;
+    const xs = pick(o.x ?? [], XTRAS, 1);
+    const ps = pick(o.p ?? [], PLUS, 1);
+    if (tea && aloe && temp && xs && ps) {
+      drink = `Drink: ${tea} tea + ${aloe} aloe, ${temp}`;
+      const parts = [...xs, ...ps.map((p) => `${p} (Boost+)`)];
+      extra = parts.length ? `Extra: ${parts.join(" + ")}` : "";
+    }
+  }
+
   const name = typeof body.name === "string"
     ? body.name.replace(/[\u0000-\u001f<>]/g, "").trim().slice(0, 40)
     : "";
@@ -97,6 +125,8 @@ export default async (request: Request, context: { ip?: string }) => {
     `Base: ${bases.join(" + ")}${bases.length > 1 ? " (half/half)" : ""}`,
     syrups.length ? `Syrup: ${syrups.join(" + ")}` : "",
     toppings.length ? `Topping: ${toppings.join(" + ")}` : "",
+    drink,
+    extra,
   ].filter(Boolean);
 
   try {

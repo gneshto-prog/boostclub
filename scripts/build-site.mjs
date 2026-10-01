@@ -14,7 +14,7 @@ import { transformationGallery } from './lib/transformation-gallery.mjs';
 const root = process.cwd();
 const outputRoot = path.join(root, "_site");
 const contentGroups = ["ro", "en", "ru", "root"];
-const assetDirectories = ["css", "js", "images", "fonts", "videos", "vendor", "menu"];
+const assetDirectories = ["css", "js", "images", "fonts", "videos", "vendor", "menu", "menutest"];
 const rootAssets = ["_redirects", "robots.txt", "sitemap.xml", "favicon.ico", "apple-touch-icon.png"];
 
 function readPages(group) {
