@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ro">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -127,6 +127,20 @@ section{padding:76px 16px}
 .mode button[aria-pressed=true]{background:var(--gold);border-color:var(--gold);color:var(--night)}
 .mode button[aria-pressed=true] span{color:var(--night)}
 body.simple .step.ext,body.simple .ticket .ext,body.simple #mixnote{display:none}
+.sheet{position:fixed;inset:0;z-index:80;display:none;align-items:flex-end;justify-content:center;background:rgba(2,14,10,.6)}
+.sheet.open{display:flex}
+.sheet .box{width:100%;max-width:440px;background:var(--cream);color:var(--night);border-radius:24px 24px 0 0;padding:22px 18px calc(20px + env(safe-area-inset-bottom));animation:up .25s ease-out}
+@media(min-width:600px){.sheet{align-items:center}.sheet .box{border-radius:24px}}
+@keyframes up{from{transform:translateY(40px);opacity:0}}
+.sheet h3{font-family:Anton,Impact,sans-serif;text-transform:uppercase;font-weight:400;font-size:30px;margin:0 0 2px;line-height:1}
+.sheet .sum{margin:6px 0 14px;font-size:13px;color:#2E4A40;line-height:1.5}
+.sheet p.s{margin:0;font-size:12.5px;color:#5A6B63}
+.sheet input[type=text]{width:100%;font:500 16px Poppins,sans-serif;padding:13px 14px;border-radius:12px;border:1.5px solid #CFC6B2;background:#fff;color:var(--night);margin:4px 0 12px}
+.sheet .row{display:flex;gap:8px}
+.sheet .row button{flex:1;border-radius:99px;padding:13px;font-weight:600;font-size:14px;border:1.5px solid var(--night);background:transparent;color:var(--night)}
+.sheet .row .send{background:var(--night);color:var(--cream)}
+.sheet .msg{margin:12px 0 0;font-size:13.5px;font-weight:600;min-height:1.2em;color:var(--mid)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 .step{border-top:1px solid var(--rule);padding:22px 0 26px}
 .step:first-child{border-top:0;padding-top:0}
 .step-h{display:flex;align-items:baseline;gap:14px;margin-bottom:6px}
@@ -245,7 +259,7 @@ footer small{display:block;margin-top:28px;font-size:10.5px;color:rgba(169,194,1
         </div>
         <div class="stage-actions">
           <button type="button" id="surprise" data-i18n="surprise">🎲 Surprinde-mă</button>
-          <button type="button" id="reset" data-i18n="reset">Resetează</button>
+          <button type="button" class="go" id="order" data-i18n="order">Trimite comanda</button>
         </div>
       </div>
 
@@ -299,6 +313,18 @@ footer small{display:block;margin-top:28px;font-size:10.5px;color:rgba(169,194,1
   <small data-i18n="fSmall">Distribuitor Independent Herbalife. Rețetele casei se schimbă, întreabă la tejghea ce e nou.</small>
 </footer>
 
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="oTitle">
+  <div class="box">
+    <h3 id="oTitle" data-i18n="oTitle">Send it to Gabi</h3>
+    <p class="s" data-i18n="oSub">He gets it instantly and starts making it.</p>
+    <p class="sum" id="oSum"></p>
+    <input type="text" id="oName" maxlength="40" autocomplete="given-name" data-ph="oName" placeholder="Your name">
+    <input type="text" class="hp" id="oHp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <div class="row"><button type="button" id="oCancel" data-i18n="oCancel">Back</button><button type="button" class="send" id="oSend" data-i18n="oSend">Send</button></div>
+    <p class="msg" id="oMsg" aria-live="polite"></p>
+  </div>
+</div>
+
 <script>
 (function(){
 "use strict";
@@ -349,7 +375,7 @@ var T={
  ro:{heroTitle:'Meniul<br><span class="outline">Shake</span>',heroCta:'Construiește-ți shake-ul ↓',mSimple:'Simplu',mSimpleSub:'Una din cele 9 arome. Atât.',mLoaded:'Loaded',mLoadedSub:'Mixuri, siropuri, toppinguri.',
   flEyebrow:'Baza',flTitle:'Toate aromele',flLead:'Fiecare shake pornește de la Formula 1. Alege una, sau amestecă două jumătate-jumătate.',
   bEyebrow:'Fă-ți-l tu',bTitle:'Construiește-l',bLead:'Alege, apoi arată biletul la tejghea.',
-  tKicker:'Shake-ul tău',tBase:'Bază',tSyrup:'Sirop',tTop:'Topping',tHint:'Arată ecranul ăsta la tejghea.',surprise:'🎲 Surprinde-mă',reset:'Resetează',
+  tKicker:'Shake-ul tău',tBase:'Bază',tSyrup:'Sirop',tTop:'Topping',tHint:'Arată ecranul ăsta la tejghea.',surprise:'🎲 Surprinde-mă',reset:'Resetează',order:'📩 Trimite comanda',oTitle:'Trimite-i lui Gabi',oSub:'Primește comanda instant și ți-o pregătește.',oName:'Numele tău',oSend:'Trimite',oCancel:'Înapoi',oSending:'Se trimite…',oDone:'Trimis! Gabi o are deja ✓',oFail:'N-a mers. Arată ecranul la tejghea.',oSlow:'Ai trimis deja. Arată ecranul la tejghea.',
   s1:'Baza',s1sub:'Alege o aromă. Alege două și le amestecăm jumătate-jumătate.',s2:'Siropul',s2sub:'Tras pe pereții paharului. Până la două, sau deloc.',s3:'Toppingul',s3sub:'Presărat deasupra. Până la două, sau deloc.',dbl:'Dublu la sirop și topping. Mai intens.',
   hEyebrow:'Rețetele casei',hTitle:'Semnăturile',hLead:'Nu știi ce să alegi? Astea sunt preferatele noastre. Apasă pe una și o vezi în pahar.',fAll:'Toate',fSingle:'O aromă',fMix:'Mixuri',
   xsE:'Pe pereți',xsT:'Siropuri',xsP:'Trase spiralat pe interiorul paharului, înainte să intre shake-ul.',xtE:'Deasupra',xtT:'Toppinguri',xtP:'Presărate peste spumă. Crocant, aromat, al tău.',
@@ -359,7 +385,7 @@ var T={
  en:{heroTitle:'The<br><span class="outline">Shake</span> Menu',heroCta:'Build your shake ↓',mSimple:'Simple',mSimpleSub:'One of the 9 flavours. That is it.',mLoaded:'Loaded',mLoadedSub:'Mixes, syrups, toppings.',
   flEyebrow:'The base',flTitle:'Every flavour',flLead:'Every shake starts with Formula 1. Pick one, or mix two half and half.',
   bEyebrow:'Make it yours',bTitle:'Build it',bLead:'Pick, then show the ticket at the counter.',
-  tKicker:'Your shake',tBase:'Base',tSyrup:'Syrup',tTop:'Topping',tHint:'Show this screen at the counter.',surprise:'🎲 Surprise me',reset:'Reset',
+  tKicker:'Your shake',tBase:'Base',tSyrup:'Syrup',tTop:'Topping',tHint:'Show this screen at the counter.',surprise:'🎲 Surprise me',reset:'Reset',order:'📩 Send my order',oTitle:'Send it to Gabi',oSub:'He gets it instantly and starts making it.',oName:'Your name',oSend:'Send',oCancel:'Back',oSending:'Sending…',oDone:'Sent! Gabi has it ✓',oFail:'Did not go through. Show this screen at the counter.',oSlow:'Already sent. Show this screen at the counter.',
   s1:'The base',s1sub:'Pick one flavour. Pick two and we mix them half and half.',s2:'The syrup',s2sub:'Drawn down the walls of the cup. Up to two, or none.',s3:'The topping',s3sub:'Sprinkled on top. Up to two, or none.',dbl:'Double syrup and topping. More of everything.',
   hEyebrow:'House recipes',hTitle:'Signatures',hLead:'Can’t decide? These are our favourites. Tap one to see it in the cup.',fAll:'All',fSingle:'Single flavour',fMix:'Mixes',
   xsE:'On the walls',xsT:'Syrups',xsP:'Swirled down the inside of the cup before the shake goes in.',xtE:'On top',xtT:'Toppings',xtP:'Sprinkled over the foam. Crunchy, nutty, yours.',
@@ -367,8 +393,8 @@ var T={
   fBig:'See you at the bar',fAddr:'Boost Club · Strada Sevastopol 24, ground floor · Bucharest',fCta:'First visit? Book a free consultation',fSmall:'Independent Herbalife Distributor. House recipes change, ask at the counter what is new.',
   none:'None',mix:'Mix',half:'half and half',max2:'Two max. Swapped out the first one.',mixOn:'Mix on: ',tryIt:'See it in the cup →',ltd:'Limited',star:'House pick',custom:'Your shake'}
 };
-var lang="ro";
-try{var q=new URLSearchParams(location.search).get("lang");var saved=localStorage.getItem("bc-menu-lang");lang=q==="en"||q==="ro"?q:(saved||((navigator.language||"").toLowerCase().indexOf("ro")===0?"ro":"en"));}catch(e){}
+var lang="en";
+try{var q=new URLSearchParams(location.search).get("lang");var saved=localStorage.getItem("bc-menu-lang");lang=q==="en"||q==="ro"?q:(saved==="ro"?"ro":"en");}catch(e){}
 var st={b:["vanilla"],s:[],t:[],dbl:false},mode="loaded";
 var $=function(id){return document.getElementById(id)};
 var byId=function(arr,id){for(var i=0;i<arr.length;i++)if(arr[i].id===id)return arr[i]};
@@ -467,6 +493,8 @@ function toggle(g,id){
 }
 function load(g){mode="loaded";st.b=g.b.slice();st.s=g.s.slice();st.t=g.t.slice();$("mixnote").textContent=st.b.length>1?T[lang].mixOn+st.b.map(flName).join(" + "):"";update();document.getElementById("build").scrollIntoView({behavior:"smooth"})}
 
+document.addEventListener("keydown",function(e){if(e.key==="Escape")$("sheet").classList.remove("open");if(e.key==="Enter"&&document.activeElement===$("oName"))$("oSend").click()});
+$("sheet").addEventListener("click",function(e){if(e.target===this)this.classList.remove("open")});
 document.addEventListener("click",function(e){
   var t=e.target.closest("button");if(!t)return;
   if(t.hasAttribute("data-lang")){lang=t.getAttribute("data-lang");try{localStorage.setItem("bc-menu-lang",lang)}catch(_){}renderAll();return}
@@ -474,6 +502,13 @@ document.addEventListener("click",function(e){
   if(t.hasAttribute("data-mode")){mode=t.getAttribute("data-mode");if(mode==="simple"){st.b=[st.b[0]];st.s=[];st.t=[];$("mixnote").textContent=""}update();return}
   if(t.hasAttribute("data-sig")){load(SIG[+t.getAttribute("data-sig")]);return}
   if(t.hasAttribute("data-f")){filter=t.getAttribute("data-f");document.querySelectorAll("[data-f]").forEach(function(b){b.setAttribute("aria-pressed",String(b===t))});renderSigs();return}
+  if(t.id==="order"){var L=T[lang];$("oSum").textContent=$("tName").textContent+" · "+$("tBase").textContent+(mode==="loaded"&&st.s.length?" · "+$("tSyrup").textContent:"")+(mode==="loaded"&&st.t.length?" · "+$("tTop").textContent:"");$("oName").placeholder=L.oName;$("oMsg").textContent="";$("oSend").disabled=false;$("sheet").classList.add("open");try{$("oName").value=$("oName").value||localStorage.getItem("bc-menu-name")||""}catch(_){}setTimeout(function(){$("oName").focus()},50);return}
+  if(t.id==="oCancel"){$("sheet").classList.remove("open");return}
+  if(t.id==="oSend"){var L2=T[lang],nm=$("oName").value.trim();try{localStorage.setItem("bc-menu-name",nm)}catch(_){}
+    t.disabled=true;$("oMsg").textContent=L2.oSending;
+    fetch("/api/menu-order",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({b:st.b,s:mode==="loaded"?st.s:[],t:mode==="loaded"?st.t:[],name:nm,sig:matchSig()||"",lang:lang,website:$("oHp").value})})
+    .then(function(r){$("oMsg").textContent=r.ok?L2.oDone:(r.status===429?L2.oSlow:L2.oFail);if(r.ok)setTimeout(function(){$("sheet").classList.remove("open")},1800);else t.disabled=false})
+    .catch(function(){$("oMsg").textContent=L2.oFail;t.disabled=false});return}
   if(t.id==="reset"){st={b:["vanilla"],s:[],t:[],dbl:false};$("mixnote").textContent="";update();return}
   if(t.id==="surprise"){
     var pick=function(a,n){var c=a.slice().sort(function(){return Math.random()-.5});return c.slice(0,n).map(function(o){return o.id})};
