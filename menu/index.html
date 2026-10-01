@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Shake Menu | Boost Club București</title>
+<meta name="description" content="The Boost Club shake menu: 9 Formula 1 flavours, flavour mixes, 4 syrups and 4 toppings. Build your shake and show it at the counter. Sevastopol 24, București.">
+<link rel="canonical" href="https://boostclub.ro/menu/">
+<meta name="theme-color" content="#06281F">
+<meta property="og:title" content="Boost Club Shake Menu">
+<meta property="og:description" content="9 flavours, endless mixes. Build yours and show it at the counter.">
+<meta property="og:image" content="https://boostclub.ro/images/og-image.jpg">
+<link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/menu/fonts/anton-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:Anton;src:url(/menu/fonts/anton-400-latin.woff2) format("woff2");font-weight:400;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Anton;src:url(/menu/fonts/anton-400-latin-ext.woff2) format("woff2");font-weight:400;font-display:swap;unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:Fraunces;src:url(/menu/fonts/fraunces-400-latin.woff2) format("woff2");font-weight:400;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Fraunces;src:url(/menu/fonts/fraunces-400-latin-ext.woff2) format("woff2");font-weight:400;font-display:swap;unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:Fraunces;src:url(/menu/fonts/fraunces-600-latin.woff2) format("woff2");font-weight:600;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Fraunces;src:url(/menu/fonts/fraunces-600-latin-ext.woff2) format("woff2");font-weight:600;font-display:swap;unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:Poppins;src:url(/menu/fonts/poppins-400-latin.woff2) format("woff2");font-weight:400;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Poppins;src:url(/menu/fonts/poppins-400-latin-ext.woff2) format("woff2");font-weight:400;font-display:swap;unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:Poppins;src:url(/menu/fonts/poppins-500-latin.woff2) format("woff2");font-weight:500;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Poppins;src:url(/menu/fonts/poppins-500-latin-ext.woff2) format("woff2");font-weight:500;font-display:swap;unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:Poppins;src:url(/menu/fonts/poppins-600-latin.woff2) format("woff2");font-weight:600;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Poppins;src:url(/menu/fonts/poppins-600-latin-ext.woff2) format("woff2");font-weight:600;font-display:swap;unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+
+:root{
+  --night:#041E17; --deep:#06281F; --green:#0D5645; --mid:#11705A;
+  --gold:#C9A24B; --gold-hi:#E8C877; --cream:#F5F0E4; --dim:#A9C2B7; --rule:rgba(232,200,119,.22);
+  --card:rgba(255,255,255,.04); --card-hi:rgba(255,255,255,.08);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--night);color:var(--cream);font-family:Poppins,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+button{font:inherit;color:inherit;cursor:pointer}
+a{color:inherit}
+.disp{font-family:Anton,Impact,"Arial Narrow",sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:.88}
+.serif{font-family:Fraunces,Georgia,serif}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-hi)}
+
+/* top bar */
+.bar{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:14px 16px;padding-top:max(14px,env(safe-area-inset-top));background:linear-gradient(var(--night),rgba(4,30,23,0))}
+.bar img{height:22px;width:auto;display:block}
+.lang{display:flex;border:1px solid var(--rule);border-radius:99px;padding:3px;background:rgba(4,30,23,.7);backdrop-filter:blur(8px)}
+.lang button{background:none;border:0;padding:5px 12px;border-radius:99px;font-size:11px;font-weight:600;letter-spacing:.14em;color:var(--dim)}
+.lang button[aria-pressed=true]{background:var(--gold);color:var(--night)}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:grid;place-items:center;text-align:center;padding:90px 16px 60px;overflow:hidden;
+  background:radial-gradient(120% 70% at 50% 100%,#0D5645 0%,rgba(13,86,69,0) 60%),radial-gradient(60% 40% at 50% 30%,rgba(201,162,75,.16),transparent 70%),var(--night)}
+.hero .eyebrow{margin:0 0 18px}
+.hero h1{font-size:clamp(84px,24vw,230px);margin:0;color:var(--cream)}
+.hero h1 .outline{color:transparent;-webkit-text-stroke:1.5px var(--gold-hi)}
+.hero .tag{font-family:Fraunces,Georgia,serif;font-size:clamp(18px,4.4vw,26px);font-style:normal;max-width:24ch;margin:20px auto 0;line-height:1.3;color:var(--cream)}
+.hero .tag em{font-style:normal;color:var(--gold-hi)}
+.hero .stats{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.hero .stats span{border:1px solid var(--rule);border-radius:99px;padding:8px 14px;font-size:12px;font-weight:500;color:var(--dim)}
+.hero .stats b{color:var(--cream);font-weight:600}
+.hero .cta{display:inline-flex;align-items:center;gap:10px;margin-top:38px;font-size:16px!important;padding:17px 30px!important;background:var(--gold);color:var(--night);text-decoration:none;font-weight:600;font-size:14px;padding:14px 24px;border-radius:99px;letter-spacing:.02em;transition:transform .2s}
+.hero .cta:hover{transform:translateY(-2px)}
+.orb{position:absolute;border-radius:50%;filter:blur(2px);opacity:.9;pointer-events:none;animation:float 9s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-18px) rotate(8deg)}}
+
+/* marquee */
+.marquee{border-block:1px solid var(--rule);overflow:hidden;background:var(--deep);padding:14px 0}
+.marquee .track{display:flex;gap:34px;width:max-content;animation:scroll 40s linear infinite}
+.marquee span{font-family:Anton,Impact,sans-serif;text-transform:uppercase;font-size:22px;letter-spacing:.03em;white-space:nowrap;display:flex;align-items:center;gap:34px;color:var(--cream)}
+.marquee span::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+section{padding:76px 16px}
+.wrap{max-width:1120px;margin:0 auto}
+.sh{display:flex;align-items:end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:30px}
+.sh h2{font-size:clamp(46px,11vw,96px);margin:8px 0 0}
+.sh p{max-width:40ch;margin:0;color:var(--dim);font-size:14.5px;line-height:1.6}
+
+/* flavour wall */
+.flavours{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+.fl{position:relative;aspect-ratio:1/1.12;border-radius:18px;padding:16px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;color:var(--ink,#1B140F);background:var(--c);border:0;text-align:left;transition:transform .25s}
+.fl:hover{transform:translateY(-4px) rotate(-1deg)}
+.fl::before{content:"";position:absolute;width:140%;aspect-ratio:1;border-radius:50%;right:-70%;bottom:-80%;background:var(--c2);opacity:.55}
+.fl .num{position:relative;font-family:Anton,Impact,sans-serif;font-size:15px;opacity:.6}
+.fl .nm{position:relative;font-family:Anton,Impact,sans-serif;text-transform:uppercase;font-size:clamp(24px,5.5vw,30px);line-height:.92}
+.fl .note{position:relative;font-size:11.5px;line-height:1.35;opacity:.78;margin-top:6px;font-weight:500}
+.fl .ltd{position:absolute;top:14px;right:14px;font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;background:var(--night);color:var(--gold-hi);padding:4px 7px;border-radius:5px}
+.fl.light{--ink:#1B140F}.fl.darkc{--ink:#F5F0E4}
+
+/* builder */
+#build{background:var(--deep);border-block:1px solid var(--rule)}
+.builder{display:grid;grid-template-columns:1fr;gap:26px}
+@media(min-width:880px){.builder{grid-template-columns:400px 1fr;align-items:start}.stage{position:sticky;top:76px}}
+.stage{background:radial-gradient(80% 60% at 50% 45%,rgba(201,162,75,.18),transparent 70%),var(--night);border:1px solid var(--rule);border-radius:24px;padding:20px 18px 18px;text-align:center}
+.cup{width:100%;max-width:230px;height:auto;display:block;margin:0 auto;filter:drop-shadow(0 24px 30px rgba(0,0,0,.45))}
+.cup stop,.cup .tr{transition:stop-color .5s,fill .5s,stroke .5s,opacity .4s}
+.ticket{margin-top:14px;background:var(--cream);color:var(--night);border-radius:14px;padding:16px 16px 14px;text-align:left;position:relative}
+.ticket::before,.ticket::after{content:"";position:absolute;top:50%;width:16px;height:16px;border-radius:50%;background:var(--night);transform:translateY(-50%)}
+.ticket::before{left:-8px}.ticket::after{right:-8px}
+.ticket .k{font-size:9.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--mid)}
+.ticket .tn{font-family:Anton,Impact,sans-serif;text-transform:uppercase;font-size:28px;line-height:.95;margin:4px 0 10px}
+.ticket dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:12.5px;border-top:1.5px dashed rgba(6,40,31,.25);padding-top:10px}
+.ticket dt{font-weight:600;color:var(--mid)}
+.ticket dd{margin:0;font-weight:500}
+.ticket .hint{margin:10px 0 0;font-size:11px;color:#5A6B63}
+.stage-actions{display:flex;gap:8px;margin-top:12px}
+.stage-actions button{flex:1;border-radius:99px;padding:11px 10px;font-size:12.5px;font-weight:600;border:1px solid var(--rule);background:transparent}
+.stage-actions .go{background:var(--gold);color:var(--night);border-color:var(--gold)}
+
+@media(max-width:879px){
+  .stage{position:sticky;top:54px;z-index:5;display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:center;padding:10px 12px;border-radius:18px;box-shadow:0 14px 30px rgba(0,0,0,.45)}
+  .cup{max-width:96px;filter:drop-shadow(0 10px 14px rgba(0,0,0,.4))}
+  .ticket{margin:0;padding:11px 12px 10px}
+  .ticket::before,.ticket::after{display:none}
+  .ticket .tn{font-size:21px;margin:2px 0 7px}
+  .ticket dl{font-size:11.5px;padding-top:7px;gap:2px 10px}
+  .ticket .hint{display:none}
+  .stage-actions{grid-column:1/-1;margin-top:0}
+  .stage-actions button{padding:8px 10px;font-size:12px}
+}
+.mode{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:26px}
+.mode button{border:1px solid var(--rule);background:var(--card);border-radius:18px;padding:16px;text-align:left;display:flex;flex-direction:column;gap:4px;transition:background .2s,border-color .2s}
+.mode b{font-family:Anton,Impact,sans-serif;text-transform:uppercase;font-weight:400;font-size:28px;line-height:1}
+.mode span{font-size:12px;color:var(--dim);line-height:1.4}
+.mode button[aria-pressed=true]{background:var(--gold);border-color:var(--gold);color:var(--night)}
+.mode button[aria-pressed=true] span{color:var(--night)}
+body.simple .step.ext,body.simple .ticket .ext,body.simple #mixnote{display:none}
+.step{border-top:1px solid var(--rule);padding:22px 0 26px}
+.step:first-child{border-top:0;padding-top:0}
+.step-h{display:flex;align-items:baseline;gap:14px;margin-bottom:6px}
+.step-h .n{font-family:Anton,Impact,sans-serif;font-size:44px;color:transparent;-webkit-text-stroke:1px var(--gold-hi);line-height:1}
+.step-h h3{font-family:Anton,Impact,sans-serif;text-transform:uppercase;font-size:30px;margin:0;font-weight:400;letter-spacing:.01em}
+.step .sub{margin:0 0 16px;color:var(--dim);font-size:13.5px;line-height:1.5}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{display:flex;align-items:center;gap:9px;border:1px solid var(--rule);background:var(--card);border-radius:99px;padding:9px 15px 9px 9px;font-size:13.5px;font-weight:500;transition:background .2s,border-color .2s,transform .15s}
+.opt:hover{background:var(--card-hi)}
+.opt:active{transform:scale(.97)}
+.opt .sw{width:24px;height:24px;border-radius:50%;background:var(--c);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.18);flex:0 0 auto;position:relative}
+.opt[aria-pressed=true]{background:var(--cream);color:var(--night);border-color:var(--cream)}
+.opt[aria-pressed=true] .sw::after{content:"";position:absolute;inset:7px 6px 8px;border:solid var(--night);border-width:0 0 2.5px 2.5px;transform:rotate(-45deg)}
+.opt .badge{font-size:9.5px;font-weight:600;letter-spacing:.1em;background:var(--gold);color:var(--night);border-radius:5px;padding:2px 5px;margin-left:2px}
+.mixnote{margin-top:12px;font-size:12.5px;color:var(--gold-hi);min-height:1.3em}
+.double{display:flex;align-items:center;justify-content:space-between;gap:16px;background:linear-gradient(100deg,var(--gold),var(--gold-hi));color:var(--night);border-radius:18px;padding:18px 20px;margin-top:6px}
+.double b{font-family:Anton,Impact,sans-serif;text-transform:uppercase;font-size:26px;font-weight:400;display:block;line-height:1}
+.double span{font-size:12.5px;font-weight:500}
+.sw-toggle{flex:0 0 auto;width:58px;height:32px;border-radius:99px;border:0;background:rgba(4,30,23,.25);position:relative;transition:background .2s}
+.sw-toggle::after{content:"";position:absolute;top:4px;left:4px;width:24px;height:24px;border-radius:50%;background:var(--cream);transition:transform .25s}
+.sw-toggle[aria-pressed=true]{background:var(--night)}
+.sw-toggle[aria-pressed=true]::after{transform:translateX(26px);background:var(--gold-hi)}
+
+/* signatures */
+.sigs{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.sig{position:relative;border:1px solid var(--rule);background:var(--card);border-radius:22px;padding:18px 18px 16px;display:grid;grid-template-columns:62px 1fr;gap:14px;text-align:left;transition:background .2s,transform .25s,border-color .2s}
+.sig:hover{background:var(--card-hi);transform:translateY(-3px);border-color:rgba(232,200,119,.5)}
+.sig svg{width:62px;height:88px}
+.sig .nm{font-family:Anton,Impact,sans-serif;text-transform:uppercase;font-size:27px;line-height:.95;margin:2px 0 6px;letter-spacing:.01em}
+.sig .d{font-family:Fraunces,Georgia,serif;font-size:14px;line-height:1.4;color:var(--dim);margin:0 0 10px}
+.sig .chips{display:flex;flex-wrap:wrap;gap:5px}
+.chip{font-size:10.5px;font-weight:500;padding:3px 9px;border-radius:99px;background:rgba(255,255,255,.07);color:var(--cream);white-space:nowrap}
+.chip.mix{background:rgba(232,200,119,.16);color:var(--gold-hi)}
+.sig .star{position:absolute;top:14px;right:14px;font-size:9px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--night);background:var(--gold);padding:3px 7px;border-radius:5px}
+.sig .try{grid-column:1/-1;font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-hi);margin-top:2px}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin:-8px 0 22px}
+.filters button{border:1px solid var(--rule);background:transparent;border-radius:99px;padding:7px 14px;font-size:12px;font-weight:500;color:var(--dim)}
+.filters button[aria-pressed=true]{background:var(--cream);color:var(--night);border-color:var(--cream)}
+
+/* extras strip */
+.extras{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:720px){.extras{grid-template-columns:1fr 1fr}}
+.xcard{border-radius:24px;padding:24px 22px;position:relative;overflow:hidden}
+.xcard.syr{background:linear-gradient(150deg,#3A1F14,#1D0F0A)}
+.xcard.top{background:linear-gradient(150deg,#0D5645,#06281F)}
+.xcard h3{font-family:Anton,Impact,sans-serif;text-transform:uppercase;font-weight:400;font-size:40px;margin:6px 0 4px;line-height:.95}
+.xcard p{margin:0 0 18px;color:var(--dim);font-size:13.5px;line-height:1.5;max-width:34ch}
+.xcard ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.xcard li{display:flex;align-items:center;gap:10px;font-family:Fraunces,Georgia,serif;font-size:17px}
+.xcard li i{width:34px;height:34px;border-radius:50%;background:var(--c);flex:0 0 auto;box-shadow:inset 0 -6px 10px rgba(0,0,0,.25),inset 0 3px 6px rgba(255,255,255,.18)}
+.xcard.syr li i{border-radius:50% 50% 50% 0;transform:rotate(-45deg)}
+
+/* how it works */
+.goals{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:720px){.goals{grid-template-columns:1fr 1fr}}
+.goal{border:1px solid var(--rule);border-radius:22px;padding:22px}
+.goal .eyebrow{font-size:10px}
+.goal h3{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:26px;margin:8px 0 12px}
+.goal ul{margin:0;padding:0;list-style:none;display:grid;gap:8px;font-size:14px}
+.goal li{display:flex;gap:10px;align-items:baseline}
+.goal li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);flex:0 0 auto;transform:translateY(-2px)}
+
+footer{padding:60px 16px 40px;text-align:center;border-top:1px solid var(--rule);background:var(--deep)}
+footer .big{font-size:clamp(40px,10vw,84px);margin:0}
+footer p{color:var(--dim);font-size:13px;line-height:1.7;margin:16px 0 0}
+footer a.wa{display:inline-flex;margin-top:22px;background:var(--gold);color:var(--night);text-decoration:none;font-weight:600;font-size:14px;padding:13px 22px;border-radius:99px}
+footer small{display:block;margin-top:28px;font-size:10.5px;color:rgba(169,194,183,.6);line-height:1.6}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+:focus-visible{outline:2px solid var(--gold-hi);outline-offset:3px}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <a href="/" aria-label="Boost Club"><img src="/images/boostclub-wordmark-cream.png" alt="Boost Club" width="102" height="22"></a>
+  <div class="lang" role="group" aria-label="Language">
+    <button type="button" data-lang="ro" aria-pressed="true">RO</button>
+    <button type="button" data-lang="en" aria-pressed="false">EN</button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="orb" style="width:90px;height:90px;left:8%;top:22%;background:radial-gradient(circle at 35% 30%,#F7EAD0,#C9A25E)"></div>
+  <div class="orb" style="width:54px;height:54px;right:10%;top:30%;background:radial-gradient(circle at 35% 30%,#F2A0B0,#C4566E);animation-delay:-3s"></div>
+  <div class="orb" style="width:70px;height:70px;right:16%;bottom:16%;background:radial-gradient(circle at 35% 30%,#8E6248,#3F2418);animation-delay:-5s"></div>
+  <div class="orb" style="width:40px;height:40px;left:16%;bottom:20%;background:radial-gradient(circle at 35% 30%,#B9E09A,#5E9A44);animation-delay:-7s"></div>
+  <div>
+    <h1 class="disp" data-i18n="heroTitle">Meniul<br><span class="outline">Shake</span></h1>
+    <a class="cta" href="#build" data-i18n="heroCta">Construiește-ți shake-ul ↓</a>
+  </div>
+</section>
+
+<section id="build">
+  <div class="wrap">
+    <div class="sh reveal">
+      <div><p class="eyebrow" data-i18n="bEyebrow">Fă-ți-l tu</p><h2 class="disp" data-i18n="bTitle">Construiește-l</h2></div>
+      <p data-i18n="bLead">Alege, apoi arată biletul la tejghea.</p>
+    </div>
+    <div class="builder">
+      <div class="stage">
+        <svg class="cup" id="cup" viewBox="0 0 200 300" role="img" aria-label="Shake preview">
+          <defs>
+            <clipPath id="cupClip"><path d="M38 52 L162 52 L148 284 Q147 290 141 290 L59 290 Q53 290 52 284 Z"/></clipPath>
+            <linearGradient id="liq" x1="0" y1="0" x2="0" y2="1">
+              <stop id="liqA1" offset="0" stop-color="#EFE2C2"/>
+              <stop id="liqA2" offset=".5" stop-color="#EFE2C2"/>
+              <stop id="liqB1" offset=".5" stop-color="#EFE2C2"/>
+              <stop id="liqB2" offset="1" stop-color="#EFE2C2"/>
+            </linearGradient>
+            <linearGradient id="gloss" x1="0" x2="1">
+              <stop offset="0" stop-color="#fff" stop-opacity=".0"/>
+              <stop offset=".18" stop-color="#fff" stop-opacity=".32"/>
+              <stop offset=".3" stop-color="#fff" stop-opacity="0"/>
+              <stop offset=".85" stop-color="#000" stop-opacity="0"/>
+              <stop offset="1" stop-color="#000" stop-opacity=".22"/>
+            </linearGradient>
+          </defs>
+          <!-- straw -->
+          <g transform="rotate(14 120 40)"><rect x="112" y="-4" width="12" height="150" rx="6" fill="#C9A24B"/><rect x="112" y="-4" width="4" height="150" rx="2" fill="#E8C877"/></g>
+          <g clip-path="url(#cupClip)">
+            <rect x="0" y="70" width="200" height="230" fill="url(#liq)"/>
+            <path id="swirl" class="tr" d="M30 170 C70 140 90 200 130 165 S180 150 190 175 L190 205 C160 185 140 230 100 200 S40 190 30 210 Z" fill="#EFE2C2" opacity="0"/>
+            <g id="drips"></g>
+            <ellipse cx="100" cy="72" rx="80" ry="14" fill="#FBF6EC" opacity=".95"/>
+            <path d="M20 72 Q40 58 60 70 T100 66 T140 70 T180 66 L180 80 L20 80 Z" fill="#FBF6EC"/>
+            <g id="tops"></g>
+            <rect x="0" y="40" width="200" height="260" fill="url(#gloss)"/>
+          </g>
+          <path d="M38 52 L162 52 L148 284 Q147 290 141 290 L59 290 Q53 290 52 284 Z" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="2"/>
+          <rect x="32" y="46" width="136" height="9" rx="4.5" fill="rgba(255,255,255,.75)"/>
+          
+        </svg>
+        <div class="ticket" aria-live="polite">
+          <div class="k" data-i18n="tKicker">Shake-ul tău</div>
+          <div class="tn" id="tName">Vanilla Cream</div>
+          <dl>
+            <dt data-i18n="tBase">Bază</dt><dd id="tBase"></dd>
+            <dt class="ext" data-i18n="tSyrup">Sirop</dt><dd class="ext" id="tSyrup"></dd>
+            <dt class="ext" data-i18n="tTop">Topping</dt><dd class="ext" id="tTop"></dd>
+          </dl>
+          <p class="hint" data-i18n="tHint">Arată ecranul ăsta la tejghea.</p>
+        </div>
+        <div class="stage-actions">
+          <button type="button" id="surprise" data-i18n="surprise">🎲 Surprinde-mă</button>
+          <button type="button" id="reset" data-i18n="reset">Resetează</button>
+        </div>
+      </div>
+
+      <div class="steps">
+        <div class="mode" role="group" aria-label="Mode">
+          <button type="button" data-mode="simple" aria-pressed="false"><b data-i18n="mSimple">Simplu</b><span data-i18n="mSimpleSub">Una din cele 9 arome. Atât.</span></button>
+          <button type="button" data-mode="loaded" aria-pressed="true"><b data-i18n="mLoaded">Loaded</b><span data-i18n="mLoadedSub">Mixuri, siropuri, toppinguri.</span></button>
+        </div>
+        <div class="step">
+          <div class="step-h"><span class="n">01</span><h3 data-i18n="s1">Baza</h3></div>
+          <p class="sub" id="s1sub" data-i18n="s1sub">Alege o aromă. Alege două și le amestecăm jumătate-jumătate.</p>
+          <div class="opts" id="optBase"></div>
+          <div class="mixnote" id="mixnote"></div>
+        </div>
+        <div class="step ext">
+          <div class="step-h"><span class="n">02</span><h3 data-i18n="s2">Siropul</h3></div>
+          <p class="sub" data-i18n="s2sub">Tras pe pereții paharului. Până la două, sau deloc.</p>
+          <div class="opts" id="optSyrup"></div>
+        </div>
+        <div class="step ext">
+          <div class="step-h"><span class="n">03</span><h3 data-i18n="s3">Toppingul</h3></div>
+          <p class="sub" data-i18n="s3sub">Presărat deasupra. Până la două, sau deloc.</p>
+          <div class="opts" id="optTop"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="house">
+  <div class="wrap">
+    <div class="sh reveal">
+      <div><p class="eyebrow" data-i18n="hEyebrow">Rețetele casei</p><h2 class="disp" data-i18n="hTitle">Semnăturile</h2></div>
+      <p data-i18n="hLead">Nu știi ce să alegi? Astea sunt preferatele noastre. Apasă pe una și o vezi în pahar.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filter">
+      <button type="button" data-f="all" aria-pressed="true" data-i18n="fAll">Toate</button>
+      <button type="button" data-f="single" aria-pressed="false" data-i18n="fSingle">O aromă</button>
+      <button type="button" data-f="mix" aria-pressed="false" data-i18n="fMix">Mixuri</button>
+    </div>
+    <div class="sigs" id="sigs"></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p class="disp big" data-i18n="fBig">Ne vedem la bar</p>
+  <p data-i18n="fAddr">Boost Club · Strada Sevastopol 24, parter · București</p>
+  <a class="wa" href="/consultatie-gratuita" data-i18n="fCta">Prima vizită? Rezervă o consultație gratuită</a>
+  <small data-i18n="fSmall">Distribuitor Independent Herbalife. Rețetele casei se schimbă, întreabă la tejghea ce e nou.</small>
+</footer>
+
+<script>
+(function(){
+"use strict";
+var FL=[
+ {id:"vanilla",en:"Vanilla Cream",c:"#EFE2C2",c2:"#E2CD9B",ro:"Cremos, clasic, merge cu orice.",enN:"Creamy, classic, goes with everything."},
+ {id:"choc",en:"Smooth Chocolate",c:"#5B3A2A",c2:"#3E2419",dark:1,ro:"Ciocolată catifelată, fără compromis.",enN:"Velvet chocolate, no compromise."},
+ {id:"cookie",en:"Cookie Crunch",c:"#A67C52",c2:"#7E5937",ro:"Biscuit cu cremă, ca la desert.",enN:"Cookies and cream, dessert energy."},
+ {id:"latte",en:"Café Latte",c:"#9A7457",c2:"#6E4E37",dark:1,ro:"Cafea cu lapte. Cel mai bun dimineața.",enN:"Coffee with milk. Best before 10."},
+ {id:"banana",en:"Banana Cream",c:"#F0D772",c2:"#DDBB47",ro:"Banană coaptă, dulce și moale.",enN:"Ripe banana, soft and sweet."},
+ {id:"straw",en:"Strawberry Delight",c:"#E58A9B",c2:"#C9637A",ro:"Căpșuni cu frișcă, de vară tot anul.",enN:"Strawberries and cream, summer all year."},
+ {id:"mint",en:"Mint & Chocolate",c:"#9ED2B5",c2:"#5B3A2A",ro:"Mentă rece peste ciocolată.",enN:"Cool mint over chocolate."},
+ {id:"rasp",en:"Raspberry & White Choc",c:"#D05C7C",c2:"#F3E6D8",ro:"Zmeură acrișoară, ciocolată albă.",enN:"Tart raspberry, white chocolate."},
+ {id:"dubai",en:"Dubai Chocolate",c:"#4C6B3C",c2:"#3E2419",dark:1,ltd:1,ro:"Fistic și ciocolată. Cât ține baza.",enN:"Pistachio and chocolate. While it lasts."}
+];
+var SY=[
+ {id:"sstraw",ro:"Căpșuni",en:"Strawberry",c:"#D2304F"},
+ {id:"schoc",ro:"Ciocolată",en:"Chocolate",c:"#3B1E12"},
+ {id:"shaz",ro:"Alune de pădure",en:"Hazelnut",c:"#8A5A2E"},
+ {id:"scar",ro:"Caramel",en:"Caramel",c:"#C47A22"}
+];
+var TP=[
+ {id:"tcoco",ro:"Cocos",en:"Coconut",c:"#FFFDF7"},
+ {id:"thaz",ro:"Alune de pădure",en:"Hazelnut",c:"#9C6B3F"},
+ {id:"talm",ro:"Migdale",en:"Almonds",c:"#E2C9A0"},
+ {id:"tpist",ro:"Fistic",en:"Pistachio",c:"#7FB24E"}
+];
+var SIG=[
+ {n:"Bounty",star:1,b:["vanilla"],s:["schoc"],t:["tcoco"],ro:"Cocos peste vanilie, ciocolată trasă pe pereți.",en:"Coconut over vanilla, chocolate drawn down the walls."},
+ {n:"Ferrero",b:["choc"],s:["shaz"],t:["thaz"],ro:"Ciocolată și alune, de două ori. Cel mai dens.",en:"Chocolate and hazelnut, twice over. The densest one."},
+ {n:"Raffaello",b:["vanilla"],s:[],t:["tcoco","talm"],ro:"Cocos și migdale pe vanilie. Alb și curat.",en:"Coconut and almond on vanilla. White and clean."},
+ {n:"Dubai",b:["dubai"],s:["schoc"],t:["tpist"],ro:"Fistic peste Dubai Chocolate. Ediție limitată.",en:"Pistachio on Dubai Chocolate. Limited edition."},
+ {n:"Snickers",b:["choc"],s:["scar"],t:["talm"],ro:"Caramel și migdale pe ciocolată. Dulce-sărat.",en:"Caramel and almonds on chocolate. Sweet and salty."},
+ {n:"Kinder Bueno",b:["vanilla"],s:["shaz"],t:["thaz"],ro:"Alune pe vanilie. Desert, dar shake.",en:"Hazelnut on vanilla. Dessert, but a shake."},
+ {n:"Caramel Macchiato",b:["latte"],s:["scar"],t:[],ro:"Cafea și caramel. Simplu, perfect.",en:"Coffee and caramel. Simple, perfect."},
+ {n:"Banoffee",b:["banana"],s:["scar"],t:["talm"],ro:"Banană, caramel, migdale crocante.",en:"Banana, caramel, crunchy almond."},
+ {n:"After Eight",b:["mint"],s:["schoc"],t:[],ro:"Mentă și ciocolată. Cel mai răcoritor.",en:"Mint and chocolate. The most refreshing."},
+ {n:"Strawberry Cheesecake",b:["cookie"],s:["sstraw"],t:[],ro:"Biscuitul face crusta, căpșunile vin din sirop.",en:"The cookie is the crust, the syrup is the berries."},
+ {n:"Neapolitan",b:["vanilla","straw"],s:["schoc"],t:[],ro:"Vanilie și căpșuni, cu ciocolată. Trei într-unul.",en:"Vanilla and strawberry with chocolate. Three in one."},
+ {n:"Mocha",b:["latte","choc"],s:["schoc"],t:["thaz"],ro:"Cafea și ciocolată, alune deasupra.",en:"Coffee meets chocolate, hazelnut on top."},
+ {n:"Chunky Monkey",b:["choc","banana"],s:["scar"],t:["thaz"],ro:"Banană cu ciocolată și caramel. Gras-bun.",en:"Banana and chocolate with caramel. Indulgent."},
+ {n:"Cookies & Cream",b:["cookie","vanilla"],s:["schoc"],t:[],ro:"Biscuit și vanilie, ciocolată pe pereți.",en:"Cookie and vanilla, chocolate on the walls."},
+ {n:"Berry Blush",b:["rasp","straw"],s:["sstraw"],t:["tcoco"],ro:"Zmeură și căpșuni, cocos alb deasupra.",en:"Raspberry and strawberry, white coconut on top."},
+ {n:"Pistachio Dream",b:["vanilla","dubai"],s:["scar"],t:["tpist"],ro:"Vanilie și Dubai, fistic și caramel.",en:"Vanilla and Dubai, pistachio and caramel."},
+ {n:"Mint Mojito",b:["mint","vanilla"],s:[],t:["tcoco"],ro:"Mentă și vanilie, cocos. Proaspăt.",en:"Mint and vanilla, coconut. Fresh."},
+ {n:"Black Forest",b:["choc","rasp"],s:["schoc"],t:["tcoco"],ro:"Ciocolată și zmeură, ca tortul.",en:"Chocolate and raspberry, like the cake."}
+];
+var T={
+ ro:{heroTitle:'Meniul<br><span class="outline">Shake</span>',heroCta:'Construiește-ți shake-ul ↓',mSimple:'Simplu',mSimpleSub:'Una din cele 9 arome. Atât.',mLoaded:'Loaded',mLoadedSub:'Mixuri, siropuri, toppinguri.',
+  flEyebrow:'Baza',flTitle:'Toate aromele',flLead:'Fiecare shake pornește de la Formula 1. Alege una, sau amestecă două jumătate-jumătate.',
+  bEyebrow:'Fă-ți-l tu',bTitle:'Construiește-l',bLead:'Alege, apoi arată biletul la tejghea.',
+  tKicker:'Shake-ul tău',tBase:'Bază',tSyrup:'Sirop',tTop:'Topping',tHint:'Arată ecranul ăsta la tejghea.',surprise:'🎲 Surprinde-mă',reset:'Resetează',
+  s1:'Baza',s1sub:'Alege o aromă. Alege două și le amestecăm jumătate-jumătate.',s2:'Siropul',s2sub:'Tras pe pereții paharului. Până la două, sau deloc.',s3:'Toppingul',s3sub:'Presărat deasupra. Până la două, sau deloc.',dbl:'Dublu la sirop și topping. Mai intens.',
+  hEyebrow:'Rețetele casei',hTitle:'Semnăturile',hLead:'Nu știi ce să alegi? Astea sunt preferatele noastre. Apasă pe una și o vezi în pahar.',fAll:'Toate',fSingle:'O aromă',fMix:'Mixuri',
+  xsE:'Pe pereți',xsT:'Siropuri',xsP:'Trase spiralat pe interiorul paharului, înainte să intre shake-ul.',xtE:'Deasupra',xtT:'Toppinguri',xtP:'Presărate peste spumă. Crocant, aromat, al tău.',
+  gEyebrow:'Sub aromă',gTitle:'Făcut pentru obiectivul tău',gLead:'Aroma o alegi tu. Ce intră dedesubt stabilim împreună, după obiectiv.',g1e:'Slăbire · energie · tonus',g1t:'Standard',g1a:'Formula 1, porție întreagă',g1b:'Protein Drink Mix, jumătate',g1c:'Aloe, jumătate',g1d:'Ceai, porție întreagă',g2e:'Masă musculară',g2t:'Pentru masă',g2a:'Formula 1, porție întreagă',g2b:'Protein Drink Mix, porție întreagă',g2c:'Fără aloe și fără ceai',
+  fBig:'Ne vedem la bar',fAddr:'Boost Club · Strada Sevastopol 24, parter · București',fCta:'Prima vizită? Rezervă o consultație gratuită',fSmall:'Distribuitor Independent Herbalife. Rețetele casei se schimbă, întreabă la tejghea ce e nou.',
+  none:'Fără',mix:'Mix',half:'jumătate-jumătate',max2:'Maxim două. Am înlocuit-o pe prima.',mixOn:'Mix activ: ',tryIt:'Vezi în pahar →',ltd:'Limitat',star:'Al casei',custom:'Shake-ul tău'},
+ en:{heroTitle:'The<br><span class="outline">Shake</span> Menu',heroCta:'Build your shake ↓',mSimple:'Simple',mSimpleSub:'One of the 9 flavours. That is it.',mLoaded:'Loaded',mLoadedSub:'Mixes, syrups, toppings.',
+  flEyebrow:'The base',flTitle:'Every flavour',flLead:'Every shake starts with Formula 1. Pick one, or mix two half and half.',
+  bEyebrow:'Make it yours',bTitle:'Build it',bLead:'Pick, then show the ticket at the counter.',
+  tKicker:'Your shake',tBase:'Base',tSyrup:'Syrup',tTop:'Topping',tHint:'Show this screen at the counter.',surprise:'🎲 Surprise me',reset:'Reset',
+  s1:'The base',s1sub:'Pick one flavour. Pick two and we mix them half and half.',s2:'The syrup',s2sub:'Drawn down the walls of the cup. Up to two, or none.',s3:'The topping',s3sub:'Sprinkled on top. Up to two, or none.',dbl:'Double syrup and topping. More of everything.',
+  hEyebrow:'House recipes',hTitle:'Signatures',hLead:'Can’t decide? These are our favourites. Tap one to see it in the cup.',fAll:'All',fSingle:'Single flavour',fMix:'Mixes',
+  xsE:'On the walls',xsT:'Syrups',xsP:'Swirled down the inside of the cup before the shake goes in.',xtE:'On top',xtT:'Toppings',xtP:'Sprinkled over the foam. Crunchy, nutty, yours.',
+  gEyebrow:'Under the flavour',gTitle:'Built for your goal',gLead:'You choose the flavour. What goes underneath, we set together, based on your goal.',g1e:'Weight loss · energy · tone',g1t:'Standard',g1a:'Formula 1, full serving',g1b:'Protein Drink Mix, half',g1c:'Aloe, half',g1d:'Tea, full serving',g2e:'Muscle gain',g2t:'For mass',g2a:'Formula 1, full serving',g2b:'Protein Drink Mix, full serving',g2c:'No aloe, no tea',
+  fBig:'See you at the bar',fAddr:'Boost Club · Strada Sevastopol 24, ground floor · Bucharest',fCta:'First visit? Book a free consultation',fSmall:'Independent Herbalife Distributor. House recipes change, ask at the counter what is new.',
+  none:'None',mix:'Mix',half:'half and half',max2:'Two max. Swapped out the first one.',mixOn:'Mix on: ',tryIt:'See it in the cup →',ltd:'Limited',star:'House pick',custom:'Your shake'}
+};
+var lang="ro";
+try{var q=new URLSearchParams(location.search).get("lang");var saved=localStorage.getItem("bc-menu-lang");lang=q==="en"||q==="ro"?q:(saved||((navigator.language||"").toLowerCase().indexOf("ro")===0?"ro":"en"));}catch(e){}
+var st={b:["vanilla"],s:[],t:[],dbl:false},mode="loaded";
+var $=function(id){return document.getElementById(id)};
+var byId=function(arr,id){for(var i=0;i<arr.length;i++)if(arr[i].id===id)return arr[i]};
+var flName=function(id){return byId(FL,id).en};
+
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+
+function miniCup(sig){
+  var a=byId(FL,sig.b[0]).c,b=sig.b[1]?byId(FL,sig.b[1]).c:a,s=sig.s[0]?byId(SY,sig.s[0]).c:null,t=sig.t[0]?byId(TP,sig.t[0]).c:null,uid="m"+Math.random().toString(36).slice(2,7);
+  var drip=s?'<path d="M14 18 Q12 40 16 60 M48 18 Q50 38 46 58" stroke="'+s+'" stroke-width="3" fill="none" stroke-linecap="round"/>':"";
+  var tops="";if(t){for(var i=0;i<7;i++)tops+='<circle cx="'+(16+i*5)+'" cy="'+(15+(i%2)*2)+'" r="2" fill="'+t+'"/>';}
+  return '<svg viewBox="0 0 62 88" aria-hidden="true"><defs><clipPath id="'+uid+'"><path d="M8 12 L54 12 L49 84 L13 84 Z"/></clipPath><linearGradient id="'+uid+'g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+a+'"/><stop offset=".5" stop-color="'+a+'"/><stop offset=".5" stop-color="'+b+'"/><stop offset="1" stop-color="'+b+'"/></linearGradient></defs><rect x="40" y="0" width="5" height="40" rx="2.5" fill="#C9A24B" transform="rotate(14 42 20)"/><g clip-path="url(#'+uid+')"><rect x="0" y="12" width="62" height="76" fill="url(#'+uid+'g)"/>'+drip+'<rect x="0" y="12" width="62" height="7" fill="#FBF6EC"/>'+tops+'</g><path d="M8 12 L54 12 L49 84 L13 84 Z" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="1.2"/></svg>';
+}
+
+function optBtn(o,group,label){return '<button type="button" class="opt" data-g="'+group+'" data-id="'+o.id+'" aria-pressed="false"><span class="sw" style="--c:'+o.c+'"></span>'+esc(label)+(o.ltd?'<span class="badge">'+T[lang].ltd+'</span>':'')+'</button>'}
+function renderOpts(){
+  $("optBase").innerHTML=FL.map(function(f){return optBtn(f,"b",f.en)}).join("");
+  $("optSyrup").innerHTML=SY.map(function(f){return optBtn(f,"s",f[lang])}).join("");
+  $("optTop").innerHTML=TP.map(function(f){return optBtn(f,"t",f[lang])}).join("");
+}
+var filter="all";
+function renderSigs(){
+  var h="";SIG.forEach(function(g,i){
+    var isMix=g.b.length>1;if(filter==="single"&&isMix||filter==="mix"&&!isMix)return;
+    var chips=g.b.map(function(b){return '<span class="chip'+(isMix?" mix":"")+'">'+esc(flName(b))+'</span>'}).join("")+g.s.map(function(s){var y=byId(SY,s);return '<span class="chip">'+esc(lang==="ro"?"Sirop "+y.ro.toLowerCase():y.en+" syrup")+'</span>'}).join("")+g.t.map(function(t){return '<span class="chip">'+esc(byId(TP,t)[lang])+'</span>'}).join("");
+    h+='<button type="button" class="sig" data-sig="'+i+'">'+(g.star?'<span class="star">'+T[lang].star+'</span>':isMix?'<span class="star" style="background:transparent;color:var(--gold-hi);border:1px solid var(--rule)">'+T[lang].mix+'</span>':'')+miniCup(g)+'<div><div class="nm">'+esc(g.n)+'</div><p class="d">'+esc(g[lang])+'</p><div class="chips">'+chips+'</div></div><span class="try">'+T[lang].tryIt+'</span></button>';
+  });
+  $("sigs").innerHTML=h;
+}
+function applyText(){
+  document.documentElement.lang=lang;
+  document.querySelectorAll("[data-i18n]").forEach(function(el){var v=T[lang][el.getAttribute("data-i18n")];if(v!=null)el.innerHTML=v;});
+  document.querySelectorAll(".lang button").forEach(function(b){b.setAttribute("aria-pressed",String(b.getAttribute("data-lang")===lang))});
+}
+
+/* cup drawing */
+var NS="http://www.w3.org/2000/svg";
+function el(tag,attrs){var e=document.createElementNS(NS,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);return e}
+function rnd(seed){return function(){seed=(seed*9301+49297)%233280;return seed/233280}}
+function drawCup(){
+  var a=byId(FL,st.b[0]),b=st.b[1]?byId(FL,st.b[1]):a;
+  $("liqA1").setAttribute("stop-color",a.c);$("liqA2").setAttribute("stop-color",a.c);
+  $("liqB1").setAttribute("stop-color",b.c);$("liqB2").setAttribute("stop-color",b.c2);
+  if(!st.b[1]){$("liqA2").setAttribute("offset",".55");$("liqB1").setAttribute("offset",".55");$("liqB1").setAttribute("stop-color",a.c);$("liqB2").setAttribute("stop-color",a.c2);}
+  else{$("liqA2").setAttribute("offset",".48");$("liqB1").setAttribute("offset",".56");}
+  var sw=$("swirl");sw.setAttribute("fill",st.b[1]?a.c:b.c);sw.setAttribute("opacity",st.b[1]?".9":"0");
+  var d=$("drips");d.innerHTML="";var mult=st.dbl?2:1;
+  st.s.forEach(function(id,si){var c=byId(SY,id).c,r=rnd(7+si*13);
+    for(var k=0;k<3*mult;k++){var left=k%2===0,x=left?44+r()*14+si*6:156-r()*14-si*6,len=90+r()*130,w=3+r()*3.5;
+      var p="M"+x+" 60 C"+(x+(left?8:-8))+" "+(60+len*.35)+" "+(x+(left?2:-2))+" "+(60+len*.7)+" "+(x+(left?10:-10))+" "+(60+len);
+      d.appendChild(el("path",{d:p,stroke:c,"stroke-width":w,fill:"none","stroke-linecap":"round",opacity:".92"}));
+      d.appendChild(el("circle",{cx:x+(left?10:-10),cy:60+len,r:w*0.9,fill:c,opacity:".92"}));}
+  });
+  var tg=$("tops");tg.innerHTML="";
+  st.t.forEach(function(id,ti){var c=byId(TP,id).c,r=rnd(31+ti*17),n=(id==="tcoco"?22:14)*mult;
+    for(var k=0;k<n;k++){var x=34+r()*132,y=60+r()*16;
+      if(id==="tcoco")tg.appendChild(el("rect",{x:x,y:y,width:5,height:1.6,rx:.8,fill:c,transform:"rotate("+(r()*180)+" "+x+" "+y+")"}));
+      else if(id==="talm")tg.appendChild(el("ellipse",{cx:x,cy:y,rx:3.4,ry:1.8,fill:c,stroke:"#B48A5A","stroke-width":.6,transform:"rotate("+(r()*180)+" "+x+" "+y+")"}));
+      else tg.appendChild(el("circle",{cx:x,cy:y,r:1.6+r()*1.6,fill:c}));}
+  });
+}
+function matchSig(){for(var i=0;i<SIG.length;i++){var g=SIG[i];if(same(g.b,st.b)&&same(g.s,st.s)&&same(g.t,st.t))return g.n}return null}
+function same(x,y){return x.length===y.length&&x.every(function(v){return y.indexOf(v)>-1})}
+function update(){
+  document.querySelectorAll(".opt").forEach(function(o){var g=o.getAttribute("data-g");o.setAttribute("aria-pressed",String(st[g].indexOf(o.getAttribute("data-id"))>-1))});
+  drawCup();
+  var L=T[lang],bases=st.b.map(flName).join(" + ");
+  $("tName").textContent=matchSig()||(st.b.length>1?st.b.map(function(i){return flName(i).split(" ")[0]}).join(" × "):flName(st.b[0]));
+  $("tBase").textContent=bases+(st.b.length>1?" ("+L.half+")":"");
+  var x=st.dbl?" ×2":"";
+  $("tSyrup").textContent=st.s.length?st.s.map(function(i){return byId(SY,i)[lang]}).join(" + ")+x:L.none;
+  $("tTop").textContent=st.t.length?st.t.map(function(i){return byId(TP,i)[lang]}).join(" + ")+x:L.none;
+  document.body.classList.toggle("simple",mode==="simple");
+  $("s1sub").textContent=mode==="simple"?(lang==="ro"?"Alege una din cele 9 arome.":"Pick one of the 9 flavours."):T[lang].s1sub;
+  document.querySelectorAll("[data-mode]").forEach(function(b){b.setAttribute("aria-pressed",String(b.getAttribute("data-mode")===mode))});
+}
+function toggle(g,id){
+  var arr=st[g],i=arr.indexOf(id),note="";
+  if(g==="b"&&mode==="simple"){st.b=[id];update();return}
+  if(i>-1){if(g==="b"&&arr.length===1)return;arr.splice(i,1)}
+  else{arr.push(id);if(arr.length>2){arr.shift();note=T[lang].max2}}
+  if(g==="b")$("mixnote").textContent=note||(arr.length>1?T[lang].mixOn+arr.map(flName).join(" + "):"");
+  update();
+}
+function load(g){mode="loaded";st.b=g.b.slice();st.s=g.s.slice();st.t=g.t.slice();$("mixnote").textContent=st.b.length>1?T[lang].mixOn+st.b.map(flName).join(" + "):"";update();document.getElementById("build").scrollIntoView({behavior:"smooth"})}
+
+document.addEventListener("click",function(e){
+  var t=e.target.closest("button");if(!t)return;
+  if(t.hasAttribute("data-lang")){lang=t.getAttribute("data-lang");try{localStorage.setItem("bc-menu-lang",lang)}catch(_){}renderAll();return}
+  if(t.hasAttribute("data-g")){toggle(t.getAttribute("data-g"),t.getAttribute("data-id"));return}
+  if(t.hasAttribute("data-mode")){mode=t.getAttribute("data-mode");if(mode==="simple"){st.b=[st.b[0]];st.s=[];st.t=[];$("mixnote").textContent=""}update();return}
+  if(t.hasAttribute("data-sig")){load(SIG[+t.getAttribute("data-sig")]);return}
+  if(t.hasAttribute("data-f")){filter=t.getAttribute("data-f");document.querySelectorAll("[data-f]").forEach(function(b){b.setAttribute("aria-pressed",String(b===t))});renderSigs();return}
+  if(t.id==="reset"){st={b:["vanilla"],s:[],t:[],dbl:false};$("mixnote").textContent="";update();return}
+  if(t.id==="surprise"){
+    var pick=function(a,n){var c=a.slice().sort(function(){return Math.random()-.5});return c.slice(0,n).map(function(o){return o.id})};
+    if(mode==="simple"){st.b=pick(FL,1);st.s=[];st.t=[];update();return}
+    st.b=pick(FL,Math.random()<.4?2:1);st.s=pick(SY,Math.random()<.8?1:0);st.t=pick(TP,Math.random()<.75?1:(Math.random()<.5?2:0));
+    $("mixnote").textContent=st.b.length>1?T[lang].mixOn+st.b.map(flName).join(" + "):"";update();return}
+});
+
+var io="IntersectionObserver" in window?new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add("in");io.unobserve(en.target)}})},{threshold:.12}):null;
+function observe(){document.querySelectorAll(".reveal:not(.in)").forEach(function(r){io?io.observe(r):r.classList.add("in")})}
+function renderAll(){applyText();renderOpts();renderSigs();update();observe()}
+renderAll();
+})();
+</script>
+</body>
+</html>
