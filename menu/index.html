@@ -94,7 +94,8 @@ section{padding:76px 16px}
 @media(min-width:880px){.builder{grid-template-columns:400px 1fr;align-items:start}.stage{position:sticky;top:76px}}
 .stage{background:radial-gradient(80% 60% at 50% 45%,rgba(201,162,75,.18),transparent 70%),var(--night);border:1px solid var(--rule);border-radius:24px;padding:20px 18px 18px;text-align:center}
 .cup{width:100%;max-width:230px;height:auto;display:block;margin:0 auto;filter:drop-shadow(0 24px 30px rgba(0,0,0,.45))}
-.cup stop,.cup .tr{transition:stop-color .5s,fill .5s,stroke .5s,opacity .4s}
+.cup.pop{animation:pop .45s cubic-bezier(.3,1.6,.5,1)}
+@keyframes pop{0%{transform:scale(.96) rotate(-1.5deg)}100%{transform:none}}
 .ticket{margin-top:14px;background:var(--cream);color:var(--night);border-radius:14px;padding:16px 16px 14px;text-align:left;position:relative}
 .ticket::before,.ticket::after{content:"";position:absolute;top:50%;width:16px;height:16px;border-radius:50%;background:var(--night);transform:translateY(-50%)}
 .ticket::before{left:-8px}.ticket::after{right:-8px}
@@ -153,7 +154,7 @@ body.simple .step.ext,body.simple .ticket .ext,body.simple #mixnote{display:none
 .sigs{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
 .sig{position:relative;border:1px solid var(--rule);background:var(--card);border-radius:22px;padding:18px 18px 16px;display:grid;grid-template-columns:62px 1fr;gap:14px;text-align:left;transition:background .2s,transform .25s,border-color .2s}
 .sig:hover{background:var(--card-hi);transform:translateY(-3px);border-color:rgba(232,200,119,.5)}
-.sig svg{width:62px;height:88px}
+.sig svg{width:62px;height:108px;filter:drop-shadow(0 8px 10px rgba(0,0,0,.35))}
 .sig .nm{font-family:Anton,Impact,sans-serif;text-transform:uppercase;font-size:27px;line-height:.95;margin:2px 0 6px;letter-spacing:.01em}
 .sig .d{font-family:Fraunces,Georgia,serif;font-size:14px;line-height:1.4;color:var(--dim);margin:0 0 10px}
 .sig .chips{display:flex;flex-wrap:wrap;gap:5px}
@@ -230,38 +231,7 @@ footer small{display:block;margin-top:28px;font-size:10.5px;color:rgba(169,194,1
     </div>
     <div class="builder">
       <div class="stage">
-        <svg class="cup" id="cup" viewBox="0 0 200 300" role="img" aria-label="Shake preview">
-          <defs>
-            <clipPath id="cupClip"><path d="M38 52 L162 52 L148 284 Q147 290 141 290 L59 290 Q53 290 52 284 Z"/></clipPath>
-            <linearGradient id="liq" x1="0" y1="0" x2="0" y2="1">
-              <stop id="liqA1" offset="0" stop-color="#EFE2C2"/>
-              <stop id="liqA2" offset=".5" stop-color="#EFE2C2"/>
-              <stop id="liqB1" offset=".5" stop-color="#EFE2C2"/>
-              <stop id="liqB2" offset="1" stop-color="#EFE2C2"/>
-            </linearGradient>
-            <linearGradient id="gloss" x1="0" x2="1">
-              <stop offset="0" stop-color="#fff" stop-opacity=".0"/>
-              <stop offset=".18" stop-color="#fff" stop-opacity=".32"/>
-              <stop offset=".3" stop-color="#fff" stop-opacity="0"/>
-              <stop offset=".85" stop-color="#000" stop-opacity="0"/>
-              <stop offset="1" stop-color="#000" stop-opacity=".22"/>
-            </linearGradient>
-          </defs>
-          <!-- straw -->
-          <g transform="rotate(14 120 40)"><rect x="112" y="-4" width="12" height="150" rx="6" fill="#C9A24B"/><rect x="112" y="-4" width="4" height="150" rx="2" fill="#E8C877"/></g>
-          <g clip-path="url(#cupClip)">
-            <rect x="0" y="70" width="200" height="230" fill="url(#liq)"/>
-            <path id="swirl" class="tr" d="M30 170 C70 140 90 200 130 165 S180 150 190 175 L190 205 C160 185 140 230 100 200 S40 190 30 210 Z" fill="#EFE2C2" opacity="0"/>
-            <g id="drips"></g>
-            <ellipse cx="100" cy="72" rx="80" ry="14" fill="#FBF6EC" opacity=".95"/>
-            <path d="M20 72 Q40 58 60 70 T100 66 T140 70 T180 66 L180 80 L20 80 Z" fill="#FBF6EC"/>
-            <g id="tops"></g>
-            <rect x="0" y="40" width="200" height="260" fill="url(#gloss)"/>
-          </g>
-          <path d="M38 52 L162 52 L148 284 Q147 290 141 290 L59 290 Q53 290 52 284 Z" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="2"/>
-          <rect x="32" y="46" width="136" height="9" rx="4.5" fill="rgba(255,255,255,.75)"/>
-          
-        </svg>
+        <svg class="cup" id="cup" viewBox="0 0 200 300" role="img" aria-label="Shake preview"></svg>
         <div class="ticket" aria-live="polite">
           <div class="k" data-i18n="tKicker">Shake-ul tău</div>
           <div class="tn" id="tName">Vanilla Cream</div>
@@ -405,12 +375,6 @@ var flName=function(id){return byId(FL,id).en};
 
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 
-function miniCup(sig){
-  var a=byId(FL,sig.b[0]).c,b=sig.b[1]?byId(FL,sig.b[1]).c:a,s=sig.s[0]?byId(SY,sig.s[0]).c:null,t=sig.t[0]?byId(TP,sig.t[0]).c:null,uid="m"+Math.random().toString(36).slice(2,7);
-  var drip=s?'<path d="M14 18 Q12 40 16 60 M48 18 Q50 38 46 58" stroke="'+s+'" stroke-width="3" fill="none" stroke-linecap="round"/>':"";
-  var tops="";if(t){for(var i=0;i<7;i++)tops+='<circle cx="'+(16+i*5)+'" cy="'+(15+(i%2)*2)+'" r="2" fill="'+t+'"/>';}
-  return '<svg viewBox="0 0 62 88" aria-hidden="true"><defs><clipPath id="'+uid+'"><path d="M8 12 L54 12 L49 84 L13 84 Z"/></clipPath><linearGradient id="'+uid+'g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+a+'"/><stop offset=".5" stop-color="'+a+'"/><stop offset=".5" stop-color="'+b+'"/><stop offset="1" stop-color="'+b+'"/></linearGradient></defs><rect x="40" y="0" width="5" height="40" rx="2.5" fill="#C9A24B" transform="rotate(14 42 20)"/><g clip-path="url(#'+uid+')"><rect x="0" y="12" width="62" height="76" fill="url(#'+uid+'g)"/>'+drip+'<rect x="0" y="12" width="62" height="7" fill="#FBF6EC"/>'+tops+'</g><path d="M8 12 L54 12 L49 84 L13 84 Z" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="1.2"/></svg>';
-}
 
 function optBtn(o,group,label){return '<button type="button" class="opt" data-g="'+group+'" data-id="'+o.id+'" aria-pressed="false"><span class="sw" style="--c:'+o.c+'"></span>'+esc(label)+(o.ltd?'<span class="badge">'+T[lang].ltd+'</span>':'')+'</button>'}
 function renderOpts(){
@@ -434,31 +398,49 @@ function applyText(){
 }
 
 /* cup drawing */
-var NS="http://www.w3.org/2000/svg";
-function el(tag,attrs){var e=document.createElementNS(NS,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);return e}
 function rnd(seed){return function(){seed=(seed*9301+49297)%233280;return seed/233280}}
-function drawCup(){
-  var a=byId(FL,st.b[0]),b=st.b[1]?byId(FL,st.b[1]):a;
-  $("liqA1").setAttribute("stop-color",a.c);$("liqA2").setAttribute("stop-color",a.c);
-  $("liqB1").setAttribute("stop-color",b.c);$("liqB2").setAttribute("stop-color",b.c2);
-  if(!st.b[1]){$("liqA2").setAttribute("offset",".55");$("liqB1").setAttribute("offset",".55");$("liqB1").setAttribute("stop-color",a.c);$("liqB2").setAttribute("stop-color",a.c2);}
-  else{$("liqA2").setAttribute("offset",".48");$("liqB1").setAttribute("offset",".56");}
-  var sw=$("swirl");sw.setAttribute("fill",st.b[1]?a.c:b.c);sw.setAttribute("opacity",st.b[1]?".9":"0");
-  var d=$("drips");d.innerHTML="";var mult=st.dbl?2:1;
-  st.s.forEach(function(id,si){var c=byId(SY,id).c,r=rnd(7+si*13);
-    for(var k=0;k<3*mult;k++){var left=k%2===0,x=left?44+r()*14+si*6:156-r()*14-si*6,len=90+r()*130,w=3+r()*3.5;
-      var p="M"+x+" 60 C"+(x+(left?8:-8))+" "+(60+len*.35)+" "+(x+(left?2:-2))+" "+(60+len*.7)+" "+(x+(left?10:-10))+" "+(60+len);
-      d.appendChild(el("path",{d:p,stroke:c,"stroke-width":w,fill:"none","stroke-linecap":"round",opacity:".92"}));
-      d.appendChild(el("circle",{cx:x+(left?10:-10),cy:60+len,r:w*0.9,fill:c,opacity:".92"}));}
+function hashStr(x){var h=7;for(var i=0;i<x.length;i++)h=(h*31+x.charCodeAt(i))%100000;return h}
+function cupMarkup(b,s,t,uid,mini){
+  var A=byId(FL,b[0]),B=b[1]?byId(FL,b[1]):null,body="M38 64 L162 64 L149 282 Q148 291 139 291 L61 291 Q52 291 51 282 Z",o=[];
+  var stops=B?'<stop offset="0" stop-color="'+A.c+'"/><stop offset=".42" stop-color="'+A.c+'"/><stop offset=".62" stop-color="'+B.c+'"/><stop offset="1" stop-color="'+B.c2+'"/>'
+             :'<stop offset="0" stop-color="'+A.c+'"/><stop offset=".55" stop-color="'+A.c+'"/><stop offset="1" stop-color="'+A.c2+'"/>';
+  o.push('<defs><clipPath id="'+uid+'c"><path d="'+body+'"/></clipPath>',
+   '<linearGradient id="'+uid+'l" x1="0" y1="0" x2="0" y2="1">'+stops+'</linearGradient>',
+   '<linearGradient id="'+uid+'g" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".12" stop-color="#fff" stop-opacity=".38"/><stop offset=".22" stop-color="#fff" stop-opacity=".06"/><stop offset=".8" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".28"/></linearGradient>',
+   '<radialGradient id="'+uid+'f" cx=".45" cy=".3" r=".8"><stop offset="0" stop-color="#FFFDF8"/><stop offset="1" stop-color="#EFE6D3"/></radialGradient>',
+   '<linearGradient id="'+uid+'s" x1="0" x2="1"><stop offset="0" stop-color="#B8893A"/><stop offset=".45" stop-color="#F0D48A"/><stop offset="1" stop-color="#A97B2E"/></linearGradient></defs>');
+  o.push('<ellipse cx="100" cy="293" rx="56" ry="6" fill="#000" opacity=".35"/>');
+  o.push('<g transform="rotate(13 126 60)"><rect x="119" y="-6" width="13" height="150" rx="6.5" fill="url(#'+uid+'s)"/></g>');
+  o.push('<g clip-path="url(#'+uid+'c)"><rect x="0" y="60" width="200" height="240" fill="url(#'+uid+'l)"/>');
+  if(B)o.push('<path d="M20 172 C60 150 80 196 116 170 S170 150 190 168 L190 186 C160 172 140 210 104 190 S50 178 20 198 Z" fill="'+A.c+'" opacity=".85"/><path d="M20 196 C64 186 86 214 124 196 S176 190 190 200 L190 206 C160 198 136 224 100 208 S48 204 20 214 Z" fill="'+B.c+'" opacity=".6"/>');
+  var mult=1;
+  s.forEach(function(id,si){var c=byId(SY,id).c,r=rnd(11+si*29+hashStr(id));
+    for(var k=0;k<(mini?2:4);k++){var left=k%2===0,x=left?46+r()*16+si*7:154-r()*16-si*7,len=70+r()*150,w=mini?6:3.2+r()*3,dx=left?1:-1;
+      o.push('<path d="M'+x+' 66 C'+(x+8*dx)+' '+(66+len*.3)+' '+(x-2*dx)+' '+(66+len*.65)+' '+(x+9*dx)+' '+(66+len)+'" stroke="'+c+'" stroke-width="'+w+'" fill="none" stroke-linecap="round" opacity=".9"/><circle cx="'+(x+9*dx)+'" cy="'+(66+len+1)+'" r="'+(w*.85)+'" fill="'+c+'" opacity=".9"/>');}
   });
-  var tg=$("tops");tg.innerHTML="";
-  st.t.forEach(function(id,ti){var c=byId(TP,id).c,r=rnd(31+ti*17),n=(id==="tcoco"?22:14)*mult;
-    for(var k=0;k<n;k++){var x=34+r()*132,y=60+r()*16;
-      if(id==="tcoco")tg.appendChild(el("rect",{x:x,y:y,width:5,height:1.6,rx:.8,fill:c,transform:"rotate("+(r()*180)+" "+x+" "+y+")"}));
-      else if(id==="talm")tg.appendChild(el("ellipse",{cx:x,cy:y,rx:3.4,ry:1.8,fill:c,stroke:"#B48A5A","stroke-width":.6,transform:"rotate("+(r()*180)+" "+x+" "+y+")"}));
-      else tg.appendChild(el("circle",{cx:x,cy:y,r:1.6+r()*1.6,fill:c}));}
+  o.push('<rect x="0" y="60" width="200" height="20" fill="#FBF6EC"/><path d="M20 80 Q50 86 80 80 T140 80 T200 80 L200 76 L20 76 Z" fill="#FBF6EC"/>');
+  o.push('<rect x="0" y="40" width="200" height="260" fill="url(#'+uid+'g)"/>');
+  o.push('<path d="M50 90 Q48 180 58 270" stroke="#fff" stroke-opacity=".28" stroke-width="'+(mini?7:5)+'" fill="none" stroke-linecap="round"/>');
+  if(!mini){var r2=rnd(5+hashStr(b.join())),dr="";for(var k=0;k<14;k++){var x=60+r2()*80,y=110+r2()*160;dr+='<ellipse cx="'+x+'" cy="'+y+'" rx="1.3" ry="1.9" fill="#fff" opacity="'+(.18+r2()*.25)+'"/>'}o.push(dr)}
+  o.push('</g>');
+  o.push('<path d="'+body+'" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="'+(mini?3:2)+'"/>');
+  o.push('<path d="M40 64 C42 46 64 40 80 46 C88 34 112 34 120 46 C136 40 158 46 160 64 Z" fill="url(#'+uid+'f)"/>');
+  o.push('<rect x="31" y="58" width="138" height="10" rx="5" fill="#fff" opacity=".85"/><rect x="31" y="58" width="138" height="3" rx="1.5" fill="#fff"/>');
+  if(s.length){var sc=byId(SY,s[0]).c;o.push('<path d="M52 56 Q64 44 76 54 T100 48 T124 54 T148 52" stroke="'+sc+'" stroke-width="'+(mini?6:4)+'" fill="none" stroke-linecap="round" opacity=".95"/>')}
+  t.forEach(function(id,ti){var c=byId(TP,id).c,r=rnd(31+ti*17+hashStr(id)),n=mini?8:(id==="tcoco"?26:16),sz=mini?2:1;
+    for(var k=0;k<n;k++){var x=50+r()*100,y=54-Math.sin((x-40)/120*Math.PI)*14+r()*8;
+      if(id==="tcoco")o.push('<rect x="'+x+'" y="'+y+'" width="'+(5*sz)+'" height="'+(1.7*sz)+'" rx=".8" fill="'+c+'" stroke="#E7DCC4" stroke-width=".3" transform="rotate('+(r()*180)+' '+x+' '+y+')"/>');
+      else if(id==="talm")o.push('<ellipse cx="'+x+'" cy="'+y+'" rx="'+(3.4*sz)+'" ry="'+(1.8*sz)+'" fill="'+c+'" stroke="#B48A5A" stroke-width=".6" transform="rotate('+(r()*180)+' '+x+' '+y+')"/>');
+      else o.push('<circle cx="'+x+'" cy="'+y+'" r="'+((1.6+r()*1.6)*sz)+'" fill="'+c+'"/>');}
   });
+  return o.join("");
 }
+var cupN=0;
+function drawCup(){
+  var c=$("cup");c.innerHTML=cupMarkup(st.b,st.s,st.t,"bc"+(++cupN),false);
+  c.classList.remove("pop");void c.getBoundingClientRect();c.classList.add("pop");
+}
+function miniCup(sig){return '<svg viewBox="20 18 160 282" aria-hidden="true">'+cupMarkup(sig.b,sig.s,sig.t,"m"+Math.random().toString(36).slice(2,7),true)+'</svg>'}
 function matchSig(){for(var i=0;i<SIG.length;i++){var g=SIG[i];if(same(g.b,st.b)&&same(g.s,st.s)&&same(g.t,st.t))return g.n}return null}
 function same(x,y){return x.length===y.length&&x.every(function(v){return y.indexOf(v)>-1})}
 function update(){
