@@ -220,29 +220,43 @@ footer small{display:block;margin-top:28px;font-size:10.5px;color:rgba(169,194,1
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 :focus-visible{outline:2px solid var(--gold-hi);outline-offset:3px}
 
-/* === drinks (menutest) === */
+/* === drink + Boost+ (menutest) === */
+#house{background:var(--night)}
 #drinks{background:var(--night);border-top:1px solid var(--rule)}
-#drinks .steps{max-width:none}
-.temp{display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:360px}
-.temp button{border:1px solid var(--rule);background:var(--card);border-radius:14px;padding:12px 14px;text-align:left;display:flex;align-items:center;gap:10px;font-size:14px;font-weight:500}
-.temp button b{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;font-size:22px;line-height:1}
-.temp button[aria-pressed=true]{background:var(--cream);color:var(--night);border-color:var(--cream)}
-.lvl{font-size:9.5px;font-weight:600;letter-spacing:.1em;color:var(--gold-hi);border:1px solid var(--rule);border-radius:5px;padding:2px 5px;margin-left:2px}
-.opt[aria-pressed=true] .lvl{color:var(--night);border-color:rgba(4,30,23,.35)}
-.sig.nop{grid-template-columns:1fr}
-.sig .glassbar{width:100%;height:6px;border-radius:99px;background:linear-gradient(90deg,var(--g1),var(--g2));margin-bottom:12px}
-.sig .star.plus{background:transparent;color:var(--gold-hi);border:1px solid var(--rule)}
-.inc{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--dim);margin:-6px 0 18px}
-.inc i{width:8px;height:8px;border-radius:50%;background:var(--gold);display:inline-block}
+#plus{background:var(--deep);border-block:1px solid var(--rule)}
+#drinks .steps,#plus .steps{max-width:none}
+.dstage{position:sticky;top:72px;z-index:5;display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:center;padding:10px 12px;margin-bottom:26px;border:1px solid var(--rule);border-radius:18px;background:radial-gradient(80% 60% at 50% 45%,rgba(201,162,75,.18),transparent 70%),var(--night);box-shadow:0 14px 30px rgba(0,0,0,.45)}
 .drink{position:relative;width:96px;aspect-ratio:2/3}
 .drink img{position:absolute;inset:0;width:100%;height:100%;display:block}
-/* sticky drink stage at the top of the drinks section: the cup you are building, on every screen size */
-.dstage{position:sticky;top:72px;z-index:5;display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:center;padding:10px 12px;margin-bottom:26px;border:1px solid var(--rule);border-radius:18px;background:radial-gradient(80% 60% at 50% 45%,rgba(201,162,75,.18),transparent 70%),var(--night);box-shadow:0 14px 30px rgba(0,0,0,.45)}
 .dstage .dt{background:var(--cream);color:var(--night);border-radius:14px;padding:11px 12px 10px;text-align:left}
 .dstage .dt .k{font-size:9.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#5f6d63}
 .dstage .dt .tn{font-family:Anton,Impact,sans-serif;text-transform:uppercase;font-size:21px;line-height:1;margin:3px 0 6px}
-.dstage .dt .x{font-size:11.5px;color:#3b4a40;line-height:1.4}
+.dstage .dt .x{font-size:11.5px;color:#3b4a40;line-height:1.4;min-height:1.4em}
 @media(min-width:880px){.dstage{max-width:420px;top:84px}}
+.teas{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.tea{position:relative;border:1px solid var(--rule);background:var(--card);border-radius:18px;padding:12px 8px 12px;display:flex;flex-direction:column;align-items:center;gap:8px;font-size:13.5px;font-weight:500;text-align:center;transition:background .2s,border-color .2s,transform .15s}
+.tea img{width:84px;height:126px;object-fit:contain;display:block}
+.tea:hover{background:var(--card-hi)}
+.tea:active{transform:scale(.97)}
+.tea[aria-pressed=true]{background:var(--cream);color:var(--night);border-color:var(--cream)}
+.tea .badge{position:absolute;top:10px;right:10px;font-size:9.5px;font-weight:600;letter-spacing:.1em;background:var(--gold);color:var(--night);border-radius:5px;padding:2px 5px}
+.tea[aria-pressed=true]::after{content:"";position:absolute;left:12px;top:12px;width:18px;height:18px;border-radius:50%;background:var(--gold)}
+.tea[aria-pressed=true]::before{content:"";position:absolute;left:17px;top:16px;width:7px;height:4px;border:solid var(--night);border-width:0 0 2px 2px;transform:rotate(-45deg);z-index:1}
+@media(max-width:879px){.teas{grid-template-columns:repeat(2,1fr)}}
+.tog{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+.tog .lab{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-hi);margin:0 0 8px}
+.temp{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.temp button{border:1px solid var(--rule);background:var(--card);border-radius:14px;padding:11px 12px;text-align:left;display:flex;align-items:center;gap:8px;font-size:13.5px;font-weight:500;transition:background .2s,border-color .2s}
+.temp button b{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;font-size:20px;line-height:1}
+.temp button[aria-pressed=true]{background:var(--cream);color:var(--night);border-color:var(--cream)}
+.temp .badge{font-size:9.5px;font-weight:600;letter-spacing:.1em;background:var(--gold);color:var(--night);border-radius:5px;padding:2px 5px;margin-left:auto}
+@media(max-width:879px){.tog{grid-template-columns:1fr}}
+.sig .phd{width:76px;height:114px;border-radius:12px;overflow:hidden;background:linear-gradient(180deg,var(--g1),var(--g2))}
+.sig .phd img{width:100%;height:100%;object-fit:cover;display:block}
+.sig .star.plus{background:transparent;color:var(--gold-hi);border:1px solid var(--rule)}
+.sig[aria-pressed=true]{border-color:var(--gold);background:var(--card-hi)}
+.sig[aria-pressed=true] .star.plus{background:var(--gold);color:var(--night);border-color:var(--gold)}
+.sig[aria-pressed=true] .try{color:var(--cream)}
 </style>
 </head>
 <body>
@@ -267,6 +281,21 @@ footer small{display:block;margin-top:28px;font-size:10.5px;color:rgba(169,194,1
   </div>
 </section>
 
+<section id="house">
+  <div class="wrap">
+    <div class="sh reveal">
+      <div><p class="eyebrow" data-i18n="hEyebrow">Rețetele casei</p><h2 class="disp" data-i18n="hTitle">Semnăturile</h2></div>
+      <p data-i18n="hLead">Nu știi ce să alegi? Astea sunt preferatele noastre. Apasă pe una și o vezi în pahar.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filter">
+      <button type="button" data-f="all" aria-pressed="true" data-i18n="fAll">Toate</button>
+      <button type="button" data-f="single" aria-pressed="false" data-i18n="fSingle">O aromă</button>
+      <button type="button" data-f="mix" aria-pressed="false" data-i18n="fMix">Mixuri</button>
+    </div>
+    <div class="sigs" id="sigs"></div>
+  </div>
+</section>
+
 <section id="build">
   <div class="wrap">
     <div class="sh reveal">
@@ -284,7 +313,7 @@ footer small{display:block;margin-top:28px;font-size:10.5px;color:rgba(169,194,1
             <dt class="ext" data-i18n="tSyrup">Sirop</dt><dd class="ext" id="tSyrup"></dd>
             <dt class="ext" data-i18n="tTop">Topping</dt><dd class="ext" id="tTop"></dd>
             <dt data-i18n="tDrink">Drink</dt><dd id="tDrink"></dd>
-            <dt data-i18n="tExtra">Extra</dt><dd id="tExtra"></dd>
+            <dt>Boost+</dt><dd id="tExtra"></dd>
           </dl>
           <p class="hint" data-i18n="tHint">Arată ecranul ăsta la tejghea.</p>
         </div>
@@ -320,12 +349,11 @@ footer small{display:block;margin-top:28px;font-size:10.5px;color:rgba(169,194,1
   </div>
 </section>
 
-
 <section id="drinks">
   <div class="wrap">
     <div class="sh reveal">
-      <div><p class="eyebrow" data-i18n="dEyebrow">The bar</p><h2 class="disp" data-i18n="dTitle">Your drinks</h2></div>
-      <p data-i18n="dLead">Every visit comes with a tea and an aloe next to the shake, in one cup. Pick the flavours, pick iced or hot.</p>
+      <div><p class="eyebrow" data-i18n="dEyebrow">The bar</p><h2 class="disp" data-i18n="dTitle">Your drink</h2></div>
+      <p data-i18n="dLead">Every visit comes with a tea and an aloe in one cup, next to the shake. Tap a tea. Iced or hot.</p>
     </div>
     <div class="dstage" aria-live="polite">
       <div class="drink" role="img" aria-label="Drink preview"></div>
@@ -334,54 +362,27 @@ footer small{display:block;margin-top:28px;font-size:10.5px;color:rgba(169,194,1
     <div class="steps">
       <div class="step">
         <div class="step-h"><span class="n">04</span><h3 data-i18n="s4">The tea</h3></div>
-        <p class="sub" data-i18n="s4sub">Comes with every shake. Pick a flavour.</p>
-        <div class="opts" id="optTea"></div>
-      </div>
-      <div class="step">
-        <div class="step-h"><span class="n">05</span><h3 data-i18n="s5">The aloe</h3></div>
-        <p class="sub" data-i18n="s5sub">Goes in the same cup as the tea. Pick a flavour.</p>
-        <div class="opts" id="optAloe"></div>
-      </div>
-      <div class="step">
-        <div class="step-h"><span class="n">06</span><h3 data-i18n="s6">Iced or hot</h3></div>
-        <p class="sub" data-i18n="s6sub">Over ice, or warm.</p>
-        <div class="temp" id="optTemp"></div>
-      </div>
-      <div class="step">
-        <div class="step-h"><span class="n">07</span><h3 data-i18n="s7">In the shake</h3></div>
-        <p class="sub" data-i18n="s7sub">Optional. One, or none.</p>
-        <div class="opts" id="optX"></div>
-      </div>
-      <div class="step">
-        <div class="step-h"><span class="n">08</span><h3>Boost+</h3></div>
-        <p class="sub" data-i18n="s8sub">The upgrade list. Boost+ membership, or add one to any visit for a set amount. Ask at the counter.</p>
-        <div class="opts" id="optPlus"></div>
+        <p class="sub" data-i18n="s4sub">Comes with every shake. Pick one.</p>
+        <div class="teas" id="optTea"></div>
+        <div class="tog">
+          <div><p class="lab" data-i18n="aloeL">Aloe</p><div class="temp" id="optAloe"></div></div>
+          <div><p class="lab" data-i18n="tempL">Served</p><div class="temp" id="optTemp"></div></div>
+        </div>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="sh reveal" style="margin-top:56px">
-      <div><p class="eyebrow" data-i18n="cEyebrow">Bar recipes</p><h2 class="disp" data-i18n="cTitle">The combos</h2></div>
-      <p data-i18n="cLead">Named drinks, built from the list above. Tap one and it lands on your ticket.</p>
+<section id="plus">
+  <div class="wrap">
+    <div class="sh reveal">
+      <div><p class="eyebrow">Boost+</p><h2 class="disp" data-i18n="pTitle">The upgrades</h2></div>
+      <p data-i18n="pLead">Five drinks on top of your membership. Boost+ membership, or add one to any visit for a set amount. Ask at the counter.</p>
     </div>
-    <p class="inc"><i></i> <span data-i18n="cInc">Gold tag = included with every membership</span></p>
     <div class="sigs" id="combos"></div>
   </div>
 </section>
 
-<section id="house">
-  <div class="wrap">
-    <div class="sh reveal">
-      <div><p class="eyebrow" data-i18n="hEyebrow">Rețetele casei</p><h2 class="disp" data-i18n="hTitle">Semnăturile</h2></div>
-      <p data-i18n="hLead">Nu știi ce să alegi? Astea sunt preferatele noastre. Apasă pe una și o vezi în pahar.</p>
-    </div>
-    <div class="filters" role="group" aria-label="Filter">
-      <button type="button" data-f="all" aria-pressed="true" data-i18n="fAll">Toate</button>
-      <button type="button" data-f="single" aria-pressed="false" data-i18n="fSingle">O aromă</button>
-      <button type="button" data-f="mix" aria-pressed="false" data-i18n="fMix">Mixuri</button>
-    </div>
-    <div class="sigs" id="sigs"></div>
-  </div>
-</section>
 
 </main>
 
@@ -451,41 +452,24 @@ var SIG=[
  {n:"Black Forest",b:["choc","rasp"],s:["schoc"],t:["tcoco"],ro:"Ciocolată și zmeură, ca tortul.",en:"Chocolate and raspberry, like the cake."}
 ];
 var TEA=[
- {id:"original",ro:"Original",en:"Original",c:"#C9A24B",c2:"#8E6A22"},
- {id:"lemon",ro:"Lămâie",en:"Lemon",c:"#E6D86A",c2:"#B8A52E"},
- {id:"peach",ro:"Piersică",en:"Peach",c:"#F2A86B",c2:"#C97A3E"},
- {id:"mango",ro:"Mango & Fructul dragonului",en:"Mango & Dragon Fruit",c:"#E7527C",c2:"#A8305A",nw:1}
+ {id:"original",ro:"Original",en:"Original"},
+ {id:"lemon",ro:"Lămâie",en:"Lemon"},
+ {id:"peach",ro:"Piersică",en:"Peach"},
+ {id:"mango",ro:"Mango & Fructul dragonului",en:"Mango & Dragon Fruit",nw:1}
 ];
-var ALOE=[
- {id:"original",ro:"Original",en:"Original",c:"#CFE8D2"},
- {id:"mango",ro:"Mango",en:"Mango",c:"#F6C453",nw:1}
-];
+var ALOE=[{id:"original",ro:"Original",en:"Original"},{id:"mango",ro:"Mango",en:"Mango",nw:1}];
 var TEMP=[{id:"iced",ro:"Cu gheață",en:"Iced",ic:"🧊"},{id:"hot",ro:"Cald",en:"Hot",ic:"☕"}];
-var XTRA=[
- {id:"f3",ro:"Proteină Formula 3",en:"Formula 3 Protein",c:"#D9C9A8"},
- {id:"fibre",ro:"Fibre din măr și ovăz",en:"Oat Apple Fibre",c:"#B9D98A"},
- {id:"creatine",ro:"Creatine+",en:"Creatine+",c:"#DDE7F0"}
-];
 var PLUS=[
- {id:"collagen",ro:"Collagen Skin Booster",en:"Collagen Skin Booster",c:"#F2B5C4"},
- {id:"cr7",ro:"CR7 Drive",en:"CR7 Drive",c:"#7B3FA0"},
- {id:"hydrate",ro:"H24 Hydrate",en:"H24 Hydrate",c:"#9EC9F3"},
- {id:"nightmode",ro:"Night Mode",en:"Night Mode",c:"#3B2A6B"},
- {id:"betaheart",ro:"Beta Heart",en:"Beta Heart",c:"#E9DFC8"},
- {id:"immune",ro:"Immune Booster",en:"Immune Booster",c:"#A33B5B"},
- {id:"aloemax",ro:"Aloe Max",en:"Aloe Max",c:"#8FD3B0"},
- {id:"liftoff",ro:"Liftoff",en:"Liftoff",c:"#F5E04A"},
- {id:"icedcoffee",ro:"High Protein Iced Coffee",en:"High Protein Iced Coffee",c:"#8A6A4E"}
+ {id:"collagen",en:"Collagen Skin Booster"},{id:"cr7",en:"CR7 Drive"},{id:"hydrate",en:"H24 Hydrate"},
+ {id:"nightmode",en:"Night Mode"},{id:"betaheart",en:"Beta Heart"},{id:"immune",en:"Immune Booster"},
+ {id:"aloemax",en:"Aloe Max"},{id:"liftoff",en:"Liftoff"},{id:"icedcoffee",en:"High Protein Iced Coffee"}
 ];
 var COMBO=[
- {n:"Skin Boost",plus:1,tea:"peach",aloe:"original",temp:"iced",x:[],p:["collagen"],g1:"#F2A86B",g2:"#F2B5C4",ro:"Ceai de piersică cu colagen. Piele, păr, unghii.",en:"Peach tea with collagen stirred in. Skin, hair, nails."},
- {n:"Energy Boost",plus:1,tea:"lemon",aloe:"original",temp:"iced",x:[],p:["liftoff"],g1:"#E6D86A",g2:"#F5E04A",ro:"Ceai de lămâie cu un Liftoff. Înainte de antrenament.",en:"Lemon tea with a Liftoff dropped in. Before training."},
- {n:"Gut Reset",tea:"original",aloe:"original",temp:"hot",x:["fibre"],p:[],g1:"#C9A24B",g2:"#B9D98A",ro:"Ceai original cald, aloe original, fibre în shake. Zi ușoară.",en:"Hot original tea, original aloe, fibre in the shake. Light day."},
- {n:"Iron",tea:"lemon",aloe:"original",temp:"iced",x:["f3"],p:[],g1:"#D9C9A8",g2:"#E6D86A",ro:"Formula 3 în shake, ceai de lămâie cu gheață. Zi de sală.",en:"Formula 3 in the shake, iced lemon tea. Gym day."},
- {n:"Hydro",plus:1,tea:"peach",aloe:"mango",temp:"iced",x:[],p:["hydrate"],g1:"#9EC9F3",g2:"#F6C453",ro:"Hydrate cu aloe de mango. După alergare, după o noapte lungă.",en:"Hydrate with mango aloe. After a run, after a night out."},
- {n:"Night Cap",plus:1,tea:"peach",aloe:"original",temp:"hot",x:[],p:["nightmode"],g1:"#3B2A6B",g2:"#F2A86B",ro:"Night Mode cald, mușețel și piersică. Ultima vizită a zilei.",en:"Night Mode, warm, chamomile and peach. The last visit of the day."},
- {n:"Heart",plus:1,tea:"original",aloe:"original",temp:"hot",x:[],p:["betaheart"],g1:"#E9DFC8",g2:"#CFE8D2",ro:"Beta Heart în shake, ceai și aloe calde. Colesterolul sub control.",en:"Beta Heart in the shake, warm tea and aloe. Cholesterol in check."},
- {n:"Dragon",tea:"mango",aloe:"mango",temp:"iced",x:[],p:[],g1:"#E7527C",g2:"#F6C453",ro:"Ceai de mango și fructul dragonului cu gheață, aloe de mango. Cel de vară.",en:"Mango and dragon fruit tea over ice, mango aloe. The summer one."}
+ {n:"Skin Boost",tea:"peach",aloe:"original",temp:"iced",p:"collagen",g1:"#F2A86B",g2:"#F2B5C4",ro:"Ceai de piersică cu colagen. Piele, păr, unghii.",en:"Peach tea with collagen stirred in. Skin, hair, nails."},
+ {n:"Energy Boost",tea:"lemon",aloe:"original",temp:"iced",p:"liftoff",g1:"#E6D86A",g2:"#F5E04A",ro:"Ceai de lămâie cu un Liftoff. Înainte de antrenament.",en:"Lemon tea with a Liftoff dropped in. Before training."},
+ {n:"Hydro",tea:"peach",aloe:"mango",temp:"iced",p:"hydrate",g1:"#9EC9F3",g2:"#F6C453",ro:"Hydrate cu aloe de mango. După alergare, după o noapte lungă.",en:"Hydrate with mango aloe. After a run, after a night out."},
+ {n:"Night Cap",tea:"peach",aloe:"original",temp:"hot",p:"nightmode",g1:"#3B2A6B",g2:"#F2A86B",ro:"Night Mode cald, mușețel și piersică. Ultima vizită a zilei.",en:"Night Mode, warm, chamomile and peach. The last visit of the day."},
+ {n:"Heart",tea:"original",aloe:"original",temp:"hot",p:"betaheart",g1:"#E9DFC8",g2:"#CFE8D2",ro:"Beta Heart în shake, ceai și aloe calde. Colesterolul sub control.",en:"Beta Heart in the shake, warm tea and aloe. Cholesterol in check."}
 ];
 var T={
  ro:{heroTitle:'Meniul<br><span class="outline">Shake</span>',heroCta:'Construiește-ți shake-ul ↓',mSimple:'Simplu',mSimpleSub:'Una din cele 9 arome. Atât.',mLoaded:'Loaded',mLoadedSub:'Mixuri, siropuri, toppinguri.',
@@ -497,7 +481,7 @@ var T={
   xsE:'Pe pereți',xsT:'Siropuri',xsP:'Trase spiralat pe interiorul paharului, înainte să intre shake-ul.',xtE:'Deasupra',xtT:'Toppinguri',xtP:'Presărate peste spumă. Crocant, aromat, al tău.',
   gEyebrow:'Sub aromă',gTitle:'Făcut pentru obiectivul tău',gLead:'Aroma o alegi tu. Ce intră dedesubt stabilim împreună, după obiectiv.',g1e:'Slăbire · energie · tonus',g1t:'Standard',g1a:'Formula 1, porție întreagă',g1b:'Protein Drink Mix, jumătate',g1c:'Aloe, jumătate',g1d:'Ceai, porție întreagă',g2e:'Masă musculară',g2t:'Pentru masă',g2a:'Formula 1, porție întreagă',g2b:'Protein Drink Mix, porție întreagă',g2c:'Fără aloe și fără ceai',
   fBig:'Ne vedem la bar',fAddr:'Boost Club · Strada Sevastopol 24, parter · București',fCta:'Prima vizită? Rezervă o consultație gratuită',fSmall:'Distribuitor Independent Herbalife. Rețetele casei se schimbă, întreabă la tejghea ce e nou.',
-  dEyebrow:'Barul',dTitle:'Băuturile tale',dLead:'La fiecare vizită primești un ceai și un aloe lângă shake, în același pahar. Alege aromele, alege cu gheață sau cald.',s4:'Ceaiul',s4sub:'Vine cu fiecare shake. Alege o aromă.',s5:'Aloe',s5sub:'Merge în același pahar cu ceaiul. Alege o aromă.',s6:'Cu gheață sau cald',s6sub:'Peste gheață, sau cald.',s7:'În shake',s7sub:'Opțional. Unul, sau niciunul.',s8sub:'Lista de upgrade. Abonament Boost+, sau adaugi unul la orice vizită pentru o sumă fixă. Întreabă la tejghea.',cEyebrow:'Rețetele barului',cTitle:'Combinațiile',cLead:'Băuturi cu nume, din lista de mai sus. Apasă pe una și ajunge pe biletul tău.',cInc:'Eticheta aurie = inclus în orice abonament',nw:'Nou',tDrink:'Băutura',tExtra:'Extra',incl:'Inclus',plusAsk:'Boost+',iced:'cu gheață',hot:'cald',none:'Fără',mix:'Mix',half:'jumătate-jumătate',max2:'Maxim două. Am înlocuit-o pe prima.',mixOn:'Mix activ: ',tryIt:'Vezi în pahar →',ltd:'Limitat',star:'Al casei',custom:'Shake-ul tău'},
+  dEyebrow:'Barul',dTitle:'Băutura ta',dLead:'La fiecare vizită primești un ceai și un aloe în același pahar, lângă shake. Apasă un ceai. Cu gheață sau cald.',s4:'Ceaiul',s4sub:'Vine cu fiecare shake. Alege unul.',aloeL:'Aloe',tempL:'Servit',pTitle:'Upgrade-urile',pLead:'Cinci băuturi peste abonamentul tău. Abonament Boost+, sau adaugi una la orice vizită pentru o sumă fixă. Întreabă la tejghea.',tDrink:'Băutura',nw:'Nou',iced:'cu gheață',hot:'cald',tapOff:'Apasă din nou ca să renunți',none:'Fără',mix:'Mix',half:'jumătate-jumătate',max2:'Maxim două. Am înlocuit-o pe prima.',mixOn:'Mix activ: ',tryIt:'Vezi în pahar →',ltd:'Limitat',star:'Al casei',custom:'Shake-ul tău'},
  en:{heroTitle:'The<br><span class="outline">Shake</span> Menu',heroCta:'Build your shake ↓',mSimple:'Simple',mSimpleSub:'One of the 9 flavours. That is it.',mLoaded:'Loaded',mLoadedSub:'Mixes, syrups, toppings.',
   flEyebrow:'The base',flTitle:'Every flavour',flLead:'Every shake starts with Formula 1. Pick one, or mix two half and half.',
   bEyebrow:'Make it yours',bTitle:'Build it',bLead:'Pick, then show the ticket at the counter.',
@@ -507,11 +491,11 @@ var T={
   xsE:'On the walls',xsT:'Syrups',xsP:'Swirled down the inside of the cup before the shake goes in.',xtE:'On top',xtT:'Toppings',xtP:'Sprinkled over the foam. Crunchy, nutty, yours.',
   gEyebrow:'Under the flavour',gTitle:'Built for your goal',gLead:'You choose the flavour. What goes underneath, we set together, based on your goal.',g1e:'Weight loss · energy · tone',g1t:'Standard',g1a:'Formula 1, full serving',g1b:'Protein Drink Mix, half',g1c:'Aloe, half',g1d:'Tea, full serving',g2e:'Muscle gain',g2t:'For mass',g2a:'Formula 1, full serving',g2b:'Protein Drink Mix, full serving',g2c:'No aloe, no tea',
   fBig:'See you at the bar',fAddr:'Boost Club · Strada Sevastopol 24, ground floor · Bucharest',fCta:'First visit? Book a free consultation',fSmall:'Independent Herbalife Distributor. House recipes change, ask at the counter what is new.',
-  dEyebrow:'The bar',dTitle:'Your drinks',dLead:'Every visit comes with a tea and an aloe next to the shake, in one cup. Pick the flavours, pick iced or hot.',s4:'The tea',s4sub:'Comes with every shake. Pick a flavour.',s5:'The aloe',s5sub:'Goes in the same cup as the tea. Pick a flavour.',s6:'Iced or hot',s6sub:'Over ice, or warm.',s7:'In the shake',s7sub:'Optional. One, or none.',s8sub:'The upgrade list. Boost+ membership, or add one to any visit for a set amount. Ask at the counter.',cEyebrow:'Bar recipes',cTitle:'The combos',cLead:'Named drinks, built from the list above. Tap one and it lands on your ticket.',cInc:'Gold tag = included with every membership',nw:'New',tDrink:'Drink',tExtra:'Extra',incl:'Included',plusAsk:'Boost+',iced:'iced',hot:'hot',none:'None',mix:'Mix',half:'half and half',max2:'Two max. Swapped out the first one.',mixOn:'Mix on: ',tryIt:'See it in the cup →',ltd:'Limited',star:'House pick',custom:'Your shake'}
+  dEyebrow:'The bar',dTitle:'Your drink',dLead:'Every visit comes with a tea and an aloe in one cup, next to the shake. Tap a tea. Iced or hot.',s4:'The tea',s4sub:'Comes with every shake. Pick one.',aloeL:'Aloe',tempL:'Served',pTitle:'The upgrades',pLead:'Five drinks on top of your membership. Boost+ membership, or add one to any visit for a set amount. Ask at the counter.',tDrink:'Drink',nw:'New',iced:'iced',hot:'hot',tapOff:'Tap again to remove',none:'None',mix:'Mix',half:'half and half',max2:'Two max. Swapped out the first one.',mixOn:'Mix on: ',tryIt:'See it in the cup →',ltd:'Limited',star:'House pick',custom:'Your shake'}
 };
 var lang="en";
 try{var q=new URLSearchParams(location.search).get("lang");var saved=localStorage.getItem("bc-menu-lang");lang=q==="en"||q==="ro"?q:(saved==="ro"?"ro":"en");}catch(e){}
-var st={b:["vanilla"],s:[],t:[],dbl:false,tea:["original"],aloe:["original"],temp:["iced"],x:[],p:[]},mode="loaded";
+var st={b:["vanilla"],s:[],t:[],dbl:false,tea:["original"],aloe:["original"],temp:["iced"],p:[]},mode="loaded";
 var $=function(id){return document.getElementById(id)};
 var byId=function(arr,id){for(var i=0;i<arr.length;i++)if(arr[i].id===id)return arr[i]};
 var flName=function(id){return byId(FL,id).en};
@@ -519,22 +503,19 @@ var flName=function(id){return byId(FL,id).en};
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 
 
-function optBtn(o,group,label){return '<button type="button" class="opt" data-g="'+group+'" data-id="'+o.id+'" aria-pressed="false"><span class="sw" style="--c:'+o.c+'"></span>'+esc(label)+(o.ltd?'<span class="badge">'+T[lang].ltd+'</span>':o.nw?'<span class="badge">'+T[lang].nw+'</span>':'')+'</button>'}
+function optBtn(o,group,label){return '<button type="button" class="opt" data-g="'+group+'" data-id="'+o.id+'" aria-pressed="false"><span class="sw" style="--c:'+o.c+'"></span>'+esc(label)+(o.ltd?'<span class="badge">'+T[lang].ltd+'</span>':'')+'</button>'}
 function renderOpts(){
   $("optBase").innerHTML=FL.map(function(f){return optBtn(f,"b",f.en)}).join("");
   $("optSyrup").innerHTML=SY.map(function(f){return optBtn(f,"s",f[lang])}).join("");
   $("optTop").innerHTML=TP.map(function(f){return optBtn(f,"t",f[lang])}).join("");
-  $("optTea").innerHTML=TEA.map(function(f){return optBtn(f,"tea",f[lang])}).join("");
-  $("optAloe").innerHTML=ALOE.map(function(f){return optBtn(f,"aloe",f[lang])}).join("");
+  $("optTea").innerHTML=TEA.map(function(f){return '<button type="button" class="tea" data-g="tea" data-id="'+f.id+'" aria-pressed="false"><img src="'+teaImg(f.id)+'" alt="" width="480" height="720">'+esc(f[lang])+(f.nw?'<span class="badge">'+T[lang].nw+'</span>':'')+'</button>'}).join("");
+  $("optAloe").innerHTML=ALOE.map(function(f){return '<button type="button" data-g="aloe" data-id="'+f.id+'" aria-pressed="false"><b>'+esc(f[lang])+'</b>'+(f.nw?'<span class="badge">'+T[lang].nw+'</span>':'')+'</button>'}).join("");
   $("optTemp").innerHTML=TEMP.map(function(f){return '<button type="button" data-g="temp" data-id="'+f.id+'" aria-pressed="false"><span>'+f.ic+'</span><b>'+esc(f[lang])+'</b></button>'}).join("");
-  $("optX").innerHTML=XTRA.map(function(f){return optBtn(f,"x",f[lang])}).join("");
-  $("optPlus").innerHTML=PLUS.map(function(f){return '<button type="button" class="opt" data-g="p" data-id="'+f.id+'" aria-pressed="false"><span class="sw th" style="--c:'+f.c+';--img:url('+DIMG+'plus-'+f.id+'.webp)"></span>'+esc(f[lang])+'<span class="lvl">Boost+</span></button>'}).join("");
 }
 function renderCombos(){
   $("combos").innerHTML=COMBO.map(function(c,i){
-    var chips=[byId(TEA,c.tea)[lang]+(lang==="ro"?" (ceai)":" tea"),byId(ALOE,c.aloe)[lang]+(lang==="ro"?" (aloe)":" aloe"),T[lang][c.temp]].concat(c.x.map(function(x){return byId(XTRA,x)[lang]}),c.p.map(function(p){return byId(PLUS,p)[lang]}));
-    var ph=c.p.length?DIMG+"plus-"+c.p[0]+".webp":DIMG+"tea-"+c.tea+"-"+c.aloe+"-"+c.temp+".webp";
-    return '<button type="button" class="sig" data-combo="'+i+'">'+(c.plus?'<span class="star plus">Boost+</span>':'<span class="star">'+T[lang].incl+'</span>')+'<div class="phd" style="--g1:'+c.g1+';--g2:'+c.g2+'"><img src="'+ph+'" alt="" loading="lazy" width="480" height="720"></div><div><div class="nm">'+esc(c.n)+'</div><p class="d">'+esc(c[lang])+'</p><div class="chips">'+chips.map(function(x){return '<span class="chip">'+esc(x)+'</span>'}).join("")+'</div></div><span class="try">'+T[lang].tryIt+'</span></button>';
+    var chips=[byId(TEA,c.tea)[lang]+(lang==="ro"?" (ceai)":" tea"),byId(ALOE,c.aloe)[lang]+(lang==="ro"?" (aloe)":" aloe"),T[lang][c.temp],byId(PLUS,c.p).en];
+    return '<button type="button" class="sig" data-combo="'+i+'" aria-pressed="false"><span class="star plus">Boost+</span><div class="phd" style="--g1:'+c.g1+';--g2:'+c.g2+'"><img src="'+DIMG+'plus-'+c.p+'.webp" alt="" loading="lazy" width="480" height="720"></div><div><div class="nm">'+esc(c.n)+'</div><p class="d">'+esc(c[lang])+'</p><div class="chips">'+chips.map(function(x){return '<span class="chip">'+esc(x)+'</span>'}).join("")+'</div></div><span class="try">'+T[lang].tryIt+'</span></button>';
   }).join("");
   $("combos").querySelectorAll(".phd img").forEach(function(i){i.onerror=function(){i.remove()}});
 }
@@ -555,6 +536,8 @@ function applyText(){
 
 /* drink: /menu/images/drinks/web/tea-<tea>-<aloe>-<temp>.webp, swapped in once decoded */
 var DIMG="/menu/images/drinks/web/";
+function teaImg(id){return DIMG+"tea-"+id+"-"+st.aloe[0]+"-"+st.temp[0]+".webp"}
+function curCombo(){if(!st.p.length)return null;for(var i=0;i<COMBO.length;i++){var c=COMBO[i];if(c.p===st.p[0]&&c.tea===st.tea[0]&&c.aloe===st.aloe[0]&&c.temp===st.temp[0])return c}return null}
 function drawDrink(tea,aloe,temp){
   var ds=[].slice.call(document.querySelectorAll(".drink")),src=DIMG+"tea-"+tea.id+"-"+aloe.id+"-"+temp+".webp";
   var n=++drawDN,im=new Image();im.alt="";im.decoding="async";
@@ -588,7 +571,7 @@ var drawN=0;
 function warmImages(){
   var list=FL.map(function(f){return IMG+f.id+".webp"}).concat(SY.concat(TP).map(function(o){return IMG+"layer-"+o.id+".webp"}),[IMG+"mask-mix.png",IMG+"mask-top2.png"]);
   TEA.forEach(function(t){ALOE.forEach(function(a){TEMP.forEach(function(m){list.push(DIMG+"tea-"+t.id+"-"+a.id+"-"+m.id+".webp")})})});
-  PLUS.forEach(function(p){list.push(DIMG+"plus-"+p.id+".webp")});
+  COMBO.forEach(function(c){list.push(DIMG+"plus-"+c.p+".webp")});
   list.forEach(function(u){var i=new Image();i.decoding="async";i.src=u});
 }
 function findSig(){for(var i=0;i<SIG.length;i++){var g=SIG[i];if(same(g.b,st.b)&&same(g.s,st.s)&&same(g.t,st.t))return g}return null}
@@ -603,11 +586,12 @@ function update(){
   var x=st.dbl?" ×2":"";
   $("tSyrup").textContent=st.s.length?st.s.map(function(i){return byId(SY,i)[lang]}).join(" + ")+x:L.none;
   $("tTop").textContent=st.t.length?st.t.map(function(i){return byId(TP,i)[lang]}).join(" + ")+x:L.none;
-  var tea=byId(TEA,st.tea[0]),aloe=byId(ALOE,st.aloe[0]);
+  var tea=byId(TEA,st.tea[0]),aloe=byId(ALOE,st.aloe[0]),combo=curCombo();
   $("tDrink").textContent=(lang==="ro"?"Ceai "+tea.ro.toLowerCase()+" + aloe "+aloe.ro.toLowerCase():tea.en+" tea + "+aloe.en+" aloe")+" · "+L[st.temp[0]];
-  var ex=st.x.map(function(i){return byId(XTRA,i)[lang]}).concat(st.p.map(function(i){return byId(PLUS,i)[lang]+" (Boost+)"}));
-  $("tExtra").textContent=ex.length?ex.join(" + "):L.none;
-  $("tDrink2").textContent=$("tDrink").textContent;$("tExtra2").textContent=ex.length?ex.join(" + "):"";
+  $("tExtra").textContent=combo?combo.n+" ("+byId(PLUS,combo.p).en+")":L.none;
+  $("tDrink2").textContent=$("tDrink").textContent;$("tExtra2").textContent=combo?"Boost+ · "+combo.n+" · "+L.tapOff:"";
+  document.querySelectorAll(".tea img").forEach(function(i){var id=i.parentNode.getAttribute("data-id"),u=teaImg(id);if(i.getAttribute("src")!==u)i.src=u});
+  document.querySelectorAll("[data-combo]").forEach(function(b){b.setAttribute("aria-pressed",String(!!combo&&COMBO[+b.getAttribute("data-combo")]===combo))});
   drawDrink(tea,aloe,st.temp[0]);
   document.body.classList.toggle("simple",mode==="simple");
   $("s1sub").textContent=mode==="simple"?(lang==="ro"?"Alege una din cele 9 arome.":"Pick one of the 9 flavours."):T[lang].s1sub;
@@ -615,8 +599,7 @@ function update(){
 }
 function toggle(g,id){
   var arr=st[g],i=arr.indexOf(id),note="";
-  if(g==="tea"||g==="aloe"||g==="temp"){st[g]=[id];update();return}
-  if(g==="x"||g==="p"){st[g]=i>-1?[]:[id];update();return}
+  if(g==="tea"||g==="aloe"||g==="temp"){st[g]=[id];if(!curCombo())st.p=[];update();return}
   if(g==="b"&&mode==="simple"){st.b=[id];update();return}
   if(i>-1){if(g==="b"&&arr.length===1)return;arr.splice(i,1)}
   else{arr.push(id);if(arr.length>2){arr.shift();note=T[lang].max2}}
@@ -633,21 +616,21 @@ document.addEventListener("click",function(e){
   if(t.hasAttribute("data-g")){toggle(t.getAttribute("data-g"),t.getAttribute("data-id"));return}
   if(t.hasAttribute("data-mode")){mode=t.getAttribute("data-mode");if(mode==="simple"){st.b=[st.b[0]];st.s=[];st.t=[];$("mixnote").textContent=""}update();return}
   if(t.hasAttribute("data-sig")){load(SIG[+t.getAttribute("data-sig")]);return}
-  if(t.hasAttribute("data-combo")){var c=COMBO[+t.getAttribute("data-combo")];st.tea=[c.tea];st.aloe=[c.aloe];st.temp=[c.temp];st.x=c.x.slice();st.p=c.p.slice();update();document.getElementById("build").scrollIntoView({behavior:"smooth"});return}
+  if(t.hasAttribute("data-combo")){var c=COMBO[+t.getAttribute("data-combo")];if(curCombo()===c){st.p=[]}else{st.tea=[c.tea];st.aloe=[c.aloe];st.temp=[c.temp];st.p=[c.p]}update();return}
   if(t.hasAttribute("data-f")){filter=t.getAttribute("data-f");document.querySelectorAll("[data-f]").forEach(function(b){b.setAttribute("aria-pressed",String(b===t))});renderSigs();return}
-  if(t.id==="order"){var L=T[lang];$("oSum").textContent=$("tName").textContent+" · "+$("tBase").textContent+(mode==="loaded"&&st.s.length?" · "+$("tSyrup").textContent:"")+(mode==="loaded"&&st.t.length?" · "+$("tTop").textContent:"")+" · "+$("tDrink").textContent+(st.x.length||st.p.length?" · "+$("tExtra").textContent:"");$("oName").placeholder=L.oName;$("oMsg").textContent="";$("oSend").disabled=false;$("sheet").classList.add("open");try{$("oName").value=$("oName").value||localStorage.getItem("bc-menu-name")||""}catch(_){}setTimeout(function(){$("oName").focus()},50);return}
+  if(t.id==="order"){var L=T[lang];$("oSum").textContent=$("tName").textContent+" · "+$("tBase").textContent+(mode==="loaded"&&st.s.length?" · "+$("tSyrup").textContent:"")+(mode==="loaded"&&st.t.length?" · "+$("tTop").textContent:"")+" · "+$("tDrink").textContent+(st.p.length?" · Boost+ "+$("tExtra").textContent:"");$("oName").placeholder=L.oName;$("oMsg").textContent="";$("oSend").disabled=false;$("sheet").classList.add("open");try{$("oName").value=$("oName").value||localStorage.getItem("bc-menu-name")||""}catch(_){}setTimeout(function(){$("oName").focus()},50);return}
   if(t.id==="oCancel"){$("sheet").classList.remove("open");return}
   if(t.id==="oSend"){var L2=T[lang],nm=$("oName").value.trim();try{localStorage.setItem("bc-menu-name",nm)}catch(_){}
     t.disabled=true;$("oMsg").textContent=L2.oSending;
-    fetch("/api/menu-order",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({b:st.b,s:mode==="loaded"?st.s:[],t:mode==="loaded"?st.t:[],name:nm,sig:matchSig()||"",lang:lang,website:$("oHp").value,d:{tea:st.tea[0],aloe:st.aloe[0],temp:st.temp[0],x:st.x,p:st.p}})})
+    fetch("/api/menu-order",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({b:st.b,s:mode==="loaded"?st.s:[],t:mode==="loaded"?st.t:[],name:nm,sig:matchSig()||"",lang:lang,website:$("oHp").value,d:{tea:st.tea[0],aloe:st.aloe[0],temp:st.temp[0],x:[],p:st.p,combo:(curCombo()||{}).n||""}})})
     .then(function(r){$("oMsg").textContent=r.ok?L2.oDone:(r.status===429?L2.oSlow:L2.oFail);if(r.ok)setTimeout(function(){$("sheet").classList.remove("open")},1800);else t.disabled=false})
     .catch(function(){$("oMsg").textContent=L2.oFail;t.disabled=false});return}
-  if(t.id==="reset"){st={b:["vanilla"],s:[],t:[],dbl:false,tea:["original"],aloe:["original"],temp:["iced"],x:[],p:[]};$("mixnote").textContent="";update();return}
+  if(t.id==="reset"){st={b:["vanilla"],s:[],t:[],dbl:false,tea:["original"],aloe:["original"],temp:["iced"],p:[]};$("mixnote").textContent="";update();return}
   if(t.id==="surprise"){
     var pick=function(a,n){var c=a.slice().sort(function(){return Math.random()-.5});return c.slice(0,n).map(function(o){return o.id})};
     if(mode==="simple"){st.b=pick(FL,1);st.s=[];st.t=[];update();return}
     st.b=pick(FL,Math.random()<.4?2:1);st.s=pick(SY,Math.random()<.8?1:0);st.t=pick(TP,Math.random()<.75?1:(Math.random()<.5?2:0));
-    st.tea=pick(TEA,1);st.aloe=pick(ALOE,1);st.temp=pick(TEMP,1);
+    st.tea=pick(TEA,1);st.aloe=pick(ALOE,1);st.temp=pick(TEMP,1);st.p=[];
     $("mixnote").textContent=st.b.length>1?T[lang].mixOn+st.b.map(flName).join(" + "):"";update();return}
 });
 

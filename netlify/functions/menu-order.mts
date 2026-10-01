@@ -38,6 +38,7 @@ const PLUS: Record<string, string> = {
   betaheart: "Beta Heart", immune: "Immune Booster", aloemax: "Aloe Max", liftoff: "Liftoff",
   icedcoffee: "High Protein Iced Coffee",
 };
+const COMBOS = new Set(["Skin Boost", "Energy Boost", "Hydro", "Night Cap", "Heart"]);
 const SIGNATURES = new Set([
   "Bounty", "Ferrero", "Raffaello", "Dubai", "Snickers", "Kinder Bueno",
   "Caramel Macchiato", "Banoffee", "After Eight", "Strawberry Cheesecake",
@@ -92,8 +93,9 @@ export default async (request: Request, context: { ip?: string }) => {
     const ps = pick(o.p ?? [], PLUS, 1);
     if (tea && aloe && temp && xs && ps) {
       drink = `Drink: ${tea} tea + ${aloe} aloe, ${temp}`;
-      const parts = [...xs, ...ps.map((p) => `${p} (Boost+)`)];
-      extra = parts.length ? `Extra: ${parts.join(" + ")}` : "";
+      const combo = typeof o.combo === "string" && COMBOS.has(o.combo) ? o.combo : "";
+      const parts = [...xs, ...ps.map((p) => (combo ? `${combo} (${p})` : `${p} (Boost+)`))];
+      extra = parts.length ? `Boost+: ${parts.join(" + ")}` : "";
     }
   }
 
