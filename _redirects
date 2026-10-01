@@ -88,3 +88,4 @@
 /ru/recenzii                        /ru/recenzii.html          200
 /ru/rezultate                       /ru/rezultate.html         200
 /ru/termeni                         /ru/termeni.html           200
+/menutest/*  /menu/  301
