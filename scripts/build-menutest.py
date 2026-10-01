@@ -39,24 +39,10 @@ rep('</style>', '''
 .sig .star.plus{background:transparent;color:var(--gold-hi);border:1px solid var(--rule)}
 .inc{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--dim);margin:-6px 0 18px}
 .inc i{width:8px;height:8px;border-radius:50%;background:var(--gold);display:inline-block}
-/* drink preview under the cup: photo if it exists, CSS glass until then */
-.drink{position:relative;width:110px;aspect-ratio:2/3;margin:12px auto 0}
+.drink{position:relative;width:96px;aspect-ratio:2/3}
 .drink img{position:absolute;inset:0;width:100%;height:100%;display:block}
-.drink .g{position:absolute;inset:10% 18% 4%;border-radius:10px 10px 22px 22px;background:linear-gradient(180deg,var(--c1) 0%,var(--c2) 100%);box-shadow:inset 0 0 0 2px rgba(255,255,255,.25),0 10px 24px rgba(0,0,0,.4);overflow:hidden}
-.drink .g::before{content:"";position:absolute;inset:6% 0 0 0;background:linear-gradient(90deg,rgba(255,255,255,.22),transparent 40%,rgba(255,255,255,.08))}
-.drink .ice{position:absolute;width:26%;aspect-ratio:1;border-radius:4px;background:rgba(255,255,255,.55);box-shadow:inset 0 0 0 1px rgba(255,255,255,.6)}
-.drink .steam{position:absolute;left:50%;top:-4%;width:2px;height:16%;border-radius:99px;background:linear-gradient(180deg,transparent,rgba(255,255,255,.5),transparent);transform:translateX(-50%);animation:steam 2.2s ease-in-out infinite}
-.drink .steam.s2{left:40%;animation-delay:-.8s}.drink .steam.s3{left:60%;animation-delay:-1.5s}
-@keyframes steam{0%{transform:translate(-50%,8px);opacity:0}50%{opacity:1}100%{transform:translate(-50%,-10px);opacity:0}}
-.drink .lbl{position:absolute;left:50%;bottom:-18px;transform:translateX(-50%);font-size:9px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-hi);white-space:nowrap}
-.opt .sw.th{background:var(--c) var(--img) center 28%/180% no-repeat}
-.sig .phd{width:76px;height:114px;border-radius:12px;overflow:hidden;background:linear-gradient(180deg,var(--g1),var(--g2))}
-.sig .phd img{width:100%;height:100%;object-fit:cover;display:block}
-@media(max-width:879px){.drink{display:none}}
 /* sticky drink stage at the top of the drinks section: the cup you are building, on every screen size */
 .dstage{position:sticky;top:72px;z-index:5;display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:center;padding:10px 12px;margin-bottom:26px;border:1px solid var(--rule);border-radius:18px;background:radial-gradient(80% 60% at 50% 45%,rgba(201,162,75,.18),transparent 70%),var(--night);box-shadow:0 14px 30px rgba(0,0,0,.45)}
-.dstage .drink{display:block;width:96px;margin:0}
-.dstage .drink .lbl{display:none}
 .dstage .dt{background:var(--cream);color:var(--night);border-radius:14px;padding:11px 12px 10px;text-align:left}
 .dstage .dt .k{font-size:9.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#5f6d63}
 .dstage .dt .tn{font-family:Anton,Impact,sans-serif;text-transform:uppercase;font-size:21px;line-height:1;margin:3px 0 6px}
@@ -65,8 +51,7 @@ rep('</style>', '''
 </style>''')
 
 # ---------- stage: drink preview + ticket rows ----------
-rep('<div class="cup" id="cup" role="img" aria-label="Shake preview"></div>',
-    '<div class="cup" id="cup" role="img" aria-label="Shake preview"></div>\n        <div class="drink" id="drink" role="img" aria-label="Drink preview"></div>')
+# (the drink preview lives only in the sticky drink stage inside #drinks)
 rep('<dt class="ext" data-i18n="tTop">Topping</dt><dd class="ext" id="tTop"></dd>',
     '<dt class="ext" data-i18n="tTop">Topping</dt><dd class="ext" id="tTop"></dd>\n            <dt data-i18n="tDrink">Drink</dt><dd id="tDrink"></dd>\n            <dt data-i18n="tExtra">Extra</dt><dd id="tExtra"></dd>')
 
@@ -202,14 +187,13 @@ rep('''  $("tTop").textContent=st.t.length?st.t.map(function(i){return byId(TP,i
 
 # drawDrink function (photo if present, CSS glass otherwise) placed before drawCup
 rep('/* cup: the real signature photo, or flavour photo + syrup/topping layers */',
-    '''/* drink: /menu/images/drinks/web/tea-<tea>-<aloe>-<temp>.webp if it exists, CSS glass until then */
+    '''/* drink: /menu/images/drinks/web/tea-<tea>-<aloe>-<temp>.webp, swapped in once decoded */
 var DIMG="/menu/images/drinks/web/";
 function drawDrink(tea,aloe,temp){
   var ds=[].slice.call(document.querySelectorAll(".drink")),src=DIMG+"tea-"+tea.id+"-"+aloe.id+"-"+temp+".webp";
-  var css='<div class="g" style="--c1:'+aloe.c+';--c2:'+(tea.c2||tea.c)+'">'+(temp==="iced"?'<span class="ice" style="left:18%;top:14%;transform:rotate(12deg)"></span><span class="ice" style="left:52%;top:9%;transform:rotate(-8deg)"></span><span class="ice" style="left:34%;top:30%;transform:rotate(28deg)"></span>':'<span class="steam"></span><span class="steam s2"></span><span class="steam s3"></span>')+'</div><span class="lbl">'+T[lang][temp]+'</span>';
   var n=++drawDN,im=new Image();im.alt="";im.decoding="async";
   im.onload=function(){if(n!==drawDN)return;(im.decode?im.decode().catch(function(){}):Promise.resolve()).then(function(){if(n===drawDN)ds.forEach(function(d){d.replaceChildren(im.cloneNode())})})};
-  im.onerror=function(){if(n===drawDN)ds.forEach(function(d){d.innerHTML=css})};im.src=src;
+  im.onerror=function(){};im.src=src;
 }
 var drawDN=0;
 /* cup: the real signature photo, or flavour photo + syrup/topping layers */''')
