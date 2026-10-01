@@ -19,6 +19,12 @@
 
 # Only content-hashed derivatives get an immutable browser cache.
 # Existing mutable assets and HTML keep Netlify's revalidation behavior.
+# Shake menu photos: names are stable, so cache a day and refresh quietly after.
+[[headers]]
+  for = "/menu/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+
 [[headers]]
   for = "/images/responsive/*"
   [headers.values]

@@ -441,8 +441,19 @@ function drawCup(){
     st.s.forEach(function(id,i){h+=layerImg(IMG+"layer-"+id+".webp",i?"flip":"")});
     st.t.forEach(function(id,i){h+=layerImg(IMG+"layer-"+id+".webp",i?"flip top2":"")});
   }
-  c.innerHTML=h;c.setAttribute("aria-label",$("tName").textContent);
-  c.classList.remove("pop");void c.getBoundingClientRect();c.classList.add("pop");
+  var n=++drawN,box=document.createElement("div");box.innerHTML=h;
+  var imgs=[].slice.call(box.children);
+  // keep the current cup on screen until every new layer is decoded, then swap in one go
+  Promise.all(imgs.map(function(i){return i.decode?i.decode().catch(function(){}):Promise.resolve()})).then(function(){
+    if(n!==drawN)return;
+    c.replaceChildren.apply(c,imgs);c.setAttribute("aria-label",$("tName").textContent);
+    c.classList.remove("pop");void c.getBoundingClientRect();c.classList.add("pop");
+  });
+}
+var drawN=0;
+function warmImages(){
+  var list=FL.map(function(f){return IMG+f.id+".webp"}).concat(SY.concat(TP).map(function(o){return IMG+"layer-"+o.id+".webp"}),[IMG+"mask-mix.png",IMG+"mask-top2.png"]);
+  list.forEach(function(u){var i=new Image();i.decoding="async";i.src=u});
 }
 function findSig(){for(var i=0;i<SIG.length;i++){var g=SIG[i];if(same(g.b,st.b)&&same(g.s,st.s)&&same(g.t,st.t))return g}return null}
 function matchSig(){var g=findSig();return g?g.n:null}
@@ -498,6 +509,7 @@ var io="IntersectionObserver" in window?new IntersectionObserver(function(es){es
 function observe(){document.querySelectorAll(".reveal:not(.in)").forEach(function(r){io?io.observe(r):r.classList.add("in")})}
 function renderAll(){applyText();renderOpts();renderSigs();update();observe()}
 renderAll();
+if(document.readyState==="complete")setTimeout(warmImages,300);else addEventListener("load",function(){setTimeout(warmImages,300)});
 })();
 </script>
 </body>

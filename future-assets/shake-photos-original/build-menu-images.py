@@ -8,7 +8,10 @@ here = os.path.dirname(os.path.abspath(__file__))
 out = os.path.join(here, "..", "..", "menu", "images", "shakes", "web")
 os.makedirs(out, exist_ok=True)
 L = lambda f: Image.open(os.path.join(here, f + ".png")).convert("RGBA")
-save = lambda im, name: im.resize((480, 720), Image.LANCZOS).save(os.path.join(out, name + ".webp"), "WEBP", quality=82, method=6)
+def save(im, name):
+    im = im.resize((480, 720), Image.LANCZOS)
+    a = np.asarray(im).copy(); a[a[..., 3] == 0, :3] = 0  # hidden pixels cost bytes: blank them
+    Image.fromarray(a).save(os.path.join(out, name + ".webp"), "WEBP", quality=82, alpha_quality=60, method=6)
 
 def inside(*ims):
     a = np.minimum.reduce([np.asarray(i)[..., 3] for i in ims]).astype(np.uint8)
@@ -55,7 +58,7 @@ save(topping("sig-snickers", 70, 152), "layer-talm")
 save(topping("sig-dubai", 70, 162), "layer-tpist")
 
 def alpha_png(m, name):  # CSS masks read alpha, not brightness
-    im = Image.new("RGBA", m.size, (255, 255, 255, 0)); im.putalpha(m); im.save(os.path.join(out, name + ".png"), optimize=True)
+    im = Image.new("RGBA", m.size, (255, 255, 255, 0)); im.putalpha(m); im.resize((240, 360), Image.LANCZOS).save(os.path.join(out, name + ".png"), optimize=True)
 
 # masks (opaque = show): swirl for the 2nd flavour of a mix, patches for the 2nd topping
 W, H = 480, 720
