@@ -515,7 +515,7 @@ function renderOpts(){
 function renderCombos(){
   $("combos").innerHTML=COMBO.map(function(c,i){
     var chips=[byId(TEA,c.tea)[lang]+(lang==="ro"?" (ceai)":" tea"),byId(ALOE,c.aloe)[lang]+(lang==="ro"?" (aloe)":" aloe"),T[lang][c.temp],byId(PLUS,c.p).en];
-    return '<button type="button" class="sig" data-combo="'+i+'" aria-pressed="false"><span class="star plus">Boost+</span><div class="phd" style="--g1:'+c.g1+';--g2:'+c.g2+'"><img src="'+DIMG+'plus-'+c.p+'.webp" alt="" loading="lazy" width="480" height="720"></div><div><div class="nm">'+esc(c.n)+'</div><p class="d">'+esc(c[lang])+'</p><div class="chips">'+chips.map(function(x){return '<span class="chip">'+esc(x)+'</span>'}).join("")+'</div></div><span class="try">'+T[lang].tryIt+'</span></button>';
+    return '<button type="button" class="sig" data-combo="'+i+'" aria-pressed="false"><span class="star plus">Boost+</span><div class="phd" style="--g1:'+c.g1+';--g2:'+c.g2+'"><img src="'+DIMG+'plus-'+c.p+'.webp?v=2" alt="" loading="lazy" width="480" height="720"></div><div><div class="nm">'+esc(c.n)+'</div><p class="d">'+esc(c[lang])+'</p><div class="chips">'+chips.map(function(x){return '<span class="chip">'+esc(x)+'</span>'}).join("")+'</div></div><span class="try">'+T[lang].tryIt+'</span></button>';
   }).join("");
   $("combos").querySelectorAll(".phd img").forEach(function(i){i.onerror=function(){i.remove()}});
 }
@@ -536,10 +536,10 @@ function applyText(){
 
 /* drink: /menu/images/drinks/web/tea-<tea>-<aloe>-<temp>.webp, swapped in once decoded */
 var DIMG="/menu/images/drinks/web/";
-function teaImg(id){return DIMG+"tea-"+id+"-"+st.aloe[0]+"-"+st.temp[0]+".webp"}
+function teaImg(id){return DIMG+"tea-"+id+"-"+st.aloe[0]+"-"+st.temp[0]+".webp?v=2"}
 function curCombo(){if(!st.p.length)return null;for(var i=0;i<COMBO.length;i++){var c=COMBO[i];if(c.p===st.p[0]&&c.tea===st.tea[0]&&c.aloe===st.aloe[0]&&c.temp===st.temp[0])return c}return null}
 function drawDrink(tea,aloe,temp){
-  var ds=[].slice.call(document.querySelectorAll(".drink")),src=DIMG+"tea-"+tea.id+"-"+aloe.id+"-"+temp+".webp";
+  var ds=[].slice.call(document.querySelectorAll(".drink")),src=DIMG+"tea-"+tea.id+"-"+aloe.id+"-"+temp+".webp?v=2";
   var n=++drawDN,im=new Image();im.alt="";im.decoding="async";
   im.onload=function(){if(n!==drawDN)return;(im.decode?im.decode().catch(function(){}):Promise.resolve()).then(function(){if(n===drawDN)ds.forEach(function(d){d.replaceChildren(im.cloneNode())})})};
   im.onerror=function(){};im.src=src;
@@ -570,8 +570,8 @@ function drawCup(){
 var drawN=0;
 function warmImages(){
   var list=FL.map(function(f){return IMG+f.id+".webp"}).concat(SY.concat(TP).map(function(o){return IMG+"layer-"+o.id+".webp"}),[IMG+"mask-mix.png",IMG+"mask-top2.png"]);
-  TEA.forEach(function(t){ALOE.forEach(function(a){TEMP.forEach(function(m){list.push(DIMG+"tea-"+t.id+"-"+a.id+"-"+m.id+".webp")})})});
-  COMBO.forEach(function(c){list.push(DIMG+"plus-"+c.p+".webp")});
+  TEA.forEach(function(t){ALOE.forEach(function(a){TEMP.forEach(function(m){list.push(DIMG+"tea-"+t.id+"-"+a.id+"-"+m.id+".webp?v=2")})})});
+  COMBO.forEach(function(c){list.push(DIMG+"plus-"+c.p+".webp?v=2")});
   list.forEach(function(u){var i=new Image();i.decoding="async";i.src=u});
 }
 function findSig(){for(var i=0;i<SIG.length;i++){var g=SIG[i];if(same(g.b,st.b)&&same(g.s,st.s)&&same(g.t,st.t))return g}return null}
