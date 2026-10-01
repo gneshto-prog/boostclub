@@ -49,7 +49,19 @@ rep('</style>', '''
 .drink .steam.s2{left:40%;animation-delay:-.8s}.drink .steam.s3{left:60%;animation-delay:-1.5s}
 @keyframes steam{0%{transform:translate(-50%,8px);opacity:0}50%{opacity:1}100%{transform:translate(-50%,-10px);opacity:0}}
 .drink .lbl{position:absolute;left:50%;bottom:-18px;transform:translateX(-50%);font-size:9px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-hi);white-space:nowrap}
+.opt .sw.th{background:var(--c) var(--img) center 28%/180% no-repeat}
+.sig .phd{width:76px;height:114px;border-radius:12px;overflow:hidden;background:linear-gradient(180deg,var(--g1),var(--g2))}
+.sig .phd img{width:100%;height:100%;object-fit:cover;display:block}
 @media(max-width:879px){.drink{display:none}}
+/* sticky drink stage at the top of the drinks section: the cup you are building, on every screen size */
+.dstage{position:sticky;top:72px;z-index:5;display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:center;padding:10px 12px;margin-bottom:26px;border:1px solid var(--rule);border-radius:18px;background:radial-gradient(80% 60% at 50% 45%,rgba(201,162,75,.18),transparent 70%),var(--night);box-shadow:0 14px 30px rgba(0,0,0,.45)}
+.dstage .drink{display:block;width:96px;margin:0}
+.dstage .drink .lbl{display:none}
+.dstage .dt{background:var(--cream);color:var(--night);border-radius:14px;padding:11px 12px 10px;text-align:left}
+.dstage .dt .k{font-size:9.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#5f6d63}
+.dstage .dt .tn{font-family:Anton,Impact,sans-serif;text-transform:uppercase;font-size:21px;line-height:1;margin:3px 0 6px}
+.dstage .dt .x{font-size:11.5px;color:#3b4a40;line-height:1.4}
+@media(min-width:880px){.dstage{max-width:420px;top:84px}}
 </style>''')
 
 # ---------- stage: drink preview + ticket rows ----------
@@ -65,6 +77,10 @@ SECTION = '''
     <div class="sh reveal">
       <div><p class="eyebrow" data-i18n="dEyebrow">The bar</p><h2 class="disp" data-i18n="dTitle">Your drinks</h2></div>
       <p data-i18n="dLead">Every visit comes with a tea and an aloe next to the shake, in one cup. Pick the flavours, pick iced or hot.</p>
+    </div>
+    <div class="dstage" aria-live="polite">
+      <div class="drink" role="img" aria-label="Drink preview"></div>
+      <div class="dt"><div class="k" data-i18n="tDrink">Drink</div><div class="tn" id="tDrink2"></div><div class="x" id="tExtra2"></div></div>
     </div>
     <div class="steps">
       <div class="step">
@@ -163,13 +179,15 @@ rep('  $("optTop").innerHTML=TP.map(function(f){return optBtn(f,"t",f[lang])}).j
   $("optAloe").innerHTML=ALOE.map(function(f){return optBtn(f,"aloe",f[lang])}).join("");
   $("optTemp").innerHTML=TEMP.map(function(f){return '<button type="button" data-g="temp" data-id="'+f.id+'" aria-pressed="false"><span>'+f.ic+'</span><b>'+esc(f[lang])+'</b></button>'}).join("");
   $("optX").innerHTML=XTRA.map(function(f){return optBtn(f,"x",f[lang])}).join("");
-  $("optPlus").innerHTML=PLUS.map(function(f){return '<button type="button" class="opt" data-g="p" data-id="'+f.id+'" aria-pressed="false"><span class="sw" style="--c:'+f.c+'"></span>'+esc(f[lang])+'<span class="lvl">Boost+</span></button>'}).join("");
+  $("optPlus").innerHTML=PLUS.map(function(f){return '<button type="button" class="opt" data-g="p" data-id="'+f.id+'" aria-pressed="false"><span class="sw th" style="--c:'+f.c+';--img:url('+DIMG+'plus-'+f.id+'.webp)"></span>'+esc(f[lang])+'<span class="lvl">Boost+</span></button>'}).join("");
 }
 function renderCombos(){
   $("combos").innerHTML=COMBO.map(function(c,i){
     var chips=[byId(TEA,c.tea)[lang]+(lang==="ro"?" (ceai)":" tea"),byId(ALOE,c.aloe)[lang]+(lang==="ro"?" (aloe)":" aloe"),T[lang][c.temp]].concat(c.x.map(function(x){return byId(XTRA,x)[lang]}),c.p.map(function(p){return byId(PLUS,p)[lang]}));
-    return '<button type="button" class="sig nop" data-combo="'+i+'">'+(c.plus?'<span class="star plus">Boost+</span>':'<span class="star">'+T[lang].incl+'</span>')+'<div><div class="glassbar" style="--g1:'+c.g1+';--g2:'+c.g2+'"></div><div class="nm">'+esc(c.n)+'</div><p class="d">'+esc(c[lang])+'</p><div class="chips">'+chips.map(function(x){return '<span class="chip">'+esc(x)+'</span>'}).join("")+'</div></div><span class="try">'+T[lang].tryIt+'</span></button>';
+    var ph=c.p.length?DIMG+"plus-"+c.p[0]+".webp":DIMG+"tea-"+c.tea+"-"+c.aloe+"-"+c.temp+".webp";
+    return '<button type="button" class="sig" data-combo="'+i+'">'+(c.plus?'<span class="star plus">Boost+</span>':'<span class="star">'+T[lang].incl+'</span>')+'<div class="phd" style="--g1:'+c.g1+';--g2:'+c.g2+'"><img src="'+ph+'" alt="" loading="lazy" width="480" height="720"></div><div><div class="nm">'+esc(c.n)+'</div><p class="d">'+esc(c[lang])+'</p><div class="chips">'+chips.map(function(x){return '<span class="chip">'+esc(x)+'</span>'}).join("")+'</div></div><span class="try">'+T[lang].tryIt+'</span></button>';
   }).join("");
+  $("combos").querySelectorAll(".phd img").forEach(function(i){i.onerror=function(){i.remove()}});
 }''')
 
 # drink preview + ticket rows inside update()
@@ -179,6 +197,7 @@ rep('''  $("tTop").textContent=st.t.length?st.t.map(function(i){return byId(TP,i
   $("tDrink").textContent=(lang==="ro"?"Ceai "+tea.ro.toLowerCase()+" + aloe "+aloe.ro.toLowerCase():tea.en+" tea + "+aloe.en+" aloe")+" · "+L[st.temp[0]];
   var ex=st.x.map(function(i){return byId(XTRA,i)[lang]}).concat(st.p.map(function(i){return byId(PLUS,i)[lang]+" (Boost+)"}));
   $("tExtra").textContent=ex.length?ex.join(" + "):L.none;
+  $("tDrink2").textContent=$("tDrink").textContent;$("tExtra2").textContent=ex.length?ex.join(" + "):"";
   drawDrink(tea,aloe,st.temp[0]);''')
 
 # drawDrink function (photo if present, CSS glass otherwise) placed before drawCup
@@ -186,10 +205,13 @@ rep('/* cup: the real signature photo, or flavour photo + syrup/topping layers *
     '''/* drink: /menu/images/drinks/web/tea-<tea>-<aloe>-<temp>.webp if it exists, CSS glass until then */
 var DIMG="/menu/images/drinks/web/";
 function drawDrink(tea,aloe,temp){
-  var d=$("drink"),src=DIMG+"tea-"+tea.id+"-"+aloe.id+"-"+temp+".webp";
+  var ds=[].slice.call(document.querySelectorAll(".drink")),src=DIMG+"tea-"+tea.id+"-"+aloe.id+"-"+temp+".webp";
   var css='<div class="g" style="--c1:'+aloe.c+';--c2:'+(tea.c2||tea.c)+'">'+(temp==="iced"?'<span class="ice" style="left:18%;top:14%;transform:rotate(12deg)"></span><span class="ice" style="left:52%;top:9%;transform:rotate(-8deg)"></span><span class="ice" style="left:34%;top:30%;transform:rotate(28deg)"></span>':'<span class="steam"></span><span class="steam s2"></span><span class="steam s3"></span>')+'</div><span class="lbl">'+T[lang][temp]+'</span>';
-  var im=new Image();im.onload=function(){d.innerHTML='<img src="'+src+'" alt="">'};im.onerror=function(){d.innerHTML=css};im.src=src;
+  var n=++drawDN,im=new Image();im.alt="";im.decoding="async";
+  im.onload=function(){if(n!==drawDN)return;(im.decode?im.decode().catch(function(){}):Promise.resolve()).then(function(){if(n===drawDN)ds.forEach(function(d){d.replaceChildren(im.cloneNode())})})};
+  im.onerror=function(){if(n===drawDN)ds.forEach(function(d){d.innerHTML=css})};im.src=src;
 }
+var drawDN=0;
 /* cup: the real signature photo, or flavour photo + syrup/topping layers */''')
 
 # toggle: single-select groups
@@ -199,6 +221,12 @@ rep('''function toggle(g,id){
   var arr=st[g],i=arr.indexOf(id),note="";
   if(g==="tea"||g==="aloe"||g==="temp"){st[g]=[id];update();return}
   if(g==="x"||g==="p"){st[g]=i>-1?[]:[id];update();return}''')
+
+# preload drink photos with the shake layers
+rep('''  list.forEach(function(u){var i=new Image();i.decoding="async";i.src=u});''',
+    '''  TEA.forEach(function(t){ALOE.forEach(function(a){TEMP.forEach(function(m){list.push(DIMG+"tea-"+t.id+"-"+a.id+"-"+m.id+".webp")})})});
+  PLUS.forEach(function(p){list.push(DIMG+"plus-"+p.id+".webp")});
+  list.forEach(function(u){var i=new Image();i.decoding="async";i.src=u});''')
 
 # combo click + surprise drinks
 rep('  if(t.hasAttribute("data-sig")){load(SIG[+t.getAttribute("data-sig")]);return}',
