@@ -94,6 +94,8 @@ section{padding:76px 16px}
 @media(min-width:880px){.builder{grid-template-columns:400px 1fr;align-items:start}.stage{position:sticky;top:76px}}
 .stage{background:radial-gradient(80% 60% at 50% 45%,rgba(201,162,75,.18),transparent 70%),var(--night);border:1px solid var(--rule);border-radius:24px;padding:20px 18px 18px;text-align:center}
 .cup{width:100%;max-width:230px;height:auto;display:block;margin:0 auto}
+.cup.photo{aspect-ratio:2/3;object-fit:cover;border-radius:18px}
+.cup[hidden]{display:none}
 .cup.pop{animation:pop .45s cubic-bezier(.3,1.6,.5,1)}
 @keyframes pop{0%{transform:scale(.96) rotate(-1.5deg)}100%{transform:none}}
 .ticket{margin-top:14px;background:var(--cream);color:var(--night);border-radius:14px;padding:16px 16px 14px;text-align:left;position:relative}
@@ -166,9 +168,9 @@ body.simple .step.ext,body.simple .ticket .ext,body.simple #mixnote{display:none
 
 /* signatures */
 .sigs{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
-.sig{position:relative;border:1px solid var(--rule);background:var(--card);border-radius:22px;padding:18px 18px 16px;display:grid;grid-template-columns:62px 1fr;gap:14px;text-align:left;transition:background .2s,transform .25s,border-color .2s}
+.sig{position:relative;border:1px solid var(--rule);background:var(--card);border-radius:22px;padding:18px 18px 16px;display:grid;grid-template-columns:76px 1fr;gap:14px;text-align:left;transition:background .2s,transform .25s,border-color .2s}
 .sig:hover{background:var(--card-hi);transform:translateY(-3px);border-color:rgba(232,200,119,.5)}
-.sig svg{width:62px;height:108px}
+.sig .ph{width:76px;height:114px;object-fit:cover;border-radius:12px;display:block}
 .sig .star~div .nm{padding-right:62px}
 .sig .nm{font-family:Anton,Impact,sans-serif;text-transform:uppercase;font-size:27px;line-height:.95;margin:2px 0 6px;letter-spacing:.01em}
 .sig .d{font-family:Fraunces,Georgia,serif;font-size:14px;line-height:1.4;color:var(--dim);margin:0 0 10px}
@@ -247,6 +249,7 @@ footer small{display:block;margin-top:28px;font-size:10.5px;color:rgba(169,194,1
     <div class="builder">
       <div class="stage">
         <svg class="cup" id="cup" viewBox="0 0 200 300" role="img" aria-label="Shake preview"></svg>
+        <img class="cup photo" id="cupPhoto" alt="" width="480" height="720" hidden>
         <div class="ticket" aria-live="polite">
           <div class="k" data-i18n="tKicker">Shake-ul tău</div>
           <div class="tn" id="tName">Vanilla Cream</div>
@@ -414,7 +417,7 @@ function renderSigs(){
   var h="";SIG.forEach(function(g,i){
     var isMix=g.b.length>1;if(filter==="single"&&isMix||filter==="mix"&&!isMix)return;
     var chips=g.b.map(function(b){return '<span class="chip'+(isMix?" mix":"")+'">'+esc(flName(b))+'</span>'}).join("")+g.s.map(function(s){var y=byId(SY,s);return '<span class="chip">'+esc(lang==="ro"?"Sirop "+y.ro.toLowerCase():y.en+" syrup")+'</span>'}).join("")+g.t.map(function(t){return '<span class="chip">'+esc(byId(TP,t)[lang])+'</span>'}).join("");
-    h+='<button type="button" class="sig" data-sig="'+i+'">'+(g.star?'<span class="star">'+T[lang].star+'</span>':isMix?'<span class="star" style="background:transparent;color:var(--gold-hi);border:1px solid var(--rule)">'+T[lang].mix+'</span>':'')+miniCup(g)+'<div><div class="nm">'+esc(g.n)+'</div><p class="d">'+esc(g[lang])+'</p><div class="chips">'+chips+'</div></div><span class="try">'+T[lang].tryIt+'</span></button>';
+    h+='<button type="button" class="sig" data-sig="'+i+'">'+(g.star?'<span class="star">'+T[lang].star+'</span>':isMix?'<span class="star" style="background:transparent;color:var(--gold-hi);border:1px solid var(--rule)">'+T[lang].mix+'</span>':'')+'<img class="ph" src="'+sigImg(g)+'" alt="" loading="lazy" width="480" height="720">'+'<div><div class="nm">'+esc(g.n)+'</div><p class="d">'+esc(g[lang])+'</p><div class="chips">'+chips+'</div></div><span class="try">'+T[lang].tryIt+'</span></button>';
   });
   $("sigs").innerHTML=h;
 }
@@ -463,18 +466,24 @@ function cupMarkup(b,s,t,uid,mini){
   return o.join("");
 }
 var cupN=0;
+var IMG="/menu/images/shakes/web/";
+function sigImg(g){return IMG+"sig-"+g.n.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"")+".webp"}
+function cupPhotoSrc(){var g=findSig();if(g)return sigImg(g);if(st.b.length===1&&!st.s.length&&!st.t.length)return IMG+st.b[0]+".webp";return null}
 function drawCup(){
-  var c=$("cup");c.innerHTML=cupMarkup(st.b,st.s,st.t,"bc"+(++cupN),false);
-  c.classList.remove("pop");void c.getBoundingClientRect();c.classList.add("pop");
+  var c=$("cup"),ph=$("cupPhoto"),src=cupPhotoSrc(),el=c;
+  if(src){if(ph.getAttribute("src")!==src)ph.src=src;ph.alt=$("tName").textContent;ph.hidden=false;c.setAttribute("hidden","");el=ph}
+  else{c.innerHTML=cupMarkup(st.b,st.s,st.t,"bc"+(++cupN),false);c.removeAttribute("hidden");ph.hidden=true}
+  el.classList.remove("pop");void el.getBoundingClientRect();el.classList.add("pop");
 }
 function miniCup(sig){return '<svg viewBox="20 18 160 282" aria-hidden="true">'+cupMarkup(sig.b,sig.s,sig.t,"m"+Math.random().toString(36).slice(2,7),true)+'</svg>'}
-function matchSig(){for(var i=0;i<SIG.length;i++){var g=SIG[i];if(same(g.b,st.b)&&same(g.s,st.s)&&same(g.t,st.t))return g.n}return null}
+function findSig(){for(var i=0;i<SIG.length;i++){var g=SIG[i];if(same(g.b,st.b)&&same(g.s,st.s)&&same(g.t,st.t))return g}return null}
+function matchSig(){var g=findSig();return g?g.n:null}
 function same(x,y){return x.length===y.length&&x.every(function(v){return y.indexOf(v)>-1})}
 function update(){
   document.querySelectorAll(".opt").forEach(function(o){var g=o.getAttribute("data-g");o.setAttribute("aria-pressed",String(st[g].indexOf(o.getAttribute("data-id"))>-1))});
-  drawCup();
   var L=T[lang],bases=st.b.map(flName).join(" + ");
   $("tName").textContent=matchSig()||(st.b.length>1?st.b.map(function(i){return flName(i).split(" ")[0]}).join(" × "):flName(st.b[0]));
+  drawCup();
   $("tBase").textContent=bases+(st.b.length>1?" ("+L.half+")":"");
   var x=st.dbl?" ×2":"";
   $("tSyrup").textContent=st.s.length?st.s.map(function(i){return byId(SY,i)[lang]}).join(" + ")+x:L.none;
