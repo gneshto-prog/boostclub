@@ -6,7 +6,7 @@
 <title>Boost Fit | Sâmbătă 08:00, Kiseleff | Boost Club București</title>
 <link rel="canonical" href="https://boostclub.ro/boostfit/">
 <meta name="description" content="Boost Fit: antrenament în parc în fiecare sâmbătă la 08:00, Parcul Kiseleff, apoi shake la Boost Club. 45 de minute, orice nivel. Intrarea e un shake.">
-<meta name="theme-color" content="#06281F">
+<meta name="theme-color" content="#0A0A0A">
 <meta property="og:title" content="Boost Fit. Sâmbătă 08:00, Kiseleff.">
 <meta property="og:description" content="Antrenăm în parc. Shake la club. 45 de minute, orice nivel. Intrarea e un shake.">
 <meta property="og:image" content="https://boostclub.ro/boostfit/images/og-boostfit.png">
@@ -30,9 +30,9 @@
 @font-face{font-family:"IBM Plex Mono";src:url(/fonts/ibm-plex-mono/ibm-plex-mono-500-latin-ext.woff2) format("woff2");font-weight:500;font-display:swap;unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
 
 :root{
-  --night:#041E17; --deep:#06281F; --ground:#06281F; --white:#FFFFFF; --green:#0D5645; --mid:#11705A;
-  --gold:#C9A24B; --gold-hi:#E8C877; --cream:#FFFFFF; --dim:#B9CFC6;
-  --rule:rgba(232,200,119,.22); --card:rgba(255,255,255,.04); --card-hi:rgba(255,255,255,.08);
+  --night:#050505; --deep:#0A0A0A; --ground:#0A0A0A; --white:#FFFFFF; --green:#0D5645; --mid:#11705A;
+  --gold:#0D5645; --gold-hi:#4FB38A; --cream:#FFFFFF; --dim:#B5BDB9;
+  --rule:rgba(255,255,255,.14); --card:rgba(255,255,255,.04); --card-hi:rgba(255,255,255,.08);
   --wa:#25D366;
 }
 *{box-sizing:border-box}
@@ -42,7 +42,7 @@ a{color:inherit}
 button{font:inherit;color:inherit;cursor:pointer}
 img{max-width:100%;height:auto;display:block}
 .disp{font-family:"Archivo Black",Impact,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:-.03em;line-height:.95}
-.blk{display:inline-block;background:var(--gold);color:var(--deep);padding:0 .14em 0 .12em;margin:0 .04em;transform:skewX(-8deg)}
+.blk{display:inline-block;background:var(--gold);color:#fff;padding:0 .14em 0 .12em;margin:0 .04em;transform:skewX(-8deg)}
 .blk>span{display:inline-block;transform:skewX(8deg)}
 .mono{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-weight:500;font-variant-numeric:tabular-nums}
 .eyebrow{font-size:11px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin:0 0 14px}
@@ -54,23 +54,23 @@ img{max-width:100%;height:auto;display:block}
 body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.055;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>");mix-blend-mode:screen}
 
 /* top bar */
-.bar{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 16px;padding-top:max(12px,env(safe-area-inset-top));background:rgba(6,40,31,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(232,200,119,.12)}
+.bar{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 16px;padding-top:max(12px,env(safe-area-inset-top));background:rgba(10,10,10,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid rgba(232,200,119,.12)}
 .bar .wm{height:24px;width:auto;display:block}
 .bar .right{display:flex;align-items:center;gap:10px}
 .bar .club{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);text-decoration:none;display:none}
 @media(min-width:560px){.bar .club{display:inline}}
 .lang{display:flex;padding:3px;background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);clip-path:polygon(6px 0,100% 0,calc(100% - 6px) 100%,0 100%)}
 .lang button{background:none;border:0;padding:6px 14px;border-radius:0;font-family:"Archivo Black",sans-serif;font-size:11px;letter-spacing:.1em;color:var(--dim);clip-path:polygon(5px 0,100% 0,calc(100% - 5px) 100%,0 100%)}
-.lang button[aria-pressed=true]{background:var(--gold);color:var(--deep)}
+.lang button[aria-pressed=true]{background:var(--gold);color:#fff}
 
 /* hero */
 .hero{position:relative;min-height:100svh;display:grid;place-items:center;text-align:center;padding:84px 16px 64px;overflow:hidden;
-  background:radial-gradient(120% 70% at 50% 100%,#0D5645 0%,rgba(13,86,69,0) 60%),radial-gradient(60% 40% at 50% 22%,rgba(201,162,75,.12),transparent 70%),var(--ground)}
+  background:radial-gradient(120% 70% at 50% 100%,rgba(13,86,69,.55) 0%,rgba(13,86,69,0) 60%),var(--ground)}
 .hero .leafbg{position:absolute;width:min(120vw,900px);left:-34%;bottom:-30%;opacity:.04;transform:rotate(-8deg);pointer-events:none}
 .herophoto{position:absolute;inset:0;pointer-events:none}
-.herophoto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:grayscale(.6) contrast(1.1) brightness(.5);opacity:.5;mix-blend-mode:luminosity;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 35%,#000 100%),linear-gradient(180deg,#000 60%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 35%,#000 100%),linear-gradient(180deg,#000 60%,transparent 100%);mask-composite:intersect}
-.herophoto::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,40,31,.7) 0,rgba(6,40,31,.55) 45%,var(--ground) 92%)}
-@media(max-width:799px){.herophoto img{opacity:.45;object-position:40% center}.herophoto::after{background:linear-gradient(180deg,rgba(6,40,31,.65),rgba(6,40,31,.7) 50%,var(--ground) 94%)}}
+.herophoto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:grayscale(.7) contrast(1.1) brightness(.5);opacity:.45;mix-blend-mode:luminosity;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 35%,#000 100%),linear-gradient(180deg,#000 60%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 35%,#000 100%),linear-gradient(180deg,#000 60%,transparent 100%);mask-composite:intersect}
+.herophoto::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.7) 0,rgba(10,10,10,.55) 45%,var(--ground) 92%)}
+@media(max-width:799px){.herophoto img{opacity:.4;object-position:40% center}.herophoto::after{background:linear-gradient(180deg,rgba(10,10,10,.65),rgba(10,10,10,.7) 50%,var(--ground) 94%)}}
 .hero .inner{position:relative;z-index:2;max-width:980px}
 .hero .wmhero{width:min(84vw,560px);margin:0 auto 26px;display:block}
 .when{display:inline-flex;align-items:center;gap:12px;border-radius:0;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%);box-shadow:inset 0 0 0 1px rgba(201,162,75,.5);padding:9px 20px 9px 16px;background:rgba(4,30,23,.6);font-size:clamp(13px,2.6vw,16px);letter-spacing:.18em;text-transform:uppercase;color:var(--gold-hi);margin-bottom:22px}
@@ -82,12 +82,12 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opa
 .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:30px}
 .btn{display:inline-flex;align-items:center;gap:10px;border-radius:0;padding:17px 34px;font-family:"Archivo Black",Impact,sans-serif;font-weight:400;font-size:15px;letter-spacing:.02em;text-transform:uppercase;text-decoration:none;border:0;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%);transition:transform .15s ease,background .15s ease,box-shadow .15s ease}
 .btn:active{transform:scale(.98)}
-.btn-gold{background:var(--gold);color:var(--deep)}
+.btn-gold{background:var(--gold);color:#fff}
 .btn-gold:hover{background:var(--gold-hi)}
 .btn-ghost{color:var(--cream);background:rgba(255,255,255,.03);box-shadow:inset 0 0 0 2px rgba(255,255,255,.55)}
 .btn-ghost:hover{background:rgba(255,255,255,.1);box-shadow:inset 0 0 0 2px #fff}
-.btn-wa{background:var(--gold);color:var(--deep)}
-.btn-wa:hover{background:var(--gold-hi)}
+.btn-wa{background:var(--gold);color:#fff}
+.btn-wa:hover{background:#11705A}
 .btn svg{width:18px;height:18px;flex:none}
 .proof{margin:22px 0 0;font-size:13px;color:var(--dim)}
 .proof a{color:var(--gold-hi);text-decoration:none;font-weight:600}
@@ -121,7 +121,7 @@ section{padding:72px 0}
 .stop p{margin:0;color:var(--dim);max-width:60ch}
 .stopimg{margin:0 0 16px;max-width:560px;clip-path:polygon(0 0,100% 0,100% calc(100% - 22px),calc(100% - 22px) 100%,0 100%);overflow:hidden;background:var(--night)}
 .stopimg{position:relative}
-.stopimg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,40,31,.25),rgba(6,40,31,.55));mix-blend-mode:multiply}
+.stopimg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.2),rgba(10,10,10,.55))}
 .stopimg img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:center 45%;filter:grayscale(.55) contrast(1.05) brightness(.8);opacity:.85}
 
 /* price */
@@ -140,7 +140,7 @@ section{padding:72px 0}
 @media(min-width:800px){.who{grid-template-columns:.75fr 1fr 1fr;gap:20px}}
 .whoimg{clip-path:polygon(0 0,100% 0,100% calc(100% - 26px),calc(100% - 26px) 100%,0 100%);background:var(--night);min-height:220px}
 .whoimg{position:relative}
-.whoimg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,40,31,.25),rgba(6,40,31,.6));mix-blend-mode:multiply}
+.whoimg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.2),rgba(10,10,10,.6))}
 .whoimg img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5;filter:grayscale(.55) contrast(1.05) brightness(.8);opacity:.85}
 @media(max-width:799px){.whoimg img{aspect-ratio:16/9}}
 .who .card ul{margin:0;padding-left:18px;color:var(--cream)}
@@ -160,20 +160,20 @@ section{padding:72px 0}
 .coach .ph{position:relative;border-radius:0;overflow:hidden;clip-path:polygon(0 0,100% 0,100% calc(100% - 28px),calc(100% - 28px) 100%,0 100%);aspect-ratio:4/5;background:var(--deep)}
 .coach .ph img{width:100%;height:100%;object-fit:cover;object-position:60% 30%;filter:grayscale(1) contrast(1.15) brightness(.92)}
 .coach .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,86,69,.25),rgba(4,30,23,.55));mix-blend-mode:multiply}
-.coach .ph .lb{position:absolute;left:14px;bottom:14px;font-family:"Archivo Black",sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--deep);background:var(--gold);padding:8px 14px;clip-path:polygon(6px 0,100% 0,calc(100% - 6px) 100%,0 100%)}
+.coach .ph .lb{position:absolute;left:14px;bottom:14px;font-family:"Archivo Black",sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--gold);padding:8px 14px;clip-path:polygon(6px 0,100% 0,calc(100% - 6px) 100%,0 100%)}
 .coach h2{font-size:clamp(34px,6vw,72px);margin:0 0 14px;color:var(--cream)}
 .coach p{color:var(--dim);margin:0 0 12px;font-size:clamp(15px,2.4vw,18px);max-width:50ch}
 
 /* monthly */
-.monthly{position:relative;overflow:hidden;background:#0A0A0A;color:#fff;border-block:1px solid rgba(255,255,255,.1)}
-.monthly .blk{background:var(--green);color:#fff}
+.monthly{position:relative;overflow:hidden;background:#06281F;color:#fff;border-block:1px solid rgba(255,255,255,.1)}
+.monthly .blk{background:#fff;color:#06281F}
 .monthly .ed{color:#fff;opacity:.7}
 .monthly p{color:rgba(255,255,255,.72)}
 .monthly .ed{font-size:clamp(13px,2.6vw,16px);letter-spacing:.3em;text-transform:uppercase;color:var(--gold-hi)}
 .monthly h2{font-size:clamp(34px,8vw,104px);margin:10px 0 18px;color:var(--cream)}
 .monthly p{color:var(--dim);max-width:52ch;margin:0;font-size:clamp(15px,2.4vw,18px)}
 .monthly .evbg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.35;filter:grayscale(.3);pointer-events:none}
-.monthly::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,10,.95) 0,rgba(10,10,10,.75) 55%,rgba(10,10,10,.55) 100%);pointer-events:none}
+.monthly::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,40,31,.95) 0,rgba(6,40,31,.75) 55%,rgba(6,40,31,.55) 100%);pointer-events:none}
 
 /* faq */
 .faq details{border-top:1px solid var(--rule)}
@@ -213,7 +213,7 @@ footer .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 <body>
 
 <header class="bar">
-  <a href="/boostfit/" aria-label="Boost Fit"><img class="wm" src="/boostfit/images/boostfit-wordmark.svg" alt="Boost Fit" width="214" height="32"></a>
+  <a href="/boostfit/" aria-label="Boost Fit"><img class="wm" src="/boostfit/images/boostfit-wordmark.svg" alt="Boost Fit" width="214" height="33"></a>
   <div class="right">
     <a class="club" href="/" data-i18n="barClub">Înapoi la Boost Club</a>
     <div class="lang" role="group" aria-label="Language">
@@ -228,7 +228,7 @@ footer .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
   <div class="herophoto" aria-hidden="true"><img src="/boostfit/images/hero-dawn.jpg" alt="" width="1920" height="1080" fetchpriority="high"></div>
   <img class="leafbg" src="/boostfit/images/boostfit-symbol.svg" alt="" aria-hidden="true">
   <div class="inner">
-    <img class="wmhero" src="/boostfit/images/boostfit-wordmark.svg" alt="Boost Fit" width="870" height="128">
+    <img class="wmhero" src="/boostfit/images/boostfit-wordmark.svg" alt="Boost Fit" width="870" height="134">
     <div class="when mono"><span class="dot" aria-hidden="true"></span><span data-i18n="when">Sâmbătă · 08:00 · Parcul Kiseleff</span></div>
     <h1 class="disp"><span data-i18n="h1a">Antrenăm</span><span><span class="blk"><span data-i18n="h1b">în parc.</span></span></span><span data-i18n="h1c">Shake la club.</span></h1>
     <p class="tag" data-i18n="tag">45 de minute afară, orice nivel. După, mergem la Boost Club și bem un shake. <b>Intrarea e un shake.</b></p>
@@ -368,7 +368,7 @@ footer .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 <footer>
   <div class="wrap">
     <div class="row">
-      <img class="wm" src="/boostfit/images/boostfit-wordmark.svg" alt="Boost Fit" width="214" height="32">
+      <img class="wm" src="/boostfit/images/boostfit-wordmark.svg" alt="Boost Fit" width="214" height="33">
       <div><a href="/" data-i18n="fClub">boostclub.ro</a> · <a href="tel:+40726205752">+40 726 205 752</a> · <span data-i18n="fAddr">Strada Sevastopol 24, Sector 1, București</span></div>
     </div>
     <p class="disc" data-i18n="fDisc">Boost Fit este activitatea de sâmbătă a Boost Club. Distribuitor Independent Herbalife. Boost Club oferă ghidare wellness și consultații educaționale. Consultația nu diagnostichează, nu tratează și nu înlocuiește îngrijirea medicală. Participi la antrenament pe propria răspundere; dacă ai o afecțiune, vorbește cu medicul tău înainte. Rezultatele variază de la persoană la persoană.</p>
