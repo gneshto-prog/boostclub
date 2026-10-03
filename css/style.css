@@ -1229,3 +1229,21 @@ a:focus-visible, button:focus-visible, .btn:focus-visible { outline: var(--lengt
 .section-dark .review-summary .small { color: var(--color-fca22cd7); }
 .site-header .nav a.btn-primary { color: var(--green-dark); }
 .map-consent { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--s3); padding: var(--s4); text-align: center; }
+
+/* Boost Fit: site-wide bar inside the fixed header, and the nav item with the chevrons */
+.bfit-bar { display: flex; align-items: center; justify-content: center; gap: var(--bfit-gap-xs); min-height: var(--bfit-bar-h); background: var(--bfit-black); color: var(--bfit-white); text-decoration: none; font-size: var(--bfit-bar-font); letter-spacing: var(--bfit-bar-track); text-transform: uppercase; border-bottom: var(--bfit-hair) solid var(--bfit-green); }
+.bfit-bar .bfit-chev { width: var(--bfit-bar-chev); height: auto; flex: none; }
+.bfit-bar .bfit-chev .c1, .bfit-bar .bfit-chev .c2 { fill: var(--bfit-white); }
+.bfit-bar .bfit-chev .c3, .nav-bfit .bfit-chev .c3 { fill: var(--bfit-green-light); }
+.bfit-bar-name { font-weight: 700; }
+.bfit-bar-text, .bfit-bar-short { color: var(--bfit-dim); }
+.bfit-bar-short { display: none; }
+.bfit-bar-go { color: var(--bfit-green-light); font-weight: 700; }
+.bfit-bar:hover .bfit-bar-go, .bfit-bar:focus-visible .bfit-bar-go { color: var(--bfit-white); }
+.nav-bfit { display: inline-flex; align-items: center; gap: var(--bfit-gap-xs); }
+.nav-bfit .bfit-chev { width: var(--bfit-nav-chev); height: auto; flex: none; }
+.nav-bfit .bfit-chev .c1, .nav-bfit .bfit-chev .c2 { fill: currentColor; }
+@media (max-width: 760px) {
+  .bfit-bar-text { display: none; }
+  .bfit-bar-short { display: inline; }
+}

@@ -21,6 +21,13 @@ function renderLanguageSwitcher(lang, slug) {
   }).join('<span class="lang-sep">|</span>');
 }
 
+const bfitChevrons = '<svg class="bfit-chev" viewBox="0 0 141 100" aria-hidden="true" focusable="false"><g transform="translate(0 100) skewX(-12) translate(0 -100)"><polygon class="c1" points="0,0 24,0 54,50 24,100 0,100 30,50"/><polygon class="c2" points="33,0 57,0 87,50 57,100 33,100 63,50"/><polygon class="c3" points="66,0 90,0 120,50 90,100 66,100 96,50"/></g></svg>';
+const bfitBar = {
+  ro: { href: "/boostfit/", text: "Antrenament în parc · Sâmbătă 08:00 · Kiseleff", short: "Sâmbătă 08:00", go: "Vezi →" },
+  en: { href: "/boostfit/?lang=en", text: "Park workout · Saturday 08:00 · Kiseleff", short: "Saturday 08:00", go: "See →" },
+  ru: { href: "/boostfit/?lang=en", text: "Тренировка в парке · Суббота 08:00 · Киселефф", short: "Суббота 08:00", go: "Подробнее →" },
+};
+
 const applyLabels = { ro: "Aplică acum", en: "Apply now", ru: "Подать заявку" };
 
 function navItems({ lang, slug, mobile }) {
@@ -30,13 +37,16 @@ function navItems({ lang, slug, mobile }) {
       href: item.href ? item.href[lang] : slug === "ambasador" && item.slug === "business" ? "ambasador" : item.slug,
       label: item.labels[lang],
       current: item.slug === slug || (slug === "ambasador" && item.slug === "business"),
+      boostfit: item.slug === "boostfit",
     }));
 }
 
 export function nav({ lang, slug, mobile = false }) {
   const copy = localeContent[lang];
   const items = navItems({ lang, slug, mobile });
-  const links = items.map((item) => `<a href="${item.href}"${item.current ? ' aria-current="page"' : ""}>${item.label}</a>`).join("\n    ");
+  const links = items.map((item) => item.boostfit
+    ? `<a class="nav-bfit" href="${item.href}">${bfitChevrons}${item.label}</a>`
+    : `<a href="${item.href}"${item.current ? ' aria-current="page"' : ""}>${item.label}</a>`).join("\n    ");
   if (slug === "program-trainee") {
     const identity = mobile ? ' id="mobile-navigation"' : "";
     const className = mobile ? "mobile-menu" : "nav";
@@ -56,7 +66,9 @@ export function nav({ lang, slug, mobile = false }) {
 export function header({ lang, slug }) {
   const copy = localeContent[lang];
   const controls = ' aria-controls="mobile-navigation"';
+  const bar = bfitBar[lang];
   return `<header class="site-header">
+  <a class="bfit-bar" href="${bar.href}">${bfitChevrons}<span class="bfit-bar-name">Boost Fit</span><span class="bfit-bar-text">${bar.text}</span><span class="bfit-bar-short">${bar.short}</span><span class="bfit-bar-go">${bar.go}</span></a>
   <div class="container header-inner">
     <a href="./" class="logo"><span class="sr-only">Boost Club</span><span class="logo-visual" aria-hidden="true">${logoVisual}</span></a>
     ${nav({ lang, slug })}

@@ -20,3 +20,18 @@
 .bfit-photo img { border-radius: 0; }
 /* Archivo Black has no Cyrillic: Russian headline and button stay in one bold sans */
 :lang(ru) .bfit-band h2, :lang(ru) .bfit-btn { font-family: 'Poppins', system-ui, sans-serif; font-weight: 700; }
+/* the route: park -> walk -> club, the chevrons as the path */
+.bfit-by { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-weight: 500; font-size: var(--bfit-by); letter-spacing: var(--bfit-mono-track); text-transform: uppercase; color: var(--bfit-dim); margin: calc(var(--s2) * -1) var(--bfit-zero) var(--s3); }
+.bfit-route { background: var(--bfit-card); border: var(--bfit-hair) solid var(--bfit-rule); border-left: var(--bfit-edge) solid var(--bfit-green); padding: var(--bfit-route-pad); }
+.bfit-stops { list-style: none; margin: var(--bfit-zero); padding: var(--bfit-zero); }
+.bfit-stop { display: grid; grid-template-columns: auto 1fr; column-gap: var(--s2); align-items: baseline; }
+.bfit-time { grid-row: span 2; font-family: 'BoostFit Display', 'Poppins', sans-serif; font-size: var(--bfit-time); color: var(--bfit-green-light); }
+.bfit-place { font-family: 'BoostFit Display', 'Poppins', sans-serif; text-transform: uppercase; font-size: var(--bfit-place); color: var(--bfit-white); }
+.bfit-what { font-size: var(--bfit-what); color: var(--bfit-dim); }
+.bfit-stop-club .bfit-time { color: var(--bfit-white); }
+.bfit-stop-club .bfit-place { color: var(--bfit-green-light); }
+.bfit-step { padding: var(--bfit-chev-gap) var(--bfit-zero) var(--bfit-chev-gap) var(--s1); }
+.bfit-step .bfit-chev { display: block; width: var(--bfit-chev-w); height: auto; transform: rotate(90deg); }
+.bfit-chev .c1, .bfit-chev .c2 { fill: var(--bfit-white); }
+.bfit-chev .c3 { fill: var(--bfit-green); }
+:lang(ru) .bfit-time, :lang(ru) .bfit-place { font-family: 'Poppins', system-ui, sans-serif; font-weight: 700; }

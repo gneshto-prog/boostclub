@@ -498,6 +498,21 @@
   --bfit-photo-min: 260px;
   --bfit-zero: 0;
   --bfit-full: 100%;
+  --bfit-by: 12px;
+  --bfit-route-pad: 28px;
+  --bfit-time: 22px;
+  --bfit-place: 18px;
+  --bfit-what: 14px;
+  --bfit-chev-w: 34px;
+  --bfit-chev-gap: 10px;
+  --bfit-card: rgba(255, 255, 255, .04);
+  --bfit-bar-h: 36px;
+  --bfit-bar-font: 12px;
+  --bfit-bar-track: .16em;
+  --bfit-bar-chev: 22px;
+  --bfit-nav-chev: 16px;
+  --bfit-gap-xs: 8px;
+  --bfit-hair: 1px;
 }
 
 html[data-css~="style"] {
