@@ -653,7 +653,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible { outline: var(--lengt
 .logo .dot { color: var(--gold); }
 .logo .logo-leaf { width: var(--length-5fafdef9); height: var(--length-5fafdef9); margin: var(--space-5feceb66) var(--length-c3cc3211); flex-shrink: 0; transform: translateY(var(--length-8dd7b54c)); }
 .logo .logo-leaf .leaf-body { fill: var(--gold); transition: fill var(--duration-865e8d15); }
-.logo .logo-leaf .leaf-slash { fill: none; stroke: var(--green-deep); stroke-width: 1.6; stroke-linecap: round; transition: stroke var(--duration-865e8d15); }
+.logo .logo-leaf .leaf-slash { fill: none; stroke: var(--green-deep); stroke-width: 1.4; stroke-linecap: butt; transition: stroke var(--duration-865e8d15); }
 .site-header.scrolled .logo { color: var(--text); }
 .site-header.scrolled .logo .logo-leaf .leaf-body { fill: var(--green); }
 .site-header.scrolled .logo .logo-leaf .leaf-slash { stroke: var(--bg); }
@@ -977,8 +977,8 @@ a:focus-visible, button:focus-visible, .btn:focus-visible { outline: var(--lengt
 .curtain .logo-leaf { width: var(--length-2793cbc2); height: var(--length-2793cbc2); margin: var(--space-5feceb66) var(--length-74761400); transform: translateY(var(--length-74761400)); }
 .curtain .logo-leaf .leaf-body { fill: var(--green); }
 .curtain .logo-leaf .leaf-slash {
-  fill: none; stroke: var(--bg); stroke-width: 1.6; stroke-linecap: round;
-  stroke-dasharray: 14; stroke-dashoffset: 14;
+  fill: none; stroke: var(--bg); stroke-width: 1.4; stroke-linecap: butt;
+  stroke-dasharray: 18; stroke-dashoffset: 18;
   animation: drawSlash var(--duration-45330023) var(--duration-3295e3ec) forwards;
 }
 @keyframes markIn { from { opacity: 0; transform: translateY(var(--length-09f97395)); } to { opacity: 1; transform: none; } }

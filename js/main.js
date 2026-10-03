@@ -3,7 +3,7 @@
 (function () {
   "use strict";
   var RM = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var LEAF = '<path d="M2 22C2 10 10 2 22 2c0 12-8 20-20 20Z"/>';
+  var LEAF = '<path d="M18.62 0h2.56C23.06 0 24 5.98 24 9.22v2.48c0 7.94-6.92 14-18.62 14H2.82C.85 25.7 0 19.64 0 17.08v-3.59C0 5.98 6.83 0 18.62 0Z"/>';
   var SVGNS = "http://www.w3.org/2000/svg";
 
   function svgEl(cls, viewBox, inner) {
