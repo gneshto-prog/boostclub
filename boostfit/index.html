@@ -144,11 +144,14 @@ section{padding:72px 0}
 .coach p{color:var(--dim);margin:0 0 12px;font-size:clamp(15px,2.4vw,18px);max-width:50ch}
 
 /* monthly */
-.monthly{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--night),var(--ground));border-block:1px solid var(--rule)}
+.monthly{position:relative;overflow:hidden;background:#0A0A0A;color:#fff;border-block:1px solid rgba(255,255,255,.1)}
+.monthly .blk{background:var(--green);color:#fff}
+.monthly .ed{color:#fff;opacity:.7}
+.monthly p{color:rgba(255,255,255,.72)}
 .monthly .ed{font-size:clamp(13px,2.6vw,16px);letter-spacing:.3em;text-transform:uppercase;color:var(--gold-hi)}
 .monthly h2{font-size:clamp(34px,8vw,104px);margin:10px 0 18px;color:var(--cream)}
 .monthly p{color:var(--dim);max-width:52ch;margin:0;font-size:clamp(15px,2.4vw,18px)}
-.monthly .leaf2{position:absolute;width:min(80vw,600px);left:-14%;bottom:-34%;opacity:.05;transform:rotate(12deg);pointer-events:none}
+.monthly .leaf2{display:none}
 
 /* faq */
 .faq details{border-top:1px solid var(--rule)}
