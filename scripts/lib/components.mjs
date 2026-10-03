@@ -23,9 +23,9 @@ function renderLanguageSwitcher(lang, slug) {
 
 const bfitChevrons = '<svg class="bfit-chev" viewBox="0 0 141 100" aria-hidden="true" focusable="false"><g transform="translate(0 100) skewX(-12) translate(0 -100)"><polygon class="c1" points="0,0 24,0 54,50 24,100 0,100 30,50"/><polygon class="c2" points="33,0 57,0 87,50 57,100 33,100 63,50"/><polygon class="c3" points="66,0 90,0 120,50 90,100 66,100 96,50"/></g></svg>';
 const bfitBar = {
-  ro: { href: "/boostfit/", text: "Antrenament în parc · Sâmbătă 08:00 · Kiseleff", short: "Sâmbătă 08:00", go: "Vezi →" },
-  en: { href: "/boostfit/?lang=en", text: "Park workout · Saturday 08:00 · Kiseleff", short: "Saturday 08:00", go: "See →" },
-  ru: { href: "/boostfit/?lang=en", text: "Тренировка в парке · Суббота 08:00 · Киселефф", short: "Суббота 08:00", go: "Подробнее →" },
+  ro: { href: "/boostfit/", text: "Echipa de antrenament · Sâmbăta, 08:00", short: "Sâmbăta 08:00", go: "Intră în echipă →" },
+  en: { href: "/boostfit/?lang=en", text: "Training team · Saturdays, 08:00", short: "Saturdays 08:00", go: "Join the team →" },
+  ru: { href: "/boostfit/?lang=en", text: "Тренировочная команда · По субботам, 08:00", short: "Суббота 08:00", go: "В команду →" },
 };
 
 const applyLabels = { ro: "Aplică acum", en: "Apply now", ru: "Подать заявку" };
