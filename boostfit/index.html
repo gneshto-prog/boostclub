@@ -68,9 +68,9 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opa
   background:radial-gradient(120% 70% at 50% 100%,rgba(13,86,69,.55) 0%,rgba(13,86,69,0) 60%),var(--ground)}
 .hero .leafbg{position:absolute;width:min(120vw,900px);left:-34%;bottom:-30%;opacity:.04;transform:rotate(-8deg);pointer-events:none}
 .herophoto{position:absolute;inset:0;pointer-events:none}
-.herophoto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:grayscale(.7) contrast(1.1) brightness(.5);opacity:.45;mix-blend-mode:luminosity;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 35%,#000 100%),linear-gradient(180deg,#000 60%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 35%,#000 100%),linear-gradient(180deg,#000 60%,transparent 100%);mask-composite:intersect}
-.herophoto::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.7) 0,rgba(10,10,10,.55) 45%,var(--ground) 92%)}
-@media(max-width:799px){.herophoto img{opacity:.4;object-position:40% center}.herophoto::after{background:linear-gradient(180deg,rgba(10,10,10,.65),rgba(10,10,10,.7) 50%,var(--ground) 94%)}}
+.herophoto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.herophoto::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.55) 0,rgba(10,10,10,.45) 40%,rgba(10,10,10,.7) 75%,var(--ground) 100%)}
+@media(max-width:799px){.herophoto img{object-position:30% center}.herophoto::after{background:linear-gradient(180deg,rgba(10,10,10,.6),rgba(10,10,10,.55) 45%,rgba(10,10,10,.75) 80%,var(--ground) 100%)}}
 .hero .inner{position:relative;z-index:2;max-width:980px}
 .hero .wmhero{height:auto;overflow:visible;width:min(88vw,640px);margin:0 auto 26px;display:block}
 .when{display:inline-flex;align-items:center;gap:12px;border-radius:0;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%);box-shadow:inset 0 0 0 1px rgba(201,162,75,.5);padding:9px 20px 9px 16px;background:rgba(4,30,23,.6);font-size:clamp(13px,2.6vw,16px);letter-spacing:.18em;text-transform:uppercase;color:var(--gold-hi);margin-bottom:22px}
@@ -121,8 +121,8 @@ section{padding:72px 0}
 .stop p{margin:0;color:var(--dim);max-width:60ch}
 .stopimg{margin:0 0 16px;max-width:560px;clip-path:polygon(0 0,100% 0,100% calc(100% - 22px),calc(100% - 22px) 100%,0 100%);overflow:hidden;background:var(--night)}
 .stopimg{position:relative}
-.stopimg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.2),rgba(10,10,10,.55))}
-.stopimg img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:center 45%;filter:grayscale(.55) contrast(1.05) brightness(.8);opacity:.85}
+.stopimg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(10,10,10,.25))}
+.stopimg img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:center 45%;}
 
 /* price */
 .price{display:grid;gap:18px}
@@ -140,8 +140,8 @@ section{padding:72px 0}
 @media(min-width:800px){.who{grid-template-columns:1fr 1fr;gap:20px;align-items:center}}
 .whoimg{clip-path:polygon(0 0,100% 0,100% calc(100% - 26px),calc(100% - 26px) 100%,0 100%);background:var(--night);min-height:220px}
 .whoimg{position:relative}
-.whoimg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.2),rgba(10,10,10,.6))}
-.whoimg img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/2;filter:grayscale(.55) contrast(1.05) brightness(.8);opacity:.85}
+.whoimg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(10,10,10,.25))}
+.whoimg img{width:100%;height:100%;object-fit:cover;aspect-ratio:3/2;}
 @media(max-width:799px){.whoimg img{aspect-ratio:16/9}}
 .who .card ul{margin:0;padding-left:18px;color:var(--cream)}
 .who .card li{margin:6px 0}
@@ -212,7 +212,7 @@ footer .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 @media(min-width:900px){.acts{grid-template-columns:repeat(4,1fr)}}
 .act{background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--gold);padding:0 0 16px}
 .act h3{margin:12px 14px 4px;font-size:18px;color:var(--cream)}.act p{margin:0 14px;color:var(--dim);font-size:14px}
-.actimg img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;filter:grayscale(.5) brightness(.8)}
+.actimg img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
 .price .bigw{font-size:clamp(36px,6.4vw,72px);line-height:.98;color:var(--cream);margin:0;text-transform:uppercase}
 .price .lead2{color:var(--dim);font-size:clamp(16px,2.2vw,20px);margin:16px 0 0}
 .rules{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:8px}
@@ -243,7 +243,7 @@ footer .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 
 <main>
 <section class="hero" id="top">
-  <div class="herophoto" aria-hidden="true"><img src="/boostfit/images/hero-dawn.jpg" alt="" width="1920" height="1080" fetchpriority="high"></div>
+  <div class="herophoto" aria-hidden="true"><img src="/boostfit/images/v2/hero.jpg" alt="" width="1920" height="1080" fetchpriority="high"></div>
   <img class="leafbg" src="/boostfit/images/boostfit-symbol.svg" alt="" aria-hidden="true">
   <div class="inner">
     <svg class="wmhero" xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 924.5 108" role="img" aria-label="Boost Fit"><g transform="translate(0 100) skewX(-12) translate(0 -100)"><g class="a lc" style="--d:650"><polygon points="0,0 24,0 54,50.0 24,100 0,100 30,50.0" fill="#FFFFFF"/></g><g class="a lc" style="--d:760"><polygon points="33,0 57,0 87,50.0 57,100 33,100 63,50.0" fill="#FFFFFF"/></g><g class="a lc" style="--d:870"><polygon points="66,0 90,0 120,50.0 90,100 66,100 96,50.0" fill="#0D5645"/></g></g><svg x="154.0" y="-16.0" width="778.5" height="134.0" viewBox="-16.0 -16.0 778.5 134.0"><g transform="translate(21.3 0) skewX(-12)"><g class="a lb" style="--d:0"><path fill="#FFFFFF" transform="translate(-10.76 100) scale(0.14535 -0.14535)" d="M722 519Q722 392 607 359V355Q738 325 738 183Q738 129 711.5 87.5Q685 46 639.0 23.0Q593 0 538 0H74V688H532Q584 688 627.5 666.5Q671 645 696.5 606.0Q722 567 722 519ZM295 420H447Q469 420 483.5 435.5Q498 451 498 474V484Q498 506 483.0 521.5Q468 537 447 537H295ZM295 160H463Q485 160 499.5 175.5Q514 191 514 214V224Q514 247 499.5 262.5Q485 278 463 278H295Z"/></g><g class="a lb" style="--d:50"><path fill="#FFFFFF" transform="translate(86.97 100) scale(0.14535 -0.14535)" d="M788 344Q788 170 691.0 79.0Q594 -12 416 -12Q238 -12 141.5 78.5Q45 169 45 344Q45 519 141.5 609.5Q238 700 416 700Q594 700 691.0 609.0Q788 518 788 344ZM271 376V312Q271 239 308.0 196.0Q345 153 416 153Q487 153 524.5 196.0Q562 239 562 312V376Q562 449 524.5 492.0Q487 535 416 535Q345 535 308.0 492.0Q271 449 271 376Z"/></g><g class="a lb" style="--d:100"><path fill="#FFFFFF" transform="translate(191.97 100) scale(0.14535 -0.14535)" d="M788 344Q788 170 691.0 79.0Q594 -12 416 -12Q238 -12 141.5 78.5Q45 169 45 344Q45 519 141.5 609.5Q238 700 416 700Q594 700 691.0 609.0Q788 518 788 344ZM271 376V312Q271 239 308.0 196.0Q345 153 416 153Q487 153 524.5 196.0Q562 239 562 312V376Q562 449 524.5 492.0Q487 535 416 535Q345 535 308.0 492.0Q271 449 271 376Z"/></g><g class="a lb" style="--d:150"><path fill="#FFFFFF" transform="translate(297.25 100) scale(0.14535 -0.14535)" d="M667 488V476H460V480Q460 510 438.0 530.0Q416 550 371 550Q327 550 303.5 537.0Q280 524 280 505Q280 478 312.0 465.0Q344 452 415 438Q498 421 551.5 402.5Q605 384 645.0 342.0Q685 300 686 228Q686 106 603.5 47.0Q521 -12 383 -12Q222 -12 132.5 42.0Q43 96 43 233H252Q252 181 279.0 163.5Q306 146 363 146Q405 146 432.5 155.0Q460 164 460 192Q460 217 429.5 229.5Q399 242 330 256Q246 274 191.0 293.5Q136 313 95.0 358.0Q54 403 54 480Q54 593 141.5 646.5Q229 700 363 700Q495 700 580.0 646.5Q665 593 667 488Z"/></g><g class="a lb" style="--d:200"><path fill="#FFFFFF" transform="translate(390.62 100) scale(0.14535 -0.14535)" d="M470 512V0H249V512H23V688H695V512Z"/></g><g class="a lf" style="--d:200"><path fill="#0D5645" transform="translate(493.88 100) scale(0.14535 -0.14535)" d="M74 688H630V523H295V405H583V247H295V0H74Z"/></g><g class="a lf" style="--d:150"><path fill="#0D5645" transform="translate(575.24 100) scale(0.14535 -0.14535)" d="M84 0V688H305V0Z"/></g><g class="a lf" style="--d:100"><path fill="#0D5645" transform="translate(618.23 100) scale(0.14535 -0.14535)" d="M470 512V0H249V512H23V688H695V512Z"/></g></g></svg></svg>
@@ -272,10 +272,10 @@ footer .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
       <p data-i18n="aLead">Locul se schimbă de la o săptămână la alta. Fiecare sesiune e anunțată în grupul de WhatsApp.</p>
     </div>
     <div class="acts reveal">
-      <div class="act"><div class="actimg"><img src="/boostfit/images/circuit.jpg" alt="" loading="lazy" width="1200" height="1200"></div><h3 data-i18n="a1h">Antrenament în parc</h3><p data-i18n="a1p">Circuit cu greutatea corpului, cam 45 de minute, 3 niveluri.</p></div>
-      <div class="act"><div class="actimg"><img src="/boostfit/images/stride.jpg" alt="" loading="lazy" width="1200" height="1500"></div><h3 data-i18n="a2h">Alergare</h3><p data-i18n="a2p">Ture în grup, în ritmul grupului.</p></div>
-      <div class="act"><div class="actimg"><img src="/boostfit/images/gate.jpg" alt="" loading="lazy" width="1600" height="900"></div><h3 data-i18n="a3h">Drumeții</h3><p data-i18n="a3p">Ieșiri în afara orașului, anunțate din timp în grup.</p></div>
-      <div class="act"><div class="actimg"><img src="/boostfit/images/event-night.jpg" alt="" loading="lazy" width="1920" height="1080"></div><h3 data-i18n="a4h">Provocări</h3><p data-i18n="a4p">O dată pe lună, un eveniment mai greu.</p></div>
+      <div class="act"><div class="actimg"><img src="/boostfit/images/v2/park-workout.jpg" alt="" loading="lazy" width="1200" height="900"></div><h3 data-i18n="a1h">Antrenament în parc</h3><p data-i18n="a1p">Circuit cu greutatea corpului, cam 45 de minute, 3 niveluri.</p></div>
+      <div class="act"><div class="actimg"><img src="/boostfit/images/v2/group-run.jpg" alt="" loading="lazy" width="1200" height="900"></div><h3 data-i18n="a2h">Alergare</h3><p data-i18n="a2p">Ture în grup, în ritmul grupului.</p></div>
+      <div class="act"><div class="actimg"><img src="/boostfit/images/v2/hike.jpg" alt="" loading="lazy" width="1200" height="900"></div><h3 data-i18n="a3h">Drumeții</h3><p data-i18n="a3p">Ieșiri în afara orașului, anunțate din timp în grup.</p></div>
+      <div class="act"><div class="actimg"><img src="/boostfit/images/v2/challenge.jpg" alt="" loading="lazy" width="1200" height="900"></div><h3 data-i18n="a4h">Provocări</h3><p data-i18n="a4p">O dată pe lună, un eveniment mai greu.</p></div>
     </div>
   </div>
 </section>
@@ -287,9 +287,9 @@ footer .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
       <p data-i18n="mLead">Antrenamentul e gratuit. Nu trebuie să fii în formă.</p>
     </div>
     <div class="tl reveal">
-      <div class="stop stop-photo"><div class="t mono">01</div><div><div class="stopimg"><img src="/boostfit/images/gate.jpg" alt="" loading="lazy" width="1600" height="900"></div><h3 data-i18n="t1h">Intri în grupul de WhatsApp</h3><p data-i18n="t1p">Acolo anunțăm fiecare sesiune: unde, când și ce facem.</p></div></div>
-      <div class="stop stop-photo"><div class="t mono">02</div><div><div class="stopimg"><img src="/boostfit/images/circuit.jpg" alt="" loading="lazy" width="1200" height="1200"></div><h3 data-i18n="t2h">Ne vedem la locul anunțat</h3><p data-i18n="t2p">Un parc, un traseu de alergare sau startul unei drumeții. Antrenamentul durează cam 45 de minute și fiecare exercițiu are 3 niveluri.</p></div></div>
-      <div class="stop stop-photo"><div class="t mono">03</div><div><div class="stopimg"><img src="/boostfit/images/shake-counter.jpg" alt="" loading="lazy" width="1600" height="1000"></div><h3 data-i18n="t3h">Recuperarea la Boost Club</h3><p data-i18n="t3p">După antrenament mergem la club, pe Sevastopol 24, pentru nutriția de recuperare. Asta e intrarea.</p></div></div>
+      <div class="stop stop-photo"><div class="t mono">01</div><div><div class="stopimg"><img src="/boostfit/images/v2/meetup.jpg" alt="" loading="lazy" width="1600" height="900"></div><h3 data-i18n="t1h">Intri în grupul de WhatsApp</h3><p data-i18n="t1p">Acolo anunțăm fiecare sesiune: unde, când și ce facem.</p></div></div>
+      <div class="stop stop-photo"><div class="t mono">02</div><div><div class="stopimg"><img src="/boostfit/images/v2/stretch-circle.jpg" alt="" loading="lazy" width="1600" height="900"></div><h3 data-i18n="t2h">Ne vedem la locul anunțat</h3><p data-i18n="t2p">Un parc, un traseu de alergare sau startul unei drumeții. Antrenamentul durează cam 45 de minute și fiecare exercițiu are 3 niveluri.</p></div></div>
+      <div class="stop stop-photo"><div class="t mono">03</div><div><div class="stopimg"><img src="/boostfit/images/v2/recovery.jpg" alt="" loading="lazy" width="1600" height="1000"></div><h3 data-i18n="t3h">Recuperarea la Boost Club</h3><p data-i18n="t3p">După antrenament mergem la club, pe Sevastopol 24, pentru nutriția de recuperare. Asta e intrarea.</p></div></div>
       <div class="stop"><div class="t mono">04</div><div><h3 data-i18n="t4h">Urci în rang</h3><p data-i18n="t4p">Fiecare sesiune la care vii contează. Rangurile sunt mai jos.</p></div></div>
     </div>
   </div>
@@ -324,7 +324,7 @@ footer .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
       <p data-i18n="wLead">Fiecare exercițiu are 3 variante. Cineva care aleargă 10 km și cineva care nu a mai făcut sport de ani fac același antrenament, la niveluri diferite.</p>
     </div>
     <div class="who reveal">
-      <div class="whoimg"><img src="/boostfit/images/stride.jpg" alt="" loading="lazy" width="1200" height="1500"></div>
+      <div class="whoimg"><img src="/boostfit/images/v2/high-five.jpg" alt="" loading="lazy" width="1200" height="1500"></div>
       <div class="card"><div class="k" data-i18n="yk">Vino dacă</div><ul>
         <li data-i18n="y1">Vrei să te miști, dar sala te plictisește.</li>
         <li data-i18n="y2">Te antrenezi deja și vrei oameni în jur sâmbătă dimineața.</li>
