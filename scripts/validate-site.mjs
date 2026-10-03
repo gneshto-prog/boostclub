@@ -118,6 +118,7 @@ for (const [lang, config] of Object.entries(languages)) {
 
 const liveRoutes = new Set(pages.map((page) => page.route));
 liveRoutes.add("/program-trainee");
+liveRoutes.add("/boostfit/"); // standalone Boost Fit page, hand-built in boostfit/
 
 for (const page of pages) {
   for (const match of page.html.matchAll(/<a\b[^>]*\bhref=["']([^"']+)["']/gi)) {

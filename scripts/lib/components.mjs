@@ -27,7 +27,7 @@ function navItems({ lang, slug, mobile }) {
   return navigation
     .filter((item) => item.slug !== "business")
     .map((item) => ({
-      href: slug === "ambasador" && item.slug === "business" ? "ambasador" : item.slug,
+      href: item.href ? item.href[lang] : slug === "ambasador" && item.slug === "business" ? "ambasador" : item.slug,
       label: item.labels[lang],
       current: item.slug === slug || (slug === "ambasador" && item.slug === "business"),
     }));
@@ -88,7 +88,7 @@ export function footer({ lang }) {
       </div>
       <div>
         <h3>${copy.navigate}</h3>
-        ${navLinks.map((item, index) => `<a href="${item.slug}">${item.labels[lang]}</a>${index < navLinks.length - 1 ? "<br>" : ""}`).join("\n        ")}
+        ${navLinks.map((item, index) => `<a href="${item.href ? item.href[lang] : item.slug}">${item.labels[lang]}</a>${index < navLinks.length - 1 ? "<br>" : ""}`).join("\n        ")}
       </div>
       <div>
         <h3>${copy.legal}</h3>

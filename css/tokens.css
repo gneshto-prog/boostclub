@@ -471,6 +471,33 @@
   --layout-grid-gap: var(--length-2793cbc2);
   --motion-reveal-distance: var(--length-2793cbc2);
   --motion-page-duration: var(--duration-d29a1d7c);
+  /* Boost Fit band on the homepage: the Boost Fit world (black, white, club green) */
+  --bfit-black: #0A0A0A;
+  --bfit-white: #FFFFFF;
+  --bfit-green: #0D5645;
+  --bfit-green-mid: #11705A;
+  --bfit-green-light: #4FB38A;
+  --bfit-dim: #B5BDB9;
+  --bfit-rule: rgba(255, 255, 255, .14);
+  --bfit-shade: linear-gradient(90deg, rgba(10, 10, 10, .15), rgba(10, 10, 10, .55));
+  --bfit-pad-y: clamp(56px, 8vw, 96px);
+  --bfit-wordmark-w: clamp(220px, 34vw, 380px);
+  --bfit-title: clamp(30px, 4.6vw, 52px);
+  --bfit-title-track: -.03em;
+  --bfit-title-lh: .98;
+  --bfit-body: 17px;
+  --bfit-body-lh: 1.6;
+  --bfit-mono: 13px;
+  --bfit-mono-track: .22em;
+  --bfit-btn: 15px;
+  --bfit-btn-pad: 17px 32px;
+  --bfit-cut: 10px;
+  --bfit-cut-photo: 28px;
+  --bfit-edge: 4px;
+  --bfit-copy-max: 34rem;
+  --bfit-photo-min: 260px;
+  --bfit-zero: 0;
+  --bfit-full: 100%;
 }
 
 html[data-css~="style"] {

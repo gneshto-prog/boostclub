@@ -4,6 +4,7 @@ export const navigation = [
   { slug: "recenzii", labels: { ro: "Recenzii", en: "Reviews", ru: "Отзывы" }, mobile: true },
   { slug: "rezultate", labels: { ro: "Rezultate", en: "Results", ru: "Результаты" }, mobile: true },
   { slug: "gabriel", labels: { ro: "Despre Gabriel", en: "About Gabriel", ru: "О Габриеле" }, mobile: true },
+  { slug: "boostfit", href: { ro: "/boostfit/", en: "/boostfit/?lang=en", ru: "/boostfit/?lang=en" }, labels: { ro: "Boost Fit", en: "Boost Fit", ru: "Boost Fit" }, mobile: true },
   { slug: "contact", labels: { ro: "Contact", en: "Contact", ru: "Контакт" }, mobile: true },
   { slug: "business", labels: { ro: "Parteneriat de afaceri", en: "Business partnership", ru: "Бизнес-партнёрство" }, mobile: true },
 ];

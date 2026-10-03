@@ -1,0 +1,22 @@
+/* Boost Fit on the homepage. Its own world: black, white, club green, italic wordmark. */
+@font-face { font-family: 'BoostFit Display'; font-style: normal; font-weight: 400; font-display: swap; src: url('/boostfit/fonts/archivo-black-latin.woff2') format('woff2'); }
+@font-face { font-family: 'BoostFit Display'; font-style: normal; font-weight: 400; font-display: swap; src: url('/boostfit/fonts/archivo-black-latin-ext.woff2') format('woff2'); unicode-range: U+0100-024F, U+0259, U+1E00-1EFF; }
+@font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/ibm-plex-mono/ibm-plex-mono-500-latin.woff2') format('woff2'); }
+.bfit-band { background: var(--bfit-black); color: var(--bfit-white); padding: var(--bfit-pad-y) var(--bfit-zero); border-top: var(--bfit-edge) solid var(--bfit-green); }
+.bfit-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--s4); align-items: center; }
+.bfit-wordmark { display: block; width: var(--bfit-wordmark-w); height: auto; margin-bottom: var(--s3); }
+.bfit-when { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-weight: 500; font-size: var(--bfit-mono); letter-spacing: var(--bfit-mono-track); text-transform: uppercase; color: var(--bfit-green-light); margin: var(--bfit-zero) var(--bfit-zero) var(--s2); }
+.bfit-band h2 { font-family: 'BoostFit Display', 'Poppins', sans-serif; font-weight: 400; text-transform: uppercase; font-size: var(--bfit-title); line-height: var(--bfit-title-lh); letter-spacing: var(--bfit-title-track); color: var(--bfit-white); margin: var(--bfit-zero) var(--bfit-zero) var(--s2); max-width: none; }
+.bfit-band p.bfit-copy { color: var(--bfit-dim); font-size: var(--bfit-body); line-height: var(--bfit-body-lh); max-width: var(--bfit-copy-max); margin: var(--bfit-zero) var(--bfit-zero) var(--s3); }
+.bfit-copy strong { color: var(--bfit-white); font-weight: 600; }
+.bfit-btn { display: inline-block; background: var(--bfit-green); color: var(--bfit-white); font-family: 'BoostFit Display', 'Poppins', sans-serif; font-weight: 400; font-size: var(--bfit-btn); text-transform: uppercase; text-decoration: none; padding: var(--bfit-btn-pad); clip-path: polygon(var(--bfit-cut) 0, var(--bfit-full) 0, calc(var(--bfit-full) - var(--bfit-cut)) var(--bfit-full), 0 var(--bfit-full)); }
+.bfit-btn:hover, .bfit-btn:focus-visible { background: var(--bfit-green-mid); color: var(--bfit-white); }
+.bfit-photo { position: relative; min-height: var(--bfit-photo-min); clip-path: polygon(0 0, var(--bfit-full) 0, var(--bfit-full) calc(var(--bfit-full) - var(--bfit-cut-photo)), calc(var(--bfit-full) - var(--bfit-cut-photo)) var(--bfit-full), 0 var(--bfit-full)); }
+.bfit-photo img { display: block; width: var(--bfit-full); height: var(--bfit-full); aspect-ratio: 16 / 10; object-fit: cover; filter: grayscale(.5) brightness(.8); }
+.bfit-photo::after { content: ""; position: absolute; inset: var(--bfit-zero); background: var(--bfit-shade); }
+@media (min-width: 900px) {
+  .bfit-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--s6); }
+}
+.bfit-photo img { border-radius: 0; }
+/* Archivo Black has no Cyrillic: Russian headline and button stay in one bold sans */
+:lang(ru) .bfit-band h2, :lang(ru) .bfit-btn { font-family: 'Poppins', system-ui, sans-serif; font-weight: 700; }
