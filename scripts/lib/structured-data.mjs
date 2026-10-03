@@ -4,9 +4,9 @@ const origin = 'https://boostclub.ro';
 const businessId = `${origin}/#business`;
 const personId = `${origin}/#gabriel`;
 const copy = {
-  ro: { home: 'Acasă', description: 'Club wellness în București, pe Strada Sevastopol 24. Evaluare corporală prin bioimpedanță și ghidare educațională.' },
-  en: { home: 'Home', description: 'Wellness club in Bucharest at Strada Sevastopol 24. Bioimpedance body assessment and educational guidance.' },
-  ru: { home: 'Главная', description: 'Велнес-клуб в Бухаресте на Strada Sevastopol 24. Оценка состава тела методом биоимпеданса и образовательные консультации.' },
+  ro: { home: 'Acasă', description: 'Club de nutriție în București, pe Strada Sevastopol 24, lângă Piața Victoriei. Shake-uri proteice, evaluare corporală prin bioimpedanță și ghidare educațională.' },
+  en: { home: 'Home', description: 'Nutrition club in Bucharest at Strada Sevastopol 24, near Victoria Square. Protein shakes, bioimpedance body assessment and educational guidance.' },
+  ru: { home: 'Главная', description: 'Клуб питания в Бухаресте на Strada Sevastopol 24, рядом с площадью Виктории. Протеиновые коктейли, оценка состава тела методом биоимпеданса и образовательные консультации.' },
 };
 
 export function structuredHead(page) {
