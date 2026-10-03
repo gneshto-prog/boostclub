@@ -68,7 +68,7 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opa
   background:radial-gradient(120% 70% at 50% 100%,#0D5645 0%,rgba(13,86,69,0) 60%),radial-gradient(60% 40% at 50% 22%,rgba(201,162,75,.12),transparent 70%),var(--ground)}
 .hero .leafbg{position:absolute;width:min(120vw,900px);left:-34%;bottom:-30%;opacity:.04;transform:rotate(-8deg);pointer-events:none}
 .herophoto{position:absolute;inset:0;pointer-events:none}
-.herophoto img{position:absolute;right:-8%;top:0;height:100%;width:auto;max-width:none;object-fit:cover;filter:grayscale(1) contrast(1.25) brightness(.8);mix-blend-mode:luminosity;opacity:.8;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 35%,#000 100%),linear-gradient(180deg,#000 60%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 35%,#000 100%),linear-gradient(180deg,#000 60%,transparent 100%);mask-composite:intersect}
+.herophoto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:grayscale(.35) contrast(1.15) brightness(.7);opacity:.85;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 35%,#000 100%),linear-gradient(180deg,#000 60%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 35%,#000 100%),linear-gradient(180deg,#000 60%,transparent 100%);mask-composite:intersect}
 .herophoto::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ground) 0,rgba(6,40,31,.45) 40%,rgba(6,40,31,.12) 100%),linear-gradient(180deg,rgba(6,40,31,.15),var(--ground) 96%)}
 @media(max-width:799px){.herophoto img{right:-60%;opacity:.5}.herophoto::after{background:linear-gradient(180deg,rgba(6,40,31,.35),rgba(6,40,31,.55) 50%,var(--ground) 96%)}}
 .hero .inner{position:relative;z-index:2;max-width:980px}
@@ -217,7 +217,7 @@ footer .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 
 <main>
 <section class="hero" id="top">
-  <div class="herophoto" aria-hidden="true"><img src="/images/gabriel-neshto-mma.jpg" alt="" width="896" height="1195" fetchpriority="high"></div>
+  <div class="herophoto" aria-hidden="true"><!-- hero image slot: /boostfit/images/hero-dawn.jpg (generated or shot at session 1) --></div>
   <img class="leafbg" src="/boostfit/images/boostfit-mark.svg" alt="" aria-hidden="true">
   <div class="inner">
     <img class="wmhero" src="/boostfit/images/boostfit-wordmark.svg" alt="Boost Fit" width="870" height="128">
