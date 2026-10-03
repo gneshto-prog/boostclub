@@ -69,8 +69,8 @@ body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opa
 .hero .leafbg{position:absolute;width:min(120vw,900px);left:-34%;bottom:-30%;opacity:.04;transform:rotate(-8deg);pointer-events:none}
 .herophoto{position:absolute;inset:0;pointer-events:none}
 .herophoto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:grayscale(.35) contrast(1.15) brightness(.7);opacity:.85;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 35%,#000 100%),linear-gradient(180deg,#000 60%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 35%,#000 100%),linear-gradient(180deg,#000 60%,transparent 100%);mask-composite:intersect}
-.herophoto::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--ground) 0,rgba(6,40,31,.45) 40%,rgba(6,40,31,.12) 100%),linear-gradient(180deg,rgba(6,40,31,.15),var(--ground) 96%)}
-@media(max-width:799px){.herophoto img{right:-60%;opacity:.5}.herophoto::after{background:linear-gradient(180deg,rgba(6,40,31,.35),rgba(6,40,31,.55) 50%,var(--ground) 96%)}}
+.herophoto::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,40,31,.55) 0,rgba(6,40,31,.35) 40%,var(--ground) 96%)}
+@media(max-width:799px){.herophoto img{opacity:.7;object-position:40% center}.herophoto::after{background:linear-gradient(180deg,rgba(6,40,31,.45),rgba(6,40,31,.6) 50%,var(--ground) 96%)}}
 .hero .inner{position:relative;z-index:2;max-width:980px}
 .hero .wmhero{width:min(84vw,560px);margin:0 auto 26px;display:block}
 .when{display:inline-flex;align-items:center;gap:12px;border-radius:0;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%);box-shadow:inset 0 0 0 1px rgba(201,162,75,.5);padding:9px 20px 9px 16px;background:rgba(4,30,23,.6);font-size:clamp(13px,2.6vw,16px);letter-spacing:.18em;text-transform:uppercase;color:var(--gold-hi);margin-bottom:22px}
@@ -120,7 +120,7 @@ section{padding:72px 0}
 .stop h3{margin:0 0 6px;font-size:clamp(20px,3.6vw,28px);color:var(--cream)}
 .stop p{margin:0;color:var(--dim);max-width:60ch}
 .stopimg{margin:0 0 16px;max-width:560px;clip-path:polygon(0 0,100% 0,100% calc(100% - 22px),calc(100% - 22px) 100%,0 100%);overflow:hidden;background:var(--night)}
-.stopimg img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:center 40%;filter:grayscale(.2) contrast(1.05)}
+.stopimg img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:center 45%}
 
 /* price */
 .price{display:grid;gap:18px}
@@ -135,7 +135,10 @@ section{padding:72px 0}
 
 /* who */
 .who{display:grid;gap:14px}
-@media(min-width:800px){.who{grid-template-columns:1fr 1fr;gap:20px}}
+@media(min-width:800px){.who{grid-template-columns:.75fr 1fr 1fr;gap:20px}}
+.whoimg{clip-path:polygon(0 0,100% 0,100% calc(100% - 26px),calc(100% - 26px) 100%,0 100%);background:var(--night);min-height:220px}
+.whoimg img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5}
+@media(max-width:799px){.whoimg img{aspect-ratio:16/9}}
 .who .card ul{margin:0;padding-left:18px;color:var(--cream)}
 .who .card li{margin:6px 0}
 .who .no{border-color:rgba(255,255,255,.1)}
@@ -165,7 +168,8 @@ section{padding:72px 0}
 .monthly .ed{font-size:clamp(13px,2.6vw,16px);letter-spacing:.3em;text-transform:uppercase;color:var(--gold-hi)}
 .monthly h2{font-size:clamp(34px,8vw,104px);margin:10px 0 18px;color:var(--cream)}
 .monthly p{color:var(--dim);max-width:52ch;margin:0;font-size:clamp(15px,2.4vw,18px)}
-.monthly .leaf2{display:none}
+.monthly .evbg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.55;pointer-events:none}
+.monthly::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,10,.92) 0,rgba(10,10,10,.6) 55%,rgba(10,10,10,.35) 100%);pointer-events:none}
 
 /* faq */
 .faq details{border-top:1px solid var(--rule)}
@@ -217,8 +221,8 @@ footer .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 
 <main>
 <section class="hero" id="top">
-  <div class="herophoto" aria-hidden="true"><!-- hero image slot: /boostfit/images/hero-dawn.jpg (generated or shot at session 1) --></div>
-  <img class="leafbg" src="/boostfit/images/boostfit-mark.svg" alt="" aria-hidden="true">
+  <div class="herophoto" aria-hidden="true"><img src="/boostfit/images/hero-dawn.jpg" alt="" width="1920" height="1080" fetchpriority="high"></div>
+  <img class="leafbg" src="/boostfit/images/boostfit-symbol.svg" alt="" aria-hidden="true">
   <div class="inner">
     <img class="wmhero" src="/boostfit/images/boostfit-wordmark.svg" alt="Boost Fit" width="870" height="128">
     <div class="when mono"><span class="dot" aria-hidden="true"></span><span data-i18n="when">Sâmbătă · 08:00 · Parcul Kiseleff</span></div>
@@ -246,10 +250,10 @@ footer .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
       <p data-i18n="mLead">Aceeași oră, același loc, în fiecare sâmbătă. Nu trebuie să fii în formă. Doar vino.</p>
     </div>
     <div class="tl reveal">
-      <div class="stop"><div class="t mono">08:00</div><div><h3 data-i18n="t1h">Ne vedem la intrarea în Kiseleff</h3><p data-i18n="t1p">Intrarea dinspre Piața Victoriei. Ne încălzim 5 minute. Dacă întârzii, suntem pe aleea principală.</p></div></div>
-      <div class="stop"><div class="t mono">08:05</div><div><h3 data-i18n="t2h">Antrenamentul</h3><p data-i18n="t2p">Circuit cu greutatea corpului și puțină alergare ușoară între stații. Fiecare exercițiu are 3 niveluri, îl alegi pe al tău.</p></div></div>
-      <div class="stop"><div class="t mono">08:45</div><div><h3 data-i18n="t3h">Mergem la club</h3><p data-i18n="t3p">10 minute pe jos până pe Sevastopol 24.</p></div></div>
-      <div class="stop stop-photo"><div class="t mono">09:00</div><div><div class="stopimg"><img src="/images/boost-club-community.webp" alt="Boost Club" loading="lazy" width="2048" height="1536"></div><h3 data-i18n="t4h">Shake-ul</h3><p data-i18n="t4p">Clubul se deschide doar pentru noi. Îți alegi shake-ul din meniu și stăm de vorbă. Dacă vrei, poți face și testul de compoziție corporală, e gratuit.</p></div></div>
+      <div class="stop stop-photo"><div class="t mono">08:00</div><div><div class="stopimg"><img src="/boostfit/images/gate.jpg" alt="" loading="lazy" width="1600" height="900"></div><h3 data-i18n="t1h">Ne vedem la intrarea în Kiseleff</h3><p data-i18n="t1p">Intrarea dinspre Piața Victoriei. Ne încălzim 5 minute. Dacă întârzii, suntem pe aleea principală.</p></div></div>
+      <div class="stop stop-photo"><div class="t mono">08:05</div><div><div class="stopimg"><img src="/boostfit/images/circuit.jpg" alt="" loading="lazy" width="1200" height="1200"></div><h3 data-i18n="t2h">Antrenamentul</h3><p data-i18n="t2p">Circuit cu greutatea corpului și puțină alergare ușoară între stații. Fiecare exercițiu are 3 niveluri, îl alegi pe al tău.</p></div></div>
+      <div class="stop stop-photo"><div class="t mono">08:45</div><div><div class="stopimg"><img src="/boostfit/images/walk.jpg" alt="" loading="lazy" width="1600" height="900"></div><h3 data-i18n="t3h">Mergem la club</h3><p data-i18n="t3p">10 minute pe jos până pe Sevastopol 24.</p></div></div>
+      <div class="stop stop-photo"><div class="t mono">09:00</div><div><div class="stopimg"><img src="/boostfit/images/shake-counter.jpg" alt="" loading="lazy" width="1600" height="1000"></div><h3 data-i18n="t4h">Shake-ul</h3><p data-i18n="t4p">Clubul se deschide doar pentru noi. Îți alegi shake-ul din meniu și stăm de vorbă. Dacă vrei, poți face și testul de compoziție corporală, e gratuit.</p></div></div>
       <div class="stop"><div class="t mono">09:45</div><div><h3 data-i18n="t5h">Gata la 09:45</h3><p data-i18n="t5p">Ai toată ziua liberă.</p></div></div>
     </div>
   </div>
@@ -278,6 +282,7 @@ footer .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
       <p data-i18n="wLead">Fiecare exercițiu are 3 variante. Cineva care aleargă 10 km și cineva care nu a mai făcut sport de ani fac același antrenament, la niveluri diferite.</p>
     </div>
     <div class="who reveal">
+      <div class="whoimg"><img src="/boostfit/images/stride.jpg" alt="" loading="lazy" width="1200" height="1500"></div>
       <div class="card"><div class="k" data-i18n="yk">Vino dacă</div><ul>
         <li data-i18n="y1">Vrei să te miști, dar sala te plictisește.</li>
         <li data-i18n="y2">Te antrenezi deja și vrei oameni în jur sâmbătă dimineața.</li>
@@ -322,8 +327,8 @@ footer .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 </section>
 
 <section class="monthly" id="monthly">
-  <img class="leaf2" src="/boostfit/images/boostfit-mark.svg" alt="" aria-hidden="true">
-  <div class="wrap reveal" style="position:relative;z-index:2">
+  <img class="evbg" src="/boostfit/images/event-night.jpg" alt="" aria-hidden="true" loading="lazy" width="1920" height="1080">
+  <div class="wrap reveal" style="position:relative;z-index:3">
     <div class="ed mono" data-i18n="eEd">Ediția 01 · Decembrie</div>
     <h2 class="disp"><span data-i18n="eT1">O dată pe lună,</span><br><span class="blk"><span data-i18n="eT2">ceva mai greu.</span></span></h2>
     <p data-i18n="eP">Start devreme, ține mult și s-ar putea să nu termini. O să vrei să te antrenezi pentru asta. Pentru cei care vin sâmbăta și vor mai mult. Numele vine curând.</p>
