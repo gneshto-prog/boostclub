@@ -1,5 +1,5 @@
 // Dated manual snapshot; not a live Google feed.
-export const reviewSnapshot = { rating: '5.0', count: 121, date: '2026-10-12', source: 'https://g.page/r/CUSJCWfOpKRSEAE' };
+export const reviewSnapshot = { rating: '5.0', count: 122, date: '2026-10-12', source: 'https://g.page/r/CUSJCWfOpKRSEAE' };
 export const consumerCopy = {
   ro: {
     reviews: 'recenzii Google', date: 'Situație la 12 octombrie 2026',
@@ -12,7 +12,7 @@ export const consumerCopy = {
     after: 'You can leave with your results and explanations, with no further commitment. If you want ongoing support, we can discuss the options, what they include and their costs. Gabriel is an Independent Herbalife Distributor. Product purchases are optional and separate from the free assessment.',
   },
   ru: {
-    reviews: 'отзывов в Google', date: 'Данные на 12 октября 2026 года',
+    reviews: 'отзыва в Google', date: 'Данные на 12 октября 2026 года',
     afterTitle: 'Что будет после бесплатного визита?',
     after: 'Вы можете уйти с результатами и объяснениями без дальнейших обязательств. Если захотите продолжить, обсудим варианты поддержки, их содержание и стоимость. Габриел — независимый дистрибьютор Herbalife. Покупка продуктов добровольна и не связана с бесплатной оценкой состава тела.',
   },

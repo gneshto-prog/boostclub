@@ -120,6 +120,7 @@ const liveRoutes = new Set(pages.map((page) => page.route));
 liveRoutes.add("/program-trainee");
 liveRoutes.add("/boostfit/"); // standalone Boost Fit page, hand-built in boostfit/
 liveRoutes.add("/menu/"); // standalone shake menu, hand-built in menu/
+liveRoutes.add("/start/"); // English ads landing page, hand-built in start/, noindex
 
 for (const page of pages) {
   for (const match of page.html.matchAll(/<a\b[^>]*\bhref=["']([^"']+)["']/gi)) {

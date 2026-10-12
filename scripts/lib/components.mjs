@@ -25,7 +25,7 @@ const bfitChevrons = '<svg class="bfit-chev" viewBox="0 0 141 100" aria-hidden="
 const bfitBar = {
   ro: { href: "/boostfit/", text: "Echipa de antrenament · Sâmbăta, 08:00", short: "Sâmbăta 08:00", go: "Intră în echipă →" },
   en: { href: "/boostfit/?lang=en", text: "Training team · Saturdays, 08:00", short: "Saturdays 08:00", go: "Join the team →" },
-  ru: { href: "/boostfit/?lang=en", text: "Тренировочная команда · По субботам, 08:00", short: "Суббота 08:00", go: "В команду →" },
+  ru: { href: "/boostfit/?lang=ru", text: "Тренировочная команда · По субботам, 08:00", short: "Суббота 08:00", go: "В команду →" },
 };
 
 function navItems({ lang, slug, mobile }) {

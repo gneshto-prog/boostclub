@@ -42,6 +42,17 @@ const FORMS: Record<string, { leadType: "client" | "business"; language?: "ro" |
   "ambasador": { leadType: "business" },
   "ambasador-en": { leadType: "business", language: "en", rpcForm: "ambasador" },
   "ambasador-ru": { leadType: "business", language: "ru", rpcForm: "ambasador" },
+  // English ads landing page /start/ (12 Oct 2026).
+  "start-en": { leadType: "client", language: "en", rpcForm: "consultatie-en" },
+};
+
+// Paid Meta traffic is tagged by the ad URL: utm_source facebook/instagram/meta/fb/ig
+// + utm_medium paid/cpc/ads/paid_social. Anything else stays 'website'.
+const sourceFor = (campaign: string) => {
+  const [src = "", medium = ""] = campaign.toLowerCase().split("/");
+  return /^(facebook|instagram|meta|fb|ig)$/.test(src) && /^(paid|cpc|ads|paid_?social|paidsocial)$/.test(medium)
+    ? "meta_ads"
+    : "website";
 };
 
 const clean = (value: unknown, max = 500) =>
@@ -86,6 +97,8 @@ export default async (req: Request) => {
   if (clean(data["bot-field"])) return new Response("honeypot", { status: 200 });
 
   const pageUrl = clean(data.referrer || payload.site_url, 300);
+  // "source/medium/campaign/content" from the landing page's utm_* params, if any.
+  const campaign = clean(data.campaign, 200).replace(/[^\w ./-]/g, "");
   const language = form.language
     || (["ro", "en", "ru"].includes(clean(data.lang, 4)) ? clean(data.lang, 4) as "ro" | "en" | "ru" : languageFromUrl(pageUrl));
   const fullName = clean(data.prenume || data.firstname || data.name, 120);
@@ -105,7 +118,8 @@ export default async (req: Request) => {
     p_when: clean(data.cand || data.start, 200) || null,
     p_goal: clean(data.obiectiv || data.goal, 120) || null,
     p_country: clean(data.country, 120) || null,
-    p_page_url: pageUrl || null,
+    p_page_url: [pageUrl, campaign && `campaign=${campaign}`].filter(Boolean).join(" | ") || null,
+    p_source: sourceFor(campaign),
   };
 
   try {
