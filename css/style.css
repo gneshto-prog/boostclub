@@ -1247,3 +1247,40 @@ a:focus-visible, button:focus-visible, .btn:focus-visible { outline: var(--lengt
   .bfit-bar-text { display: none; }
   .bfit-bar-short { display: inline; }
 }
+
+/* Boost Ambassador page (12 Oct 2026): reward badge per step + the two-rung ladder */
+.step-card p.ambassador-reward {
+  display: inline-block;
+  margin-top: var(--amb-reward-gap);
+  padding: var(--amb-reward-pad);
+  border-radius: var(--amb-radius);
+  background: var(--green-deep);
+  color: var(--gold);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--amb-track);
+  font-size: var(--type-fluid-sm);
+}
+.ambassador-ladder {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--amb-rung-min), 1fr));
+  gap: var(--amb-gap);
+}
+.ambassador-rung {
+  display: flex;
+  flex-direction: column;
+  gap: var(--amb-reward-gap);
+  padding: var(--amb-pad);
+  border-radius: var(--amb-radius);
+  background: var(--gold);
+  color: var(--green-deep);
+}
+.ambassador-rung strong { font-size: var(--amb-rung-size); line-height: var(--amb-lh); text-transform: uppercase; }
+.ambassador-rung span { font-weight: 700; text-transform: uppercase; letter-spacing: var(--amb-track); }
+
+/* Homepage menu + Ambassador blocks (12 Oct 2026) */
+.home-menu-photo { display: flex; justify-content: center; }
+.home-menu-photo img { width: auto; max-height: var(--home-menu-photo-h); }
+.home-amb-list { display: grid; gap: var(--amb-gap); padding-left: var(--amb-list-indent); }
+.home-amb-list li { font-size: var(--type-fluid-body); }
+.home-amb-list li::marker { color: var(--green); font-weight: 700; }

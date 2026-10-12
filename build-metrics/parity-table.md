@@ -1,46 +1,46 @@
 | Page | DOM result | Intentional difference or reason |
 |---|---|---|
-| `index.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `ambasador.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `business.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `confidentialitate.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `consultatie-gratuita.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `contact.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `cookies.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `cum-functioneaza.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `gabi.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `gabriel.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `multumim.html` | Equivalent | Batch 5: responsive hashed derivatives, matching preloads and explicit map loading |
-| `recenzii.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `rezultate.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `termeni.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `en/index.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `en/ambasador.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `en/business.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `en/confidentialitate.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `en/consultatie-gratuita.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `en/contact.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `en/cookies.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `en/cum-functioneaza.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `en/gabi.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `en/gabriel.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `en/multumim.html` | Equivalent | Batch 5: responsive hashed derivatives, matching preloads and explicit map loading |
-| `en/recenzii.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `en/rezultate.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `en/termeni.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `ru/index.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `ru/ambasador.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `ru/business.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `ru/confidentialitate.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `ru/consultatie-gratuita.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `ru/contact.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `ru/cookies.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `ru/cum-functioneaza.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `ru/gabi.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `ru/gabriel.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `ru/multumim.html` | Equivalent | Batch 5: responsive hashed derivatives, matching preloads and explicit map loading |
-| `ru/recenzii.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `ru/rezultate.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
-| `ru/termeni.html` | Equivalent | 29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated |
+| `index.html` | Equivalent | 12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy |
+| `ambasador.html` | Equivalent | 12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy |
+| `business.html` | Equivalent | 12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy |
+| `confidentialitate.html` | Different | Normalized DOM hash differs |
+| `consultatie-gratuita.html` | Equivalent | 12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy |
+| `contact.html` | Equivalent | 12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy |
+| `cookies.html` | Different | Normalized DOM hash differs |
+| `cum-functioneaza.html` | Equivalent | 12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy |
+| `gabi.html` | Different | Normalized DOM hash differs |
+| `gabriel.html` | Equivalent | 12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy |
+| `multumim.html` | Equivalent | 12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy |
+| `recenzii.html` | Equivalent | 12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy |
+| `rezultate.html` | Equivalent | 12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy |
+| `termeni.html` | Different | Normalized DOM hash differs |
+| `en/index.html` | Equivalent | 12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy |
+| `en/ambasador.html` | Equivalent | 12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy |
+| `en/business.html` | Equivalent | 12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy |
+| `en/confidentialitate.html` | Different | Normalized DOM hash differs |
+| `en/consultatie-gratuita.html` | Equivalent | 12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy |
+| `en/contact.html` | Equivalent | 12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy |
+| `en/cookies.html` | Different | Normalized DOM hash differs |
+| `en/cum-functioneaza.html` | Equivalent | 12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy |
+| `en/gabi.html` | Different | Normalized DOM hash differs |
+| `en/gabriel.html` | Equivalent | 12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy |
+| `en/multumim.html` | Equivalent | 12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy |
+| `en/recenzii.html` | Equivalent | 12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy |
+| `en/rezultate.html` | Equivalent | 12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy |
+| `en/termeni.html` | Different | Normalized DOM hash differs |
+| `ru/index.html` | Equivalent | 12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy |
+| `ru/ambasador.html` | Equivalent | 12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy |
+| `ru/business.html` | Equivalent | 12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy |
+| `ru/confidentialitate.html` | Different | Normalized DOM hash differs |
+| `ru/consultatie-gratuita.html` | Equivalent | 12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy |
+| `ru/contact.html` | Equivalent | 12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy |
+| `ru/cookies.html` | Different | Normalized DOM hash differs |
+| `ru/cum-functioneaza.html` | Equivalent | 12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy |
+| `ru/gabi.html` | Different | Normalized DOM hash differs |
+| `ru/gabriel.html` | Equivalent | 12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy |
+| `ru/multumim.html` | Equivalent | 12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy |
+| `ru/recenzii.html` | Equivalent | 12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy |
+| `ru/rezultate.html` | Equivalent | 12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy |
+| `ru/termeni.html` | Different | Normalized DOM hash differs |
 | `404.html` | Equivalent | Batch 5: responsive hashed derivatives, matching preloads and explicit map loading |
-| `program-trainee.html` | Equivalent | Batch 5: responsive hashed derivatives, matching preloads and explicit map loading |
+| `program-trainee.html` | Different | Normalized DOM hash differs |

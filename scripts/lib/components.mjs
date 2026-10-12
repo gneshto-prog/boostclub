@@ -28,15 +28,13 @@ const bfitBar = {
   ru: { href: "/boostfit/?lang=en", text: "Тренировочная команда · По субботам, 08:00", short: "Суббота 08:00", go: "В команду →" },
 };
 
-const applyLabels = { ro: "Aplică acum", en: "Apply now", ru: "Подать заявку" };
-
 function navItems({ lang, slug, mobile }) {
   return navigation
     .filter((item) => item.slug !== "business")
     .map((item) => ({
-      href: item.href ? item.href[lang] : slug === "ambasador" && item.slug === "business" ? "ambasador" : item.slug,
+      href: item.href ? item.href[lang] : item.slug,
       label: item.labels[lang],
-      current: item.slug === slug || (slug === "ambasador" && item.slug === "business"),
+      current: item.slug === slug,
       boostfit: item.slug === "boostfit",
     }));
 }
@@ -58,8 +56,9 @@ export function nav({ lang, slug, mobile = false }) {
   if (mobile) {
     return `<nav id="mobile-navigation" class="mobile-menu" aria-label="${copy.mobileNavLabel}">\n    ${links}\n    <div class="lang-switcher" aria-label="Language">${switcher}</div>\n  </nav>`;
   }
-  const ctaHref = slug === "ambasador" ? "#cerere" : slug === "consultatie-gratuita" ? (lang === "ro" ? "#formular" : "#form") : "consultatie-gratuita";
-  const ctaLabel = slug === "ambasador" ? applyLabels[lang] : copy.book;
+  // /ambasador is the client referral programme since 12 Oct 2026 (was the business pitch), so it books like every page.
+  const ctaHref = slug === "consultatie-gratuita" ? (lang === "ro" ? "#formular" : "#form") : "consultatie-gratuita";
+  const ctaLabel = copy.book;
   return `<nav class="nav" aria-label="${copy.navLabel}">\n      ${links}\n      <a href="${ctaHref}" class="btn btn-primary">${ctaLabel}</a>\n      <div class="lang-switcher" aria-label="Language">${switcher}</div>\n    </nav>`;
 }
 

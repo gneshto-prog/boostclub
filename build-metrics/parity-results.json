@@ -1,7 +1,7 @@
 {
   "compared": 44,
-  "equivalent": 44,
-  "different": 0,
+  "equivalent": 31,
+  "different": 13,
   "intentionalStructuralTransformations": [
     "Inline CSS moved to external component stylesheets.",
     "Inline style attributes moved to generated utility classes.",
@@ -12,212 +12,212 @@
     {
       "page": "index.html",
       "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "reason": "12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy"
     },
     {
       "page": "ambasador.html",
       "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "reason": "12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy"
     },
     {
       "page": "business.html",
       "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "reason": "12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy"
     },
     {
       "page": "confidentialitate.html",
-      "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "result": "Different",
+      "reason": "Normalized DOM hash differs"
     },
     {
       "page": "consultatie-gratuita.html",
       "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "reason": "12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy"
     },
     {
       "page": "contact.html",
       "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "reason": "12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy"
     },
     {
       "page": "cookies.html",
-      "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "result": "Different",
+      "reason": "Normalized DOM hash differs"
     },
     {
       "page": "cum-functioneaza.html",
       "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "reason": "12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy"
     },
     {
       "page": "gabi.html",
-      "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "result": "Different",
+      "reason": "Normalized DOM hash differs"
     },
     {
       "page": "gabriel.html",
       "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "reason": "12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy"
     },
     {
       "page": "multumim.html",
       "result": "Equivalent",
-      "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
+      "reason": "12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy"
     },
     {
       "page": "recenzii.html",
       "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "reason": "12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy"
     },
     {
       "page": "rezultate.html",
       "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "reason": "12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy"
     },
     {
       "page": "termeni.html",
-      "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "result": "Different",
+      "reason": "Normalized DOM hash differs"
     },
     {
       "page": "en/index.html",
       "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "reason": "12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy"
     },
     {
       "page": "en/ambasador.html",
       "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "reason": "12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy"
     },
     {
       "page": "en/business.html",
       "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "reason": "12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy"
     },
     {
       "page": "en/confidentialitate.html",
-      "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "result": "Different",
+      "reason": "Normalized DOM hash differs"
     },
     {
       "page": "en/consultatie-gratuita.html",
       "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "reason": "12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy"
     },
     {
       "page": "en/contact.html",
       "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "reason": "12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy"
     },
     {
       "page": "en/cookies.html",
-      "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "result": "Different",
+      "reason": "Normalized DOM hash differs"
     },
     {
       "page": "en/cum-functioneaza.html",
       "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "reason": "12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy"
     },
     {
       "page": "en/gabi.html",
-      "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "result": "Different",
+      "reason": "Normalized DOM hash differs"
     },
     {
       "page": "en/gabriel.html",
       "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "reason": "12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy"
     },
     {
       "page": "en/multumim.html",
       "result": "Equivalent",
-      "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
+      "reason": "12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy"
     },
     {
       "page": "en/recenzii.html",
       "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "reason": "12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy"
     },
     {
       "page": "en/rezultate.html",
       "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "reason": "12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy"
     },
     {
       "page": "en/termeni.html",
-      "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "result": "Different",
+      "reason": "Normalized DOM hash differs"
     },
     {
       "page": "ru/index.html",
       "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "reason": "12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy"
     },
     {
       "page": "ru/ambasador.html",
       "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "reason": "12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy"
     },
     {
       "page": "ru/business.html",
       "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "reason": "12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy"
     },
     {
       "page": "ru/confidentialitate.html",
-      "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "result": "Different",
+      "reason": "Normalized DOM hash differs"
     },
     {
       "page": "ru/consultatie-gratuita.html",
       "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "reason": "12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy"
     },
     {
       "page": "ru/contact.html",
       "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "reason": "12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy"
     },
     {
       "page": "ru/cookies.html",
-      "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "result": "Different",
+      "reason": "Normalized DOM hash differs"
     },
     {
       "page": "ru/cum-functioneaza.html",
       "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "reason": "12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy"
     },
     {
       "page": "ru/gabi.html",
-      "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "result": "Different",
+      "reason": "Normalized DOM hash differs"
     },
     {
       "page": "ru/gabriel.html",
       "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "reason": "12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy"
     },
     {
       "page": "ru/multumim.html",
       "result": "Equivalent",
-      "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
+      "reason": "12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy"
     },
     {
       "page": "ru/recenzii.html",
       "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "reason": "12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy"
     },
     {
       "page": "ru/rezultate.html",
       "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "reason": "12 Oct 2026: Boost Ambassador page, homepage reorder, 121 reviews, 25-30 min, no-calendar copy"
     },
     {
       "page": "ru/termeni.html",
-      "result": "Equivalent",
-      "reason": "29 Sep 2026: refreshed review selection (10 from 80), gabrielneshto.com founder link + Person sameAs, privacy processors/fields updated"
+      "result": "Different",
+      "reason": "Normalized DOM hash differs"
     },
     {
       "page": "404.html",
@@ -226,8 +226,8 @@
     },
     {
       "page": "program-trainee.html",
-      "result": "Equivalent",
-      "reason": "Batch 5: responsive hashed derivatives, matching preloads and explicit map loading"
+      "result": "Different",
+      "reason": "Normalized DOM hash differs"
     }
   ]
 }

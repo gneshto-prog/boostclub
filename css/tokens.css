@@ -637,4 +637,16 @@ html[data-css~="business-phase2"] {
 
 :root { --tap-target: 44px; --border-width: 2px; --space-1: 4px; --space-3: 12px; --space-4: 16px; --space-9: 12px; }
 
-:root { --viewport-height: 100dvh; }
+:root { --viewport-height: 100dvh;   /* Boost Ambassador page (12 Oct 2026) */
+  --amb-gap: 12px;
+  --amb-pad: 20px 24px;
+  --amb-radius: 14px;
+  --amb-rung-size: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+  --amb-reward-pad: 6px 12px;
+  --amb-reward-gap: 10px;
+  --amb-rung-min: 260px;
+  --amb-track: .04em;
+  --amb-lh: 1.15;
+  --amb-list-indent: 1.25rem;
+  --home-menu-photo-h: 460px;
+}
