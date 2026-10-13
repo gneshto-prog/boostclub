@@ -21,7 +21,9 @@
   form.prepend(errorNode);
   // ?goal=loss|muscle|energy from the homepage goal chips pre-selects the matching goal (13 Oct 2026).
   var goalParam = new URLSearchParams(location.search).get('goal');
-  var goalInput = goalParam && /^(loss|muscle|energy|start)$/.test(goalParam) && document.getElementById('goal-' + goalParam);
+  var roGoal = { loss: 'slabire', muscle: 'masa', energy: 'energie', start: 'start' };
+  var goalInput = goalParam && /^(loss|muscle|energy|start)$/.test(goalParam) &&
+    (document.getElementById('goal-' + goalParam) || document.getElementById('ob-' + roGoal[goalParam]));
   if (goalInput) goalInput.checked = true;
   var pending = false;
   var submitButton = form.querySelector('[type="submit"]');
