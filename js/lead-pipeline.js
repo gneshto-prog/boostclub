@@ -17,9 +17,9 @@
   function languageFor(form) {
     var lang = form.querySelector('input[name="lang"]');
     if (lang && /^(ro|en|ru)$/.test(lang.value)) return lang.value;
-    if (location.pathname.indexOf("/en/") === 0) return "en";
+    if (location.pathname.indexOf("/ro/") === 0) return "ro";
     if (location.pathname.indexOf("/ru/") === 0) return "ru";
-    return "ro";
+    return "en";
   }
 
   function selected(form, names) {

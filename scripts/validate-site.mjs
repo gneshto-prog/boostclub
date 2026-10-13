@@ -7,8 +7,8 @@ import { findHardcodedDesignValues } from "./lib/css-policy.mjs";
 const projectRoot = process.cwd();
 const root = path.join(projectRoot, "_site");
 const languages = {
-  ro: { dir: "", htmlLang: "ro", distributor: "Distribuitor Independent Herbalife" },
-  en: { dir: "en", htmlLang: "en", distributor: "Independent Herbalife Distributor" },
+  ro: { dir: "ro", htmlLang: "ro", distributor: "Distribuitor Independent Herbalife" },
+  en: { dir: "", htmlLang: "en", distributor: "Independent Herbalife Distributor" },
   ru: { dir: "ru", htmlLang: "ru", distributor: "Независимый дистрибьютор Herbalife" },
 };
 const slugs = [
@@ -49,7 +49,7 @@ function filesUnder(directory, extension) {
 }
 
 function routeFor(lang, slug) {
-  const prefix = lang === "ro" ? "" : `/${lang}`;
+  const prefix = lang === "en" ? "" : `/${lang}`;
   return slug === "index" ? `${prefix}/` || "/" : `${prefix}/${slug}`;
 }
 

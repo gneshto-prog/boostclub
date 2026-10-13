@@ -1,7 +1,12 @@
+# Language move 13 Oct 2026: English is the root site, Romanian lives under /ro/, Russian under /ru/.
+# Old /en/ URLs (links, ads, gabrielneshto.com) keep working.
+/en                                /                         301!
+/en/*                              /:splat                   301!
+
 # Home-page aliases
 /index.html                         /                         301!
-/en/index.html                      /en/                     301!
-/ru/index.html                      /ru/                     301!
+/ro/index.html                      /ro/                      301!
+/ru/index.html                      /ru/                      301!
 
 # Retired trainee URL
 /program-trainee.html               /ambasador                301!
@@ -21,19 +26,19 @@
 /recenzii.html                      /recenzii                 301!
 /rezultate.html                     /rezultate                301!
 /termeni.html                       /termeni                  301!
-/en/ambasador.html                  /en/ambasador             301!
-/en/business.html                   /en/business              301!
-/en/confidentialitate.html          /en/confidentialitate     301!
-/en/consultatie-gratuita.html       /en/consultatie-gratuita  301!
-/en/contact.html                    /en/contact               301!
-/en/cookies.html                    /en/cookies               301!
-/en/cum-functioneaza.html           /en/cum-functioneaza      301!
-/en/gabi.html                       /en/gabi                  301!
-/en/gabriel.html                    /en/gabriel               301!
-/en/multumim.html                   /en/multumim              301!
-/en/recenzii.html                   /en/recenzii              301!
-/en/rezultate.html                  /en/rezultate              301!
-/en/termeni.html                    /en/termeni                301!
+/ro/ambasador.html                  /ro/ambasador             301!
+/ro/business.html                   /ro/business              301!
+/ro/confidentialitate.html          /ro/confidentialitate     301!
+/ro/consultatie-gratuita.html       /ro/consultatie-gratuita  301!
+/ro/contact.html                    /ro/contact               301!
+/ro/cookies.html                    /ro/cookies               301!
+/ro/cum-functioneaza.html           /ro/cum-functioneaza      301!
+/ro/gabi.html                       /ro/gabi                  301!
+/ro/gabriel.html                    /ro/gabriel               301!
+/ro/multumim.html                   /ro/multumim              301!
+/ro/recenzii.html                   /ro/recenzii              301!
+/ro/rezultate.html                  /ro/rezultate             301!
+/ro/termeni.html                    /ro/termeni               301!
 /ru/ambasador.html                  /ru/ambasador             301!
 /ru/business.html                   /ru/business              301!
 /ru/confidentialitate.html          /ru/confidentialitate     301!
@@ -45,8 +50,8 @@
 /ru/gabriel.html                    /ru/gabriel               301!
 /ru/multumim.html                   /ru/multumim              301!
 /ru/recenzii.html                   /ru/recenzii              301!
-/ru/rezultate.html                  /ru/rezultate              301!
-/ru/termeni.html                    /ru/termeni                301!
+/ru/rezultate.html                  /ru/rezultate             301!
+/ru/termeni.html                    /ru/termeni               301!
 
 # Canonical clean URLs -> static source files
 /ambasador                          /ambasador.html            200
@@ -62,23 +67,23 @@
 /recenzii                           /recenzii.html             200
 /rezultate                          /rezultate.html            200
 /termeni                            /termeni.html              200
-/en/ambasador                       /en/ambasador.html         200
-/en/business                        /en/business.html          200
-/en/confidentialitate               /en/confidentialitate.html 200
-/en/consultatie-gratuita            /en/consultatie-gratuita.html 200
-/en/contact                         /en/contact.html           200
-/en/cookies                         /en/cookies.html           200
-/en/cum-functioneaza                /en/cum-functioneaza.html  200
-/en/gabi                            /en/gabi.html              200
-/en/gabriel                         /en/gabriel.html           200
-/en/multumim                        /en/multumim.html          200
-/en/recenzii                        /en/recenzii.html          200
-/en/rezultate                       /en/rezultate.html         200
-/en/termeni                         /en/termeni.html           200
+/ro/ambasador                       /ro/ambasador.html         200
+/ro/business                        /ro/business.html          200
+/ro/confidentialitate               /ro/confidentialitate.html 200
+/ro/consultatie-gratuita            /ro/consultatie-gratuita.html200
+/ro/contact                         /ro/contact.html           200
+/ro/cookies                         /ro/cookies.html           200
+/ro/cum-functioneaza                /ro/cum-functioneaza.html  200
+/ro/gabi                            /ro/gabi.html              200
+/ro/gabriel                         /ro/gabriel.html           200
+/ro/multumim                        /ro/multumim.html          200
+/ro/recenzii                        /ro/recenzii.html          200
+/ro/rezultate                       /ro/rezultate.html         200
+/ro/termeni                         /ro/termeni.html           200
 /ru/ambasador                       /ru/ambasador.html         200
 /ru/business                        /ru/business.html          200
 /ru/confidentialitate               /ru/confidentialitate.html 200
-/ru/consultatie-gratuita            /ru/consultatie-gratuita.html 200
+/ru/consultatie-gratuita            /ru/consultatie-gratuita.html200
 /ru/contact                         /ru/contact.html           200
 /ru/cookies                         /ru/cookies.html           200
 /ru/cum-functioneaza                /ru/cum-functioneaza.html  200

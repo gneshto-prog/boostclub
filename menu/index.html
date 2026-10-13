@@ -494,7 +494,7 @@ var T={
   dEyebrow:'The bar',dTitle:'Your drink',dLead:'Every visit comes with a tea and an aloe in one cup, next to the shake. Tap a tea. Iced or hot.',s4:'The tea',s4sub:'Comes with every shake. Pick one.',aloeL:'Aloe',tempL:'Served',pTitle:'The upgrades',pLead:'Five drinks on top of your membership. Boost+ membership, or add one to any visit for a set amount. Ask at the counter.',tDrink:'Drink',nw:'New',iced:'iced',hot:'hot',tapOff:'Tap again to remove',none:'None',mix:'Mix',half:'half and half',max2:'Two max. Swapped out the first one.',mixOn:'Mix on: ',tryIt:'See it in the cup →',ltd:'Limited',star:'House pick',custom:'Your shake'}
 };
 var lang="en";
-try{var q=new URLSearchParams(location.search).get("lang");var saved=localStorage.getItem("bc-menu-lang");lang=q==="en"||q==="ro"?q:(saved==="ro"?"ro":"en");}catch(e){}
+try{var q=new URLSearchParams(location.search).get("lang");var saved=localStorage.getItem("bc-menu-lang");lang=q==="en"||q==="ro"?q:(saved==="ro"||saved==="en"?saved:((navigator.language||"").slice(0,2)==="ro"?"ro":"en"));}catch(e){}
 var st={b:["vanilla"],s:[],t:[],dbl:false,tea:["original"],aloe:["original"],temp:["iced"],p:[]},mode="loaded";
 var $=function(id){return document.getElementById(id)};
 var byId=function(arr,id){for(var i=0;i<arr.length;i++)if(arr[i].id===id)return arr[i]};

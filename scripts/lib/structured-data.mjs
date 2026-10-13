@@ -12,7 +12,7 @@ const copy = {
 export function structuredHead(page) {
   if (!copy[page.lang] || ['program-trainee', '404', 'multumim'].includes(page.slug)) return page.head;
   const locale = copy[page.lang];
-  const home = `${origin}/${page.lang === 'ro' ? '' : `${page.lang}/`}`;
+  const home = `${origin}/${page.lang === 'en' ? '' : `${page.lang}/`}`;
   const url = home + (page.slug === 'index' ? '' : page.slug);
   const title = page.head.match(/<title>(.*?)<\/title>/s)?.[1].replace(/&amp;/g, '&') || 'Boost Club';
   const graph = [
