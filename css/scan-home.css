@@ -1,0 +1,49 @@
+/* Free-scan homepage (13 Oct 2026): hero chips, price anchor, "what you get", "why free", club cards. */
+.scan-hero h1 { font-size: var(--scan-title-size); line-height: var(--scan-title-lh); text-wrap: balance; }
+.scan-hero .community-intro .lead { margin-top: var(--s2); }
+.scan-goal-label { font-size: var(--scan-label-font); letter-spacing: var(--scan-label-track); text-transform: uppercase; color: var(--gold-soft); font-weight: 600; }
+.scan-goals { display: flex; flex-wrap: wrap; gap: var(--s1); margin-top: var(--s1); }
+.scan-goal { border: var(--scan-line) solid var(--scan-chip-line); border-radius: var(--radius-pill, 999px); padding: var(--scan-chip-pad); font-size: var(--scan-chip-font); color: var(--white); text-decoration: none; }
+.scan-goal:hover, .scan-goal:focus-visible { background: var(--scan-chip-hover); border-color: var(--gold-soft); color: var(--white); }
+.scan-hero .hero-ctas { margin-top: var(--s3); }
+.scan-proof { margin-top: var(--s3); font-size: var(--scan-proof-font); }
+.scan-proof a { color: var(--white); text-decoration: none; }
+.scan-proof .stars { color: var(--gold-soft); }
+.scan-anchor { margin-top: var(--s2); display: inline-block; background: var(--scan-anchor-bg); border-radius: var(--radius-sm); padding: var(--scan-anchor-pad); font-size: var(--scan-proof-font); color: var(--white); }
+.scan-anchor s { opacity: .7; }
+.scan-anchor strong { color: var(--gold-soft); }
+
+.scan-offer { display: grid; gap: var(--s4); grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--scan-offer-min)), 1fr)); align-items: center; }
+.scan-get { list-style: none; margin: var(--s0, 0); padding: var(--s0, 0); display: grid; gap: var(--s3); }
+.scan-get li { display: grid; grid-template-columns: var(--scan-check-size) minmax(0, 1fr); gap: var(--s2); align-items: start; }
+.scan-get h3 { margin: var(--s0, 0) var(--s0, 0) var(--s1); }
+.scan-check { width: var(--scan-check-size); height: var(--scan-check-size); border-radius: 50%; background: var(--gold-soft); color: var(--green-deep); display: grid; place-items: center; }
+.scan-check svg { width: 60%; height: 60%; fill: none; stroke: currentColor; stroke-width: var(--scan-check-stroke); }
+.scan-price { background: var(--card); border: var(--scan-line) solid var(--line); border-radius: var(--radius); padding: var(--scan-price-pad); display: grid; gap: var(--s1); justify-items: center; text-align: center; box-shadow: var(--shadow); }
+.scan-price-label { font-size: var(--scan-label-font); letter-spacing: var(--scan-label-track); text-transform: uppercase; color: var(--text-soft); font-weight: 600; }
+.scan-price-old { font-size: var(--scan-price-old); color: var(--text-soft); }
+.scan-price-now { font-size: var(--scan-price-now); line-height: var(--scan-title-lh); color: var(--green); }
+.scan-price-note { color: var(--text-soft); }
+.scan-price .btn { margin-top: var(--s2); }
+
+.scan-free h2 { margin-top: var(--s1); }
+.scan-free-lines { display: grid; gap: var(--s2); margin-top: var(--s3); }
+.scan-free-lines p { font-size: var(--scan-free-font); line-height: var(--scan-free-lh); }
+.scan-disclosure { margin-top: var(--s4); font-size: var(--scan-disclosure-font); opacity: .75; }
+
+.scan-more { display: grid; gap: var(--s1); align-content: start; text-decoration: none; color: var(--text); }
+.scan-more:hover { color: var(--text); border-color: var(--green); }
+.scan-more-link { color: var(--green); font-weight: 600; margin-top: var(--s1); }
+
+/* Phone: swipe rows instead of tall stacks, shorter photos. Homepage-only stylesheet. */
+@media (max-width: 639px) {
+  .scan-rail, .results-grid.transformation-grid {
+    display: grid; grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: var(--scan-rail-col);
+    overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: var(--scan-rail-pad); overscroll-behavior-x: contain;
+  }
+  .scan-rail > *, .results-grid.transformation-grid > * { scroll-snap-align: start; }
+  .scan-hero .community-photo img { aspect-ratio: var(--scan-hero-photo-ratio); }
+  .img-frame img { aspect-ratio: var(--scan-founder-ratio); object-fit: cover; object-position: center 18%; }
+}
+.site-header .bfit-bar { display: none; }
+main > .section-dark.scan-hero:first-of-type { padding-top: calc(var(--s4) + var(--header-h)) !important; }

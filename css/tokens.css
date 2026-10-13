@@ -650,3 +650,32 @@ html[data-css~="business-phase2"] {
   --amb-list-indent: 1.25rem;
   --home-menu-photo-h: 460px;
 }
+
+/* Free-scan homepage (13 Oct 2026) */
+:root {
+  --scan-title-size: clamp(2.15rem, 1.4rem + 3.4vw, 3.75rem);
+  --scan-title-lh: 1.06;
+  --scan-chip-line: rgba(255, 255, 255, .3);
+  --scan-chip-hover: rgba(255, 255, 255, .1);
+  --scan-chip-pad: 9px 16px;
+  --scan-chip-font: .95rem;
+  --scan-label-font: .8rem;
+  --scan-label-track: .12em;
+  --scan-proof-font: .95rem;
+  --scan-anchor-bg: rgba(255, 255, 255, .07);
+  --scan-anchor-pad: 10px 14px;
+  --scan-check-size: 36px;
+  --scan-check-stroke: 2.4;
+  --scan-price-pad: 28px;
+  --scan-price-now: clamp(3rem, 2.2rem + 3vw, 4.25rem);
+  --scan-price-old: 1.35rem;
+  --scan-free-font: clamp(1.25rem, 1.05rem + .9vw, 1.6rem);
+  --scan-free-lh: 1.4;
+  --scan-disclosure-font: .85rem;
+  --scan-offer-min: 280px;
+  --scan-line: 1px;
+  --scan-rail-col: 84%;
+  --scan-rail-pad: 8px;
+  --scan-hero-photo-ratio: 16 / 9;
+  --scan-founder-ratio: 1;
+}
