@@ -1,0 +1,40 @@
+{
+  "_readme": "Partner landing pages, one entry per partner. Key = URL slug (boostclub.ro/<slug>, Romanian at /ro/<slug>). Built by scripts/lib/partner-pages.mjs on every build. active:false sends the URL to the homepage instead of a dead WhatsApp. photo = profile shot (portrait, partners/photos/<slug>.webp), clubPhoto = optional second shot at the club (replaces the generic club photo); null photo shows initials. Strip GPS/EXIF before adding (phone photos carry location). Story lines are the partner's own story, first person, no em dashes, never how long they have been a partner.",
+  "partners": {
+    "stefanpana": {
+      "active": true,
+      "name": "Stefan Pana",
+      "initials": "SP",
+      "whatsapp": "+40750256278",
+      "instagram": "stefan_pnn",
+      "photo": "stefanpana.webp",
+      "clubPhoto": "stefanpana-club.webp",
+      "focus": [
+        "muscle",
+        "fat",
+        "energy"
+      ],
+      "stat": "+25 kg",
+      "en": {
+        "headline": "25 kg gained. Nutrition made the difference.",
+        "lead": "For two years I tried everything to gain weight and nothing stuck. The missing piece was nutrition. Once I got it right, I gained 25 kg. Now I help others do the same, starting with a free body scan at Boost Club.",
+        "story": [
+          "I was always the skinny guy. I tried one approach after another, and I struggled to stay consistent with any of them.",
+          "After two years, I finally understood what I was missing: training matters, but nutrition drives the results. Once I got my eating right, everything started moving. Over the next two years I gained 25 kg.",
+          "Seeing what was possible, I wanted to help other people get there too. Boost Club and Herbalife gave me the right place to do it, and the chance to help others the way I helped myself."
+        ],
+        "statLabel": "gained in two years"
+      },
+      "ro": {
+        "headline": "25 kg câștigate. Nutriția a făcut diferența.",
+        "lead": "Doi ani am încercat de toate ca să iau în greutate și nimic nu a funcționat. Piesa care lipsea era nutriția. După ce am pus-o la punct, am câștigat 25 kg. Acum îi ajut pe alții să facă la fel, începând cu o scanare corporală gratuită la Boost Club.",
+        "story": [
+          "Am fost mereu cel slab. Am încercat o abordare după alta și nu am reușit să fiu consecvent cu niciuna.",
+          "După doi ani am înțeles, în sfârșit, ce îmi lipsea: antrenamentul contează, dar nutriția aduce rezultatele. Din momentul în care mi-am pus alimentația la punct, lucrurile au început să se miște. În următorii doi ani am câștigat 25 kg.",
+          "Văzând ce e posibil, mi-am dorit să-i ajut și pe alții să ajungă acolo. Boost Club și Herbalife mi-au oferit locul potrivit pentru asta și șansa de a-i ajuta pe alții așa cum m-am ajutat pe mine."
+        ],
+        "statLabel": "câștigate în doi ani"
+      }
+    }
+  }
+}

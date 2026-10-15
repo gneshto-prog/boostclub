@@ -10,11 +10,12 @@ import { reviewSnapshot, reviewSummary, afterVisit, processFaq } from "../conten
 import { responsiveImages, responsivePreloads } from './lib/responsive-images.mjs';
 import { clubPhotoPreview, clubContactPhoto, clubGallery } from './lib/club-gallery.mjs';
 import { transformationGallery } from './lib/transformation-gallery.mjs';
+import { buildPartnerPages } from "./lib/partner-pages.mjs";
 
 const root = process.cwd();
 const outputRoot = path.join(root, "_site");
 const contentGroups = ["ro", "en", "ru", "root"];
-const assetDirectories = ["css", "js", "images", "fonts", "videos", "vendor", "menu", "menugen21", "boostfit", "start"];
+const assetDirectories = ["css", "js", "images", "fonts", "videos", "vendor", "menu", "menugen21", "boostfit", "start", "partners"];
 const rootAssets = ["_redirects", "robots.txt", "sitemap.xml", "favicon.ico", "apple-touch-icon.png"];
 
 function readPages(group) {
@@ -70,8 +71,11 @@ export function buildSite() {
   for (const file of rootAssets) copyIfPresent(file);
   const concepts = buildHomepageConcepts(root, outputRoot);
   const softCurrentPages = buildSoftCurrentSite(root, outputRoot);
+  // Partner pages last: a slug that collides with any page or folder above fails the build.
+  fs.rmSync(path.join(outputRoot, "partners", "partners.json"), { force: true });
+  const partnerPages = buildPartnerPages(root, outputRoot);
 
-  console.log(`Built ${pages.length} site pages, ${concepts.length} homepage concepts and ${softCurrentPages.length} Soft Current pages in _site.`);
+  console.log(`Built ${pages.length} site pages, ${concepts.length} homepage concepts, ${softCurrentPages.length} Soft Current pages and ${partnerPages.length} partner pages in _site.`);
   return pages;
 }
 

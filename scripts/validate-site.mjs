@@ -3,6 +3,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { findHardcodedDesignValues } from "./lib/css-policy.mjs";
+import { partnerRoutes } from "./lib/partner-pages.mjs";
 
 const projectRoot = process.cwd();
 const root = path.join(projectRoot, "_site");
@@ -122,6 +123,7 @@ liveRoutes.add("/boostfit/"); // standalone Boost Fit page, hand-built in boostf
 liveRoutes.add("/menu/"); // standalone shake menu, hand-built in menu/
 liveRoutes.add("/menugen21/"); // Boost Club x GEN21 partner menu, built by scripts/build-menugen21.py, noindex
 liveRoutes.add("/start/"); // English ads landing page, hand-built in start/, noindex
+for (const route of partnerRoutes(projectRoot)) liveRoutes.add(route); // partner pages, partners/partners.json
 
 for (const page of pages) {
   for (const match of page.html.matchAll(/<a\b[^>]*\bhref=["']([^"']+)["']/gi)) {
