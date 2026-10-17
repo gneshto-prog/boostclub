@@ -22,10 +22,11 @@ END:STANDARD
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:boostfit-saturday@boostclub.ro
-DTSTAMP:20261017T100000Z
+DTSTAMP:20261017T221500Z
 DTSTART;TZID=Europe/Bucharest:20261025T090000
 DTEND;TZID=Europe/Bucharest:20261025T111500
 RRULE:FREQ=WEEKLY;BYDAY=SU
+EXDATE;TZID=Europe/Bucharest:20261122T090000
 SUMMARY:Boost Fit · Kiseleff 09:00
 LOCATION:Parcul Kiseleff\, intrarea dinspre Piața Victoriei\, București
 DESCRIPTION:Antrenament în parc 45 min\, apoi lecția de nutriție și shake-urile la Boost Club (Strada Sevastopol 24). Intrarea: 35 lei sau inclusă în program. boostclub.ro/boostfit
