@@ -679,3 +679,11 @@ html[data-css~="business-phase2"] {
   --scan-hero-photo-ratio: 16 / 9;
   --scan-founder-ratio: 1;
 }
+
+/* Boost Team lockup on /business (17 Oct 2026) */
+:root {
+  --bt-logo-w: 210px;
+  --bt-logo-w-shrink: 186px;
+  --bt-logo-w-mobile: 168px;
+  --bt-logo-w-foot: 260px;
+}

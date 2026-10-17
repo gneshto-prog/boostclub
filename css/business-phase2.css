@@ -294,3 +294,26 @@ a[href*="hrbl.me/"] {
   outline: var(--length-ac33ff91) solid var(--color-87b7054a);
   outline-offset: var(--length-74761400);
 }
+
+/* Boost Team lockup (B leaf leaf st Team. / BUILD YOUR BEST) replaces the BOOST CLUB text mark. */
+.brand .bt-logo {
+  display: block;
+  width: var(--bt-logo-w);
+  height: auto;
+  transition: width var(--d2) var(--ease);
+}
+
+.topbar.shrink .brand .bt-logo {
+  width: var(--bt-logo-w-shrink);
+}
+
+.foot .brand .bt-logo {
+  width: var(--bt-logo-w-foot);
+}
+
+@media (max-width: 760px) {
+  .topbar .brand .bt-logo,
+  .topbar.shrink .brand .bt-logo {
+    width: var(--bt-logo-w-mobile);
+  }
+}
