@@ -15,7 +15,7 @@ import { buildPartnerPages } from "./lib/partner-pages.mjs";
 const root = process.cwd();
 const outputRoot = path.join(root, "_site");
 const contentGroups = ["ro", "en", "ru", "root"];
-const assetDirectories = ["css", "js", "images", "fonts", "videos", "vendor", "menu", "menugen21", "boostfit", "start", "partners"];
+const assetDirectories = ["css", "js", "images", "fonts", "videos", "vendor", "menu", "menugen21", "boostfit", "zerohour", "start", "partners"];
 const rootAssets = ["_redirects", "robots.txt", "sitemap.xml", "favicon.ico", "apple-touch-icon.png"];
 
 function readPages(group) {
