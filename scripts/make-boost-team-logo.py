@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Boost Team lockup SVGs, built from the Boost Team brand board.
 
-Source: ~/Desktop/Boost Team Brand Board.pdf (page 1, PRIMARY LOGO).
+Source: scripts/assets/boost-team-brand-board-original.pdf (page 1, PRIMARY
+LOGO), the board as it was before the tagline changed. The Desktop copy now
+says BUILD YOUR BEST, so it can no longer feed this script.
 The wordmark glyphs (B, st Team, gold dot) and the tagline letters are the
 board's own Montserrat outlines, lifted straight out of the PDF. The leaves
 are the site's leaf path (same leaf as Boost Club), placed where the board
@@ -10,7 +12,8 @@ puts its leaf images, in Boost Team blue.
 Tagline is "BUILD YOUR BEST" (Gabi, 17 Oct 2026), not the board's
 "BE YOUR BEST" (that one belongs to Boost Club). B, U, Y, O, R, E, S, T come
 from the board's tagline; I, L and D are not on the board, so they are built
-from its strokes: stem and bar widths of the E, bowl of the O.
+from its strokes: stem and bar widths of the E, bowl of the O. The Desktop
+board was updated to BUILD YOUR BEST on 18 Oct 2026 with these same letters.
 
 Usage: python3 scripts/make-boost-team-logo.py   (needs PyMuPDF)
 Writes images/boost-team/boost-team-lockup.svg and -on-dark.svg.
@@ -20,7 +23,7 @@ import sys
 
 import fitz
 
-BOARD = os.path.expanduser("~/Desktop/Boost Team Brand Board.pdf")
+BOARD = os.path.join(os.path.dirname(__file__), "assets", "boost-team-brand-board-original.pdf")
 OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "images", "boost-team")
 
 NAVY = "#061A2F"
