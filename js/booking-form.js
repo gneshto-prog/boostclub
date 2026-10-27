@@ -42,7 +42,6 @@
     pending = true;
     if (submitButton) submitButton.disabled = true;
     field('landing_page', location.pathname);
-    field('click_id', (window.BoostAttribution && window.BoostAttribution.lastWhatsAppClickId && window.BoostAttribution.lastWhatsAppClickId()) || '');
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },

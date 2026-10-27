@@ -39,15 +39,12 @@ test('attribution needs both consents and is purged on revocation',()=>{
   assert.equal(data.referrer,'https://example.com');
   p.window.BoostConsent.update({analytics:true,marketing:false});assert.equal(p.storage.size,0);
 });
-test('WhatsApp text keeps the message and gains only a first-party reference; analytics never sees either',()=>{
+test('WhatsApp link text is left untouched; analytics never sees the message',()=>{
   const p=page();p.window.BoostAnalytics.setSink((name,params)=>p.calls.push({name,...params}));p.window.BoostConsent.update({analytics:true});
   const link={href:'https://wa.me/40726205752?text=Private%20question'};
   p.handlers.click.forEach(fn=>fn({target:{closest:()=>link}}));
-  const text=new URL(link.href).searchParams.get('text');
-  assert.match(text,/^Private question\n\nRef Boost Club: bc-[0-9a-f-]+ · \/ru\/recenzii$/);
-  p.handlers.click.forEach(fn=>fn({target:{closest:()=>link}}));
-  assert.equal((new URL(link.href).searchParams.get('text').match(/Ref Boost Club/g)||[]).length,1);
-  assert.equal(p.window.BoostAttribution.lastWhatsAppClickId(),new URL(link.href).searchParams.get('text').match(/bc-[0-9a-f-]+/)[0]);
+  assert.equal(new URL(link.href).searchParams.get('text'),'Private question');
+  assert.equal(p.window.BoostAttribution.lastWhatsAppClickId,undefined);
   assert.equal(p.calls.at(-1).name,'whatsapp_click');
   assert.doesNotMatch(JSON.stringify(p.calls),/Private|40726205752|gclid|email|bc-/);
   assert.equal(p.storage.size,0);
