@@ -61,6 +61,31 @@ const sourceFor = (campaign: string) => {
 const clean = (value: unknown, max = 500) =>
   typeof value === "string" ? value.trim().slice(0, max) : "";
 
+// "How did you hear about us?" pills on the consultation forms (29 Oct 2026). The
+// value is the visible label in RO/EN/RU; the CRM gets one code per answer.
+const heardFrom = (value: unknown) => {
+  const answer = clean(value, 60).toLowerCase();
+  if (!answer) return "";
+  if (/google/.test(answer)) return "google";
+  if (/insta/.test(answer)) return "instagram";
+  if (/prieten|friend|друг/.test(answer)) return "friend";
+  if (/strad|street|улиц/.test(answer)) return "street";
+  return "other";
+};
+
+// The consultation forms carry no campaign field, so read utm_* off the page the
+// form was sent from (Netlify keeps the query string). The Google listing's links
+// are tagged utm_source=google&utm_medium=gbp.
+const campaignFromUrl = (url: string) => {
+  try {
+    const params = new URL(url).searchParams;
+    return ["utm_source", "utm_medium", "utm_campaign", "utm_content"]
+      .map((name) => params.get(name) || "").join("/").replace(/\/+$/, "");
+  } catch {
+    return "";
+  }
+};
+
 const normalizePhone = (value: unknown) => {
   const raw = clean(value, 40);
   if (!raw) return null;
@@ -101,7 +126,8 @@ export default async (req: Request) => {
 
   const pageUrl = clean(data.referrer || payload.site_url, 300);
   // "source/medium/campaign/content" from the landing page's utm_* params, if any.
-  const campaign = clean(data.campaign, 200).replace(/[^\w ./-]/g, "");
+  const campaign = (clean(data.campaign, 200) || campaignFromUrl(pageUrl)).slice(0, 200).replace(/[^\w ./-]/g, "");
+  const heard = heardFrom(data.aflat);
   const partner = clean(data.partner, 40).toLowerCase().replace(/[^a-z0-9-]/g, "");
   const language = form.language
     || (["ro", "en", "ru"].includes(clean(data.lang, 4)) ? clean(data.lang, 4) as "ro" | "en" | "ru" : languageFromUrl(pageUrl));
@@ -122,7 +148,7 @@ export default async (req: Request) => {
     p_when: clean(data.cand || data.start, 200) || null,
     p_goal: clean(data.obiectiv || data.goal, 120) || null,
     p_country: clean(data.country, 120) || null,
-    p_page_url: [pageUrl, partner && `partner=${partner}`, campaign && `campaign=${campaign}`].filter(Boolean).join(" | ") || null,
+    p_page_url: [pageUrl, partner && `partner=${partner}`, campaign && `campaign=${campaign}`, heard && `heard=${heard}`].filter(Boolean).join(" | ") || null,
     p_source: sourceFor(campaign),
   };
 

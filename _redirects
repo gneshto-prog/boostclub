@@ -1,3 +1,14 @@
+# Old domains -> boostclub.ro (29 Oct 2026). romnutriclub.ro served a full copy of the site,
+# so Google listed /menu and /termeni under it. Domain rules must stay first.
+https://romnutriclub.ro/*                   https://boostclub.ro/:splat   301!
+https://www.romnutriclub.ro/*               https://boostclub.ro/:splat   301!
+https://romnutriclub.com/*                  https://boostclub.ro/:splat   301!
+https://www.romnutriclub.com/*              https://boostclub.ro/:splat   301!
+http://romnutriclub.ro/*                    https://boostclub.ro/:splat   301!
+http://www.romnutriclub.ro/*                https://boostclub.ro/:splat   301!
+http://romnutriclub.com/*                   https://boostclub.ro/:splat   301!
+http://www.romnutriclub.com/*               https://boostclub.ro/:splat   301!
+
 # Language move 13 Oct 2026: English is the root site, Romanian lives under /ro/, Russian under /ru/.
 # Old /en/ URLs (links, ads, gabrielneshto.com) keep working.
 /en                                /                         301!

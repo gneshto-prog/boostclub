@@ -29,6 +29,27 @@
   window.BoostAttribution = { current: current, newId: newId, track: function (event) {
     return window.BoostAnalytics ? window.BoostAnalytics.track(event) : false;
   } };
+  // Carry utm_* from the landing URL onto links to the consultation page, so a Google
+  // listing visit that lands on the homepage still reaches the form tagged. Nothing is
+  // stored; the tag only lives in the next URL (29 Oct 2026).
+  function carryTags() {
+    var params = new URLSearchParams(location.search), tags = [];
+    fields.slice(0, 5).forEach(function (name) {
+      var value = params.get(name);
+      if (value && /^[\w .-]{1,150}$/.test(value)) tags.push([name, value]);
+    });
+    if (!tags.length) return;
+    document.querySelectorAll('a[href*="consultatie-gratuita"]').forEach(function (link) {
+      try {
+        var url = new URL(link.getAttribute('href'), location.href);
+        if (url.origin !== location.origin || url.searchParams.has('utm_source')) return;
+        tags.forEach(function (tag) { url.searchParams.set(tag[0], tag[1]); });
+        link.setAttribute('href', url.pathname + url.search + url.hash);
+      } catch (_) {}
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', carryTags);
+  else carryTags();
   window.addEventListener('boost:consent',current);
   current();
 })();
