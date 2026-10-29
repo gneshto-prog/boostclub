@@ -19,7 +19,7 @@ export function structuredHead(page) {
     { '@type': 'WebSite', '@id': `${origin}/#website`, url: `${origin}/`, name: 'Boost Club', inLanguage: ['ro', 'en', 'ru'] },
     { '@type': 'LocalBusiness', '@id': businessId, name: 'Boost Club', url: `${origin}/`, telephone: '+40726205752',
       address: { '@type': 'PostalAddress', streetAddress: 'Strada Sevastopol 24', addressLocality: 'București', addressRegion: 'Sector 1', addressCountry: 'RO' },
-      description: locale.description, image: `${origin}/images/og-image.jpg`,
+      description: locale.description, image: `${origin}/images/og-image-v2.jpg`,
       hasMap: 'https://www.google.com/maps/search/?api=1&query=Strada+Sevastopol+24+Bucuresti',
       founder: { '@id': personId } },
     { '@type': 'Person', '@id': personId, name: 'Gabriel Neshto', url: `${origin}/gabriel`,

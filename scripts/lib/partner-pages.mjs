@@ -130,7 +130,7 @@ function renderPage({ lang, slug, partner, photo, clubPhoto }) {
   const route = routeFor(lang, slug);
   // Link previews (WhatsApp, Instagram) want a JPG: use <photo>.jpg next to the .webp when present.
   const ogImage = photo && fs.existsSync(path.join(process.cwd(), photo.replace(/\.webp$/, ".jpg")))
-    ? photo.replace(/\.webp$/, ".jpg") : photo || "/images/og-image.jpg";
+    ? photo.replace(/\.webp$/, ".jpg") : photo || "/images/og-image-v2.jpg";
   const [otherLang, otherLabel] = c.otherLang;
   const otherRoute = routeFor(otherLang, slug);
   const cta = (cls = "") => `<a class="btn btn-gold${cls}" href="${esc(waHref)}" data-open-sheet>${esc(c.cta(first))}</a>`;
