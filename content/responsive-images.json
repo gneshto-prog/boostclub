@@ -205,19 +205,19 @@
   "images/familie-neshto-wellness.webp": {
     "width": 896,
     "height": 1193,
-    "bytes": 101080,
+    "bytes": 119934,
     "variants": [
       {
         "width": 320,
         "height": 426,
-        "src": "images/responsive/familie-neshto-wellness.7308474a2714.320.webp",
-        "bytes": 21836
+        "src": "images/responsive/familie-neshto-wellness.c112c98d7e9d.320.webp",
+        "bytes": 21906
       },
       {
         "width": 640,
         "height": 852,
-        "src": "images/responsive/familie-neshto-wellness.0933d9b349c4.640.webp",
-        "bytes": 62242
+        "src": "images/responsive/familie-neshto-wellness.5d59c230c523.640.webp",
+        "bytes": 63778
       }
     ]
   },
