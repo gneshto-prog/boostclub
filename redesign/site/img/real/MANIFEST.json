@@ -1,0 +1,833 @@
+{
+ "recipe": "BOOST_WARM_V1 (tools/boost_grade.py: boost_grade)",
+ "grade_script": "/private/tmp/claude-502/-Users-Gabi/999c6394-ead1-4bde-8b52-d23580c1a3f3/scratchpad/pe/tools/boost_grade.py",
+ "export": "JPEG q82 progressive, long edge 1800 (never upscaled), -sm 900, EXIF/GPS/XMP/ICC stripped",
+ "files": [
+  {
+   "file": "member-yougotthis.jpg",
+   "small": "member-yougotthis-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_5210.JPG",
+   "crop": null,
+   "shows": "Member seated at round white table by the green wall, YOU GOT THIS board, plants",
+   "orientation": "landscape",
+   "size": "1800x1350",
+   "aspect": 1.333,
+   "people": true,
+   "child": false,
+   "slots": [
+    "home-people",
+    "home-life-strip",
+    "reviews-moment"
+   ],
+   "score": 4,
+   "note": "Real, calm, on-brand; only flaw is a reversed logo reflection in the window."
+  },
+  {
+   "file": "gabi-sign-pointing.jpg",
+   "small": "gabi-sign-pointing-sm.jpg",
+   "source": "/Users/Gabi/Library/Application Support/Google/DriveFS/canceled_uploads/113392894442128376214/IMG_4548.JPG",
+   "crop": [
+    0,
+    0,
+    1,
+    0.93
+   ],
+   "shows": "Gabi in navy knit presenting the green wall: round Boost Club sign, YOU GOT THIS board, results wall",
+   "orientation": "portrait",
+   "size": "1452x1800",
+   "aspect": 0.807,
+   "people": true,
+   "child": false,
+   "slots": [
+    "gabriel-hero",
+    "home-founder",
+    "visit-hero",
+    "results-hero"
+   ],
+   "score": 5,
+   "note": "Best single shot of the whole wall with Gabi; sign reads correctly (unlike mirrored IMG_4537). Bottom 7% cropped (bag handle)."
+  },
+  {
+   "file": "sign-handshake.jpg",
+   "small": "sign-handshake-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_5219.jpg",
+   "crop": null,
+   "shows": "Two young men shaking hands under the round Boost Club sign",
+   "orientation": "portrait",
+   "size": "1350x1800",
+   "aspect": 0.75,
+   "people": true,
+   "child": false,
+   "slots": [
+    "bring-a-friend",
+    "visit-hero",
+    "home-people"
+   ],
+   "score": 4,
+   "note": "Strong brand moment; faces fully visible, slightly staged."
+  },
+  {
+   "file": "sign-handshake-close.jpg",
+   "small": "sign-handshake-close-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_5218.jpg",
+   "crop": null,
+   "shows": "Close-up handshake/hand-clasp in front of the round sign (no faces)",
+   "orientation": "portrait",
+   "size": "1350x1800",
+   "aspect": 0.75,
+   "people": true,
+   "child": false,
+   "slots": [
+    "bring-a-friend",
+    "home-life-strip",
+    "free-scan-side"
+   ],
+   "score": 4,
+   "note": "Faceless, so zero consent risk; sign crisp."
+  },
+  {
+   "file": "card-appreciated.jpg",
+   "small": "card-appreciated-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_4163.JPG",
+   "crop": null,
+   "shows": "Hand holding a \"You are appreciated\" card in front of the round sign",
+   "orientation": "portrait",
+   "size": "1350x1800",
+   "aspect": 0.75,
+   "people": false,
+   "child": false,
+   "slots": [
+    "bring-a-friend",
+    "reviews-moment",
+    "home-life-strip"
+   ],
+   "score": 4,
+   "note": "Sweet detail shot, sign softly out of focus."
+  },
+  {
+   "file": "card-world.jpg",
+   "small": "card-world-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_4133.JPG",
+   "crop": null,
+   "shows": "Hand holding \"You make the world a brighter place\" card in front of the sign",
+   "orientation": "portrait",
+   "size": "1350x1800",
+   "aspect": 0.75,
+   "people": false,
+   "child": false,
+   "slots": [
+    "reviews-moment",
+    "bring-a-friend",
+    "home-life-strip"
+   ],
+   "score": 4,
+   "note": "Pairs with card-appreciated; no faces."
+  },
+  {
+   "file": "gabi-painting-wall.jpg",
+   "small": "gabi-painting-wall-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_9744 2.JPG",
+   "crop": null,
+   "shows": "Gabi painting the green feature wall with a roller (build-out)",
+   "orientation": "portrait",
+   "size": "1260x1800",
+   "aspect": 0.7,
+   "people": true,
+   "child": false,
+   "slots": [
+    "gabriel-journey",
+    "home-founder"
+   ],
+   "score": 4,
+   "note": "Authentic origin-story shot; a little flat, grade helps."
+  },
+  {
+   "file": "results-wall.jpg",
+   "small": "results-wall-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_5230 2.jpg",
+   "crop": null,
+   "shows": "Young man in grey hoodie looking at the results wall of before/after cards",
+   "orientation": "portrait",
+   "size": "1350x1800",
+   "aspect": 0.75,
+   "people": true,
+   "child": false,
+   "slots": [
+    "results-hero",
+    "home-people"
+   ],
+   "score": 4,
+   "note": "Real version of the hero-lab relit wall; cards are real clients, keep small."
+  },
+  {
+   "file": "group-selfie.jpg",
+   "small": "group-selfie-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_5585.JPG",
+   "crop": null,
+   "shows": "Wide selfie: Gabi plus four members around the tables, windows behind",
+   "orientation": "landscape",
+   "size": "1800x1350",
+   "aspect": 1.333,
+   "people": true,
+   "child": false,
+   "slots": [
+    "home-people",
+    "reviews-moment",
+    "home-life-strip"
+   ],
+   "score": 3,
+   "note": "Lively but wide-angle selfie distortion at edges."
+  },
+  {
+   "file": "shake-thumbsup.jpg",
+   "small": "shake-thumbsup-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_0573.JPG",
+   "crop": null,
+   "shows": "Smiling woman in sunglasses and lilac shirt, thumbs up, chocolate shake with yellow straw",
+   "orientation": "portrait",
+   "size": "1350x1800",
+   "aspect": 0.75,
+   "people": true,
+   "child": false,
+   "slots": [
+    "menu-build",
+    "reviews-moment",
+    "home-life-strip"
+   ],
+   "score": 4,
+   "note": "Great joy shot; likely Lana (mom), confirm before calling her a member."
+  },
+  {
+   "file": "sofa-girl.jpg",
+   "small": "sofa-girl-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_0534.JPG",
+   "crop": null,
+   "shows": "Toddler in pink on the red sofa holding a Herbalife teddy bear",
+   "orientation": "portrait",
+   "size": "1350x1800",
+   "aspect": 0.75,
+   "people": true,
+   "child": true,
+   "slots": [
+    "gabriel-family"
+   ],
+   "score": 3,
+   "note": "Adorable but a CHILD: family use only, needs parent OK, not for marketing slots."
+  },
+  {
+   "file": "gabi-event.jpg",
+   "small": "gabi-event-sm.jpg",
+   "source": "/Users/Gabi/Documents/Codex/2026-10-30/files-mentioned-by-the-user-img/outputs/IMG_7781-spotlight.png",
+   "crop": null,
+   "shows": "Gabi in velvet tux on stage at a gala, big LED portrait behind (his background-dimmed spotlight edit)",
+   "orientation": "portrait",
+   "size": "1350x1800",
+   "aspect": 0.75,
+   "people": true,
+   "child": false,
+   "slots": [
+    "gabriel-journey",
+    "gabriel-hero"
+   ],
+   "score": 4,
+   "note": "Uses the spotlight version he approved (foreground pixel-identical to source)."
+  },
+  {
+   "file": "gabi-family.jpg",
+   "small": "gabi-family-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_0548.jpg",
+   "crop": null,
+   "shows": "Gabi lifting and kissing a toddler inside the club",
+   "orientation": "portrait",
+   "size": "1351x1800",
+   "aspect": 0.751,
+   "people": true,
+   "child": true,
+   "slots": [
+    "gabriel-family"
+   ],
+   "score": 4,
+   "note": "Warm family moment; CHILD, family page only, parent OK needed."
+  },
+  {
+   "file": "gabi-arms-crossed.jpg",
+   "small": "gabi-arms-crossed-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_5251.JPG",
+   "crop": null,
+   "shows": "Gabi in white tee, arms crossed, by the white shelving and windows",
+   "orientation": "portrait",
+   "size": "1350x1800",
+   "aspect": 0.75,
+   "people": true,
+   "child": false,
+   "slots": [
+    "home-founder",
+    "gabriel-hero",
+    "free-scan-side"
+   ],
+   "score": 4,
+   "note": "Clean founder portrait (portrait 3:4), real not AI."
+  },
+  {
+   "file": "consult-handshake.jpg",
+   "small": "consult-handshake-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_5248.jpg",
+   "crop": null,
+   "shows": "Handshake across a white table with laptop and Live Your Best Life sign (consultation)",
+   "orientation": "portrait",
+   "size": "1350x1800",
+   "aspect": 0.75,
+   "people": true,
+   "child": false,
+   "slots": [
+    "free-scan-side",
+    "how-it-works-hero",
+    "visit-hero"
+   ],
+   "score": 4,
+   "note": "Tells the free-scan story; faces mostly away/side."
+  },
+  {
+   "file": "club-sign-duo.jpg",
+   "small": "club-sign-duo-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_3987.JPG",
+   "crop": null,
+   "shows": "Gabi and a man posing under the sign, full green wall, round tables, blue chairs",
+   "orientation": "portrait",
+   "size": "1350x1800",
+   "aspect": 0.75,
+   "people": true,
+   "child": false,
+   "slots": [
+    "visit-hero",
+    "bring-a-friend"
+   ],
+   "score": 4,
+   "note": "Shows the whole club corner straight-on; people small."
+  },
+  {
+   "file": "club-sign-duo-2.jpg",
+   "small": "club-sign-duo-2-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_4159.JPG",
+   "crop": null,
+   "shows": "Gabi and a man in black tee under the sign, YOU GOT THIS board",
+   "orientation": "portrait",
+   "size": "1350x1800",
+   "aspect": 0.75,
+   "people": true,
+   "child": false,
+   "slots": [
+    "visit-hero",
+    "bring-a-friend"
+   ],
+   "score": 3,
+   "note": "Alt of club-sign-duo, slightly stiffer."
+  },
+  {
+   "file": "community-event-wall.jpg",
+   "small": "community-event-wall-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_3883.JPG",
+   "crop": null,
+   "shows": "Group of ~9 guests posing under the sign at an event, tables and white chairs",
+   "orientation": "portrait",
+   "size": "1350x1800",
+   "aspect": 0.75,
+   "people": true,
+   "child": false,
+   "slots": [
+    "home-people",
+    "reviews-moment"
+   ],
+   "score": 3,
+   "note": "Real crowd moment; guests likely non-members, needs consent."
+  },
+  {
+   "file": "club-empty-windows.jpg",
+   "small": "club-empty-windows-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_4155.JPG",
+   "crop": null,
+   "shows": "Empty club interior: big windows, white tables, red sofa corner, shelving",
+   "orientation": "portrait",
+   "size": "1350x1800",
+   "aspect": 0.75,
+   "people": false,
+   "child": false,
+   "slots": [
+    "visit-hero",
+    "how-it-works-hero"
+   ],
+   "score": 3,
+   "note": "No people, safe; a bit clinical and cool."
+  },
+  {
+   "file": "club-life-wide.jpg",
+   "small": "club-life-wide-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_0347.JPG",
+   "crop": null,
+   "shows": "Wide interior with members chatting at round tables, windows, red sofa",
+   "orientation": "landscape",
+   "size": "1800x1350",
+   "aspect": 1.333,
+   "people": true,
+   "child": false,
+   "slots": [
+    "home-life-strip",
+    "visit-hero",
+    "home-people"
+   ],
+   "score": 4,
+   "note": "Natural, candid, shows the space working."
+  },
+  {
+   "file": "club-full-room.jpg",
+   "small": "club-full-room-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_5157.JPG",
+   "crop": null,
+   "shows": "Packed room: ~15 people seated at the tables during a session, green wall right",
+   "orientation": "landscape",
+   "size": "1800x1350",
+   "aspect": 1.333,
+   "people": true,
+   "child": false,
+   "slots": [
+    "home-people",
+    "home-life-strip"
+   ],
+   "score": 4,
+   "note": "Proof the club fills up; faces small."
+  },
+  {
+   "file": "club-full-room-2.jpg",
+   "small": "club-full-room-2-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_5155.JPG",
+   "crop": null,
+   "shows": "Same session from the corner, people at tables, laptop foreground",
+   "orientation": "landscape",
+   "size": "1800x1350",
+   "aspect": 1.333,
+   "people": true,
+   "child": false,
+   "slots": [
+    "home-life-strip"
+   ],
+   "score": 3,
+   "note": "Alt angle, busier foreground."
+  },
+  {
+   "file": "club-entrance.jpg",
+   "small": "club-entrance-sm.jpg",
+   "source": "/Users/Gabi/Downloads/4573D70B-E4D2-4C09-89BB-9303EE14F692.JPG",
+   "crop": null,
+   "shows": "Glass entrance door of the club from the lobby side",
+   "orientation": "portrait",
+   "size": "1012x1800",
+   "aspect": 0.562,
+   "people": false,
+   "child": false,
+   "slots": [
+    "visit-hero"
+   ],
+   "score": 3,
+   "note": "Useful \"find the door\" shot, not beautiful."
+  },
+  {
+   "file": "group-table.jpg",
+   "small": "group-table-sm.jpg",
+   "source": "/Users/Gabi/Downloads/boost_club_community.JPG",
+   "crop": null,
+   "shows": "Gabi selfie with six women around the white table, windows behind",
+   "orientation": "landscape",
+   "size": "1800x1350",
+   "aspect": 1.333,
+   "people": true,
+   "child": false,
+   "slots": [
+    "home-people",
+    "reviews-moment"
+   ],
+   "score": 4,
+   "note": "Warm community table; same source as current real-group."
+  },
+  {
+   "file": "shakes-duo.jpg",
+   "small": "shakes-duo-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_4993.JPG",
+   "crop": null,
+   "shows": "Iced tea and chocolate shake with Herbalife tubs, orange wall",
+   "orientation": "portrait",
+   "size": "1350x1800",
+   "aspect": 0.75,
+   "people": false,
+   "child": false,
+   "slots": [
+    "menu-build"
+   ],
+   "score": 4,
+   "note": "Real counter product shot."
+  },
+  {
+   "file": "shake-pink.jpg",
+   "small": "shake-pink-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_4790.JPG",
+   "crop": null,
+   "shows": "Pink shake in Boost Club cup on white table",
+   "orientation": "portrait",
+   "size": "1350x1800",
+   "aspect": 0.75,
+   "people": false,
+   "child": false,
+   "slots": [
+    "menu-build"
+   ],
+   "score": 3,
+   "note": "Simple, clean."
+  },
+  {
+   "file": "shake-in-hand.jpg",
+   "small": "shake-in-hand-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_4789.JPG",
+   "crop": null,
+   "shows": "Hand holding a chocolate-drizzle shake against orange/green wall",
+   "orientation": "portrait",
+   "size": "1350x1800",
+   "aspect": 0.75,
+   "people": false,
+   "child": false,
+   "slots": [
+    "menu-build",
+    "home-life-strip"
+   ],
+   "score": 4,
+   "note": "Brand colours in frame."
+  },
+  {
+   "file": "shake-banana-choc.jpg",
+   "small": "shake-banana-choc-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_4762.JPG",
+   "crop": null,
+   "shows": "Banana shake with chocolate drizzle, plants and shelving behind",
+   "orientation": "portrait",
+   "size": "1350x1800",
+   "aspect": 0.75,
+   "people": false,
+   "child": false,
+   "slots": [
+    "menu-build"
+   ],
+   "score": 3,
+   "note": "Okay, slight blur background."
+  },
+  {
+   "file": "shake-caramel.jpg",
+   "small": "shake-caramel-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_4759.JPG",
+   "crop": null,
+   "shows": "Caramel shake with whipped top on dark table, orange wall",
+   "orientation": "portrait",
+   "size": "1350x1800",
+   "aspect": 0.75,
+   "people": false,
+   "child": false,
+   "slots": [
+    "menu-build"
+   ],
+   "score": 3,
+   "note": "Moody, a bit dark."
+  },
+  {
+   "file": "shake-whipped.jpg",
+   "small": "shake-whipped-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_9703.jpg",
+   "crop": null,
+   "shows": "Chocolate shake with whipped cream and drizzle, results wall blurred behind",
+   "orientation": "square",
+   "size": "1024x1024",
+   "aspect": 1.0,
+   "people": false,
+   "child": false,
+   "slots": [
+    "menu-build"
+   ],
+   "score": 4,
+   "note": "Tasty; source only 1024 px so not upscaled."
+  },
+  {
+   "file": "shake-pistachio.jpg",
+   "small": "shake-pistachio-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_9688.jpg",
+   "crop": null,
+   "shows": "Pistachio shake with crumble topping",
+   "orientation": "portrait",
+   "size": "896x1195",
+   "aspect": 0.75,
+   "people": false,
+   "child": false,
+   "slots": [
+    "menu-build"
+   ],
+   "score": 3,
+   "note": "Source 1195 px max."
+  },
+  {
+   "file": "shake-cookies.jpg",
+   "small": "shake-cookies-sm.jpg",
+   "source": "/Users/Gabi/Downloads/shake.jpg",
+   "crop": null,
+   "shows": "Cookies shake with crumble and black straw",
+   "orientation": "portrait",
+   "size": "896x1195",
+   "aspect": 0.75,
+   "people": false,
+   "child": false,
+   "slots": [
+    "menu-build"
+   ],
+   "score": 3,
+   "note": "Source 1195 px max."
+  },
+  {
+   "file": "shake-neon-sign.jpg",
+   "small": "shake-neon-sign-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_0574.jpg",
+   "crop": null,
+   "shows": "Chocolate shake in front of the neon \"Live Your Best Life\" sign",
+   "orientation": "portrait",
+   "size": "896x1195",
+   "aspect": 0.75,
+   "people": false,
+   "child": false,
+   "slots": [
+    "menu-build",
+    "home-life-strip"
+   ],
+   "score": 4,
+   "note": "Nice glow; source 1195 px max; neon reads Herbalife."
+  },
+  {
+   "file": "member-shake-selfie.jpg",
+   "small": "member-shake-selfie-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_4914.JPG",
+   "crop": null,
+   "shows": "Member in white polo with shake, thumbs up, Gabi selfie",
+   "orientation": "portrait",
+   "size": "1350x1800",
+   "aspect": 0.75,
+   "people": true,
+   "child": false,
+   "slots": [
+    "reviews-moment"
+   ],
+   "score": 3,
+   "note": "Genuine but selfie framing."
+  },
+  {
+   "file": "friends-selfie.jpg",
+   "small": "friends-selfie-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_5216.JPG",
+   "crop": null,
+   "shows": "Gabi selfie with a young man and woman in the club",
+   "orientation": "portrait",
+   "size": "1350x1800",
+   "aspect": 0.75,
+   "people": true,
+   "child": false,
+   "slots": [
+    "bring-a-friend"
+   ],
+   "score": 3,
+   "note": "Friendly; ordinary selfie."
+  },
+  {
+   "file": "trio-shakes.jpg",
+   "small": "trio-shakes-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_4011.JPG",
+   "crop": null,
+   "shows": "Selfie of Gabi with two men holding shakes under the sign",
+   "orientation": "portrait",
+   "size": "1350x1800",
+   "aspect": 0.75,
+   "people": true,
+   "child": false,
+   "slots": [
+    "bring-a-friend",
+    "reviews-moment"
+   ],
+   "score": 3,
+   "note": "Sign mirrored in source (front camera)."
+  },
+  {
+   "file": "table-four.jpg",
+   "small": "table-four-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_4929.JPG",
+   "crop": null,
+   "shows": "Landscape selfie: Gabi and three guys at a round table, windows",
+   "orientation": "landscape",
+   "size": "1800x1350",
+   "aspect": 1.333,
+   "people": true,
+   "child": false,
+   "slots": [
+    "home-people",
+    "bring-a-friend"
+   ],
+   "score": 3,
+   "note": "Busy but real."
+  },
+  {
+   "file": "member-table.jpg",
+   "small": "member-table-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_4140.JPG",
+   "crop": null,
+   "shows": "Young woman member at table with drink, Gabi selfie",
+   "orientation": "portrait",
+   "size": "1350x1800",
+   "aspect": 0.75,
+   "people": true,
+   "child": false,
+   "slots": [
+    "reviews-moment"
+   ],
+   "score": 3,
+   "note": "Good expression; selfie framing."
+  },
+  {
+   "file": "neon-sign-selfie.jpg",
+   "small": "neon-sign-selfie-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_9939.JPG",
+   "crop": null,
+   "shows": "Member at table with neon Live Your Best Life sign, Gabi selfie",
+   "orientation": "portrait",
+   "size": "1350x1800",
+   "aspect": 0.75,
+   "people": true,
+   "child": false,
+   "slots": [
+    "reviews-moment",
+    "free-scan-side"
+   ],
+   "score": 3,
+   "note": "Warm lamp light; sign mirrored."
+  },
+  {
+   "file": "club-wide-selfie.jpg",
+   "small": "club-wide-selfie-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_5465.JPG",
+   "crop": null,
+   "shows": "Wide selfie, Gabi with members around tables and green wall",
+   "orientation": "landscape",
+   "size": "1800x1350",
+   "aspect": 1.333,
+   "people": true,
+   "child": false,
+   "slots": [
+    "home-life-strip"
+   ],
+   "score": 3,
+   "note": "Shows the room busy."
+  },
+  {
+   "file": "park-walk.jpg",
+   "small": "park-walk-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_5722 2.jpg",
+   "crop": null,
+   "shows": "Two young men walking toward camera on a park path, autumn trees (Kiseleff)",
+   "orientation": "portrait",
+   "size": "1350x1800",
+   "aspect": 0.75,
+   "people": true,
+   "child": false,
+   "slots": [
+    "boost-fit-hero",
+    "boost-fit-tiles"
+   ],
+   "score": 4,
+   "note": "Real Boost Fit walk feel; overcast."
+  },
+  {
+   "file": "park-walk-2.jpg",
+   "small": "park-walk-2-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_5721.jpg",
+   "crop": null,
+   "shows": "Same walk, slightly further",
+   "orientation": "portrait",
+   "size": "1350x1800",
+   "aspect": 0.75,
+   "people": true,
+   "child": false,
+   "slots": [
+    "boost-fit-tiles"
+   ],
+   "score": 3,
+   "note": "Alt of park-walk."
+  },
+  {
+   "file": "park-selfie.jpg",
+   "small": "park-selfie-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_5712.JPG",
+   "crop": null,
+   "shows": "Landscape selfie of three guys in the park, Gabi in red hoodie",
+   "orientation": "landscape",
+   "size": "1800x1350",
+   "aspect": 1.333,
+   "people": true,
+   "child": false,
+   "slots": [
+    "boost-fit-tiles"
+   ],
+   "score": 3,
+   "note": "Fun, wide-angle distortion."
+  },
+  {
+   "file": "park-trio.jpg",
+   "small": "park-trio-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_5711.JPG",
+   "crop": null,
+   "shows": "Portrait selfie of three guys on park path, shaka sign",
+   "orientation": "portrait",
+   "size": "1350x1800",
+   "aspect": 0.75,
+   "people": true,
+   "child": false,
+   "slots": [
+    "boost-fit-tiles"
+   ],
+   "score": 3,
+   "note": "Casual."
+  },
+  {
+   "file": "gabi-stage-mic.jpg",
+   "small": "gabi-stage-mic-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_0400.jpg",
+   "crop": null,
+   "shows": "Gabi in brown suit speaking with microphone at an event",
+   "orientation": "portrait",
+   "size": "1007x1381",
+   "aspect": 0.729,
+   "people": true,
+   "child": false,
+   "slots": [
+    "gabriel-journey"
+   ],
+   "score": 3,
+   "note": "Source only 1381 px; good moment."
+  },
+  {
+   "file": "gabi-gala-group.jpg",
+   "small": "gabi-gala-group-sm.jpg",
+   "source": "/Users/Gabi/Downloads/IMG_7766.JPG",
+   "crop": null,
+   "shows": "Gabi with parents and team at a gala stage, LED screen behind",
+   "orientation": "portrait",
+   "size": "1350x1800",
+   "aspect": 0.75,
+   "people": true,
+   "child": false,
+   "slots": [
+    "gabriel-family",
+    "gabriel-journey"
+   ],
+   "score": 4,
+   "note": "Family plus Herbalife leaders; confirm all adults OK."
+  }
+ ]
+}

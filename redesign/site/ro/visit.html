@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Contact · Boost Club</title>
+<meta name="description" content="Boost Club, Strada Sevastopol 24, Sector 1, București. La 5 minute pe jos de Piața Victoriei.">
+<meta property="og:title" content="Contact · Boost Club"><meta property="og:description" content="Boost Club, Strada Sevastopol 24, Sector 1, București. La 5 minute pe jos de Piața Victoriei."><meta property="og:image" content="../brand/og.jpg"><meta name="theme-color" content="#0B2B22">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Cormorant:ital,wght@0,400;0,500;1,400;1,500;1,600&family=Anton&family=Oswald:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../site.css"><link rel="stylesheet" href="../kit/kit.css">
+<script>try{if(sessionStorage.getItem('kcur')){document.documentElement.classList.add('k-in');sessionStorage.removeItem('kcur')}}catch(e){}</script>
+<style>
+/* hero: the full room stays soft on purpose */
+.vs-hero{min-height:max(100svh,640px)}
+.vs-hero .h-xl{font-size:clamp(64px,10vw,180px);max-width:11ch}
+.vs-hero .h-xl .it{color:var(--brass)}
+.vs-hero .k-label{margin-bottom:26px}
+.vs-hero .vs-sub{margin-top:28px;font-size:clamp(18px,1.6vw,22px);line-height:1.45;max-width:40ch;color:rgba(244,239,230,.84)}
+.vs-hero .btn-ghost{color:var(--cream)}
+
+/* two real photos, edge to edge, nothing cropped */
+.vs-strip{display:grid;grid-template-columns:minmax(0,1.3333fr) minmax(0,.75fr);gap:4px;background:var(--bone)}
+.vs-strip figure{position:relative;margin:0;overflow:hidden;background:var(--pine)}
+.vs-strip figure:first-child{aspect-ratio:4/3}
+.vs-strip img{width:100%;height:100%;object-fit:cover}
+@media (max-width:760px){.vs-strip{grid-template-columns:minmax(0,1fr)}.vs-strip figure+figure{aspect-ratio:4/5}}
+
+/* contact + hours */
+.vs-ig{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(36px,6vw,100px);align-items:start}
+.vs-addr .k-h{margin-top:22px;font-size:clamp(42px,5.4vw,88px)}
+.vs-addr .k-h .it{display:block}
+.vs-links{margin-top:clamp(36px,4vw,56px);border-top:1px solid var(--line-l)}
+.vs-l{display:grid;grid-template-columns:130px minmax(0,1fr) auto;align-items:center;gap:16px;padding:22px 0;border-bottom:1px solid var(--line-l);text-decoration:none;transition:padding .45s var(--ease)}
+.vs-l span{font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--brass-ink)}
+.vs-l b{font-size:clamp(22px,2.3vw,34px);font-weight:600;letter-spacing:-.035em;line-height:1.1;overflow-wrap:anywhere}
+.vs-l i{font-style:normal;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;box-shadow:inset 0 0 0 1px var(--line-l);font-size:18px;transition:background .3s var(--ease),color .3s var(--ease),transform .4s var(--ease)}
+@media (hover:hover){.vs-l:hover{padding-left:12px}.vs-l:hover i{background:var(--bottle);color:var(--cream);transform:rotate(45deg)}}
+.vs-addr .row{margin-top:32px}
+@media (max-width:560px){.vs-l{grid-template-columns:minmax(0,1fr) auto;gap:6px 14px}.vs-l span{grid-column:1/-1}.vs-l i{grid-row:2;grid-column:2}}
+.vs-hours{background:var(--bottle);color:var(--cream);border-radius:6px;padding:clamp(26px,3vw,44px)}
+.vs-hr{display:grid;grid-template-columns:minmax(0,1fr);gap:6px;padding:20px 0;border-bottom:1px solid var(--line-d);position:relative}
+.vs-hours .k-label+.vs-hr{margin-top:22px;border-top:1px solid var(--line-d)}
+.vs-hr span{font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--sage)}
+.vs-hr b{font-size:clamp(30px,3.1vw,48px);font-weight:600;letter-spacing:-.045em;line-height:1;font-variant-numeric:tabular-nums}
+.vs-hr.on span{color:var(--brass)}
+.vs-hr.on::before{content:'';position:absolute;right:0;top:24px;width:10px;height:10px;border-radius:50%;background:var(--brass);box-shadow:0 0 0 6px rgba(217,178,106,.2)}
+.vs-hours p{margin:22px 0 0;color:rgba(244,239,230,.78)}
+.vs-hours .vs-rv{margin-top:14px;font-size:13px;color:var(--brass)}
+@media (max-width:900px){.vs-ig{grid-template-columns:minmax(0,1fr)}}
+
+/* directions: a line diagram, not a map */
+.vs-route{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:0;padding:clamp(36px,5vw,72px) clamp(24px,4vw,64px);border-radius:6px;background:radial-gradient(90% 120% at 15% 0%,rgba(47,138,99,.35),transparent 60%),radial-gradient(70% 100% at 100% 100%,rgba(217,178,106,.14),transparent 60%),var(--pine);overflow:hidden}
+.vs-stop{display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;width:clamp(170px,19vw,250px)}
+.vs-dot{display:grid;place-items:center;width:clamp(72px,7vw,100px);height:clamp(72px,7vw,100px);border-radius:50%;flex:none}
+.vs-dot.m{background:var(--night);box-shadow:inset 0 0 0 3px var(--brass);color:var(--brass);font:600 clamp(30px,3vw,42px)/1 var(--display);letter-spacing:-.04em}
+.vs-dot.b{background:var(--cream);color:var(--leaf)}
+.vs-dot.b{position:relative}.vs-dot.b svg{width:38%;height:auto}
+.vs-dot.b::after{content:'';position:absolute;inset:0;border-radius:50%;animation:vspulse 2.6s ease-out infinite}
+@keyframes vspulse{from{box-shadow:0 0 0 0 rgba(244,239,230,.45)}to{box-shadow:0 0 0 26px rgba(244,239,230,0)}}
+.vs-stop b{text-wrap:balance;font-size:clamp(17px,1.5vw,22px);font-weight:600;letter-spacing:-.02em;line-height:1.2}
+.vs-stop small{display:block;margin-top:4px;font-size:13px;color:var(--sage)}
+.vs-line{position:relative;height:clamp(72px,7vw,100px);align-self:start;margin:0 -12px}
+.vs-line::before{content:'';position:absolute;left:0;right:0;top:50%;height:4px;margin-top:-2px;background:repeating-linear-gradient(90deg,var(--brass) 0 8px,transparent 8px 20px);background-size:20px 4px;animation:vswalk 1.2s linear infinite;opacity:.9;transform-origin:0 50%}
+.vs-line i{position:absolute;top:50%;left:0;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:var(--cream);box-shadow:0 0 0 6px rgba(244,239,230,.16);animation:vsgo 4.2s cubic-bezier(.45,0,.55,1) infinite}
+.vs-chip{position:absolute;left:50%;bottom:calc(50% + 22px);transform:translateX(-50%);display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;background:rgba(7,30,23,.72);backdrop-filter:blur(8px);color:var(--cream);font-size:13px;font-weight:600;white-space:nowrap}
+.vs-chip svg{width:14px;height:14px;flex:none;color:var(--brass)}
+@keyframes vswalk{to{background-position:20px 0}}
+@keyframes vsgo{0%{left:0;opacity:0}8%{opacity:1}92%{opacity:1}100%{left:100%;opacity:0}}
+@media (max-width:760px){
+  .vs-route{grid-template-columns:minmax(0,1fr);justify-items:center;padding:36px 20px}
+  .vs-stop{width:auto}
+  .vs-line{width:100px;height:190px;margin:10px 0;align-self:auto}
+  .vs-line::before{left:50%;right:auto;top:0;bottom:0;width:4px;height:auto;margin:0 0 0 -2px;background:repeating-linear-gradient(180deg,var(--brass) 0 8px,transparent 8px 20px);background-size:4px 20px;animation-name:vswalkv}
+  .vs-line i{left:50%;top:0;animation-name:vsgov}
+  .vs-chip{left:50%;bottom:auto;top:50%;transform:translate(-50%,-50%);white-space:normal;max-width:min(240px,80%);text-align:left}
+}
+@keyframes vswalkv{to{background-position:0 20px}}
+@keyframes vsgov{0%{top:0;opacity:0}8%{opacity:1}92%{opacity:1}100%{top:100%;opacity:0}}
+.vs-ways{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;gap:clamp(24px,4vw,64px);align-items:start;margin-top:clamp(36px,4vw,56px)}
+.vs-way{display:grid;grid-template-columns:56px minmax(0,1fr);gap:20px;padding-top:24px;border-top:1px solid var(--line-d)}
+.vs-ic{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(217,178,106,.6);color:var(--brass);font:600 22px/1 var(--display)}
+.vs-ic svg{width:26px;height:26px}
+.vs-k{display:block;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--brass)}
+.vs-way h3{margin-top:10px;font-size:clamp(22px,2vw,30px);letter-spacing:-.03em;line-height:1.1}
+.vs-way p{margin:10px 0 0;color:rgba(244,239,230,.74);max-width:40ch}
+.vs-ways>.btn{align-self:end}
+@media (max-width:1000px){.vs-ways{grid-template-columns:minmax(0,1fr)}.vs-ways>.btn{justify-self:start}}
+
+/* walk-in: the door itself */
+.vs-cta .k-split{grid-template-columns:minmax(0,.7fr) minmax(0,1fr)}
+.vs-cta .k-media{aspect-ratio:3/4.3}
+.vs-cta .k-media img{object-position:50% 55%}
+.vs-cta .k-h{font-size:clamp(46px,6vw,100px)}
+.vs-cta .k-lead{color:var(--stone)}
+@media (max-width:900px){.vs-cta .k-split{grid-template-columns:minmax(0,1fr)}.vs-cta .k-media{aspect-ratio:4/5;max-height:72svh;width:100%}}
+</style><style id="i18n-css">/* RO/RU page overrides, injected into ro/*.html and ru/*.html by pages_zz_i18n.py (English pages never see this).
+   Blocks between the @ro / @ru markers apply to that language only. */
+/* diacritics (Ă Î Ș Ț) and Cyrillic Й Ё need a little more room than the .86 English line-height */
+.loud{line-height:.95}
+/* longer words: a word that still cannot fit breaks instead of running off the screen */
+h1,h2,h3,.loud{overflow-wrap:break-word}
+/* the longest signature name (Strawberry Cheesecake) fits its card column */
+.ccard .nm{font-size:clamp(56px,8vw,160px)}
+/* Boost Fit: activity cards and section heads, sized for longer words */
+.fgrid b{font-size:clamp(20px,2.3vw,40px);line-height:1.05}
+.fh2{font-size:clamp(44px,6.4vw,110px)}
+
+.fh{font-size:clamp(64px,14vw,250px)}</style></head>
+<body>
+<div class="k-curtain" aria-hidden="true"><img src="../img/wordmark-cream-hd.png" alt=""></div>
+<a class="skip" href="#main">Sari la conținut</a>
+<div id="bc" data-page="" hidden></div>
+<main id="main">
+<section class="k-band soft vs-hero" data-slot="REAL · the club, full room (kept soft on purpose)"><img src="../img/his/full-room.webp" alt="" aria-hidden="true"><div class="wrap gut">
+  <span class="k-label">Locație</span>
+  <h1 class="h-xl">Vino la Boost <span class="it">Club.</span></h1>
+  <p class="vs-sub">Strada Sevastopol 24, Sector 1, în centrul Bucureștiului.</p>
+  <div class="row"><a class="btn btn-brass" href="https://www.google.com/maps/dir/?api=1&destination=Strada+Sevastopol+24+Bucuresti" target="_blank" rel="noopener">Deschide indicațiile de orientare <span class="ar">→</span></a><a class="btn btn-ghost" href="#" data-reserve>Vreau scanarea gratuită</a></div>
+</div></section>
+
+<section class="vs-strip">
+  <figure data-slot="REAL · the club by day" data-k="clip"><img src="../img/his/day-room.webp" alt="Salonul Boost Club ziua, cu fotoliul roșu, mesele rotunde și intrarea din sticlă" loading="lazy"></figure>
+  <figure data-slot="A shake on the counter" data-k="clip"><img src="../img/wet/pistachio-dream.jpg" alt="Un shake Pistachio Dream rece pe bar, la Boost Club" loading="lazy" style="object-position:50% 45%"></figure>
+</section>
+
+<section class="sec gut"><div class="wrap vs-ig">
+  <div class="vs-addr">
+    <span class="k-label">Informații de contact</span>
+    <h2 class="k-h" data-k="lines">Strada Sevastopol 24 <span class="it">Sector 1, București.</span></h2>
+    <div class="vs-links">
+      <a class="vs-l" href="tel:+40726205752"><span>Telefon</span><b>+40 726 205 752</b><i aria-hidden="true">↗</i></a>
+      <a class="vs-l" href="https://wa.me/40726205752?text=Bun%C4%83%21%20Vreau%20s%C4%83%20rezerv%20o%20consulta%C8%9Bie%20gratuit%C4%83." target="_blank" rel="noopener"><span>WhatsApp</span><b>Scrie-ne</b><i aria-hidden="true">↗</i></a>
+      <a class="vs-l" href="mailto:gneshto@gmail.com"><span>Email</span><b>gneshto@gmail.com</b><i aria-hidden="true">↗</i></a>
+    </div>
+    <div class="row"><a class="btn btn-bottle" href="https://www.google.com/maps/dir/?api=1&destination=Strada+Sevastopol+24+Bucuresti" target="_blank" rel="noopener">Deschide indicațiile de orientare <span class="ar">→</span></a></div>
+  </div>
+  <aside class="vs-hours">
+    <span class="k-label">Program</span>
+    <div class="vs-hr" data-days="1,2,3,4,5"><span>Luni – Vineri</span><b>07:00 – 20:00/21:00</b></div>
+    <div class="vs-hr" data-days="6"><span>Sâmbătă</span><b>Închis</b></div>
+    <div class="vs-hr" data-days="0"><span>Duminică</span><b>10:00 – 18:00</b></div>
+    <p>Walk-in binevenit în timpul programului. Pentru garanția locului, rezervă online sau pe WhatsApp.</p>
+    <p class="vs-rv">5,0 / 5 · 169 recenzii Google · Situație la 31 octombrie 2026</p>
+  </aside>
+</div></section>
+
+<section class="sec on-dark gut"><div class="wrap">
+  <div class="k-head"><div><span class="k-label">Cum ajungi</span><h2 class="k-h" data-k="lines">De la Piața Victoriei <span class="it">la Boost Club.</span></h2></div></div>
+  <div class="vs-route">
+    <div class="vs-stop"><span class="vs-dot m" aria-hidden="true">M</span><b>Piața Victoriei · M1 / M2</b></div>
+    <div class="vs-line" aria-hidden="true"><i></i></div>
+    <div class="vs-stop"><span class="vs-dot b"><svg viewBox="0 0 24 25.7" aria-hidden="true"><path fill="currentColor" d="M18.62 0h2.56C23.06 0 24 5.98 24 9.22v2.48c0 7.94-6.92 14-18.62 14H2.82C.85 25.7 0 19.64 0 17.08v-3.59C0 5.98 6.83 0 18.62 0Z"/></svg></span><b>Boost Club</b><small>Strada Sevastopol 24</small></div>
+    <span class="vs-chip"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13" cy="4" r="2"/><path d="M10 21l2-6 3 3v3M8 12l3-4 3 2 3 1M11 8l-1 5"/></svg><span>Pe jos de la Piața Victoriei</span></span>
+  </div>
+  <div class="vs-ways" data-k="rise">
+    <div class="vs-way"><span class="vs-ic" aria-hidden="true">M</span><div><span class="vs-k">Metrou</span><h3>Piața Victoriei · M1 / M2</h3><p>Stația Piața Victoriei este deservită de liniile M1 și M2. Deschide traseul pe jos în Google Maps.</p></div></div>
+    <div class="vs-way"><span class="vs-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16V11l2-5h10l2 5v5M3 16h18v3h-3v-1H6v1H3z"/><circle cx="7.5" cy="13.5" r="1"/><circle cx="16.5" cy="13.5" r="1"/></svg></span><div><span class="vs-k">Mașina</span><h3>Cu mașina</h3><p>Introdu Strada Sevastopol 24, Sector 1, București în aplicația de navigație. Verifică regulile și disponibilitatea parcării la sosire.</p></div></div>
+    <a class="btn btn-brass" href="https://www.google.com/maps/dir/?api=1&destination=Strada+Sevastopol+24+Bucuresti" target="_blank" rel="noopener">Deschide indicațiile de orientare <span class="ar">→</span></a>
+  </div>
+</div></section>
+
+<section class="sec oat gut vs-cta"><div class="wrap k-split">
+  <div class="k-media" data-k="clip" data-slot="REAL · Gabriel welcoming you at the door"><img src="../img/his/gabi-welcome.jpg" alt="Gabriel ține ușa deschisă și îi întâmpină pe oaspeți la Boost Club" loading="lazy" style="object-position:45% 40%"><span class="k-cap">Intrarea</span></div>
+  <div class="k-txt"><h2 class="k-h" data-k="lines">Poți veni și fără <span class="it">programare.</span></h2><p class="k-lead">Dacă ești în zonă și ușa e deschisă, intră oricând în program. Dacă vrei garanția că Gabriel este disponibil pentru tine, rezervă online sau pe WhatsApp.</p><div class="row"><a class="btn btn-bottle" href="#" data-reserve>Vreau scanarea gratuită <span class="ar">→</span></a><a class="btn btn-ghost" href="https://wa.me/40726205752?text=Bun%C4%83%21%20Vreau%20s%C4%83%20rezerv%20o%20consulta%C8%9Bie%20gratuit%C4%83." target="_blank" rel="noopener">Scrie pe WhatsApp</a></div></div>
+</div></section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="../i18n/ro-ui.js"></script>
+<script src="../site.js"></script>
+<script src="../kit/kit.js"></script>
+<script src="../kit/scan.js"></script>
+<script>
+(function(){
+
+  try{ var wd=new Intl.DateTimeFormat('en-US',{timeZone:'Europe/Bucharest',weekday:'short'}).format(new Date());
+    var dn={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[wd];
+    document.querySelectorAll('.vs-hr[data-days]').forEach(function(r){ if(r.dataset.days.split(',').indexOf(String(dn))>-1){ r.classList.add('on'); r.setAttribute('aria-current','date'); } });
+  }catch(e){}
+
+  if(!window.gsap||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  gsap.registerPlugin(ScrollTrigger); gsap.config({nullTargetWarn:false});
+  gsap.from('.phero .h-xl',{y:40,opacity:0,duration:1.1,ease:'power4.out'});
+  gsap.from('.phero .sub,.phero .row,.phero .eyebrow',{y:18,opacity:0,duration:.9,stagger:.07,ease:'power3.out',delay:.2});
+  // framed photos open toward full width as they pass, the concept-6 move
+  gsap.utils.toArray('.pframe').forEach(function(f){ gsap.fromTo(f,{clipPath:'inset(0% 7% 0% 7% round 6px)'},{clipPath:'inset(0% 0% 0% 0% round 0px)',ease:'none',scrollTrigger:{trigger:f,start:'top 85%',end:'center 45%',scrub:true}}); gsap.from(f.querySelector('img'),{scale:1.15,ease:'none',scrollTrigger:{trigger:f,start:'top bottom',end:'bottom top',scrub:true}}); });
+  gsap.utils.toArray('.ruled li,.quotes figure').forEach(function(el){ gsap.from(el,{y:24,opacity:0,duration:.8,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%'}}); });
+
+  gsap.from('.vs-hero .vs-sub,.vs-hero .row',{y:20,opacity:0,duration:1,stagger:.08,ease:'power3.out',delay:.3});
+  gsap.from('.vs-hero .h-xl',{y:40,opacity:0,duration:1.1,ease:'power4.out'});
+  gsap.from('.vs-stop',{y:24,opacity:0,duration:.9,stagger:.25,ease:'power3.out',scrollTrigger:{trigger:'.vs-route',start:'top 80%'}});
+  gsap.from('.vs-l,.vs-hr',{y:22,opacity:0,duration:.8,stagger:.06,ease:'power3.out',scrollTrigger:{trigger:'.vs-ig',start:'top 80%'}});
+
+})();
+</script>
+</body></html>

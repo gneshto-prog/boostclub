@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Boost Fit · Boost Club</title>
+<meta name="description" content="Boost Fit, echipa de antrenament a Boost Club: duminica la 09:00 în Parcul Kiseleff, apoi lecția de nutriție și shake-urile la club. Orice nivel. Intră în echipă pe WhatsApp.">
+<meta property="og:title" content="Boost Fit · Boost Club"><meta property="og:description" content="Boost Fit, echipa de antrenament a Boost Club: duminica la 09:00 în Parcul Kiseleff, apoi lecția de nutriție și shake-urile la club. Orice nivel. Intră în echipă pe WhatsApp."><meta property="og:image" content="../brand/og.jpg"><meta name="theme-color" content="#0B2B22">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Cormorant:ital,wght@0,400;0,500;1,400;1,500;1,600&family=Anton&family=Oswald:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../site.css"><link rel="stylesheet" href="../kit/kit.css">
+<script>try{if(sessionStorage.getItem('kcur')){document.documentElement.classList.add('k-in');sessionStorage.removeItem('kcur')}}catch(e){}</script>
+<style>
+@font-face{font-family:"Archivo Black";src:url(../bf/fonts/archivo-black-latin.woff2) format("woff2");font-weight:400;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Archivo Black";src:url(../bf/fonts/archivo-black-latin-ext.woff2) format("woff2");font-weight:400;font-display:swap;unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:Poppins;src:url(../bf/fonts/poppins-400-latin.woff2) format("woff2");font-weight:400;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Poppins;src:url(../bf/fonts/poppins-400-latin-ext.woff2) format("woff2");font-weight:400;font-display:swap;unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:Poppins;src:url(../bf/fonts/poppins-500-latin.woff2) format("woff2");font-weight:500;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Poppins;src:url(../bf/fonts/poppins-500-latin-ext.woff2) format("woff2");font-weight:500;font-display:swap;unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:Poppins;src:url(../bf/fonts/poppins-600-latin.woff2) format("woff2");font-weight:600;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Poppins;src:url(../bf/fonts/poppins-600-latin-ext.woff2) format("woff2");font-weight:600;font-display:swap;unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"IBM Plex Mono";src:url(../bf/fonts/ibm-plex-mono-500-latin.woff2) format("woff2");font-weight:500;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"IBM Plex Mono";src:url(../bf/fonts/ibm-plex-mono-500-latin-ext.woff2) format("woff2");font-weight:500;font-display:swap;unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+
+/* ---------- Boost Fit world: black / white / club green ---------- */
+body{--bf-night:#050505;--bf-deep:#0A0A0A;--bf-green:#0D5645;--bf-mid:#11705A;--bf-hi:#4FB38A;--bf-dim:#B5BDB9;--bf-rule:rgba(255,255,255,.14);--bf-card:rgba(255,255,255,.04);
+  background:var(--bf-deep);color:#fff;font-family:Poppins,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.05;mix-blend-mode:screen;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>")}
+.k-curtain{background:var(--bf-deep)!important}.k-curtain img{content:url(../bf/boostfit-logo.svg);width:min(62vw,420px)!important}
+::selection{background:var(--bf-green);color:#fff}
+.bft-d{font-family:"Archivo Black",Impact,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:-.025em;line-height:.95}
+.bft-m{font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-weight:500;font-variant-numeric:tabular-nums}
+.bft-blk{display:inline-block;background:var(--bf-green);color:#fff;padding:.02em .16em .04em .14em;margin:0 .02em;transform:skewX(-12deg)}
+.bft-blk>span{display:inline-block;transform:skewX(12deg)}
+.bft-eye{font-size:11px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--bf-hi);margin:0 0 14px;display:flex;align-items:center;gap:10px}
+.bft-eye::before{content:"";width:22px;height:2px;background:var(--bf-hi);transform:skewX(-12deg)}
+.bft-wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.bft-sec{padding:clamp(76px,10vw,128px) 0;position:relative;background:var(--bf-deep)}
+.bft-night{background:var(--bf-night)}
+.bft-head{display:grid;gap:16px;margin-bottom:clamp(30px,4vw,48px)}
+@media(min-width:860px){.bft-head{grid-template-columns:1.15fr 1fr;align-items:end;gap:48px}}
+.bft-head h2{font-size:clamp(36px,6.4vw,84px);margin:0;color:#fff}
+.bft-head h2::after{content:"";display:block;width:72px;height:10px;background:var(--bf-green);margin-top:18px;transform:skewX(-12deg)}
+.bft-head>p{margin:0;color:var(--bf-dim);font-size:clamp(15px,1.5vw,18px);max-width:46ch}
+
+/* buttons: the angled cut of the logo */
+.bft-btn{display:inline-flex;align-items:center;gap:10px;padding:17px 32px;font-family:"Archivo Black",Impact,sans-serif;font-size:15px;letter-spacing:.02em;text-transform:uppercase;text-decoration:none;color:#fff;border:0;clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%);transition:background .2s,transform .2s,box-shadow .2s;white-space:nowrap}
+.bft-btn svg{width:18px;height:18px;flex:none}
+.bft-btn:active{transform:scale(.98)}
+.bft-g{background:var(--bf-green)}.bft-g:hover{background:var(--bf-mid)}
+.bft-ghost{background:rgba(255,255,255,.03);box-shadow:inset 0 0 0 2px rgba(255,255,255,.55)}.bft-ghost:hover{background:rgba(255,255,255,.1);box-shadow:inset 0 0 0 2px #fff}
+.bft-btn:focus-visible{outline:2px solid var(--bf-hi);outline-offset:4px}
+
+/* top bar */
+.bft-bar{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px clamp(16px,3vw,32px);padding-top:max(12px,env(safe-area-inset-top));background:rgba(10,10,10,.6);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08);transition:background .3s}
+.bft-bar.solid{background:rgba(5,5,5,.92)}
+.bft-home img{height:24px;width:auto;display:block}
+.bft-right{display:flex;align-items:center;gap:16px}
+.bft-club{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--bf-dim);text-decoration:none;display:none}
+.bft-club:hover{color:#fff}
+@media(min-width:600px){.bft-club{display:inline}}
+.bft-lang{display:flex;padding:3px;background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);clip-path:polygon(6px 0,100% 0,calc(100% - 6px) 100%,0 100%)}
+.bft-lang a,.bft-lang b{display:block;padding:6px 13px;font-family:"Archivo Black",sans-serif;font-weight:400;font-size:11px;letter-spacing:.1em;color:var(--bf-dim);text-decoration:none;clip-path:polygon(5px 0,100% 0,calc(100% - 5px) 100%,0 100%)}
+.bft-lang a:hover{color:#fff}
+.bft-lang b{background:var(--bf-green);color:#fff}
+
+/* hero */
+.bft-hero{position:relative;min-height:100svh;display:grid;place-items:center;text-align:center;padding:96px 20px 64px;overflow:hidden;background:radial-gradient(120% 70% at 50% 100%,rgba(13,86,69,.6) 0%,rgba(13,86,69,0) 60%),var(--bf-deep)}
+.bft-hph{position:absolute;inset:0}
+.bft-hph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 34%;transform:scale(1.06)}
+.bft-hph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.62) 0,rgba(10,10,10,.5) 38%,rgba(10,10,10,.78) 74%,var(--bf-deep) 100%),radial-gradient(90% 60% at 50% 100%,rgba(13,86,69,.45),transparent 70%)}
+.bft-hsym{position:absolute;width:min(130vw,980px);left:-30%;bottom:-34%;opacity:.05;transform:rotate(-8deg);pointer-events:none}
+.bft-hin{position:relative;z-index:2;max-width:1000px}
+.wmhero{display:block;width:min(86vw,620px);height:auto;overflow:visible;margin:0 auto 26px}
+@keyframes bfIn{from{transform:translateX(var(--dx));opacity:0}60%{opacity:1}to{transform:none;opacity:1}}
+.wmhero .lb{--dx:-140px}.wmhero .lf{--dx:140px}.wmhero .lc{--dx:-260px}
+.wmhero g.a{animation:bfIn .65s cubic-bezier(.2,.9,.25,1.08) both;animation-delay:calc(var(--d) * 1ms + 250ms)}
+.bft-when{display:inline-flex;align-items:center;gap:12px;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%);box-shadow:inset 0 0 0 1px rgba(79,179,138,.55);padding:9px 22px 9px 18px;background:rgba(4,30,23,.66);font-family:"IBM Plex Mono",monospace;font-weight:500;font-size:clamp(12px,1.5vw,15px);letter-spacing:.18em;text-transform:uppercase;color:var(--bf-hi);margin-bottom:24px}
+.bft-when .dot{width:8px;height:8px;border-radius:50%;background:var(--bf-hi);box-shadow:0 0 0 4px rgba(79,179,138,.2);animation:bfPulse 2.4s ease-in-out infinite}
+@keyframes bfPulse{50%{box-shadow:0 0 0 9px rgba(79,179,138,0)}}
+.bft-h1{font-size:clamp(46px,10vw,132px);margin:0;color:#fff}
+.bft-h1>span:first-child{display:block}
+.bft-tag{font-size:clamp(16px,1.8vw,21px);max-width:36ch;margin:24px auto 0;line-height:1.5;color:#fff}
+.bft-tag b{font-weight:600;color:var(--bf-hi)}
+.bft-ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:32px}
+.bft-proof{margin:22px 0 0;font-size:13px}
+.bft-proof a{color:var(--bf-hi);text-decoration:none;font-weight:600}.bft-proof a:hover{text-decoration:underline}
+.bft-dates{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;margin:14px 0 0;font-family:"IBM Plex Mono",monospace;font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--bf-dim)}
+.bft-dates .cal{color:var(--bf-hi);text-decoration:none}.bft-dates .cal:hover{text-decoration:underline}
+.bft-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:36px auto 0;max-width:780px}
+@media(min-width:640px){.bft-stats{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.bft-stats>div{border:1px solid var(--bf-rule);border-top:3px solid var(--bf-green);padding:16px 10px;background:rgba(10,10,10,.5);backdrop-filter:blur(6px)}
+.bft-stats b{display:block;font-size:clamp(26px,3.4vw,36px);line-height:1;color:#fff;font-weight:500}
+.bft-stats b i{font-style:normal;color:var(--bf-hi)}
+.bft-stats .bft-kis{font-size:clamp(17px,2.2vw,23px);line-height:1.5}
+.bft-stats span{display:block;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--bf-dim);margin-top:8px}
+
+/* green ticker */
+.bft-mq{background:var(--bf-green);overflow:hidden;white-space:nowrap;padding:16px 0;transform:skewY(-1.2deg);margin:-10px 0;position:relative;z-index:3}
+.bft-mtr{display:inline-flex;align-items:center;gap:28px;animation:bfMq 34s linear infinite;padding-right:28px}
+.bft-mq span{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:clamp(22px,3vw,38px);color:#fff;letter-spacing:-.01em}
+.bft-chev{width:clamp(26px,3vw,38px);height:auto;color:#fff;flex:none}
+@keyframes bfMq{to{transform:translateX(-50%)}}
+
+/* what we do */
+.bft-acts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media(min-width:960px){.bft-acts{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.bft-act{margin:0;background:var(--bf-card);border:1px solid var(--bf-rule);border-left:4px solid var(--bf-green);display:flex;flex-direction:column;transition:border-color .3s,transform .3s}
+.bft-act:hover{border-color:rgba(79,179,138,.5);border-left-color:var(--bf-hi);transform:translateY(-3px)}
+.bft-actm{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--bf-night)}
+.bft-actm img,.bft-actm video{width:100%;height:100%;object-fit:cover;display:block;transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+.bft-act:hover .bft-actm img{transform:scale(1.04)}
+.bft-art-wrap{background:radial-gradient(80% 70% at 30% 20%,rgba(13,86,69,.55),transparent 70%),var(--bf-night)}
+.bft-art{position:absolute;inset:0;width:100%;height:100%}
+.bft-arc{transition:stroke-dasharray 1.4s cubic-bezier(.2,.8,.2,1)}
+.bft-act.bft-seen .bft-arc{stroke-dasharray:302 453}
+.bft-live{position:absolute;left:12px;top:12px;font-family:"Archivo Black",sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:var(--bf-green);color:#fff;padding:6px 12px;clip-path:polygon(6px 0,100% 0,calc(100% - 6px) 100%,0 100%)}
+.bft-act figcaption{padding:16px 16px 20px}
+.bft-act h3{margin:0 0 6px;font-family:"Archivo Black",sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(18px,1.7vw,22px);letter-spacing:-.01em}
+.bft-act p{margin:0;color:var(--bf-dim);font-size:14.5px;line-height:1.5}
+
+/* how it works: timeline */
+.bft-tl{list-style:none;margin:0;padding:0;border-top:1px solid var(--bf-rule);position:relative}
+.bft-tl li{display:grid;grid-template-columns:72px minmax(0,1fr);gap:16px;padding:28px 0;border-bottom:1px solid var(--bf-rule);align-items:start}
+@media(min-width:760px){.bft-tl li{grid-template-columns:160px minmax(0,1fr);padding:36px 0}.bft-tl li>div:has(.bft-stopimg){display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:0 40px;align-items:center}.bft-tl li>div>.bft-stopimg{grid-row:span 2;margin:0}.bft-tl li>div>h3{align-self:end}.bft-tl li>div>p{align-self:start}}
+.bft-t{font-size:clamp(28px,4vw,48px);color:var(--bf-hi);line-height:1}
+.bft-tl h3{margin:0 0 8px;font-family:"Archivo Black",sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(20px,2.4vw,30px);letter-spacing:-.015em;line-height:1.05}
+.bft-tl p{margin:0;color:var(--bf-dim);max-width:52ch}
+.bft-stopimg{position:relative;margin:0 0 18px;max-width:620px;overflow:hidden;background:var(--bf-deep);clip-path:polygon(0 0,100% 0,100% calc(100% - 26px),calc(100% - 26px) 100%,0 100%)}
+.bft-stopimg img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;object-position:50% 45%}
+.bft-stopimg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(5,5,5,.35))}
+
+/* entrance */
+.bft-ent{background:linear-gradient(180deg,var(--bf-deep),#071A14)}
+.bft-price{display:grid;gap:36px}
+@media(min-width:900px){.bft-price{grid-template-columns:1fr 1fr;align-items:center;gap:64px}}
+.bft-bigw{font-size:clamp(42px,6.4vw,86px);margin:0;color:#fff}
+.bft-lead2{color:var(--bf-dim);font-size:clamp(16px,1.7vw,20px);margin:18px 0 0;max-width:40ch}
+.bft-rules{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:10px}
+.bft-rules li{padding-left:24px;position:relative;color:#fff}
+.bft-rules li::before{content:"›";position:absolute;left:4px;top:-2px;color:var(--bf-hi);font-weight:700;font-size:20px}
+.bft-cards{display:grid;gap:12px}
+.bft-card{border:1px solid var(--bf-rule);padding:22px 24px;background:var(--bf-card);border-left:4px solid var(--bf-green);position:relative}
+.bft-card .k{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--bf-hi);margin-bottom:8px;font-weight:600}
+.bft-card h3{margin:0 0 6px;font-size:21px;font-weight:600;color:#fff;letter-spacing:-.01em}
+.bft-card p{margin:0;color:var(--bf-dim);font-size:15px}
+.bft-cards .bft-card:hover{border-left-color:var(--bf-hi)}
+
+/* step 01: the group, blurred, with the WhatsApp badge */
+.bft-wa img{filter:blur(3.5px) saturate(1.08);transform:scale(1.05)}
+.bft-wa::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,rgba(13,86,69,.38),rgba(5,5,5,.18) 60%,rgba(5,5,5,.38))}
+.bft-wa::after{display:none}
+.bft-wabadge{position:absolute;left:50%;top:50%;z-index:2;transform:translate(-50%,-50%);display:flex;align-items:center;gap:14px;padding:14px 22px 14px 14px;background:rgba(5,5,5,.78);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:inset 0 0 0 1px rgba(79,179,138,.45),0 20px 40px rgba(0,0,0,.45);clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%);white-space:nowrap}
+.bft-wabadge .ic{display:grid;place-items:center;width:clamp(44px,5vw,58px);aspect-ratio:1;border-radius:50%;background:#25D366;color:#fff;box-shadow:0 0 0 6px rgba(37,211,102,.18);animation:bfPulseWa 2.6s ease-in-out infinite}
+.bft-wabadge .ic svg{width:58%;height:58%}
+@keyframes bfPulseWa{50%{box-shadow:0 0 0 12px rgba(37,211,102,0)}}
+.bft-wabadge .t{display:grid;line-height:1.1}
+.bft-wabadge b{font-family:"Archivo Black",sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(15px,1.6vw,20px);color:#fff}
+.bft-wabadge i{font-style:normal;font-family:"IBM Plex Mono",monospace;font-size:clamp(11px,1.1vw,13px);letter-spacing:.12em;text-transform:uppercase;color:var(--bf-hi);margin-top:4px}
+.bft-wabadge .bft-chev{width:clamp(26px,2.6vw,34px);color:var(--bf-hi);margin-left:4px}
+@media(max-width:600px){.bft-wabadge{gap:10px;padding:9px 16px 9px 9px}.bft-wabadge .bft-chev{display:none}.bft-wabadge b{font-size:13px}.bft-wabadge i{font-size:9.5px;letter-spacing:.08em}.bft-wabadge .ic{width:36px}}
+@media(prefers-reduced-motion:reduce){.bft-wabadge .ic{animation:none}}
+
+/* entrance: H24 shelf */
+.bft-shelf{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);grid-template-rows:auto auto;gap:12px}
+.bft-pk{position:relative;overflow:hidden;min-width:0;background:radial-gradient(90% 80% at 50% 30%,rgba(13,86,69,.55),rgba(13,86,69,0) 70%),#0B0B0B;border:1px solid var(--bf-rule);min-height:240px;display:flex;flex-direction:column;justify-content:flex-end;transition:border-color .3s}
+.bft-pk:hover{border-color:rgba(79,179,138,.55)}
+.bft-pk1{grid-row:span 2;min-height:460px}
+.bft-slash{position:absolute;left:-10%;top:22px;width:62%;height:14px;background:linear-gradient(90deg,var(--bf-green),var(--bf-hi));transform:skewX(-40deg);transform-origin:left}
+.bft-pk1 img{position:absolute;left:50%;top:42%;height:min(62%,330px);width:auto;max-width:72%;transform:translate(-50%,-50%) rotate(-6deg);filter:drop-shadow(0 30px 40px rgba(0,0,0,.6)) drop-shadow(0 0 40px rgba(79,179,138,.22));animation:bfFloat 6s ease-in-out infinite}
+@keyframes bfFloat{50%{transform:translate(-50%,-53%) rotate(-4deg)}}
+.bft-pkt{position:relative;padding:18px 20px 20px;background:linear-gradient(0deg,rgba(5,5,5,.92),rgba(5,5,5,0))}
+.bft-pkt .k{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--bf-hi);font-weight:600;margin-bottom:6px}
+.bft-pkt h3{margin:0;font-family:"Archivo Black",sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(17px,1.6vw,21px);line-height:1.08}
+.bft-pkt p{margin:6px 0 0;font-size:13px;line-height:1.45;color:var(--bf-dim)}
+.bft-cr7{position:absolute;right:16px;top:30px;text-align:right;line-height:.82}
+.bft-cr7 span{display:block;font-family:"Archivo Black",sans-serif;font-size:clamp(64px,7vw,96px);color:transparent;-webkit-text-stroke:1.6px rgba(255,255,255,.7);letter-spacing:-.02em}
+.bft-cr7 b{display:block;font-family:"Archivo Black",sans-serif;font-weight:400;text-transform:uppercase;font-size:clamp(20px,2vw,26px);color:#fff;margin-top:6px}
+.bft-steam{position:absolute;right:18px;top:30px;width:clamp(70px,7vw,96px);height:auto}
+.bft-steam g path{animation:bfSteam 3s ease-in-out infinite}.bft-steam g path:nth-child(2){animation-delay:.4s}.bft-steam g path:nth-child(3){animation-delay:.8s}
+@keyframes bfSteam{50%{opacity:.35;transform:translateY(-4px)}}
+@media(max-width:560px){.bft-shelf{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.bft-pk.bft-pk1{grid-column:1/-1;grid-row:auto;min-height:400px}.bft-pk{min-height:230px}.bft-cr7{right:12px;top:26px}.bft-cr7 span{font-size:52px}.bft-cr7 b{font-size:18px}.bft-steam{width:64px}.bft-pkt{padding:14px 14px 16px}}
+@media(prefers-reduced-motion:reduce){.bft-pk1 img,.bft-steam g path{animation:none}}
+
+/* who */
+.bft-who{display:grid;gap:16px}
+@media(min-width:860px){.bft-who{grid-template-columns:1.1fr .9fr;gap:22px;align-items:stretch}}
+.bft-whoimg{margin:0;overflow:hidden;background:var(--bf-night);clip-path:polygon(0 0,100% 0,100% calc(100% - 30px),calc(100% - 30px) 100%,0 100%)}
+.bft-whoimg img{width:100%;height:100%;min-height:280px;aspect-ratio:4/3;object-fit:cover;object-position:50% 40%;display:block}
+.bft-come{display:flex;flex-direction:column;justify-content:center;padding:clamp(24px,3vw,40px)}
+.bft-come ul{margin:4px 0 0;padding:0;list-style:none;display:grid;gap:14px}
+.bft-come li{font-size:clamp(17px,1.7vw,21px);line-height:1.35;font-weight:500;padding-left:30px;position:relative}
+.bft-come li::before{content:"";position:absolute;left:0;top:.45em;width:14px;height:10px;background:var(--bf-hi);clip-path:polygon(0 0,45% 0,100% 50%,45% 100%,0 100%,55% 50%)}
+.bft-lv{display:flex;align-items:flex-end;gap:6px;margin-top:28px;height:44px}
+.bft-lv i{display:block;width:30px;background:var(--bf-green);transform:skewX(-12deg)}
+.bft-lv i:nth-child(1){height:34%}.bft-lv i:nth-child(2){height:66%;background:var(--bf-mid)}.bft-lv i:nth-child(3){height:100%;background:var(--bf-hi)}
+.bft-lv span{margin-left:12px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--bf-dim);align-self:center}
+
+/* ranks */
+.bft-ranks{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;position:relative}
+.bft-ranks::before{content:"";position:absolute;left:10%;right:10%;top:clamp(36px,5vw,60px);height:2px;background:linear-gradient(90deg,var(--bf-green),var(--bf-hi));opacity:.55}
+.bft-ranks li{text-align:center;position:relative}
+.bft-ranks img{width:100%;max-width:120px;height:auto;display:block;margin:0 auto 12px;position:relative;filter:drop-shadow(0 10px 24px rgba(13,86,69,.35))}
+.bft-ranks b{display:block;font-family:"Archivo Black",sans-serif;font-weight:400;font-size:clamp(15px,1.6vw,20px)}
+.bft-ranks span{display:block;font-size:13px;color:var(--bf-dim);margin-top:2px}
+@media(max-width:700px){.bft-ranks{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:28px}.bft-ranks::before{display:none}}
+
+/* where */
+.bft-where{display:grid;gap:12px}
+@media(min-width:860px){.bft-where{grid-template-columns:1fr auto 1fr;align-items:stretch;gap:22px}}
+.bft-where a{color:var(--bf-hi);text-decoration:none;font-weight:600;font-size:14px;display:inline-block;margin-top:12px}.bft-where a:hover{text-decoration:underline}
+.bft-walk{display:flex;align-items:center;justify-content:center;gap:10px;color:var(--bf-hi);font-size:12px;letter-spacing:.2em;text-transform:uppercase;padding:6px}
+.bft-walk .bft-chev{width:30px;color:var(--bf-hi)}
+@media(max-width:859px){.bft-walk .bft-chev{transform:rotate(90deg)}}
+
+/* coach */
+.bft-coach{display:grid;gap:28px;align-items:center}
+@media(min-width:860px){.bft-coach{grid-template-columns:.85fr 1.15fr;gap:64px}}
+.bft-cph{position:relative;margin:0;overflow:hidden;aspect-ratio:4/5;background:var(--bf-deep);clip-path:polygon(0 0,100% 0,100% calc(100% - 30px),calc(100% - 30px) 100%,0 100%)}
+.bft-cph img{width:100%;height:100%;object-fit:cover;object-position:60% 30%;filter:grayscale(1) contrast(1.15) brightness(.92)}
+.bft-cph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,86,69,.22),rgba(4,30,23,.55));mix-blend-mode:multiply}
+.bft-cph .lb{position:absolute;left:14px;bottom:14px;z-index:2;font-family:"Archivo Black",sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--bf-green);padding:8px 14px;clip-path:polygon(6px 0,100% 0,calc(100% - 6px) 100%,0 100%)}
+.bft-coach h2{font-size:clamp(44px,7vw,96px);margin:0 0 18px}
+.bft-coach p{color:var(--bf-dim);margin:0 0 26px;font-size:clamp(16px,1.6vw,19px);max-width:46ch}
+
+/* ZERO HOUR: its own black + warning-yellow world, never club green */
+.bft-zh{position:relative;overflow:hidden;background:#0B0B0B;padding:clamp(96px,12vw,150px) 0 clamp(80px,10vw,128px)}
+.bft-zh::before{content:"";position:absolute;left:0;right:0;top:0;height:14px;background:repeating-linear-gradient(135deg,#F0C33C 0 20px,#0B0B0B 20px 40px);z-index:3}
+.bft-zhclock{position:absolute;right:-2vw;bottom:-4vw;font-size:clamp(120px,22vw,340px);line-height:1;color:transparent;-webkit-text-stroke:1.5px rgba(240,195,60,.2);pointer-events:none;letter-spacing:-.04em}
+.bft-zhg{display:grid;gap:30px;position:relative;z-index:2}
+@media(min-width:900px){.bft-zhg{grid-template-columns:.8fr 1.2fr;align-items:center;gap:64px}}
+.bft-zhlogo{display:block;width:min(80vw,460px)}.bft-zhlogo img{width:100%;height:auto;display:block}
+.bft-zhed{font-size:clamp(12px,1.4vw,15px);letter-spacing:.14em;text-transform:uppercase;color:#F0C33C}
+.bft-zh h2{font-size:clamp(36px,6.4vw,84px);margin:12px 0 18px;color:#fff}
+.bft-zh p{color:rgba(255,255,255,.76);max-width:50ch;margin:0 0 28px;font-size:clamp(15px,1.6vw,18px)}
+.bft-zhb{background:#F0C33C;color:#0B0B0B}.bft-zhb:hover{background:#fff}
+
+/* faq */
+.bft-faqg{display:grid;gap:8px}
+@media(min-width:900px){.bft-faqg{grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}.bft-faqg .bft-head{grid-template-columns:1fr;position:sticky;top:110px}}
+.bft-faq details{border-top:1px solid var(--bf-rule)}
+.bft-faq details:last-child{border-bottom:1px solid var(--bf-rule)}
+.bft-faq summary{list-style:none;cursor:pointer;padding:20px 0;display:flex;justify-content:space-between;gap:16px;align-items:center;font-weight:600;font-size:clamp(16px,1.7vw,19px)}
+.bft-faq summary::-webkit-details-marker{display:none}
+.bft-faq summary::after{content:"+";font-family:"IBM Plex Mono",monospace;color:var(--bf-hi);font-size:24px;line-height:1;flex:none;transition:transform .25s}
+.bft-faq details[open] summary::after{transform:rotate(45deg)}
+.bft-faq summary:hover{color:var(--bf-hi)}
+.bft-faq .a{padding:0 0 20px;color:var(--bf-dim);max-width:60ch}
+
+/* final */
+.bft-final{position:relative;overflow:hidden;text-align:center;padding:clamp(110px,14vw,180px) 0;background:var(--bf-night)}
+.bft-fbg{position:absolute;inset:0}
+.bft-fbg img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;filter:grayscale(1) contrast(1.1) blur(2px);opacity:.28;transform:scale(1.05)}
+.bft-fbg::after{content:"";position:absolute;inset:0;background:radial-gradient(70% 70% at 50% 60%,rgba(13,86,69,.45),rgba(5,5,5,.92) 75%)}
+.bft-final .bft-wrap{position:relative;z-index:2}
+.bft-final h2{font-size:clamp(46px,10vw,140px);margin:0 0 22px}
+.bft-final p{color:var(--bf-dim);margin:0 auto 30px;max-width:40ch;font-size:clamp(16px,1.6vw,19px)}
+
+/* footer */
+.bft-foot{border-top:1px solid var(--bf-rule);padding:40px 0 120px;color:var(--bf-dim);font-size:13px;background:var(--bf-deep)}
+.bft-foot .row{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;justify-content:space-between}
+.bft-foot .row img{height:20px;width:auto}
+.bft-foot a{color:#fff;text-decoration:underline;text-decoration-color:rgba(79,179,138,.7);text-underline-offset:3px}.bft-foot a:hover{text-decoration-color:#fff}
+.bft-foot .disc{margin:22px 0 0;max-width:86ch;font-size:12px;line-height:1.65;color:rgba(181,189,185,.86)}
+.bft-foot .links{display:flex;gap:18px;flex-wrap:wrap;margin-top:12px}
+.bft-foot .copy{margin:14px 0 0}
+@media(min-width:900px){.bft-foot{padding-bottom:48px}}
+
+/* phone CTA */
+.bft-sticky{position:fixed;left:0;right:0;bottom:0;z-index:45;padding:10px 12px;padding-bottom:max(10px,env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(5,5,5,0),rgba(5,5,5,.94) 45%);display:flex;justify-content:center;transform:translateY(120%);transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.bft-sticky.show{transform:none}
+.bft-sticky .bft-btn{width:min(520px,100%);justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.45)}
+.bft-sticky .sep{opacity:.6}
+@media(min-width:900px){.bft-sticky{display:none}}
+
+/* reveal: quick and once */
+.bft-rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.8,.2,1)}
+.bft-rv.bft-seen{opacity:1;transform:none}
+.bft-ranks li{opacity:0;transform:translateY(16px) scale(.94);transition:opacity .5s ease,transform .5s cubic-bezier(.2,.9,.25,1.2);transition-delay:calc(var(--i) * 90ms)}
+.bft-ranks.bft-seen li{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.bft-rv,.bft-ranks li{opacity:1;transform:none;transition:none}.wmhero g.a,.bft-mtr,.bft-when .dot{animation:none}.bft-arc{transition:none}}
+@media(max-width:480px){.bft-btn{padding:16px 24px;font-size:14px}.bft-ctas .bft-btn{width:100%;justify-content:center}}
+</style><style id="i18n-css">/* RO/RU page overrides, injected into ro/*.html and ru/*.html by pages_zz_i18n.py (English pages never see this).
+   Blocks between the @ro / @ru markers apply to that language only. */
+/* diacritics (Ă Î Ș Ț) and Cyrillic Й Ё need a little more room than the .86 English line-height */
+.loud{line-height:.95}
+/* longer words: a word that still cannot fit breaks instead of running off the screen */
+h1,h2,h3,.loud{overflow-wrap:break-word}
+/* the longest signature name (Strawberry Cheesecake) fits its card column */
+.ccard .nm{font-size:clamp(56px,8vw,160px)}
+/* Boost Fit: activity cards and section heads, sized for longer words */
+.fgrid b{font-size:clamp(20px,2.3vw,40px);line-height:1.05}
+.fh2{font-size:clamp(44px,6.4vw,110px)}
+
+.fh{font-size:clamp(64px,14vw,250px)}</style></head>
+<body>
+<div class="k-curtain" aria-hidden="true"><img src="../img/wordmark-cream-hd.png" alt=""></div>
+<a class="skip" href="#main">Sari la conținut</a>
+<div id="bc" data-page="fit" data-nonav="1" data-nofoot="1" data-norbar="1" hidden></div>
+<main id="main">
+
+<header class="bft-bar">
+  <a href="boost-fit.html" class="bft-home" aria-label="Boost Fit"><img src="../bf/boostfit-logo.svg" alt="Boost Fit" width="257" height="30"></a>
+  <div class="bft-right">
+    <a class="bft-club" href="index.html">Înapoi la Boost Club</a>
+    <nav class="bft-lang" aria-label="Limba"></nav>
+  </div>
+</header>
+
+<section class="bft-hero" id="top">
+  <div class="bft-hph" aria-hidden="true" data-slot="REAL · Boost Fit, Sunday in Kiseleff"><img src="../img/real/park-walk.jpg" alt="" fetchpriority="high"></div>
+  <img class="bft-hsym" src="../bf/boostfit-symbol.svg" alt="" aria-hidden="true">
+  <div class="bft-hin">
+    <svg class="wmhero" xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 924.5 108" role="img" aria-label="Boost Fit"><g transform="translate(0 100) skewX(-12) translate(0 -100)"><g class="a lc" style="--d:650"><polygon points="0,0 24,0 54,50.0 24,100 0,100 30,50.0" fill="#FFFFFF"/></g><g class="a lc" style="--d:760"><polygon points="33,0 57,0 87,50.0 57,100 33,100 63,50.0" fill="#FFFFFF"/></g><g class="a lc" style="--d:870"><polygon points="66,0 90,0 120,50.0 90,100 66,100 96,50.0" fill="#0D5645"/></g></g><svg x="154.0" y="-16.0" width="778.5" height="134.0" viewBox="-16.0 -16.0 778.5 134.0"><g transform="translate(21.3 0) skewX(-12)"><g class="a lb" style="--d:0"><path fill="#FFFFFF" transform="translate(-10.76 100) scale(0.14535 -0.14535)" d="M722 519Q722 392 607 359V355Q738 325 738 183Q738 129 711.5 87.5Q685 46 639.0 23.0Q593 0 538 0H74V688H532Q584 688 627.5 666.5Q671 645 696.5 606.0Q722 567 722 519ZM295 420H447Q469 420 483.5 435.5Q498 451 498 474V484Q498 506 483.0 521.5Q468 537 447 537H295ZM295 160H463Q485 160 499.5 175.5Q514 191 514 214V224Q514 247 499.5 262.5Q485 278 463 278H295Z"/></g><g class="a lb" style="--d:50"><path fill="#FFFFFF" transform="translate(86.97 100) scale(0.14535 -0.14535)" d="M788 344Q788 170 691.0 79.0Q594 -12 416 -12Q238 -12 141.5 78.5Q45 169 45 344Q45 519 141.5 609.5Q238 700 416 700Q594 700 691.0 609.0Q788 518 788 344ZM271 376V312Q271 239 308.0 196.0Q345 153 416 153Q487 153 524.5 196.0Q562 239 562 312V376Q562 449 524.5 492.0Q487 535 416 535Q345 535 308.0 492.0Q271 449 271 376Z"/></g><g class="a lb" style="--d:100"><path fill="#FFFFFF" transform="translate(191.97 100) scale(0.14535 -0.14535)" d="M788 344Q788 170 691.0 79.0Q594 -12 416 -12Q238 -12 141.5 78.5Q45 169 45 344Q45 519 141.5 609.5Q238 700 416 700Q594 700 691.0 609.0Q788 518 788 344ZM271 376V312Q271 239 308.0 196.0Q345 153 416 153Q487 153 524.5 196.0Q562 239 562 312V376Q562 449 524.5 492.0Q487 535 416 535Q345 535 308.0 492.0Q271 449 271 376Z"/></g><g class="a lb" style="--d:150"><path fill="#FFFFFF" transform="translate(297.25 100) scale(0.14535 -0.14535)" d="M667 488V476H460V480Q460 510 438.0 530.0Q416 550 371 550Q327 550 303.5 537.0Q280 524 280 505Q280 478 312.0 465.0Q344 452 415 438Q498 421 551.5 402.5Q605 384 645.0 342.0Q685 300 686 228Q686 106 603.5 47.0Q521 -12 383 -12Q222 -12 132.5 42.0Q43 96 43 233H252Q252 181 279.0 163.5Q306 146 363 146Q405 146 432.5 155.0Q460 164 460 192Q460 217 429.5 229.5Q399 242 330 256Q246 274 191.0 293.5Q136 313 95.0 358.0Q54 403 54 480Q54 593 141.5 646.5Q229 700 363 700Q495 700 580.0 646.5Q665 593 667 488Z"/></g><g class="a lb" style="--d:200"><path fill="#FFFFFF" transform="translate(390.62 100) scale(0.14535 -0.14535)" d="M470 512V0H249V512H23V688H695V512Z"/></g><g class="a lf" style="--d:200"><path fill="#0D5645" transform="translate(493.88 100) scale(0.14535 -0.14535)" d="M74 688H630V523H295V405H583V247H295V0H74Z"/></g><g class="a lf" style="--d:150"><path fill="#0D5645" transform="translate(575.24 100) scale(0.14535 -0.14535)" d="M84 0V688H305V0Z"/></g><g class="a lf" style="--d:100"><path fill="#0D5645" transform="translate(618.23 100) scale(0.14535 -0.14535)" d="M470 512V0H249V512H23V688H695V512Z"/></g></g></svg></svg>
+    <div class="bft-when"><span class="dot" aria-hidden="true"></span><span>Duminica · 09:00 · București</span></div>
+    <h1 class="bft-d bft-h1"><span>Intră</span> <span class="bft-blk"><span>în echipă.</span></span></h1>
+    <p class="bft-tag">Antrenament în parc, alergare, drumeții. Orice nivel. <b>Apoi recuperarea la Boost Club.</b></p>
+    <div class="bft-ctas"><a class="bft-btn bft-g" href="https://wa.me/40726205752?text=Salut%21%20Vreau%20s%C4%83%20intru%20%C3%AEn%20echipa%20Boost%20Fit." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4 5.2 5.2 0 0 0 3.1.6 2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg><span>Intră în echipă</span></a><a class="bft-btn bft-ghost" href="#how">Cum funcționează ↓</a></div>
+    <p class="bft-dates"><span class="nx" id="bft-next"></span><a class="cal" href="https://boostclub.ro/boostfit/boostfit.ics">+ Adaugă în calendar</a></p>
+    <div class="bft-stats">
+      <div><b class="bft-m">09:00</b><span>Duminica</span></div>
+      <div><b class="bft-m">45<i>'</i></b><span>Minute</span></div>
+      <div><b class="bft-m">3</b><span>Niveluri</span></div>
+      <div><b class="bft-d bft-kis">Kiseleff</b><span>Prima sesiune</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="bft-mq" aria-hidden="true"><div class="bft-mtr"><span>Antrenament în parc</span><svg class="bft-chev" viewBox="0 0 120 100" aria-hidden="true"><g transform="skewX(-12)"><polygon points="20,0 44,0 74,50 44,100 20,100 50,50" fill="currentColor"/><polygon points="53,0 77,0 107,50 77,100 53,100 83,50" fill="currentColor" opacity=".55"/></g></svg><span>Alergare</span><svg class="bft-chev" viewBox="0 0 120 100" aria-hidden="true"><g transform="skewX(-12)"><polygon points="20,0 44,0 74,50 44,100 20,100 50,50" fill="currentColor"/><polygon points="53,0 77,0 107,50 77,100 53,100 83,50" fill="currentColor" opacity=".55"/></g></svg><span>Drumeții</span><svg class="bft-chev" viewBox="0 0 120 100" aria-hidden="true"><g transform="skewX(-12)"><polygon points="20,0 44,0 74,50 44,100 20,100 50,50" fill="currentColor"/><polygon points="53,0 77,0 107,50 77,100 53,100 83,50" fill="currentColor" opacity=".55"/></g></svg><span>Provocări</span><svg class="bft-chev" viewBox="0 0 120 100" aria-hidden="true"><g transform="skewX(-12)"><polygon points="20,0 44,0 74,50 44,100 20,100 50,50" fill="currentColor"/><polygon points="53,0 77,0 107,50 77,100 53,100 83,50" fill="currentColor" opacity=".55"/></g></svg><span>Antrenament în parc</span><svg class="bft-chev" viewBox="0 0 120 100" aria-hidden="true"><g transform="skewX(-12)"><polygon points="20,0 44,0 74,50 44,100 20,100 50,50" fill="currentColor"/><polygon points="53,0 77,0 107,50 77,100 53,100 83,50" fill="currentColor" opacity=".55"/></g></svg><span>Alergare</span><svg class="bft-chev" viewBox="0 0 120 100" aria-hidden="true"><g transform="skewX(-12)"><polygon points="20,0 44,0 74,50 44,100 20,100 50,50" fill="currentColor"/><polygon points="53,0 77,0 107,50 77,100 53,100 83,50" fill="currentColor" opacity=".55"/></g></svg><span>Drumeții</span><svg class="bft-chev" viewBox="0 0 120 100" aria-hidden="true"><g transform="skewX(-12)"><polygon points="20,0 44,0 74,50 44,100 20,100 50,50" fill="currentColor"/><polygon points="53,0 77,0 107,50 77,100 53,100 83,50" fill="currentColor" opacity=".55"/></g></svg><span>Provocări</span><svg class="bft-chev" viewBox="0 0 120 100" aria-hidden="true"><g transform="skewX(-12)"><polygon points="20,0 44,0 74,50 44,100 20,100 50,50" fill="currentColor"/><polygon points="53,0 77,0 107,50 77,100 53,100 83,50" fill="currentColor" opacity=".55"/></g></svg><span>Antrenament în parc</span><svg class="bft-chev" viewBox="0 0 120 100" aria-hidden="true"><g transform="skewX(-12)"><polygon points="20,0 44,0 74,50 44,100 20,100 50,50" fill="currentColor"/><polygon points="53,0 77,0 107,50 77,100 53,100 83,50" fill="currentColor" opacity=".55"/></g></svg><span>Alergare</span><svg class="bft-chev" viewBox="0 0 120 100" aria-hidden="true"><g transform="skewX(-12)"><polygon points="20,0 44,0 74,50 44,100 20,100 50,50" fill="currentColor"/><polygon points="53,0 77,0 107,50 77,100 53,100 83,50" fill="currentColor" opacity=".55"/></g></svg><span>Drumeții</span><svg class="bft-chev" viewBox="0 0 120 100" aria-hidden="true"><g transform="skewX(-12)"><polygon points="20,0 44,0 74,50 44,100 20,100 50,50" fill="currentColor"/><polygon points="53,0 77,0 107,50 77,100 53,100 83,50" fill="currentColor" opacity=".55"/></g></svg><span>Provocări</span><svg class="bft-chev" viewBox="0 0 120 100" aria-hidden="true"><g transform="skewX(-12)"><polygon points="20,0 44,0 74,50 44,100 20,100 50,50" fill="currentColor"/><polygon points="53,0 77,0 107,50 77,100 53,100 83,50" fill="currentColor" opacity=".55"/></g></svg><span>Antrenament în parc</span><svg class="bft-chev" viewBox="0 0 120 100" aria-hidden="true"><g transform="skewX(-12)"><polygon points="20,0 44,0 74,50 44,100 20,100 50,50" fill="currentColor"/><polygon points="53,0 77,0 107,50 77,100 53,100 83,50" fill="currentColor" opacity=".55"/></g></svg><span>Alergare</span><svg class="bft-chev" viewBox="0 0 120 100" aria-hidden="true"><g transform="skewX(-12)"><polygon points="20,0 44,0 74,50 44,100 20,100 50,50" fill="currentColor"/><polygon points="53,0 77,0 107,50 77,100 53,100 83,50" fill="currentColor" opacity=".55"/></g></svg><span>Drumeții</span><svg class="bft-chev" viewBox="0 0 120 100" aria-hidden="true"><g transform="skewX(-12)"><polygon points="20,0 44,0 74,50 44,100 20,100 50,50" fill="currentColor"/><polygon points="53,0 77,0 107,50 77,100 53,100 83,50" fill="currentColor" opacity=".55"/></g></svg><span>Provocări</span><svg class="bft-chev" viewBox="0 0 120 100" aria-hidden="true"><g transform="skewX(-12)"><polygon points="20,0 44,0 74,50 44,100 20,100 50,50" fill="currentColor"/><polygon points="53,0 77,0 107,50 77,100 53,100 83,50" fill="currentColor" opacity=".55"/></g></svg></div></div>
+
+<section class="bft-sec" id="what">
+  <div class="bft-wrap">
+    <div class="bft-head bft-rv"><div><p class="bft-eye">Ce facem</p><h2 class="bft-d">Antrenăm afară.</h2></div><p>Locul se schimbă de la o săptămână la alta.</p></div>
+    <div class="bft-acts">
+      <figure class="bft-act bft-rv bft-vid" data-slot="REAL · Boost Fit Session 01 video">
+        <div class="bft-actm"><video muted loop playsinline preload="none" poster="../video/boostfit-session01-poster.jpg" aria-hidden="true"><source src="../video/boostfit-session01.mp4" type="video/mp4"></video></div>
+        <figcaption><h3>Alergare</h3><p>Ture în grup, în ritmul grupului.</p></figcaption>
+      </figure>
+      <figure class="bft-act bft-rv" data-slot="REAL · park workout"><div class="bft-actm"><img src="../img/real/park-trio.jpg" alt="Trei membri pe aleea din parc după sesiunea de duminică" loading="lazy"></div><figcaption><h3>Antrenament în parc</h3><p>Circuit cu greutatea corpului, cam 45 de minute, 3 niveluri.</p></figcaption></figure>
+      <figure class="bft-act bft-rv" data-slot="REAL · hike photo goes here (designed card until then)"><div class="bft-actm bft-art-wrap"><svg class="bft-art" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="rgba(79,179,138,.32)" stroke-width="1.2"><path d="M323.6 150.0 L325.2 151.8 L326.3 153.7 L326.8 155.7 L326.5 157.7 L325.5 159.5 L323.9 161.0 L321.7 162.2 L319.3 163.0 L316.8 163.4 L314.4 163.7 L312.2 163.9 L310.2 164.1 L308.4 164.4 L306.7 164.7 L305.0 165.0 L303.4 165.3 L301.7 165.6 L300.0 165.7 L298.3 165.6 L296.6 165.3 L295.0 165.0 L293.3 164.7 L291.6 164.4 L289.8 164.1 L287.8 163.9 L285.6 163.7 L283.2 163.4 L280.7 163.0 L278.3 162.2 L276.1 161.0 L274.5 159.5 L273.5 157.7 L273.2 155.7 L273.7 153.7 L274.8 151.8 L276.4 150.0 L278.2 148.5 L279.9 147.2 L281.5 146.0 L282.6 144.9 L283.4 143.8 L283.9 142.6 L284.2 141.2 L284.5 139.6 L285.0 138.0 L285.7 136.4 L286.8 134.9 L288.3 133.7 L290.0 132.8 L291.9 132.1 L293.9 131.8 L295.9 131.6 L298.0 131.5 L300.0 131.5 L302.0 131.5 L304.1 131.6 L306.1 131.8 L308.1 132.1 L310.0 132.8 L311.7 133.7 L313.2 134.9 L314.3 136.4 L315.0 138.0 L315.5 139.6 L315.8 141.2 L316.1 142.6 L316.6 143.8 L317.4 144.9 L318.5 146.0 L320.1 147.2 L321.8 148.5 L323.6 150.0Z"/><path d="M357.4 150.0 L360.6 154.2 L363.0 158.9 L364.0 163.7 L363.4 168.5 L361.0 172.8 L357.0 176.3 L351.6 178.9 L345.4 180.5 L339.0 181.2 L332.8 181.3 L327.3 181.1 L322.4 181.1 L318.3 181.4 L314.7 182.2 L311.3 183.6 L307.8 185.5 L304.1 187.4 L300.0 189.3 L295.5 190.7 L290.8 191.6 L286.0 191.9 L281.1 191.5 L276.3 190.7 L271.5 189.5 L266.7 188.0 L261.8 186.4 L256.8 184.5 L251.8 182.3 L247.0 179.7 L242.7 176.4 L239.4 172.6 L237.3 168.3 L236.8 163.5 L237.9 158.8 L240.6 154.2 L244.4 150.0 L248.9 146.4 L253.5 143.4 L257.5 140.9 L260.7 138.6 L262.8 136.1 L263.9 133.3 L264.2 130.0 L264.3 126.0 L264.5 121.6 L265.4 117.0 L267.2 112.6 L270.2 108.7 L274.1 105.6 L278.8 103.5 L284.1 102.4 L289.5 102.2 L294.8 102.7 L300.0 103.7 L304.9 104.8 L309.7 105.9 L314.4 107.1 L319.0 108.3 L323.5 109.7 L327.8 111.5 L331.7 113.8 L335.1 116.5 L337.9 119.7 L340.0 123.2 L341.5 126.7 L342.8 130.2 L344.0 133.6 L345.6 136.7 L347.8 139.8 L350.6 142.9 L353.9 146.2 L357.4 150.0Z"/><path d="M388.8 150.0 L392.4 156.5 L395.2 163.4 L396.6 170.7 L395.9 177.9 L392.8 184.6 L387.3 190.3 L379.7 194.7 L370.7 197.4 L361.0 198.8 L351.4 199.0 L342.5 198.6 L334.9 198.3 L328.4 198.7 L322.8 200.2 L317.7 202.9 L312.5 206.7 L306.7 211.3 L300.0 215.9 L292.3 220.0 L283.9 223.1 L275.0 224.6 L266.1 224.5 L257.6 222.7 L249.7 219.7 L242.6 215.6 L236.2 210.9 L230.3 205.8 L224.9 200.4 L219.9 194.9 L215.5 189.0 L212.0 182.8 L209.7 176.3 L208.9 169.5 L210.0 162.7 L212.9 156.1 L217.4 150.0 L223.0 144.6 L228.9 140.0 L234.5 135.9 L238.9 132.2 L241.9 128.3 L243.3 123.8 L243.5 118.4 L243.1 111.8 L242.8 104.3 L243.5 96.1 L245.7 88.0 L249.9 80.6 L256.0 74.5 L263.8 70.3 L272.6 68.3 L282.0 68.3 L291.3 70.0 L300.0 73.0 L308.0 76.6 L315.3 80.4 L322.2 83.9 L328.7 87.0 L335.1 89.7 L341.6 92.4 L348.0 95.2 L354.1 98.4 L359.7 102.3 L364.5 106.7 L368.4 111.7 L371.5 117.0 L374.0 122.4 L376.3 127.8 L378.8 133.1 L381.7 138.5 L385.1 144.0 L388.8 150.0Z"/><path d="M421.1 150.0 L423.7 158.7 L425.8 167.7 L426.7 177.2 L425.8 186.6 L422.5 195.7 L416.5 203.8 L407.9 210.4 L397.2 215.2 L385.2 218.1 L372.8 219.4 L360.9 219.5 L350.1 219.4 L340.7 219.9 L332.6 221.6 L325.1 225.0 L317.7 230.2 L309.5 236.7 L300.0 243.7 L289.0 250.2 L276.8 255.3 L263.8 258.2 L250.7 258.3 L238.5 255.5 L227.7 250.2 L218.8 242.8 L211.8 234.1 L206.6 224.7 L202.6 215.4 L199.4 206.4 L196.6 197.7 L194.1 189.5 L192.0 181.5 L190.5 173.5 L190.0 165.5 L190.8 157.6 L193.0 150.0 L196.6 142.8 L201.0 136.0 L205.6 129.8 L209.8 123.7 L213.0 117.6 L215.0 110.8 L215.9 102.9 L216.2 93.7 L216.6 83.3 L218.2 72.0 L221.8 60.6 L227.9 50.0 L236.6 41.3 L247.8 35.2 L260.6 32.3 L274.2 32.8 L287.6 36.3 L300.0 42.1 L311.0 49.4 L320.5 57.0 L328.8 64.1 L336.3 70.2 L343.7 75.0 L351.4 78.7 L359.7 81.8 L368.5 84.7 L377.5 88.0 L386.1 92.2 L394.0 97.4 L400.6 103.5 L405.9 110.5 L410.0 118.0 L413.2 125.7 L415.9 133.7 L418.5 141.7 L421.1 150.0Z"/><path d="M460.5 150.0 L460.1 161.2 L459.2 172.5 L457.7 183.8 L455.0 195.1 L450.6 206.2 L444.0 216.5 L434.8 225.5 L423.4 232.8 L410.1 238.0 L395.7 241.2 L381.2 242.8 L367.4 243.4 L354.8 244.0 L343.5 245.5 L333.1 248.7 L322.9 253.8 L312.1 260.7 L300.0 268.6 L286.2 276.5 L270.7 283.0 L254.1 287.1 L237.4 287.7 L221.6 284.4 L208.0 277.5 L197.3 267.4 L189.7 255.1 L185.2 241.9 L182.9 228.6 L182.0 216.1 L181.3 204.8 L180.2 194.7 L178.2 185.5 L175.2 176.8 L171.6 168.1 L168.2 159.2 L165.4 150.0 L164.0 140.5 L164.2 130.8 L165.8 121.2 L168.6 111.7 L172.0 102.2 L175.5 92.5 L178.9 82.2 L182.3 71.0 L186.2 59.0 L191.2 46.3 L198.1 33.6 L207.4 21.7 L219.4 11.8 L234.0 4.9 L250.4 1.9 L267.6 3.0 L284.5 8.2 L300.0 16.6 L313.4 27.2 L324.6 38.5 L333.8 49.2 L341.7 58.2 L349.5 65.1 L358.0 69.6 L367.9 72.4 L379.6 74.1 L392.7 75.9 L406.5 78.5 L420.1 82.7 L432.5 88.8 L442.8 96.7 L450.7 106.1 L455.9 116.6 L458.9 127.6 L460.2 138.8 L460.5 150.0Z"/><path d="M507.9 150.0 L502.1 164.1 L495.3 177.5 L488.2 190.3 L481.0 202.7 L473.4 214.7 L464.9 226.2 L455.1 236.9 L443.6 246.4 L430.2 254.2 L415.4 260.1 L399.8 264.0 L384.0 266.5 L368.8 268.1 L354.5 269.9 L341.1 272.6 L328.0 277.0 L314.6 283.1 L300.0 290.6 L283.7 298.6 L265.7 305.8 L246.1 310.8 L226.1 312.3 L207.0 309.6 L190.1 302.3 L176.6 291.0 L167.3 276.6 L162.0 260.4 L160.2 243.8 L160.6 228.1 L161.6 213.9 L161.8 201.5 L160.0 190.8 L155.7 180.9 L149.1 171.3 L141.0 161.1 L132.6 150.0 L125.3 137.8 L120.1 124.6 L117.8 111.0 L118.8 97.2 L122.7 83.8 L128.9 71.0 L136.9 58.7 L146.1 46.7 L156.1 34.9 L167.0 23.2 L179.0 11.8 L192.7 1.3 L208.2 -7.6 L225.5 -13.8 L244.2 -16.6 L263.5 -15.4 L282.5 -10.1 L300.0 -1.2 L315.3 10.3 L328.0 23.0 L338.4 35.3 L347.4 45.8 L356.2 53.6 L366.1 58.4 L378.2 60.6 L393.3 61.1 L411.1 61.1 L431.0 62.1 L451.5 65.1 L471.0 71.0 L487.9 79.9 L500.8 91.5 L509.0 105.2 L512.4 120.0 L511.7 135.2 L507.9 150.0Z"/><path d="M555.5 150.0 L542.3 167.0 L527.3 182.1 L512.1 195.5 L498.0 207.7 L485.5 219.2 L474.3 230.5 L463.9 241.8 L453.4 253.0 L442.0 263.6 L429.1 273.1 L414.8 281.2 L399.3 287.6 L383.1 292.5 L366.6 296.4 L350.3 300.2 L334.0 304.4 L317.5 309.6 L300.0 315.9 L281.1 322.8 L260.5 329.4 L238.3 334.3 L215.3 336.3 L192.7 334.1 L172.1 327.2 L154.9 315.7 L142.3 300.3 L134.7 282.2 L131.7 263.0 L132.0 244.1 L133.9 226.7 L135.4 211.4 L134.7 198.1 L130.6 186.3 L122.9 175.0 L112.1 163.2 L99.6 150.0 L87.5 135.1 L77.5 118.6 L71.5 101.0 L70.5 83.2 L74.8 66.0 L84.0 50.2 L97.1 36.3 L112.8 24.4 L130.1 14.1 L148.0 5.1 L166.1 -3.0 L184.4 -10.2 L202.9 -16.6 L222.0 -21.5 L241.6 -24.3 L261.5 -24.5 L281.2 -21.5 L300.0 -15.4 L317.1 -6.6 L332.2 3.8 L345.4 14.5 L357.2 24.2 L368.9 31.8 L381.7 36.8 L397.1 39.1 L415.8 39.6 L438.0 39.6 L463.1 40.5 L489.5 43.8 L515.1 50.6 L537.6 61.4 L554.8 75.8 L565.3 93.1 L568.5 112.1 L564.9 131.5 L555.5 150.0Z"/><path d="M592.0 150.0 L571.9 169.0 L549.1 185.1 L526.1 198.5 L505.2 209.7 L487.8 220.1 L474.4 230.5 L464.3 242.0 L456.2 254.9 L448.7 268.9 L440.1 283.6 L429.5 297.9 L416.2 311.0 L400.4 322.2 L382.4 331.2 L363.0 338.1 L342.6 343.5 L321.7 348.0 L300.0 352.1 L277.5 356.1 L253.8 359.5 L229.0 361.8 L203.6 361.9 L178.4 358.7 L154.7 351.3 L134.1 339.5 L118.0 323.5 L107.2 304.2 L101.8 283.1 L100.8 261.6 L102.8 241.1 L105.4 222.6 L106.6 206.3 L104.4 191.9 L97.8 178.5 L87.0 164.9 L73.1 150.0 L58.2 133.1 L44.7 114.0 L35.3 93.3 L31.7 71.9 L35.1 51.2 L45.5 32.5 L62.0 16.7 L83.1 4.4 L106.7 -4.6 L131.2 -10.9 L155.2 -15.4 L178.0 -19.0 L199.5 -22.4 L220.0 -25.9 L239.9 -29.3 L259.9 -32.1 L279.9 -33.4 L300.0 -32.8 L319.7 -29.9 L338.5 -24.8 L356.4 -18.3 L373.3 -11.0 L389.9 -4.2 L407.1 1.6 L426.1 6.0 L447.7 9.2 L472.4 12.1 L499.7 16.0 L528.3 22.1 L556.3 31.6 L581.0 45.2 L599.9 62.7 L611.0 83.3 L613.2 105.8 L606.4 128.6 L592.0 150.0Z"/><path d="M612.7 150.0 L589.8 170.3 L563.2 187.1 L536.2 200.6 L511.5 211.6 L491.5 221.5 L477.2 231.8 L468.2 244.2 L463.1 259.5 L459.8 277.9 L456.0 298.7 L449.5 320.8 L438.8 342.3 L423.4 361.7 L403.5 377.5 L380.1 389.1 L354.3 396.3 L327.3 399.6 L300.0 399.9 L272.9 398.2 L246.0 395.1 L219.3 390.9 L192.9 385.4 L167.0 378.1 L142.5 368.2 L120.4 355.2 L101.9 338.9 L88.1 319.5 L79.6 298.0 L76.0 275.5 L76.2 253.4 L78.4 232.7 L80.2 214.0 L79.6 197.2 L74.8 181.8 L65.4 166.4 L51.8 150.0 L35.8 131.5 L20.0 110.5 L7.3 87.3 L0.5 62.8 L1.3 38.6 L10.6 16.3 L28.0 -2.4 L51.9 -16.5 L80.1 -25.9 L110.1 -31.1 L139.7 -33.2 L167.4 -33.8 L192.6 -34.3 L215.3 -36.1 L236.5 -39.5 L257.2 -44.4 L278.1 -50.1 L300.0 -55.4 L322.9 -59.2 L346.4 -60.6 L370.1 -59.3 L393.3 -55.2 L416.0 -49.0 L438.1 -41.4 L460.3 -33.2 L483.2 -24.7 L507.4 -15.9 L532.9 -6.4 L559.2 4.8 L584.7 18.5 L607.4 35.3 L625.1 55.3 L635.4 78.1 L636.9 102.5 L629.0 127.0 L612.7 150.0Z"/><path d="M88.3 430.0 L87.2 433.3 L85.0 436.3 L81.7 438.9 L77.9 441.0 L74.0 442.7 L70.2 444.0 L66.9 445.1 L64.1 446.2 L61.9 447.5 L59.9 449.0 L58.1 450.7 L56.2 452.5 L54.1 454.2 L51.7 455.8 L49.1 457.0 L46.2 457.9 L43.1 458.5 L40.0 458.8 L36.8 459.0 L33.6 459.0 L30.3 459.1 L26.8 459.1 L23.1 459.0 L19.3 458.7 L15.6 457.9 L12.2 456.5 L9.2 454.6 L7.0 452.1 L5.7 449.2 L5.3 446.0 L5.7 442.8 L6.7 439.7 L7.9 436.9 L9.0 434.4 L9.6 432.1 L9.5 430.0 L8.9 427.8 L7.6 425.4 L6.1 422.7 L4.7 419.7 L3.8 416.5 L3.6 413.2 L4.4 410.1 L6.2 407.3 L8.8 405.1 L12.1 403.4 L15.8 402.4 L19.7 401.8 L23.4 401.6 L27.1 401.6 L30.5 401.6 L33.7 401.6 L36.9 401.7 L40.0 401.8 L43.0 402.1 L46.0 402.7 L48.8 403.7 L51.4 404.9 L53.8 406.4 L55.9 408.0 L57.9 409.6 L59.9 411.0 L62.2 412.2 L65.0 413.2 L68.2 414.2 L71.9 415.3 L75.9 416.6 L79.9 418.4 L83.5 420.7 L86.3 423.5 L88.0 426.6 L88.3 430.0Z"/><path d="M133.3 430.0 L130.9 436.4 L126.2 442.2 L119.5 447.0 L111.6 450.9 L103.3 453.6 L95.4 455.6 L88.5 457.2 L83.0 458.9 L78.8 461.1 L75.7 464.1 L73.2 468.0 L70.8 472.6 L67.8 477.7 L64.0 482.7 L59.2 487.2 L53.4 490.8 L46.9 493.3 L40.0 494.5 L32.9 494.8 L25.9 494.1 L18.9 492.9 L12.1 491.3 L5.3 489.5 L-1.3 487.3 L-7.9 484.7 L-14.0 481.5 L-19.5 477.6 L-24.0 472.9 L-27.0 467.5 L-28.5 461.7 L-28.5 455.6 L-27.3 449.6 L-25.2 444.0 L-23.1 438.9 L-21.4 434.3 L-20.8 430.0 L-21.4 425.7 L-23.1 421.1 L-25.7 415.9 L-28.4 410.1 L-30.6 403.7 L-31.5 397.0 L-30.6 390.4 L-27.7 384.6 L-22.8 379.8 L-16.2 376.4 L-8.6 374.5 L-0.5 373.9 L7.5 374.3 L15.1 375.3 L22.1 376.4 L28.4 377.3 L34.3 377.8 L40.0 377.8 L45.7 377.5 L51.6 377.3 L57.7 377.3 L63.7 377.8 L69.7 379.1 L75.4 381.0 L80.8 383.4 L85.9 386.2 L91.0 389.2 L96.2 392.2 L101.8 395.4 L107.9 398.7 L114.2 402.3 L120.4 406.6 L126.1 411.5 L130.5 417.2 L133.1 423.5 L133.3 430.0Z"/><path d="M168.1 430.0 L165.3 438.8 L159.6 446.9 L151.3 453.9 L141.3 459.5 L130.4 463.7 L119.7 466.8 L110.2 469.3 L102.6 472.0 L96.9 475.5 L92.9 480.4 L89.9 487.0 L87.0 495.1 L83.4 504.4 L78.2 513.9 L71.1 522.8 L62.1 530.2 L51.5 535.4 L40.0 538.0 L28.2 537.9 L16.7 535.6 L6.0 531.4 L-3.7 526.1 L-12.6 520.2 L-20.7 514.1 L-28.3 508.0 L-35.4 501.9 L-42.1 495.7 L-47.9 489.0 L-52.7 481.9 L-56.1 474.4 L-57.8 466.5 L-57.9 458.5 L-56.8 450.7 L-55.0 443.4 L-53.2 436.5 L-52.2 430.0 L-52.5 423.5 L-54.2 416.7 L-57.1 409.2 L-60.6 400.7 L-63.7 391.3 L-65.4 381.3 L-64.9 371.2 L-61.4 361.9 L-55.0 354.0 L-45.8 348.2 L-34.6 344.8 L-22.2 343.8 L-9.7 344.7 L2.2 347.0 L13.1 349.8 L22.9 352.3 L31.7 353.8 L40.0 354.3 L48.4 353.5 L57.2 352.1 L66.6 350.5 L76.7 349.3 L87.1 349.2 L97.4 350.5 L107.2 353.2 L116.2 357.4 L124.3 362.6 L131.5 368.6 L138.1 375.0 L144.4 381.8 L150.5 388.8 L156.3 396.1 L161.6 403.9 L165.7 412.3 L168.1 421.0 L168.1 430.0Z"/><path d="M194.1 430.0 L192.2 440.6 L187.8 450.8 L180.8 460.2 L171.7 468.4 L161.1 475.2 L150.0 480.8 L139.4 485.7 L130.1 490.5 L122.6 496.1 L116.7 503.1 L112.0 512.2 L107.3 523.3 L101.7 535.9 L94.2 549.1 L84.1 561.7 L71.4 572.3 L56.4 579.7 L40.0 583.1 L23.4 582.2 L7.6 577.2 L-6.6 569.0 L-18.5 558.6 L-28.2 547.1 L-36.2 535.6 L-43.0 524.8 L-49.3 515.1 L-55.6 506.5 L-62.1 498.6 L-68.8 490.9 L-75.2 483.2 L-80.8 475.0 L-85.2 466.4 L-88.2 457.5 L-89.8 448.3 L-90.6 439.1 L-91.0 430.0 L-91.8 420.8 L-93.2 411.2 L-95.5 401.0 L-98.2 389.8 L-100.7 377.5 L-101.8 364.5 L-100.6 351.3 L-96.1 338.6 L-88.1 327.6 L-76.4 319.0 L-61.9 313.6 L-45.5 311.6 L-28.4 312.6 L-11.8 316.1 L3.4 320.8 L17.0 325.5 L29.0 329.3 L40.0 331.2 L50.8 331.1 L62.2 329.3 L74.7 326.4 L88.5 323.5 L103.3 321.5 L118.4 321.3 L133.1 323.6 L146.5 328.4 L158.0 335.6 L167.3 344.6 L174.4 354.7 L179.8 365.4 L184.0 376.3 L187.3 387.1 L190.2 397.8 L192.6 408.5 L194.1 419.2 L194.1 430.0Z"/><path d="M218.2 430.0 L217.5 442.4 L215.7 454.8 L212.1 466.9 L206.2 478.4 L198.3 489.0 L188.6 498.6 L178.0 507.3 L167.2 515.4 L157.0 523.6 L147.7 532.7 L139.0 543.1 L130.4 555.3 L121.0 568.9 L109.7 583.2 L95.9 597.0 L79.4 608.7 L60.4 616.9 L40.0 620.3 L19.4 618.4 L0.1 611.2 L-16.8 599.5 L-30.3 584.5 L-40.5 568.0 L-47.7 551.6 L-53.2 536.5 L-58.1 523.6 L-63.8 513.1 L-71.1 504.6 L-80.4 497.4 L-91.3 490.7 L-103.2 483.4 L-115.1 475.1 L-125.7 465.5 L-134.4 454.6 L-140.7 442.6 L-144.6 430.0 L-146.5 416.9 L-147.1 403.6 L-146.8 390.0 L-145.9 375.9 L-144.3 361.3 L-141.5 346.2 L-136.7 331.0 L-129.1 316.5 L-118.2 303.5 L-103.7 293.0 L-86.1 285.9 L-66.3 282.7 L-45.4 283.4 L-24.9 287.4 L-5.7 293.5 L11.4 300.4 L26.5 306.5 L40.0 310.5 L52.9 311.9 L66.3 310.5 L81.2 307.0 L98.0 302.4 L116.8 298.3 L136.7 296.0 L156.6 296.7 L175.3 301.0 L191.3 309.0 L203.8 320.0 L212.5 333.4 L217.5 348.0 L219.6 363.0 L219.9 377.6 L219.4 391.5 L218.8 404.8 L218.4 417.5 L218.2 430.0Z"/><path d="M244.4 430.0 L243.4 444.2 L243.2 458.7 L242.8 473.5 L240.9 488.5 L236.7 503.4 L229.7 517.6 L220.1 530.9 L208.4 543.0 L195.2 554.2 L181.4 564.8 L167.4 575.6 L153.2 586.8 L138.4 598.8 L122.5 611.3 L104.8 623.5 L85.0 634.1 L63.1 641.7 L40.0 644.9 L16.7 642.9 L-5.2 635.2 L-24.5 622.5 L-40.0 605.8 L-51.5 586.9 L-59.4 567.7 L-64.9 549.9 L-69.9 534.8 L-76.1 522.9 L-85.1 514.0 L-97.8 507.2 L-114.2 501.2 L-133.4 494.7 L-153.9 486.5 L-173.8 475.8 L-191.0 462.6 L-204.0 447.1 L-212.0 430.0 L-214.9 412.2 L-213.1 394.3 L-207.6 376.9 L-199.6 360.2 L-189.8 344.3 L-178.9 328.9 L-166.9 314.1 L-153.5 300.1 L-138.2 287.4 L-120.8 276.7 L-101.1 268.8 L-79.6 264.3 L-57.0 263.6 L-34.5 266.3 L-13.0 271.7 L6.6 278.5 L24.1 285.1 L40.0 290.0 L55.1 292.2 L70.6 291.2 L87.8 287.4 L107.5 281.6 L130.0 275.6 L154.7 271.1 L180.3 269.7 L205.0 272.7 L226.8 280.6 L244.2 292.9 L256.0 309.0 L262.1 327.4 L263.2 346.8 L260.5 365.8 L255.8 383.7 L250.8 400.3 L246.8 415.5 L244.4 430.0Z"/></g><path d="M64 260 C 110 230, 120 180, 180 170 S 250 130, 236 100 S 280 70, 300 80" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 10"/><circle cx="64" cy="260" r="7" fill="#FFFFFF"/><path d="M300 80 v-46 l30 12 -30 12" fill="#4FB38A" stroke="#FFFFFF" stroke-width="3" stroke-linejoin="round"/></svg></div><figcaption><h3>Drumeții</h3><p>Ieșiri în afara orașului, anunțate din timp în grup.</p></figcaption></figure>
+      <figure class="bft-act bft-rv" data-slot="REAL · monthly challenge photo goes here (designed card until then)"><div class="bft-actm bft-art-wrap"><svg class="bft-art" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g stroke="rgba(255,255,255,.4)" stroke-width="3" stroke-linecap="round"><line x1="200.0" y1="62.0" x2="200.0" y2="38.0"/><line x1="210.2" y1="52.5" x2="211.7" y2="38.6"/><line x1="220.4" y1="54.1" x2="223.3" y2="40.4"/><line x1="230.3" y1="56.8" x2="234.6" y2="43.5"/><line x1="239.9" y1="60.5" x2="245.6" y2="47.7"/><line x1="244.0" y1="73.8" x2="256.0" y2="53.0"/><line x1="257.6" y1="70.7" x2="265.8" y2="59.4"/><line x1="265.6" y1="77.2" x2="274.9" y2="66.8"/><line x1="272.8" y1="84.4" x2="283.2" y2="75.1"/><line x1="279.3" y1="92.4" x2="290.6" y2="84.2"/><line x1="276.2" y1="106.0" x2="297.0" y2="94.0"/><line x1="289.5" y1="110.1" x2="302.3" y2="104.4"/><line x1="293.2" y1="119.7" x2="306.5" y2="115.4"/><line x1="295.9" y1="129.6" x2="309.6" y2="126.7"/><line x1="297.5" y1="139.8" x2="311.4" y2="138.3"/><line x1="288.0" y1="150.0" x2="312.0" y2="150.0"/><line x1="297.5" y1="160.2" x2="311.4" y2="161.7"/><line x1="295.9" y1="170.4" x2="309.6" y2="173.3"/><line x1="293.2" y1="180.3" x2="306.5" y2="184.6"/><line x1="289.5" y1="189.9" x2="302.3" y2="195.6"/><line x1="276.2" y1="194.0" x2="297.0" y2="206.0"/><line x1="279.3" y1="207.6" x2="290.6" y2="215.8"/><line x1="272.8" y1="215.6" x2="283.2" y2="224.9"/><line x1="265.6" y1="222.8" x2="274.9" y2="233.2"/><line x1="257.6" y1="229.3" x2="265.8" y2="240.6"/><line x1="244.0" y1="226.2" x2="256.0" y2="247.0"/><line x1="239.9" y1="239.5" x2="245.6" y2="252.3"/><line x1="230.3" y1="243.2" x2="234.6" y2="256.5"/><line x1="220.4" y1="245.9" x2="223.3" y2="259.6"/><line x1="210.2" y1="247.5" x2="211.7" y2="261.4"/><line x1="200.0" y1="238.0" x2="200.0" y2="262.0"/><line x1="189.8" y1="247.5" x2="188.3" y2="261.4"/><line x1="179.6" y1="245.9" x2="176.7" y2="259.6"/><line x1="169.7" y1="243.2" x2="165.4" y2="256.5"/><line x1="160.1" y1="239.5" x2="154.4" y2="252.3"/><line x1="156.0" y1="226.2" x2="144.0" y2="247.0"/><line x1="142.4" y1="229.3" x2="134.2" y2="240.6"/><line x1="134.4" y1="222.8" x2="125.1" y2="233.2"/><line x1="127.2" y1="215.6" x2="116.8" y2="224.9"/><line x1="120.7" y1="207.6" x2="109.4" y2="215.8"/><line x1="123.8" y1="194.0" x2="103.0" y2="206.0"/><line x1="110.5" y1="189.9" x2="97.7" y2="195.6"/><line x1="106.8" y1="180.3" x2="93.5" y2="184.6"/><line x1="104.1" y1="170.4" x2="90.4" y2="173.3"/><line x1="102.5" y1="160.2" x2="88.6" y2="161.7"/><line x1="112.0" y1="150.0" x2="88.0" y2="150.0"/><line x1="102.5" y1="139.8" x2="88.6" y2="138.3"/><line x1="104.1" y1="129.6" x2="90.4" y2="126.7"/><line x1="106.8" y1="119.7" x2="93.5" y2="115.4"/><line x1="110.5" y1="110.1" x2="97.7" y2="104.4"/><line x1="123.8" y1="106.0" x2="103.0" y2="94.0"/><line x1="120.7" y1="92.4" x2="109.4" y2="84.2"/><line x1="127.2" y1="84.4" x2="116.8" y2="75.1"/><line x1="134.4" y1="77.2" x2="125.1" y2="66.8"/><line x1="142.4" y1="70.7" x2="134.2" y2="59.4"/><line x1="156.0" y1="73.8" x2="144.0" y2="53.0"/><line x1="160.1" y1="60.5" x2="154.4" y2="47.7"/><line x1="169.7" y1="56.8" x2="165.4" y2="43.5"/><line x1="179.6" y1="54.1" x2="176.7" y2="40.4"/><line x1="189.8" y1="52.5" x2="188.3" y2="38.6"/></g><circle cx="200" cy="150" r="72" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="18"/><circle class="bft-arc" cx="200" cy="150" r="72" fill="none" stroke="#4FB38A" stroke-width="18" stroke-dasharray="151 453" transform="rotate(-90 200 150)"/><circle cx="200" cy="150" r="8" fill="#FFFFFF"/></svg></div><figcaption><h3>Provocări</h3><p>O dată pe lună, un eveniment mai greu.</p></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="bft-sec bft-night" id="how">
+  <div class="bft-wrap">
+    <div class="bft-head bft-rv"><div><p class="bft-eye">Planul</p><h2 class="bft-d">Cum funcționează.</h2></div><p>Antrenamentul e gratuit. Nu trebuie să fii în formă.</p></div>
+    <ol class="bft-tl">
+      <li class="bft-rv"><span class="bft-t bft-m">01</span><div><figure class="bft-stopimg bft-wa" data-slot="REAL · the community: full room, blurred"><img src="../img/his/full-room.webp" alt="" loading="lazy"><div class="bft-wabadge" aria-hidden="true"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4 5.2 5.2 0 0 0 3.1.6 2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg></span><span class="t"><b>Boost Fit</b><i>Grupul de WhatsApp</i></span><svg class="bft-chev" viewBox="0 0 120 100" aria-hidden="true"><g transform="skewX(-12)"><polygon points="20,0 44,0 74,50 44,100 20,100 50,50" fill="currentColor"/><polygon points="53,0 77,0 107,50 77,100 53,100 83,50" fill="currentColor" opacity=".55"/></g></svg></div></figure><h3>Intri în grupul de WhatsApp</h3><p>Acolo anunțăm fiecare sesiune.</p></div></li>
+      <li class="bft-rv"><span class="bft-t bft-m">02</span><div><figure class="bft-stopimg" data-slot="REAL · on the move in the park"><img src="../img/real/park-walk-2.jpg" alt="Doi membri pe o alee din Parcul Kiseleff" loading="lazy" style="object-position:50% 38%"></figure><h3>Ne vedem la locul anunțat</h3><p>Cam 45 de minute. Fiecare exercițiu are 3 niveluri.</p></div></li>
+      <li class="bft-rv"><span class="bft-t bft-m">03</span><div><figure class="bft-stopimg" data-slot="REAL · recovery at the club after the session"><img src="../img/real/bf-recovery.jpg" alt="Echipa la Boost Club după sesiunea de duminică" loading="lazy"></figure><h3>Recuperarea la Boost Club</h3><p>Lecția de nutriție și shake-urile, pe Sevastopol 24.</p></div></li>
+      <li class="bft-rv"><span class="bft-t bft-m">04</span><div><h3>Urci în rang</h3><p>Fiecare sesiune contează.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="bft-sec bft-ent" id="entrance">
+  <div class="bft-wrap bft-price">
+    <div class="bft-rv">
+      <p class="bft-eye">Intrarea</p>
+      <p class="bft-d bft-bigw">Nutriția de recuperare.</p>
+      <p class="bft-lead2">Antrenamentul e gratuit. Intrarea e ce primești la club, după fiecare sesiune.</p>
+      <ul class="bft-rules">
+        <li>Ai un program activ la Boost Club: intrarea e inclusă.</li>
+        <li>Aduci un prieten care vine: următoarea ta intrare e gratuită.</li>
+      </ul>
+    </div>
+    <div class="bft-shelf bft-rv">
+      <article class="bft-pk bft-pk1"><span class="bft-slash" aria-hidden="true"></span><img src="../bf/h24-rebuild.png" alt="Punga Herbalife H24 Rebuild Strength" loading="lazy"><div class="bft-pkt"><div class="k">Recuperare</div><h3>Shake proteic</h3><p>H24 Rebuild Strength</p></div></article>
+      <article class="bft-pk bft-pk2"><span class="bft-slash" aria-hidden="true"></span><div class="bft-cr7" aria-hidden="true"><span>CR7</span><b>Drive</b></div><div class="bft-pkt"><div class="k">Hidratare</div><h3>CR7 Drive</h3><p>Băutură cu carbohidrați și electroliți</p></div></article>
+      <article class="bft-pk bft-pk3"><span class="bft-slash" aria-hidden="true"></span><svg class="bft-steam" viewBox="0 0 120 120" aria-hidden="true"><g fill="none" stroke="#4FB38A" stroke-width="5" stroke-linecap="round"><path d="M40 52c-8-10 8-16 0-28"/><path d="M60 52c-8-10 8-16 0-28"/><path d="M80 52c-8-10 8-16 0-28"/></g><path d="M22 62h76v10a28 28 0 0 1-28 28H50a28 28 0 0 1-28-28Z" fill="#fff"/><path d="M98 66h6a10 10 0 0 1 0 20h-8" fill="none" stroke="#fff" stroke-width="6"/></svg><div class="bft-pkt"><div class="k">Ceai</div><h3>Ceai</h3><p>Cald sau rece, cum vrei.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="bft-sec" id="who">
+  <div class="bft-wrap">
+    <div class="bft-head bft-rv"><div><p class="bft-eye">Pentru cine este</p><h2 class="bft-d">Orice nivel.</h2></div></div>
+    <div class="bft-who">
+      <figure class="bft-whoimg bft-rv" data-slot="REAL · the crew in Kiseleff"><img src="../img/real/park-selfie.jpg" alt="Trei membri își fac un selfie în Parcul Kiseleff" loading="lazy"></figure>
+      <div class="bft-card bft-come bft-rv"><div class="k">Vino dacă</div><ul>
+        <li>Vrei să te miști, dar nu îți place sala.</li>
+        <li>Te antrenezi deja și vrei oameni cu care să te antrenezi duminica.</li>
+        <li>Vrei să începi și nu știi cum.</li>
+      </ul>
+      <div class="bft-lv" aria-hidden="true"><i></i><i></i><i></i><span>3 niveluri</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="bft-sec bft-night" id="ranks">
+  <div class="bft-wrap">
+    <div class="bft-head bft-rv"><div><p class="bft-eye">Ranguri</p><h2 class="bft-d">Vii, urci.</h2></div><p>Nu scade niciodată.</p></div>
+    <ol class="bft-ranks"><li style="--i:0"><img src="../bf/ranks/boostfit-rank-start.svg" alt="" loading="lazy" width="120" height="120"><b>START</b><span>prima sesiune</span></li><li style="--i:1"><img src="../bf/ranks/boostfit-rank-i.svg" alt="" loading="lazy" width="120" height="120"><b>I</b><span>3 sesiuni</span></li><li style="--i:2"><img src="../bf/ranks/boostfit-rank-ii.svg" alt="" loading="lazy" width="120" height="120"><b>II</b><span>6 sesiuni</span></li><li style="--i:3"><img src="../bf/ranks/boostfit-rank-iii.svg" alt="" loading="lazy" width="120" height="120"><b>III</b><span>10 sesiuni</span></li><li style="--i:4"><img src="../bf/ranks/boostfit-rank-star.svg" alt="" loading="lazy" width="120" height="120"><b>III ★</b><span>termini un eveniment lunar</span></li></ol>
+  </div>
+</section>
+
+<section class="bft-sec" id="where">
+  <div class="bft-wrap">
+    <div class="bft-head bft-rv"><div><p class="bft-eye">Unde</p><h2 class="bft-d">Prima sesiune.</h2></div></div>
+    <div class="bft-where bft-rv">
+      <div class="bft-card"><div class="k bft-m">09:00</div><h3>Parcul Kiseleff</h3><p>Intrarea dinspre Piața Victoriei, la începutul Șoselei Kiseleff. Metrou Piața Victoriei.</p><a href="https://maps.google.com/?q=Parcul+Kiseleff+Bucuresti" target="_blank" rel="noopener">Deschide în Maps →</a></div>
+      <div class="bft-walk bft-m" aria-hidden="true"><span>după</span><svg class="bft-chev" viewBox="0 0 120 100" aria-hidden="true"><g transform="skewX(-12)"><polygon points="20,0 44,0 74,50 44,100 20,100 50,50" fill="currentColor"/><polygon points="53,0 77,0 107,50 77,100 53,100 83,50" fill="currentColor" opacity=".55"/></g></svg></div>
+      <div class="bft-card"><div class="k bft-m">10:30</div><h3>Boost Club</h3><p>Strada Sevastopol 24, Sector 1.</p><a href="https://maps.google.com/?q=Strada+Sevastopol+24+Bucuresti" target="_blank" rel="noopener">Deschide în Maps →</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="bft-sec bft-night" id="coach">
+  <div class="bft-wrap bft-coach">
+    <figure class="bft-cph bft-rv" data-slot="REAL · Gabriel training"><img src="../img/his/bf-coach.jpg" alt="Gabriel Neshto la antrenament" loading="lazy"><span class="lb">Gabriel Neshto</span></figure>
+    <div class="bft-rv">
+      <p class="bft-eye">Antrenor</p>
+      <h2 class="bft-d">Gabriel.</h2>
+      <p>Fondatorul Boost Club. Luptător și alergător. Deschide clubul la 07:00 în timpul săptămânii și se antrenează cu voi duminica.</p>
+      <a class="bft-btn bft-ghost" href="gabriel.html">Despre Gabriel →</a>
+    </div>
+  </div>
+</section>
+
+<section class="bft-zh" id="monthly">
+  <div class="bft-wrap bft-zhg">
+    <a class="bft-zhlogo bft-rv" href="https://boostclub.ro/zerohour/" target="_blank" rel="noopener"><img src="../bf/zero-hour-logo-stacked.svg" alt="ZERO HOUR" loading="lazy" width="635" height="240"></a>
+    <div class="bft-rv">
+      <div class="bft-zhed bft-m">ZERO HOUR · 22 noiembrie · 04:00</div>
+      <h2 class="bft-d">O dată pe lună, ZERO HOUR.</h2>
+      <p>2 ore de provocare fizică foarte grea, apoi o lecție despre perseverență și leadership.</p>
+      <a class="bft-btn bft-zhb" href="https://boostclub.ro/zerohour/" target="_blank" rel="noopener">Despre ZERO HOUR →</a>
+    </div>
+  </div>
+  <span class="bft-zhclock bft-m" aria-hidden="true">04:00</span>
+</section>
+
+<section class="bft-sec" id="faq">
+  <div class="bft-wrap bft-faqg">
+    <div class="bft-head bft-rv"><div><p class="bft-eye">Întrebări</p><h2 class="bft-d">Înainte să vii.</h2></div></div>
+    <div class="bft-faq bft-rv"><details><summary>Ce îmi trebuie?</summary><div class="a">Adidași, haine de sport, apă. O geacă pentru drumul spre club.</div></details><details><summary>Dacă plouă?</summary><div class="a">Ploaie ușoară, ne antrenăm. Ploaie mare, anunțăm în grup până la 07:15 ce facem.</div></details><details><summary>Nu sunt în formă, pot veni?</summary><div class="a">Da. Fiecare exercițiu are o variantă ușoară. Spune-i lui Gabriel la început.</div></details><details><summary>Trebuie să fiu client Boost Club?</summary><div class="a">Nu. Poate veni oricine.</div></details><details><summary>Pot aduce copii sau câinele?</summary><div class="a">Copii de la 14 ani, cu tine. Câinele în parc da, în club nu.</div></details><details><summary>Filmați?</summary><div class="a">Da, filmăm pentru Instagram. Dacă nu vrei să apari, spune-ne la început.</div></details><details><summary>Cât costă?</summary><div class="a">Antrenamentul e gratuit. Intrarea e nutriția de recuperare de la club: 35 lei (shake proteic, băutură cu electroliți, ceai). Card de 10 intrări: 290 lei, merge la Boost Fit și la Boost Club.</div></details><details><summary>Trebuie să anunț că vin?</summary><div class="a">Da, răspunde în grupul de WhatsApp, ca să știm câți suntem.</div></details></div>
+  </div>
+</section>
+
+<section class="bft-final" id="join">
+  <div class="bft-fbg" aria-hidden="true" data-slot="REAL · the crew"><img src="../img/real/park-selfie.jpg" alt="" loading="lazy"></div>
+  <div class="bft-wrap bft-rv">
+    <h2 class="bft-d"><span>Intră</span> <span class="bft-blk"><span>în echipă.</span></span></h2>
+    <p>Scrie-ne pe WhatsApp și te adăugăm în grup.</p>
+    <a class="bft-btn bft-g" href="https://wa.me/40726205752?text=Salut%21%20Vreau%20s%C4%83%20intru%20%C3%AEn%20echipa%20Boost%20Fit." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4 5.2 5.2 0 0 0 3.1.6 2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg><span>Intră în echipă</span></a>
+  </div>
+</section>
+
+<footer class="bft-foot">
+  <div class="bft-wrap">
+    <div class="row"><img src="../bf/boostfit-logo.svg" alt="Boost Fit" width="257" height="30"><div><a href="index.html">boostclub.ro</a> · <a href="tel:+40726205752">+40 726 205 752</a> · <span>Strada Sevastopol 24, Sector 1, București</span></div></div>
+    <p class="disc">Boost Fit este echipa de antrenament a Boost Club. Distribuitor Independent Herbalife. Boost Club oferă ghidare wellness și consultații educaționale. Consultația nu diagnostichează, nu tratează și nu înlocuiește îngrijirea medicală. Participi la antrenament pe propria răspundere; dacă ai o afecțiune, vorbește cu medicul tău înainte. Rezultatele variază de la persoană la persoană.</p>
+    <div class="links"><a href="index.html">Înapoi la Boost Club</a><a href="https://boostclub.ro/confidentialitate" target="_blank" rel="noopener">Confidențialitate</a><a href="https://boostclub.ro/termeni" target="_blank" rel="noopener">Termeni</a><a href="https://boostclub.ro/cookies" target="_blank" rel="noopener">Cookies</a></div>
+    <p class="copy">© 2026 Boost Club. Toate drepturile rezervate.</p>
+  </div>
+</footer>
+
+<div class="bft-sticky" id="bft-sticky"><a class="bft-btn bft-g" href="https://wa.me/40726205752?text=Salut%21%20Vreau%20s%C4%83%20intru%20%C3%AEn%20echipa%20Boost%20Fit." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4 5.2 5.2 0 0 0 3.1.6 2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg><span>Intră în echipă</span><span class="sep">·</span><span class="bft-m">09:00</span></a></div>
+
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="../i18n/ro-ui.js"></script>
+<script src="../site.js"></script>
+<script src="../kit/kit.js"></script>
+<script src="../kit/scan.js"></script>
+<script>
+(function(){
+
+  // own language switch (same file in /ro/ and /ru/)
+  (function(){ var L=document.documentElement.lang||'en', f='boost-fit.html', nav=document.querySelector('.bft-lang');
+    nav.innerHTML=['ro','en','ru'].map(function(l){ var h=(L==='en'?'':'../')+(l==='en'?'':l+'/')+f; return l===L?'<b aria-current="true">'+l.toUpperCase()+'</b>':'<a href="'+h+'" hreflang="'+l+'">'+l.toUpperCase()+'</a>'; }).join('');
+    // chevron favicon on this page
+    document.querySelectorAll('link[rel~="icon"]').forEach(function(x){ x.remove(); }); var fi=document.createElement('link'); fi.rel='icon'; fi.href=(L==='en'?'':'../')+'../bf/boostfit-favicon.svg'; document.head.appendChild(fi);
+    // next Sundays (no session 15 + 22 Nov 2026)
+    var off={'2026-11-15':1,'2026-11-22':1}, d=new Date(), out=[]; d.setHours(12,0,0,0); d.setDate(d.getDate()+((7-d.getDay())%7));
+    if(new Date().getDay()===0&&new Date().getHours()>=11) d.setDate(d.getDate()+7);
+    for(var i=0;out.length<3&&i<12;i++){ var k=d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2); if(!off[k]) out.push(new Date(d)); d.setDate(d.getDate()+7); }
+    var fmt; try{ fmt=new Intl.DateTimeFormat(L==='en'?'en-GB':L,{day:'numeric',month:'short'}); }catch(e){ fmt={format:function(x){return x.toDateString()}}; }
+    document.getElementById('bft-next').textContent='Duminicile următoare'+': '+out.map(function(x){ return fmt.format(x).replace('.',''); }).join(' · ');
+  })();
+  var bar=document.querySelector('.bft-bar'), st=document.getElementById('bft-sticky'), hero=document.getElementById('top'), fin=document.getElementById('join');
+  function onS(){ bar.classList.toggle('solid',scrollY>40); var past=scrollY>hero.offsetHeight*.7, end=fin.getBoundingClientRect().top<innerHeight; st.classList.toggle('show',past&&!end); }
+  addEventListener('scroll',onS,{passive:true}); onS();
+  // reveals + the Session 01 video plays only while on screen
+  var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if('IntersectionObserver' in window){ var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('bft-seen'); io.unobserve(e.target); } }); },{rootMargin:'0px 0px -10% 0px'});
+    document.querySelectorAll('.bft-rv,.bft-ranks').forEach(function(x){ io.observe(x); });
+    var vo=new IntersectionObserver(function(es){ es.forEach(function(e){ var v=e.target.querySelector('video'); if(!v||RM) return; if(e.isIntersecting){ v.play().catch(function(){}); } else v.pause(); }); },{threshold:.35});
+    document.querySelectorAll('.bft-vid').forEach(function(x){ vo.observe(x); });
+  } else document.querySelectorAll('.bft-rv,.bft-ranks').forEach(function(x){ x.classList.add('bft-seen'); });
+  if(!window.gsap||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  gsap.registerPlugin(ScrollTrigger); gsap.config({nullTargetWarn:false});
+  gsap.from('.phero .h-xl',{y:40,opacity:0,duration:1.1,ease:'power4.out'});
+  gsap.from('.phero .sub,.phero .row,.phero .eyebrow',{y:18,opacity:0,duration:.9,stagger:.07,ease:'power3.out',delay:.2});
+  // framed photos open toward full width as they pass, the concept-6 move
+  gsap.utils.toArray('.pframe').forEach(function(f){ gsap.fromTo(f,{clipPath:'inset(0% 7% 0% 7% round 6px)'},{clipPath:'inset(0% 0% 0% 0% round 0px)',ease:'none',scrollTrigger:{trigger:f,start:'top 85%',end:'center 45%',scrub:true}}); gsap.from(f.querySelector('img'),{scale:1.15,ease:'none',scrollTrigger:{trigger:f,start:'top bottom',end:'bottom top',scrub:true}}); });
+  gsap.utils.toArray('.ruled li,.quotes figure').forEach(function(el){ gsap.from(el,{y:24,opacity:0,duration:.8,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%'}}); });
+
+  gsap.fromTo('.bft-hph img',{scale:1.14},{scale:1.06,duration:2.4,ease:'power3.out'});
+  gsap.to('.bft-hph img',{yPercent:8,ease:'none',scrollTrigger:{trigger:'.bft-hero',start:'top top',end:'bottom top',scrub:true}});
+})();
+</script>
+</body></html>

@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Free consultation · Boost Club</title>
+<meta name="description" content="Book your free body composition assessment at Boost Club, Strada Sevastopol 24, near Piața Victoriei. 25–30 minutes.">
+<meta property="og:title" content="Free consultation · Boost Club"><meta property="og:description" content="Book your free body composition assessment at Boost Club, Strada Sevastopol 24, near Piața Victoriei. 25–30 minutes."><meta property="og:image" content="brand/og.jpg"><meta name="theme-color" content="#0B2B22">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Cormorant:ital,wght@0,400;0,500;1,400;1,500;1,600&family=Anton&family=Oswald:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css"><link rel="stylesheet" href="kit/kit.css">
+<script>try{if(sessionStorage.getItem('kcur')){document.documentElement.classList.add('k-in');sessionStorage.removeItem('kcur')}}catch(e){}</script>
+<style>
+/* ---------- the booking room: dark, calm, one luminous card ---------- */
+.fs-book{position:relative;background:var(--night);color:var(--cream);padding-top:clamp(108px,10vw,150px);padding-bottom:clamp(72px,8vw,128px);overflow:clip;isolation:isolate}
+.fs-book::before{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(60% 55% at 12% 8%,rgba(47,138,99,.30),transparent 70%),radial-gradient(50% 50% at 92% 100%,rgba(217,178,106,.12),transparent 70%)}
+.fs-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);grid-template-areas:"intro card" "details card";column-gap:clamp(40px,6vw,112px);row-gap:clamp(40px,4vw,64px);align-items:start}
+.fs-intro{grid-area:intro}
+.fs-card{grid-area:card;position:sticky;top:92px}
+.fs-details{grid-area:details}
+.fs-intro .k-label{margin-bottom:26px}
+.fs-h1{font-size:clamp(46px,5.4vw,88px);line-height:.93;letter-spacing:-.055em;font-weight:600;max-width:13ch;text-wrap:balance}
+.fs-h1 .it{color:var(--brass);font-weight:500}
+html[lang=ro] .fs-h1,html[lang=ru] .fs-h1{text-wrap:wrap;max-width:14ch}
+.fs-sub{margin:28px 0 0;font-size:clamp(17px,1.3vw,19px);line-height:1.55;color:rgba(244,239,230,.74);max-width:44ch}
+.fs-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:30px}
+.fs-waq{color:var(--cream);font-size:15px}
+.fs-mob{display:none}
+
+/* facts: four hairline cells, value big, label small */
+.fs-facts{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--line-d)}
+.fs-facts>div{padding:22px 16px 20px 0;border-bottom:1px solid var(--line-d);display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:8px}
+.fs-facts>div:nth-child(even){padding-left:22px;border-left:1px solid var(--line-d)}
+.fs-facts dd{margin:0;font-size:clamp(22px,2vw,30px);font-weight:600;letter-spacing:-.04em;line-height:1.05}
+.fs-facts dt{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(244,239,230,.55)}
+.fs-info{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(22px,3vw,44px);margin-top:clamp(32px,3.4vw,48px)}
+.fs-info h3{font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin-bottom:14px;line-height:1.3}
+.fs-hours .hours>div{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid var(--line-d);font-size:15px}
+.fs-hours .hours>div span:last-child{font-variant-numeric:tabular-nums;color:rgba(244,239,230,.86)}
+.fs-hours p,.fs-wa p{margin:14px 0 0;font-size:13.5px;line-height:1.55;color:rgba(244,239,230,.6)}
+.fs-wa p{margin:0 0 18px;font-size:15px;color:rgba(244,239,230,.74)}
+.fs-wa .btn{height:50px;padding:0 22px;font-size:15px;color:var(--cream);box-shadow:inset 0 0 0 1px rgba(244,239,230,.4)}
+
+/* the card */
+.fs-card{background:var(--bone);color:var(--ink);border-radius:6px;padding:clamp(26px,3.2vw,52px);box-shadow:0 40px 90px -30px rgba(0,0,0,.6),0 0 0 1px rgba(244,239,230,.06)}
+.fs-cardhead .k-label{margin-bottom:16px}
+.fs-h2{font-size:clamp(30px,2.7vw,44px);letter-spacing:-.045em;line-height:1;font-weight:600}
+.fs-card .form{gap:22px}
+.fs-card .prog{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:10px 0 6px}
+.fs-card .prog i{display:flex;align-items:baseline;gap:10px;height:auto;padding-top:14px;border-radius:0;background:none;border-top:2px solid var(--line-l);font-style:normal;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--stone);transition:border-color .45s var(--ease),color .45s var(--ease)}
+.fs-card .prog i b{font-weight:600;color:inherit;font-variant-numeric:tabular-nums}
+.fs-card .prog i.on{border-color:var(--leaf);color:var(--ink)}
+.fs-card .prog i.on b{color:var(--leaf)}
+.fs-card .step{gap:20px}
+.fs-card .sl{font-size:14px;font-weight:500;letter-spacing:.01em;color:var(--stone);margin-bottom:10px;padding:0}
+/* goal tiles */
+.fs-goals{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.fs-goals label{display:block;position:relative}
+.fs-goals span{display:flex!important;align-items:center;justify-content:space-between;gap:12px;height:auto!important;min-height:84px;padding:18px 20px!important;border-radius:6px!important;border:1px solid var(--line-l)!important;background:#fff;font-size:17px!important;font-weight:600!important;letter-spacing:-.02em;line-height:1.2;transition:border-color .2s,background .25s var(--ease),color .25s var(--ease),transform .25s var(--ease)}
+.fs-goals span::after{content:'';flex:none;width:20px;height:20px;border-radius:50%;border:1px solid #CFC6B5;transition:all .25s var(--ease)}
+.fs-goals label:hover span{border-color:var(--leaf)!important}
+.fs-goals input:checked+span{background:var(--bottle);color:var(--cream);border-color:var(--bottle)!important}
+.fs-goals input:checked+span::after{border-color:var(--brass);background:var(--brass);box-shadow:inset 0 0 0 4px var(--bottle)}
+/* inputs: calm, generous */
+.fs-card .form input:not([type=radio]):not([type=checkbox]){height:60px;border-radius:6px;border:1px solid var(--line-l);background:#fff;font-size:17px;padding:0 18px}
+.fs-card .form input:focus{border:1px solid var(--leaf);box-shadow:0 0 0 3px rgba(31,107,79,.14);outline:none}
+.fs-card .form label{font-size:13px;font-weight:600;gap:8px}
+.fs-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.fs-card .form label{min-width:0}.fs-card .form input:not([type=radio]):not([type=checkbox]){width:100%;min-width:0}
+.fs-card .done:focus{outline:none}
+@media (min-width:961px) and (max-width:1240px){.fs-two{grid-template-columns:minmax(0,1fr)}.fs-goals span{font-size:16px!important;padding:16px!important}}
+.fs-src{border:0;padding:0;margin:0}
+.fs-src legend{font-size:13px;font-weight:600;margin-bottom:10px;padding:0}
+.fs-card .chips:not(.fs-goals) span{height:44px;padding:0 18px;border-color:var(--line-l);font-size:14.5px}
+.fs-card .chips:not(.fs-goals) label{display:block}
+.fs-note{margin:0;font-size:13.5px;line-height:1.55}
+.fs-trust{padding-top:16px;border-top:1px solid var(--line-l);letter-spacing:.01em}
+.fs-card .nav2{margin-top:4px}
+.fs-card .nav2 .btn{height:56px}
+.fs-card .nav2 .btn-bottle,.fs-card .nav2 .btn-brass{flex:1;max-width:260px}
+.fs-card .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.fs-card .err{color:#B23A3A;font-size:14px;margin:0;padding:12px 14px;border-radius:6px;background:rgba(178,58,58,.07)}
+.fs-card .step.on{display:grid;animation:fsstep .5s var(--ease)}
+.fs-card .step{border:0;padding:0;margin:0;display:none}
+@keyframes fsstep{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.fs-card .done{padding:18px 0 6px}
+.fs-card .done .big{display:grid;place-items:center;width:76px;height:76px;border-radius:50%;background:var(--leaf);color:#fff;font-size:32px;margin-bottom:26px;animation:fspop .6s var(--ease)}
+@keyframes fspop{from{transform:scale(.6);opacity:0}to{transform:none;opacity:1}}
+.fs-card .done #sum{margin-top:22px;padding-top:16px;border-top:1px solid var(--line-l)}
+.fs-card .done a{color:var(--leaf);font-weight:600}
+
+@media (max-width:1100px){.fs-info{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:960px){
+  .fs-grid{grid-template-columns:minmax(0,1fr);grid-template-areas:"intro" "card" "details"}
+  .fs-card{position:relative;top:0}
+  .fs-info{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fs-h1{max-width:13ch}
+}
+@media (max-width:640px){
+  .fs-book{padding-top:100px}
+  .fs-mob{display:inline-flex}
+  .fs-ctas{gap:16px}
+  .fs-goals{grid-template-columns:minmax(0,1fr)}
+  .fs-goals span{min-height:64px}
+  .fs-two{grid-template-columns:minmax(0,1fr)}
+  .fs-info{grid-template-columns:minmax(0,1fr)}
+  .fs-card{margin-inline:-6px;padding:26px 20px 28px}
+  .fs-card .prog i{font-size:11px;letter-spacing:.12em;gap:6px}
+  .fs-card .nav2 .btn{flex:1;padding:0 18px}
+  .fs-card .nav2 .btn-bottle,.fs-card .nav2 .btn-brass{max-width:none}
+}
+
+/* ---------- at your visit: edge-to-edge photo + the instrument ---------- */
+.fs-visitg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:min(100svh,920px);background:var(--bone)}
+.fs-photo{position:relative;overflow:hidden;background:var(--pine);min-height:520px}
+.fs-photo>img{position:absolute;inset:-40px;width:calc(100% + 80px);height:calc(100% + 80px);max-width:none;object-fit:cover;object-position:40% 50%;filter:blur(9px) brightness(.55) saturate(.9)}
+.fs-mini{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(78%,400px);box-shadow:0 30px 70px rgba(0,0,0,.4);background:rgba(7,30,23,.86);backdrop-filter:blur(12px);border:1px solid rgba(244,239,230,.12);border-radius:6px;padding:16px 16px 12px;display:flex;flex-direction:column;align-items:center;color:var(--cream)}
+.fs-mini #miniScan{width:100%}
+.fs-mini #miniScan svg{width:100%;height:auto;display:block;overflow:visible}
+.fs-mini .cap{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin-top:6px;text-align:center}
+.fs-visittxt{align-self:center;padding-block:clamp(72px,9vw,140px);max-width:680px}
+.fs-visittxt .k-label{margin-bottom:22px}
+.fs-visittxt .k-h{font-size:clamp(42px,4.8vw,80px)}
+.fs-get{list-style:none;margin:clamp(32px,3.4vw,48px) 0 30px;padding:0;border-top:1px solid var(--line-l)}
+.fs-get li{display:grid;grid-template-columns:44px minmax(0,1fr);align-items:baseline;padding:18px 0;border-bottom:1px solid var(--line-l);font-size:clamp(18px,1.5vw,22px);font-weight:600;letter-spacing:-.025em;line-height:1.25}
+.fs-get li span{font-size:12px;font-weight:600;letter-spacing:.2em;color:var(--brass-ink)}
+@media (max-width:900px){.fs-visitg{grid-template-columns:minmax(0,1fr)}.fs-photo{min-height:0;aspect-ratio:4/4.4}.fs-visittxt{max-width:none}}
+
+@media (prefers-reduced-motion:reduce){.fs-card .step.on,.fs-card .done .big{animation:none}}
+
+/* ---------- faq ---------- */
+.fs-faqg{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,6vw,110px);align-items:start}
+.fs-faqhead{position:sticky;top:110px}
+.fs-faqhead .k-label{margin-bottom:22px}
+.fs-faqhead .k-h{font-size:clamp(42px,4.6vw,76px)}
+@media (max-width:900px){.fs-faqg{grid-template-columns:minmax(0,1fr)}.fs-faqhead{position:relative;top:0}}
+</style></head>
+<body>
+<div class="k-curtain" aria-hidden="true"><img src="img/wordmark-cream-hd.png" alt=""></div>
+<a class="skip" href="#main">Skip to content</a>
+<div id="bc" data-page="scan" data-norbar="1" data-solid-at="0.12" hidden></div>
+<main id="main">
+<section class="fs-book gut" id="book" data-k-calm aria-label="Booking"><div class="wrap fs-grid">
+  <div class="fs-intro">
+    <span class="k-label">Free consultation</span>
+    <h1 class="fs-h1">Book your free body composition <span class="it">assessment.</span></h1>
+    <p class="fs-sub">Free body composition assessment · 25–30 minutes · Strada Sevastopol 24, near Piața Victoriei. Leave your name and number and Gabriel will message you on WhatsApp to arrange a time. Or message us on WhatsApp directly.</p>
+    <div class="fs-ctas"><a class="btn btn-brass fs-mob" href="#bookform">Prefer a form? Fill it in below ↓</a><a class="k-link fs-waq" href="https://wa.me/40726205752?text=Hi%21%20I%27d%20like%20to%20book%20a%20free%20scan." target="_blank" rel="noopener">Have a question? Message us on WhatsApp</a></div>
+  </div>
+
+  <div class="fs-card">
+  <div class="flow" id="flow">
+  <form class="form" id="bookform" name="consultatie-en" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" novalidate aria-label="Booking request">
+    <input type="hidden" name="form-name" value="consultatie-en"><input type="hidden" name="lang" value="en"><input type="hidden" name="referrer" value="">
+    <p class="vh" aria-hidden="true"><label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+    <div class="fs-cardhead"><span class="k-label">Booking</span><h2 class="fs-h2">Leave your name and number</h2></div>
+    <div class="prog" aria-hidden="true"><i><b>01</b><span>Goal</span></i><i><b>02</b><span>When</span></i><i><b>03</b><span>You</span></i></div>
+    <fieldset class="step on" data-step="1"><legend class="sl">1 / 3 · Main goal (optional)</legend><div class="chips big fs-goals">
+      <label><input type="radio" name="obiectiv" id="g1" value="Healthy weight loss"><span>Healthy weight loss</span></label><label><input type="radio" name="obiectiv" id="g2" value="Build muscle"><span>Build muscle</span></label><label><input type="radio" name="obiectiv" id="g3" value="More energy"><span>More energy</span></label><label><input type="radio" name="obiectiv" id="g4" value="Know my starting point"><span>Know my starting point</span></label></div>
+      <div class="row nav2"><button type="button" class="btn btn-bottle" data-next>Continue <span class="ar">→</span></button></div></fieldset>
+    <fieldset class="step" data-step="2"><legend class="sl">2 / 3 · When would suit you? (optional)</legend>
+      <label for="when" class="vh">When would suit you? (optional)</label><input id="when" name="cand" placeholder="e.g. Tuesday after 17:00">
+      <div class="chips" id="quick"><label><input type="checkbox" value="Morning"><span>Morning</span></label><label><input type="checkbox" value="Midday"><span>Midday</span></label><label><input type="checkbox" value="Evening"><span>Evening</span></label><label><input type="checkbox" value="Sunday"><span>Sunday</span></label></div>
+      <p class="small muted fs-note">Mon–Fri 07:00 – 20:00/21:00 · Sat closed · Sun 10:00 – 18:00</p>
+      <div class="row nav2"><button type="button" class="btn btn-ghost" data-back>Back</button><button type="button" class="btn btn-bottle" data-next>Continue <span class="ar">→</span></button></div></fieldset>
+    <fieldset class="step" data-step="3"><legend class="sl">3 / 3 · You</legend>
+      <div class="fs-two"><label for="fn">First name *<input id="fn" name="prenume" required placeholder="e.g. Maria" autocomplete="given-name"></label>
+      <label for="ph">Phone *<input id="ph" name="telefon" required placeholder="e.g. +40 722 000 000" autocomplete="tel" inputmode="tel"></label></div>
+      <fieldset class="fs-src"><legend>How did you hear about us? (optional)</legend><div class="chips">
+        <label><input type="radio" name="aflat" id="s1" value="Google"><span>Google</span></label><label><input type="radio" name="aflat" id="s2" value="Instagram"><span>Instagram</span></label><label><input type="radio" name="aflat" id="s3" value="A friend"><span>A friend</span></label><label><input type="radio" name="aflat" id="s4" value="On the street"><span>On the street</span></label><label><input type="radio" name="aflat" id="s5" value="Other"><span>Other</span></label></div></fieldset>
+      <p class="small muted fs-note">We use these details to manage your booking and contact you about it. Read how your data is processed in our Privacy Policy.</p>
+      <p class="err" id="err" role="alert" hidden></p>
+      <div class="row nav2"><button type="button" class="btn btn-ghost" data-back>Back</button><button class="btn btn-brass" type="submit" id="sendb">Send <span class="ar">→</span></button></div>
+      <p class="small muted fs-note fs-trust">Free consultation · We message you on WhatsApp · Protected information</p></fieldset>
+  </form>
+  <div class="done" id="done" hidden tabindex="-1"><span class="big" aria-hidden="true">✓</span><h3 class="fs-h2">Thank you! We got your request.</h3><p class="muted" style="margin-top:14px">Gabriel will message you on WhatsApp shortly to arrange a time. Want it faster? <a href="https://wa.me/40726205752?text=Hi%21%20I%27d%20like%20to%20book%20a%20free%20scan." target="_blank" rel="noopener">Message us on WhatsApp</a>.</p></div>
+  </div>
+  </div>
+
+  <div class="fs-details">
+    <dl class="fs-facts">
+      <div><dt>Complete session</dt><dd>25–30 minutes</dd></div>
+      <div><dt>Professional</dt><dd>Body composition analyser</dd></div>
+      <div><dt>Explained in plain language</dt><dd>Results on the spot</dd></div>
+      <div><dt>Strada Sevastopol 24</dt><dd>Piața Victoriei</dd></div>
+    </dl>
+    <div class="fs-info">
+      <div class="fs-hours"><h3>Boost Club hours</h3><div class="hours"><div><span>Monday – Friday</span><span>07:00 – 20:00/21:00</span></div><div><span>Saturday</span><span>Closed</span></div><div><span>Sunday</span><span>10:00 – 18:00</span></div></div><p>Strada Sevastopol 24, Sector 1 · Call: +40 726 205 752</p></div>
+      <div class="fs-wa"><h3>Prefer WhatsApp?</h3><p>Message us directly and we'll confirm your slot in minutes.</p><a class="btn btn-ghost" href="https://wa.me/40726205752?text=Hi%21%20I%27d%20like%20to%20book%20a%20free%20scan." target="_blank" rel="noopener">Message on WhatsApp</a></div>
+    </div>
+  </div>
+</div></section>
+
+<section class="fs-visit" aria-labelledby="fs-visit-h"><div class="fs-visitg">
+  <div class="fs-photo" data-k="clip" data-slot="REAL · scan moment at the analyser"><img src="img/scan.jpg" alt="A client going through her scan printout with the coach" loading="lazy">
+    <div class="fs-mini" data-slot="REAL · a real printout from the analyser"><div id="miniScan"></div><span class="cap">Example scan · segmental</span></div></div>
+  <div class="fs-visittxt gut">
+    <span class="k-label">At your visit</span>
+    <h2 class="k-h" id="fs-visit-h" data-k="lines">What you get in <span class="it">25–30 minutes</span></h2>
+    <ul class="fs-get" data-k="rise"><li><span>01</span>Professional body composition analysis</li><li><span>02</span>Results explained in plain language</li><li><span>03</span>Discussion about your goals</li><li><span>04</span>Personalised recommendations for you</li></ul>
+    <a class="k-link" href="how-it-works.html">How it works. Full details →</a>
+  </div>
+</div></section>
+
+<section class="sec oat gut fs-faq"><div class="wrap fs-faqg"><div class="fs-faqhead"><span class="k-label">Before you fill in</span><h2 class="k-h" data-k="lines">Frequently asked <span class="it">questions.</span></h2></div><div><div class="faq"><details><summary>Is the consultation really free?</summary><p>Yes. The body assessment and first consultation are free.</p></details><details><summary>How long does the first visit take?</summary><p>About 25–30 minutes: the body composition scan, results explained, and a discussion about your goals.</p></details><details><summary>How do I know my booking is confirmed?</summary><p>Gabriel messages you on WhatsApp to agree on a time. Your visit is confirmed once he sends you the day, time and address. If you haven't heard from us, message us on WhatsApp.</p></details></div><p class="muted" style="margin-top:28px;max-width:62ch"><b style="color:var(--ink)">What happens after the free visit?</b> You leave with your results and explanations. If you want ongoing support, we show you the options, what they include and what they cost.</p></div></div></section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="site.js"></script>
+<script src="kit/kit.js"></script>
+<script src="kit/scan.js"></script>
+<script>
+(function(){
+  drawScan(document.getElementById('miniScan'),{muscle:'#2F8A63',fat:'#D9B26A',base:'rgba(244,239,230,.08)',ink:'#F4EFE6'});
+  var f=document.getElementById('bookform'), steps=f.querySelectorAll('.step'), bars=f.querySelectorAll('.prog i'), cur=0;
+  function show(n){ cur=n; steps.forEach(function(s,i){ s.classList.toggle('on',i===n); }); bars.forEach(function(b,i){ b.classList.toggle('on',i<=n); }); var x=steps[n].querySelector('input'); if(x&&n>0) x.focus({preventScroll:true}); }
+  f.addEventListener('click',function(e){ if(e.target.closest('[data-next]')) show(Math.min(2,cur+1)); if(e.target.closest('[data-back]')) show(Math.max(0,cur-1)); });
+  f.querySelectorAll('input[name=obiectiv]').forEach(function(r){ r.addEventListener('change',function(){ setTimeout(function(){show(1)},250); }); });
+  var when=document.getElementById('when');
+  document.querySelectorAll('#quick input').forEach(function(c){ c.addEventListener('change',function(){ var v=[].slice.call(document.querySelectorAll('#quick input:checked')).map(function(x){return x.value}).join(', '); when.value=v; }); });
+  var q=new URLSearchParams(location.search); if(q.get('when')){ when.value=q.get('when'); }
+  var gq=q.get('goal'); if(gq){ var m={loss:'g1',muscle:'g2',energy:'g3'}[gq]; if(m) document.getElementById(m).checked=true; }
+  // Posts to Netlify Forms like the live site: consultatie / consultatie-en / consultatie-ru, then the
+  // submission-created function writes person + action + note to the CRM. Field names are the live ones.
+  var LG=document.documentElement.lang||'en', FN={ro:'consultatie',ru:'consultatie-ru'}[LG]||'consultatie-en';
+  f.setAttribute('name',FN); f.elements['form-name'].value=FN; f.elements['lang'].value=LG;
+  var sendb=document.getElementById('sendb'), sendL=sendb.innerHTML;
+  f.addEventListener('submit',function(e){ e.preventDefault(); var fn=document.getElementById('fn'), ph=document.getElementById('ph'), err=document.getElementById('err');
+    var digits=(ph.value||'').replace(/[^0-9]/g,'');
+    if(!fn.value.trim()){ err.hidden=false; err.textContent='Please add your first name so Gabriel knows who to message.'; fn.focus(); return; }
+    if(digits.length<9){ err.hidden=false; err.textContent='Please check the phone number. We message you on WhatsApp, so it needs the full number.'; ph.focus(); return; }
+    if(sendb.disabled) return;
+    err.hidden=true; f.elements['referrer'].value=location.href; sendb.disabled=true; sendb.textContent='Sending…';
+    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
+      .then(function(r){ if(!r.ok) throw new Error(r.status); f.hidden=true; var d=document.getElementById('done'); d.hidden=false; d.focus(); })
+      .catch(function(){ sendb.disabled=false; sendb.innerHTML=sendL; err.hidden=false;
+        err.textContent='We could not send your request. Please message us on WhatsApp instead and we will book you in.'+' ';
+        var wl=document.createElement('a'); wl.href=document.querySelector('.fs-waq').href; wl.target='_blank'; wl.rel='noopener'; wl.textContent='Open WhatsApp →'; err.appendChild(wl); });
+  });
+  bars[0].classList.add('on');
+  if(!window.gsap||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  gsap.registerPlugin(ScrollTrigger); gsap.config({nullTargetWarn:false});
+  gsap.from('.phero .h-xl',{y:40,opacity:0,duration:1.1,ease:'power4.out'});
+  gsap.from('.phero .sub,.phero .row,.phero .eyebrow',{y:18,opacity:0,duration:.9,stagger:.07,ease:'power3.out',delay:.2});
+  // framed photos open toward full width as they pass, the concept-6 move
+  gsap.utils.toArray('.pframe').forEach(function(f){ gsap.fromTo(f,{clipPath:'inset(0% 7% 0% 7% round 6px)'},{clipPath:'inset(0% 0% 0% 0% round 0px)',ease:'none',scrollTrigger:{trigger:f,start:'top 85%',end:'center 45%',scrub:true}}); gsap.from(f.querySelector('img'),{scale:1.15,ease:'none',scrollTrigger:{trigger:f,start:'top bottom',end:'bottom top',scrub:true}}); });
+  gsap.utils.toArray('.ruled li,.quotes figure').forEach(function(el){ gsap.from(el,{y:24,opacity:0,duration:.8,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%'}}); });
+  gsap.from('.fs-intro>*',{y:28,opacity:0,duration:1,stagger:.07,ease:'power3.out'});
+  gsap.from('.fs-card',{y:40,opacity:0,duration:1.1,delay:.15,ease:'power3.out',clearProps:'transform'});
+  gsap.from('.fs-details>*',{y:24,opacity:0,duration:.9,stagger:.08,delay:.3,ease:'power3.out'});
+})();
+</script>
+</body></html>

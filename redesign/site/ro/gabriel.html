@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Despre Gabriel · Boost Club</title>
+<meta name="description" content="Gabriel Neshto, fondatorul Boost Club: antrenor personal certificat ISSA, luptător MMA semi-profesionist, a treia generație dintr-o familie cu 36 de ani în wellness.">
+<meta property="og:title" content="Despre Gabriel · Boost Club"><meta property="og:description" content="Gabriel Neshto, fondatorul Boost Club: antrenor personal certificat ISSA, luptător MMA semi-profesionist, a treia generație dintr-o familie cu 36 de ani în wellness."><meta property="og:image" content="../brand/og.jpg"><meta name="theme-color" content="#0B2B22">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Cormorant:ital,wght@0,400;0,500;1,400;1,500;1,600&family=Anton&family=Oswald:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../site.css"><link rel="stylesheet" href="../kit/kit.css">
+<script>try{if(sessionStorage.getItem('kcur')){document.documentElement.classList.add('k-in');sessionStorage.removeItem('kcur')}}catch(e){}</script>
+<style>
+/* pale sections on this dark page keep ink text (kit classes too) */
+.dark .gb-pale{color:var(--ink)}
+.dark .gb-pale .k-label{color:var(--brass-ink)}
+.dark .gb-pale .k-h .it{color:var(--leaf)}
+.dark .gb-pale .k-head aside,.dark .gb-pale .muted{color:var(--stone)}
+.gb-bone{background:var(--bone)}
+
+/* ---------- hero: magazine cover, portrait bleeds to the edge ---------- */
+.gb-hero{position:relative;min-height:max(100svh,680px);display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);background:var(--night);color:var(--cream);overflow:hidden}
+.gb-ht{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:flex-end;padding-top:150px;padding-bottom:clamp(130px,17vh,180px)}
+.gb-ht .k-label{margin-bottom:26px}
+.gb-ht h1{font-size:clamp(64px,9.6vw,172px);line-height:.84;letter-spacing:-.065em}
+.gb-ht h1 .it{display:block;color:var(--brass);padding-left:.04em;letter-spacing:-.02em}
+.gb-ht .gb-lead{margin-top:34px;font-size:clamp(17px,1.35vw,20px);line-height:1.55;max-width:50ch;color:rgba(244,239,230,.8)}
+.gb-hq{margin:26px 0 0;padding-left:20px;border-left:1px solid var(--brass);max-width:40ch;font-family:var(--accent);font-style:italic;font-weight:500;font-size:clamp(22px,1.9vw,28px);line-height:1.2;color:var(--cream)}
+.gb-ht .row{margin-top:34px}
+.gb-hp{position:relative;margin:0;overflow:hidden;background:var(--night)}
+.gb-hp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 18%}
+.gb-hp::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,var(--night) 0%,rgba(7,30,23,0) 22%),linear-gradient(0deg,rgba(7,30,23,.55) 0%,rgba(7,30,23,0) 30%);pointer-events:none}
+@media (min-width:901px) and (max-height:960px){.gb-ht{padding-top:112px;padding-bottom:124px}.gb-ht h1{font-size:clamp(56px,8vw,128px)}.gb-ht .gb-lead{margin-top:24px}.gb-hq{margin-top:18px}.gb-ht .row{margin-top:24px}}
+@media (min-width:901px) and (max-height:760px){.gb-ht{padding-top:92px;padding-bottom:110px}.gb-ht .k-label{margin-bottom:16px}.gb-ht h1{font-size:clamp(52px,6.6vw,104px)}.gb-ht .gb-lead{font-size:16px;margin-top:18px}.gb-hq{font-size:21px;max-width:48ch}}
+@media (max-width:900px){
+  .gb-hero{grid-template-columns:minmax(0,1fr);min-height:0}
+  .gb-hp{order:-1;aspect-ratio:4/5;max-height:66svh}
+  .gb-hp::after{background:linear-gradient(0deg,var(--night) 0%,rgba(7,30,23,.6) 22%,rgba(7,30,23,0) 48%)}
+  .gb-ht{margin-top:-120px;padding-top:0;padding-bottom:120px}
+}
+
+/* ---------- credentials as marks ---------- */
+.gb-cred .gb-mk{font-size:clamp(44px,4.4vw,76px)!important;white-space:nowrap}.gb-cred{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,80px);align-items:start}.gb-credp{margin:0;position:sticky;top:96px;aspect-ratio:3/4;border-radius:6px;overflow:hidden}.gb-credp img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}@media (max-width:900px){.gb-cred{grid-template-columns:minmax(0,1fr)}.gb-credp{position:relative;top:0;max-width:520px}}
+.gb-marks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--line-l)}
+.gb-marks>div{padding:clamp(30px,3.4vw,52px) clamp(20px,3.4vw,56px) clamp(34px,3.6vw,60px) 0;border-bottom:1px solid var(--line-l)}
+.gb-marks>div:nth-child(even){padding-left:clamp(20px,3.4vw,56px);padding-right:0;border-left:1px solid var(--line-l)}
+.gb-mk{display:block;font-size:clamp(58px,8vw,132px);font-weight:600;letter-spacing:-.065em;line-height:.86;font-variant-numeric:tabular-nums}
+.gb-ml{display:block;margin-top:16px;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--brass-ink)}
+.gb-marks h3{margin-top:clamp(26px,3vw,44px);font-size:clamp(22px,2vw,30px);letter-spacing:-.03em;line-height:1.05}
+.gb-marks p{margin:12px 0 0;color:var(--stone);max-width:46ch}
+@media (max-width:700px){.gb-marks{grid-template-columns:minmax(0,1fr)}.gb-marks>div,.gb-marks>div:nth-child(even){padding-left:0;padding-right:0;border-left:0}}
+
+/* ---------- statement ---------- */
+.gb-stmt blockquote{max-width:25ch;font-size:clamp(30px,4.1vw,64px)}
+.gb-stmt cite span{white-space:nowrap}
+
+/* ---------- journey: a real timeline ---------- */
+.gb-tlw{position:relative}.gb-tl{list-style:none;margin:0;padding:0;position:relative}
+.gb-tlw::before,.gb-fill{content:'';position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--line-d);transform:translateX(-.5px)}
+.gb-fill{background:var(--brass);transform-origin:50% 0}
+.gb-tl>li{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(64px,10vw,150px);align-items:center;padding-block:clamp(44px,5.5vw,84px)}
+.gb-tl>li::after{content:'';position:absolute;left:50%;top:50%;width:15px;height:15px;border-radius:50%;background:var(--bottle);box-shadow:0 0 0 1px var(--brass);transform:translate(-50%,-50%);transition:background .4s var(--ease),box-shadow .4s var(--ease)}
+.gb-tl>li.on::after{background:var(--brass);box-shadow:0 0 0 6px rgba(217,178,106,.18)}
+.gb-ph{position:relative;justify-self:end;width:min(100%,440px);margin:0;border-radius:6px;overflow:hidden;background:var(--pine)}
+.gb-ph img{width:100%;height:auto}
+.gb-tl>li:nth-child(even) .gb-ph{order:2;justify-self:start}
+.gb-tl>li:nth-child(even) .gb-tx{justify-self:end;text-align:right}
+.gb-tl>li:nth-child(even) .gb-tx p{margin-left:auto}
+.gb-n{display:block;font-family:var(--loud);font-size:clamp(76px,8.6vw,140px);line-height:.82;color:var(--brass)}
+.gb-tx h3{margin-top:22px;font-size:clamp(32px,3.4vw,52px);letter-spacing:-.045em;line-height:.98}
+.gb-tx p{margin:16px 0 0;font-size:clamp(17px,1.35vw,20px);line-height:1.5;max-width:30ch;color:rgba(244,239,230,.78)}
+.gb-ph.k-slot{aspect-ratio:4/5;min-height:0;background-color:#174536;box-shadow:inset 0 0 0 1px rgba(217,178,106,.3)}
+.gb-ph.k-slot::after{opacity:.5}
+.gb-ph.k-slot .k-slotcap{color:var(--brass)}
+@media (max-width:900px){
+  .gb-tlw::before,.gb-fill{left:7px}
+  .gb-tl>li{grid-template-columns:minmax(0,1fr);gap:24px;padding:40px 0 40px 44px}
+  .gb-tl>li::after{left:7px;top:58px}
+  .gb-tl>li .gb-ph,.gb-tl>li:nth-child(even) .gb-ph{order:2;justify-self:start;width:min(100%,460px)}
+  .gb-tl>li:nth-child(even) .gb-tx{justify-self:start;text-align:left}
+  .gb-tl>li:nth-child(even) .gb-tx p{margin-left:0}
+}
+
+/* ---------- family: two-column text, then the three photos edge to edge ---------- */
+.gb-fam .k-h .it{display:block}
+.gb-famp{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,64px);margin-top:clamp(36px,4vw,56px);max-width:1040px;margin-left:auto}
+.gb-famp p{margin:0 0 18px;font-size:18px;line-height:1.7;color:var(--stone)}.gb-famp .gb-own{color:var(--ink);font-weight:500}
+.gb-famp>div:first-child>p:first-child::first-letter{float:left;font-family:var(--accent);font-weight:500;font-size:4.1em;line-height:.8;margin:.06em .1em 0 0;color:var(--leaf)}
+.gb-fammo{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px}
+.gb-fammo figure{position:relative;margin:0;aspect-ratio:3/4;overflow:hidden;background:var(--pine)}
+.gb-fammo img{width:100%;height:100%;object-fit:cover}
+@media (max-width:760px){.gb-famp{grid-template-columns:minmax(0,1fr)}.gb-fammo{grid-template-columns:repeat(2,minmax(0,1fr))}.gb-fammo figure:first-child{grid-column:1/-1}}
+
+/* ---------- sport and community ---------- */
+.gb-spg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,7vw,120px);align-items:center}
+.gb-bigp{position:relative;margin:0;aspect-ratio:3/4;border-radius:6px;overflow:hidden;max-width:560px}.gb-bigp img{width:100%;height:100%;object-fit:cover;object-position:50% 35%}.gb-bigp::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(4,20,15,.9) 0%,rgba(4,20,15,.3) 38%,rgba(4,20,15,0) 60%)}.gb-bigp figcaption{position:absolute;left:clamp(20px,2.4vw,34px);bottom:clamp(20px,2.4vw,34px);z-index:1}.gb-bigp b{font-size:clamp(56px,6.4vw,104px)!important}
+.gb-big b{display:block;font-size:clamp(84px,13.5vw,230px);font-weight:600;letter-spacing:-.075em;line-height:.8;font-variant-numeric:tabular-nums;color:var(--cream)}
+.gb-big span{display:block;margin-top:22px;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--brass)}
+.gb-sp .k-h{font-size:clamp(40px,4.8vw,76px)}
+.gb-sp .k-lead{margin-top:26px}
+.gb-sp .gb-p2{margin-top:18px;max-width:46ch;color:rgba(244,239,230,.66)}
+.gb-sp .row{margin-top:30px}
+@media (max-width:900px){.gb-spg{grid-template-columns:minmax(0,1fr);align-items:start}}
+
+/* ---------- 3 S: three big cards ---------- */
+.gb-3s .k-h .it{display:block}
+.gb-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.gb-card{position:relative;display:flex;flex-direction:column;min-height:clamp(470px,44vw,640px);padding:clamp(24px,2.4vw,36px);border-radius:6px;overflow:hidden;isolation:isolate}
+.gb-card .gb-ci{font-family:var(--loud);font-size:clamp(110px,12vw,200px);line-height:.8;letter-spacing:.005em}
+.gb-card h3{margin-top:auto;padding-top:32px;font-size:clamp(34px,3.4vw,54px);letter-spacing:-.05em;line-height:.95}
+.gb-card p{margin:16px 0 0;font-size:16px;line-height:1.55;max-width:34ch;opacity:.86}
+.gb-card.c1{background:var(--bottle);color:var(--cream)}.gb-card.c1 .gb-ci{color:var(--brass)}
+.gb-card.c2{background:var(--brass);color:#13201B}.gb-card.c2 .gb-ci{color:var(--bottle)}
+.gb-card.c3{background:var(--leaf);color:var(--cream)}.gb-card.c3 .gb-ci{color:var(--brass-hi)}
+@media (max-width:900px){
+  .gb-cards{grid-template-columns:minmax(0,1fr);gap:14px}
+  .gb-card{position:sticky;top:calc(84px + var(--i,0) * 18px);min-height:380px;box-shadow:0 -14px 40px rgba(14,20,18,.14)}
+  .gb-card .gb-ci{font-size:110px}
+}
+
+/* ---------- closing band: Gabriel at the club wall, the words on clean night ---------- */
+.gb-cta .k-h{font-size:clamp(56px,7.4vw,124px);max-width:9ch}
+.gb-cta>img{object-position:50% 30%}
+@media (min-width:901px){
+  .gb-cta>img{left:auto;right:0;width:56%}
+  .gb-cta::after{background:linear-gradient(90deg,var(--night) 0%,var(--night) 44%,rgba(7,30,23,0) 60%),linear-gradient(0deg,rgba(7,30,23,.55) 0%,rgba(7,30,23,0) 28%)}
+  .gb-cta .wrap>*{max-width:min(40vw,560px)}
+}
+@media (max-width:900px){
+  .gb-cta{display:block;min-height:0}
+  .gb-cta>img{position:relative;inset:auto;width:100%;height:auto;aspect-ratio:4/5;max-height:80svh}
+  .gb-cta::after{background:linear-gradient(180deg,rgba(7,30,23,0) 0%,rgba(7,30,23,0) 34%,var(--night) 54%)}
+  .gb-cta .wrap{margin-top:-90px;padding-top:0;padding-bottom:120px}
+}
+</style><style id="i18n-css">/* RO/RU page overrides, injected into ro/*.html and ru/*.html by pages_zz_i18n.py (English pages never see this).
+   Blocks between the @ro / @ru markers apply to that language only. */
+/* diacritics (Ă Î Ș Ț) and Cyrillic Й Ё need a little more room than the .86 English line-height */
+.loud{line-height:.95}
+/* longer words: a word that still cannot fit breaks instead of running off the screen */
+h1,h2,h3,.loud{overflow-wrap:break-word}
+/* the longest signature name (Strawberry Cheesecake) fits its card column */
+.ccard .nm{font-size:clamp(56px,8vw,160px)}
+/* Boost Fit: activity cards and section heads, sized for longer words */
+.fgrid b{font-size:clamp(20px,2.3vw,40px);line-height:1.05}
+.fh2{font-size:clamp(44px,6.4vw,110px)}
+
+.fh{font-size:clamp(64px,14vw,250px)}</style></head>
+<body class="dark">
+<div class="k-curtain" aria-hidden="true"><img src="../img/wordmark-cream-hd.png" alt=""></div>
+<a class="skip" href="#main">Sari la conținut</a>
+<div id="bc" data-page="gabriel" hidden></div>
+<main id="main">
+<section class="gb-hero">
+  <div class="gb-ht gut">
+    <span class="k-label">Fondatorul Boost Club</span>
+    <h1>Gabriel <span class="it">Neshto.</span></h1>
+    <p class="gb-lead">Antrenor personal certificat ISSA, luptător MMA semi-profesionist și atlet de atletism, a treia generație dintr-o familie cu 36 de ani în wellness, și omul care și-a construit propriul corp de la zero: peste 20 kg de masă musculară.</p>
+    <p class="gb-hq">Nu îți vând un plan perfect. Îți ofer o direcție realistă, construită în jurul vieții tale, nu invers.</p>
+    <div class="row"><a class="btn btn-brass" href="#" data-reserve>Rezervă consultația cu Gabriel <span class="ar">→</span></a></div>
+  </div>
+  <figure class="gb-hp" data-slot="REAL · Gabriel on stage"><img src="../img/real/gabi-event.jpg" alt="Gabriel Neshto pe scenă, la o gală" width="1350" height="1800"></figure>
+</section>
+
+<section class="sec gut gb-bone gb-pale"><div class="wrap">
+  <div class="gb-cred"><figure class="gb-credp" data-k="clip" data-slot="REAL · Gabriel training"><img src="../img/his/gabi-fight.jpg" alt="Gabriel într-un meci de Muay Thai" loading="lazy"></figure><div>
+  <h2 class="k-h" data-k="lines">Formare.</h2>
+  <div class="gb-marks" data-k="rise" style="margin-top:40px">
+    <div><b class="gb-mk">ISSA</b><span class="gb-ml">Antrenor personal certificat</span><h3>Certificat ISSA</h3><p>Certificare de antrenor personal de la International Sports Sciences Association, dublată de ani de studiu sistematic în științele sportului, nutriție și sănătate.</p></div>
+    <div><b class="gb-mk" data-gb-count>+20 kg</b><span class="gb-ml">Masă musculară</span><h3>Atlet în competiții</h3><p>Peste 20 kg de masă musculară construită prin nutriție corectă și antrenament. Concurează ca luptător MMA semi-profesionist și atlet de atletism.</p></div>
+    <div><b class="gb-mk" data-gb-count>36 de ani</b><span class="gb-ml">Experiență de familie în wellness</span><h3>36 de ani de moștenire</h3><p>Familia Neshto lucrează în wellness de 36 de ani și a ghidat mii de oameni. Gabriel a crescut în acest mediu și duce tradiția mai departe.</p></div>
+    <div><b class="gb-mk" data-gb-count>20+</b><span class="gb-ml">Țări cu clienți</span><h3>Comunitate internațională</h3><p>Clienți din peste 20 de țări, din Franța, Elveția și Marea Britanie până în SUA, India și Singapore. Aproape 30.000 de urmăritori online.</p></div>
+  </div>
+</div></div>
+</div></section>
+
+<section class="k-stmt night gut gb-stmt"><blockquote>„Corpul tău e singura afacere pe care nu o poți vinde, înlocui sau abandona. <em>Începe să investești în el.</em>"</blockquote></section>
+
+<section class="sec on-dark gut"><div class="wrap">
+  <div class="k-head"><div><span class="k-label">Povestea</span><h2 class="k-h" data-k="lines">Drumul lui <span class="it">Gabriel.</span></h2></div></div>
+  <div class="gb-tlw"><span class="gb-fill" aria-hidden="true"></span><ol class="gb-tl"><li><figure class="gb-ph" data-k="clip" data-slot="REAL · Gabriel before"><img src="../img/his/gabi-before.jpg" alt="Gabriel la punctul de plecare, înainte de cele peste 20 kg de mușchi" width="855" height="1736" loading="lazy"></figure><div class="gb-tx"><span class="gb-n">01</span><h3>Punctul de pornire</h3><p>Subponderal, stil de viață haotic, încredere aproape de zero.</p></div></li><li><figure class="gb-ph" data-k="clip" data-slot="REAL · Gabriel after"><img src="../img/his/gabi-after.jpg" alt="Gabriel după ce a construit peste 20 kg de mușchi" width="855" height="1736" loading="lazy"></figure><div class="gb-tx"><span class="gb-n">02</span><h3>Schimbarea</h3><p>Nutriție corectă + antrenament structurat → peste 20 kg de masă musculară.</p></div></li><li><figure class="gb-ph" data-k="clip" data-slot="REAL · MMA"><img src="../img/mma.jpg" alt="Gabriel la antrenament, într-o cușcă de MMA" width="825" height="1100" loading="lazy"></figure><div class="gb-tx"><span class="gb-n">03</span><h3>Sportul</h3><p>Azi concurează ca luptător MMA semi-profesionist și atlet de atletism.</p></div></li><li><figure class="gb-ph" data-k="clip" data-slot="REAL · Gabriel in a tux on stage"><img src="../img/real/gabi-event.jpg" alt="Gabriel Neshto pe scenă, la o gală" width="1350" height="1800" loading="lazy"></figure><div class="gb-tx"><span class="gb-n">04</span><h3>Formarea</h3><p>Ani de studiu în științele sportului și nutriție, confirmați prin certificarea ISSA.</p></div></li><li><figure class="gb-ph" data-k="clip" data-slot="REAL · painting the wall"><img src="../img/his/painting.webp" alt="Gabriel vopsește peretele verde al clubului" width="1049" height="1500" loading="lazy"></figure><div class="gb-tx"><span class="gb-n">05</span><h3>Boost Club</h3><p>Toată experiența se întoarce acasă, în București. Vii, te măsori, pleci cu o direcție clară.</p></div></li></ol></div>
+</div></section>
+
+<section class="oat gb-pale gb-fam">
+  <div class="sec gut" style="padding-bottom:clamp(56px,6vw,96px)"><div class="wrap">
+    <span class="k-label">Moștenire de familie</span>
+    <h2 class="k-h" data-k="lines" style="margin-top:22px">36 de ani de wellness. <span class="it">O tradiție care continuă.</span></h2>
+    <div class="gb-famp" data-k="rise"><div><p>Familia Neshto lucrează în nutriție și wellness din 1989. De peste trei decenii, au ghidat mii de oameni de toate vârstele, cu tot felul de obiective: să slăbească, să devină mai puternici, să-și recapete energia. Pe parcurs au construit echipe în mai multe țări și au ajuns la unul dintre cele mai înalte niveluri de recunoaștere din industria lor.</p><p>Gabriel a crescut în mijlocul acestei munci. A văzut ce schimbă cu adevărat viața oamenilor și ce nu: obiceiurile care rămân, sprijinul care te ține pe drum, detaliile care fac un plan realist.</p></div><div><p>Asta înseamnă că în spatele Boost Club nu stă un antreprenor care a citit câteva cărți. Stă o familie care a văzut ce funcționează pe mii de oameni reali, în timp real, timp de aproape patru decenii.</p><p class="gb-own">Boost Club este al lui. Aceleași principii dovedite, aplicate cu o perspectivă mai tânără și mai modernă, construite pentru ritmul vieții de azi.</p></div></div>
+  </div></div>
+  <div class="gb-fammo">
+    <figure data-slot="REAL · the family"><img src="../img/family.jpg" alt="Familia Neshto într-un studio TV" loading="lazy" style="object-position:50% 30%"></figure>
+    <figure data-slot="REAL"><img src="../img/his/gabi-kiss.webp" alt="Gabriel la club cu cel mai mic membru al familiei" loading="lazy" style="object-position:50% 30%"></figure>
+    <figure data-slot="REAL"><img src="../img/real/gabi-gala-group.jpg" alt="Gabriel cu familia și echipa pe scenă, la o gală" loading="lazy" style="object-position:50% 40%"></figure>
+  </div>
+</section>
+
+<section class="sec night gut"><div class="wrap gb-spg">
+  <figure class="gb-big gb-bigp" data-k="clip" data-slot="REAL · Gabriel training in Thailand"><img src="../img/his/gabi-muaythai.jpg" alt="Gabriel într-o sală de Muay Thai din Thailanda" loading="lazy"><figcaption><b data-gb-count>~30,000</b><span>Urmăritori</span></figcaption></figure>
+  <div class="gb-sp"><span class="k-label">Sport și comunitate</span><h2 class="k-h" data-k="lines" style="margin-top:22px">Din ring și de pe pistă, <span class="it">în club.</span></h2><p class="k-lead">Disciplina din MMA și atletism este aceeași pe care Gabriel o aduce în consultații: pași măsurabili, executați consecvent, fără scurtături.</p><p class="gb-p2">Aproape 30.000 de oameni îl urmăresc pe rețelele sociale, unde conținutul lui despre nutriție, antrenament și stil de viață a strâns milioane de vizualizări.</p><div class="row"><a class="btn btn-ghost" href="https://www.instagram.com/gabineshto" target="_blank" rel="noopener">@gabineshto pe Instagram</a><a class="btn btn-ghost" href="https://gabrielneshto.com" target="_blank" rel="noopener">gabrielneshto.com</a></div></div>
+</div></section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="../i18n/ro-ui.js"></script>
+<script src="../site.js"></script>
+<script src="../kit/kit.js"></script>
+<script src="../kit/scan.js"></script>
+<script>
+(function(){
+
+  var gbRM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // marks count up from zero; prefix/suffix text (and its translation) stays as written
+  document.querySelectorAll('[data-gb-count]').forEach(function(el){
+    if(gbRM||!('IntersectionObserver' in window)) return;
+    var tn=null;(function f(n){ Array.prototype.forEach.call(n.childNodes,function(c){ if(tn) return; if(c.nodeType===3&&/\d/.test(c.nodeValue)) tn=c; else if(c.nodeType===1) f(c); }); })(el);
+    if(!tn) return; var src=tn.nodeValue, m=src.match(/\d[\d,]*/); if(!m) return;
+    var end=parseInt(m[0].replace(/,/g,''),10), cm=m[0].indexOf(',')>-1;
+    function fm(v){ var s=String(v); return cm?s.replace(/\B(?=(\d{3})+(?!\d))/g,','):s; }
+    el.style.minWidth=el.getBoundingClientRect().width+'px';
+    tn.nodeValue=src.replace(m[0],fm(0));
+    var io=new IntersectionObserver(function(es){ if(!es[0].isIntersecting) return; io.disconnect(); var t0=null;
+      function st(t){ if(!t0) t0=t; var p=Math.min(1,(t-t0)/1500); p=1-Math.pow(1-p,3); tn.nodeValue=src.replace(m[0],fm(Math.round(end*p))); if(p<1) requestAnimationFrame(st); }
+      requestAnimationFrame(st); },{threshold:.5});
+    io.observe(el);
+  });
+  // timeline dots: all lit when there is no scroll motion
+  if(gbRM||!window.gsap) document.querySelectorAll('.gb-tl>li').forEach(function(l){ l.classList.add('on'); });
+  document.querySelectorAll('.gb-card').forEach(function(c,i){ c.style.setProperty('--i',i); });
+
+  if(!window.gsap||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  gsap.registerPlugin(ScrollTrigger); gsap.config({nullTargetWarn:false});
+  gsap.from('.phero .h-xl',{y:40,opacity:0,duration:1.1,ease:'power4.out'});
+  gsap.from('.phero .sub,.phero .row,.phero .eyebrow',{y:18,opacity:0,duration:.9,stagger:.07,ease:'power3.out',delay:.2});
+  // framed photos open toward full width as they pass, the concept-6 move
+  gsap.utils.toArray('.pframe').forEach(function(f){ gsap.fromTo(f,{clipPath:'inset(0% 7% 0% 7% round 6px)'},{clipPath:'inset(0% 0% 0% 0% round 0px)',ease:'none',scrollTrigger:{trigger:f,start:'top 85%',end:'center 45%',scrub:true}}); gsap.from(f.querySelector('img'),{scale:1.15,ease:'none',scrollTrigger:{trigger:f,start:'top bottom',end:'bottom top',scrub:true}}); });
+  gsap.utils.toArray('.ruled li,.quotes figure').forEach(function(el){ gsap.from(el,{y:24,opacity:0,duration:.8,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%'}}); });
+
+  var tl=document.querySelector('.gb-tlw');
+  if(tl){
+    gsap.fromTo('.gb-fill',{scaleY:0},{scaleY:1,ease:'none',scrollTrigger:{trigger:tl,start:'top 55%',end:'bottom 55%',scrub:true}});
+    gsap.utils.toArray('.gb-tl>li').forEach(function(li){
+      ScrollTrigger.create({trigger:li,start:'top 55%',onEnter:function(){ li.classList.add('on'); },onLeaveBack:function(){ li.classList.remove('on'); }});
+      gsap.from(li.querySelector('.gb-tx'),{y:46,opacity:0,duration:1.05,ease:'power3.out',scrollTrigger:{trigger:li,start:'top 78%'}});
+    });
+  }
+  gsap.from('.gb-hp img',{scale:1.08,duration:1.8,ease:'power3.out'});
+  gsap.from('.gb-ht .gb-lead,.gb-ht .gb-hq,.gb-ht .row',{y:22,opacity:0,duration:1,stagger:.08,ease:'power3.out',delay:.35});
+  gsap.from('.gb-fammo figure',{y:60,opacity:0,duration:1.1,stagger:.1,ease:'power3.out',scrollTrigger:{trigger:'.gb-fammo',start:'top 85%'}});
+
+})();
+</script>
+</body></html>

@@ -1,0 +1,12 @@
+import puppeteer from 'puppeteer-core';
+const [pg,w,sel]=[process.argv[2],+process.argv[3],process.argv[4]];
+const b=await puppeteer.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true});
+const p=await b.newPage(); await p.setViewport({width:w,height:w<800?844:900,isMobile:w<800});
+await p.goto('http://localhost:8765/'+pg,{waitUntil:'networkidle0'}); await new Promise(r=>setTimeout(r,900));
+const info=async(tag)=>console.log(tag, JSON.stringify(await p.evaluate((sel)=>{ const el=[...document.querySelectorAll('h2')].find(h=>h.textContent.includes(sel)); const r=el.getBoundingClientRect();
+  const st=ScrollTrigger.getAll().filter(s=>s.trigger===el).map(s=>({start:Math.round(s.start),end:Math.round(s.end),prog:+s.progress.toFixed(2),active:s.isActive,anim:s.animation?+s.animation.progress().toFixed(2):null}));
+  const sp=el.querySelector('.kw>span'); return {scrollY:Math.round(scrollY),elTopAbs:Math.round(r.top+scrollY),st,word:sp&&getComputedStyle(sp).transform,docH:document.documentElement.scrollHeight,cls:el.className}; },sel)));
+await info('load');
+await p.evaluate((sel)=>{ const el=[...document.querySelectorAll('h2')].find(h=>h.textContent.includes(sel)); const r=el.getBoundingClientRect(); scrollTo({top:scrollY+r.top-innerHeight*.4,behavior:'instant'}); },sel);
+await new Promise(r=>setTimeout(r,1800)); await info('after jump');
+await b.close();

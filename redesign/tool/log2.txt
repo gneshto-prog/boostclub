@@ -1,0 +1,4 @@
+home_1920 H= 8545 segs= 8 overflowX= false errs= 0
+home_1280 H= 8545 segs= 11 overflowX= false errs= 0
+home_768 H= 10619 segs= 11 overflowX= false errs= 0
+home_375 H= 9212 segs= 14 overflowX= false errs= 0

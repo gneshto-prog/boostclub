@@ -1,0 +1,11 @@
+import puppeteer from 'puppeteer-core';
+const b=await puppeteer.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true});
+const p=await b.newPage(); await p.setViewport({width:390,height:844,isMobile:true,hasTouch:true});
+await p.goto('http://localhost:8765/results.html',{waitUntil:'networkidle0'});
+console.log(await p.evaluate(()=>{const t=document.querySelector('.rg-t'); const r=[]; r.push(t.getBoundingClientRect().width);
+ t.style.aspectRatio='auto'; t.style.height='300px'; r.push(t.getBoundingClientRect().width);
+ t.style.aspectRatio=''; t.style.height=''; document.querySelector('.rg').style.setProperty('--x','1'); 
+ const st=document.createElement('style'); st.textContent='.rg::after{display:none}'; document.head.appendChild(st); r.push(t.getBoundingClientRect().width);
+ const n=t.nextElementSibling; r.push(n.getBoundingClientRect().top-t.getBoundingClientRect().top, getComputedStyle(t).boxSizing, getComputedStyle(t).marginRight);
+ return JSON.stringify(r);}));
+await b.close();

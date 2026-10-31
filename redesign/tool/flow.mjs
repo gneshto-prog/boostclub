@@ -1,0 +1,27 @@
+import puppeteer from 'puppeteer-core';
+const base='file:///private/tmp/claude-502/-Users-Gabi/999c6394-ead1-4bde-8b52-d23580c1a3f3/scratchpad/site/';
+const out='/private/tmp/claude-502/-Users-Gabi/999c6394-ead1-4bde-8b52-d23580c1a3f3/scratchpad/sshots/';
+const b=await puppeteer.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true});
+const p=await b.newPage(); const errs=[]; p.on('pageerror',e=>errs.push(e.message));
+await p.setViewport({width:1440,height:900});
+await p.goto(base+'how-it-works.html',{waitUntil:'networkidle0'}); await new Promise(r=>setTimeout(r,1800));
+await p.select('form.rbar select[name=day]','Tuesday'); await p.select('form.rbar select[name=time]','Evening');
+await Promise.all([p.waitForNavigation(),p.click('form.rbar button[type=submit]')]);
+console.log('landed', p.url().split('/').pop());
+await new Promise(r=>setTimeout(r,1200));
+await p.click('label[for=g2], #g2+span').catch(()=>{}); await p.evaluate(()=>document.querySelector('#g2').click());
+await new Promise(r=>setTimeout(r,700));
+console.log('when value', await p.$eval('#when',e=>e.value), 'step', await p.$eval('.step.on',e=>e.dataset.step));
+await p.screenshot({path:out+'flow_1.jpg',type:'jpeg',quality:70});
+await p.evaluate(()=>document.querySelector('.step.on [data-next]').click()); await new Promise(r=>setTimeout(r,500));
+await p.evaluate(()=>document.querySelector('#bookform').requestSubmit()); await new Promise(r=>setTimeout(r,300));
+console.log('err', await p.$eval('#err',e=>e.hidden?'hidden':e.textContent));
+await p.type('#fn','Maria'); await p.type('#ph','0722 000 000');
+await p.evaluate(()=>document.querySelector('#bookform').requestSubmit()); await new Promise(r=>setTimeout(r,500));
+console.log('done visible', await p.$eval('#done',e=>!e.hidden), await p.$eval('#sum',e=>e.textContent));
+await p.screenshot({path:out+'flow_2.jpg',type:'jpeg',quality:70});
+// nav + faq leaf + logo
+await p.goto(base+'free-scan.html',{waitUntil:'networkidle0'});
+console.log('nav fit logo', await p.$$eval('.nav .bfl',els=>els.map(e=>e.naturalWidth+'x'+getComputedStyle(e).display)), 'faq leaves', await p.$$eval('.faq .fl',e=>e.length), 'wa icons', await p.$$eval('a.btn .ico',e=>e.length));
+console.log('errors', errs);
+await b.close();

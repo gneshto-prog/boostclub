@@ -1,0 +1,11 @@
+ro_390 H= 9362 segs= 12 overflowX= false errs= 0
+ru_390 H= 9150 segs= 11 overflowX= false errs= 0
+start_390 H= 3922 segs= 5 overflowX= false errs= 0
+zerohour_390 H= 2730 segs= 4 overflowX= false errs= 0
+gabi_390 H= 5612 segs= 7 overflowX= false errs= 0
+ru_1440 H= 8461 segs= 10 overflowX= false errs= 0
+start_1440 H= 2721 segs= 4 overflowX= false errs= 0
+home_1920 H= 8545 segs= 8 overflowX= false errs= 0
+home_1280 H= 8545 segs= 11 overflowX= false errs= 0
+home_768 H= 10619 segs= 11 overflowX= false errs= 0
+home_375 H= 9212 segs= 14 overflowX= false errs= 0

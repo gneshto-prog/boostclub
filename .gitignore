@@ -12,3 +12,5 @@ MASTER-PROMPT.md
 docs/
 _site/
 node_modules/
+_deploy/
+redesign/tool/node_modules/

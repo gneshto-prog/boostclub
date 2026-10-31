@@ -1,0 +1,21 @@
+/* RO/RU page overrides, injected into ro/*.html and ru/*.html by pages_zz_i18n.py (English pages never see this).
+   Blocks between the @ro / @ru markers apply to that language only. */
+/* diacritics (Ă Î Ș Ț) and Cyrillic Й Ё need a little more room than the .86 English line-height */
+.loud{line-height:.95}
+/* longer words: a word that still cannot fit breaks instead of running off the screen */
+h1,h2,h3,.loud{overflow-wrap:break-word}
+/* the longest signature name (Strawberry Cheesecake) fits its card column */
+.ccard .nm{font-size:clamp(56px,8vw,160px)}
+/* Boost Fit: activity cards and section heads, sized for longer words */
+.fgrid b{font-size:clamp(20px,2.3vw,40px);line-height:1.05}
+.fh2{font-size:clamp(44px,6.4vw,110px)}
+/*@ro*/
+.fh{font-size:clamp(64px,14vw,250px)}
+/*@end*/
+/*@ru*/
+/* Anton has no Cyrillic: Oswald (next in --loud, loaded at 600) draws those glyphs automatically */
+.fh{font-size:clamp(54px,14vw,250px)}
+.rh1{font-size:min(8vw,115px)}
+@media (min-width:641px){.ruled li{grid-template-columns:160px minmax(0,1fr)}}
+@media (max-width:900px){.duo .panel .big{font-size:min(44px,11vw)}.open h1{font-size:min(12vw,88px)}}
+/*@end*/

@@ -1,0 +1,38 @@
+{
+ "Please add your name.": [
+  "Scrie-ți numele, te rog.",
+  "Пожалуйста, укажите имя."
+ ],
+ "Please add a phone number with country code, or an email address.": [
+  "Scrie un număr de telefon cu prefixul țării sau o adresă de email.",
+  "Укажите номер телефона с кодом страны или адрес электронной почты."
+ ],
+ "Please add the country where you would build.": [
+  "Scrie țara în care ai construi afacerea.",
+  "Укажите страну, в которой вы бы строили бизнес."
+ ],
+ "We could not send your request. Please message Gabriel on WhatsApp instead.": [
+  "Nu am putut trimite cererea. Scrie-i lui Gabriel pe WhatsApp.",
+  "Не удалось отправить заявку. Напишите Габриелу в WhatsApp."
+ ],
+ "Starting from": [
+  "Pornești de la",
+  "Отправная точка"
+ ],
+ "Way of working": [
+  "Cum vrei să lucrezi",
+  "Формат работы"
+ ],
+ "On the call, Gabriel goes through what this would cost and involve.": [
+  "În apel, Gabriel îți explică ce ar costa și ce ar presupune asta.",
+  "На звонке Габриел расскажет, сколько это будет стоить и что потребует."
+ ],
+ "Hi Gabriel, I just requested a discovery call on boostclub.ro. {name}, {country}. Path: {path}.": [
+  "Bună, Gabriel! Tocmai am cerut un apel de cunoaștere pe boostclub.ro. {name}, {country}. Drum: {path}.",
+  "Здравствуйте, Габриел! Я только что оставил(а) заявку на ознакомительный звонок на boostclub.ro. {name}, {country}. Путь: {path}."
+ ],
+ "Hi Gabriel, I would like a business discovery call. {name}, {country}. Path: {path}.": [
+  "Bună, Gabriel! Aș vrea un apel de cunoaștere despre afacere. {name}, {country}. Drum: {path}.",
+  "Здравствуйте, Габриел! Я хотел(а) бы ознакомительный звонок о бизнесе. {name}, {country}. Путь: {path}."
+ ]
+}

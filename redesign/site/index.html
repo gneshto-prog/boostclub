@@ -1,0 +1,287 @@
+<title>Boost Club Website</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Cormorant:ital,wght@0,400;0,500;1,400;1,500;1,600&family=Anton&family=Oswald:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="kit/kit.css">
+<script>try{if(sessionStorage.getItem('kcur')){document.documentElement.classList.add('k-in');sessionStorage.removeItem('kcur')}}catch(e){}</script>
+<style>
+.open{position:relative;height:100svh;overflow:hidden;background:var(--night);color:var(--cream)}
+.open .fr{position:absolute;left:5vw;right:5vw;top:96px;bottom:150px;border-radius:6px;overflow:hidden}
+.open .fr img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 46%}
+.open .fr::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,22,16,.62),rgba(6,22,16,0) 46%)}
+.open h1{position:absolute;left:0;right:0;bottom:104px;z-index:3;font-size:clamp(60px,8.6vw,146px);line-height:.86;letter-spacing:-.06em;max-width:14ch}
+.open h1 .it{color:var(--brass);letter-spacing:-.02em}
+.open .tag{position:absolute;z-index:3;top:110px;left:calc(5vw + 24px);font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase}
+@media (max-width:900px){.open .fr{left:12px;right:12px;top:72px;bottom:96px}.open .fr img{object-position:50% 50%}.open h1{bottom:auto;top:104px;font-size:min(15vw,88px);padding-right:20px}.open .fr::after{background:linear-gradient(180deg,rgba(6,22,16,.72),rgba(6,22,16,0) 46%)}.open .tag{display:none}}
+.intro{background:var(--night);color:var(--cream);padding-block:56px 110px}
+.intro p{font-size:clamp(20px,1.8vw,26px);line-height:1.35;margin:0;color:rgba(244,239,230,.88);max-width:34ch}
+.intro .row{justify-content:flex-end}
+@media (max-width:900px){.intro .row{justify-content:flex-start}.intro .row .btn{width:100%}}
+.menuhead{background:var(--night);color:var(--cream);padding-block:0 56px}
+.menuhead .wrap{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;border-top:1px solid var(--line-d);padding-top:40px}
+.wall{position:relative}
+.wall .fr{aspect-ratio:4/5;border-radius:4px;overflow:hidden}
+.wall .fr img{width:100%;height:100%;object-fit:cover}
+.wall .stat{display:flex;gap:40px;margin:32px 0;flex-wrap:wrap}
+.wall .stat b{display:block;font-size:clamp(48px,5vw,76px);font-weight:600;letter-spacing:-.05em;line-height:.9}
+.wall .stat span{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--stone)}
+.people .fr{aspect-ratio:1447/1087;border-radius:4px;overflow:hidden}.people .fr img{width:100%;height:100%;object-fit:cover}
+.duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+@media (max-width:900px){.duo{grid-template-columns:minmax(0,1fr)}}
+.panel{position:relative;border-radius:6px;overflow:hidden;min-height:520px;display:flex;flex-direction:column;justify-content:flex-end;padding:36px;text-decoration:none}
+.panel .big{font-size:clamp(60px,7vw,120px)}
+.panel p{max-width:34ch;font-size:18px;margin:14px 0 0}
+.panel .bgimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.panel.photo{color:#fff}.panel.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(7,30,23,.9) 0%,rgba(7,30,23,.55) 45%,rgba(7,30,23,0) 72%)}
+.panel>*:not(.bgimg){position:relative;z-index:2}
+.panel.top{justify-content:flex-start}.panel.photo.top::after{background:linear-gradient(90deg,rgba(7,30,23,.94) 0%,rgba(7,30,23,.82) 42%,rgba(7,30,23,.15) 78%,rgba(7,30,23,0) 100%)}@media (max-width:700px){.panel.photo.top::after{background:linear-gradient(180deg,rgba(7,30,23,.94) 0%,rgba(7,30,23,.8) 55%,rgba(7,30,23,.2) 85%)}}
+.life .lhead{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:32px}.film{display:grid;grid-template-columns:1fr 1.5fr 1fr;gap:12px}.film figure{margin:0;aspect-ratio:3/4;border-radius:4px;overflow:hidden}.film figure.w{aspect-ratio:auto}.film img{width:100%;height:100%;object-fit:cover}.film img.soft{filter:blur(2.5px);transform:scale(1.04)}@media (max-width:900px){.film{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:72%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.film figure{scroll-snap-align:start}.film figure.w{aspect-ratio:3/4}}
+.founder .fr{aspect-ratio:4/5;border-radius:2px;overflow:hidden}.founder .fr img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;filter:grayscale(1) contrast(1.08)}
+.founder blockquote{margin:20px 0 0;font-family:var(--accent);font-style:italic;font-weight:500;font-size:clamp(30px,3.6vw,50px);line-height:1.08}
+.wall .k-nums b{font-size:clamp(46px,4.6vw,76px)}
+.pq{margin:36px 0 0;padding-top:28px;border-top:1px solid rgba(14,20,18,.14)}
+.pq blockquote{margin:0;font-family:var(--accent);font-size:clamp(26px,2.4vw,36px);line-height:1.18;letter-spacing:-.01em}
+.pq.sm blockquote{font-family:var(--display);font-size:17px;line-height:1.6;letter-spacing:0;color:var(--stone)}
+.pq figcaption{margin-top:14px;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--brass-ink)}
+.life{padding-top:clamp(72px,8vw,120px)}.lifebar{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-bottom:22px}
+.lifegrid{grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:clamp(240px,24vw,400px) clamp(240px,24vw,400px)}
+.lifegrid figure{margin:0;min-height:0;padding:0}
+.lifegrid figure img{transition:transform 1.2s var(--ease)}
+.lifegrid .t2{grid-column:2/4}.lifegrid .t5{grid-column:2/4}
+.lifegrid img.soft{filter:blur(2.5px);transform:scale(1.04)}
+@media (max-width:800px){.lifegrid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none;grid-auto-rows:clamp(200px,52vw,320px)}.lifegrid .t2,.lifegrid .t5{grid-column:1/-1}}
+.joins{margin-top:4px}
+.joins>a{min-height:clamp(520px,52vw,820px)}
+.jfit::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(7,30,23,.94) 0%,rgba(7,30,23,.7) 38%,rgba(7,30,23,.1) 70%)!important}.joins .big{font-size:clamp(64px,7.6vw,132px)}
+.joins p{max-width:34ch;font-size:18px;margin:16px 0 0;opacity:.9}
+.joins .btn{margin-top:26px;width:max-content}
+.joins .bfmark{position:static;width:auto;height:30px;object-fit:contain;align-self:flex-start;margin:0 0 16px -6px;z-index:auto}
+.jfriend{justify-content:flex-start!important;color:#fff}
+.jfriend::after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(7,30,23,.94) 0%,rgba(7,30,23,.8) 40%,rgba(7,30,23,.1) 75%)}
+.jfriend .k-label{color:var(--brass);margin-bottom:18px}
+.founderq{background:var(--bottle)}
+.founder{padding-bottom:clamp(88px,11vw,160px)}
+@media (min-width:901px){.founder .k-split{grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr)}}.founder .k-media{aspect-ratio:4/5;max-height:820px}
+.founder .k-h{font-size:clamp(56px,7vw,120px)}
+.homeq{background:var(--bone)}
+.visitband{min-height:min(88svh,820px)}
+.visitband{background:#061A13}.visitband::after{background:linear-gradient(90deg,rgba(6,26,19,.92) 0%,rgba(6,26,19,.55) 45%,rgba(6,26,19,.1) 100%)}
+.vmap{position:absolute;inset:0;width:100%;height:100%;z-index:-2}
+.vm-t{font:600 15px var(--display);letter-spacing:.18em;text-transform:uppercase;fill:rgba(244,239,230,.55)}.vm-tb{fill:#F4EFE6;font-size:17px}
+.vm-pulse{transform-origin:center;transform-box:fill-box;animation:vmp 2.2s ease-out infinite}
+@keyframes vmp{0%{transform:scale(.6);opacity:.9}100%{transform:scale(3.2);opacity:0}}
+.vm-route{animation:vmr 1.6s linear infinite}@keyframes vmr{to{stroke-dashoffset:-24}}
+@media (prefers-reduced-motion: reduce){.vm-pulse,.vm-route{animation:none}}
+.visitband .vgrid{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(28px,6vw,96px);align-items:end}
+.visitband .hours{border-color:rgba(244,239,230,.2)}.visitband .hours div{border-color:rgba(244,239,230,.2)}
+.visitband .row{margin-top:30px}
+@media (max-width:900px){.visitband .vgrid{grid-template-columns:minmax(0,1fr)}}
+.scanx{position:relative;background:#04140F;color:var(--cream);overflow:hidden;isolation:isolate}
+.scanx::before{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(60% 70% at 72% 50%,rgba(56,178,122,.20),transparent 70%),radial-gradient(40% 50% at 15% 85%,rgba(217,178,106,.08),transparent 70%)}
+.scanx::after{content:'';position:absolute;inset:0;z-index:-1;background-image:linear-gradient(rgba(244,239,230,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(244,239,230,.045) 1px,transparent 1px);background-size:48px 48px;-webkit-mask-image:radial-gradient(70% 70% at 70% 50%,#000 30%,transparent 80%);mask-image:radial-gradient(70% 70% at 70% 50%,#000 30%,transparent 80%)}
+.sx-pin{min-height:100svh;display:flex;align-items:center;padding-block:92px 64px}
+.sx-grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(28px,5vw,80px);align-items:center;width:100%}
+.sx-txt .k-h{font-size:clamp(44px,4.6vw,78px)}.sx-txt .k-label{color:var(--brass)}.sx-txt .k-h .it{color:var(--brass)}
+.sx-txt .k-lead{margin-top:24px;color:rgba(244,239,230,.78)}
+.sx-read{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:26px;border-top:1px solid rgba(244,239,230,.16)}
+.sx-read div{padding:18px 0 16px;border-bottom:1px solid rgba(244,239,230,.16)}
+.sx-read div:nth-child(odd){padding-right:18px;border-right:1px solid rgba(244,239,230,.16)}.sx-read div:nth-child(even){padding-left:22px}
+.sx-read b{display:block;font-size:clamp(34px,3.6vw,54px);font-weight:600;letter-spacing:-.05em;line-height:1;font-variant-numeric:tabular-nums;color:#fff}
+.sx-read b small{font-size:.4em;font-weight:500;margin-left:4px;opacity:.6;letter-spacing:0}
+.sx-read div:nth-child(1) b{color:var(--brass-hi)}.sx-read div:nth-child(2) b{color:#7CE0A8}
+.sx-read span{display:block;margin-top:8px;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;opacity:.6}
+.scanx .disclaim{margin-top:14px;font-size:12px;opacity:.5}
+.scanx .row{margin-top:26px}.scanx .btn-ghost{color:var(--cream)}
+.sx-stage{position:relative;height:min(78svh,760px);min-height:520px}
+.sx-body{position:absolute;inset:44px 10px 30px}
+.sx-body canvas{display:block}
+.sx-hud{position:absolute;inset:0;pointer-events:none;font-style:normal}
+.sx-hud>span{position:absolute;width:26px;height:26px;border:1px solid rgba(124,224,168,.55)}
+.sx-hud .tl{left:0;top:0;border-right:0;border-bottom:0}.sx-hud .tr{right:0;top:0;border-left:0;border-bottom:0}.sx-hud .bl{left:0;bottom:0;border-right:0;border-top:0}.sx-hud .br{right:0;bottom:0;border-left:0;border-top:0}
+.sx-hud em{position:absolute;top:12px;font-style:normal;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(244,239,230,.62)}
+.sx-k{left:38px}.sx-st{right:38px;display:flex;align-items:center;gap:8px}
+.sx-st i{width:7px;height:7px;border-radius:50%;background:#7CE0A8;box-shadow:0 0 10px #7CE0A8;animation:sxb 1.2s ease-in-out infinite}
+.sx-st b{color:#fff;font-variant-numeric:tabular-nums;min-width:4ch;text-align:right}
+.sx-s2{display:none}.scanx.done .sx-s1{display:none}.scanx.done .sx-s2{display:inline}.scanx.done .sx-st i{animation:none;background:var(--brass);box-shadow:0 0 10px var(--brass)}
+@keyframes sxb{50%{opacity:.25}}
+.bcs-ov{position:absolute;inset:0;pointer-events:none}
+.bcs-c{position:absolute;display:grid;gap:2px;opacity:0;transform:translateY(8px);transition:opacity .5s var(--ease),transform .5s var(--ease);white-space:nowrap}
+.bcs-c.on{opacity:1;transform:none}
+.bcs-c.r{left:calc(var(--x) + 18px);padding-left:64px}.bcs-c.l{right:calc(100% - var(--x) + 18px);padding-right:64px;text-align:right}
+.bcs-c i{position:absolute;top:9px;width:56px;height:1px;background:linear-gradient(90deg,rgba(124,224,168,.9),rgba(124,224,168,.2))}
+.bcs-c.r i{left:0}.bcs-c.l i{right:0;transform:scaleX(-1)}
+.bcs-c i::before{content:'';position:absolute;left:-3px;top:-3px;width:7px;height:7px;border-radius:50%;background:#7CE0A8;box-shadow:0 0 8px #7CE0A8}
+.bcs-c span{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(244,239,230,.6)}
+.bcs-c b{font-size:20px;font-weight:600;letter-spacing:-.02em;color:#fff}
+@media (max-width:900px){.sx-grid{grid-template-columns:minmax(0,1fr)}.sx-stage{order:-1;height:min(70svh,560px);min-height:440px}.sx-pin{padding-block:90px 80px}.bcs-c b{font-size:16px}.bcs-c.r{padding-left:34px}.bcs-c.l{padding-right:34px}.bcs-c i{width:28px}.sx-k{display:none}}
+@media (prefers-reduced-motion: reduce){.sx-st i{animation:none}}
+.menu2{background:var(--bone)}
+.menu2-rail{grid-auto-columns:clamp(250px,24vw,360px)}
+.m2-all{display:none;margin-top:28px}
+@media (max-width:700px){.menu2-rail{grid-auto-columns:76%}.m2-all{display:inline-flex}.menu2 .k-railnav .k-link{display:none}}
+.sx-dev{position:absolute;left:18px;bottom:18px;width:clamp(150px,15vw,230px);aspect-ratio:1058/888;box-shadow:0 18px 40px rgba(0,0,0,.45);min-height:0;margin:0;border:1px solid rgba(124,224,168,.35);border-radius:6px;overflow:hidden;z-index:2;background-size:70%}
+.sx-dev img{width:100%;height:100%;object-fit:cover}
+.sx-dev figcaption{position:absolute;left:0;right:0;bottom:0;padding:18px 10px 8px;line-height:1.3;font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,239,230,.85);background:linear-gradient(0deg,rgba(4,20,15,.85),transparent)}
+@media (max-width:900px){.sx-dev{width:120px;left:10px;bottom:10px}.sx-dev figcaption{display:none}}
+</style>
+<div class="k-curtain" aria-hidden="true"><img src="img/wordmark-cream-hd.png" alt=""></div>
+<a class="skip" href="#main">Skip to content</a>
+<div id="bc" data-page="home" hidden></div>
+<main id="main">
+
+<section class="open" id="open">
+  <div class="fr" id="fr" data-slot="Hero: handshake at the sign"><img id="heroimg" src="img/handshake.jpg" alt="Two people shaking hands in front of the Boost Club sign in warm afternoon light"></div>
+  <div class="tag">Nutrition club · Str. Sevastopol 24</div>
+  <h1 class="gut" id="h1">The club that starts <span class="it">with you.</span></h1>
+</section>
+<section class="intro gut"><div class="wrap grid2" style="align-items:end">
+  <p>A free body scan and consultation, 25 to 30 minutes, next to Piața Victoriei. Then shakes made to your goal and people who keep you going.</p>
+  <div class="row"><a class="btn btn-brass" href="#" data-reserve>Start with your free consultation <span class="ar">→</span></a><a class="btn btn-ghost" href="#" data-reserve>Reserve a visit</a></div>
+</div></section>
+
+<section class="scanx" id="scan" aria-label="Body composition scan"><div class="sx-pin">
+  <div class="wrap gut sx-grid">
+    <div class="sx-txt">
+      <span class="k-label">Your free consultation</span>
+      <h2 class="k-h" data-k="lines">See what's <span class="it">under the surface.</span></h2>
+      <p class="k-lead">The analyser measures fat, muscle and water by segment. Gabriel explains every number and gives you one first step for your goal.</p>
+      <div class="sx-read">
+        <div><b data-v="22.4" data-u="%">22.4<small>%</small></b><span>Body fat</span></div>
+        <div><b data-v="34.6" data-u="kg">34.6<small>kg</small></b><span>Muscle mass</span></div>
+        <div><b data-v="56.1" data-u="%">56.1<small>%</small></b><span>Body water</span></div>
+        <div><b data-v="1780" data-u="kcal">1,780<small>kcal</small></b><span>Metabolism at rest</span></div>
+      </div>
+      <p class="disclaim">Example readout. Your numbers come from your own scan. Not a medical diagnosis.</p>
+      <div class="row"><a class="btn btn-brass" href="#" data-reserve>Start with your free consultation <span class="ar">→</span></a><a class="btn btn-ghost" href="how-it-works.html">How it works</a></div>
+    </div>
+    <div class="sx-stage">
+      <div class="sx-hud" aria-hidden="true"><span class="tl"></span><span class="tr"></span><span class="bl"></span><span class="br"></span>
+        <em class="sx-k">Segmental body composition</em><em class="sx-st"><i></i><span class="sx-s1">Scanning</span><span class="sx-s2">Complete</span> <b class="sx-pc">0%</b></em></div>
+      <div class="sx-body" id="sxBody"></div>
+      <figure class="sx-dev" data-slot="REAL · the Tanita analyser at the club"><img src="img/his/tanita.webp" alt="The body composition analyser at Boost Club" loading="lazy"><figcaption>Professional analyser</figcaption></figure>
+    </div>
+  </div>
+</div></section>
+
+<section class="menu2 sec gut" id="shakes"><div class="wrap k-railwrap">
+  <div class="k-head"><div><span class="k-label">The shake menu</span><h2 class="k-h" data-k="lines">18 signatures. <span class="it">Or build your own.</span></h2></div><div class="k-railnav" style="justify-self:end;align-items:center"><a class="k-link" href="menu.html" style="margin-right:18px">See the full menu →</a><button type="button" data-k-prev aria-label="Previous">←</button><button type="button" data-k-next aria-label="Next">→</button></div></div>
+  <div class="k-rail menu2-rail" id="m2">
+<a class="wc" href="menu.html" style="--bg:#E7C548;--ink:#13201B"><img src="img/wet/pistachio-dream-sm.jpg" srcset="img/wet/pistachio-dream-sm.jpg 560w, img/wet/pistachio-dream.jpg 1100w" sizes="(max-width:700px) 80vw, (max-width:1200px) 40vw, 420px" alt="Pistachio Dream" loading="lazy"><span class="wc-l"><b>Pistachio Dream</b><small>Vanilla and Dubai, pistachio and caramel.</small></span></a>
+<a class="wc" href="menu.html" style="--bg:#F2707A;--ink:#13201B"><img src="img/wet/berry-blush-sm.jpg" srcset="img/wet/berry-blush-sm.jpg 560w, img/wet/berry-blush.jpg 1100w" sizes="(max-width:700px) 80vw, (max-width:1200px) 40vw, 420px" alt="Berry Blush" loading="lazy"><span class="wc-l"><b>Berry Blush</b><small>Raspberry and strawberry, white coconut on top.</small></span></a>
+<a class="wc" href="menu.html" style="--bg:#C8643B;--ink:#0E1412"><img src="img/wet/mocha-sm.jpg" srcset="img/wet/mocha-sm.jpg 560w, img/wet/mocha.jpg 1100w" sizes="(max-width:700px) 80vw, (max-width:1200px) 40vw, 420px" alt="Mocha" loading="lazy"><span class="wc-l"><b>Mocha</b><small>Coffee meets chocolate, hazelnut on top.</small></span></a>
+<a class="wc" href="menu.html" style="--bg:#2F5BD3;--ink:#FFF8EE"><img src="img/wet/caramel-macchiato-sm.jpg" srcset="img/wet/caramel-macchiato-sm.jpg 560w, img/wet/caramel-macchiato.jpg 1100w" sizes="(max-width:700px) 80vw, (max-width:1200px) 40vw, 420px" alt="Caramel Macchiato" loading="lazy"><span class="wc-l"><b>Caramel Macchiato</b><small>Coffee and caramel. Simple, perfect.</small></span></a>
+<a class="wc" href="menu.html" style="--bg:#E5432F;--ink:#0E1412"><img src="img/wet/mint-mojito-sm.jpg" srcset="img/wet/mint-mojito-sm.jpg 560w, img/wet/mint-mojito.jpg 1100w" sizes="(max-width:700px) 80vw, (max-width:1200px) 40vw, 420px" alt="Mint Mojito" loading="lazy"><span class="wc-l"><b>Mint Mojito</b><small>Mint and vanilla, coconut. Fresh.</small></span></a>
+<a class="wc" href="menu.html" style="--bg:#7A4FD1;--ink:#FFF8EE"><img src="img/wet/cookies-cream-sm.jpg" srcset="img/wet/cookies-cream-sm.jpg 560w, img/wet/cookies-cream.jpg 1100w" sizes="(max-width:700px) 80vw, (max-width:1200px) 40vw, 420px" alt="Cookies &amp; Cream" loading="lazy"><span class="wc-l"><b>Cookies &amp; Cream</b><small>Cookie and vanilla, chocolate on the walls.</small></span></a>
+<a class="wc" href="menu.html" style="--bg:#B5DA3F;--ink:#13201B"><img src="img/wet/strawberry-cheesecake-sm.jpg" srcset="img/wet/strawberry-cheesecake-sm.jpg 560w, img/wet/strawberry-cheesecake.jpg 1100w" sizes="(max-width:700px) 80vw, (max-width:1200px) 40vw, 420px" alt="Strawberry Cheesecake" loading="lazy"><span class="wc-l"><b>Strawberry Cheesecake</b><small>The cookie is the crust, the syrup is the berries.</small></span></a>
+<a class="wc" href="menu.html" style="--bg:#FF9F1C;--ink:#13201B"><img src="img/wet/banoffee-sm.jpg" srcset="img/wet/banoffee-sm.jpg 560w, img/wet/banoffee.jpg 1100w" sizes="(max-width:700px) 80vw, (max-width:1200px) 40vw, 420px" alt="Banoffee" loading="lazy"><span class="wc-l"><b>Banoffee</b><small>Banana, caramel, crunchy almond.</small></span></a>
+<a class="wc" href="menu.html" style="--bg:#FF8DC7;--ink:#13201B"><img src="img/wet/neapolitan-sm.jpg" srcset="img/wet/neapolitan-sm.jpg 560w, img/wet/neapolitan.jpg 1100w" sizes="(max-width:700px) 80vw, (max-width:1200px) 40vw, 420px" alt="Neapolitan" loading="lazy"><span class="wc-l"><b>Neapolitan</b><small>Vanilla and strawberry with chocolate. Three in one.</small></span></a>
+<a class="wc" href="menu.html" style="--bg:#1BA39C;--ink:#0E1412"><img src="img/wet/chunky-monkey-sm.jpg" srcset="img/wet/chunky-monkey-sm.jpg 560w, img/wet/chunky-monkey.jpg 1100w" sizes="(max-width:700px) 80vw, (max-width:1200px) 40vw, 420px" alt="Chunky Monkey" loading="lazy"><span class="wc-l"><b>Chunky Monkey</b><small>Banana and chocolate with caramel. Indulgent.</small></span></a>
+<a class="wc" href="menu.html" style="--bg:#FFC2D1;--ink:#13201B"><img src="img/wet/black-forest-sm.jpg" srcset="img/wet/black-forest-sm.jpg 560w, img/wet/black-forest.jpg 1100w" sizes="(max-width:700px) 80vw, (max-width:1200px) 40vw, 420px" alt="Black Forest" loading="lazy"><span class="wc-l"><b>Black Forest</b><small>Chocolate and raspberry, like the cake.</small></span></a>
+<a class="wc" href="menu.html" style="--bg:#1F7A4D;--ink:#FFF8EE"><img src="img/wet/dubai-sm.jpg" srcset="img/wet/dubai-sm.jpg 560w, img/wet/dubai.jpg 1100w" sizes="(max-width:700px) 80vw, (max-width:1200px) 40vw, 420px" alt="Dubai" loading="lazy"><span class="wc-l"><b>Dubai</b><small>Pistachio on Dubai Chocolate. Limited edition.</small></span></a>
+</div>
+  <a class="btn btn-bottle m2-all" href="menu.html">See the full menu <span class="ar">→</span></a>
+</div></section>
+
+<section class="sec gut wall"><div class="wrap k-split">
+  <div class="k-media" data-k="clip" data-slot="Results wall at the club"><img src="img/results-wall.jpg" alt="A member looking at the wall of progress photos at Boost Club" loading="lazy"><span class="k-cap">Strada Sevastopol 24</span></div>
+  <div class="k-txt">
+    <span class="k-label">Real results</span>
+    <h2 class="k-h" data-k="lines">The wall of <span class="it">progress.</span></h2>
+    <p class="k-lead">Transformations from our wider community, published with their consent. Results may vary from person to person.</p>
+    <div class="k-nums" style="--k-cols:2;margin-top:40px"><div><b>5.0</b><span>169 Google reviews</span></div><div><b>36</b><span>Years of family heritage</span></div></div>
+    <div class="row"><a class="btn btn-bottle" href="results.html">See all results <span class="ar">→</span></a><a class="btn btn-ghost" href="reviews.html">Read the reviews</a></div>
+  </div>
+</div></section>
+
+<section class="sec oat gut people"><div class="wrap k-split rev">
+  <div class="k-media land" data-k="clip" data-slot="REAL · a member by the YOU GOT THIS board"><img src="img/his/yougotthis.webp" alt="A member sitting in the afternoon sun at Boost Club" loading="lazy"></div>
+  <div class="k-txt">
+    <span class="k-label">The club</span>
+    <h2 class="k-h" data-k="lines">Come for the scan. <span class="it">Stay for the people.</span></h2>
+    <figure class="pq"><blockquote>The body composition assessment was free and everything was explained to me in a friendly, clear and professional way.</blockquote><figcaption>Diana · Google review</figcaption></figure>
+    <figure class="pq sm"><blockquote>It helped me gain muscle and stay consistent with my nutrition. Gabriel explains everything clearly and takes the time to make sure you understand the process.</blockquote><figcaption>Theo · Google review</figcaption></figure>
+  </div>
+</div></section>
+
+<section class="life" aria-label="Life at the club"><div class="gut"><div class="wrap lifebar"><span class="k-label">Life at the club</span><a class="k-link" href="reviews.html">Read the reviews →</a></div></div>
+<div class="k-mosaic lifegrid">
+<figure class="t1" data-slot="REAL"><img src="img/real/shake-in-hand-sm.jpg" alt="A chocolate-drizzle shake held up against the club's orange and green wall" loading="lazy"></figure>
+<figure class="t2" data-slot="REAL"><img class="soft" src="img/his/full-room.webp" alt="A full room of people at the round tables during a session at Boost Club" loading="lazy"></figure>
+<figure class="t3" data-slot="REAL"><img src="img/his/card-appreciated.webp" alt="A card reading You are appreciated in front of the Boost Club sign" loading="lazy" style="object-position:50% 65%"></figure>
+<figure class="t4" data-slot="REAL"><img src="img/his/shake-thumbsup.webp" alt="A guest giving a thumbs up with a chocolate shake at Boost Club" loading="lazy" style="object-position:50% 40%"></figure>
+<figure class="t5" data-slot="REAL"><img src="img/real/group-table-sm.jpg" alt="Gabriel with members around a table at the club" loading="lazy" style="object-position:30% 50%"></figure>
+<figure class="t6" data-slot="REAL"><img src="img/his/sofa.webp" alt="A little guest on the red sofa at Boost Club with a Healthier and Happier teddy" loading="lazy" style="object-position:50% 45%"></figure>
+</div></section>
+
+<section class="k-mosaic joins" style="--k-cols:2">
+  <a class="jfit" href="boost-fit.html" data-slot="REAL · Boost Fit in Kiseleff"><img src="img/real/park-walk.jpg" alt="Two members walking a park path in Kiseleff on a Sunday morning" loading="lazy" style="object-position:50% 40%">
+    <img class="bfmark" src="brand/boostfit-on-dark.svg" alt="Boost Fit">
+    <div class="big loud">Sunday<br>09:00</div>
+    <p>Outdoor training in different places: park workouts, runs, hikes. Any level. After, we go to Boost Club.</p>
+    <span class="btn btn-brass">Join the team <span class="ar">→</span></span>
+  </a>
+  <a class="jfriend" href="bring-a-friend.html" data-slot="REAL · You make the world a brighter place card">
+    <img src="img/his/card-world.webp" alt="A card reading You make the world a brighter place, held up in front of the Boost Club sign" loading="lazy" style="object-position:50% 78%">
+    <span class="k-label">Boost Ambassador</span>
+    <div class="big loud">Bring a friend.</div>
+    <p>Come together with a friend to a Wellness Test and you will receive your breakfast for free.</p>
+    <span class="btn btn-brass">How it works <span class="ar">→</span></span>
+  </a>
+</section>
+
+<section class="on-dark k-stmt gut founderq"><blockquote>"You can change your life if you <em>change your mind.</em>"</blockquote><cite>Mark Hughes</cite></section>
+<section class="on-dark gut founder"><div class="wrap k-split">
+  <div class="k-media" data-k="par" data-slot="REAL · Gabriel on stage"><img src="img/real/gabi-event.jpg" alt="Gabriel Neshto on stage at a gala" loading="lazy" style="object-position:50% 30%"></div>
+  <div class="k-txt">
+    <span class="k-label">The founder</span>
+    <h2 class="k-h" data-k="lines">Gabriel <span class="it">Neshto.</span></h2>
+    <p class="k-lead">ISSA-certified personal trainer · third generation of a family with 36 years in wellness</p>
+    <div class="row"><a class="btn btn-brass" href="gabriel.html">Read my story <span class="ar">→</span></a></div>
+  </div>
+</div></section>
+
+<div class="k-marquee homeq" aria-hidden="true"><div class="k-mtrack"><span>Strada Sevastopol 24</span><span class="it">In central Bucharest.</span><span>Free body scan</span><span class="it">25 to 30 minutes</span><span>Strada Sevastopol 24</span><span class="it">In central Bucharest.</span><span>Free body scan</span><span class="it">25 to 30 minutes</span></div></div>
+
+<section class="k-band visitband"><svg class="vmap" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><radialGradient id="vmg" cx="63%" cy="52%" r="55%"><stop offset="0" stop-color="#1F6B4F" stop-opacity=".55"/><stop offset="1" stop-color="#071E17" stop-opacity="0"/></radialGradient><radialGradient id="vpk" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#2F8A63" stop-opacity=".35"/><stop offset="1" stop-color="#2F8A63" stop-opacity="0"/></radialGradient></defs><rect width="1600" height="900" fill="url(#vmg)"/><ellipse cx="1330" cy="70" rx="300" ry="170" fill="url(#vpk)"/><g class="vm-minor" fill="none" stroke="#F4EFE6" stroke-opacity=".07" stroke-width="1.2"><path d="M-532 -40 L-485 91 L-443 231 L-415 369 L-376 510 L-340 666 L-301 798 L-272 940"/><path d="M-435 -40 L-385 89 L-361 253 L-317 378 L-292 533 L-261 667 L-203 790 L-175 940"/><path d="M-367 -40 L-335 101 L-296 251 L-244 375 L-207 508 L-192 665 L-136 809 L-107 940"/><path d="M-250 -40 L-203 93 L-169 252 L-150 380 L-111 510 L-65 665 L-14 790 L10 940"/><path d="M-180 -40 L-129 107 L-105 233 L-65 373 L-27 524 L3 668 L40 799 L80 940"/><path d="M-77 -40 L-47 91 L0 238 L45 373 L68 508 L108 655 L145 807 L183 940"/><path d="M-19 -40 L32 106 L65 241 L95 377 L127 512 L162 654 L200 811 L241 940"/><path d="M102 -40 L143 86 L170 241 L219 378 L254 531 L281 657 L332 795 L362 940"/><path d="M189 -40 L223 87 L262 228 L308 390 L338 531 L367 658 L403 787 L449 940"/><path d="M283 -40 L308 112 L359 246 L382 391 L440 509 L460 650 L506 788 L543 940"/><path d="M372 -40 L409 106 L439 244 L482 384 L518 534 L567 669 L590 791 L632 940"/><path d="M436 -40 L463 113 L504 250 L540 383 L578 515 L629 663 L671 793 L696 940"/><path d="M531 -40 L556 92 L619 242 L642 376 L687 525 L707 647 L745 809 L791 940"/><path d="M639 -40 L669 93 L708 245 L758 373 L783 513 L838 661 L874 793 L899 940"/><path d="M725 -40 L764 112 L796 232 L846 393 L874 515 L899 658 L960 796 L985 940"/><path d="M808 -40 L847 93 L871 241 L932 390 L951 528 L1003 662 L1027 791 L1068 940"/><path d="M908 -40 L951 92 L972 229 L1029 391 L1057 523 L1100 650 L1132 799 L1168 940"/><path d="M1005 -40 L1033 110 L1069 243 L1127 368 L1153 506 L1191 660 L1241 800 L1265 940"/><path d="M1096 -40 L1140 110 L1166 229 L1212 369 L1248 511 L1285 667 L1332 792 L1356 940"/><path d="M1157 -40 L1192 113 L1224 239 L1265 368 L1307 515 L1342 667 L1385 793 L1417 940"/><path d="M1266 -40 L1304 107 L1326 234 L1382 382 L1415 521 L1455 667 L1498 808 L1526 940"/><path d="M1366 -40 L1406 91 L1437 250 L1485 383 L1504 510 L1556 658 L1580 813 L1626 940"/><path d="M1429 -40 L1478 103 L1516 248 L1532 372 L1588 518 L1615 667 L1655 806 L1689 940"/><path d="M1531 -40 L1562 106 L1595 246 L1651 370 L1665 532 L1708 661 L1748 790 L1791 940"/><path d="M1610 -40 L1636 110 L1692 248 L1712 375 L1748 530 L1809 673 L1843 803 L1870 940"/><path d="M1710 -40 L1736 87 L1788 253 L1835 378 L1859 531 L1890 667 L1936 798 L1970 940"/><path d="M1796 -40 L1823 90 L1864 254 L1916 366 L1951 510 L1983 672 L2030 811 L2056 940"/><path d="M1910 -40 L1951 87 L1977 245 L2024 392 L2049 531 L2098 663 L2122 796 L2170 940"/><path d="M-40 -239 L154 -254 L337 -274 L516 -304 L720 -315 L895 -326 L1090 -353 L1280 -383 L1465 -397 L1640 -419"/><path d="M-40 -163 L144 -195 L344 -189 L517 -210 L696 -244 L907 -259 L1070 -279 L1253 -296 L1456 -319 L1640 -343"/><path d="M-40 -74 L135 -83 L341 -103 L512 -141 L713 -142 L895 -181 L1078 -201 L1266 -201 L1458 -242 L1640 -254"/><path d="M-40 15 L157 -8 L319 -20 L515 -55 L718 -68 L884 -91 L1094 -109 L1266 -132 L1442 -155 L1640 -165"/><path d="M-40 64 L145 42 L339 33 L530 -6 L708 -26 L888 -39 L1077 -46 L1265 -85 L1456 -103 L1640 -116"/><path d="M-40 175 L136 145 L321 129 L528 103 L710 106 L886 81 L1086 68 L1277 38 L1451 11 L1640 -5"/><path d="M-40 226 L134 210 L327 177 L519 156 L710 159 L890 113 L1071 101 L1278 99 L1456 64 L1640 46"/><path d="M-40 305 L156 272 L327 272 L525 237 L720 230 L899 198 L1088 172 L1270 152 L1461 148 L1640 125"/><path d="M-40 402 L143 390 L320 353 L506 346 L694 309 L903 297 L1076 292 L1263 272 L1467 231 L1640 222"/><path d="M-40 471 L133 444 L336 444 L528 417 L697 402 L891 378 L1071 364 L1263 325 L1463 315 L1640 291"/><path d="M-40 556 L145 543 L330 517 L520 494 L702 470 L902 461 L1071 427 L1264 419 L1453 401 L1640 376"/><path d="M-40 647 L141 615 L338 608 L515 598 L697 556 L897 544 L1084 516 L1266 510 L1451 477 L1640 467"/><path d="M-40 705 L141 679 L344 653 L527 658 L707 616 L896 617 L1078 591 L1259 558 L1449 548 L1640 525"/><path d="M-40 816 L137 783 L326 780 L525 757 L713 735 L884 729 L1075 682 L1257 669 L1459 650 L1640 636"/><path d="M-40 868 L152 853 L338 822 L531 812 L706 800 L886 763 L1082 750 L1268 717 L1460 722 L1640 688"/><path d="M-40 955 L156 925 L322 918 L532 897 L699 865 L905 861 L1094 828 L1274 806 L1443 792 L1640 775"/><path d="M-40 1035 L154 1013 L328 1005 L530 973 L714 943 L888 945 L1080 904 L1259 905 L1450 888 L1640 855"/></g><g class="vm-major" fill="none" stroke="#F4EFE6" stroke-opacity=".16" stroke-width="3" stroke-linecap="round"><path pathLength="1" d="M-40 700 L134 657 L300 610 L467 563 L632 518 L797 485 L970 431 L1140 396 L1309 347 L1468 307 L1640 260"/><path pathLength="1" d="M300 -40 L346 63 L389 179 L437 288 L476 391 L517 500 L566 612 L616 722 L659 833 L700 940"/><path pathLength="1" d="M-40 180 L130 222 L300 258 L464 298 L629 329 L795 366 L963 404 L1134 448 L1310 486 L1475 522 L1640 560"/><path pathLength="1" d="M1100 -40 L1085 72 L1079 177 L1071 292 L1052 390 L1043 505 L1033 611 L1019 722 L1006 831 L1000 940"/></g><g class="vm-round" fill="none" stroke="#F4EFE6" stroke-opacity=".28"><circle cx="1210" cy="250" r="46" stroke-width="3"/><circle cx="1210" cy="250" r="20" stroke-width="1.5"/><line x1="1252" y1="268" x2="1348" y2="308" stroke-width="2.4"/><line x1="1213" y1="296" x2="1221" y2="400" stroke-width="2.4"/><line x1="1171" y1="274" x2="1081" y2="327" stroke-width="2.4"/><line x1="1169" y1="230" x2="1075" y2="184" stroke-width="2.4"/><line x1="1214" y1="204" x2="1223" y2="101" stroke-width="2.4"/><line x1="1246" y1="221" x2="1326" y2="155" stroke-width="2.4"/></g><text x="1272" y="194" class="vm-t">Piața Victoriei</text><path class="vm-route" d="M1170 280 C 1130 400, 1100 360, 1010 506" fill="none" stroke="#D9B26A" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 10"/><g class="vm-pin" transform="translate(1010 520)"><circle class="vm-pulse" r="18" fill="#7CE0A8" fill-opacity=".35"/><circle r="9" fill="#7CE0A8"/><circle r="4" fill="#04140F"/></g><text x="1036" y="526" class="vm-t vm-tb">Boost Club</text></svg><div class="wrap gut vgrid">
+  <div><span class="k-label">Visit</span><h2 class="k-h" data-k="lines">Strada Sevastopol 24. <span class="it">In central Bucharest.</span></h2></div>
+  <div>
+    <div class="hours"><div><span>Monday to Friday</span><span>07:00 to 20:00/21:00</span></div><div><span>Saturday</span><span>Closed</span></div><div><span>Sunday</span><span>10:00 to 18:00</span></div></div>
+    <div class="row"><a class="btn btn-brass" href="#" data-reserve>Reserve a visit <span class="ar">→</span></a><a class="btn btn-ghost" href="visit.html">How to find us</a></div>
+  </div>
+</div></section>
+
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="site.js"></script>
+<script src="kit/kit.js"></script>
+<script src="kit/scan.js"></script>
+<script>
+(function(){
+  if(innerWidth>900){ var i=new Image(); i.onload=function(){ document.getElementById('heroimg').src=i.src; }; i.src='img/hero-desktop.jpg'; }
+  (function(){ var T=window.BC_T||{}, L=document.documentElement.lang, lean={ro:'masă slabă',ru:'сух. масса'}[L]||'lean';
+    function t(k,d){ var v=T[k]; return v?v.charAt(0)+v.slice(1).toLowerCase():d; }
+    var sec=document.getElementById('scan'), bs=[].slice.call(sec.querySelectorAll('.sx-read b')), pc=sec.querySelector('.sx-pc'), last=-1;
+    function fmt(v,u,raw){ var dec=String(raw).indexOf('.')>-1?1:0; return (dec?v.toFixed(1):Math.round(v).toLocaleString('en-US'))+'<small>'+u+'</small>'; }
+    function show(p){ var q=Math.round(p*100); if(q===last) return; last=q; pc.textContent=q+'%'; sec.classList.toggle('done',q>=100);
+      bs.forEach(function(b){ b.innerHTML=fmt(+b.dataset.v*Math.min(1,p*1.08),b.dataset.u,b.dataset.v); }); }
+    var sc=BCScan.mount(document.getElementById('sxBody'),{driven:true,pad:innerWidth<900?.2:0,onProgress:show,callouts:[
+      {x:44,y:150,label:t('TRUNK','Trunk'),value:'68% '+lean},{x:-66,y:156,label:t('LEFT ARM','Left arm'),value:'76% '+lean},
+      {x:-40,y:268,label:t('LEFT LEG','Left leg'),value:'74% '+lean},{x:40,y:280,label:t('RIGHT LEG','Right leg'),value:'75% '+lean}]});
+    var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(RM){ sc.set(1); return; }
+    if(window.gsap&&window.ScrollTrigger&&innerWidth>900){ gsap.registerPlugin(ScrollTrigger); var o={p:0};
+      gsap.to(o,{p:1,ease:'none',onUpdate:function(){ sc.set(o.p); },scrollTrigger:{trigger:sec,start:'top top',end:'+=140%',pin:'.sx-pin',scrub:.5}}); }
+    else sc.auto();
+  })();
+  if(!window.gsap||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  gsap.registerPlugin(ScrollTrigger);
+  var desk=innerWidth>900;
+  gsap.from('#fr',{clipPath:'inset(12% 8% 12% 8% round 6px)',duration:1.4,ease:'power4.out'});
+  gsap.from('#h1',{yPercent:60,opacity:0,duration:1.2,ease:'power4.out',delay:.2});
+  // the framed photo opens to full bleed while the headline lifts
+  var tl=gsap.timeline({scrollTrigger:{trigger:'#open',start:'top top',end:'+=90%',pin:true,scrub:.6}});
+  tl.to('#fr',{left:0,right:0,top:0,bottom:0,borderRadius:0,ease:'none'},0).to('#h1',{xPercent:desk?12:0,yPercent:desk?-30:-10,ease:'none'},0).to('#fr img',{scale:1.08,ease:'none'},0);
+  gsap.utils.toArray('.ccard').forEach(function(c){ gsap.from(c.querySelector('img'),{scale:1.25,ease:'none',scrollTrigger:{trigger:c,start:'top bottom',end:'top top',scrub:true}}); gsap.from(c.querySelector('.nm'),{yPercent:40,opacity:0,duration:1,ease:'power3.out',scrollTrigger:{trigger:c,start:'top 55%'}}); });
+})();
+</script>

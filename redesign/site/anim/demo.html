@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<base href="../">
+<title>Motion Demo · Boost Club</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Cormorant:ital,wght@1,500;1,600&family=Anton&family=Oswald:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="anim/anim.css">
+<style>
+.mhero{position:relative;min-height:100svh;background:#E7C548;color:#13201B;overflow:hidden;padding-top:140px;transition:background-color .9s var(--ease),color .9s var(--ease)}.mhero .mt{font-size:clamp(96px,16vw,260px);margin-top:10px}.mcups{position:absolute;right:4vw;bottom:0;height:min(70vh,640px);aspect-ratio:2/3}@media (max-width:900px){.mhero{padding-top:110px}.mcups{right:50%;transform:translateX(50%);height:44vh}}
+.mname{margin-top:18px;font-size:14px;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+.scy{height:520svh}
+.scy .stg{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;align-items:flex-end}
+.scy .nm{position:relative;z-index:1;font-size:clamp(70px,13vw,220px);padding-bottom:120px;max-width:9ch}
+.scy .cp{position:absolute;left:50%;top:50%;height:min(64svh,600px);aspect-ratio:2/3;transform:translate(-10%,-50%)}
+@media (max-width:900px){.scy .cp{left:50%;top:14%;transform:translateX(-50%);height:44svh}.scy .nm{padding-bottom:110px;font-size:17vw}}
+</style></head>
+<body>
+<div id="bc" data-page="menu" data-navlight="1" data-solid-at="0.08" hidden></div>
+
+<section class="mhero" id="mh"><div class="gut"><div class="wrap">
+  <span class="eyebrow" style="color:inherit;opacity:.75">House recipes</span>
+  <h1 class="loud mt">The shake<br>menu</h1>
+  <p class="lead" style="margin-top:20px;font-weight:500">18 signatures, or build your own. Every visit comes with a tea and an aloe in one cup, next to the shake.</p>
+  <p class="mname" id="mname" aria-live="polite"></p>
+</div></div><div class="mcups" id="mcups"></div></section>
+<div id="d1"></div>
+
+<section class="sec gut" style="padding-top:40px"><div class="wrap">
+  <div class="row" style="justify-content:space-between;align-items:flex-end;margin-bottom:32px"><div><span class="eyebrow">Small delights</span><h2 class="h-l">Hover a <span class="it">cup.</span></h2></div><a class="btn btn-brass" href="#build">Build one <span class="ar">→</span></a></div>
+  <div class="tiles" id="tiles"></div>
+</div></section>
+
+<div id="d2"></div>
+<section id="build"></section>
+<div id="d3"></div>
+
+<section class="sec gut" style="padding-bottom:40px"><div class="wrap"><span class="eyebrow">Scroll-scrubbed</span><h2 class="h-l">The same cycler, <span class="it">driven by scroll.</span></h2></div></section>
+<section class="scy" id="scy"><div class="stg gut" id="scyStage"><h2 class="loud nm" id="scyName"></h2><div class="cp" id="scyCups"></div></div></section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="site.js"></script>
+<script src="anim/anim.js"></script>
+<script>
+(function(){
+  var q=new URLSearchParams(location.search), id=q.get('shake')||'pistachio-dream', S=SHAKES.filter(function(s){return s.id===id})[0]||SHAKES[0];
+  colourTiles(document.getElementById('tiles'),SHAKES);
+  var mh=document.getElementById('mh'), d1=BCAnim.drip(document.getElementById('d1'),SHAKES[0].bg,'#FBF8F2');
+  BCAnim.cycle(mh,SHAKES,{cups:document.getElementById('mcups'),onChange:function(s){ document.getElementById('mname').textContent='Now pouring · '+s.name; d1.set(s.bg); }});
+  BCAnim.drip(document.getElementById('d2'),'#FBF8F2','#0B2B22');
+  BCAnim.build(document.getElementById('build'),{shake:S.id});
+  BCAnim.drip(document.getElementById('d3'),S.bg,'#FBF8F2');
+  var nmEl=document.getElementById('scyName');
+  BCAnim.cycle(document.getElementById('scyStage'),SHAKES.slice(0,6),{cups:document.getElementById('scyCups'),scroll:document.getElementById('scy'),onChange:function(s){ nmEl.textContent=s.name; }});
+  BCAnim.delights();
+})();
+</script>
+</body></html>

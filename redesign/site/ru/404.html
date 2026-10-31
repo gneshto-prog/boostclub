@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Страница не найдена · Boost Club</title>
+<meta name="description" content="Boost Club, клуб питания рядом с Piața Victoriei в Бухаресте. Начните с бесплатного анализа тела.">
+<meta property="og:title" content="Страница не найдена · Boost Club"><meta property="og:description" content="Boost Club, клуб питания рядом с Piața Victoriei в Бухаресте. Начните с бесплатного анализа тела."><meta property="og:image" content="../brand/og.jpg"><meta name="theme-color" content="#0B2B22">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Cormorant:ital,wght@0,400;0,500;1,400;1,500;1,600&family=Anton&family=Oswald:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../site.css"><link rel="stylesheet" href="../kit/kit.css">
+<script>try{if(sessionStorage.getItem('kcur')){document.documentElement.classList.add('k-in');sessionStorage.removeItem('kcur')}}catch(e){}</script>
+<style>
+.p4{min-height:100svh}
+.p4 .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:clamp(24px,4vw,64px)}
+.p4-num{order:2;display:block;font-family:var(--loud);font-weight:400;font-size:clamp(150px,26vw,420px);line-height:.78;letter-spacing:.01em;color:transparent;-webkit-text-stroke:1.5px rgba(217,178,106,.75)}
+@media (max-width:900px){.p4 .wrap{grid-template-columns:minmax(0,1fr)}.p4-num{order:0;font-size:clamp(130px,42vw,260px)}}
+.p4 .h-xl{max-width:12ch}
+.p4 .h-xl .it{color:var(--brass)}
+.p4 .k-lead{margin-top:24px}
+.p4 .btn-ghost{color:var(--cream)}
+</style><style id="i18n-css">/* RO/RU page overrides, injected into ro/*.html and ru/*.html by pages_zz_i18n.py (English pages never see this).
+   Blocks between the @ro / @ru markers apply to that language only. */
+/* diacritics (Ă Î Ș Ț) and Cyrillic Й Ё need a little more room than the .86 English line-height */
+.loud{line-height:.95}
+/* longer words: a word that still cannot fit breaks instead of running off the screen */
+h1,h2,h3,.loud{overflow-wrap:break-word}
+/* the longest signature name (Strawberry Cheesecake) fits its card column */
+.ccard .nm{font-size:clamp(56px,8vw,160px)}
+/* Boost Fit: activity cards and section heads, sized for longer words */
+.fgrid b{font-size:clamp(20px,2.3vw,40px);line-height:1.05}
+.fh2{font-size:clamp(44px,6.4vw,110px)}
+
+
+/* Anton has no Cyrillic: Oswald (next in --loud, loaded at 600) draws those glyphs automatically */
+.fh{font-size:clamp(54px,14vw,250px)}
+.rh1{font-size:min(8vw,115px)}
+@media (min-width:641px){.ruled li{grid-template-columns:160px minmax(0,1fr)}}
+@media (max-width:900px){.duo .panel .big{font-size:min(44px,11vw)}.open h1{font-size:min(12vw,88px)}}</style></head>
+<body>
+<div class="k-curtain" aria-hidden="true"><img src="../img/wordmark-cream-hd.png" alt=""></div>
+<a class="skip" href="#main">Перейти к содержанию</a>
+<div id="bc" data-page="" data-norbar="1" hidden></div>
+<main id="main">
+<section class="k-band soft p4"><img src="../img/his/full-room.webp" alt="" aria-hidden="true"><div class="wrap gut">
+  <span class="p4-num">404</span>
+  <div><h1 class="h-xl">Этой страницы <span class="it">здесь нет.</span></h1>
+  <p class="k-lead">А клуб на месте. Strada Sevastopol 24, в центре Бухареста.</p>
+  <div class="row"><a class="btn btn-brass" href="index.html">Назад в Boost Club <span class="ar">→</span></a><a class="btn btn-ghost" href="free-scan.html">Бесплатная консультация</a></div></div>
+</div></section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="../i18n/ru-ui.js"></script>
+<script src="../site.js"></script>
+<script src="../kit/kit.js"></script>
+<script src="../kit/scan.js"></script>
+<script>
+(function(){
+
+  if(!window.gsap||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  gsap.registerPlugin(ScrollTrigger); gsap.config({nullTargetWarn:false});
+  gsap.from('.phero .h-xl',{y:40,opacity:0,duration:1.1,ease:'power4.out'});
+  gsap.from('.phero .sub,.phero .row,.phero .eyebrow',{y:18,opacity:0,duration:.9,stagger:.07,ease:'power3.out',delay:.2});
+  // framed photos open toward full width as they pass, the concept-6 move
+  gsap.utils.toArray('.pframe').forEach(function(f){ gsap.fromTo(f,{clipPath:'inset(0% 7% 0% 7% round 6px)'},{clipPath:'inset(0% 0% 0% 0% round 0px)',ease:'none',scrollTrigger:{trigger:f,start:'top 85%',end:'center 45%',scrub:true}}); gsap.from(f.querySelector('img'),{scale:1.15,ease:'none',scrollTrigger:{trigger:f,start:'top bottom',end:'bottom top',scrub:true}}); });
+  gsap.utils.toArray('.ruled li,.quotes figure').forEach(function(el){ gsap.from(el,{y:24,opacity:0,duration:.8,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%'}}); });
+  gsap.from('.p4-num',{yPercent:20,opacity:0,duration:1.4,ease:'power4.out'});gsap.from('.p4 .h-xl,.p4 .k-lead,.p4 .row',{y:30,opacity:0,duration:1,stagger:.08,ease:'power3.out',delay:.2});
+})();
+</script>
+</body></html>

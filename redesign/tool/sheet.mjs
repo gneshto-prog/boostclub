@@ -1,0 +1,12 @@
+import puppeteer from 'puppeteer-core';
+const base='file:///private/tmp/claude-502/-Users-Gabi/999c6394-ead1-4bde-8b52-d23580c1a3f3/scratchpad/site/';
+const out='/private/tmp/claude-502/-Users-Gabi/999c6394-ead1-4bde-8b52-d23580c1a3f3/scratchpad/sshots/';
+const b=await puppeteer.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true});
+const p=await b.newPage(); await p.setViewport({width:390,height:844,isMobile:true,hasTouch:true});
+await p.goto(base+'_home_local.html',{waitUntil:'networkidle0'}); await new Promise(r=>setTimeout(r,1500));
+await p.screenshot({path:out+'m_hero.jpg',type:'jpeg',quality:70});
+await p.click('.nav .mb'); await new Promise(r=>setTimeout(r,800));
+await p.screenshot({path:out+'m_sheet.jpg',type:'jpeg',quality:70});
+await p.setViewport({width:768,height:1024,isMobile:true,hasTouch:true}); await p.goto(base+'_home_local.html',{waitUntil:'networkidle0'}); await new Promise(r=>setTimeout(r,1500));
+await p.screenshot({path:out+'t_hero.jpg',type:'jpeg',quality:70});
+await b.close();

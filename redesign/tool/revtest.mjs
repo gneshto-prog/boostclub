@@ -1,0 +1,12 @@
+import puppeteer from 'puppeteer-core';
+const b=await puppeteer.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true});
+const p=await b.newPage(); await p.setViewport({width:1440,height:900});
+await p.goto('http://localhost:8765/reviews.html',{waitUntil:'networkidle0'});
+const vis=()=>p.evaluate(()=>[...document.querySelectorAll('.rv')].filter(r=>!r.hidden).length);
+console.log('total',await p.evaluate(()=>document.querySelectorAll('.rv').length),'visible',await vis(),'stat',await p.evaluate(()=>[...document.querySelectorAll('.stat b, .stats b')].map(b=>b.textContent).join(',')));
+await p.click('[data-more]'); console.log('after show all',await vis());
+await p.click('.chips-f [data-f="ro"]'); console.log('ro',await vis(), await p.evaluate(()=>document.querySelector('[data-count-msg]').textContent));
+await p.click('.chips-f [data-f="ru"]'); console.log('ru',await vis());
+const el=await p.$('#all'); await el.evaluate(e=>window.scrollTo({top:e.getBoundingClientRect().top+scrollY,behavior:'instant'})); await p.click('.chips-f [data-f="all"]'); await new Promise(r=>setTimeout(r,1500));
+await p.screenshot({path:'/private/tmp/claude-502/-Users-Gabi/999c6394-ead1-4bde-8b52-d23580c1a3f3/scratchpad/audit/revwall.jpg',type:'jpeg',quality:70});
+await b.close();

@@ -1,0 +1,26 @@
+{
+ "Herbalife market": [
+  "Piață Herbalife",
+  "Рынок Herbalife"
+ ],
+ "Herbalife operates here.": [
+  "Herbalife activează aici.",
+  "Herbalife работает здесь."
+ ],
+ "Type your country above.": [
+  "Scrie țara ta mai sus.",
+  "Введите свою страну выше."
+ ],
+ "We check this one together on the call.": [
+  "Pe aceasta o verificăm împreună în apel.",
+  "Это мы проверим вместе на звонке."
+ ],
+ "Hi Gabriel, I just asked for a business call on boostclub.ro. {name}, {country}. Path: {path}.": [
+  "Salut, Gabriel! Tocmai am cerut un apel despre afaceri pe boostclub.ro. {name}, {country}. Drum: {path}.",
+  "Здравствуйте, Габриел! Я только что оставил(а) заявку на звонок о бизнесе на boostclub.ro. {name}, {country}. Путь: {path}."
+ ],
+ "Hi Gabriel, I would like a business call. {name}, {country}. Path: {path}.": [
+  "Salut, Gabriel! Aș vrea un apel despre afaceri. {name}, {country}. Drum: {path}.",
+  "Здравствуйте, Габриел! Хочу созвониться о бизнесе. {name}, {country}. Путь: {path}."
+ ]
+}

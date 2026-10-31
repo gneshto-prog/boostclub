@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Boost Team · Partner program · Boost Club</title>
+<meta name="description" content="Boost Team: build your own nutrition business with a mentor team. Open a Boost Club, your own nutrition club, or a wellness business without premises. Book a call with Gabriel Neshto.">
+<meta property="og:title" content="Boost Team · Partner program · Boost Club"><meta property="og:description" content="Boost Team: build your own nutrition business with a mentor team. Open a Boost Club, your own nutrition club, or a wellness business without premises. Book a call with Gabriel Neshto."><meta property="og:image" content="brand/og.jpg"><meta name="theme-color" content="#0B2B22">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Cormorant:ital,wght@0,400;0,500;1,400;1,500;1,600&family=Anton&family=Oswald:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css"><link rel="stylesheet" href="kit/kit.css"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<script>try{if(sessionStorage.getItem('kcur')){document.documentElement.classList.add('k-in');sessionStorage.removeItem('kcur')}}catch(e){}</script>
+<style>/* ---------- Boost Team: navy #061A2F, blue #1098D4, orange #FF8A00, gold #C8A24A (brand board) ---------- */
+body{--bt-navy:#061A2F;--bt-blue:#1098D4;--bt-sky:#4FB0E2;--bt-orange:#FF8A00;--bt-orange-d:#E07400;--bt-gold:#C8A24A;--bt-green:#2E7D50;--bt-ink:#0B2236;--bt-mute:#526273;--bt-line:#DCE6EF;--bt-pale:#F3F8FC;
+  background:#fff;color:var(--bt-ink);font-family:Inter,"Inter Tight",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+.k-curtain{background:var(--bt-navy)!important}.k-curtain img{content:url(bt/boost-team-wm-on-dark.svg);width:min(62vw,420px)!important}
+::selection{background:var(--bt-blue);color:#fff}
+.bt-wrap{width:min(1200px,100% - 40px);margin-inline:auto}
+.bt-kl{display:inline-flex;align-items:center;gap:10px;font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#086E9C}
+.bt-kl::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--bt-gold)}
+.bt-h1,.bt-sec h2,.bt-fam h2,.bt-final h2{font-family:Montserrat,"Inter Tight",sans-serif;font-weight:800;letter-spacing:-.035em;line-height:1.04;color:var(--bt-navy);margin:0}
+.bt-bl{color:var(--bt-blue)}
+.bt-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:999px;font-weight:600;font-size:15.5px;text-decoration:none;border:0;cursor:pointer;transition:background .2s,transform .2s,box-shadow .2s;white-space:nowrap}
+.bt-o{background:var(--bt-orange);color:#1A0E00;box-shadow:0 10px 24px rgba(255,138,0,.28)}
+.bt-o:hover{background:#FF9A24;transform:translateY(-1px)}
+.bt-ghost{background:#fff;color:var(--bt-navy);box-shadow:inset 0 0 0 1.5px var(--bt-line)}
+.bt-ghost:hover{box-shadow:inset 0 0 0 1.5px var(--bt-navy)}
+.bt-sm{padding:11px 18px;font-size:14px}
+.bt-btn:focus-visible,.bt-pick:focus-visible{outline:2px solid var(--bt-blue);outline-offset:3px}
+
+/* bar */
+.bt-bar{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px clamp(16px,3vw,36px);background:rgba(255,255,255,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s,background .3s}
+.bt-bar.solid{border-color:var(--bt-line);background:rgba(255,255,255,.95)}
+.bt-brand img{height:24px;width:auto;display:block}
+.bt-links{display:flex;gap:26px}
+.bt-links a{font-size:14px;font-weight:500;color:var(--bt-ink);text-decoration:none}.bt-links a:hover{color:var(--bt-blue)}
+.bt-right{display:flex;align-items:center;gap:16px}
+.bt-back{font-size:13px;font-weight:500;color:var(--bt-mute);text-decoration:none}.bt-back:hover{color:var(--bt-navy)}
+.bt-lang{display:flex;gap:4px;font-size:12.5px;font-weight:600}
+.bt-lang a,.bt-lang b{padding:4px 7px;border-radius:6px;color:var(--bt-mute);text-decoration:underline;text-underline-offset:3px}
+.bt-lang b{color:#fff;background:var(--bt-navy);text-decoration:none}
+@media(max-width:1020px){.bt-links{display:none}}
+@media(max-width:620px){.bt-back{display:none}.bt-bar .bt-sm{display:none}.bt-brand img{height:20px}}
+
+/* hero */
+.bt-hero{position:relative;overflow:hidden;padding:clamp(120px,14vw,170px) 0 clamp(48px,6vw,80px);background:linear-gradient(180deg,#fff,var(--bt-pale))}
+.bt-aurora{position:absolute;inset:-20% -10% auto -10%;height:120%;pointer-events:none;background:radial-gradient(40% 50% at 78% 30%,rgba(16,152,212,.22),transparent 70%),radial-gradient(30% 40% at 20% 10%,rgba(200,162,74,.16),transparent 70%),radial-gradient(35% 45% at 60% 90%,rgba(46,125,80,.10),transparent 70%);filter:blur(10px);animation:btAur 16s ease-in-out infinite alternate}
+@keyframes btAur{to{transform:translate3d(-3%,2%,0) scale(1.05)}}
+.bt-heroin{position:relative;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(32px,5vw,72px);align-items:center}
+.bt-h1{font-size:clamp(42px,6vw,88px);margin:18px 0 0}
+.bt-lead{font-size:clamp(17px,1.6vw,21px);color:var(--bt-mute);max-width:44ch;margin:24px 0 0}
+.bt-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.bt-chips{list-style:none;padding:0;margin:28px 0 0;display:flex;flex-wrap:wrap;gap:8px 18px;font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--bt-ink)}
+.bt-chips li{display:flex;align-items:center;gap:8px}
+.bt-chips li::before{content:"";width:16px;height:16px;border-radius:50%;flex:none;background:var(--bt-blue) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.3l2.5 2.5L12 5.3' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E") center/100% no-repeat}
+.bt-herovis{position:relative;min-height:clamp(380px,42vw,560px)}
+.bt-hph1,.bt-hph2{position:absolute;margin:0;overflow:hidden;border-radius:22px;box-shadow:0 30px 60px rgba(6,26,47,.18)}
+.bt-hph1{right:0;top:0;width:72%;aspect-ratio:4/5}
+.bt-hph2{left:0;bottom:0;width:46%;aspect-ratio:4/5;border:6px solid #fff}
+.bt-hph1 img,.bt-hph2 img{width:100%;height:100%;object-fit:cover}
+.bt-hph1 figcaption{position:absolute;right:16px;bottom:16px;text-align:right;display:grid;padding:10px 16px;border-radius:14px;background:rgba(6,26,47,.8);backdrop-filter:blur(8px);color:#fff;line-height:1.25}
+.bt-hph1 figcaption b{font-weight:700}.bt-hph1 figcaption span{font-size:12.5px;color:var(--bt-sky)}
+.bt-hph2 figcaption{position:absolute;left:10px;bottom:10px;padding:6px 12px;border-radius:999px;background:#fff;color:var(--bt-navy);font-size:12px;font-weight:600}
+.bt-badge{position:absolute;right:-14px;top:-14px;z-index:2;width:clamp(64px,7vw,92px);aspect-ratio:1;border-radius:22px;overflow:hidden;box-shadow:0 18px 40px rgba(6,26,47,.3);animation:btFloat 7s ease-in-out infinite}
+.bt-badge img{width:100%;height:100%;display:block}
+@keyframes btFloat{50%{transform:translateY(-10px) rotate(-3deg)}}
+.bt-stats{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:clamp(40px,5vw,64px) 0 0;padding:0;border-top:1px solid var(--bt-line)}
+.bt-stats>div{padding:22px 20px 0 0}
+.bt-stats>div+div{padding-left:20px;border-left:1px solid var(--bt-line)}
+.bt-stats dt{font-family:Montserrat,sans-serif;font-weight:800;font-size:clamp(30px,3.4vw,48px);letter-spacing:-.03em;color:var(--bt-navy);line-height:1}
+.bt-stats dd{margin:8px 0 0;font-size:14px;color:var(--bt-mute)}
+@media(max-width:900px){.bt-heroin{grid-template-columns:minmax(0,1fr)}.bt-herovis{min-height:0;aspect-ratio:1/1.05;max-width:520px;width:100%}.bt-stats{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:22px}.bt-stats>div:nth-child(3){border-left:0;padding-left:0}}
+
+/* sections */
+.bt-sec{padding:clamp(80px,10vw,132px) 0;position:relative}
+.bt-pale{background:var(--bt-pale)}
+.bt-head{max-width:760px;margin-bottom:clamp(32px,4vw,52px)}
+.bt-head h2{font-size:clamp(34px,4.6vw,64px);margin-top:16px}
+.bt-head p{margin:16px 0 0;font-size:clamp(16px,1.5vw,19px);color:var(--bt-mute);max-width:52ch}
+
+/* paths */
+.bt-paths{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.bt-path{background:#fff;border:1px solid var(--bt-line);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .35s}
+.bt-path:hover{transform:translateY(-6px);box-shadow:0 30px 60px rgba(6,26,47,.12);border-color:transparent}
+.bt-path figure{position:relative;margin:0;aspect-ratio:4/3.4;overflow:hidden}
+.bt-path[data-path="c"] img{object-position:50% 38%}.bt-path[data-path="a"] img{object-position:50% 22%}
+.bt-path img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.8,.2,1)}
+.bt-path:hover img{transform:scale(1.05)}
+.bt-pl{position:absolute;left:16px;top:16px;width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:var(--bt-navy);color:#fff;font-family:Montserrat,sans-serif;font-weight:800;font-size:20px}
+.bt-path[data-path="a"] .bt-pl{background:#0B7DB0}.bt-path[data-path="c"] .bt-pl{background:var(--bt-green)}
+.bt-pb{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1}
+.bt-pb h3{margin:0;font-family:Montserrat,sans-serif;font-weight:800;font-size:clamp(21px,1.9vw,26px);letter-spacing:-.02em;color:var(--bt-navy);line-height:1.1}
+.bt-pb p{margin:10px 0 16px;color:var(--bt-mute);font-size:15.5px}
+.bt-pb ul{list-style:none;padding:0;margin:0 0 20px;display:flex;flex-wrap:wrap;gap:6px}
+.bt-pb li{font-size:12.5px;font-weight:600;padding:6px 11px;border-radius:999px;background:var(--bt-pale);color:var(--bt-ink)}
+.bt-pick{margin-top:auto;align-self:flex-start;background:none;border:0;padding:0;font:inherit;font-weight:600;color:#0B7DB0;cursor:pointer;font-size:15px}
+.bt-pick span{display:inline-block;transition:transform .25s}.bt-pick:hover span{transform:translateX(4px)}
+@media(max-width:960px){.bt-paths{grid-template-columns:minmax(0,1fr)}.bt-path{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}.bt-path figure{aspect-ratio:auto;min-height:100%}}
+@media(max-width:560px){.bt-path{display:flex}.bt-path figure{aspect-ratio:16/11;min-height:0}}
+
+/* map */
+.bt-mapbox{background:#fff;border:1px solid var(--bt-line);border-radius:24px;padding:clamp(16px,2.4vw,28px);box-shadow:0 20px 50px rgba(6,26,47,.06)}
+.bt-mapbar{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center;justify-content:space-between}
+.bt-search{flex:1 1 280px;max-width:420px}
+.bt-search input{font:inherit;font-size:16px;padding:13px 18px 13px 44px;border-radius:999px;border:1.5px solid var(--bt-line);width:100%;box-sizing:border-box;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='11' cy='11' r='7' fill='none' stroke='%23526273' stroke-width='2'/%3E%3Cpath d='M20 20l-4-4' stroke='%23526273' stroke-width='2'/%3E%3C/svg%3E") 16px center/18px no-repeat;color:var(--bt-ink)}
+.bt-search input:focus{outline:none;border-color:var(--bt-blue);box-shadow:0 0 0 4px rgba(16,152,212,.15)}
+.bt-legend{display:flex;align-items:center;gap:8px 10px;flex-wrap:wrap;font-size:13px;color:var(--bt-mute)}
+.bt-legend i.nx{border-radius:50%;background:var(--bt-blue);margin-left:10px}
+.bt-legend i{width:12px;height:12px;border-radius:3px;display:inline-block;background:#9FD3EE}.bt-legend i.hq{border-radius:50%;background:var(--bt-orange);margin-left:10px}
+.bt-map{position:relative;margin-top:16px}
+.bt-map svg{width:100%;height:auto;display:block}
+.bt-map .sphere{fill:#F7FAFD}
+.bt-map .c{stroke:#fff;stroke-width:.5;transition:fill .25s}
+.bt-map .c.on{fill:#9FD3EE;cursor:pointer}.bt-map .c.on:hover{fill:var(--bt-blue)}
+.bt-map .c.off{fill:#E3E9EF}
+.bt-map .c.sel{fill:var(--bt-navy)!important}
+.bt-map .arc{fill:none;stroke:var(--bt-orange);stroke-width:1.8;stroke-dasharray:4 5;animation:btDash 1.2s linear infinite}
+@keyframes btDash{to{stroke-dashoffset:-18}}
+.bt-map .hq{fill:var(--bt-orange)}.bt-map .hqr{fill:none;stroke:var(--bt-orange);stroke-width:1.5;animation:btPing 2.2s ease-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes btPing{from{opacity:.9;transform:scale(1)}to{opacity:0;transform:scale(3.4)}}
+.bt-map .dest{fill:var(--bt-navy);stroke:#fff;stroke-width:1.5}
+.bt-tip{position:absolute;pointer-events:none;transform:translate(-50%,-130%);background:var(--bt-navy);color:#fff;font-size:12.5px;font-weight:500;padding:6px 10px;border-radius:8px;white-space:nowrap}
+.bt-tip .on{color:var(--bt-sky)}
+.bt-mapout{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-top:14px;padding-top:14px;border-top:1px solid var(--bt-line)}
+.bt-mapout p{margin:0;font-weight:600;color:var(--bt-navy)}
+.bt-mapout p b{color:#0B7DB0}
+.bt-note{margin:10px 0 0;font-size:13px;color:var(--bt-mute)}
+.bt-map.loading{min-height:220px}
+.bt-map.loading::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(16,152,212,.08),transparent);animation:btLoad 1.2s linear infinite}
+@keyframes btLoad{from{transform:translateX(-100%)}to{transform:translateX(100%)}}
+
+/* map v2: zoom, pins, panel */
+.bt-mapwrap{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:16px;margin-top:16px;align-items:stretch}
+.bt-mapwrap .bt-map{margin:0;border-radius:18px;overflow:hidden;background:linear-gradient(180deg,#F4F9FD,#EAF3FA);touch-action:pan-y}
+.bt-mapwrap .bt-map.zoomed{touch-action:none}
+.bt-map svg{cursor:default}.bt-map.zoomed svg{cursor:grab}.bt-map.zoomed svg:active{cursor:grabbing}
+.bt-map .pin{cursor:pointer;outline:none}
+.bt-map .pin .dot{stroke:#fff;stroke-width:1.5;vector-effect:non-scaling-stroke}
+.bt-map .hqp .dot{fill:var(--bt-orange)}.bt-map .vnp .dot{fill:var(--bt-blue)}
+.bt-map .pin .ring{fill:none;stroke-width:1.5;vector-effect:non-scaling-stroke;animation:btPing 2.2s ease-out infinite;transform-box:fill-box;transform-origin:center}
+.bt-map .hqp .ring{stroke:var(--bt-orange)}.bt-map .vnp .ring{stroke:var(--bt-blue);animation-delay:.7s}
+.bt-map .plab rect{fill:var(--bt-navy);opacity:.94}
+.bt-map .plab text{fill:#fff;font:700 10.5px Inter,sans-serif}
+.bt-map .plab text.ps{font:500 8.5px "IBM Plex Mono",monospace;fill:var(--bt-sky);letter-spacing:.06em}
+.bt-map .hqp .plab text.ps{fill:#FFB866}
+.bt-map .pin:focus-visible .plab rect{stroke:var(--bt-orange);stroke-width:2}
+.bt-map .nxl{fill:none;stroke:var(--bt-orange);stroke-width:1.4;stroke-dasharray:3 4}
+.bt-map .c.on.sel,.bt-map .c.off.sel{fill:var(--bt-navy)!important}
+.bt-zoom{position:absolute;right:12px;top:12px;display:grid;gap:6px}
+.bt-zoom button,.bt-views button{font:inherit;border:0;cursor:pointer;background:#fff;color:var(--bt-navy);box-shadow:0 4px 14px rgba(6,26,47,.14)}
+.bt-zoom button{width:38px;height:38px;border-radius:12px;font-size:20px;font-weight:600;line-height:1}
+.bt-zoom button:hover,.bt-views button:hover{background:var(--bt-pale)}
+.bt-views{position:absolute;left:12px;bottom:12px;display:flex;padding:4px;gap:4px;border-radius:999px;background:#fff;box-shadow:0 4px 14px rgba(6,26,47,.14)}
+.bt-views button{box-shadow:none;padding:7px 14px;border-radius:999px;font-size:13px;font-weight:600}
+.bt-views button[aria-pressed=true]{background:var(--bt-navy);color:#fff}
+.bt-zoom button:focus-visible,.bt-views button:focus-visible{outline:2px solid var(--bt-blue);outline-offset:2px}
+.bt-hint{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);padding:10px 16px;border-radius:999px;background:rgba(6,26,47,.86);color:#fff;font-size:13.5px;font-weight:600;pointer-events:none}
+.bt-panel{display:flex;flex-direction:column;gap:8px;padding:22px;border-radius:18px;background:var(--bt-navy);color:#fff}
+.bt-pk{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--bt-sky)}
+.bt-panel h3{margin:0;font-family:Montserrat,sans-serif;font-weight:800;font-size:clamp(24px,2.2vw,30px);letter-spacing:-.02em;line-height:1.1}
+.bt-panel p{margin:0;color:rgba(255,255,255,.8);font-size:14.5px}
+.bt-pd{margin:8px 0 6px;display:grid;gap:10px;border-top:1px solid rgba(255,255,255,.16);padding-top:12px}
+.bt-pd[hidden]{display:none}
+.bt-pd dt{font-size:11.5px;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.1em}
+.bt-pd dd{margin:2px 0 0;font-family:Montserrat,sans-serif;font-weight:800;font-size:20px}
+.bt-panel .bt-btn{margin-top:auto;align-self:flex-start}
+.bt-quick{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.bt-quick[hidden]{display:none}
+.bt-quick button{font:inherit;font-size:13px;font-weight:600;padding:7px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.06);color:#fff;cursor:pointer}
+.bt-quick button:hover{background:rgba(79,176,226,.22);border-color:var(--bt-sky)}
+@media(max-width:900px){.bt-mapwrap{grid-template-columns:minmax(0,1fr)}.bt-panel{min-height:0}}
+@media(max-width:560px){.bt-views{left:8px;bottom:8px}.bt-zoom{right:8px;top:8px}.bt-zoom button{width:34px;height:34px}}
+
+/* Varna on the map */
+.bt-map .nx{fill:var(--bt-blue);stroke:#fff;stroke-width:1}.bt-map .nxr{fill:none;stroke:var(--bt-blue);stroke-width:1.4;animation:btPing 2.4s ease-out infinite .6s;transform-box:fill-box;transform-origin:center}
+.bt-map .nxl{fill:none;stroke:var(--bt-orange);stroke-width:1.2;stroke-dasharray:2 3}
+.bt-map .nxlab rect{fill:var(--bt-navy)}.bt-map .nxlab text{fill:#fff;font:600 9px Inter,sans-serif}
+
+/* next city: Varna */
+.bt-next{position:relative;overflow:hidden;background:var(--bt-navy);color:#fff;padding:clamp(70px,9vw,120px) 0}
+.bt-next::before{content:"";position:absolute;inset:0;background:radial-gradient(40% 70% at 85% 50%,rgba(16,152,212,.28),transparent 70%),radial-gradient(30% 60% at 10% 20%,rgba(255,138,0,.12),transparent 70%)}
+.bt-nextg{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:center}
+.bt-next .bt-kl{color:var(--bt-sky)}
+.bt-next h2{margin:12px 0 0;line-height:.9}
+.bt-vout{display:block;font-family:Montserrat,sans-serif;font-weight:800;font-size:clamp(76px,12vw,190px);letter-spacing:-.05em;color:transparent;-webkit-text-stroke:2px rgba(255,255,255,.9);background:linear-gradient(90deg,#fff,var(--bt-sky));-webkit-background-clip:text;background-clip:text}
+.bt-nextsub{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin:18px 0 0;font-size:clamp(17px,1.7vw,21px)}
+.bt-nextsub b{font-weight:700}
+.bt-soon{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:rgba(255,138,0,.16);color:#FFB866;font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.bt-soon::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--bt-orange);animation:btBlink 1.6s ease-in-out infinite}
+@keyframes btBlink{50%{opacity:.25}}
+.bt-nextp{color:rgba(255,255,255,.82);margin:14px 0 26px;font-size:clamp(16px,1.5vw,19px);max-width:42ch}
+.bt-route{position:relative;margin:0;border-radius:24px;overflow:hidden;background:#0A2440;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
+.bt-route svg{display:block;width:100%;height:auto}
+.bt-rt{animation:btDash 1.4s linear infinite}
+.bt-rp{animation:btPing 2.2s ease-out infinite;transform-box:fill-box;transform-origin:center}.bt-rp2{animation-delay:.8s}
+.bt-city{position:absolute;display:grid;line-height:1.15}
+.bt-city b{font-family:Montserrat,sans-serif;font-weight:800;font-size:clamp(15px,1.6vw,20px)}
+.bt-city i{font-style:normal;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--bt-sky)}
+.bt-city.c1{left:calc(120 / 520 * 100% - 10px);top:calc(70 / 300 * 100% + 18px)}.bt-city.c1 i{color:#FFB866}
+.bt-city.c2{left:calc(400 / 520 * 100% - 96px);top:calc(205 / 300 * 100% + 16px);text-align:right}
+.bt-sea{position:absolute;right:16px;top:16px;font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45)}
+@media(max-width:900px){.bt-nextg{grid-template-columns:minmax(0,1fr)}}
+@media(prefers-reduced-motion:reduce){.bt-rt,.bt-rp,.bt-soon::before,.bt-map .nxr{animation:none}}
+
+/* configurator */
+.bt-cfg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.bt-cfg fieldset{margin:0;border:1px solid var(--bt-line);border-radius:20px;padding:20px;background:#fff;min-width:0;transition:border-color .3s,box-shadow .3s}
+.bt-cfg fieldset.done{border-color:var(--bt-blue);box-shadow:0 0 0 3px rgba(16,152,212,.12)}
+.bt-cfg legend{padding:0;font-weight:700;color:var(--bt-navy);font-size:16px;float:left;width:100%;margin-bottom:14px}
+.bt-cfg legend b{font-family:"IBM Plex Mono",monospace;font-weight:500;color:#0B7DB0;margin-right:8px}
+.bt-ch{clear:both;display:flex;flex-wrap:wrap;gap:8px}
+.bt-ch input{position:absolute;opacity:0;pointer-events:none}
+.bt-ch span{display:inline-flex;align-items:center;padding:9px 14px;border-radius:999px;border:1.5px solid var(--bt-line);font-size:14px;font-weight:500;cursor:pointer;transition:all .2s;background:#fff}
+.bt-ch span:hover{border-color:var(--bt-blue)}
+.bt-ch input:checked+span{background:var(--bt-navy);border-color:var(--bt-navy);color:#fff}
+.bt-ch input:focus-visible+span{outline:2px solid var(--bt-blue);outline-offset:2px}
+.bt-sum{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:20px 22px;border-radius:20px;background:var(--bt-navy);color:#fff}
+.bt-sumtx{font-size:clamp(16px,1.6vw,19px);font-weight:500;max-width:70ch}
+.bt-sumtx b{color:var(--bt-sky);font-weight:700}
+@media(max-width:900px){.bt-cfg{grid-template-columns:minmax(0,1fr)}}
+
+/* support */
+.bt-sup{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.bt-sup li{background:#fff;border-radius:20px;padding:26px 22px;border:1px solid var(--bt-line)}
+.bt-sup svg{width:40px;height:40px;padding:9px;border-radius:12px;background:var(--bt-pale);color:var(--bt-blue);box-sizing:border-box}
+.bt-sup h3{margin:18px 0 6px;font-family:Montserrat,sans-serif;font-weight:800;font-size:18px;letter-spacing:-.015em;color:var(--bt-navy)}
+.bt-sup p{margin:0;font-size:14.5px;color:var(--bt-mute)}
+@media(max-width:980px){.bt-sup{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.bt-sup{grid-template-columns:minmax(0,1fr)}}
+
+/* family */
+.bt-fam{position:relative;background:var(--bt-navy);color:#fff;padding:clamp(80px,10vw,132px) 0;overflow:hidden}
+.bt-fam::before{content:"";position:absolute;inset:0;background:radial-gradient(40% 60% at 85% 20%,rgba(16,152,212,.25),transparent 70%),radial-gradient(30% 50% at 10% 90%,rgba(200,162,74,.16),transparent 70%)}
+.bt-famg{position:relative;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(32px,6vw,88px);align-items:center}
+.bt-famph{margin:0;border-radius:24px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 40px 80px rgba(0,0,0,.35)}
+.bt-famph img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.bt-fam .bt-kl,.bt-final .bt-kl{color:var(--bt-sky)}
+.bt-famtx>.bt-year{font-family:Montserrat,sans-serif;font-weight:800;font-size:clamp(80px,11vw,170px);line-height:.85;margin:16px 0 6px;letter-spacing:-.05em;background:linear-gradient(90deg,#fff,var(--bt-sky));-webkit-background-clip:text;background-clip:text;color:transparent}
+.bt-fam h2{color:#fff;font-size:clamp(30px,3.6vw,50px)}
+.bt-fam h2 .bt-bl{color:var(--bt-sky)}
+.bt-famtx>p{margin:20px 0 0;color:rgba(255,255,255,.84);font-size:clamp(16px,1.5vw,18.5px);max-width:54ch}
+.bt-ms{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(255,255,255,.18)}
+.bt-ms li{padding:16px 14px 0 0;position:relative}
+.bt-ms li::before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:var(--bt-gold)}
+.bt-ms b{display:block;font-family:Montserrat,sans-serif;font-weight:800;font-size:18px}
+.bt-ms span{display:block;font-size:13px;color:rgba(255,255,255,.74);margin-top:4px;line-height:1.4}
+.bt-famlinks{display:flex;flex-wrap:wrap;gap:18px}
+.bt-famlinks a{color:#fff;font-weight:600;font-size:14px;text-decoration:underline;text-decoration-color:rgba(79,176,226,.6);text-underline-offset:4px}
+.bt-famnote{font-size:12.5px!important;color:rgba(255,255,255,.62)!important}
+@media(max-width:900px){.bt-famg{grid-template-columns:minmax(0,1fr)}.bt-famph{max-width:460px;aspect-ratio:4/4.4}.bt-ms{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:20px}}
+
+/* faq */
+.bt-faqg{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,72px);align-items:start}
+.bt-faq details{border-bottom:1px solid var(--bt-line)}
+.bt-faq details:first-child{border-top:1px solid var(--bt-line)}
+.bt-faq summary{list-style:none;cursor:pointer;padding:20px 0;display:flex;justify-content:space-between;gap:16px;font-weight:600;font-size:clamp(16px,1.6vw,18.5px);color:var(--bt-navy)}
+.bt-faq summary::-webkit-details-marker{display:none}
+.bt-faq summary::after{content:"+";color:var(--bt-blue);font-size:22px;line-height:1;transition:transform .25s}
+.bt-faq details[open] summary::after{transform:rotate(45deg)}
+.bt-faq p{margin:0 0 20px;color:var(--bt-mute);max-width:62ch}
+.bt-faq a{color:#0B7DB0;font-weight:600}
+@media(max-width:900px){.bt-faqg{grid-template-columns:minmax(0,1fr)}}
+
+/* final */
+.bt-final{position:relative;overflow:hidden;background:var(--bt-navy);color:#fff;padding:clamp(90px,11vw,140px) 0}
+.bt-final .bt-aurora{opacity:.9;background:radial-gradient(40% 55% at 20% 30%,rgba(16,152,212,.35),transparent 70%),radial-gradient(35% 45% at 85% 80%,rgba(255,138,0,.18),transparent 70%)}
+.bt-finalg{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:clamp(32px,6vw,80px);align-items:center}
+.bt-final h2{color:#fff;font-size:clamp(40px,5.4vw,76px);margin-top:16px}
+.bt-bl2{color:var(--bt-orange)}
+.bt-final p{color:rgba(255,255,255,.84);font-size:clamp(17px,1.6vw,20px);margin:20px 0 26px;max-width:40ch}
+.bt-wa{display:inline-flex;align-items:center;gap:10px;color:#fff;font-weight:600;text-decoration:none;font-size:15px}
+.bt-wa svg{width:22px;height:22px;color:#25D366;flex:none}
+.bt-wa span{text-decoration:underline;text-decoration-color:rgba(255,255,255,.35);text-underline-offset:4px}
+.bt-card{background:#fff;color:var(--bt-ink);border-radius:24px;padding:clamp(22px,3vw,34px);box-shadow:0 40px 80px rgba(0,0,0,.3)}
+.bt-card form{display:grid;gap:14px}
+.bt-card label{display:grid;gap:6px;font-size:13.5px;font-weight:600;color:var(--bt-navy);min-width:0}
+.bt-card input,.bt-card select{font:inherit;font-size:16px;padding:13px 16px;border-radius:12px;border:1.5px solid var(--bt-line);background:#fff;color:var(--bt-ink);width:100%;box-sizing:border-box;min-width:0}
+.bt-card input:focus,.bt-card select:focus{outline:none;border-color:var(--bt-blue);box-shadow:0 0 0 4px rgba(16,152,212,.15)}
+.bt-two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+.bt-send{justify-content:center;width:100%;margin-top:4px}
+.bt-card .bt-priv{margin:0;font-size:12.5px;line-height:1.5;color:var(--bt-mute);max-width:none}.bt-priv a{color:#0B7DB0}
+.bt-card .bt-err{margin:0;color:#C62828;font-size:14px;font-weight:600;max-width:none}.bt-err a{color:#0B7DB0;margin-left:4px}
+.bt-done{text-align:center;padding:20px 0}
+.bt-done>span{display:inline-grid;place-items:center;width:56px;height:56px;border-radius:50%;background:var(--bt-blue);color:#fff;font-size:24px}
+.bt-done h3{font-family:Montserrat,sans-serif;font-weight:800;color:var(--bt-navy);font-size:24px;margin:16px 0 14px}
+.bt-done .bt-wa{color:var(--bt-navy)}.bt-done .bt-wa span{text-decoration-color:rgba(6,26,47,.3)}
+@media(max-width:900px){.bt-finalg{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:460px){.bt-two{grid-template-columns:minmax(0,1fr)}}
+
+/* footer */
+.bt-foot{background:#04111F;color:rgba(255,255,255,.74);padding:40px 0 48px;font-size:13px}
+.bt-ftop{display:flex;flex-wrap:wrap;gap:18px 28px;align-items:center;justify-content:space-between}
+.bt-ftop img{height:40px;width:auto}
+.bt-ftop div{display:flex;flex-wrap:wrap;gap:8px 20px}
+.bt-foot a{color:#fff;text-decoration:underline;text-decoration-color:rgba(79,176,226,.6);text-underline-offset:3px}
+.bt-legal{margin:22px 0 0;font-size:12px;line-height:1.65;max-width:100ch;color:rgba(255,255,255,.66)}
+
+/* reveal */
+.bt-rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i,0) * 90ms)}
+.bt-rv.bt-seen{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.bt-rv{opacity:1;transform:none;transition:none}.bt-aurora,.bt-badge,.bt-map .arc,.bt-map .hqr{animation:none}}
+@media(max-width:480px){.bt-ctas .bt-btn{width:100%;justify-content:center}}
+</style></head>
+<body>
+<div class="k-curtain" aria-hidden="true"><img src="img/wordmark-cream-hd.png" alt=""></div>
+<a class="skip" href="#main">Skip to content</a>
+<div id="bc" data-page="business" data-nonav="1" data-nofoot="1" data-norbar="1" hidden></div>
+<main id="main">
+
+<header class="bt-bar">
+  <a class="bt-brand" href="business.html" aria-label="Boost Team"><img src="bt/boost-team-wm.svg" alt="Boost Team" width="220" height="25"></a>
+  <nav class="bt-links" aria-label="Boost Team"><a href="#paths">Three paths</a><a href="#map">Your country</a><a href="#family">Heritage</a><a href="#faq">FAQ</a></nav>
+  <div class="bt-right"><a class="bt-back" href="index.html">Boost Club</a><span class="bt-lang"></span><a class="bt-btn bt-o bt-sm" href="#talk">Let's talk business</a></div>
+</header>
+
+<section class="bt-hero" id="top">
+  <div class="bt-aurora" aria-hidden="true"></div>
+  <div class="bt-wrap bt-heroin">
+    <div class="bt-herotx">
+      <span class="bt-kl">Boost Team · Partner program</span>
+      <h1 class="bt-h1">Do you want to own <span class="bt-bl">a nutrition business?</span></h1>
+      <p class="bt-lead">Learn the Boost Team system and build it where you live. Three ways to start, one team behind you.</p>
+      <div class="bt-ctas"><a class="bt-btn bt-o" href="#talk">Let's talk business <span aria-hidden="true">→</span></a><a class="bt-btn bt-ghost" href="#paths">See the three paths</a></div>
+      <ul class="bt-chips"><li>No experience needed</li><li>Start part-time, next to your job</li><li>Your first call is with Gabriel</li></ul>
+    </div>
+    <div class="bt-herovis">
+      <figure class="bt-hph1" data-slot="REAL · a partnership handshake at the Boost Club sign"><img src="img/real/sign-handshake.jpg" alt="A handshake under the Boost Club sign in Bucharest" fetchpriority="high"><figcaption><b>Boost Club</b><span>Bucharest · open</span></figcaption></figure>
+      <figure class="bt-hph2" data-slot="REAL · Gabriel, founder"><img src="img/real/gabi-event.jpg" alt="Gabriel Neshto, founder of Boost Team" loading="lazy"><figcaption>Gabriel Neshto · Founder</figcaption></figure>
+      <div class="bt-badge" aria-hidden="true"><img src="bt/bt-favicon.svg" alt=""></div>
+    </div>
+  </div>
+  <div class="bt-wrap"><dl class="bt-stats">
+    <div class="bt-rv"><dt>1992</dt><dd>The family business begins</dd></div>
+    <div class="bt-rv"><dt>90+</dt><dd>Countries where Herbalife operates</dd></div>
+    <div class="bt-rv"><dt>3</dt><dd>Ways to build</dd></div>
+    <div class="bt-rv"><dt>1</dt><dd>Call to start</dd></div>
+  </dl></div>
+</section>
+
+<section class="bt-sec" id="paths">
+  <div class="bt-wrap">
+    <div class="bt-head bt-rv"><span class="bt-kl">Three paths</span><h2>Pick how you <span class="bt-bl">want to build.</span></h2></div>
+    <div class="bt-paths"><article class="bt-path bt-rv" data-path="a" style="--i:0">
+      <figure><img src="img/real/planning-talk.jpg" alt="Two partners talking through the plan for a new club" loading="lazy"><span class="bt-pl">A</span></figure>
+      <div class="bt-pb"><h3>Open a Boost Club</h3><p>A Boost Club in your city, as a partner, where that arrangement is available.</p><ul><li>Physical club</li><li>Boost Club concept</li><li>Closest mentoring</li></ul>
+      <button type="button" class="bt-pick" data-path="a">Talk about this path <span aria-hidden="true">→</span></button></div>
+    </article><article class="bt-path bt-rv" data-path="b" style="--i:1">
+      <figure><img src="img/real/gabi-painting-wall.jpg" alt="Gabriel painting the wall of his club before it opened" loading="lazy"><span class="bt-pl">B</span></figure>
+      <div class="bt-pb"><h3>Open your own nutrition club</h3><p>Your name, your design, the Boost Team way of working behind it.</p><ul><li>Physical club</li><li>Your own brand</li><li>Full mentoring</li></ul>
+      <button type="button" class="bt-pick" data-path="b">Talk about this path <span aria-hidden="true">→</span></button></div>
+    </article><article class="bt-path bt-rv" data-path="c" style="--i:2">
+      <figure><img src="img/wet/mocha.jpg" alt="A Boost Club mocha shake with chocolate swirls" loading="lazy"><span class="bt-pl">C</span></figure>
+      <div class="bt-pb"><h3>Build your own wellness business</h3><p>No premises. Your customers, your coaching, your pace, part-time or full-time.</p><ul><li>No premises</li><li>Start part-time</li><li>Lowest start-up cost</li></ul>
+      <button type="button" class="bt-pick" data-path="c">Talk about this path <span aria-hidden="true">→</span></button></div>
+    </article></div>
+  </div>
+</section>
+
+<section class="bt-next" id="varna" aria-labelledby="bt-next-h">
+  <div class="bt-wrap bt-nextg">
+    <div class="bt-rv">
+      <span class="bt-kl">Next city</span>
+      <h2 id="bt-next-h"><span class="bt-vout" aria-hidden="true">Varna</span><span class="vh">Varna, Bulgaria. Coming soon.</span></h2>
+      <p class="bt-nextsub"><b>Boost Club · Varna, Bulgaria</b><span class="bt-soon">Coming soon</span></p>
+      <p class="bt-nextp">Our second club, on the Black Sea coast. Want to build in Bulgaria too?</p>
+      <a class="bt-btn bt-o" href="#talk">Let's talk business <span aria-hidden="true">→</span></a>
+    </div>
+    <figure class="bt-route bt-rv" aria-hidden="true">
+      <svg viewBox="0 0 520 300"><defs><linearGradient id="btsea" x1="0" x2="1"><stop offset="0" stop-color="#0E2A47"/><stop offset="1" stop-color="#103A5E"/></linearGradient></defs>
+        <path d="M430 40 C 470 90, 455 150, 470 210 S 500 280, 520 300 L520 0 L400 0 Z" fill="url(#btsea)"/>
+        <path class="bt-rt" d="M120 70 C 230 40, 330 120, 400 205" fill="none" stroke="#FF8A00" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 10"/>
+        <circle cx="120" cy="70" r="9" fill="#FF8A00"/><circle class="bt-rp" cx="120" cy="70" r="9" fill="none" stroke="#FF8A00" stroke-width="2"/>
+        <circle cx="400" cy="205" r="9" fill="#4FB0E2"/><circle class="bt-rp bt-rp2" cx="400" cy="205" r="9" fill="none" stroke="#4FB0E2" stroke-width="2"/>
+      </svg>
+      <span class="bt-city c1"><b>Bucharest</b><i>Open</i></span><span class="bt-city c2"><b>Varna</b><i>Coming soon</i></span><span class="bt-sea">Black Sea</span>
+    </figure>
+  </div>
+</section>
+
+<section class="bt-sec bt-pale" id="map">
+  <div class="bt-wrap">
+    <div class="bt-head bt-rv"><span class="bt-kl">Your country</span><h2>Start with <span class="bt-bl">your country.</span></h2><p>Type it or tap it on the map. Everything in blue is available.</p></div>
+    <div class="bt-mapbox bt-rv">
+      <div class="bt-mapbar"><label class="bt-search"><span class="vh">Your country</span><input id="bt-country-q" list="bt-qlist" placeholder="Type your country" autocomplete="off"></label><datalist id="bt-qlist"></datalist><span class="bt-legend"><i class="on"></i>Available <i class="hq"></i>Boost Club, Bucharest <i class="nx"></i>Varna, coming soon</span></div>
+      <div class="bt-mapwrap">
+        <div class="bt-map" id="bt-map"><svg id="bt-worldmap" viewBox="0 0 960 520" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Map of the available countries, with Boost Club in Bucharest and Varna"></svg>
+          <div class="bt-tip" id="bt-tip" hidden></div>
+          <div class="bt-zoom" role="group" aria-label="Map zoom"><button type="button" id="bt-zin" aria-label="Zoom in">+</button><button type="button" id="bt-zout" aria-label="Zoom out">−</button></div>
+          <div class="bt-views" role="group" aria-label="Map view"><button type="button" data-view="eu" aria-pressed="true">Europe</button><button type="button" data-view="world" aria-pressed="false">World</button></div>
+          <div class="bt-hint" id="bt-hint" hidden></div>
+        </div>
+        <aside class="bt-panel" id="bt-panel" aria-live="polite">
+          <span class="bt-pk" id="bt-pk">Your country</span>
+          <h3 id="bt-pn">Pick a country</h3>
+          <p id="bt-ps">Tap a blue country, search above, or tap a pin.</p>
+          <div class="bt-quick" id="bt-quick" aria-label="Quick picks"></div>
+          <dl class="bt-pd" id="bt-pd" hidden><div><dt>Distance to Boost Club</dt><dd id="bt-pdist"></dd></div><div><dt>Status</dt><dd id="bt-pstat"></dd></div></dl>
+          <a class="bt-btn bt-o bt-sm" id="bt-mapcta" href="#talk" hidden>Talk about building there <span aria-hidden="true">→</span></a>
+        </aside>
+      </div>
+      <p class="bt-note">Whether and how you can register where you live, we check together on the call.</p>
+    </div>
+  </div>
+</section>
+
+<section class="bt-sec" id="fit">
+  <div class="bt-wrap">
+    <div class="bt-head bt-rv"><span class="bt-kl">Your version</span><h2>Find out <span class="bt-bl">if you're a fit.</span></h2></div>
+    <div class="bt-cfg bt-rv" id="bt-cfg">
+      <fieldset><legend><b>01</b> Your path</legend><div class="bt-ch">
+        <label><input type="radio" name="bt-p" value="a"><span>A · Boost Club</span></label><label><input type="radio" name="bt-p" value="b"><span>B · Own club</span></label><label><input type="radio" name="bt-p" value="c"><span>C · Wellness business</span></label></div></fieldset>
+      <fieldset><legend><b>02</b> Your starting point</legend><div class="bt-ch">
+        <label><input type="radio" name="bt-s" value="From a job"><span>From a job</span></label><label><input type="radio" name="bt-s" value="From a gym or studio"><span>From a gym or studio</span></label><label><input type="radio" name="bt-s" value="Already coaching"><span>Already coaching</span></label><label><input type="radio" name="bt-s" value="A student"><span>A student</span></label><label><input type="radio" name="bt-s" value="From zero"><span>From zero</span></label></div></fieldset>
+      <fieldset><legend><b>03</b> Your pace</legend><div class="bt-ch">
+        <label><input type="radio" name="bt-t" value="Part-time"><span>Part-time</span></label><label><input type="radio" name="bt-t" value="Full-time"><span>Full-time</span></label><label><input type="radio" name="bt-t" value="Not sure yet"><span>Not sure yet</span></label></div></fieldset>
+      <div class="bt-sum"><div class="bt-sumtx" id="bt-sumtx">Pick one from each row. Your path assembles here.</div><a class="bt-btn bt-o" href="#talk" id="bt-sumcta">Let's talk business <span aria-hidden="true">→</span></a></div>
+    </div>
+  </div>
+</section>
+
+<section class="bt-sec bt-pale" id="support">
+  <div class="bt-wrap">
+    <div class="bt-head bt-rv"><span class="bt-kl">Support</span><h2>The team is with you <span class="bt-bl">the whole way.</span></h2></div>
+    <ul class="bt-sup"><li class="bt-rv" style="--i:0"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-7 8a7 7 0 0 1 14 0"/></svg><h3>Mentoring from Gabriel</h3><p>One-to-one, from your first call.</p></li><li class="bt-rv" style="--i:1"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg><h3>A working method</h3><p>Consultations, follow-up and the club routine Boost Club runs every day.</p></li><li class="bt-rv" style="--i:2"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3v4M16 3v4M4 9h16M5 5h14v15H5z"/></svg><h3>Weekly business trainings</h3><p>Friday nights at the club in Bucharest, or by call.</p></li><li class="bt-rv" style="--i:3"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM2 20a6 6 0 0 1 12 0M12 20a6 6 0 0 1 10 0"/></svg><h3>A team that builds together</h3><p>Ambitious people, shared wins, events across Romania and beyond.</p></li></ul>
+  </div>
+</section>
+
+<section class="bt-fam" id="family">
+  <div class="bt-wrap bt-famg">
+    <figure class="bt-famph bt-rv" data-slot="REAL · Gabriel with his parents and their team"><img src="img/real/gabi-gala-group.jpg" alt="Gabriel Neshto with his parents, Oleg Neshto and Lana Goldenblank, and their team at a Herbalife event" loading="lazy"></figure>
+    <div class="bt-famtx bt-rv">
+      <span class="bt-kl">The family behind Boost Team</span>
+      <p class="bt-year" aria-hidden="true">1992</p>
+      <h2>Two generations. <span class="bt-bl">One way of building.</span></h2>
+      <p>Oleg Neshto and Lana Goldenblank started their Herbalife business together in July 1992 and spent more than 34 years building a team that, in their words, spans continents. Gabriel grew up inside that business. Boost Team is how he passes it on.</p>
+      <ol class="bt-ms">
+        <li><b>1992</b><span>Oleg and Lana start their Herbalife business</span></li>
+        <li><b>34+ years</b><span>Building teams across continents</span></li>
+        <li><b>2026</b><span>Gabriel opens Boost Club in Bucharest</span></li>
+        <li><b>Today</b><span>Boost Team: the next generation</span></li>
+      </ol>
+      <p class="bt-famlinks"><a href="gabriel.html">Gabriel's story →</a></p>
+      <p class="bt-famnote">Their results are their own and not typical.</p>
+    </div>
+  </div>
+</section>
+
+<section class="bt-sec" id="faq">
+  <div class="bt-wrap bt-faqg">
+    <div class="bt-head bt-rv"><span class="bt-kl">Questions</span><h2>Straight <span class="bt-bl">answers.</span></h2></div>
+    <div class="bt-faq bt-rv"><details><summary>Is this Herbalife?</summary><p>Yes. Boost Team builds with Herbalife products. Every partner is an independent Herbalife distributor running their own business.</p></details><details><summary>Is it a franchise?</summary><p>No. There are no franchise fees and nothing to buy from us. Clubs are independently owned and follow Herbalife's club rules.</p></details><details><summary>What does it cost to start?</summary><p>It depends on your country and your path. Starting without premises needs a small budget, a club needs a real one. We go through the numbers for your city on the call.</p></details><details><summary>How do people earn?</summary><p>From the products their customers buy and, as they grow, from Herbalife on the sales of the team they train. Results vary and most people earn little at first. <a href="https://www.herbalife.com/content/dam/global-reusable-assets/documents/pd-statement-typical-distributor-earnings-ro-ro.pdf" target="_blank" rel="noopener">Herbalife's typical earnings →</a></p></details><details><summary>Do I need experience?</summary><p>No. You need to like people and follow the method. We teach the rest.</p></details><details><summary>Can I do this next to my job?</summary><p>Yes, many start part-time with path C and decide on a club later.</p></details><details><summary>What if I live outside Romania?</summary><p>Herbalife operates in 90+ countries. On the call we check what building looks like where you live.</p></details></div>
+  </div>
+</section>
+
+<section class="bt-final" id="talk" data-k-calm>
+  <div class="bt-aurora" aria-hidden="true"></div>
+  <div class="bt-wrap bt-finalg">
+    <div class="bt-rv">
+      <span class="bt-kl">Next step</span>
+      <h2>Want to own something? <span class="bt-bl2">Let's talk.</span></h2>
+      <p>One call with Gabriel. Free. We'll see if there's a path where you live.</p>
+      <a class="bt-wa" href="https://wa.me/40726205752?text=Hi%20Gabriel%2C%20I%27d%20like%20to%20talk%20business." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4 5.2 5.2 0 0 0 3.1.6 2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg><span>Prefer WhatsApp? Message Gabriel</span></a>
+    </div>
+    <div class="bt-card bt-rv">
+      <form id="btform" name="partner-lead" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" novalidate aria-label="Partner enquiry">
+        <input type="hidden" name="form-name" value="partner-lead"><input type="hidden" name="lang" value="en"><input type="hidden" name="lead_type" value="business"><input type="hidden" name="referrer" value=""><input type="hidden" name="landing_page" value=""><input type="hidden" name="goal" value="">
+        <p class="vh" aria-hidden="true"><label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <label>Your name<input name="name" id="bt-name" required autocomplete="name"></label>
+        <label>Phone or email<input name="contact" id="bt-contact" required autocomplete="tel"></label>
+        <div class="bt-two"><label>Country<input name="country" id="bt-country" required list="bt-qlist" autocomplete="country-name"></label>
+        <label>Path<select name="path" id="bt-path"><option value="Not sure yet">Not sure yet</option><option value="A Open a Boost Club">A · Open a Boost Club</option><option value="B Open your own nutrition club">B · Own nutrition club</option><option value="C Build your own wellness business">C · Wellness business</option></select></label></div>
+        <p class="bt-err" id="bt-err" role="alert" hidden></p>
+        <button class="bt-btn bt-o bt-send" type="submit" id="bt-send">Let's talk business <span aria-hidden="true">→</span></button>
+        <p class="bt-priv">We use your details only to reply and arrange the call. <a href="https://boostclub.ro/confidentialitate" target="_blank" rel="noopener">Privacy</a></p>
+      </form>
+      <div class="bt-done" id="bt-done" hidden tabindex="-1"><span aria-hidden="true">✓</span><h3>Thank you. Gabriel will message you.</h3><a class="bt-wa" id="bt-wa2" href="https://wa.me/40726205752?text=Hi%20Gabriel%2C%20I%27d%20like%20to%20talk%20business." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4 5.2 5.2 0 0 0 3.1.6 2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg><span>Say hi on WhatsApp</span></a></div>
+    </div>
+  </div>
+</section>
+
+<footer class="bt-foot">
+  <div class="bt-wrap">
+    <div class="bt-ftop"><img src="bt/boost-team-lockup-on-dark.svg" alt="Boost Team. Build your best" width="230" height="42"><div><a href="index.html">boostclub.ro</a><a href="tel:+40726205752">+40 726 205 752</a><span>Strada Sevastopol 24, Sector 1, Bucharest</span></div></div>
+    <p class="bt-legal">Gabriel Neshto, Herbalife Independent Distributor. Boost Team is a self-employed business opportunity, not employment and not a franchise. Results are not guaranteed and depend on effort, skill and time; you must be 18 or older. <a href="https://www.herbalife.com/content/dam/global-reusable-assets/documents/pd-statement-typical-distributor-earnings-ro-ro.pdf" target="_blank" rel="noopener">Herbalife's statement of typical earnings (Romania)</a> · <a href="https://boostclub.ro/confidentialitate" target="_blank" rel="noopener">Privacy</a> · <a href="https://boostclub.ro/termeni" target="_blank" rel="noopener">Terms</a></p>
+  </div>
+</footer>
+
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="site.js"></script>
+<script src="kit/kit.js"></script>
+<script src="kit/scan.js"></script><script src="bt/vendor/d3.min.js"></script><script src="bt/vendor/topojson-client.min.js"></script>
+<script>
+(function(){
+  var LG=document.documentElement.lang||'en', PRE=(LG==='en'?'':'../');
+  function track(n){ try{ if(window.BoostAnalytics&&BoostAnalytics.track) BoostAnalytics.track(n); }catch(e){} }
+  track('partner_program_viewed');
+  // language switch + Boost Team favicon
+  document.querySelector('.bt-lang').innerHTML=['ro','en','ru'].map(function(l){ var h=PRE+(l==='en'?'':l+'/')+'business.html'; return l===LG?'<b>'+l.toUpperCase()+'</b>':'<a href="'+h+'" hreflang="'+l+'">'+l.toUpperCase()+'</a>'; }).join('');
+  document.querySelectorAll('link[rel~="icon"]').forEach(function(x){ x.remove(); }); var fi=document.createElement('link'); fi.rel='icon'; fi.href=PRE+'bt/bt-favicon.svg'; document.head.appendChild(fi);
+  var bar=document.querySelector('.bt-bar'); function onS(){ bar.classList.toggle('solid',scrollY>30); } addEventListener('scroll',onS,{passive:true}); onS();
+  // reveals
+  if('IntersectionObserver' in window){ var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('bt-seen'); io.unobserve(e.target); } }); },{rootMargin:'0px 0px -8% 0px'}); document.querySelectorAll('.bt-rv').forEach(function(x){ io.observe(x); }); }
+  else document.querySelectorAll('.bt-rv').forEach(function(x){ x.classList.add('bt-seen'); });
+  // path cards, configurator and form share one state
+  var fPath=document.getElementById('bt-path'), fCountry=document.getElementById('bt-country'), IDX={a:1,b:2,c:3};
+  function go(id){ document.getElementById(id).scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}); }
+  var cfg=document.getElementById('bt-cfg'), sumtx=document.getElementById('bt-sumtx'), country='';
+  function lbl(n){ var x=cfg.querySelector('input[name='+n+']:checked'); return x?x.nextElementSibling.textContent:''; }
+  function esc(s){ return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]}); }
+  function sum(){ cfg.querySelectorAll('fieldset').forEach(function(f){ f.classList.toggle('done',!!f.querySelector('input:checked')); });
+    var p=lbl('bt-p'), s=lbl('bt-s'), t=lbl('bt-t'); if(!p&&!s&&!t&&!country) return;
+    sumtx.innerHTML=[p&&('<b>'+esc(p)+'</b>'),country&&esc(country),s&&esc(s),t&&esc(t)].filter(Boolean).join(' · ');
+    var pk=cfg.querySelector('input[name=bt-p]:checked'); if(pk) fPath.selectedIndex=IDX[pk.value]; }
+  cfg.addEventListener('change',function(e){ sum(); if(e.target.name==='bt-p') track('partner_path_selected'); });
+  document.querySelectorAll('.bt-pick').forEach(function(b){ b.addEventListener('click',function(){ var k=b.dataset.path; fPath.selectedIndex=IDX[k]; var r=cfg.querySelector('input[name=bt-p][value='+k+']'); if(r){ r.checked=true; sum(); } track('partner_path_selected'); go('talk'); setTimeout(function(){ document.getElementById('bt-name').focus({preventScroll:true}); },700); }); });
+  // the map: available countries, Boost Club in Bucharest, Varna coming soon. Zoom (buttons, pinch, Ctrl/Cmd + scroll),
+  // fly to the chosen country, distance from the club, search in EN/RO/RU (country names come from Intl.DisplayNames)
+  var MK=[["United States of America","US"],["Canada","CA"],["Mexico","MX"],["Guatemala","GT"],["Honduras","HN"],["El Salvador","SV"],["Nicaragua","NI"],["Costa Rica","CR"],["Panama","PA"],["Dominican Republic","DO"],["Jamaica","JM"],["Trinidad and Tobago","TT"],["Puerto Rico","PR"],["Colombia","CO"],["Venezuela","VE"],["Ecuador","EC"],["Peru","PE"],["Bolivia","BO"],["Brazil","BR"],["Chile","CL"],["Argentina","AR"],["Uruguay","UY"],["Paraguay","PY"],["United Kingdom","GB"],["Ireland","IE"],["France","FR"],["Spain","ES"],["Portugal","PT"],["Italy","IT"],["Germany","DE"],["Netherlands","NL"],["Belgium","BE"],["Switzerland","CH"],["Austria","AT"],["Denmark","DK"],["Sweden","SE"],["Norway","NO"],["Finland","FI"],["Iceland","IS"],["Poland","PL"],["Czechia","CZ"],["Slovakia","SK"],["Hungary","HU"],["Romania","RO"],["Bulgaria","BG"],["Greece","GR"],["Croatia","HR"],["Slovenia","SI"],["Serbia","RS"],["Bosnia and Herzegovina","BA"],["North Macedonia","MK"],["Estonia","EE"],["Latvia","LV"],["Lithuania","LT"],["Ukraine","UA"],["Belarus","BY"],["Moldova","MD"],["Russia","RU"],["Cyprus","CY"],["Kazakhstan","KZ"],["Kyrgyzstan","KG"],["Uzbekistan","UZ"],["Mongolia","MN"],["Georgia","GE"],["Armenia","AM"],["Azerbaijan","AZ"],["Israel","IL"],["Turkey","TR"],["Lebanon","LB"],["South Africa","ZA"],["Zambia","ZM"],["Botswana","BW"],["Namibia","NA"],["Ghana","GH"],["eSwatini","SZ"],["Lesotho","LS"],["India","IN"],["Japan","JP"],["South Korea","KR"],["Taiwan","TW"],["Philippines","PH"],["Thailand","TH"],["Cambodia","KH"],["Malaysia","MY"],["Indonesia","ID"],["Australia","AU"],["New Zealand","NZ"]]; // [topojson name, ISO alpha-2]
+  (function(){ var wrap=document.getElementById('bt-map'), svgEl=document.getElementById('bt-worldmap'), tip=document.getElementById('bt-tip'), q=document.getElementById('bt-country-q'), hint=document.getElementById('bt-hint');
+    var P={k:document.getElementById('bt-pk'),n:document.getElementById('bt-pn'),s:document.getElementById('bt-ps'),d:document.getElementById('bt-pd'),dist:document.getElementById('bt-pdist'),stat:document.getElementById('bt-pstat'),cta:document.getElementById('bt-mapcta')};
+    var dn=null; try{ dn=new Intl.DisplayNames([LG],{type:'region'}); }catch(e){}
+    var CODE={}, LOC={}, BY={}; MK.forEach(function(m){ CODE[m[0]]=m[1]; var l=dn?dn.of(m[1]):m[0]; LOC[m[0]]=l; BY[l.toLowerCase()]=m[0]; BY[m[0].toLowerCase()]=m[0]; });
+    function locName(n){ return LOC[n]||n; }
+    // localized suggestions for the search and the form's country field
+    document.getElementById('bt-qlist').innerHTML=MK.map(function(m){ return locName(m[0]); }).sort(function(a,b){ return a.localeCompare(b,LG); }).map(function(n){ return '<option value="'+esc(n)+'">'; }).join('');
+    if(!window.d3||!window.topojson){ P.s.textContent='Type your country above.'; return; }
+    wrap.classList.add('loading');
+    var W=960, H=520, BUC=[26.1,44.43], VAR=[27.91,43.21], RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var svg=d3.select(svgEl), proj=d3.geoNaturalEarth1(), path=d3.geoPath(proj), byName={}, sel=null, k=1;
+    d3.json(PRE+'bt/vendor/countries-110m.json').then(function(topo){ wrap.classList.remove('loading');
+      var G=topo.objects.countries.geometries, isr=G.filter(function(g){ return g.properties.name==='Israel'||g.properties.name==='Palestine'; });
+      var feats=topojson.feature(topo,topo.objects.countries).features.filter(function(f){ return f.properties.name!=='Antarctica'&&f.properties.name!=='Palestine'; });
+      feats.forEach(function(f){ if(f.properties.name==='Israel') f.geometry=topojson.merge(topo,isr); });
+      proj.fitExtent([[8,8],[W-8,H-8]],{type:'FeatureCollection',features:feats});
+      var view=svg.append('g').attr('class','bt-view');
+      view.append('g').selectAll('path').data(feats).join('path').attr('d',path).attr('class',function(d){ return CODE[d.properties.name]?'c on':'c off'; })
+        .attr('vector-effect','non-scaling-stroke')
+        .each(function(d){ byName[d.properties.name]={el:this,d:d}; })
+        .on('mousemove',function(ev,d){ var r=wrap.getBoundingClientRect(); tip.hidden=false; tip.style.left=(ev.clientX-r.left)+'px'; tip.style.top=(ev.clientY-r.top)+'px'; tip.innerHTML=esc(locName(d.properties.name))+(CODE[d.properties.name]?' · <span class="on">'+'Available'+'</span>':''); })
+        .on('mouseleave',function(){ tip.hidden=true; })
+        .on('click',function(ev,d){ pick(d.properties.name,true); });
+      var hq=proj(BUC), vn=proj(VAR), arcs=view.append('g');
+      view.append('path').attr('class','nxl').attr('vector-effect','non-scaling-stroke').attr('d','M'+hq[0]+','+hq[1]+' Q'+((hq[0]+vn[0])/2)+','+(Math.min(hq[1],vn[1])-6)+' '+vn[0]+','+vn[1]);
+      function pin(xy,cls,label,sub,fn){ var g=view.append('g').attr('class','pin '+cls).attr('transform','translate('+xy[0]+','+xy[1]+')').attr('tabindex',0).attr('role','button').attr('aria-label',label+', '+sub);
+        g.append('circle').attr('class','ring').attr('r',6); g.append('circle').attr('class','dot').attr('r',4.5);
+        var lb=g.append('g').attr('class','plab'); lb.append('rect').attr('rx',4); var t=lb.append('text').attr('x',8).attr('y',4).text(label); lb.append('text').attr('class','ps').attr('x',8).attr('y',15).text(sub);
+        g.on('click',fn).on('keydown',function(ev){ if(ev.key==='Enter'||ev.key===' '){ ev.preventDefault(); fn(); } }); return g; }
+      var pB=pin(hq,'hqp','Bucharest','Boost Club · open',function(){ pick('Romania',true,'buc'); }), pV=pin(vn,'vnp','Varna','Coming soon',function(){ pick('Bulgaria',true,'var'); });
+      function sizeLabels(){ view.selectAll('.pin').each(function(){ var g=d3.select(this); g.select('.dot').attr('r',4.5/k); g.select('.ring').attr('r',6/k); var lb=g.select('.plab'); lb.attr('transform','scale('+(1/k)+')'); var w=0; lb.selectAll('text').each(function(){ w=Math.max(w,this.getComputedTextLength()); }); lb.select('rect').attr('x',2).attr('y',-9).attr('width',w+14).attr('height',30); });
+        view.selectAll('.dest').attr('r',5/k); pV.select('.plab').attr('transform','translate(0,'+(6/k)+') scale('+(1/k)+')'); pB.select('.plab').attr('transform','translate(0,'+(-34/k)+') scale('+(1/k)+')'); }
+      // zoom: buttons, pinch, Ctrl/Cmd + wheel; one-finger drag pans only once zoomed in, so the page still scrolls
+      var zoom=d3.zoom().scaleExtent([1,14]).translateExtent([[-40,-40],[W+40,H+40]])
+        .filter(function(ev){ if(ev.type==='wheel'){ if(!(ev.ctrlKey||ev.metaKey)){ showHint(); return false; } return true; } if(ev.touches) return ev.touches.length>1||k>1.05; return !ev.button; })
+        .on('zoom',function(ev){ k=ev.transform.k; view.attr('transform',ev.transform); sizeLabels(); wrap.classList.toggle('zoomed',k>1.05); });
+      svg.call(zoom).on('dblclick.zoom',null);
+      var ht; function showHint(){ hint.textContent=(/Mac|iPhone|iPad/.test(navigator.platform)?'⌘':'Ctrl')+' + '+'scroll to zoom'; hint.hidden=false; clearTimeout(ht); ht=setTimeout(function(){ hint.hidden=true; },1400); }
+      function fit(b,pad,maxK){ var dx=b[1][0]-b[0][0], dy=b[1][1]-b[0][1], cx=(b[0][0]+b[1][0])/2, cy=(b[0][1]+b[1][1])/2, s=Math.max(1,Math.min(maxK||10,(pad||.85)/Math.max(dx/W,dy/H)));
+        return d3.zoomIdentity.translate(W/2,H/2).scale(s).translate(-cx,-cy); }
+      function go(t){ svg.transition().duration(RM?0:900).ease(d3.easeCubicInOut).call(zoom.transform,t); }
+      var EU=fit([proj([-11,64]),proj([44,34])],.95,4), WORLD=d3.zoomIdentity;
+      function setView(v){ document.querySelectorAll('.bt-views button').forEach(function(b){ b.setAttribute('aria-pressed',b.dataset.view===v); }); go(v==='eu'?EU:WORLD); }
+      document.querySelectorAll('.bt-views button').forEach(function(b){ b.addEventListener('click',function(){ setView(b.dataset.view); }); });
+      document.getElementById('bt-zin').addEventListener('click',function(){ svg.transition().duration(RM?0:300).call(zoom.scaleBy,1.6); });
+      document.getElementById('bt-zout').addEventListener('click',function(){ svg.transition().duration(RM?0:300).call(zoom.scaleBy,1/1.6); });
+      svg.call(zoom.transform,EU); sizeLabels();
+      var QK=document.getElementById('bt-quick');
+      QK.innerHTML=['Romania','Moldova','Bulgaria','Italy','Spain','Germany','United Kingdom','Israel'].map(function(n){ return '<button type="button" data-n="'+n+'">'+esc(locName(n))+'</button>'; }).join('');
+      QK.addEventListener('click',function(e){ var b=e.target.closest('button'); if(b) pick(b.dataset.n,true); });
+      function km(a,b){ return Math.round(d3.geoDistance(a,b)*6371); }
+      function pick(name,fly,special){ var it=byName[name]; if(!it) return; var on=!!CODE[name];
+        if(sel) d3.select(sel).classed('sel',false); sel=it.el; d3.select(sel).classed('sel',true);
+        var cen=d3.geoCentroid(it.d); if(name==='Russia') cen=[37.6,55.75]; if(name==='United States of America') cen=[-98,39]; if(name==='France') cen=[2.3,46.6]; if(name==='Norway') cen=[10.7,59.9];
+        var c=proj(cen); arcs.selectAll('*').remove();
+        if(name!=='Romania'&&special!=='var'){ var mx=(hq[0]+c[0])/2, my=Math.min(hq[1],c[1])-Math.max(18,Math.abs(hq[0]-c[0])*.22); arcs.append('path').attr('class','arc').attr('vector-effect','non-scaling-stroke').attr('d','M'+hq[0]+','+hq[1]+' Q'+mx+','+my+' '+c[0]+','+c[1]); arcs.append('circle').attr('class','dest').attr('cx',c[0]).attr('cy',c[1]).attr('r',5/k); }
+        if(fly){ var b=path.bounds(it.d); if(name==='Russia'||name==='United States of America'||name==='Canada') b=[proj([cen[0]-25,cen[1]+15]),proj([cen[0]+25,cen[1]-15])]; var hb=[[Math.min(b[0][0],hq[0]),Math.min(b[0][1],hq[1])],[Math.max(b[1][0],hq[0]),Math.max(b[1][1],hq[1])]];
+          var dist=km(BUC,cen); go(fit(dist<2500?hb:b,.7,8)); document.querySelectorAll('.bt-views button').forEach(function(x){ x.setAttribute('aria-pressed','false'); }); }
+        var L=locName(name); P.n.textContent=L; P.d.hidden=false; document.getElementById('bt-quick').hidden=true; P.cta.hidden=false; country=L; fCountry.value=L; q.value=L;
+        if(special==='buc'||name==='Romania'){ P.k.textContent='Boost Club'; P.s.textContent='Boost Club is here: Strada Sevastopol 24, Bucharest.'; P.dist.textContent='0 km'; P.stat.textContent='Open'; }
+        else if(special==='var'||name==='Bulgaria'){ P.k.textContent='Next city'; P.s.textContent='Boost Club Varna is coming soon.'; P.dist.textContent=km(BUC,VAR)+' km'; P.stat.textContent='Coming soon'; }
+        else if(on){ P.k.textContent='Available'; P.s.textContent='You can start here.'; P.dist.textContent=km(BUC,cen).toLocaleString(LG)+' km'; P.stat.textContent='Available'; }
+        else { P.k.textContent='Your country'; P.s.textContent='We check this one together on the call.'; P.dist.textContent=km(BUC,cen).toLocaleString(LG)+' km'; P.stat.textContent='To check on the call'; }
+        sum(); track('partner_path_viewed'); }
+      q.addEventListener('change',function(){ var v=q.value.trim().toLowerCase(); if(!v) return; var name=BY[v]||Object.keys(BY).filter(function(x){ return x.indexOf(v)===0; }).map(function(x){ return BY[x]; })[0];
+        if(!name){ var hit=Object.keys(byName).find(function(n){ return n.toLowerCase().indexOf(v)===0; }); name=hit; }
+        if(name) pick(name,true); else { P.n.textContent=q.value.trim(); P.k.textContent='Your country'; P.s.textContent='We check this one together on the call.'; P.d.hidden=true; P.cta.hidden=false; fCountry.value=q.value.trim(); country=q.value.trim(); sum(); } });
+    }).catch(function(){ wrap.classList.remove('loading'); P.s.textContent='Type your country above.'; });
+  })();
+  // form: Netlify partner-lead, as on the live page (submission-created.mts writes a business lead to the CRM)
+  var f=document.getElementById('btform'), send=document.getElementById('bt-send'), sendL=send.innerHTML, err=document.getElementById('bt-err'), started=false;
+  f.elements['lang'].value=LG; f.elements['landing_page'].value=location.pathname;
+  f.addEventListener('focusin',function(){ if(!started){ started=true; track('partner_lead_started'); } });
+  function fail(m,el){ err.hidden=false; err.textContent=m; if(el) el.focus(); }
+  function fill(t){ return t.replace('{name}',document.getElementById('bt-name').value.trim()).replace('{country}',fCountry.value.trim()).replace('{path}',fPath.options[fPath.selectedIndex].text); }
+  f.addEventListener('submit',function(e){ e.preventDefault(); if(send.disabled) return;
+    var nm=document.getElementById('bt-name'), ct=document.getElementById('bt-contact');
+    var digits=ct.value.replace(/\D/g,''), mail=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(ct.value.trim());
+    if(!nm.value.trim()) return fail('Please add your name.',nm);
+    if(!mail&&digits.length<9) return fail('Please add a phone number with country code, or an email address.',ct);
+    if(!fCountry.value.trim()) return fail('Please add the country where you would build.',fCountry);
+    err.hidden=true;
+    var extra=[lbl('bt-s'),lbl('bt-t')].filter(Boolean).join(', ');
+    f.elements['goal'].value=[fPath.value,extra].filter(Boolean).join(' · ').slice(0,118); f.elements['referrer'].value=location.href;
+    send.disabled=true; send.textContent='Sending…';
+    var data=new URLSearchParams(new FormData(f)); if(extra) data.set('cand',extra);
+    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:data.toString()})
+      .then(function(r){ if(!r.ok) throw new Error(r.status); track('partner_lead_completed');
+        var wa=document.getElementById('bt-wa2'); wa.href=wa.href.split('?')[0]+'?'+'text='+encodeURIComponent(fill('Hi Gabriel, I just asked for a business call on boostclub.ro. {name}, {country}. Path: {path}.'));
+        f.hidden=true; var d=document.getElementById('bt-done'); d.hidden=false; d.focus(); })
+      .catch(function(){ send.disabled=false; send.innerHTML=sendL; err.hidden=false; err.textContent='We could not send your request. Please message Gabriel on WhatsApp instead.'+' ';
+        var a=document.createElement('a'); a.target='_blank'; a.rel='noopener'; a.textContent='Open WhatsApp →'; a.href=document.querySelector('.bt-final .bt-wa').href.split('?')[0]+'?'+'text='+encodeURIComponent(fill('Hi Gabriel, I would like a business call. {name}, {country}. Path: {path}.')); err.appendChild(a); });
+  });
+  document.querySelectorAll('a[href="#talk"]').forEach(function(a){ a.addEventListener('click',function(){ track('booking_cta_click'); }); });
+
+  if(!window.gsap||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  gsap.registerPlugin(ScrollTrigger); gsap.config({nullTargetWarn:false});
+  gsap.from('.phero .h-xl',{y:40,opacity:0,duration:1.1,ease:'power4.out'});
+  gsap.from('.phero .sub,.phero .row,.phero .eyebrow',{y:18,opacity:0,duration:.9,stagger:.07,ease:'power3.out',delay:.2});
+  // framed photos open toward full width as they pass, the concept-6 move
+  gsap.utils.toArray('.pframe').forEach(function(f){ gsap.fromTo(f,{clipPath:'inset(0% 7% 0% 7% round 6px)'},{clipPath:'inset(0% 0% 0% 0% round 0px)',ease:'none',scrollTrigger:{trigger:f,start:'top 85%',end:'center 45%',scrub:true}}); gsap.from(f.querySelector('img'),{scale:1.15,ease:'none',scrollTrigger:{trigger:f,start:'top bottom',end:'bottom top',scrub:true}}); });
+  gsap.utils.toArray('.ruled li,.quotes figure').forEach(function(el){ gsap.from(el,{y:24,opacity:0,duration:.8,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%'}}); });
+
+  gsap.from('.bt-herotx>*',{y:26,opacity:0,duration:1,stagger:.08,ease:'power3.out',delay:.1});
+  gsap.from('.bt-hph1',{y:40,opacity:0,duration:1.2,ease:'power3.out',delay:.2});
+  gsap.from('.bt-hph2',{y:60,opacity:0,duration:1.2,ease:'power3.out',delay:.4});
+  gsap.to('.bt-hph1 img',{yPercent:6,ease:'none',scrollTrigger:{trigger:'.bt-hero',start:'top top',end:'bottom top',scrub:true}});
+})();
+</script>
+</body></html>

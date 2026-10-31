@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Меню шейков · Boost Club</title>
+<meta name="description" content="Меню шейков Boost Club: 18 фирменных рецептов или соберите свой. К каждому визиту чай и алоэ.">
+<meta property="og:title" content="Меню шейков · Boost Club"><meta property="og:description" content="Меню шейков Boost Club: 18 фирменных рецептов или соберите свой. К каждому визиту чай и алоэ."><meta property="og:image" content="../brand/og.jpg"><meta name="theme-color" content="#0B2B22">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Cormorant:ital,wght@0,400;0,500;1,400;1,500;1,600&family=Anton&family=Oswald:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../site.css"><link rel="stylesheet" href="../kit/kit.css"><link rel="stylesheet" href="../anim/anim.css">
+<script>try{if(sessionStorage.getItem('kcur')){document.documentElement.classList.add('k-in');sessionStorage.removeItem('kcur')}}catch(e){}</script>
+<style>.mhero{position:relative;min-height:100svh;background:#E7C548;color:#13201B;overflow:hidden;padding-top:140px}.mcup{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:contain;object-position:50% 100%;opacity:0;transform:translateY(6%) scale(.92) rotate(4deg);transition:opacity .1s linear,transform .32s cubic-bezier(.2,.9,.25,1.25)}.mcup.on{opacity:1;transform:none}.mhero .mt{font-size:clamp(96px,16vw,260px);margin-top:10px}.mcups{position:absolute;right:4vw;bottom:0;height:min(70vh,640px);aspect-ratio:2/3}.mcups .cupwrap{position:absolute;inset:0;opacity:0;transition:opacity .7s var(--ease),transform .9s var(--ease);transform:translateY(30px) rotate(6deg)}.mcups .cupwrap.on{opacity:1;transform:none}@media (max-width:900px){.mhero{padding-top:110px}.mcups{right:50%;transform:translateX(50%);height:min(36svh,330px)}}.tabs{display:flex;gap:28px;border-bottom:1px solid var(--line-l);margin-bottom:32px;overflow-x:auto;scrollbar-width:none}.tabs button{background:none;border:0;color:var(--stone);font:500 clamp(24px,3vw,40px)/1 var(--accent);font-style:italic;padding:0 0 16px;cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap}.tabs button[aria-selected=true]{color:var(--ink);border-color:var(--brass)}.wgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.wgrid .wc[hidden]{display:none}.wgrid div.wc{cursor:default}@media (max-width:1100px){.wgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media (max-width:760px){.wgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.wgrid .wc-l{padding:12px 12px 14px}.wgrid .wc-l b{font-size:21px}.wgrid .wc-l small{font-size:12px}}.bcup{height:min(60vh,520px);display:flex;justify-content:center;overflow:hidden}</style><style id="i18n-css">/* RO/RU page overrides, injected into ro/*.html and ru/*.html by pages_zz_i18n.py (English pages never see this).
+   Blocks between the @ro / @ru markers apply to that language only. */
+/* diacritics (Ă Î Ș Ț) and Cyrillic Й Ё need a little more room than the .86 English line-height */
+.loud{line-height:.95}
+/* longer words: a word that still cannot fit breaks instead of running off the screen */
+h1,h2,h3,.loud{overflow-wrap:break-word}
+/* the longest signature name (Strawberry Cheesecake) fits its card column */
+.ccard .nm{font-size:clamp(56px,8vw,160px)}
+/* Boost Fit: activity cards and section heads, sized for longer words */
+.fgrid b{font-size:clamp(20px,2.3vw,40px);line-height:1.05}
+.fh2{font-size:clamp(44px,6.4vw,110px)}
+
+
+/* Anton has no Cyrillic: Oswald (next in --loud, loaded at 600) draws those glyphs automatically */
+.fh{font-size:clamp(54px,14vw,250px)}
+.rh1{font-size:min(8vw,115px)}
+@media (min-width:641px){.ruled li{grid-template-columns:160px minmax(0,1fr)}}
+@media (max-width:900px){.duo .panel .big{font-size:min(44px,11vw)}.open h1{font-size:min(12vw,88px)}}</style></head>
+<body>
+<div class="k-curtain" aria-hidden="true"><img src="../img/wordmark-cream-hd.png" alt=""></div>
+<a class="skip" href="#main">Перейти к содержанию</a>
+<div id="bc" data-page="menu" data-navlight="1" data-solid-at="0.08" hidden></div>
+<main id="main">
+<section class="mhero" id="mh"><div class="gut"><div class="wrap">
+  <span class="eyebrow" style="color:inherit">Рецепты клуба</span>
+  <h1 class="loud mt">Меню<br>шейков</h1>
+</div></div><div class="mcups" id="mcups"></div></section>
+<div id="d1"></div>
+<section class="sec gut" style="padding-top:56px"><div class="wrap">
+  <div class="tabs" role="tablist"><button role="tab" aria-selected="true" data-f="all">Все</button><button role="tab" aria-selected="false" data-f="single">Один вкус</button><button role="tab" aria-selected="false" data-f="mix">Миксы</button></div>
+  <div class="wgrid" id="tiles"></div>
+  <p class="small muted" style="margin-top:18px">Ещё шесть фирменных шейков с названиями в честь брендов есть в полном меню.</p>
+</div></section>
+<section class="sec on-dark gut" style="padding-block:clamp(72px,8vw,120px)"><div class="wrap row" style="justify-content:space-between;align-items:flex-end;gap:28px"><div><span class="k-label">18 в меню</span><h2 class="k-h" data-k="lines" style="margin-top:20px">Соберите <span class="it">свой.</span></h2></div><a class="btn btn-brass" href="#" data-reserve>Записаться на визит <span class="ar">→</span></a></div></section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="../i18n/ru-ui.js"></script>
+<script src="../site.js"></script>
+<script src="../kit/kit.js"></script>
+<script src="../kit/scan.js"></script>
+<script src="../anim/anim.js"></script>
+<script>
+(function(){
+  document.getElementById('tiles').innerHTML=SHAKES.map(function(s){ return wetCard(s,false).replace('<div class="wc"','<div class="wc" data-k="'+s.k+'"'); }).join('');
+  document.querySelectorAll('.tabs button').forEach(function(b){ b.addEventListener('click',function(){ document.querySelectorAll('.tabs button').forEach(function(x){x.setAttribute('aria-selected',x===b)}); var f=b.dataset.f; document.querySelectorAll('#tiles .wc').forEach(function(t){ t.hidden= f!=='all' && t.dataset.k!==f; }); }); });
+  var mh=document.getElementById('mh'), shots=SHAKES.filter(function(s){return s.shot}), B=SHAKES[0];
+  var d1=BCAnim.drip(document.getElementById('d1'),SHAKES[0].bg,'#FBF8F2');
+  var mc=document.getElementById('mcups'); mc.innerHTML=SHAKES.map(function(x,n){ return '<img class="mcup'+(n?'':' on')+'" src="../cups/'+x.id+'.webp" alt="'+(n?'':x.name)+'"'+(n?' aria-hidden="true"':'')+' decoding="async">'; }).join('');
+  var ws=mc.querySelectorAll('.mcup'), ci=0, vis=true;
+  function cut(n){ ws[ci].classList.remove('on'); ci=n; ws[ci].classList.add('on'); var x=SHAKES[ci]; mh.style.backgroundColor=x.bg; mh.style.color=x.ink; d1.set(x.bg); }
+  cut(0);
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches){ if('IntersectionObserver' in window) new IntersectionObserver(function(es){ vis=es[0].isIntersecting; }).observe(mh);
+    setInterval(function(){ if(vis&&!document.hidden) cut((ci+1)%SHAKES.length); },500); }
+  BCAnim.delights();
+  if(!window.gsap||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  gsap.registerPlugin(ScrollTrigger); gsap.config({nullTargetWarn:false});
+  gsap.from('.phero .h-xl',{y:40,opacity:0,duration:1.1,ease:'power4.out'});
+  gsap.from('.phero .sub,.phero .row,.phero .eyebrow',{y:18,opacity:0,duration:.9,stagger:.07,ease:'power3.out',delay:.2});
+  // framed photos open toward full width as they pass, the concept-6 move
+  gsap.utils.toArray('.pframe').forEach(function(f){ gsap.fromTo(f,{clipPath:'inset(0% 7% 0% 7% round 6px)'},{clipPath:'inset(0% 0% 0% 0% round 0px)',ease:'none',scrollTrigger:{trigger:f,start:'top 85%',end:'center 45%',scrub:true}}); gsap.from(f.querySelector('img'),{scale:1.15,ease:'none',scrollTrigger:{trigger:f,start:'top bottom',end:'bottom top',scrub:true}}); });
+  gsap.utils.toArray('.ruled li,.quotes figure').forEach(function(el){ gsap.from(el,{y:24,opacity:0,duration:.8,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%'}}); });
+
+})();
+</script>
+</body></html>
