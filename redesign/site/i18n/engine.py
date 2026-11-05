@@ -11,7 +11,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 SITE = os.path.dirname(HERE)
 LANGS = ("ro", "ru")
 PAGES = ["index.html", "business.html", "free-scan.html", "how-it-works.html", "menu.html", "results.html", "reviews.html",
-         "gabriel.html", "boost-fit.html", "visit.html", "bring-a-friend.html", "404.html"]
+         "gabriel.html", "boost-fit.html", "visit.html", "bring-a-friend.html", "book.html", "404.html"]
 ASSET_DIRS = ("img", "cups", "brand", "lab", "anim", "kit", "results", "reviews", "fonts", "video", "media", "bf", "bt")
 ASSET_FILES = ("site.css", "site.js")
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "source", "track", "wbr", "param"}

@@ -31,15 +31,16 @@ PAGES = {
     "bring-a-friend.html": "bring-a-friend.html",
     "menu.html": "shake-menu.html",
     "boost-fit.html": "boostfit/",
+    "book.html": "book.html",
 }
 # link targets inside the redesign: file name -> clean URL relative to the language root
 LINKS = {
     "free-scan.html": "consultatie-gratuita", "how-it-works.html": "cum-functioneaza",
     "results.html": "rezultate", "reviews.html": "recenzii", "visit.html": "contact",
     "gabriel.html": "gabriel", "business.html": "business", "bring-a-friend.html": "bring-a-friend",
-    "menu.html": "shake-menu", "boost-fit.html": "boostfit/",
+    "menu.html": "shake-menu", "boost-fit.html": "boostfit/", "book.html": "book",
 }
-NEW_ROUTES = ["bring-a-friend", "shake-menu"]  # clean URLs that did not exist on the live site
+NEW_ROUTES = ["bring-a-friend", "shake-menu", "book"]  # clean URLs that did not exist on the live site
 ASSETS = ["anim", "bf", "brand", "bt", "cups", "img", "kit", "lab", "results", "reviews", "video",
           "site.css", "site.js"]
 I18N_FILES = ["ro-ui.js", "ru-ui.js", "lang.css"]

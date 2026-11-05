@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Rezervă scanarea gratuită · Boost Club</title>
+<meta name="description" content="Alege-ți singur ora pentru scanarea gratuită a compoziției corporale și consultație la Boost Club, Strada Sevastopol 24, lângă Piața Victoriei. 30 de minute.">
+<meta property="og:title" content="Rezervă scanarea gratuită · Boost Club"><meta property="og:description" content="Alege-ți singur ora pentru scanarea gratuită a compoziției corporale și consultație la Boost Club, Strada Sevastopol 24, lângă Piața Victoriei. 30 de minute."><meta property="og:image" content="../brand/og.jpg"><meta name="theme-color" content="#0B2B22">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Cormorant:ital,wght@0,400;0,500;1,400;1,500;1,600&family=Anton&family=Oswald:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../site.css"><link rel="stylesheet" href="../kit/kit.css">
+<script>try{if(sessionStorage.getItem('kcur')){document.documentElement.classList.add('k-in');sessionStorage.removeItem('kcur')}}catch(e){}</script>
+<style>
+/* ---------- the booking room: dark, calm, one luminous card ---------- */
+.fs-book{position:relative;background:var(--night);color:var(--cream);padding-top:clamp(108px,10vw,150px);padding-bottom:clamp(72px,8vw,128px);overflow:clip;isolation:isolate}
+.fs-book::before{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(60% 55% at 12% 8%,rgba(47,138,99,.30),transparent 70%),radial-gradient(50% 50% at 92% 100%,rgba(217,178,106,.12),transparent 70%)}
+.fs-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);grid-template-areas:"intro card" "details card";column-gap:clamp(40px,6vw,112px);row-gap:clamp(40px,4vw,64px);align-items:start}
+.fs-intro{grid-area:intro}
+.fs-card{grid-area:card;position:sticky;top:92px}
+.fs-details{grid-area:details}
+.fs-intro .k-label{margin-bottom:26px}
+.fs-h1{font-size:clamp(46px,5.4vw,88px);line-height:.93;letter-spacing:-.055em;font-weight:600;max-width:13ch;text-wrap:balance}
+.fs-h1 .it{color:var(--brass);font-weight:500}
+html[lang=ro] .fs-h1,html[lang=ru] .fs-h1{text-wrap:wrap;max-width:14ch}
+.fs-sub{margin:28px 0 0;font-size:clamp(17px,1.3vw,19px);line-height:1.55;color:rgba(244,239,230,.74);max-width:44ch}
+.fs-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:30px}
+.fs-waq{color:var(--cream);font-size:15px}
+.fs-mob{display:none}
+
+/* facts: four hairline cells, value big, label small */
+.fs-facts{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--line-d)}
+.fs-facts>div{padding:22px 16px 20px 0;border-bottom:1px solid var(--line-d);display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:8px}
+.fs-facts>div:nth-child(even){padding-left:22px;border-left:1px solid var(--line-d)}
+.fs-facts dd{margin:0;font-size:clamp(22px,2vw,30px);font-weight:600;letter-spacing:-.04em;line-height:1.05}
+.fs-facts dt{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(244,239,230,.55)}
+.fs-info{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(22px,3vw,44px);margin-top:clamp(32px,3.4vw,48px)}
+.fs-info h3{font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin-bottom:14px;line-height:1.3}
+.fs-hours .hours>div{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid var(--line-d);font-size:15px}
+.fs-hours .hours>div span:last-child{font-variant-numeric:tabular-nums;color:rgba(244,239,230,.86)}
+.fs-hours p,.fs-wa p{margin:14px 0 0;font-size:13.5px;line-height:1.55;color:rgba(244,239,230,.6)}
+.fs-wa p{margin:0 0 18px;font-size:15px;color:rgba(244,239,230,.74)}
+.fs-wa .btn{height:50px;padding:0 22px;font-size:15px;color:var(--cream);box-shadow:inset 0 0 0 1px rgba(244,239,230,.4)}
+
+/* the card */
+.fs-card{background:var(--bone);color:var(--ink);border-radius:6px;padding:clamp(26px,3.2vw,52px);box-shadow:0 40px 90px -30px rgba(0,0,0,.6),0 0 0 1px rgba(244,239,230,.06)}
+.fs-cardhead .k-label{margin-bottom:16px}
+.fs-h2{font-size:clamp(30px,2.7vw,44px);letter-spacing:-.045em;line-height:1;font-weight:600}
+.fs-card .form{gap:22px}
+.fs-card .prog{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:10px 0 6px}
+.fs-card .prog i{display:flex;align-items:baseline;gap:10px;height:auto;padding-top:14px;border-radius:0;background:none;border-top:2px solid var(--line-l);font-style:normal;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--stone);transition:border-color .45s var(--ease),color .45s var(--ease)}
+.fs-card .prog i b{font-weight:600;color:inherit;font-variant-numeric:tabular-nums}
+.fs-card .prog i.on{border-color:var(--leaf);color:var(--ink)}
+.fs-card .prog i.on b{color:var(--leaf)}
+.fs-card .step{gap:20px}
+.fs-card .sl{font-size:14px;font-weight:500;letter-spacing:.01em;color:var(--stone);margin-bottom:10px;padding:0}
+/* goal tiles */
+.fs-goals{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.fs-goals label{display:block;position:relative}
+.fs-goals span{display:flex!important;align-items:center;justify-content:space-between;gap:12px;height:auto!important;min-height:84px;padding:18px 20px!important;border-radius:6px!important;border:1px solid var(--line-l)!important;background:#fff;font-size:17px!important;font-weight:600!important;letter-spacing:-.02em;line-height:1.2;transition:border-color .2s,background .25s var(--ease),color .25s var(--ease),transform .25s var(--ease)}
+.fs-goals span::after{content:'';flex:none;width:20px;height:20px;border-radius:50%;border:1px solid #CFC6B5;transition:all .25s var(--ease)}
+.fs-goals label:hover span{border-color:var(--leaf)!important}
+.fs-goals input:checked+span{background:var(--bottle);color:var(--cream);border-color:var(--bottle)!important}
+.fs-goals input:checked+span::after{border-color:var(--brass);background:var(--brass);box-shadow:inset 0 0 0 4px var(--bottle)}
+/* inputs: calm, generous */
+.fs-card .form input:not([type=radio]):not([type=checkbox]){height:60px;border-radius:6px;border:1px solid var(--line-l);background:#fff;font-size:17px;padding:0 18px}
+.fs-card .form input:focus{border:1px solid var(--leaf);box-shadow:0 0 0 3px rgba(31,107,79,.14);outline:none}
+.fs-card .form label{font-size:13px;font-weight:600;gap:8px}
+.fs-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.fs-card .form label{min-width:0}.fs-card .form input:not([type=radio]):not([type=checkbox]){width:100%;min-width:0}
+.fs-card .done:focus{outline:none}
+@media (min-width:961px) and (max-width:1240px){.fs-two{grid-template-columns:minmax(0,1fr)}.fs-goals span{font-size:16px!important;padding:16px!important}}
+.fs-src{border:0;padding:0;margin:0}
+.fs-src legend{font-size:13px;font-weight:600;margin-bottom:10px;padding:0}
+.fs-card .chips:not(.fs-goals) span{height:44px;padding:0 18px;border-color:var(--line-l);font-size:14.5px}
+.fs-card .chips:not(.fs-goals) label{display:block}
+.fs-note{margin:0;font-size:13.5px;line-height:1.55}
+.fs-trust{padding-top:16px;border-top:1px solid var(--line-l);letter-spacing:.01em}
+.fs-card .nav2{margin-top:4px}
+.fs-card .nav2 .btn{height:56px}
+.fs-card .nav2 .btn-bottle,.fs-card .nav2 .btn-brass{flex:1;max-width:260px}
+.fs-card .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.fs-card .err{color:#B23A3A;font-size:14px;margin:0;padding:12px 14px;border-radius:6px;background:rgba(178,58,58,.07)}
+.fs-card .step.on{display:grid;animation:fsstep .5s var(--ease)}
+.fs-card .step{border:0;padding:0;margin:0;display:none}
+@keyframes fsstep{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.fs-card .done{padding:18px 0 6px}
+.fs-card .done .big{display:grid;place-items:center;width:76px;height:76px;border-radius:50%;background:var(--leaf);color:#fff;font-size:32px;margin-bottom:26px;animation:fspop .6s var(--ease)}
+@keyframes fspop{from{transform:scale(.6);opacity:0}to{transform:none;opacity:1}}
+.fs-card .done #sum{margin-top:22px;padding-top:16px;border-top:1px solid var(--line-l)}
+.fs-card .done a{color:var(--leaf);font-weight:600}
+
+@media (max-width:1100px){.fs-info{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:960px){
+  .fs-grid{grid-template-columns:minmax(0,1fr);grid-template-areas:"intro" "card" "details"}
+  .fs-card{position:relative;top:0}
+  .fs-info{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fs-h1{max-width:13ch}
+}
+@media (max-width:640px){
+  .fs-book{padding-top:100px}
+  .fs-mob{display:inline-flex}
+  .fs-ctas{gap:16px}
+  .fs-goals{grid-template-columns:minmax(0,1fr)}
+  .fs-goals span{min-height:64px}
+  .fs-two{grid-template-columns:minmax(0,1fr)}
+  .fs-info{grid-template-columns:minmax(0,1fr)}
+  .fs-card{margin-inline:-6px;padding:26px 20px 28px}
+  .fs-card .prog i{font-size:11px;letter-spacing:.12em;gap:6px}
+  .fs-card .nav2 .btn{flex:1;padding:0 18px}
+  .fs-card .nav2 .btn-bottle,.fs-card .nav2 .btn-brass{max-width:none}
+}
+
+/* ---------- at your visit: edge-to-edge photo + the instrument ---------- */
+.fs-visitg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:min(100svh,920px);background:var(--bone)}
+.fs-photo{position:relative;overflow:hidden;background:var(--pine);min-height:520px}
+.fs-photo>img{position:absolute;inset:-40px;width:calc(100% + 80px);height:calc(100% + 80px);max-width:none;object-fit:cover;object-position:40% 50%;filter:blur(9px) brightness(.55) saturate(.9)}
+.fs-mini{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:min(78%,400px);box-shadow:0 30px 70px rgba(0,0,0,.4);background:rgba(7,30,23,.86);backdrop-filter:blur(12px);border:1px solid rgba(244,239,230,.12);border-radius:6px;padding:16px 16px 12px;display:flex;flex-direction:column;align-items:center;color:var(--cream)}
+.fs-mini #miniScan{width:100%}
+.fs-mini #miniScan svg{width:100%;height:auto;display:block;overflow:visible}
+.fs-mini .cap{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin-top:6px;text-align:center}
+.fs-visittxt{align-self:center;padding-block:clamp(72px,9vw,140px);max-width:680px}
+.fs-visittxt .k-label{margin-bottom:22px}
+.fs-visittxt .k-h{font-size:clamp(42px,4.8vw,80px)}
+.fs-get{list-style:none;margin:clamp(32px,3.4vw,48px) 0 30px;padding:0;border-top:1px solid var(--line-l)}
+.fs-get li{display:grid;grid-template-columns:44px minmax(0,1fr);align-items:baseline;padding:18px 0;border-bottom:1px solid var(--line-l);font-size:clamp(18px,1.5vw,22px);font-weight:600;letter-spacing:-.025em;line-height:1.25}
+.fs-get li span{font-size:12px;font-weight:600;letter-spacing:.2em;color:var(--brass-ink)}
+@media (max-width:900px){.fs-visitg{grid-template-columns:minmax(0,1fr)}.fs-photo{min-height:0;aspect-ratio:4/4.4}.fs-visittxt{max-width:none}}
+
+@media (prefers-reduced-motion:reduce){.fs-card .step.on,.fs-card .done .big{animation:none}}
+
+/* ---------- faq ---------- */
+.fs-faqg{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,6vw,110px);align-items:start}
+.fs-faqhead{position:sticky;top:110px}
+.fs-faqhead .k-label{margin-bottom:22px}
+.fs-faqhead .k-h{font-size:clamp(42px,4.6vw,76px)}
+@media (max-width:900px){.fs-faqg{grid-template-columns:minmax(0,1fr)}.fs-faqhead{position:relative;top:0}}
+
+.bk-step{display:grid;gap:16px}
+.bk-step[hidden],.bk-load[hidden],.bk-fail[hidden],.bk-note[hidden],.bk-prog[hidden],.bk-who[hidden]{display:none}
+.bk-proof{display:inline-flex;align-items:center;gap:8px;margin-top:22px;color:var(--cream);text-decoration:none;font-size:14.5px}
+.bk-proof b{font-size:17px}.bk-proof span[aria-hidden]{color:var(--brass);letter-spacing:.08em}.bk-proof span:last-child{color:rgba(244,239,230,.74);border-bottom:1px solid rgba(244,239,230,.3)}
+.bk-load{display:flex;align-items:center;gap:12px;color:var(--stone);font-size:15px;padding:18px 0}
+.bk-spin{width:18px;height:18px;border-radius:50%;border:2px solid var(--line-l);border-top-color:var(--leaf);animation:bkspin .8s linear infinite}
+@keyframes bkspin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.bk-spin{animation:none}}
+.bk-fail p,.bk-note p{margin:0 0 14px;color:var(--ink)}
+.bk-note p{margin:0}
+.bk-note{padding:16px 18px;border-radius:6px;background:var(--oat)}
+.bk-filter{display:flex;flex-wrap:wrap;gap:6px}
+.bk-filter label{position:relative}
+.bk-filter input{position:absolute;opacity:0;pointer-events:none}
+.bk-filter span{display:inline-flex;align-items:center;height:38px;padding:0 14px;border-radius:999px;border:1px solid var(--line-l);background:#fff;font-size:14px;font-weight:600;cursor:pointer}
+.bk-filter input:checked+span{background:var(--bottle);border-color:var(--bottle);color:#fff}
+.bk-filter input:focus-visible+span{outline:2px solid var(--brass);outline-offset:2px}
+.bk-days{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(64px,1fr);gap:6px;overflow-x:auto;padding:2px 2px 6px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.bk-day{scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;gap:2px;padding:10px 4px;border-radius:6px;border:1px solid var(--line-l);background:#fff;font:inherit;color:var(--ink);cursor:pointer;min-width:64px}
+.bk-day small{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--stone)}
+.bk-day b{font-size:20px;font-weight:600;letter-spacing:-.03em;line-height:1.1}
+.bk-day i{font-style:normal;font-size:11.5px;color:var(--stone)}
+.bk-day[aria-selected=true]{background:var(--bottle);border-color:var(--bottle);color:#fff}
+.bk-day[aria-selected=true] small,.bk-day[aria-selected=true] i{color:rgba(255,255,255,.75)}
+.bk-day:disabled{opacity:.38;cursor:default}
+.bk-day:focus-visible,.bk-t:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+.bk-picked{margin:0;font-size:15px;font-weight:600;color:var(--leaf)}
+.bk-sel{font-size:17px;color:var(--ink)}
+.bk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:8px}
+.bk-t{height:48px;border-radius:999px;border:1px solid var(--line-l);background:#fff;font:600 15px var(--display);font-variant-numeric:tabular-nums;color:var(--ink);cursor:pointer;transition:border-color .2s,background .2s}
+.bk-t:hover{border-color:var(--leaf)}
+.bk-t.sg{border-color:var(--leaf);background:rgba(31,107,79,.07)}
+.bk-empty{margin:0;color:var(--stone);font-size:14.5px}
+.bk-empty[hidden]{display:none}
+.bk-when{margin:14px 0 6px;font-size:clamp(20px,1.8vw,26px);font-weight:600;letter-spacing:-.03em;line-height:1.2}
+.bk-acts{margin:16px 0 4px;gap:10px;flex-wrap:wrap}
+.bk-acts .btn{height:50px;padding:0 20px;font-size:15px}
+.fs-card .done .bk-acts .btn-bottle,.fs-card .done .bk-wa,.bk-step .btn-bottle{color:#fff}.fs-card .done .bk-acts .btn-ghost{color:var(--ink)}
+.bk-hi{margin:20px 0 6px;padding:18px;border-radius:6px;border:1px solid var(--leaf);background:rgba(31,107,79,.06)}
+.bk-hi p{margin:0 0 14px;font-size:15px;line-height:1.5}
+.bk-wa{height:52px;padding:0 22px;font-size:15.5px;width:100%;justify-content:center}
+.bk-links{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:8px}
+.bk-links a{color:var(--leaf);font-weight:600;text-decoration:none}
+.bk-links a:hover{text-decoration:underline}
+.bk-links li[hidden]{display:none}
+.bk-prep{margin:20px 0 6px;padding:16px 18px;border-radius:6px;background:var(--oat)}
+.bk-prep p{margin:0;font-size:14.5px;line-height:1.55}.bk-prep p+p{margin-top:6px}
+.bk-confirm{padding:16px 18px;border-radius:6px;background:var(--oat)}
+.bk-confirm p{margin:0 0 12px}
+.bk-confirm[hidden]{display:none}
+</style><style id="i18n-css">/* RO/RU page overrides, injected into ro/*.html and ru/*.html by pages_zz_i18n.py (English pages never see this).
+   Blocks between the @ro / @ru markers apply to that language only. */
+/* diacritics (Ă Î Ș Ț) and Cyrillic Й Ё need a little more room than the .86 English line-height */
+.loud{line-height:.95}
+/* longer words: a word that still cannot fit breaks instead of running off the screen */
+h1,h2,h3,.loud{overflow-wrap:break-word}
+/* the longest signature name (Strawberry Cheesecake) fits its card column */
+.ccard .nm{font-size:clamp(56px,8vw,160px)}
+/* Boost Fit: activity cards and section heads, sized for longer words */
+.fgrid b{font-size:clamp(20px,2.3vw,40px);line-height:1.05}
+.fh2{font-size:clamp(44px,6.4vw,110px)}
+
+.fh{font-size:clamp(64px,14vw,250px)}</style></head>
+<body>
+<div class="k-curtain" aria-hidden="true"><img src="../img/wordmark-cream-hd.png" alt=""></div>
+<a class="skip" href="#main">Sari la conținut</a>
+<div id="bc" data-page="scan" data-norbar="1" data-solid-at="0.12" hidden></div>
+<main id="main">
+<section class="fs-book gut" id="book" data-k-calm aria-label="Rezervă o oră"><div class="wrap fs-grid">
+  <div class="fs-intro">
+    <span class="k-label">Consultație gratuită</span>
+    <h1 class="fs-h1">Alege-ți ora pentru scanarea <span class="it">gratuită.</span></h1>
+    <p class="fs-sub">Scanare gratuită a compoziției corporale și consultație · 30 de minute · Strada Sevastopol 24, lângă Piața Victoriei. Alege o oră mai jos și este a ta pe loc.</p>
+    <a class="bk-proof" href="reviews.html"><b>5.0</b> <span aria-hidden="true">★★★★★</span> <span>169 recenzii Google</span></a>
+    <div class="fs-ctas"><a class="k-link fs-waq" href="https://wa.me/40726205752?text=Bun%C4%83%21%20Vreau%20s%C4%83%20rezerv%20o%20consulta%C8%9Bie%20gratuit%C4%83." target="_blank" rel="noopener">Ai o întrebare? Scrie-ne pe WhatsApp</a></div>
+  </div>
+
+  <div class="fs-card">
+  <div class="flow" id="bkflow">
+    <div class="fs-cardhead"><span class="k-label" id="bk-kick">Rezervare</span><h2 class="fs-h2" id="bk-h">Alege ora</h2></div>
+    <div class="prog bk-prog" aria-hidden="true"><i class="on"><b>01</b><span>Ora</span></i><i><b>02</b><span>Datele tale</span></i></div>
+
+    <div class="bk-load" id="bk-load" role="status"><span class="bk-spin" aria-hidden="true"></span><span>Se încarcă orele libere…</span></div>
+    <div class="bk-fail" id="bk-fail" hidden><p>Rezervarea online nu este disponibilă acum. Scrie-ne pe WhatsApp și te programăm noi.</p><a class="btn btn-ghost" href="https://wa.me/40726205752?text=Bun%C4%83%21%20Vreau%20s%C4%83%20rezerv%20o%20consulta%C8%9Bie%20gratuit%C4%83." target="_blank" rel="noopener">Scrie pe WhatsApp</a></div>
+    <div class="bk-note" id="bk-note" hidden></div>
+
+    <div class="bk-step" id="bk-pick" hidden>
+      <div class="bk-filter" role="radiogroup" aria-label="Momentul zilei">
+        <label><input type="radio" name="bkpart" value="all" checked><span>Oricând</span></label><label><input type="radio" name="bkpart" value="am"><span>Dimineața</span></label><label><input type="radio" name="bkpart" value="mid"><span>După-amiază</span></label><label><input type="radio" name="bkpart" value="pm"><span>Seara</span></label>
+      </div>
+      <div class="bk-days" id="bk-daylist" role="tablist" aria-label="Ziua"></div>
+      <p class="bk-picked" id="bk-day-picked" aria-live="polite"></p>
+      <div id="bk-sugg-wrap" hidden><p class="sl">Recomandat</p><div class="bk-grid" id="bk-sugg"></div></div>
+      <div class="bk-grid" id="bk-all"></div>
+      <p class="bk-empty" id="bk-empty" hidden>Nu sunt ore libere în această parte a zilei. Încearcă altă zi sau Oricând.</p>
+    </div>
+
+    <form class="form bk-step" id="bkform" novalidate hidden aria-label="Datele tale">
+      <p class="bk-picked bk-sel" id="bk-slot-picked"></p>
+      <p class="vh" aria-hidden="true"><label>Lasă acest câmp gol <input name="website" tabindex="-1" autocomplete="off"></label></p>
+      <div class="bk-who" id="bk-who">
+        <div class="fs-two"><label for="bk-fn">Prenume *<input id="bk-fn" name="name" required placeholder="ex. Maria" autocomplete="given-name"></label>
+        <label for="bk-ph">Telefon (WhatsApp) *<input id="bk-ph" name="phone" required placeholder="ex. 0722 000 000" autocomplete="tel" inputmode="tel"></label></div>
+        <label for="bk-em">Email (opțional, pentru invitația în calendar)<input id="bk-em" name="email" type="email" placeholder="ex. maria@gmail.com" autocomplete="email" inputmode="email"></label>
+      </div>
+      <fieldset class="fs-src"><legend>Obiectivul principal (opțional)</legend><div class="chips">
+        <label><input type="radio" name="goal" value="loss"><span>Slăbire</span></label><label><input type="radio" name="goal" value="muscle"><span>Masă musculară</span></label><label><input type="radio" name="goal" value="energy"><span>Mai multă energie</span></label><label><input type="radio" name="goal" value="other"><span>Altceva</span></label></div></fieldset>
+      <fieldset class="fs-src"><legend>Dacă planul ți se potrivește, când ai vrea să începi? (opțional)</legend><div class="chips">
+        <label><input type="radio" name="ready" value="now"><span>Imediat</span></label><label><input type="radio" name="ready" value="weeks"><span>În următoarele săptămâni</span></label><label><input type="radio" name="ready" value="curious"><span>Deocamdată sunt doar curios</span></label></div></fieldset>
+      <p class="small muted fs-note">Folosim datele introduse pentru a gestiona programarea și pentru a te contacta în legătură cu ea. Află cum sunt prelucrate datele tale în Politica de confidențialitate.</p>
+      <p class="err" id="bk-err" role="alert" hidden></p>
+      <div class="row nav2"><button type="button" class="btn btn-ghost" id="bk-back">Înapoi</button><button class="btn btn-brass" type="submit" id="bk-send">Rezervă scanarea gratuită <span class="ar">→</span></button></div>
+    </form>
+
+    <div class="bk-step" id="bk-mine" hidden>
+      <p class="bk-when" id="bk-mine-when"></p>
+      <p class="muted">Boost Club, Strada Sevastopol 24, Sector 1, lângă Piața Victoriei.</p>
+      <div class="row bk-acts"><button type="button" class="btn btn-bottle" id="bk-change">Schimbă ora</button><button type="button" class="btn btn-ghost" id="bk-cancel">Anulează vizita</button></div>
+      <div class="bk-confirm" id="bk-cancel-q" hidden><p>Anulezi vizita? Ora devine liberă pentru alții.</p><div class="row"><button type="button" class="btn btn-ghost" id="bk-cancel-no">Păstrez vizita</button><button type="button" class="btn btn-bottle" id="bk-cancel-yes">Da, anulează</button></div></div>
+      <p class="err" id="bk-mine-err" role="alert" hidden></p>
+    </div>
+
+    <div class="bk-step" id="bk-moveq" hidden>
+      <p class="bk-picked bk-sel" id="bk-move-to"></p>
+      <p class="err" id="bk-move-err" role="alert" hidden></p>
+      <div class="row nav2"><button type="button" class="btn btn-ghost" id="bk-move-back">Înapoi</button><button type="button" class="btn btn-brass" id="bk-move-yes">Mută vizita <span class="ar">→</span></button></div>
+    </div>
+
+    <div class="done" id="bk-done" hidden tabindex="-1"><span class="big" aria-hidden="true">✓</span><h3 class="fs-h2" id="bk-done-h">Ești programat.</h3>
+      <p class="bk-when" id="bk-when"></p>
+      <p class="muted">Boost Club, Strada Sevastopol 24, Sector 1, lângă Piața Victoriei.</p>
+      <div class="bk-hi"><p><b>Ultimul pas: salută-ne pe WhatsApp.</b> Durează o atingere și Gabriel îți confirmă vizita în aceeași conversație.</p>
+        <a class="btn btn-bottle bk-wa" id="bk-wa" href="#" target="_blank" rel="noopener">Salută-l pe WhatsApp</a></div>
+      <div class="row bk-acts"><a class="btn btn-ghost" id="bk-gcal" href="#" target="_blank" rel="noopener">Adaugă în Google Calendar</a><a class="btn btn-ghost" id="bk-ics" href="#" download="boost-club-visit.ics">Adaugă în Apple / Outlook</a></div>
+      <ul class="bk-links"><li><a href="https://www.google.com/maps/dir/?api=1&destination=Strada+Sevastopol+24+Bucuresti" target="_blank" rel="noopener">Indicații pe Google Maps →</a></li><li><a href="how-it-works.html">Cum decurge vizita →</a></li><li id="bk-manage-li" hidden><a id="bk-manage" href="#">Trebuie să schimbi? Schimbă sau anulează →</a></li></ul>
+      <div class="bk-prep"><p><b>Înainte să vii</b></p><p>Bea apă normal în ziua vizitei. Evită alcoolul sau multe lichide cu câteva ore înainte, pot influența măsurătoarea. Haine lejere și comode, nu ai nevoie de echipament sport.</p></div>
+    </div>
+
+    <div class="done" id="bk-gone" hidden tabindex="-1"><h3 class="fs-h2">Vizita ta este anulată.</h3>
+      <p class="muted" style="margin-top:14px">Mulțumim că ne-ai anunțat. Când vrei o oră nouă, alege-o aici.</p>
+      <div class="row bk-acts"><a class="btn btn-brass" href="book.html">Alege o oră nouă <span class="ar">→</span></a></div></div>
+  </div>
+  </div>
+
+  <div class="fs-details">
+    <dl class="fs-facts">
+      <div><dt>Sesiune completă</dt><dd>30 de minute</dd></div>
+      <div><dt>Preț</dt><dd>Gratuit</dd></div>
+      <div><dt>Explicate pe înțelesul tău</dt><dd>Rezultate pe loc</dd></div>
+      <div><dt>Strada Sevastopol 24</dt><dd>Piața Victoriei</dd></div>
+    </dl>
+    <div class="fs-info">
+      <div class="fs-wa"><h3>Preferi WhatsApp?</h3><p>Scrie-ne direct și îți găsim o oră.</p><a class="btn btn-ghost" href="https://wa.me/40726205752?text=Bun%C4%83%21%20Vreau%20s%C4%83%20rezerv%20o%20consulta%C8%9Bie%20gratuit%C4%83." target="_blank" rel="noopener">Scrie pe WhatsApp</a></div>
+    </div>
+  </div>
+</div></section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="../i18n/ro-ui.js"></script>
+<script src="../site.js"></script>
+<script src="../kit/kit.js"></script>
+<script src="../kit/scan.js"></script>
+<script>
+(function(){
+  (function(){
+  var T=window.BC_T_fn||function(x){return x;}, LANG=document.documentElement.lang||'en';
+  var LOC={en:'en-GB',ro:'ro-RO',ru:'ru-RU'}[LANG]||'en-GB', TZ='Europe/Bucharest', WA='40726205752';
+  var $=function(id){return document.getElementById(id);};
+  var qs=new URLSearchParams(location.search), INV=qs.get('i'), MAN=qs.get('m');
+  if(INV&&!/^[A-Za-z0-9_-]{16,64}$/.test(INV)) INV=null; if(MAN&&!/^[A-Za-z0-9_-]{16,64}$/.test(MAN)) MAN=null;
+  var qpart=qs.get('part'), qwd=+(qs.get('wd')||0);
+  var days=[], day=null, slot=null, part=/^(am|mid|pm)$/.test(qpart||'')?qpart:'all', mode='bkn', who='', key=(window.crypto&&crypto.randomUUID)?crypto.randomUUID():null, busy=false;
+  var prog=[].slice.call(document.querySelectorAll('#bkflow .bk-prog i'));
+  var panes={bkp:$('bk-pick'),bkf:$('bkform'),bkm:$('bk-mine'),bkq:$('bk-moveq')};
+  function fmt(iso,o){ o.timeZone=TZ; return new Intl.DateTimeFormat(LOC,o).format(new Date(iso)); }
+  function noon(d){ return d+'T10:00:00Z'; }
+  function longDay(d){ return fmt(noon(d),{weekday:'long',day:'numeric',month:'long'}); }
+  function show(name,head){
+    Object.keys(panes).forEach(function(k){ panes[k].hidden=(k!==name); });
+    prog.forEach(function(p,i){ p.classList.toggle('on',i<=(name==='bkf'?1:0)); });
+    document.querySelector('#bkflow .bk-prog').hidden=(name==='bkm');
+    if(head) $('bk-h').textContent=head;
+  }
+  function note(html){ var n=$('bk-note'); n.innerHTML=html; n.hidden=!html; }
+  function fail(){ $('bk-load').hidden=true; $('bk-fail').hidden=false; Object.keys(panes).forEach(function(k){ panes[k].hidden=true; }); }
+  function inPart(t){ var h=+t.slice(0,2); return part==='all'||(part==='am'&&h<12)||(part==='mid'&&h>=12&&h<17)||(part==='pm'&&h>=17); }
+  function load(){
+    $('bk-load').hidden=false; $('bk-fail').hidden=true;
+    return fetch('/api/booking/slots',{headers:{Accept:'application/json'}}).then(function(r){ return r.json(); }).then(function(j){
+      $('bk-load').hidden=true;
+      if(!j||!j.ok||!(j.days||[]).length){ fail(); return false; }
+      days=j.days; drawDays(); return true;
+    }).catch(function(){ fail(); return false; });
+  }
+  function drawDays(){
+    var list=$('bk-daylist'); list.innerHTML=''; var first=null, pref=null;
+    days.forEach(function(d){
+      var n=d.slots.filter(function(s){return inPart(s.time);}).length;
+      var b=document.createElement('button'); b.type='button'; b.className='bk-day'; b.setAttribute('role','tab');
+      b.innerHTML='<small></small><b></b><i></i>';
+      b.querySelector('small').textContent=fmt(noon(d.date),{weekday:'short'});
+      b.querySelector('b').textContent=fmt(noon(d.date),{day:'numeric'});
+      b.querySelector('i').textContent=fmt(noon(d.date),{month:'short'});
+      b.setAttribute('aria-label',longDay(d.date)+', '+n);
+      b.disabled=!n; b.dataset.date=d.date;
+      b.addEventListener('click',function(){ pickDay(d); });
+      list.appendChild(b); if(n&&!first) first=d;
+      if(n&&qwd&&!pref){ var w=new Date(d.date+'T12:00:00Z').getUTCDay()||7; if(w===qwd) pref=d; }
+    });
+    if(pref){ first=pref; qwd=0; }
+    var keep=day&&days.filter(function(x){return x.date===day.date&&x.slots.some(function(s){return inPart(s.time);});})[0];
+    if(keep||first) pickDay(keep||first); else { $('bk-day-picked').textContent=''; $('bk-all').innerHTML=''; $('bk-sugg-wrap').hidden=true; $('bk-empty').hidden=false; }
+  }
+  function timeBtn(s,sg){
+    var b=document.createElement('button'); b.type='button'; b.className='bk-t'+(sg?' sg':''); b.textContent=s.time;
+    b.setAttribute('aria-label',longDay(day.date)+', '+s.time);
+    b.addEventListener('click',function(){ pickSlot(s); }); return b;
+  }
+  function pickDay(d){
+    day=d;
+    [].forEach.call(document.querySelectorAll('.bk-day'),function(b){ var on=b.dataset.date===d.date; b.setAttribute('aria-selected',on?'true':'false'); });
+    var list=d.slots.filter(function(s){return inPart(s.time);});
+    $('bk-day-picked').textContent=longDay(d.date);
+    var sg=list.filter(function(s){return s.nextToSit;}).slice(0,3);
+    $('bk-sugg-wrap').hidden=!sg.length||list.length<6; $('bk-sugg').innerHTML=''; sg.forEach(function(s){ $('bk-sugg').appendChild(timeBtn(s,true)); });
+    $('bk-all').innerHTML=''; list.forEach(function(s){ $('bk-all').appendChild(timeBtn(s,false)); });
+    $('bk-empty').hidden=!!list.length;
+  }
+  [].forEach.call(document.querySelectorAll('input[name=bkpart]'),function(r){ r.checked=(r.value===part); r.addEventListener('change',function(){ part=r.value; drawDays(); }); });
+  function hello(){ return who?T('Salut')+' '+who+'! ':''; }
+  function pickSlot(s){
+    slot=s; var label=longDay(day.date)+' · '+s.time;
+    if(mode==='bkc'){ $('bk-move-to').textContent=T('Muți vizita pe')+' '+label+'?'; $('bk-move-err').hidden=true; show('bkq',T('Confirmă ora nouă')); return; }
+    $('bk-slot-picked').textContent=label+' · 30 min'; $('bk-err').hidden=true; show('bkf',who?hello()+T('confirmă vizita'):T('Datele tale'));
+    if(!who) $('bk-fn').focus({preventScroll:true}); $('bkform').scrollIntoView({block:'nearest'});
+  }
+  $('bk-back').addEventListener('click',function(){ show('bkp',who?hello()+T('alege-ți ora'):T('Alege ora')); });
+  try{ var g=qs.get('goal'); var gi=g&&document.querySelector('#bkform input[name=goal][value="'+g.replace(/[^a-z]/g,'')+'"]'); if(gi) gi.checked=true; }catch(e){}
+
+  function phoneOk(v){
+    var d=v.replace(/[^0-9+]/g,''); if(d.indexOf('00')===0) d='+'+d.slice(2); if(d.charAt(0)==='0') d='+40'+d.slice(1); if(d.charAt(0)!=='+'&&d.indexOf('40')===0) d='+'+d;
+    if(!/^\+[1-9][0-9]{6,14}$/.test(d)) return false; return d.indexOf('+40')!==0||/^\+407[2-9][0-9]{7}$/.test(d);
+  }
+  function err(id,msg){ var e=$(id); e.textContent=msg; e.hidden=false; }
+  function stamp(iso){ return iso.replace(/[-:]/g,'').replace(/\.\d{3}/,''); }
+  function waHref(d,t){ return 'https://wa.me/'+WA+'?text='+encodeURIComponent(T('Salut! Tocmai mi-am rezervat scanarea gratuită pentru {d}, la ora {t}.').replace('{d}',d).replace('{t}',t)); }
+  function finish(j,moved){
+    var d=fmt(j.startAt,{weekday:'long',day:'numeric',month:'long'});
+    $('bk-done-h').textContent=moved?T('Vizita ta a fost mutată.'):T("Ești programat.");
+    $('bk-when').textContent=d+' · '+j.time;
+    $('bk-wa').href=waHref(d,j.time);
+    var title=T('Boost Club · scanare corporală gratuită'), loc='Boost Club, Strada Sevastopol 24, Sector 1, Bucuresti';
+    var det=T('Scanare gratuită a compoziției corporale și consultație, 30 de minute.')+' https://www.google.com/maps/dir/?api=1&destination=Strada+Sevastopol+24+Bucuresti';
+    $('bk-gcal').href='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent(title)+'&dates='+stamp(j.startAt)+'/'+stamp(j.endAt)+'&location='+encodeURIComponent(loc)+'&details='+encodeURIComponent(det);
+    var ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Boost Club//Booking//EN','BEGIN:VEVENT','UID:'+(key||Date.now())+'@boostclub.ro','DTSTAMP:'+stamp(new Date().toISOString()),'DTSTART:'+stamp(j.startAt),'DTEND:'+stamp(j.endAt),'SUMMARY:'+title,'LOCATION:'+loc.replace(/,/g,'\\,'),'DESCRIPTION:'+det.replace(/,/g,'\\,'),'BEGIN:VALARM','TRIGGER:-PT2H','ACTION:DISPLAY','DESCRIPTION:'+title,'END:VALARM','END:VEVENT','END:VCALENDAR'].join('\r\n');
+    $('bk-ics').href='data:text/calendar;charset=utf-8,'+encodeURIComponent(ics);
+    var m=j.manage||(MAN?location.href:null); $('bk-manage-li').hidden=!m; if(m) $('bk-manage').href=m;
+    Object.keys(panes).forEach(function(k){ panes[k].hidden=true; }); note('');
+    document.querySelector('#bkflow .bk-prog').hidden=true; document.querySelector('#bkflow .fs-cardhead').hidden=true;
+    $('bk-done').hidden=false; $('bk-done').focus();
+    try{ if(!moved){ if(window.fbq) fbq('track','Schedule'); if(window.gtag) gtag('event','book_appointment'); } }catch(e){}
+  }
+
+  $('bkform').addEventListener('submit',function(ev){
+    ev.preventDefault(); if(busy||!slot) return;
+    var f=ev.target, name=f.name.value.trim(), phone=f.phone.value.trim(), email=f.email.value.trim();
+    if(!INV){
+      if(name.length<2){ err('bk-err',T('Te rugăm să scrii prenumele.')); f.name.focus(); return; }
+      if(!phoneOk(phone)){ err('bk-err',T('Verifică numărul de telefon, ex. +40 722 000 000.')); f.phone.focus(); return; }
+      if(email&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ err('bk-err',T('Verifică adresa de email sau las-o goală.')); f.email.focus(); return; }
+    }
+    if(!key){ err('bk-err',T('Browserul tău nu a putut porni rezervarea. Scrie-ne pe WhatsApp și te programăm noi.')); return; }
+    var pick=function(n){ var x=f.querySelector('input[name='+n+']:checked'); return x?x.value:''; };
+    busy=true; var btn=$('bk-send'); btn.disabled=true; $('bk-err').hidden=true;
+    fetch('/api/booking/book',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
+      key:key, startAt:slot.startAt, name:name, phone:phone, email:email, goal:pick('goal'), ready:pick('ready'),
+      lang:LANG, page:location.origin+location.pathname+location.search.replace(/([?&])(i|m)=[^&]*/g,'$1'), website:f.website.value, invite:INV||''
+    })}).then(function(r){ return r.json().catch(function(){ return {ok:false}; }); }).then(function(j){
+      busy=false; btn.disabled=false;
+      if(j&&j.ok&&j.startAt){ finish(j,false); return; }
+      var c=j&&j.code;
+      if(c==='SLOT_TAKEN'){ err('bk-err',T('Cineva tocmai a luat ora aceasta. Te rugăm să alegi alta.')); load().then(function(ok){ if(ok) show('bkp'); }); return; }
+      if(c==='ALREADY_BOOKED'){ err('bk-err',T('Ai deja o vizită programată')+(j.day?': '+j.day+', '+j.time:'')+'. '+T('Ai nevoie de altă oră? Scrie-ne pe WhatsApp.')); return; }
+      if(c==='INVALID_INVITE'){ INV=null; who=''; $('bk-who').hidden=false; err('bk-err',T('Acest link personal a expirat. Te rugăm să adaugi numele și telefonul.')); return; }
+      if(c==='INVALID_PHONE'||c==='INVALID_INPUT'){ err('bk-err',T('Verifică numărul de telefon, ex. +40 722 000 000.')); return; }
+      err('bk-err',T('Nu am putut face rezervarea online. Scrie-ne pe WhatsApp și te programăm noi.'));
+    }).catch(function(){ busy=false; btn.disabled=false; err('bk-err',T('Nu există conexiune. Încearcă din nou sau scrie-ne pe WhatsApp.')); });
+  });
+
+  // ---- their own booking (?m=)
+  function showMine(j){
+    $('bk-kick').textContent=T('Vizita ta');
+    if(j.state==='cancelled'){ Object.keys(panes).forEach(function(k){ panes[k].hidden=true; }); document.querySelector('#bkflow .fs-cardhead').hidden=true; document.querySelector('#bkflow .bk-prog').hidden=true; $('bk-gone').hidden=false; return; }
+    $('bk-mine-when').textContent=fmt(j.startAt,{weekday:'long',day:'numeric',month:'long'})+' · '+j.time;
+    $('bk-change').hidden=$('bk-cancel').hidden=(j.state!=='booked');
+    if(j.state!=='booked') err('bk-mine-err',T('Această vizită nu mai poate fi schimbată online. Scrie-ne pe WhatsApp.'));
+    if(j.state==='booked'&&!j.canMove) $('bk-change').hidden=true;
+    show('bkm',(j.firstName?j.firstName+', ':'')+T('iată vizita ta'));
+  }
+  $('bk-change').addEventListener('click',function(){ mode='bkc'; load().then(function(ok){ if(ok) show('bkp',T('Alege o oră nouă')); }); });
+  $('bk-move-back').addEventListener('click',function(){ show('bkp',T('Alege o oră nouă')); });
+  $('bk-move-yes').addEventListener('click',function(){
+    if(busy) return; busy=true; var b=this; b.disabled=true; $('bk-move-err').hidden=true;
+    fetch('/api/booking/me',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({m:MAN,action:'move',startAt:slot.startAt})})
+    .then(function(r){ return r.json().catch(function(){ return {ok:false}; }); }).then(function(j){
+      busy=false; b.disabled=false;
+      if(j&&j.ok){ finish(j,true); return; }
+      var c=j&&j.code;
+      if(c==='SLOT_TAKEN'){ err('bk-move-err',T('Cineva tocmai a luat ora aceasta. Te rugăm să alegi alta.')); return; }
+      if(c==='TOO_MANY_CHANGES'){ err('bk-move-err',T('Vizita a fost deja schimbată de mai multe ori. Scrie-ne pe WhatsApp și rezolvăm.')); return; }
+      err('bk-move-err',T('Nu am putut face schimbarea online. Scrie-ne pe WhatsApp și rezolvăm.'));
+    }).catch(function(){ busy=false; b.disabled=false; err('bk-move-err',T('Nu există conexiune. Încearcă din nou sau scrie-ne pe WhatsApp.')); });
+  });
+  $('bk-cancel').addEventListener('click',function(){ $('bk-cancel-q').hidden=false; $('bk-cancel-yes').focus(); });
+  $('bk-cancel-no').addEventListener('click',function(){ $('bk-cancel-q').hidden=true; });
+  $('bk-cancel-yes').addEventListener('click',function(){
+    if(busy) return; busy=true; var b=this; b.disabled=true;
+    fetch('/api/booking/me',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({m:MAN,action:'cancel'})})
+    .then(function(r){ return r.json().catch(function(){ return {ok:false}; }); }).then(function(j){
+      busy=false; b.disabled=false;
+      if(j&&j.ok){ showMine({state:'cancelled'}); return; }
+      $('bk-cancel-q').hidden=true; err('bk-mine-err',T('Nu am putut face schimbarea online. Scrie-ne pe WhatsApp și rezolvăm.'));
+    }).catch(function(){ busy=false; b.disabled=false; err('bk-mine-err',T('Nu există conexiune. Încearcă din nou sau scrie-ne pe WhatsApp.')); });
+  });
+
+  // ---- start
+  if(MAN){
+    fetch('/api/booking/me?m='+encodeURIComponent(MAN)).then(function(r){ return r.json(); }).then(function(j){
+      $('bk-load').hidden=true;
+      if(j&&j.ok){ showMine(j); return; }
+      MAN=null; note('<p>'+T('Acest link nu mai este valabil. Poți alege o oră nouă mai jos.')+'</p>'); load().then(function(ok){ if(ok) show('bkp',T('Alege ora')); });
+    }).catch(fail);
+  } else {
+    var start=load();
+    if(INV){
+      Promise.all([start,fetch('/api/booking/me?i='+encodeURIComponent(INV)).then(function(r){ return r.json(); }).catch(function(){ return null; })]).then(function(v){
+        var j=v[1];
+        if(j&&j.ok){
+          who=j.firstName||''; $('bk-who').hidden=true; $('bk-send').firstChild.nodeValue=T('Confirm vizita')+' ';
+          if(j.openDay){ note('<p>'+T('Ai deja o vizită programată')+': <b></b>. '+T('Ai nevoie de altă oră? Scrie-ne pe WhatsApp.')+'</p>'); $('bk-note').querySelector('b').textContent=j.openDay+', '+j.openTime; }
+          if(v[0]) show('bkp',hello()+T('alege-ți ora'));
+        } else { INV=null; if(v[0]) show('bkp',T('Alege ora')); }
+      });
+    } else start.then(function(ok){ if(ok) show('bkp',T('Alege ora')); });
+  }
+  })();
+
+  if(!window.gsap||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  gsap.registerPlugin(ScrollTrigger); gsap.config({nullTargetWarn:false});
+  gsap.from('.phero .h-xl',{y:40,opacity:0,duration:1.1,ease:'power4.out'});
+  gsap.from('.phero .sub,.phero .row,.phero .eyebrow',{y:18,opacity:0,duration:.9,stagger:.07,ease:'power3.out',delay:.2});
+  // framed photos open toward full width as they pass, the concept-6 move
+  gsap.utils.toArray('.pframe').forEach(function(f){ gsap.fromTo(f,{clipPath:'inset(0% 7% 0% 7% round 6px)'},{clipPath:'inset(0% 0% 0% 0% round 0px)',ease:'none',scrollTrigger:{trigger:f,start:'top 85%',end:'center 45%',scrub:true}}); gsap.from(f.querySelector('img'),{scale:1.15,ease:'none',scrollTrigger:{trigger:f,start:'top bottom',end:'bottom top',scrub:true}}); });
+  gsap.utils.toArray('.ruled li,.quotes figure').forEach(function(el){ gsap.from(el,{y:24,opacity:0,duration:.8,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 88%'}}); });
+  gsap.from('.fs-intro>*',{y:28,opacity:0,duration:1,stagger:.07,ease:'power3.out'});
+  gsap.from('.fs-card',{y:40,opacity:0,duration:1.1,delay:.15,ease:'power3.out',clearProps:'transform'});
+  gsap.from('.fs-details>*',{y:24,opacity:0,duration:.9,stagger:.08,delay:.3,ease:'power3.out'});
+})();
+</script>
+</body></html>

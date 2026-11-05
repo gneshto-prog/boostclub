@@ -264,7 +264,7 @@ _FS_BODY = f'''<section class="fs-book gut" id="book" data-k-calm aria-label="Bo
     <span class="k-label">Free consultation</span>
     <h1 class="fs-h1">Book your free body composition <span class="it">assessment.</span></h1>
     <p class="fs-sub">Free body composition assessment · 25–30 minutes · Strada Sevastopol 24, near Piața Victoriei. Leave your name and number and Gabriel will message you on WhatsApp to arrange a time. Or message us on WhatsApp directly.</p>
-    <div class="fs-ctas"><a class="btn btn-brass fs-mob" href="#bookform">Prefer a form? Fill it in below ↓</a>{_VF_WAQ}</div>
+    <div class="fs-ctas"><a class="btn btn-brass" href="book.html">Pick your time now <span class="ar">→</span></a><a class="btn btn-ghost fs-mob" href="#bookform">Prefer a form? Fill it in below ↓</a>{_VF_WAQ}</div>
   </div>
 
   <div class="fs-card">

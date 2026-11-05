@@ -53,11 +53,14 @@
   function say(m){ toast.textContent=m; toast.classList.add('on'); clearTimeout(say.t); say.t=setTimeout(function(){toast.classList.remove('on')},3800); }
   window.BC.say=say;
   document.addEventListener('submit',function(e){ var f=e.target; if(!f.matches('form.rbar,form[data-demo]')) return; e.preventDefault();
+    // free scan -> the self-booking page (5 Nov 2026), with the picked day + part of the day pre-filtered; shake / Boost Fit keep the request form
+    if(f.matches('.rbar')&&f.exp.selectedIndex===0){ location.href='book.html?part='+['am','mid','pm'][f.time.selectedIndex]+(f.day.selectedIndex>0?'&wd='+[0,1,2,3,4,5,7][f.day.selectedIndex]:''); return; }
     if(f.matches('.rbar')){ var d=f.day.value, t=f.time.value.toLowerCase(), x=f.exp.value; location.href='free-scan.html?when='+encodeURIComponent(T(d)+', '+T(f.time.value).toLowerCase()+(x.indexOf('Free')===0?'':' · '+T(x)))+'#book'; return; }
     else say(T('Concept only. Live, this sends the request and Gabriel messages you on WhatsApp.')); });
   document.addEventListener('click',function(e){ var a=e.target.closest('[data-reserve]'); if(!a) return; e.preventDefault(); setSheet(false);
-    if(page==='scan'){ var x=document.getElementById('book'); if(x){ x.scrollIntoView({behavior:'smooth'}); return; } }
-    location.href='free-scan.html#book'; });
+    // every Reserve / Book button opens the self-booking page (5 Nov 2026); on that page it just scrolls to the picker
+    if(document.getElementById('bkflow')){ document.getElementById('book').scrollIntoView({behavior:'smooth'}); return; }
+    location.href='book.html'; });
 
   // footer
   if(!C.dataset.nofoot){

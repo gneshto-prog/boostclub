@@ -1131,3 +1131,90 @@ Edit the JSON files to change a line; `python3 build.py` regenerates `ro/` and `
 
 ## Merged 31 Oct redesign (page owners, not native-checked)
 - [new-boostteam-aria.json] Partner enquiry · RO: Cerere de parteneriat · RU: Заявка на партнёрство
+
+## Merged 31 Oct redesign (page owners, not native-checked)
+- [new-book.json] Add to Apple / Outlook · RO: Adaugă în Apple / Outlook · RU: Добавить в Apple / Outlook
+- [new-book.json] Add to Google Calendar · RO: Adaugă în Google Calendar · RU: Добавить в Google Календарь
+- [new-book.json] All free times · RO: Toate orele libere · RU: Всё свободное время
+- [new-book.json] Before you come · RO: Înainte să vii · RU: Перед визитом
+- [new-book.json] Book a time · RO: Rezervă o oră · RU: Выберите время
+- [new-book.json] Book my free scan · RO: Rezervă scanarea gratuită · RU: Записаться на бесплатное сканирование
+- [new-book.json] Book your free scan · RO: Rezervă scanarea gratuită · RU: Запись на бесплатное сканирование
+- [new-book.json] Boost Club, Strada Sevastopol 24, Sector 1, near Piața Victoriei. Gabriel will message you on WhatsApp to confirm. · RO: Boost Club, Strada Sevastopol 24, Sector 1, lângă Piața Victoriei. Gabriel îți scrie pe WhatsApp pentru confirmare. · RU: Boost Club, Strada Sevastopol 24, сектор 1, рядом с Piața Victoriei. Габриэль напишет вам в WhatsApp для подтверждения.
+- [new-book.json] Choose a day · RO: Alege ziua · RU: Выберите день
+- [new-book.json] Choose a time · RO: Alege ora · RU: Выберите время
+- [new-book.json] Your details · RO: Datele tale · RU: Ваши данные
+- [new-book.json] Directions on Google Maps → · RO: Indicații pe Google Maps → · RU: Маршрут в Google Maps →
+- [new-book.json] Drink water normally on the day. Avoid alcohol or a lot of fluid a few hours before, it can affect the measurement. Light, comfortable clothes, no sportswear needed. · RO: Bea apă normal în ziua vizitei. Evită alcoolul sau multe lichide cu câteva ore înainte, pot influența măsurătoarea. Haine lejere și comode, nu ai nevoie de echipament sport. · RU: В день визита пейте воду как обычно. За несколько часов до визита избегайте алкоголя и большого количества жидкости, это влияет на измерение. Лёгкая удобная одежда, спортивная форма не нужна.
+- [new-book.json] Email (optional, for a calendar invite) · RO: Email (opțional, pentru invitația în calendar) · RU: Email (необязательно, для приглашения в календарь)
+- [new-book.json] Free body composition scan and consultation · 30 minutes · Strada Sevastopol 24, near Piața Victoriei. Choose a day and a time below and it is yours straight away. · RO: Scanare gratuită a compoziției corporale și consultație · 30 de minute · Strada Sevastopol 24, lângă Piața Victoriei. Alege ziua și ora mai jos și sunt ale tale pe loc. · RU: Бесплатное сканирование состава тела и консультация · 30 минут · Strada Sevastopol 24, рядом с Piața Victoriei. Выберите день и время ниже, и они сразу закреплены за вами.
+- [new-book.json] How the visit works → · RO: Cum decurge vizita → · RU: Как проходит визит →
+- [new-book.json] If the plan fits you, when would you like to start? (optional) · RO: Dacă planul ți se potrivește, când ai vrea să începi? (opțional) · RU: Если план вам подойдёт, когда хотите начать? (необязательно)
+- [new-book.json] In the next few weeks · RO: În următoarele săptămâni · RU: В ближайшие недели
+- [new-book.json] Just curious for now · RO: Deocamdată sunt doar curios · RU: Пока просто интересно
+- [new-book.json] Loading free times… · RO: Se încarcă orele libere… · RU: Загружаем свободное время…
+- [new-book.json] Lose weight · RO: Slăbire · RU: Похудение
+- [new-book.json] Main goal (optional) · RO: Obiectivul principal (opțional) · RU: Главная цель (необязательно)
+- [new-book.json] Message us directly and we'll find you a time. · RO: Scrie-ne direct și îți găsim o oră. · RU: Напишите нам напрямую, и мы подберём вам время.
+- [new-book.json] Need another time? Message us on WhatsApp. · RO: Ai nevoie de altă oră? Scrie-ne pe WhatsApp. · RU: Нужно другое время? Напишите нам в WhatsApp.
+- [new-book.json] Online booking is not available right now. Message us on WhatsApp and we will book you in. · RO: Rezervarea online nu este disponibilă acum. Scrie-ne pe WhatsApp și te programăm noi. · RU: Онлайн-запись сейчас недоступна. Напишите нам в WhatsApp, и мы вас запишем.
+- [new-book.json] Phone (WhatsApp) * · RO: Telefon (WhatsApp) * · RU: Телефон (WhatsApp) *
+- [new-book.json] Pick your own time for a free body composition scan and consultation at Boost Club, Strada Sevastopol 24, near Piața Victoriei. 30 minutes. · RO: Alege-ți singur ora pentru scanarea gratuită a compoziției corporale și consultație la Boost Club, Strada Sevastopol 24, lângă Piața Victoriei. 30 de minute. · RU: Выберите удобное время для бесплатного сканирования состава тела и консультации в Boost Club, Strada Sevastopol 24, рядом с Piața Victoriei. 30 минут.
+- [new-book.json] Pick your time for the free body <span class="it">scan.</span> · RO: Alege-ți ora pentru scanarea <span class="it">gratuită.</span> · RU: Выберите время для бесплатного <span class="it">сканирования.</span>
+- [new-book.json] Right away · RO: Imediat · RU: Сразу
+- [new-book.json] Something else · RO: Altceva · RU: Другое
+- [new-book.json] Suggested times · RO: Ore recomandate · RU: Рекомендуемое время
+- [new-book.json] What you get in 30 minutes → · RO: Ce primești în 30 de minute → · RU: Что вы получите за 30 минут →
+- [new-book.json] You're booked. · RO: Ești programat. · RU: Вы записаны.
+- [new-book.json] e.g. maria@gmail.com · RO: ex. maria@gmail.com · RU: напр. maria@gmail.com
+- [new-book.json] 30 minutes · RO: 30 de minute · RU: 30 минут
+- [new-book.json] Price · RO: Preț · RU: Цена
+- [new-book.json] Boost Club · free body scan · RO: Boost Club · scanare corporală gratuită · RU: Boost Club · бесплатное сканирование тела
+- [new-book.json] Free body composition scan and consultation, 30 minutes. · RO: Scanare gratuită a compoziției corporale și consultație, 30 de minute. · RU: Бесплатное сканирование состава тела и консультация, 30 минут.
+- [new-book.json] Please write your first name. · RO: Te rugăm să scrii prenumele. · RU: Пожалуйста, укажите имя.
+- [new-book.json] Please check your phone number, e.g. +40 722 000 000. · RO: Verifică numărul de telefon, ex. +40 722 000 000. · RU: Проверьте номер телефона, напр. +40 722 000 000.
+- [new-book.json] Please check your email, or leave it empty. · RO: Verifică adresa de email sau las-o goală. · RU: Проверьте email или оставьте поле пустым.
+- [new-book.json] Your browser could not start the booking. Message us on WhatsApp and we will book you in. · RO: Browserul tău nu a putut porni rezervarea. Scrie-ne pe WhatsApp și te programăm noi. · RU: Ваш браузер не смог начать запись. Напишите нам в WhatsApp, и мы вас запишем.
+- [new-book.json] Someone just took that time. Please pick another one. · RO: Cineva tocmai a luat ora aceasta. Te rugăm să alegi alta. · RU: Это время только что заняли. Пожалуйста, выберите другое.
+- [new-book.json] You already have a visit booked · RO: Ai deja o vizită programată · RU: У вас уже есть запись
+- [new-book.json] We could not book this online. Message us on WhatsApp and we will book you in. · RO: Nu am putut face rezervarea online. Scrie-ne pe WhatsApp și te programăm noi. · RU: Не удалось записаться онлайн. Напишите нам в WhatsApp, и мы вас запишем.
+- [new-book.json] No connection. Please try again, or message us on WhatsApp. · RO: Nu există conexiune. Încearcă din nou sau scrie-ne pe WhatsApp. · RU: Нет соединения. Попробуйте ещё раз или напишите нам в WhatsApp.
+
+## Merged 31 Oct redesign (page owners, not native-checked)
+- [new-book.json] <b>Last step: say hi on WhatsApp.</b> It takes one tap and Gabriel confirms your visit in the same chat. · RO: <b>Ultimul pas: salută-ne pe WhatsApp.</b> Durează o atingere și Gabriel îți confirmă vizita în aceeași conversație. · RU: <b>Последний шаг: напишите нам в WhatsApp.</b> Это одно касание, и Габриэль подтвердит визит в том же чате.
+- [new-book.json] Any time · RO: Oricând · RU: Любое время
+- [new-book.json] Afternoon · RO: După-amiază · RU: День
+- [new-book.json] Recommended · RO: Recomandat · RU: Рекомендуем
+- [new-book.json] Boost Club, Strada Sevastopol 24, Sector 1, near Piața Victoriei. · RO: Boost Club, Strada Sevastopol 24, Sector 1, lângă Piața Victoriei. · RU: Boost Club, Strada Sevastopol 24, сектор 1, рядом с Piața Victoriei.
+- [new-book.json] Cancel my visit · RO: Anulează vizita · RU: Отменить визит
+- [new-book.json] Cancel your visit? The time goes back to other people. · RO: Anulezi vizita? Ora devine liberă pentru alții. · RU: Отменить визит? Время освободится для других.
+- [new-book.json] Change the time · RO: Schimbă ora · RU: Изменить время
+- [new-book.json] Free body composition scan and consultation · 30 minutes · Strada Sevastopol 24, near Piața Victoriei. Choose a time below and it is yours straight away. · RO: Scanare gratuită a compoziției corporale și consultație · 30 de minute · Strada Sevastopol 24, lângă Piața Victoriei. Alege o oră mai jos și este a ta pe loc. · RU: Бесплатное сканирование состава тела и консультация · 30 минут · Strada Sevastopol 24, рядом с Piața Victoriei. Выберите время ниже, и оно сразу закреплено за вами.
+- [new-book.json] Keep it · RO: Păstrez vizita · RU: Оставить
+- [new-book.json] Move my visit · RO: Mută vizita · RU: Перенести визит
+- [new-book.json] Need to change it? Change or cancel → · RO: Trebuie să schimbi? Schimbă sau anulează → · RU: Нужно изменить? Перенести или отменить →
+- [new-book.json] No free times in this part of the day. Try another day or Any time. · RO: Nu sunt ore libere în această parte a zilei. Încearcă altă zi sau Oricând. · RU: В это время дня свободных окон нет. Попробуйте другой день или «Любое время».
+- [new-book.json] Pick a new time · RO: Alege o oră nouă · RU: Выберите новое время
+- [new-book.json] Thank you for letting us know. Whenever you want a new time, pick one here. · RO: Mulțumim că ne-ai anunțat. Când vrei o oră nouă, alege-o aici. · RU: Спасибо, что предупредили. Когда захотите новое время, выберите его здесь.
+- [new-book.json] Time of day · RO: Momentul zilei · RU: Время дня
+- [new-book.json] Yes, cancel · RO: Da, anulează · RU: Да, отменить
+- [new-book.json] Your visit is cancelled. · RO: Vizita ta este anulată. · RU: Ваш визит отменён.
+- [new-book.json] Hi · RO: Salut · RU: Здравствуйте
+- [new-book.json] Confirm your visit · RO: confirmă vizita · RU: подтвердите визит
+- [new-book.json] Pick your time · RO: alege-ți ora · RU: выберите время
+- [new-book.json] Move your visit to · RO: Muți vizita pe · RU: Перенести визит на
+- [new-book.json] Confirm the new time · RO: Confirmă ora nouă · RU: Подтвердите новое время
+- [new-book.json] Hi! I just booked my free scan for {d} at {t}. · RO: Salut! Tocmai mi-am rezervat scanarea gratuită pentru {d}, la ora {t}. · RU: Здравствуйте! Я только что записался(-ась) на бесплатное сканирование: {d}, {t}.
+- [new-book.json] Your visit is moved. · RO: Vizita ta a fost mutată. · RU: Ваш визит перенесён.
+- [new-book.json] This personal link has expired. Please add your name and phone. · RO: Acest link personal a expirat. Te rugăm să adaugi numele și telefonul. · RU: Эта личная ссылка устарела. Пожалуйста, укажите имя и телефон.
+- [new-book.json] Your visit · RO: Vizita ta · RU: Ваш визит
+- [new-book.json] here is your visit · RO: iată vizita ta · RU: вот ваш визит
+- [new-book.json] This visit can no longer be changed online. Message us on WhatsApp. · RO: Această vizită nu mai poate fi schimbată online. Scrie-ne pe WhatsApp. · RU: Этот визит больше нельзя изменить онлайн. Напишите нам в WhatsApp.
+- [new-book.json] This visit was already changed several times. Message us on WhatsApp and we will sort it out. · RO: Vizita a fost deja schimbată de mai multe ori. Scrie-ne pe WhatsApp și rezolvăm. · RU: Визит уже переносили несколько раз. Напишите нам в WhatsApp, и мы всё решим.
+- [new-book.json] We could not change this online. Message us on WhatsApp and we will sort it out. · RO: Nu am putut face schimbarea online. Scrie-ne pe WhatsApp și rezolvăm. · RU: Не удалось изменить онлайн. Напишите нам в WhatsApp, и мы всё решим.
+- [new-book.json] This link is not valid any more. You can pick a new time below. · RO: Acest link nu mai este valabil. Poți alege o oră nouă mai jos. · RU: Эта ссылка больше не действует. Ниже можно выбрать новое время.
+- [new-book.json] Confirm my visit · RO: Confirm vizita · RU: Подтвердить визит
+
+## Merged 31 Oct redesign (page owners, not native-checked)
+- [new-book.json] Pick your time now <span class="ar">→</span> · RO: Alege-ți ora acum <span class="ar">→</span> · RU: Выбрать время сейчас <span class="ar">→</span>
+- [new-book.json] Pick your time now · RO: Alege-ți ora acum · RU: Выбрать время сейчас
