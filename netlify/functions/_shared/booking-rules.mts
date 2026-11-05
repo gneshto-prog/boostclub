@@ -49,7 +49,7 @@ export const DEFAULT_RULES: BookingRules = {
     "2026-11-11": [["14:00", "15:40"]], // Wed gym block
   },
   minDaysAhead: 1,
-  horizonDays: 14,
+  horizonDays: 21, // 3 weeks ahead (his pick 5 Nov 15:13)
   maxPerDay: null,
 };
 

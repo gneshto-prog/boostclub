@@ -28,7 +28,8 @@ test('never today: first offered day is tomorrow, Saturday and the Masterclass t
   assert.ok(!d.includes('2026-11-07'), 'Saturday closed');
   for (const x of ['2026-11-13', '2026-11-14', '2026-11-15']) assert.ok(!d.includes(x), `${x} trip`);
   assert.ok(!d.includes('2026-11-06') && !d.includes('2026-11-08'), 'Fri 6 + Sun 8 closed');
-  assert.ok(d.includes('2026-11-19') && !d.includes('2026-11-20'), '14-day window');
+  assert.ok(d.includes('2026-11-26') && !d.includes('2026-11-27'), '3-week window (21 days from tomorrow)');
+  assert.ok(d.includes('2026-11-20') && d.includes('2026-11-22'), 'Fri 20 + Sun 22 open');
   assert.ok(d.includes('2026-11-16'));
 });
 
