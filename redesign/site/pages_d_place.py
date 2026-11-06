@@ -371,7 +371,7 @@ _VS_BODY = f'''<section class="k-band soft vs-hero" data-slot="REAL · the club,
     <div class="vs-hr" data-days="6"><span>Saturday</span><b>Closed</b></div>
     <div class="vs-hr" data-days="0"><span>Sunday</span><b>10:00 – 18:00</b></div>
     <p>Walk-ins welcome during business hours. To guarantee your slot, book online or on WhatsApp.</p>
-    <p class="vs-rv">5.0 / 5 · 169 Google reviews · Snapshot from 31 October 2026</p>
+    <p class="vs-rv">5.0 / 5 · 202 Google reviews · Snapshot from 6 November 2026</p>
   </aside>
 </div></section>
 

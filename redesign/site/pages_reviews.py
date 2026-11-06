@@ -63,12 +63,12 @@ _body = f'''<section class="vhero phero gut"><div class="wrap vh-grid">
   <div class="vh-copy"><span class="eyebrow">Reviews</span><h1 class="h-xl">What people say after their <span class="it">visit.</span></h1>
   <p class="lead sub">Public reviews from the Boost Club Google profile, shown in their original language and text.</p>
   <div class="row" style="margin-top:28px"><a class="btn btn-bottle" href="#all">Read the reviews ↓</a><a class="btn btn-ghost" href="{_GMAPS}" target="_blank" rel="noopener">Read all reviews on Google</a></div></div>
-  <a class="plate" href="{_GMAPS}" target="_blank" rel="noopener" aria-label="5.0 out of 5 from 169 Google reviews. Read all reviews on Google">
+  <a class="plate" href="{_GMAPS}" target="_blank" rel="noopener" aria-label="5.0 out of 5 from 202 Google reviews. Read all reviews on Google">
     <span class="pl-k">Google rating</span>
     <span class="pl-num" aria-hidden="true">5.0</span>
     <span class="pl-stars" aria-hidden="true">★★★★★</span>
-    <span class="pl-c" aria-hidden="true"><b data-count="169">169</b> Google reviews</span>
-    <span class="pl-d" aria-hidden="true">Snapshot from 31 October 2026</span>
+    <span class="pl-c" aria-hidden="true"><b data-count="202">202</b> Google reviews</span>
+    <span class="pl-d" aria-hidden="true">Snapshot from 6 November 2026</span>
     <span class="pl-go" aria-hidden="true">Read all on Google <span class="ar">→</span></span>
   </a>
 </div>

@@ -14,7 +14,7 @@ _BK_BODY = f'''<section class="fs-book gut" id="book" data-k-calm aria-label="Bo
     <span class="k-label">Free consultation</span>
     <h1 class="fs-h1">Pick your time for the free body <span class="it">scan.</span></h1>
     <p class="fs-sub">Free body composition scan and consultation · 30 minutes · Strada Sevastopol 24, near Piața Victoriei. Choose a time below and it is yours straight away.</p>
-    <a class="bk-proof" href="reviews.html"><b>5.0</b> <span aria-hidden="true">★★★★★</span> <span>169 Google reviews</span></a>
+    <a class="bk-proof" href="reviews.html"><b>5.0</b> <span aria-hidden="true">★★★★★</span> <span>202 Google reviews</span></a>
     <div class="fs-ctas">{_VF_WAQ}</div>
   </div>
 
