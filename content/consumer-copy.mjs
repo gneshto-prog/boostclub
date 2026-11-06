@@ -1,5 +1,5 @@
 // Dated manual snapshot; not a live Google feed.
-export const reviewSnapshot = { rating: '5.0', count: 122, date: '2026-10-12', source: 'https://g.page/r/CUSJCWfOpKRSEAE' };
+export const reviewSnapshot = { rating: '5.0', count: 202, date: '2026-11-06', source: 'https://g.page/r/CUSJCWfOpKRSEAE' };
 export const consumerCopy = {
   ro: {
     reviews: 'recenzii Google', date: 'Situație la 12 octombrie 2026',
